@@ -1,5 +1,5 @@
 /*******************************************************************************
- * konsolekalendaradd.cpp                                                      *
+ * konsolekalendardelete.cpp                                                   *
  *                                                                             *
  * KonsoleKalendar is a command line interface to KDE calendars                *
  * Copyright (C) 2002-2004  Tuukka Pasanen <illuusio@mailcity.com>             *
@@ -25,71 +25,60 @@
  *                                                                             *
  ******************************************************************************/
 /**
- * @file konsolekalendaradd.cpp
- * Provides the KonsoleKalendarAdd class definition.
+ * @file konsolekalendardelete.cpp
+ * Provides the KonsoleKalendarDelete class definition.
  * @author Tuukka Pasanen
  * @author Allen Winter
  */
 #include <stdlib.h>
 #include <iostream>
 
-#include <qdatetime.h>
-#include <qobject.h>
-
 #include <kdebug.h>
 #include <klocale.h>
 
-#include <libkcal/calendarlocal.h>
-#include <libkcal/calendar.h>
-#include <libkcal/event.h>
-
-#include "konsolekalendaradd.h"
+#include "konsolekalendardelete.h"
 
 using namespace KCal;
 using namespace std;
 
-KonsoleKalendarAdd::KonsoleKalendarAdd( KonsoleKalendarVariables *vars )
+KonsoleKalendarDelete::KonsoleKalendarDelete( KonsoleKalendarVariables *vars )
 {
   m_variables = vars;
 }
 
-KonsoleKalendarAdd::~KonsoleKalendarAdd()
+KonsoleKalendarDelete::~KonsoleKalendarDelete()
 {
 }
 
-/**
- * Adds event to Calendar
- */
-
-bool KonsoleKalendarAdd::addEvent()
+bool KonsoleKalendarDelete::deleteEvent()
 {
-  bool status = true;
+  bool status = false;
 
-  kdDebug() << "konsolekalendaradd.cpp::addEvent()" << endl;
+  kdDebug() << "konsolekalendardelete.cpp::deleteEvent()" << endl;
 
-  if ( m_variables->isDryRun() ) {
-    cout << i18n( "Insert Event <Dry Run>:" ).local8Bit()
-         << endl;
-    printSpecs();
-  } else {
-    if ( m_variables->isVerbose() ) {
-      cout << i18n( "Insert Event <Verbose>:" ).local8Bit()
+  /*
+   * Retrieve event on the basis of the unique string ID
+   */
+  Event *event = m_variables->getCalendar()->event( m_variables->getUID() );
+  if ( event ) {
+    if ( m_variables->isDryRun() ) {
+      cout << i18n( "Delete Event <Dry Run>:" ).local8Bit()
            << endl;
-      printSpecs();
-    }
+      printSpecs( event );
+    } else {
+      kdDebug() << "konsolekalendardelete.cpp:deleteEvent() : "
+                << m_variables->getUID().local8Bit()
+                << endl;
 
-    Event *event = new Event();
+      if ( m_variables->isVerbose() ) {
+	cout << i18n( "Delete Event <Verbose>:" ).local8Bit()
+             << endl;
+	printSpecs( event );
+      }
 
-    event->setDtStart( m_variables->getStartDateTime() );
-    event->setDtEnd( m_variables->getEndDateTime() );
-    event->setSummary( m_variables->getSummary() );
-    event->setFloats( m_variables->getFloating() );
-    event->setDescription( m_variables->getDescription() );
-    event->setLocation( m_variables->getLocation() );
-
-    if ( m_variables->getCalendar()->addEvent( event ) ) {
-      cout << i18n( "Success: \"%1\" inserted" ).
-        arg( m_variables->getSummary() ).local8Bit()
+      m_variables->getCalendar()->deleteEvent( event );
+      cout << i18n( "Success: \"%1\" deleted" )
+        .arg( event->summary() ).local8Bit()
            << endl;
 
       if ( !m_variables->isCalendarResources() ) {
@@ -97,71 +86,38 @@ bool KonsoleKalendarAdd::addEvent()
           m_variables->getCalendar()->save( m_variables->getCalendarFile() );
       } else {
         m_variables->getCalendar()->save();
+        status = true;
       }
-
-    } else {
-      cout << i18n( "Failure: \"%1\" not inserted" ).
-        arg( m_variables->getSummary() ).local8Bit()
-           << endl;
-      status = false;
     }
   }
 
-  kdDebug() << "konsolekalendaradd.cpp::addEvent() | Done " << endl;
+  kdDebug() << "konsolekalendardelete.cpp::deleteEvent() | Done " << endl;
   return status;
 }
 
-bool KonsoleKalendarAdd::addImportedCalendar()
+void KonsoleKalendarDelete::printSpecs( Event *event )
 {
+  cout << i18n( "  UID:   %1" ).
+    arg( m_variables->getUID() ).local8Bit()
+       << endl;
 
-  if ( !m_variables->getCalendar()->load( m_variables->getImportFile() ) ) {
-    kdDebug()
-      << "konsolekalendaradd.cpp::importCalendar() | "
-      << "Can't import file: "
-      << m_variables->getImportFile()
-      << endl;
-    return false;
-  } else {
-    kdDebug()
-      << "konsolekalendaradd.cpp::importCalendar() | "
-      << "Successfully imported file: "
-      << m_variables->getImportFile()
-      << endl;
-  }
-
-  if ( !m_variables->isCalendarResources() ) {
-    m_variables->getCalendar()->save( m_variables->getCalendarFile() );
-  } else {
-    m_variables->getCalendar()->save();
-  }
-
-  return true;
-}
-
-void KonsoleKalendarAdd::printSpecs()
-{
   cout << i18n( "  What:  %1" ).
-    arg( m_variables->getSummary() ).local8Bit()
+    arg( event->summary() ).local8Bit()
        << endl;
 
   cout << i18n( "  Begin: %1" ).
-    arg( m_variables->getStartDateTime().toString( Qt::TextDate ) ).local8Bit()
+    arg( event->dtStart().toString( Qt::TextDate ) ).local8Bit()
        << endl;
 
   cout << i18n( "  End:   %1" ).
-    arg( m_variables->getEndDateTime().toString( Qt::TextDate ) ).local8Bit()
+    arg( event->dtEnd().toString( Qt::TextDate ) ).local8Bit()
        << endl;
 
-  if ( m_variables->getFloating() == true ) {
-    cout << i18n( "  No Time Associated with Event" ).local8Bit()
-         << endl;
-  }
-
   cout << i18n( "  Desc:  %1" ).
-    arg( m_variables->getDescription() ).local8Bit()
+    arg( event->description() ).local8Bit()
        << endl;
 
   cout << i18n( "  Location:  %1" ).
-    arg( m_variables->getLocation() ).local8Bit()
+    arg( event->location() ).local8Bit()
        << endl;
 }
