@@ -1,5 +1,5 @@
 /*******************************************************************************
- * konsolekalendar.h                                                           *
+ * konsolekalendarexports.h                                                    *
  *                                                                             *
  * KonsoleKalendar is a command line interface to KDE calendars                *
  * Copyright (C) 2002-2004  Tuukka Pasanen <illuusio@mailcity.com>             *
@@ -25,120 +25,75 @@
  *                                                                             *
  ******************************************************************************/
 
-#ifndef _KONSOLEKALENDAR_H
-#define _KONSOLEKALENDAR_H
+#ifndef _KONSOLEKALENDAREXPORTS_H_
+#define _KONSOLEKALENDAREXPORTS_H_
 
-#include <QDateTime>
-
-#include <kapplication.h>
-
-#include <libkcal/calendarlocal.h>
-#include <libkcal/resourcecalendar.h>
-#include <libkcal/event.h>
+#include <QTextStream>
 
 #include "konsolekalendarvariables.h"
 
-class QTextStream;
-
 /**
- * @file konsolekalendar.h
- * Provides the KonsoleKalendar class definition.
+ * @file konsolekalendarexports.h
+ * Provides the KonsoleKalendarExports class definition.
  */
 
 namespace KCal
 {
-/**
- * The base class of the project.
- * @author Tuukka Pasanen
- */
-  class KonsoleKalendar
+  /**
+   * Class to manage the Export functionality.
+   * @author Tuukka Pasanen
+   * @author Allen Winter
+   */
+  class KonsoleKalendarExports
   {
   public:
+
     /**
-     * Constructs a KonsoleKalendar object from command line arguments.
+     * Constructs a KonsoleKalendarChange object from command line arguments.
+     * @param vars is a KonsoleKalendarVariable object with Event information.
      */
-    KonsoleKalendar( KonsoleKalendarVariables *variables );
+    KonsoleKalendarExports( KonsoleKalendarVariables *vars = 0 );
     /**
      * Destructor
      */
-    ~KonsoleKalendar();
+    ~KonsoleKalendarExports();
 
     /**
-     * Visualize what we need.
+     * Export the Event in Text Mode.
+     * @param ts pointer to the output QTextStream.
+     * @param event pointer to the Event to export.
+     * @param date is the QDate to be exported for.
      */
-    bool showInstance();
-
+    bool exportAsTxt( QTextStream *ts, Event *event, QDate date );
     /**
-     * Imports calendar file
+     * Export the Event in Short Text Mode.
+     * @param ts pointer to the output QTextStream.
+     * @param event pointer to the Event to export.
+     * @param date is the QDate to be exported for.
+     * @param sameday flags that this Event is on the same date as the
+     * previously exported Event.
      */
-    bool importCalendar();
-
+    bool exportAsTxtShort( QTextStream *ts, Event *event, QDate date,
+                           bool sameday );
     /**
-     * Add event to calendar
+     * Export the Event in Comma-Separated Values (CSV) Mode.
+     * @param ts pointer to the output QTextStream.
+     * @param event pointer to the Event to export.
+     * @param date is the QDate to be exported for.
      */
-    bool addEvent();
-
-    /**
-     * Change event
-     */
-    bool changeEvent();
-
-    /**
-     * Delete event
-     */
-    bool deleteEvent();
-
-    /**
-     * Detect if event already exists
-     *
-     * @param  startdate Starting date
-     * @param  enddate   Ending date
-     * @param  summary   Which summary event should have have
-     */
-    bool isEvent( QDateTime startdate, QDateTime enddate, QString summary );
-
-    /**
-     * Creates calendar file (If it doesn't exists)
-     */
-    bool createCalendar();
+    bool exportAsCSV( QTextStream *ts, Event *event, QDate date );
 
   private:
-
-    /**
-     * Print event specs for dryrun and verbose options
-     */
-    void printSpecs();
-
-    /**
-     * Prints event list in many formats
-     *
-     * @param eventlist which event we should print
-     * @param dt is the date to use when printing the event for recurring events
-     */
-    bool printEventList( QTextStream *ts, Event::List *eventList, QDate dt );
-
-    /**
-     * Prints a single event in many formats
-     *
-     * @param event which we should print
-     * @param dt is the date to use when printing the event for recurring events
-     */
-    bool printEvent( QTextStream *ts, Event *event, QDate dt );
-
-    /**
-     * Variables that changes stuff in program
-     */
     KonsoleKalendarVariables *m_variables;
-
+    bool m_firstEntry;
     /**
-     * Calendar file itself
+     * Processes a field for Comma-Separated Value (CSV) compliance:
+     *   1. Replaces double quotes by a pair of consecutive double quotes
+     *   2. Surrounds field with double quotes
+     * @param field is the field value to be processed.
+     * @param dquote is a QString containing the double quote character.
      */
-    ResourceCalendar *m_Calendar;
-
-    /**
-     * This is useful if we like to have same day events to same system
-     */
-    QDate m_saveDate;
+    QString processField( QString field, QString dquote );
 
   };
 
