@@ -14,7 +14,7 @@ set(konsolekalendar_SRCS
     konsolekalendar.cpp
     main.cpp )
 
-ecm_qt_declare_logging_category(konsolekalendar_SRCS HEADER konsolekalendar_debug.h IDENTIFIER KONSOLEKALENDAR_LOG CATEGORY_NAME log_konsolekalendar)
+ecm_qt_declare_logging_category(konsolekalendar_SRCS HEADER konsolekalendar_debug.h IDENTIFIER KONSOLEKALENDAR_LOG CATEGORY_NAME org.kde.pim.konsolekalendar)
 
 add_executable(konsolekalendar ${konsolekalendar_SRCS})
 

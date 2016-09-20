@@ -79,7 +79,7 @@ add_definitions( -DQT_NO_CAST_TO_ASCII )
 add_subdirectory(calendarjanitor)
 add_subdirectory(konsolekalendar)
 
-install( FILES console.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+install( FILES console.renamecategories console.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
 add_subdirectory(doc)
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
