@@ -182,7 +182,7 @@ int main(int argc, char *argv[])
                        "from 7am to 5pm or nothing at all if there aren't any"));
     options.add("",
                 ki18n("For more information visit the program home page at:\n"
-                      "  http://pim.kde.org/components/konsolekalendar.php"));
+                      "  https://userbase.kde.org/KonsoleKalendar"));
     KCmdLineArgs::addCmdLineOptions(options);   // Add our own options.
 
     KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
