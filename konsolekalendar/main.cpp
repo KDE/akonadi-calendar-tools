@@ -178,6 +178,9 @@ int main(int argc, char *argv[])
                       "--description \"Get My Head Examined\"\n"
                       "  konsolekalendar --delete --uid KOrganizer-1740326.803"));
     options.add("",
+                ki18n( "Without any options konsolekalendar will output today's events\n"
+                       "from 7am to 5pm or nothing at all if there aren't any"));
+    options.add("",
                 ki18n("For more information visit the program home page at:\n"
                       "  http://pim.kde.org/components/konsolekalendar.php"));
     KCmdLineArgs::addCmdLineOptions(options);   // Add our own options.
