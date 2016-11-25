@@ -124,8 +124,8 @@ int main(int argc, char *argv[])
                 ki18n("  Modify an existing incidence"));
     options.add("delete",
                 ki18n("  Remove an existing incidence"));
-    options.add("create",
-                ki18n("  Create new calendar file if one does not exist"));
+    options.add("create <filename>",
+                ki18n("  Create new Akonadi Resource for file"));
     options.add("import <import-file>",
                 ki18n("  Import this calendar to main calendar"));
     options.add("list-calendars",
@@ -373,8 +373,12 @@ int main(int argc, char *argv[])
         view = false;
         create = true;
 
+        option = args->getOption("create");
+        variables.setCalendarFile(option);
+
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
-                                     << "Calendar File: (Create)";
+                                     << "Create Akonadi Resource for"
+                                     << "(" << option << ")";
     }
 
     /*
@@ -854,6 +858,17 @@ int main(int argc, char *argv[])
         if (!konsolekalendar->showInstance()) {
             cout << i18n("Cannot open specified export file: %1",
                          variables.getExportFile()).toLocal8Bit().data()
+                 << endl;
+            return 1;
+        }
+    }
+
+    if(create) {
+        qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
+                                     << "creating Akonadi resource from file:"
+                                     << "(" << variables.getCalendarFile() << ")";
+        if (!konsolekalendar->createCalendar()) {
+            cout << i18n("Cannot create Akonadi resource from file: %1", variables.getCalendarFile()).toLocal8Bit().data()
                  << endl;
             return 1;
         }

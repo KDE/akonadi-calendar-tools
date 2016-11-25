@@ -44,13 +44,17 @@
 #include <KCalUtils/HtmlExport>
 #include <kcalutils/htmlexportsettings.h>
 #include <AkonadiCore/AgentManager>
+#include <AkonadiCore/AgentInstance>
 #include <AkonadiCore/AgentInstanceCreateJob>
 #include <AkonadiCore/CollectionFetchJob>
 #include <AkonadiCore/Collection>
 #include <AkonadiCore/CollectionFetchScope>
 
 #include <QDateTime>
+#include <QDBusInterface>
+#include <QDBusReply>
 #include <QFile>
+#include <QFileInfo>
 #include <QTextStream>
 #include <QEventLoop>
 
@@ -122,16 +126,32 @@ bool KonsoleKalendar::printCalendarList()
     return true;
 }
 
-bool KonsoleKalendar::createAkonadiResource(const QString &icalFileName)
+bool KonsoleKalendar::createAkonadiResource(const QString &icalFileUri)
 {
     Akonadi::AgentType type = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
     Akonadi::AgentInstanceCreateJob *job = new Akonadi::AgentInstanceCreateJob(type);
-    job->setProperty("path", icalFileName);
     QEventLoop loop;
     QObject::connect(job, &Akonadi::CollectionFetchJob::result, &loop, &QEventLoop::quit);
     job->start();
     loop.exec();
-    return job->error() == 0;
+    if (job->error() != 0) {
+        return false;
+    }
+    auto inst =  job->instance();
+    inst.setName(QFileInfo(icalFileUri).baseName());
+    QDBusInterface iface(QStringLiteral("org.freedesktop.Akonadi.Resource.") + inst.identifier(), QStringLiteral("/Settings"));
+    QDBusReply<void> reply = iface.call(QStringLiteral("setDisplayName"), QFileInfo(icalFileUri).baseName());
+    if (!reply.isValid()) {
+        qCWarning(KONSOLEKALENDAR_LOG) << "Could not set setting 'name': "<<  reply.error().message();
+        return false;
+    }
+    reply = iface.call(QStringLiteral("setPath"), icalFileUri);
+    if (!reply.isValid()) {
+        qCWarning(KONSOLEKALENDAR_LOG) << "Could not set setting 'path': "<<  reply.error().message();
+        return false;
+    }
+    inst.reconfigure();
+    return true;
 }
 
 bool KonsoleKalendar::createCalendar()
@@ -153,7 +173,7 @@ bool KonsoleKalendar::createCalendar()
                  << endl;
         }
 
-        status = createAkonadiResource(filename);
+        status = createAkonadiResource(QStringLiteral("file://%1").arg(filename));
     }
 
     return status;
