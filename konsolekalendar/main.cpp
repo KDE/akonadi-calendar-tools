@@ -172,7 +172,7 @@ int main(int argc, char *argv[])
                 ki18n("Examples:\n"
                       "  konsolekalendar --view\n"
                       "  konsolekalendar --list-calendars\n"
-                      "  konsolekalendar --add --collection 42 --date 2003-06-04 "
+                      "  konsolekalendar --add --calendar 42 --date 2016-12-04 "
                       "--time 10:00 --end-time 12:00 \\\n"
                       "                  --summary \"Doctor Visit\" "
                       "--description \"Get My Head Examined\"\n"
