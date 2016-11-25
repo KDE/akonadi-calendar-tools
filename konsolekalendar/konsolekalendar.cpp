@@ -102,8 +102,8 @@ bool KonsoleKalendar::printCalendarList()
         cout << i18n("There are no calendars available.").toLocal8Bit().data() << endl;
     } else {
         cout << "--------------------------" << endl;
-        QSet<QString> mimeTypeSet = mimeTypes.toSet();
         foreach (const Akonadi::Collection &collection, collections) {
+            auto mimeTypeSet = mimeTypes.toSet();           // set changes by run method intersect
             if (!mimeTypeSet.intersect(collection.contentMimeTypes().toSet()).isEmpty()) {
                 QString colId = QString::number(collection.id()).leftJustified(6, QLatin1Char(' '));
                 colId += QLatin1String("- ");
