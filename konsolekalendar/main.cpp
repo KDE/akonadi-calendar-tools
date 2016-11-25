@@ -640,9 +640,7 @@ int main(int argc, char *argv[])
     loop.exec();
     qCDebug(KONSOLEKALENDAR_LOG) << "Calendar loaded in" << t.elapsed() << "ms; success=" << calendar->isLoaded() << "; num incidences=" << calendar->incidences().count();
 
-    if (!args->isSet("import")) {
-        variables.setCalendar(calendar);
-    }
+    variables.setCalendar(calendar);
 
     /***************************************************************************
      * Glorious date/time checking and setting code                            *

@@ -40,6 +40,7 @@
 #include <KLocalizedString>
 
 #include <KCalCore/Event>
+#include <KCalCore/FileStorage>
 #include <Akonadi/Calendar/IncidenceChanger>
 #include <AkonadiCore/Collection>
 
@@ -138,31 +139,62 @@ bool KonsoleKalendarAdd::addEvent()
 
 bool KonsoleKalendarAdd::addImportedCalendar()
 {
-
-// If --file specified, then import into that file
-// else, import into the standard calendar
-    /*
-     * TODO_SERGIO
-      QString fileName;
-      if ( m_variables->getCalendarFile().isEmpty() ) {
-        fileName = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + "korganizer/std.ics" ;
-      } else {
-        fileName = m_variables->getCalendarFile();
-      }
-
-      CalendarLocal *cal = new CalendarLocal( KSystemTimeZones::local() );
-      if ( !cal->load( fileName ) ||
-           !cal->load( m_variables->getImportFile() ) ||
-           !cal->save( fileName ) ) {
+    MemoryCalendar::Ptr cal(new MemoryCalendar(KDateTime::UTC));
+    FileStorage instore(cal, m_variables->getImportFile());
+    if (!instore.load()) {
         qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendaradd.cpp::importCalendar() |"
-                 << "Can't import file:"
-                 << m_variables->getImportFile();
+            << "Can't import file:"
+            << m_variables->getImportFile();
         return false;
-      }
-      qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendaradd.cpp::importCalendar() |"
-               << "Successfully imported file:"
-               << m_variables->getImportFile();
-               */
+    }
+    Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
+
+    if (!m_variables->allowGui()) {
+        Akonadi::IncidenceChanger *changer = calendar->incidenceChanger();
+        changer->setShowDialogsOnError(false);
+        Akonadi::Collection collection = m_variables->collectionId() != -1 ? Akonadi::Collection(m_variables->collectionId())
+        : Akonadi::Collection(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
+
+        if (!collection.isValid()) {
+            cout << i18n("Calendar is invalid. Please specify one with --calendar").toLocal8Bit().data() << "\n";
+        }
+
+        changer->setDefaultCollection(collection);
+        changer->setDestinationPolicy(Akonadi::IncidenceChanger::DestinationPolicyNeverAsk);
+    }
+
+    QEventLoop loop;
+    QObject::connect(calendar.data(), &Akonadi::CalendarBase::createFinished,
+                        &loop, &QEventLoop::quit);
+    QElapsedTimer t;
+    foreach(const auto &event, cal->rawEvents()) {
+        if (calendar->incidence(event->uid()) != 0) {
+            if (m_variables->isVerbose()) {
+                cout << i18n("Insert Event skipped, because uid \"%1\" is already known. <Verbose>", event->uid()).toLocal8Bit().data()
+                    << endl;
+            } else {
+                qCInfo(KONSOLEKALENDAR_LOG) << "Event with uid " << event->uid() << "is already in calendar, skipping import of this Event.";
+            }
+            continue;
+        }
+        if (m_variables->isVerbose()) {
+            cout << i18n("Add Event with uid \"%1\". <Verbose>", event->uid()).toLocal8Bit().data()
+                << endl;
+        }
+        if (m_variables->isDryRun()) {
+            continue;
+        }
+        t.start();
+        calendar->addEvent(event);
+        loop.exec();
+        qCDebug(KONSOLEKALENDAR_LOG) << "Creation of event took " << t.elapsed() << "ms." << "status: "<< (calendar->incidence(event->uid()) != 0);
+        if (calendar->incidence(event->uid()) == 0) {
+            return false;
+        }
+    }
+    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendaradd.cpp::importCalendar() |"
+        << "Successfully imported file:"
+        << m_variables->getImportFile();
     return true;
 }
 
