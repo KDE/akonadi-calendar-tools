@@ -170,15 +170,15 @@ bool KonsoleKalendarAdd::addImportedCalendar()
     foreach(const auto &event, cal->rawEvents()) {
         if (calendar->incidence(event->uid()) != 0) {
             if (m_variables->isVerbose()) {
-                cout << i18n("Insert Event skipped, because uid \"%1\" is already known. <Verbose>", event->uid()).toLocal8Bit().data()
+                cout << i18n("Insert Event skipped, because UID \"%1\" is already known. <Verbose>", event->uid()).toLocal8Bit().data()
                     << endl;
             } else {
-                qCInfo(KONSOLEKALENDAR_LOG) << "Event with uid " << event->uid() << "is already in calendar, skipping import of this Event.";
+                qCInfo(KONSOLEKALENDAR_LOG) << "Event with UID " << event->uid() << "is already in calendar, skipping import of this Event.";
             }
             continue;
         }
         if (m_variables->isVerbose()) {
-            cout << i18n("Add Event with uid \"%1\". <Verbose>", event->uid()).toLocal8Bit().data()
+            cout << i18n("Add Event with UID \"%1\". <Verbose>", event->uid()).toLocal8Bit().data()
                 << endl;
         }
         if (m_variables->isDryRun()) {
