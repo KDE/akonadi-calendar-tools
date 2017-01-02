@@ -51,7 +51,7 @@ public:
      * Constructs a KonsoleKalendarChange object from command line arguments.
      * @param vars is a KonsoleKalendarVariable object with Event information.
      */
-    explicit KonsoleKalendarExports(KonsoleKalendarVariables *vars = Q_NULLPTR);
+    explicit KonsoleKalendarExports(KonsoleKalendarVariables *vars = nullptr);
 
     /**
      * Destructor
