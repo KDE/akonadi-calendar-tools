@@ -189,7 +189,7 @@ applications (like &korganizer;).</para>
 <screen><prompt>%</prompt><userinput> <command>konsolekalendar</command> <option>--list-calendars</option></userinput></screen>
 
 <para>
-<informalexample><para>In the following example, an event starting on 2016-12-01 (December 4, 2016)
+<informalexample><para>In the following example, an event starting on 2016-12-01 (December 1, 2016)
 at 10:00 and ending at 12:00 with summary "Doctor Visit" will be
 inserted into the user's calendar resource with the id 8:</para>
 
