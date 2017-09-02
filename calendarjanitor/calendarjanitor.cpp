@@ -272,8 +272,8 @@ void CalendarJanitor::sanityCheck1()
 
     foreach (const Akonadi::Item &item, m_itemsToProcess) {
         KCalCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
-        if (incidence->summary().isEmpty() && incidence->description().isEmpty()
-                && incidence->attachments().isEmpty()) {
+        if (incidence->summary().isEmpty() && incidence->description().isEmpty() &&
+            incidence->attachments().isEmpty()) {
             printFound(item);
             deleteIncidence(item);
         }
@@ -534,7 +534,7 @@ void CalendarJanitor::sanityCheck8()
 
 void CalendarJanitor::sanityCheck9()
 {
-    beginTest(i18n("Checking for RECURRING-ID incidences with nonexistant master incidence..."));
+    beginTest(i18n("Checking for RECURRING-ID incidences with nonexistent master incidence..."));
     foreach (const Akonadi::Item &item, m_itemsToProcess) {
         KCalCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
         if (incidence->recurs() && incidence->hasRecurrenceId() && !m_calendar->incidence(incidence->uid())) {
