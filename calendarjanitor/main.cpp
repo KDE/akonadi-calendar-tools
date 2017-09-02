@@ -64,10 +64,12 @@ static void silenceStderr()
 {
 #ifdef Q_OS_UNIX
     if (qgetenv("KDE_CALENDARJANITOR_DEBUG") != "1") {
+        //krazy:cond=syscalls since UNIX-only code
         // Disable stderr so we can actually read what's going on
         int fd = ::open("/dev/null", O_WRONLY);
         ::dup2(fd, 2);
         ::close(fd);
+        //krazy:endcond=syscalls
     }
 #endif
 }
