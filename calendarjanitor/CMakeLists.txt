@@ -1,4 +1,3 @@
-project(calendarjanitor)
 
 ########### next target ###############
 

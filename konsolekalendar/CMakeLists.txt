@@ -1,4 +1,3 @@
-project(konsolekalendar)
 
 add_subdirectory(pics) 
 
