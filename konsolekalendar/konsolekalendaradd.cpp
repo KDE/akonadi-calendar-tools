@@ -48,6 +48,7 @@
 #include <QObject>
 #include <QEventLoop>
 #include <QElapsedTimer>
+#include <QTimeZone>
 
 #include <stdlib.h>
 #include <iostream>
@@ -139,7 +140,7 @@ bool KonsoleKalendarAdd::addEvent()
 
 bool KonsoleKalendarAdd::addImportedCalendar()
 {
-    MemoryCalendar::Ptr cal(new MemoryCalendar(KDateTime::UTC));
+    MemoryCalendar::Ptr cal(new MemoryCalendar(QTimeZone::utc()));
     FileStorage instore(cal, m_variables->getImportFile());
     if (!instore.load()) {
         qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendaradd.cpp::importCalendar() |"

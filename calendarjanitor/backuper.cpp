@@ -35,6 +35,7 @@
 #include <KLocalizedString>
 #include <KJob>
 #include <QDebug>
+#include <QTimeZone>
 
 #include <QCoreApplication>
 
@@ -74,7 +75,7 @@ void Backuper::backup(const QString &filename, const QList<Akonadi::Collection::
         return;
     }
     print(i18n("Backing up your calendar data..."));
-    m_calendar = KCalCore::MemoryCalendar::Ptr(new KCalCore::MemoryCalendar(KDateTime::LocalZone));
+    m_calendar = KCalCore::MemoryCalendar::Ptr(new KCalCore::MemoryCalendar(QTimeZone::systemTimeZone()));
     m_requestedCollectionIds = collectionIds;
     m_backupInProgress = true;
     m_filename = filename;
