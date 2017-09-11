@@ -542,7 +542,7 @@ void CalendarJanitor::sanityCheck9()
             if (m_fixingEnabled) {
                 bool modified = false;
 
-                KDateTime recId = incidence->recurrenceId();
+                QDateTime recId = incidence->recurrenceId();
                 KDateTime start = incidence->dtStart();
                 KDateTime end   = incidence->dateTime(KCalCore::Incidence::RoleEnd);
 
@@ -552,15 +552,15 @@ void CalendarJanitor::sanityCheck9()
                 if (event && start.isValid() && end.isValid()) {
                     modified = true;
                     const int duration = start.daysTo(end.toTimeSpec(start.timeSpec()));
-                    incidence->setDtStart(recId);
-                    event->setDtEnd(recId.addDays(duration));
+                    incidence->setDtStart(KDateTime(recId));
+                    event->setDtEnd(KDateTime(recId.addDays(duration)));
                 } else if (todo && start.isValid()) {
                     modified = true;
-                    incidence->setDtStart(recId);
+                    incidence->setDtStart(KDateTime(recId));
 
                     if (end.isValid()) {
                         const int duration = start.daysTo(end.toTimeSpec(start.timeSpec()));
-                        todo->setDtDue(recId.addDays(duration));
+                        todo->setDtDue(KDateTime(recId.addDays(duration)));
                     }
                 }
 
@@ -568,7 +568,7 @@ void CalendarJanitor::sanityCheck9()
                     m_pendingModifications++;
                     incidence->recreate(); // change uid
                     incidence->clearRecurrence(); // make it non-recurring
-                    incidence->setRecurrenceId(KDateTime());
+                    incidence->setRecurrenceId(QDateTime());
                     m_changer->modifyIncidence(item);
                 }
             }
