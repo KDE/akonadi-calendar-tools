@@ -30,6 +30,7 @@
 #include <KCalCore/Event>
 #include <KCalCore/Todo>
 #include <KCalCore/Journal>
+#include <KCalCore/Utils>
 
 #include <KLocalizedString>
 #include <KDateTime>
@@ -552,15 +553,15 @@ void CalendarJanitor::sanityCheck9()
                 if (event && start.isValid() && end.isValid()) {
                     modified = true;
                     const int duration = start.daysTo(end.toTimeSpec(start.timeSpec()));
-                    incidence->setDtStart(KDateTime(recId));
-                    event->setDtEnd(KDateTime(recId.addDays(duration)));
+                    incidence->setDtStart(KCalCore::q2k(recId));
+                    event->setDtEnd(KCalCore::q2k(recId.addDays(duration)));
                 } else if (todo && start.isValid()) {
                     modified = true;
-                    incidence->setDtStart(KDateTime(recId));
+                    incidence->setDtStart(KCalCore::q2k(recId));
 
                     if (end.isValid()) {
                         const int duration = start.daysTo(end.toTimeSpec(start.timeSpec()));
-                        todo->setDtDue(KDateTime(recId.addDays(duration)));
+                        todo->setDtDue(KCalCore::q2k(recId.addDays(duration)));
                     }
                 }
 
