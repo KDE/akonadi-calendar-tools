@@ -139,7 +139,7 @@ private:
     /**
      * Variables that changes stuff in program
      */
-    KonsoleKalendarVariables *m_variables;
+    KonsoleKalendarVariables *m_variables = nullptr;
 
     /**
      * Calendar file itself

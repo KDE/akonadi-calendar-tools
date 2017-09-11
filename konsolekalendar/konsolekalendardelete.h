@@ -75,7 +75,7 @@ private:
     void printSpecs(const KCalCore::Event::Ptr &event);
 
     //@cond PRIVATE
-    KonsoleKalendarVariables *m_variables;
+    KonsoleKalendarVariables *m_variables = nullptr;
     //@endcond
 };
 

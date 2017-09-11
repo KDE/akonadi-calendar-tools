@@ -87,7 +87,7 @@ public:
 
 private:
     //@cond PRIVATE
-    KonsoleKalendarVariables *m_variables;
+    KonsoleKalendarVariables *m_variables = nullptr;
     bool m_firstEntry;
     //@endcond
 

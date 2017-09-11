@@ -82,11 +82,11 @@ private Q_SLOTS:
     void deleteIncidence(const Akonadi::Item &item);
 
 private:
-    CollectionLoader *m_collectionLoader;
+    CollectionLoader *m_collectionLoader = nullptr;
     Akonadi::Collection::List m_collectionsToProcess;
     Akonadi::Item::List m_itemsToProcess;
     Options m_options;
-    Akonadi::IncidenceChanger *m_changer;
+    Akonadi::IncidenceChanger *m_changer = nullptr;
     Akonadi::Collection m_currentCollection;
     Options::SanityCheck m_currentSanityCheck;
     int m_pendingModifications;

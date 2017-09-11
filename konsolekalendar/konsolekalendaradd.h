@@ -73,7 +73,7 @@ private:
     /**
      * Variable to how to make it
      */
-    KonsoleKalendarVariables *m_variables;
+    KonsoleKalendarVariables *m_variables = nullptr;
 
 };
 #endif

@@ -77,7 +77,7 @@ private:
     void printSpecs();
 
     //@cond PRIVATE
-    KonsoleKalendarVariables *m_variables;
+    KonsoleKalendarVariables *m_variables = nullptr;
     //@endcond
 };
 
