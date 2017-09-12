@@ -41,6 +41,7 @@
 
 #include <KCalCore/Event>
 #include <KCalCore/FileStorage>
+#include <KCalCore/Utils>
 #include <Akonadi/Calendar/IncidenceChanger>
 #include <AkonadiCore/Collection>
 
@@ -89,9 +90,9 @@ bool KonsoleKalendarAdd::addEvent()
 
         Event::Ptr event = Event::Ptr(new Event());
 
-        KDateTime::Spec timeSpec = m_variables->getCalendar()->timeSpec();
-        event->setDtStart(KDateTime(m_variables->getStartDateTime(), timeSpec));
-        event->setDtEnd(KDateTime(m_variables->getEndDateTime(), timeSpec));
+        const auto timeZone = m_variables->getCalendar()->timeZone();
+        event->setDtStart(KDateTime(m_variables->getStartDateTime(), KCalCore::zoneToSpec(timeZone)));
+        event->setDtEnd(KDateTime(m_variables->getEndDateTime(), KCalCore::zoneToSpec(timeZone)));
         event->setSummary(m_variables->getSummary());
         event->setAllDay(m_variables->getFloating());
         event->setDescription(m_variables->getDescription());
