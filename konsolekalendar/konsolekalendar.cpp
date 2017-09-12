@@ -41,6 +41,7 @@
 #include <ksystemtimezone.h>
 
 #include <KCalCore/Event>
+#include <KCalCore/Utils>
 #include <KCalUtils/HtmlExport>
 #include <kcalutils/htmlexportsettings.h>
 #include <AkonadiCore/AgentManager>
@@ -185,7 +186,7 @@ bool KonsoleKalendar::showInstance()
     QFile f;
     QString title;
     Event::Ptr event;
-    const KDateTime::Spec timeSpec = m_variables->getCalendar()->timeSpec();
+    const auto timeZone = m_variables->getCalendar()->timeZone();
     Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
 
     if (m_variables->isDryRun()) {
@@ -256,7 +257,7 @@ bool KonsoleKalendar::showInstance()
                     for (dt = m_variables->getStartDateTime().date();
                             dt <= datetime.date();
                             dt = dt.addDays(1)) {
-                        Event::List events = calendar->events(dt, timeSpec,
+                        Event::List events = calendar->events(dt, timeZone,
                                                               EventSortStartDate,
                                                               SortDirectionAscending);
                         qCDebug(KONSOLEKALENDAR_LOG) << "2-Found" << events.count() << "events on date" << dt;
@@ -276,7 +277,7 @@ bool KonsoleKalendar::showInstance()
                     for (dt = m_variables->getStartDateTime().date();
                             dt <= m_variables->getEndDateTime().date() && status != false;
                             dt = dt.addDays(1)) {
-                        Event::List events = calendar->events(dt, timeSpec,
+                        Event::List events = calendar->events(dt, timeZone,
                                                               EventSortStartDate,
                                                               SortDirectionAscending);
                         qCDebug(KONSOLEKALENDAR_LOG) << "3-Found" << events.count() << "events on date: " << dt;
@@ -463,14 +464,14 @@ bool KonsoleKalendar::isEvent(const QDateTime &startdate,
 
     bool found = false;
 
-    KDateTime::Spec timeSpec = m_variables->getCalendar()->timeSpec();
+    const auto timeZone = m_variables->getCalendar()->timeZone();
     Event::List eventList(m_variables->getCalendar()->
-                          rawEventsForDate(startdate.date(), timeSpec,
+                          rawEventsForDate(startdate.date(), timeZone,
                                            EventSortStartDate,
                                            SortDirectionAscending));
     for (it = eventList.constBegin(); it != eventList.constEnd(); ++it) {
         event = *it;
-        if (event->dtEnd().toTimeSpec(timeSpec).dateTime() == enddate &&
+        if (event->dtEnd().toTimeSpec(KCalCore::zoneToSpec(timeZone)).dateTime() == enddate &&
                 event->summary() == summary) {
             found = true;
             break;
