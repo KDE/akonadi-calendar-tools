@@ -33,15 +33,15 @@
 #include "konsolekalendarexports.h"
 
 #include "konsolekalendar_debug.h"
-#include <klocale.h>
 
 #include <KCalCore/Event>
 
 #include <QDateTime>
+#include <QLocale>
+#include <KLocalizedString>
 
 #include <stdlib.h>
 #include <iostream>
-#include <KLocale>
 
 using namespace KCalCore;
 using namespace std;
@@ -74,18 +74,20 @@ bool KonsoleKalendarExports::exportAsTxt(QTextStream *ts,
     // \t<Incidence UID>
     // --------------------------------------------------
 
+    QLocale locale;
+
     // Print Event Date (in user's preferred format)
     *ts << i18n("Date:")
         << "\t"
-        << KLocale::global()->formatDate(date)
+        << locale.toString(date)
         << endl;
 
     // Print Event Starttime - Endtime, for Non-All-Day Events Only
     if (!event->allDay()) {
         *ts << "\t"
-            << KLocale::global()->formatTime(event->dtStart().time())
+            << locale.toString(event->dtStart().time())
             << " - "
-            << KLocale::global()->formatTime(event->dtEnd().time());
+            << locale.toString(event->dtEnd().time());
     }
     *ts << endl;
 
@@ -154,18 +156,19 @@ bool KonsoleKalendarExports::exportAsTxtShort(QTextStream *ts,
     // [<Incidence Start Time>(hh:mm) - <Incidence End Time>(hh:mm) | "\t"]
     // \t<Incidence Summary | \t>[, <Incidence Location>]
     // \t\t<Incidence Description | "\t">
+    QLocale locale;
 
     if (!sameday) {
         // If a new date, then Print the Event Date (in user's preferred format)
-        *ts << KLocale::global()->formatDate(date) << ":"
+        *ts << locale.toString(date) << ":"
             << endl;
     }
 
     // Print Event Starttime - Endtime
     if (!event->allDay()) {
-        *ts << KLocale::global()->formatTime(event->dtStart().time())
+        *ts << locale.toString(event->dtStart().time())
             << " - "
-            << KLocale::global()->formatTime(event->dtEnd().time());
+            << locale.toString(event->dtEnd().time());
     } else {
         *ts << i18n("[all day]\t");
     }
@@ -225,16 +228,16 @@ bool KonsoleKalendarExports::exportAsCSV(QTextStream *ts,
 
     QString delim = i18n(",");     // character to use as CSV field delimiter
     QString dquote = i18n("\"");   // character to use to quote CSV fields
-
+    QLocale locale;
     if (!event->allDay()) {
-        *ts <<          pF(KLocale::global()->formatDate(date))
-            << delim << pF(KLocale::global()->formatTime(event->dtStart().time()))
-            << delim << pF(KLocale::global()->formatDate(date))
-            << delim << pF(KLocale::global()->formatTime(event->dtEnd().time()));
+        *ts <<          pF(locale.toString(date))
+            << delim << pF(locale.toString(event->dtStart().time()))
+            << delim << pF(locale.toString(date))
+            << delim << pF(locale.toString(event->dtEnd().time()));
     } else {
-        *ts <<          pF(KLocale::global()->formatDate(date))
+        *ts <<          pF(locale.toString(date))
             << delim << pF(QLatin1String(""))
-            << delim << pF(KLocale::global()->formatDate(date))
+            << delim << pF(locale.toString(date))
             << delim << pF(QLatin1String(""));
     }
 

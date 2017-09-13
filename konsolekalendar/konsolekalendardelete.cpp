@@ -38,7 +38,7 @@
 #include "konsolekalendar_debug.h"
 #include <KLocalizedString>
 #include <QEventLoop>
-#include <kcalcore/utils.h>
+
 
 using namespace KCalCore;
 using namespace std;
@@ -107,11 +107,11 @@ void KonsoleKalendarDelete::printSpecs(const Event::Ptr &event)
 
     const auto timeZone  = m_variables->getCalendar()->timeZone();
     cout << i18n("  Begin: %1",
-                 event->dtStart().toTimeSpec(KCalCore::zoneToSpec(timeZone)).dateTime().toString(Qt::TextDate)).data()
+                 event->dtStart().toTimeZone(timeZone).toString(Qt::TextDate)).data()
          << endl;
 
     cout << i18n("  End:   %1",
-                 event->dtEnd().toTimeSpec(KCalCore::zoneToSpec(timeZone)).dateTime().toString(Qt::TextDate)).data()
+                 event->dtEnd().toTimeZone(timeZone).toString(Qt::TextDate)).data()
          << endl;
 
     cout << i18n("  Desc:  %1",

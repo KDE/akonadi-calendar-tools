@@ -34,7 +34,6 @@
 
 #include "konsolekalendar_debug.h"
 #include <KLocalizedString>
-#include <KCalCore/Utils>
 
 #include <QEventLoop>
 #include <QElapsedTimer>
@@ -91,11 +90,11 @@ bool KonsoleKalendarChange::changeEvent()
             Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
             const auto timeZone = calendar->timeZone();
             if (m_variables->isStartDateTime()) {
-                event->setDtStart(KDateTime(m_variables->getStartDateTime(), KCalCore::zoneToSpec(timeZone)));
+                event->setDtStart(m_variables->getStartDateTime().toTimeZone(timeZone));
             }
 
             if (m_variables->isEndDateTime()) {
-                event->setDtEnd(KDateTime(m_variables->getEndDateTime(), KCalCore::zoneToSpec(timeZone)));
+                event->setDtEnd(m_variables->getEndDateTime().toTimeZone(timeZone));
             }
 
             event->setAllDay(m_variables->getFloating());
@@ -148,13 +147,11 @@ void KonsoleKalendarChange::printSpecs(const Event::Ptr &event)
 
     const auto timeZone = m_variables->getCalendar()->timeZone();
     cout << i18n("  Begin: %1",
-                 event->dtStart().toTimeSpec(KCalCore::zoneToSpec(timeZone)).
-                 dateTime().toString(Qt::TextDate)).toLocal8Bit().data()
+                 event->dtStart().toTimeZone(timeZone).toString(Qt::TextDate)).toLocal8Bit().data()
          << endl;
 
     cout << i18n("  End:   %1",
-                 event->dtEnd().toTimeSpec(KCalCore::zoneToSpec(timeZone)).
-                 dateTime().toString(Qt::TextDate)).toLocal8Bit().data()
+                 event->dtEnd().toTimeZone(timeZone).toString(Qt::TextDate)).toLocal8Bit().data()
          << endl;
 
     cout << i18n("  Desc:  %1",

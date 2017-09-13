@@ -36,12 +36,11 @@
 
 #include "konsolekalendar_debug.h"
 
-#include <ksystemtimezone.h>
 #include <KLocalizedString>
 
 #include <KCalCore/Event>
 #include <KCalCore/FileStorage>
-#include <KCalCore/Utils>
+
 #include <Akonadi/Calendar/IncidenceChanger>
 #include <AkonadiCore/Collection>
 
@@ -91,8 +90,8 @@ bool KonsoleKalendarAdd::addEvent()
         Event::Ptr event = Event::Ptr(new Event());
 
         const auto timeZone = m_variables->getCalendar()->timeZone();
-        event->setDtStart(KDateTime(m_variables->getStartDateTime(), KCalCore::zoneToSpec(timeZone)));
-        event->setDtEnd(KDateTime(m_variables->getEndDateTime(), KCalCore::zoneToSpec(timeZone)));
+        event->setDtStart(m_variables->getStartDateTime().toTimeZone(timeZone));
+        event->setDtEnd(m_variables->getEndDateTime().toTimeZone(timeZone));
         event->setSummary(m_variables->getSummary());
         event->setAllDay(m_variables->getFloating());
         event->setDescription(m_variables->getDescription());

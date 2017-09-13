@@ -30,10 +30,8 @@
 #include <KCalCore/Event>
 #include <KCalCore/Todo>
 #include <KCalCore/Journal>
-#include <KCalCore/Utils>
 
 #include <KLocalizedString>
-#include <KDateTime>
 
 #include <QList>
 #include <QString>
@@ -69,12 +67,12 @@ static bool incidenceIsOld(const KCalCore::Incidence::Ptr &incidence)
         return false;
     }
 
-    KDateTime datetime = incidence->dtStart();
+    QDateTime datetime = incidence->dtStart();
     if (!datetime.isValid() && incidence->type() == KCalCore::Incidence::TypeTodo) {
         datetime = incidence->dateTime(KCalCore::Incidence::RoleEnd);
     }
 
-    return datetime.isValid() && datetime.daysTo(KDateTime::currentDateTime(KDateTime::LocalZone)) > 365;
+    return datetime.isValid() && datetime.daysTo(QDateTime::currentDateTime()) > 365;
 }
 
 CalendarJanitor::CalendarJanitor(const Options &options, QObject *parent) : QObject(parent)
@@ -312,8 +310,8 @@ void CalendarJanitor::sanityCheck3()
             continue;
         }
 
-        KDateTime start = event->dtStart();
-        KDateTime end   = event->dtEnd();
+        QDateTime start = event->dtStart();
+        QDateTime end   = event->dtEnd();
 
         bool modify = false;
         QString message;
@@ -324,7 +322,7 @@ void CalendarJanitor::sanityCheck3()
         } else if (!start.isValid() && !end.isValid()) {
             modify = true;
             printFound(item);
-            event->setDtStart(KDateTime::currentLocalDateTime());
+            event->setDtStart(QDateTime::currentDateTime());
             event->setDtEnd(event->dtStart().addSecs(3600));
         }
 
@@ -349,8 +347,8 @@ void CalendarJanitor::sanityCheck4()
             continue;
         }
 
-        KDateTime start = todo->dtStart();
-        KDateTime due   = todo->dtDue();
+        QDateTime start = todo->dtStart();
+        QDateTime due   = todo->dtDue();
         bool modify = false;
         if (todo->recurs() && !start.isValid() && due.isValid()) {
             modify = true;
@@ -361,7 +359,7 @@ void CalendarJanitor::sanityCheck4()
         if (todo->recurs() && !start.isValid() && !due.isValid()) {
             modify = true;
             printFound(item);
-            todo->setDtStart(KDateTime::currentLocalDateTime());
+            todo->setDtStart(QDateTime::currentDateTime());
         }
 
         if (modify) {
@@ -386,7 +384,7 @@ void CalendarJanitor::sanityCheck5()
 
         if (!incidence->dtStart().isValid()) {
             printFound(item);
-            incidence->setDtStart(KDateTime::currentLocalDateTime());
+            incidence->setDtStart(QDateTime::currentDateTime());
             if (m_fixingEnabled) {
                 m_changer->modifyIncidence(item);
                 m_pendingModifications++;
@@ -544,8 +542,8 @@ void CalendarJanitor::sanityCheck9()
                 bool modified = false;
 
                 QDateTime recId = incidence->recurrenceId();
-                KDateTime start = incidence->dtStart();
-                KDateTime end   = incidence->dateTime(KCalCore::Incidence::RoleEnd);
+                QDateTime start = incidence->dtStart();
+                QDateTime end   = incidence->dateTime(KCalCore::Incidence::RoleEnd);
 
                 KCalCore::Event::Ptr event = incidence.dynamicCast<KCalCore::Event>();
                 KCalCore::Todo::Ptr todo = incidence.dynamicCast<KCalCore::Todo>();
@@ -553,15 +551,15 @@ void CalendarJanitor::sanityCheck9()
                 if (event && start.isValid() && end.isValid()) {
                     modified = true;
                     const int duration = start.daysTo(end.toTimeSpec(start.timeSpec()));
-                    incidence->setDtStart(KCalCore::q2k(recId));
-                    event->setDtEnd(KCalCore::q2k(recId.addDays(duration)));
+                    incidence->setDtStart(recId);
+                    event->setDtEnd(recId.addDays(duration));
                 } else if (todo && start.isValid()) {
                     modified = true;
-                    incidence->setDtStart(KCalCore::q2k(recId));
+                    incidence->setDtStart(recId);
 
                     if (end.isValid()) {
                         const int duration = start.daysTo(end.toTimeSpec(start.timeSpec()));
-                        todo->setDtDue(KCalCore::q2k(recId.addDays(duration)));
+                        todo->setDtDue(recId.addDays(duration));
                     }
                 }
 
@@ -598,8 +596,8 @@ void CalendarJanitor::stripOldAlarms()
 
 static QString dateString(const KCalCore::Incidence::Ptr &incidence)
 {
-    KDateTime start = incidence->dtStart();
-    KDateTime end = incidence->dateTime(KCalCore::Incidence::RoleEnd);
+    QDateTime start = incidence->dtStart();
+    QDateTime end = incidence->dateTime(KCalCore::Incidence::RoleEnd);
     QString str = QLatin1String("DTSTART=") + (start.isValid() ? start.toString() : i18n("invalid")) + QLatin1String("; ");
 
     if (incidence->type() == KCalCore::Incidence::TypeJournal) {

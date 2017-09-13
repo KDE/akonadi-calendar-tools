@@ -18,11 +18,15 @@ ecm_qt_declare_logging_category(konsolekalendar_SRCS HEADER konsolekalendar_debu
 add_executable(konsolekalendar ${konsolekalendar_SRCS})
 
 target_link_libraries(konsolekalendar
+    Qt5::DBus
     KF5::CalendarUtils
     KF5::CalendarCore
     KF5::Libkdepim
     KF5::CalendarSupport
-    KF5::AkonadiCalendar)
+    KF5::AkonadiCalendar
+    KF5::I18n
+    KF5::KDELibs4Support
+)
 
 install(TARGETS konsolekalendar  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 

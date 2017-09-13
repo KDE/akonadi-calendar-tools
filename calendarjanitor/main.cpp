@@ -26,11 +26,12 @@
 
 #include "console-version.h"
 
-#include <k4aboutdata.h>
+#include <KAboutData>
 #include <KLocalizedString>
-#include <KCmdLineArgs>
-#include <KApplication>
 
+#include <QCoreApplication>
+#include <QCommandLineParser>
+#include <QCommandLineOption>
 #include <QTextStream>
 #include <QString>
 #include <qglobal.h>
@@ -42,11 +43,11 @@
 #    include <unistd.h>
 #endif
 
-static const char progName[] = "calendarjanitor";
-static const char progDisplay[] = "CalendarJanitor";
+static const QString progName = QStringLiteral("calendarjanitor");
+static const char progDisplay[] = I18N_NOOP("CalendarJanitor");
 
-static const char progVersion[] = KDEPIM_VERSION;
-static const char progDesc[] = "A command line interface to report and fix errors in your calendar data";
+static const QString progVersion = QStringLiteral(KDEPIM_VERSION);
+static const char progDesc[] = I18N_NOOP("A command line interface to report and fix errors in your calendar data");
 
 static void print(const QString &message)
 {
@@ -77,46 +78,30 @@ static void silenceStderr()
 int main(int argv, char *argc[])
 {
     KLocalizedString::setApplicationDomain("calendarjanitor");
-    K4AboutData aboutData(progName, 0,                 // internal program name
-                          ki18n(progDisplay),          // displayable program name.
-                          progVersion,                 // version string
-                          ki18n(progDesc),             // short program description
-                          K4AboutData::License_GPL,     // license type
-                          ki18n("(c) 2013, Sérgio Martins"),
-                          ki18n(0),                    // any free form text
-                          0,                           // program home page address
-                          "bugs.kde.org");
-    aboutData.addAuthor(ki18n("Sérgio Martins"), ki18n("Maintainer"), "iamsergio@gmail.com", 0);
+    KAboutData aboutData(progName, i18n(progDisplay), progVersion);
+    aboutData.setLicense(KAboutLicense::GPL_V2, KAboutLicense::OrLaterVersions);
+    aboutData.addAuthor(i18n("Sérgio Martins"), i18n("Maintainer"), QStringLiteral("iamsergiogmail.com"));
+    aboutData.setShortDescription(i18n(progDesc));
 
-    KCmdLineArgs::init(argv, argc, &aboutData, KCmdLineArgs::CmdLineArgNone);
 
-    KCmdLineOptions options;
-    options.add("collections <ids>", ki18n("List of collection ids to scan"));
-    options.add("fix", ki18n("Fix broken incidences"));
-    options.add("backup <output.ics>", ki18n("Backup your calendar"));
-    options.add("strip-old-alarms", ki18n("Delete alarms older than 365 days"));
+    QCoreApplication app(argv, argc);
 
-    options.add("", ki18n("\nExamples:\n\nScan all collections:\n"
-                          "$ calendarjanitor\n\n"
-                          "Scan and fix all collections:\n"
-                          "$ calendarjanitor --fix\n\n"
-                          "Scan and fix some collections:\n"
-                          "$ calendarjanitor --collections 10,20 --fix\n\n"
-                          "Backup all collections:\n"
-                          "$ calendarjanitor --backup backup.ics\n\n"
-                          "Backup some collections:\n"
-                          "$ calendarjanitor --backup backup.ics --collections 10,20\n\n"
-                          "Strip alarms from incidences older than 365 days:\n"
-                          "$ calendarjanitor --strip-old-alarms --collections 10,20")
-               );
+    QCommandLineParser parser;
+    QCommandLineOption colsOpt(QStringLiteral("collections"), i18n("Comma-separated list of collection ids to scan"), QStringLiteral("ids"));
+    QCommandLineOption fixOpt(QStringLiteral("fix"), i18n("Fix broken incidences"));
+    QCommandLineOption backupOpt(QStringLiteral("backup"), i18n("Backup your calendar"), QStringLiteral("output.ics"));
+    QCommandLineOption stripOldAlarmsOpt(QStringLiteral("strip-old-alarms"), i18n("Delete alarms older than 365 days"));
+    parser.addOptions({ colsOpt, fixOpt, backupOpt, stripOldAlarmsOpt });
+    parser.addVersionOption();
+    parser.addHelpOption();
+    aboutData.setupCommandLine(&parser);
 
-    KCmdLineArgs::addCmdLineOptions(options);
-    KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+    parser.process(app);
+    aboutData.processCommandLine(&parser);
 
     Options janitorOptions;
-
-    if (args->isSet("collections")) {
-        QString option = args->getOption("collections");
+    if (parser.isSet(colsOpt)) {
+        QString option = parser.value(colsOpt);
         QStringList collections = option.split(QLatin1Char(','));
         QList<Akonadi::Collection::Id> ids;
         foreach (const QString &collection, collections) {
@@ -138,33 +123,31 @@ int main(int argv, char *argc[])
         }
     }
 
-    if (args->isSet("fix") && args->isSet("backup")) {
+    if (parser.isSet(fixOpt) && parser.isSet(backupOpt)) {
         print(i18n("--fix is incompatible with --backup"));
         return -1;
     }
 
-    if (args->isSet("strip-old-alarms") && args->isSet("backup")) {
+    if (parser.isSet(stripOldAlarmsOpt) && parser.isSet(backupOpt)) {
         print(i18n("--strip-old-alarms is incompatible with --backup"));
         return -1;
     }
 
-    if (args->isSet("strip-old-alarms") && args->isSet("fix")) {
+    if (parser.isSet(stripOldAlarmsOpt) && parser.isSet(fixOpt)) {
         print(i18n("--strip-old-alarms is incompatible with --fix"));
         return -1;
     }
 
-    KApplication app(false);
-
     silenceStderr(); // Switching off mobile phones, movie is about to start
 
-    janitorOptions.setStripOldAlarms(args->isSet("strip-old-alarms"));
+    janitorOptions.setStripOldAlarms(parser.isSet(stripOldAlarmsOpt));
 
     QString backupFile;
-    if (args->isSet("fix")) {
+    if (parser.isSet(fixOpt)) {
         janitorOptions.setAction(Options::ActionScanAndFix);
         print(i18n("Running in fix mode."));
-    } else if (args->isSet("backup")) {
-        backupFile = args->getOption("backup");
+    } else if (parser.isSet(backupOpt)) {
+        backupFile = parser.value(backupOpt);
         if (backupFile.isEmpty()) {
             print(i18n("Please specify a output file."));
             return -1;

@@ -38,10 +38,8 @@
 
 #include "konsolekalendar_debug.h"
 #include <KLocalizedString>
-#include <ksystemtimezone.h>
 
 #include <KCalCore/Event>
-#include <KCalCore/Utils>
 #include <KCalUtils/HtmlExport>
 #include <kcalutils/htmlexportsettings.h>
 #include <AkonadiCore/AgentManager>
@@ -471,7 +469,7 @@ bool KonsoleKalendar::isEvent(const QDateTime &startdate,
                                            SortDirectionAscending));
     for (it = eventList.constBegin(); it != eventList.constEnd(); ++it) {
         event = *it;
-        if (event->dtEnd().toTimeSpec(KCalCore::zoneToSpec(timeZone)).dateTime() == enddate &&
+        if (event->dtEnd().toTimeZone(timeZone) == enddate &&
                 event->summary() == summary) {
             found = true;
             break;
