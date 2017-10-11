@@ -92,8 +92,6 @@ int main(int argv, char *argc[])
     QCommandLineOption backupOpt(QStringLiteral("backup"), i18n("Backup your calendar"), QStringLiteral("output.ics"));
     QCommandLineOption stripOldAlarmsOpt(QStringLiteral("strip-old-alarms"), i18n("Delete alarms older than 365 days"));
     parser.addOptions({ colsOpt, fixOpt, backupOpt, stripOldAlarmsOpt });
-    parser.addVersionOption();
-    parser.addHelpOption();
     aboutData.setupCommandLine(&parser);
 
     parser.process(app);
