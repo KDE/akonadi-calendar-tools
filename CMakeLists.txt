@@ -66,7 +66,7 @@ include_directories(${akonadi-calendar-tools_SOURCE_DIR} ${akonadi-calendar-tool
 
 configure_file(console-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/console-version.h @ONLY)
 
-add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
+
 
 
 
