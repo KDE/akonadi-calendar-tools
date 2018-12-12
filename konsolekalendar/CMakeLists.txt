@@ -25,7 +25,6 @@ target_link_libraries(konsolekalendar
     KF5::CalendarSupport
     KF5::AkonadiCalendar
     KF5::I18n
-    KF5::KDELibs4Support
 )
 
 install(TARGETS konsolekalendar  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

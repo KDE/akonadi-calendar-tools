@@ -38,13 +38,13 @@
 
 #include "konsolekalendarvariables.h"
 
-#include <kcmdlineargs.h>
-#include <k4aboutdata.h>
+
+
 #include <KLocalizedString>
 #include <kconfig.h>
 
 #include "konsolekalendar_debug.h"
-#include <KApplication>
+
 
 #include <KCalCore/CalFormat>
 
@@ -57,6 +57,9 @@
 #include <stdlib.h>
 #include <iostream>
 #include <time.h>
+#include <QApplication>
+#include <KAboutData>
+#include <QCommandLineParser>
 
 using namespace KCalCore;
 using namespace std;
@@ -66,131 +69,83 @@ static const char progName[] = "konsolekalendar";
 static const char progDisplay[] = "KonsoleKalendar";
 #include "console-version.h"
 static const char progVersion[] = KDEPIM_VERSION;
-static const char progDesc[] = "A command line interface to KDE calendars";
-static const char progURL[] = "pim.kde.org/components/konsolekalendar.php";
 
 int main(int argc, char *argv[])
 {
     KLocalizedString::setApplicationDomain("konsolekalendar");
-    K4AboutData aboutData(
-        progName, 0,                 // internal program name
-        ki18n(progDisplay),          // displayable program name.
-        progVersion,                 // version string
-        ki18n(progDesc),             // short program description
-        K4AboutData::License_GPL,     // license type
-        ki18n("(c) 2002-2009, Tuukka Pasanen and Allen Winter"),
-        ki18n(0),                    // any free form text
-        progURL,                     // program home page address
-        "bugs.kde.org"               // bug report email address
-        );
+    QApplication app(argc, argv); // PORTING SCRIPT: move this to before the KAboutData initialization
 
-    aboutData.addAuthor(
-        ki18n("Allen Winter"),       // developer's name
-        ki18n("Maintainer"),         // task or role
-        "winter@kde.org",            // email address
-        0                            // home page or relevant link
-        );
-    aboutData.addAuthor(
-        ki18n("Tuukka Pasanen"),     // developer's name
-        ki18n("Author"),             // task or role
-        "illuusio@mailcity.com",     // email address
-        0                            // home page or relevant link
-        );
 
-    KCmdLineArgs::init(argc, argv, &aboutData, KCmdLineArgs::CmdLineArgNone);
+    KAboutData aboutData(QLatin1String(progName),
+                         i18n("KonsoleKalendar"),
+                         QStringLiteral(KDEPIM_VERSION),
+                         i18n("A command line interface to KDE calendars"),
+                         KAboutLicense::GPL,
+                         i18n("(c) 2002-2009, Tuukka Pasanen and Allen Winter"));
 
-    KCmdLineOptions options;
-    options.add("verbose",
-                ki18n("Print helpful runtime messages"));
-    options.add("dry-run",
-                ki18n("Print what would have been done, but do not execute"));
-    options.add("allow-gui",
-                ki18n("Allow calendars which might need an interactive user interface"));
-    options.add(":",
-                ki18n("Incidence types (these options can be combined):"));
-    options.add("event",
-                ki18n("  Operate for Events only (Default)"));
-    options.add("todo",
-                ki18n("  Operate for To-dos only [NOT WORKING YET]"));
-    options.add("journal",
-                ki18n("  Operate for Journals only [NOT WORKING YET]"));
-    options.add(":",
-                ki18n("Major operation modes:"));
-    options.add("view",
-                ki18n("  Print incidences in specified export format"));
-    options.add("add",
-                ki18n("  Insert an incidence into the calendar"));
-    options.add("change",
-                ki18n("  Modify an existing incidence"));
-    options.add("delete",
-                ki18n("  Remove an existing incidence"));
-    options.add("create <filename>",
-                ki18n("  Create new Akonadi Resource for file"));
-    options.add("import <import-file>",
-                ki18n("  Import this calendar to main calendar"));
-    options.add("list-calendars",
-                ki18n("  List available calendars"));
-    options.add(":",
-                ki18n("Operation modifiers:"));
-    options.add("all",
-                ki18n("  View all calendar entries, ignoring date/time options"));
-    options.add("next",
-                ki18n("  View next activity in calendar"));
-    options.add("show-next <days>",
-                ki18n("  From start date show next # days' activities"));
-    options.add("uid <uid>",
-                ki18n("  Incidence Unique-string identifier"));
-    options.add("date <start-date>",
-                ki18n("  Start from this day [YYYY-MM-DD]"));
-    options.add("time <start-time>",
-                ki18n("  Start from this time [HH:MM:SS]"));
-    options.add("end-date <end-date>",
-                ki18n("  End at this day [YYYY-MM-DD]"));
-    options.add("end-time <end-time>",
-                ki18n("  End at this time [HH:MM:SS]"));
-    options.add("epoch-start <epoch-time>",
-                ki18n(" Start from this time [secs since epoch]"));
-    options.add("epoch-end <epoch-time>",
-                ki18n("  End at this time [secs since epoch]"));
-    options.add("summary <summary>",
-                ki18n("  Add summary to incidence (for add/change modes)"));
-    options.add("description <description>",
-                ki18n("Add description to incidence (for add/change modes)"));
-    options.add("location <location>",
-                ki18n("  Add location to incidence (for add/change modes)"));
-    options.add("calendar <calendar id>",
-                ki18n("  Calendar to use when creating a new incidence"));
-    options.add(":",
-                ki18n("Export options:"));
-    options.add("export-type <export-type>",
-                ki18n("Export file type (Default: text)"));
-    options.add("export-file <export-file>",
-                ki18n("Export to file (Default: stdout)"));
-    options.add("export-list",
-                ki18n("  Print list of export types supported and exit"));
-    options.add("",
-                ki18n("Examples:\n"
-                      "  konsolekalendar --view\n"
-                      "  konsolekalendar --list-calendars\n"
-                      "  konsolekalendar --add --calendar 42 --date 2016-12-04 "
-                      "--time 10:00 --end-time 12:00 \\\n"
-                      "                  --summary \"Doctor Visit\" "
-                      "--description \"Get My Head Examined\"\n"
-                      "  konsolekalendar --delete --uid KOrganizer-1740326.803"));
-    options.add("",
-                ki18n("Without any options konsolekalendar will output today's events\n"
-                      "from 7am to 5pm or nothing at all if there aren't any"));
-    options.add("",
-                ki18n("For more information visit the program home page at:\n"
-                      "  https://userbase.kde.org/KonsoleKalendar"));
-    KCmdLineArgs::addCmdLineOptions(options);   // Add our own options.
+    aboutData.addAuthor(i18n("Laurent Montel"), i18n("Bug fixing"), QStringLiteral("montel@kde.org"));
+    aboutData.addAuthor(i18n("Allen Winter"), i18n("Maintainer"), QStringLiteral("winter@kde.org"));
+    aboutData.addAuthor(i18n("Tuukka Pasanen"), i18n("Author"), QStringLiteral("illuusio@mailcity.com"));
 
-    KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+    QCommandLineParser parser;
+    KAboutData::setApplicationData(aboutData);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    aboutData.setupCommandLine(&parser);
 
-    KApplication app(
-        // when not set (default) GUI is not enabled - disable all GUI stuff
-        args->isSet("allow-gui")
-        );
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("verbose"), i18n("Print helpful runtime messages")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("dry-run"),i18n("Print what would have been done, but do not execute")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("allow-gui"), i18n("Allow calendars which might need an interactive user interface")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(":"),i18n("Incidence types (these options can be combined):")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("event"), i18n("  Operate for Events only (Default)")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("todo"), i18n("  Operate for To-dos only [NOT WORKING YET]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("journal"), i18n("  Operate for Journals only [NOT WORKING YET]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(":"), i18n("Major operation modes:")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("view"), i18n("  Print incidences in specified export format")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("add"), i18n("  Insert an incidence into the calendar")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("change"), i18n("  Modify an existing incidence")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("delete"), i18n("  Remove an existing incidence")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("create <filename>"), i18n("  Create new Akonadi Resource for file")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("import <import-file>"), i18n("  Import this calendar to main calendar")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("list-calendars"), i18n("  List available calendars")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(":"), i18n("Operation modifiers:")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("all"), i18n("  View all calendar entries, ignoring date/time options")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("next"), i18n("  View next activity in calendar")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("show-next <days>"), i18n("  From start date show next # days' activities")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("uid <uid>"), i18n("  Incidence Unique-string identifier")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("date <start-date>"), i18n("  Start from this day [YYYY-MM-DD]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("time <start-time>"), i18n("  Start from this time [HH:MM:SS]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("end-date <end-date>"), i18n("  End at this day [YYYY-MM-DD]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("end-time <end-time>"), i18n("  End at this time [HH:MM:SS]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("epoch-start <epoch-time>"), i18n(" Start from this time [secs since epoch]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("epoch-end <epoch-time>"), i18n("  End at this time [secs since epoch]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("summary <summary>"), i18n("  Add summary to incidence (for add/change modes)")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("description <description>"), i18n("Add description to incidence (for add/change modes)")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("location <location>"), i18n("  Add location to incidence (for add/change modes)")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("calendar <calendar id>"), i18n("  Calendar to use when creating a new incidence")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(":"), i18n("Export options:")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("export-type <export-type>"), i18n("Export file type (Default: text)")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("export-file <export-file>"), i18n("Export to file (Default: stdout)")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("export-list"), i18n("  Print list of export types supported and exit")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(""), i18n("Examples:\n"
+                                                                                  "  konsolekalendar --view\n"
+                                                                                  "  konsolekalendar --list-calendars\n"
+                                                                                  "  konsolekalendar --add --calendar 42 --date 2016-12-04 "
+                                                                                  "--time 10:00 --end-time 12:00 \\\n"
+                                                                                  "                  --summary \"Doctor Visit\" "
+                                                                                  "--description \"Get My Head Examined\"\n"
+                                                                                  "  konsolekalendar --delete --uid KOrganizer-1740326.803")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(""), i18n("Without any options konsolekalendar will output today's events\n"
+                                                                                  "from 7am to 5pm or nothing at all if there aren't any")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(""), i18n("For more information visit the program home page at:\n"
+                                                                                  "  https://userbase.kde.org/KonsoleKalendar")));
+    parser.process(app);
+    aboutData.processCommandLine(&parser);
+
+
+    //Laurent: allow or not gui FIXME
+    //        // when not set (default) GUI is not enabled - disable all GUI stuff
+    //        parser.isSet(QStringLiteral("allow-gui"));
 
     // Default values for start date/time (today at 07:00)
     QDate startdate = QDate::currentDate();
@@ -216,22 +171,22 @@ int main(int argc, char *argv[])
 
     variables.setFloating(false);   // by default, new events do NOT float
 
-    if (args->isSet("verbose")) {
+    if (parser.isSet(QStringLiteral("verbose"))) {
         variables.setVerbose(true);
     }
 
-    if (args->isSet("dry-run")) {
+    if (parser.isSet(QStringLiteral("dry-run"))) {
         variables.setDryRun(true);
     }
 
-    if (args->isSet("allow-gui")) {
+    if (parser.isSet(QStringLiteral("allow-gui"))) {
         variables.setAllowGui(true);
     }
 
     /*
      * Switch on export list
      */
-    if (args->isSet("export-list")) {
+    if (parser.isSet(QStringLiteral("export-list"))) {
         cout << endl;
         cout << i18n("%1 supports these export formats:",
                      QString::fromLatin1(progDisplay)).toLocal8Bit().data()
@@ -258,18 +213,18 @@ int main(int argc, char *argv[])
     /*
      * Set incidence type(s)
      */
-    if (args->isSet("event")) {
+    if (parser.isSet(QStringLiteral("event"))) {
         variables.setUseEvents(true);
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options | use Events";
     }
-    if (args->isSet("todo")) {
+    if (parser.isSet(QStringLiteral("todo"))) {
         variables.setUseTodos(true);
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options | use To-dos";
         cout << i18n("Sorry, To-dos are not working yet.").toLocal8Bit().data()
              << endl;
         return 1;
     }
-    if (args->isSet("journal")) {
+    if (parser.isSet(QStringLiteral("journal"))) {
         variables.setUseJournals(true);
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options | use Journals";
         cout << i18n("Sorry, Journals are not working yet.").toLocal8Bit().data()
@@ -277,9 +232,9 @@ int main(int argc, char *argv[])
         return 1;
     }
     // Use Events if no incidence type is specified on the command line
-    if (!args->isSet("event")
-        && !args->isSet("todo")
-        && !args->isSet("journal")) {
+    if (!parser.isSet(QStringLiteral("event"))
+            && !parser.isSet(QStringLiteral("todo"))
+            && !parser.isSet(QStringLiteral("journal"))) {
         variables.setUseEvents(true);
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options | use Events (Default)";
     }
@@ -288,8 +243,8 @@ int main(int argc, char *argv[])
      * Switch on exporting
      */
     variables.setExportType(ExportTypeText);
-    if (args->isSet("export-type")) {
-        option = args->getOption("export-type");
+    if (parser.isSet(QStringLiteral("export-type"))) {
+        option = parser.value(QStringLiteral("export-type"));
 
         if (option.toUpper() == QLatin1String("HTML")) {
             qCDebug(KONSOLEKALENDAR_LOG) << "main | export-type | Export to HTML";
@@ -316,8 +271,8 @@ int main(int argc, char *argv[])
     /*
      * Switch on export file name
      */
-    if (args->isSet("export-file")) {
-        option = args->getOption("export-file");
+    if (parser.isSet(QStringLiteral("export-file"))) {
+        option = parser.value(QStringLiteral("export-file"));
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "Export File:"
@@ -329,7 +284,7 @@ int main(int argc, char *argv[])
     /*
      * Switch on View (Print Entries).  This is the default mode of operation.
      */
-    if (args->isSet("view")) {
+    if (parser.isSet(QStringLiteral("view"))) {
         view = true;
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
@@ -339,7 +294,7 @@ int main(int argc, char *argv[])
     /*
      * Switch on Add (Insert Entry)
      */
-    if (args->isSet("add")) {
+    if (parser.isSet(QStringLiteral("add"))) {
         view = false;
         add = true;
 
@@ -350,7 +305,7 @@ int main(int argc, char *argv[])
     /*
      * Switch on Change (Modify Entry)
      */
-    if (args->isSet("change")) {
+    if (parser.isSet(QStringLiteral("change"))) {
         view = false;
         change = true;
 
@@ -361,7 +316,7 @@ int main(int argc, char *argv[])
     /*
      * Switch on Delete (Remove Entry)
      */
-    if (args->isSet("delete")) {
+    if (parser.isSet(QStringLiteral("delete"))) {
         view = false;
         del = true;
 
@@ -372,11 +327,11 @@ int main(int argc, char *argv[])
     /*
      * Switch on Create
      */
-    if (args->isSet("create")) {
+    if (parser.isSet(QStringLiteral("create"))) {
         view = false;
         create = true;
 
-        option = args->getOption("create");
+        option = parser.value(QStringLiteral("create"));
         variables.setCalendarFile(option);
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
@@ -387,8 +342,8 @@ int main(int argc, char *argv[])
     /*
      * If there is summary attached.
      */
-    if (args->isSet("summary")) {
-        option = args->getOption("summary");
+    if (parser.isSet(QStringLiteral("summary"))) {
+        option = parser.value(QStringLiteral("summary"));
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "Summary:"
@@ -400,8 +355,8 @@ int main(int argc, char *argv[])
     /*
      * If there is description attached.
      */
-    if (args->isSet("description")) {
-        option = args->getOption("description");
+    if (parser.isSet(QStringLiteral("description"))) {
+        option = parser.value(QStringLiteral("description"));
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "Description:"
@@ -410,8 +365,8 @@ int main(int argc, char *argv[])
         variables.setDescription(option);
     }
 
-    if (args->isSet("calendar")) {
-        option = args->getOption("calendar");
+    if (parser.isSet(QStringLiteral("calendar"))) {
+        option = parser.value(QStringLiteral("calendar"));
         bool ok = false;
         int colId = option.toInt(&ok);
         if (ok) {
@@ -422,8 +377,8 @@ int main(int argc, char *argv[])
     /*
      * If there is location information
      */
-    if (args->isSet("location")) {
-        option = args->getOption("location");
+    if (parser.isSet(QStringLiteral("location"))) {
+        option = parser.value(QStringLiteral("location"));
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "Location:"
@@ -435,7 +390,7 @@ int main(int argc, char *argv[])
     /*
      * Show next happening and exit
      */
-    if (args->isSet("next")) {
+    if (parser.isSet(QStringLiteral("next"))) {
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "Show next incidence only";
 
@@ -445,8 +400,8 @@ int main(int argc, char *argv[])
     /*
      * Set incidence unique string identifier
      */
-    if (args->isSet("uid")) {
-        option = args->getOption("uid");
+    if (parser.isSet(QStringLiteral("uid"))) {
+        option = parser.value(QStringLiteral("uid"));
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "incidence UID:"
@@ -458,8 +413,8 @@ int main(int argc, char *argv[])
     /*
      * Set starting date for calendar
      */
-    if (args->isSet("date")) {
-        option = args->getOption("date");
+    if (parser.isSet(QStringLiteral("date"))) {
+        option = parser.value(QStringLiteral("date"));
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "Start date before conversion:"
@@ -480,8 +435,8 @@ int main(int argc, char *argv[])
     /*
      * Set starting time
      */
-    if (args->isSet("time")) {
-        option = args->getOption("time");
+    if (parser.isSet(QStringLiteral("time"))) {
+        option = parser.value(QStringLiteral("time"));
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "Start time before conversion :"
@@ -511,8 +466,8 @@ int main(int argc, char *argv[])
     /*
      * Set end date for calendar
      */
-    if (args->isSet("end-date")) {
-        option = args->getOption("end-date");
+    if (parser.isSet(QStringLiteral("end-date"))) {
+        option = parser.value(QStringLiteral("end-date"));
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "End date before conversion:"
@@ -533,10 +488,10 @@ int main(int argc, char *argv[])
     /*
      * Show next # days and exit
      */
-    if (args->isSet("show-next")) {
+    if (parser.isSet(QStringLiteral("show-next"))) {
         bool ok;
 
-        option = args->getOption("show-next");
+        option = parser.value(QStringLiteral("show-next"));
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "Show" << option << "days ahead";
         variables.setDaysCount(option.toInt(&ok, 10));
@@ -557,8 +512,8 @@ int main(int argc, char *argv[])
     /*
      * Set ending time
      */
-    if (args->isSet("end-time")) {
-        option = args->getOption("end-time");
+    if (parser.isSet(QStringLiteral("end-time"))) {
+        option = parser.value(QStringLiteral("end-time"));
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "End time before conversion:"
@@ -590,8 +545,8 @@ int main(int argc, char *argv[])
      * Set start date/time from epoch
      */
     time_t epochstart = 0;
-    if (args->isSet("epoch-start")) {
-        option = args->getOption("epoch-start");
+    if (parser.isSet(QStringLiteral("epoch-start"))) {
+        option = parser.value(QStringLiteral("epoch-start"));
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "Epoch start:"
@@ -604,8 +559,8 @@ int main(int argc, char *argv[])
      * Set end date/time from epoch
      */
     time_t epochend = 0;
-    if (args->isSet("epoch-end")) {
-        option = args->getOption("epoch-end");
+    if (parser.isSet(QStringLiteral("epoch-end"))) {
+        option = parser.value(QStringLiteral("epoch-end"));
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "Epoch end:"
@@ -614,16 +569,16 @@ int main(int argc, char *argv[])
         epochend = (time_t)option.toULong(0, 10);
     }
 
-    if (args->isSet("all")) {
+    if (parser.isSet(QStringLiteral("all"))) {
         variables.setAll(true);
     } else {
         variables.setAll(false);
     }
 
-    if (args->isSet("import")) {
+    if (parser.isSet(QStringLiteral("import"))) {
         view = false;
         importFile = true;
-        option = args->getOption("import");
+        option = parser.value(QStringLiteral("import"));
         variables.setImportFile(option);
 
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
@@ -633,7 +588,7 @@ int main(int argc, char *argv[])
 
     KonsoleKalendar *konsolekalendar = new KonsoleKalendar(&variables);
 
-    if (args->isSet("list-calendars")) {
+    if (parser.isSet(QStringLiteral("list-calendars"))) {
         konsolekalendar->printCalendarList();
         return 0;
     }
@@ -655,12 +610,12 @@ int main(int argc, char *argv[])
     QDateTime startdatetime, enddatetime;
 
     // Handle case with either date or end-date unspecified
-    if (!args->isSet("end-date") && !args->isSet("show-next")
-        && args->isSet("date")) {
+    if (!parser.isSet(QStringLiteral("end-date")) && !parser.isSet(QStringLiteral("show-next"))
+            && parser.isSet(QStringLiteral("date"))) {
         enddate = startdate;
         qCDebug(KONSOLEKALENDAR_LOG) << "main | datetimestamp |"
                                      << "setting enddate to startdate";
-    } else if (args->isSet("end-date") && !args->isSet("date")) {
+    } else if (parser.isSet(QStringLiteral("end-date")) && !parser.isSet(QStringLiteral("date"))) {
         startdate = enddate;
         qCDebug(KONSOLEKALENDAR_LOG) << "main | datetimestamp |"
                                      << "setting startdate to enddate";
@@ -671,12 +626,12 @@ int main(int argc, char *argv[])
     // Case:
     //   End time (or epoch) unspecified, and start time (or epoch) IS specified.
     //   In this case, set the ending to 1 hour after starting.
-    if (!args->isSet("end-time") && !args->isSet("epoch-end")) {
-        if (args->isSet("time")) {
+    if (!parser.isSet(QStringLiteral("end-time")) && !parser.isSet(QStringLiteral("epoch-end"))) {
+        if (parser.isSet(QStringLiteral("time"))) {
             endtime = starttime.addSecs(60 * 60);    // end is 1 hour after start
             qCDebug(KONSOLEKALENDAR_LOG) << "main | datetimestamp |"
                                          << "setting endtime 1 hour after starttime";
-        } else if (args->isSet("epoch-start")) {
+        } else if (parser.isSet(QStringLiteral("epoch-start"))) {
             startdatetime = epochs.epoch2QDateTime(epochstart);
             enddatetime = startdatetime.addSecs(60 * 60);
             qCDebug(KONSOLEKALENDAR_LOG) << "main | datetimestamp |"
@@ -687,12 +642,12 @@ int main(int argc, char *argv[])
     // Case:
     //   Time (or epoch) unspecified, and end-time (or epoch) IS specified.
     //   In this case, set the starting to 1 hour before ending.
-    if (!args->isSet("time") && !args->isSet("epoch-start")) {
-        if (args->isSet("end-time")) {
+    if (!parser.isSet(QStringLiteral("time")) && !parser.isSet(QStringLiteral("epoch-start"))) {
+        if (parser.isSet(QStringLiteral("end-time"))) {
             starttime = endtime.addSecs(-60 * 60);    // start is 1 hour before end
             qCDebug(KONSOLEKALENDAR_LOG) << "main | datetimestamp |"
                                          << "setting starttime 1 hour before endtime";
-        } else if (args->isSet("epoch-end")) {
+        } else if (parser.isSet(QStringLiteral("epoch-end"))) {
             enddatetime = epochs.epoch2QDateTime(epochend);
             startdatetime = enddatetime.addSecs(-60 * 60);
             qCDebug(KONSOLEKALENDAR_LOG) << "main | datetimestamp |"
@@ -702,8 +657,8 @@ int main(int argc, char *argv[])
 
     // Case:
     //   Time (or epoch) unspecified, and end-time (or epoch) unspecified.
-    if (!args->isSet("time") && !args->isSet("epoch-start")
-        && !args->isSet("end-time") && !args->isSet("epoch-end")) {
+    if (!parser.isSet(QStringLiteral("time")) && !parser.isSet(QStringLiteral("epoch-start"))
+            && !parser.isSet(QStringLiteral("end-time")) && !parser.isSet(QStringLiteral("epoch-end"))) {
         // set default start date/time
         startdatetime = QDateTime(startdate, starttime);
         qCDebug(KONSOLEKALENDAR_LOG) << "main | datetimestamp |"
@@ -731,8 +686,8 @@ int main(int argc, char *argv[])
     // Float check for add mode:
     //   Events float if time AND end-time AND epoch times are UNspecified
     if (add) {
-        if (!args->isSet("time") && !args->isSet("end-time")
-            && !args->isSet("epoch-start") && !args->isSet("epoch-end")) {
+        if (!parser.isSet(QStringLiteral("time")) && !parser.isSet(QStringLiteral("end-time"))
+                && !parser.isSet(QStringLiteral("epoch-start")) && !parser.isSet(QStringLiteral("epoch-end"))) {
             variables.setFloating(true);
             qCDebug(KONSOLEKALENDAR_LOG) << "main | floatingcheck |"
                                          << "turn-on floating event";
@@ -746,8 +701,8 @@ int main(int argc, char *argv[])
     } else {
         // Do NOT set start/end datetimes in change mode,
         //   unless they were specified on commandline
-        if (args->isSet("time") || args->isSet("epoch-start")
-            || args->isSet("end-time") || args->isSet("epoch-end")) {
+        if (parser.isSet(QStringLiteral("time")) || parser.isSet(QStringLiteral("epoch-start"))
+                || parser.isSet(QStringLiteral("end-time")) || parser.isSet(QStringLiteral("epoch-end"))) {
             variables.setStartDateTime(startdatetime);
             variables.setEndDateTime(enddatetime);
         }
@@ -782,7 +737,7 @@ int main(int argc, char *argv[])
      * And away we go with the real work...                                    *
      ***************************************************************************/
 
-    args->clear(); // Free up some memory.
+    // Free up some memory.
 
     /*
      * Set our application name for use in unique IDs and error messages,
