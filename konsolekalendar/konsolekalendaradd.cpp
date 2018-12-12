@@ -103,7 +103,7 @@ bool KonsoleKalendarAdd::addEvent()
                          &loop, &QEventLoop::quit);
         QElapsedTimer t;
         t.start();
-        Q_ASSERT(calendar->incidence(event->uid()) == 0);  // can't exist yet
+        Q_ASSERT(calendar->incidence(event->uid()) == nullptr);  // can't exist yet
         if (!m_variables->allowGui()) {
             Akonadi::IncidenceChanger *changer = calendar->incidenceChanger();
             changer->setShowDialogsOnError(false);
@@ -120,7 +120,7 @@ bool KonsoleKalendarAdd::addEvent()
         calendar->addEvent(event);
         loop.exec();
         qCDebug(KONSOLEKALENDAR_LOG) << "Creation took " << t.elapsed() << "ms.";
-        status = calendar->incidence(event->uid()) != 0;
+        status = calendar->incidence(event->uid()) != nullptr;
         if (status) {
             cout << i18n("Success: \"%1\" inserted",
                          m_variables->getSummary()).toLocal8Bit().data()
@@ -168,7 +168,7 @@ bool KonsoleKalendarAdd::addImportedCalendar()
                      &loop, &QEventLoop::quit);
     QElapsedTimer t;
     foreach (const auto &event, cal->rawEvents()) {
-        if (calendar->incidence(event->uid()) != 0) {
+        if (calendar->incidence(event->uid()) != nullptr) {
             if (m_variables->isVerbose()) {
                 cout << i18n("Insert Event skipped, because UID \"%1\" is already known. <Verbose>", event->uid()).toLocal8Bit().data()
                      << endl;
@@ -187,8 +187,8 @@ bool KonsoleKalendarAdd::addImportedCalendar()
         t.start();
         calendar->addEvent(event);
         loop.exec();
-        qCDebug(KONSOLEKALENDAR_LOG) << "Creation of event took " << t.elapsed() << "ms." << "status: "<< (calendar->incidence(event->uid()) != 0);
-        if (calendar->incidence(event->uid()) == 0) {
+        qCDebug(KONSOLEKALENDAR_LOG) << "Creation of event took " << t.elapsed() << "ms." << "status: "<< (calendar->incidence(event->uid()) != nullptr);
+        if (calendar->incidence(event->uid()) == nullptr) {
             return false;
         }
     }
