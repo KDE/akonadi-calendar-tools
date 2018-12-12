@@ -39,7 +39,6 @@
 #include <KLocalizedString>
 #include <QEventLoop>
 
-
 using namespace KCalCore;
 using namespace std;
 
@@ -99,13 +98,13 @@ bool KonsoleKalendarDelete::deleteEvent()
 
 void KonsoleKalendarDelete::printSpecs(const Event::Ptr &event)
 {
-    cout << i18n("  UID:   %1",  m_variables->getUID()).data()
+    cout << i18n("  UID:   %1", m_variables->getUID()).data()
          << endl;
 
     cout << i18n("  What:  %1", event->summary()).data()
          << endl;
 
-    const auto timeZone  = m_variables->getCalendar()->timeZone();
+    const auto timeZone = m_variables->getCalendar()->timeZone();
     cout << i18n("  Begin: %1",
                  event->dtStart().toTimeZone(timeZone).toString(Qt::TextDate)).data()
          << endl;

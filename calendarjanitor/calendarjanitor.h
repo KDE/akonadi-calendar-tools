@@ -51,10 +51,8 @@ Q_SIGNALS:
 private Q_SLOTS:
     void onCollectionsFetched(bool success);
     void onItemsFetched(bool success, const QString &errorMessage);
-    void onModifyFinished(int changeId, const Akonadi::Item &item,
-                          Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
-    void onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &,
-                          Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
+    void onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
+    void onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
 
     void processNextCollection();
 
@@ -76,8 +74,7 @@ private Q_SLOTS:
     void printFound(const Akonadi::Item &item, const QString &explanation = QString());
 
     void beginTest(const QString &message);
-    void endTest(bool print = true, const QString &fixExplanation = QString(),
-                 const QString &fixExplanation2 = QString());
+    void endTest(bool print = true, const QString &fixExplanation = QString(), const QString &fixExplanation2 = QString());
 
     void deleteIncidence(const Akonadi::Item &item);
 

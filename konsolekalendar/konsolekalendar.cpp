@@ -84,11 +84,11 @@ bool KonsoleKalendar::importCalendar()
 bool KonsoleKalendar::printCalendarList()
 {
     Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
-            Akonadi::CollectionFetchJob::Recursive);
+                                                                       Akonadi::CollectionFetchJob::Recursive);
     QStringList mimeTypes = QStringList() << QStringLiteral("text/calendar")
-                            << KCalCore::Event::eventMimeType()
-                            << KCalCore::Todo::todoMimeType()
-                            << KCalCore::Journal::journalMimeType();
+                                          << KCalCore::Event::eventMimeType()
+                                          << KCalCore::Todo::todoMimeType()
+                                          << KCalCore::Journal::journalMimeType();
     job->fetchScope().setContentMimeTypes(mimeTypes);
     QEventLoop loop;
     QObject::connect(job, &Akonadi::CollectionFetchJob::result, &loop, &QEventLoop::quit);
@@ -111,9 +111,9 @@ bool KonsoleKalendar::printCalendarList()
                 QString colId = QString::number(collection.id()).leftJustified(6, QLatin1Char(' '));
                 colId += QLatin1String("- ");
 
-                bool readOnly = !(collection.rights() & Akonadi::Collection::CanCreateItem ||
-                                  collection.rights() & Akonadi::Collection::CanChangeItem ||
-                                  collection.rights() & Akonadi::Collection::CanDeleteItem);
+                bool readOnly = !(collection.rights() & Akonadi::Collection::CanCreateItem
+                                  || collection.rights() & Akonadi::Collection::CanChangeItem
+                                  || collection.rights() & Akonadi::Collection::CanDeleteItem);
 
                 QString readOnlyString = readOnly ? i18n("(Read only)") + QLatin1Char(' ') : QString();
 
@@ -136,7 +136,7 @@ bool KonsoleKalendar::createAkonadiResource(const QString &icalFileUri)
     if (job->error() != 0) {
         return false;
     }
-    auto inst =  job->instance();
+    auto inst = job->instance();
     inst.setName(QFileInfo(icalFileUri).baseName());
     QDBusInterface iface(QStringLiteral("org.freedesktop.Akonadi.Resource.") + inst.identifier(), QStringLiteral("/Settings"));
     QDBusReply<void> reply = iface.call(QStringLiteral("setDisplayName"), QFileInfo(icalFileUri).baseName());
@@ -219,9 +219,8 @@ bool KonsoleKalendar::showInstance()
 
             QTextStream ts(&f);
 
-            if (m_variables->getExportType() != ExportTypeHTML &&
-                    m_variables->getExportType() != ExportTypeMonthHTML) {
-
+            if (m_variables->getExportType() != ExportTypeHTML
+                && m_variables->getExportType() != ExportTypeMonthHTML) {
                 if (m_variables->getAll()) {
                     qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
                                                  << "view all events sorted list";
@@ -243,7 +242,6 @@ bool KonsoleKalendar::showInstance()
                     //If this UID represents a recurring Event,
                     //only the first day of the Event will be printed
                     status = printEvent(&ts, event, event->dtStart().date());
-
                 } else if (m_variables->isNext()) {
                     qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
                                                  << "Show next activity in calendar";
@@ -253,8 +251,8 @@ bool KonsoleKalendar::showInstance()
 
                     QDate dt;
                     for (dt = m_variables->getStartDateTime().date();
-                            dt <= datetime.date();
-                            dt = dt.addDays(1)) {
+                         dt <= datetime.date();
+                         dt = dt.addDays(1)) {
                         Event::List events = calendar->events(dt, timeZone,
                                                               EventSortStartDate,
                                                               SortDirectionAscending);
@@ -273,8 +271,8 @@ bool KonsoleKalendar::showInstance()
 
                     QDate dt;
                     for (dt = m_variables->getStartDateTime().date();
-                            dt <= m_variables->getEndDateTime().date() && status != false;
-                            dt = dt.addDays(1)) {
+                         dt <= m_variables->getEndDateTime().date() && status != false;
+                         dt = dt.addDays(1)) {
                         Event::List events = calendar->events(dt, timeZone,
                                                               EventSortStartDate,
                                                               SortDirectionAscending);
@@ -289,9 +287,9 @@ bool KonsoleKalendar::showInstance()
                                                  << "HTML view all events sorted list";
                     // sort the events for this date by start date
                     // in order to determine the date range.
-                    Event::List *events =
-                        new Event::List(calendar->rawEvents(EventSortStartDate,
-                                                            SortDirectionAscending));
+                    Event::List *events
+                        = new Event::List(calendar->rawEvents(EventSortStartDate,
+                                                              SortDirectionAscending));
                     firstdate = events->first()->dtStart().date();
                     lastdate = events->last()->dtStart().date();
                 } else if (m_variables->isUID()) {
@@ -299,7 +297,7 @@ bool KonsoleKalendar::showInstance()
                     qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
                                                  << "HTML view events by uid list";
                     cout << i18n("Sorry, export to HTML by UID is not supported yet").
-                         toLocal8Bit().data() << endl;
+                        toLocal8Bit().data() << endl;
                     return false;
                 } else {
                     qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
@@ -360,8 +358,7 @@ bool KonsoleKalendar::showInstance()
     return status;
 }
 
-bool KonsoleKalendar::printEventList(QTextStream *ts,
-                                     Event::List *eventList, QDate date)
+bool KonsoleKalendar::printEventList(QTextStream *ts, Event::List *eventList, QDate date)
 {
     bool status = true;
 
@@ -371,8 +368,8 @@ bool KonsoleKalendar::printEventList(QTextStream *ts,
         Event::List::ConstIterator it;
 
         for (it = eventList->constBegin();
-                it != eventList->constEnd() && status != false;
-                ++it) {
+             it != eventList->constEnd() && status != false;
+             ++it) {
             singleEvent = *it;
 
             status = printEvent(ts, singleEvent, date);
@@ -390,7 +387,6 @@ bool KonsoleKalendar::printEvent(QTextStream *ts, const Event::Ptr &event, QDate
 
     if (event) {
         switch (m_variables->getExportType()) {
-
         case ExportTypeCSV:
             qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::printEvent() |"
                                          << "CSV export";
@@ -433,7 +429,6 @@ bool KonsoleKalendar::addEvent()
 
 bool KonsoleKalendar::changeEvent()
 {
-
     qCDebug(KONSOLEKALENDAR_LOG) << "konsolecalendar.cpp::changeEvent() |"
                                  << "Create Changing";
     KonsoleKalendarChange change(m_variables);
@@ -452,8 +447,7 @@ bool KonsoleKalendar::deleteEvent()
     return del.deleteEvent();
 }
 
-bool KonsoleKalendar::isEvent(const QDateTime &startdate,
-                              const QDateTime &enddate, const QString &summary)
+bool KonsoleKalendar::isEvent(const QDateTime &startdate, const QDateTime &enddate, const QString &summary)
 {
     // Search for an event with specified start and end datetime stamp and summary
 
@@ -469,8 +463,8 @@ bool KonsoleKalendar::isEvent(const QDateTime &startdate,
                                            SortDirectionAscending));
     for (it = eventList.constBegin(); it != eventList.constEnd(); ++it) {
         event = *it;
-        if (event->dtEnd().toTimeZone(timeZone) == enddate &&
-                event->summary() == summary) {
+        if (event->dtEnd().toTimeZone(timeZone) == enddate
+            && event->summary() == summary) {
             found = true;
             break;
         }

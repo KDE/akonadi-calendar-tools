@@ -83,7 +83,6 @@ int main(int argv, char *argc[])
     aboutData.addAuthor(i18n("Sérgio Martins"), i18n("Maintainer"), QStringLiteral("iamsergiogmail.com"));
     aboutData.setShortDescription(i18n(progDesc));
 
-
     QCoreApplication app(argv, argc);
 
     QCommandLineParser parser;
@@ -157,13 +156,15 @@ int main(int argv, char *argc[])
     }
 
     switch (janitorOptions.action()) {
-    case Options::ActionBackup: {
+    case Options::ActionBackup:
+    {
         Backuper *backuper = new Backuper();
         backuper->backup(backupFile, janitorOptions.collections());
         break;
     }
     case Options::ActionScan:
-    case Options::ActionScanAndFix: {
+    case Options::ActionScanAndFix:
+    {
         CalendarJanitor *janitor = new CalendarJanitor(janitorOptions);
         janitor->start();
         break;

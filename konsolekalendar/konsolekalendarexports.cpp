@@ -56,10 +56,8 @@ KonsoleKalendarExports::~KonsoleKalendarExports()
 {
 }
 
-bool KonsoleKalendarExports::exportAsTxt(QTextStream *ts,
-        const Event::Ptr &event, const QDate &date)
+bool KonsoleKalendarExports::exportAsTxt(QTextStream *ts, const Event::Ptr &event, const QDate &date)
 {
-
     // Export "Text" Format:
     //
     // Date:\t<Incidence Date>(dddd yyyy-MM-dd)
@@ -144,11 +142,8 @@ bool KonsoleKalendarExports::exportAsTxt(QTextStream *ts,
     return true;
 }
 
-bool KonsoleKalendarExports::exportAsTxtShort(QTextStream *ts,
-        const Event::Ptr &event, const QDate &date,
-        bool sameday)
+bool KonsoleKalendarExports::exportAsTxtShort(QTextStream *ts, const Event::Ptr &event, const QDate &date, bool sameday)
 {
-
     // Export "Text-Short" Format:
     //
     // [--------------------------------------------------]
@@ -201,8 +196,7 @@ bool KonsoleKalendarExports::exportAsTxtShort(QTextStream *ts,
     return true;
 }
 
-QString KonsoleKalendarExports::processField(const QString &field,
-        const QString &dquote)
+QString KonsoleKalendarExports::processField(const QString &field, const QString &dquote)
 {
     // little function that processes a field for CSV compliance:
     //   1. Replaces double quotes by a pair of consecutive double quotes
@@ -215,13 +209,11 @@ QString KonsoleKalendarExports::processField(const QString &field,
 }
 
 //@cond IGNORE
-#define pF( x )  processField( ( x ), dquote )
+#define pF(x)  processField((x), dquote)
 //@endcond
 
-bool KonsoleKalendarExports::exportAsCSV(QTextStream *ts,
-        const Event::Ptr &event, const QDate &date)
+bool KonsoleKalendarExports::exportAsCSV(QTextStream *ts, const Event::Ptr &event, const QDate &date)
 {
-
     // Export "CSV" Format:
     //
     // startdate,starttime,enddate,endtime,summary,location,description,UID

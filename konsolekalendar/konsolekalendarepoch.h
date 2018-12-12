@@ -64,7 +64,6 @@ public:
      * @param dt is a QDateTime to convert to an epoch.
      */
     static uint QDateTime2epoch(const QDateTime &dt);
-
 };
 
 #endif

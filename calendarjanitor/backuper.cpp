@@ -59,7 +59,8 @@ void Backuper::emitFinished(bool success, const QString &message)
     qApp->exit(success ? 0 : -1); // TODO: If we move this class to kdepimlibs, remove this
 }
 
-Backuper::Backuper(QObject *parent) : QObject(parent), m_backupInProgress(false)
+Backuper::Backuper(QObject *parent) : QObject(parent)
+    , m_backupInProgress(false)
 {
 }
 
@@ -81,7 +82,7 @@ void Backuper::backup(const QString &filename, const QList<Akonadi::Collection::
     m_filename = filename;
 
     Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
-            Akonadi::CollectionFetchJob::Recursive);
+                                                                       Akonadi::CollectionFetchJob::Recursive);
 
     job->fetchScope().setContentMimeTypes(KCalCore::Incidence::mimeTypes());
     connect(job, &Akonadi::CollectionFetchJob::result, this, &Backuper::onCollectionsFetched);

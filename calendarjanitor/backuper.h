@@ -59,7 +59,6 @@ private:
     KCalCore::MemoryCalendar::Ptr m_calendar;
 
     bool m_backupInProgress;
-
 };
 
 #endif // BACKUPER_H

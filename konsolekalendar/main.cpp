@@ -82,20 +82,20 @@ int main(int argc, char *argv[])
         ki18n(0),                    // any free form text
         progURL,                     // program home page address
         "bugs.kde.org"               // bug report email address
-    );
+        );
 
     aboutData.addAuthor(
         ki18n("Allen Winter"),       // developer's name
         ki18n("Maintainer"),         // task or role
         "winter@kde.org",            // email address
         0                            // home page or relevant link
-    );
+        );
     aboutData.addAuthor(
         ki18n("Tuukka Pasanen"),     // developer's name
         ki18n("Author"),             // task or role
         "illuusio@mailcity.com",     // email address
         0                            // home page or relevant link
-    );
+        );
 
     KCmdLineArgs::init(argc, argv, &aboutData, KCmdLineArgs::CmdLineArgNone);
 
@@ -178,8 +178,8 @@ int main(int argc, char *argv[])
                       "--description \"Get My Head Examined\"\n"
                       "  konsolekalendar --delete --uid KOrganizer-1740326.803"));
     options.add("",
-                ki18n( "Without any options konsolekalendar will output today's events\n"
-                       "from 7am to 5pm or nothing at all if there aren't any"));
+                ki18n("Without any options konsolekalendar will output today's events\n"
+                      "from 7am to 5pm or nothing at all if there aren't any"));
     options.add("",
                 ki18n("For more information visit the program home page at:\n"
                       "  https://userbase.kde.org/KonsoleKalendar"));
@@ -190,7 +190,7 @@ int main(int argc, char *argv[])
     KApplication app(
         // when not set (default) GUI is not enabled - disable all GUI stuff
         args->isSet("allow-gui")
-    );
+        );
 
     // Default values for start date/time (today at 07:00)
     QDate startdate = QDate::currentDate();
@@ -277,9 +277,9 @@ int main(int argc, char *argv[])
         return 1;
     }
     // Use Events if no incidence type is specified on the command line
-    if (!args->isSet("event") &&
-            !args->isSet("todo") &&
-            !args->isSet("journal")) {
+    if (!args->isSet("event")
+        && !args->isSet("todo")
+        && !args->isSet("journal")) {
         variables.setUseEvents(true);
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options | use Events (Default)";
     }
@@ -597,7 +597,7 @@ int main(int argc, char *argv[])
                                      << "Epoch start:"
                                      << "(" << option << ")";
 
-        epochstart = (time_t) option.toULong(0, 10);
+        epochstart = (time_t)option.toULong(0, 10);
     }
 
     /*
@@ -611,7 +611,7 @@ int main(int argc, char *argv[])
                                      << "Epoch end:"
                                      << "(" << option << ")";
 
-        epochend = (time_t) option.toULong(0, 10);
+        epochend = (time_t)option.toULong(0, 10);
     }
 
     if (args->isSet("all")) {
@@ -655,8 +655,8 @@ int main(int argc, char *argv[])
     QDateTime startdatetime, enddatetime;
 
     // Handle case with either date or end-date unspecified
-    if (!args->isSet("end-date") && !args->isSet("show-next") &&
-            args->isSet("date")) {
+    if (!args->isSet("end-date") && !args->isSet("show-next")
+        && args->isSet("date")) {
         enddate = startdate;
         qCDebug(KONSOLEKALENDAR_LOG) << "main | datetimestamp |"
                                      << "setting enddate to startdate";
@@ -702,8 +702,8 @@ int main(int argc, char *argv[])
 
     // Case:
     //   Time (or epoch) unspecified, and end-time (or epoch) unspecified.
-    if (!args->isSet("time")     && !args->isSet("epoch-start") &&
-            !args->isSet("end-time") && !args->isSet("epoch-end")) {
+    if (!args->isSet("time") && !args->isSet("epoch-start")
+        && !args->isSet("end-time") && !args->isSet("epoch-end")) {
         // set default start date/time
         startdatetime = QDateTime(startdate, starttime);
         qCDebug(KONSOLEKALENDAR_LOG) << "main | datetimestamp |"
@@ -731,8 +731,8 @@ int main(int argc, char *argv[])
     // Float check for add mode:
     //   Events float if time AND end-time AND epoch times are UNspecified
     if (add) {
-        if (!args->isSet("time")        && !args->isSet("end-time") &&
-                !args->isSet("epoch-start") && !args->isSet("epoch-end")) {
+        if (!args->isSet("time") && !args->isSet("end-time")
+            && !args->isSet("epoch-start") && !args->isSet("epoch-end")) {
             variables.setFloating(true);
             qCDebug(KONSOLEKALENDAR_LOG) << "main | floatingcheck |"
                                          << "turn-on floating event";
@@ -746,8 +746,8 @@ int main(int argc, char *argv[])
     } else {
         // Do NOT set start/end datetimes in change mode,
         //   unless they were specified on commandline
-        if (args->isSet("time")     || args->isSet("epoch-start") ||
-                args->isSet("end-time") || args->isSet("epoch-end")) {
+        if (args->isSet("time") || args->isSet("epoch-start")
+            || args->isSet("end-time") || args->isSet("epoch-end")) {
             variables.setStartDateTime(startdatetime);
             variables.setEndDateTime(enddatetime);
         }
@@ -866,7 +866,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    if(create) {
+    if (create) {
         qCDebug(KONSOLEKALENDAR_LOG) << "main | parse options |"
                                      << "creating Akonadi resource from file:"
                                      << "(" << variables.getCalendarFile() << ")";
@@ -883,4 +883,5 @@ int main(int argc, char *argv[])
 
     return 0;
 }
+
 //@endcond

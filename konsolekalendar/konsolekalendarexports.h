@@ -74,8 +74,7 @@ public:
      * @param sameday flags that this Event is on the same date as the
      * previously exported Event.
      */
-    bool exportAsTxtShort(QTextStream *ts, const KCalCore::Event::Ptr &event, const QDate &date,
-                          bool sameday);
+    bool exportAsTxtShort(QTextStream *ts, const KCalCore::Event::Ptr &event, const QDate &date, bool sameday);
 
     /**
      * Export the Event in Comma-Separated Values (CSV) Mode.
@@ -99,7 +98,6 @@ private:
      * @param dquote is a QString containing the double quote character.
      */
     QString processField(const QString &field, const QString &dquote);
-
 };
 
 #endif

@@ -31,15 +31,15 @@
 
 #include <QDebug>
 
-CollectionLoader::CollectionLoader(QObject *parent) :
-    QObject(parent)
+CollectionLoader::CollectionLoader(QObject *parent)
+    : QObject(parent)
 {
 }
 
 void CollectionLoader::load()
 {
     Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
-            Akonadi::CollectionFetchJob::Recursive);
+                                                                       Akonadi::CollectionFetchJob::Recursive);
 
     job->fetchScope().setContentMimeTypes(KCalCore::Incidence::mimeTypes());
     connect(job, &Akonadi::CollectionFetchJob::result, this, &CollectionLoader::onCollectionsLoaded);

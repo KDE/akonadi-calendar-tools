@@ -125,7 +125,6 @@ bool KonsoleKalendarAdd::addEvent()
             cout << i18n("Success: \"%1\" inserted",
                          m_variables->getSummary()).toLocal8Bit().data()
                  << endl;
-
         } else {
             cout << i18n("Failure: \"%1\" not inserted",
                          m_variables->getSummary()).toLocal8Bit().data()
@@ -144,8 +143,8 @@ bool KonsoleKalendarAdd::addImportedCalendar()
     FileStorage instore(cal, m_variables->getImportFile());
     if (!instore.load()) {
         qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendaradd.cpp::importCalendar() |"
-            << "Can't import file:"
-            << m_variables->getImportFile();
+                                     << "Can't import file:"
+                                     << m_variables->getImportFile();
         return false;
     }
     Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
@@ -154,7 +153,7 @@ bool KonsoleKalendarAdd::addImportedCalendar()
         Akonadi::IncidenceChanger *changer = calendar->incidenceChanger();
         changer->setShowDialogsOnError(false);
         Akonadi::Collection collection = m_variables->collectionId() != -1 ? Akonadi::Collection(m_variables->collectionId())
-        : Akonadi::Collection(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
+                                         : Akonadi::Collection(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
 
         if (!collection.isValid()) {
             cout << i18n("Calendar is invalid. Please specify one with --calendar").toLocal8Bit().data() << "\n";
@@ -166,13 +165,13 @@ bool KonsoleKalendarAdd::addImportedCalendar()
 
     QEventLoop loop;
     QObject::connect(calendar.data(), &Akonadi::CalendarBase::createFinished,
-                        &loop, &QEventLoop::quit);
+                     &loop, &QEventLoop::quit);
     QElapsedTimer t;
-    foreach(const auto &event, cal->rawEvents()) {
+    foreach (const auto &event, cal->rawEvents()) {
         if (calendar->incidence(event->uid()) != 0) {
             if (m_variables->isVerbose()) {
                 cout << i18n("Insert Event skipped, because UID \"%1\" is already known. <Verbose>", event->uid()).toLocal8Bit().data()
-                    << endl;
+                     << endl;
             } else {
                 qCInfo(KONSOLEKALENDAR_LOG) << "Event with UID " << event->uid() << "is already in calendar, skipping import of this Event.";
             }
@@ -180,7 +179,7 @@ bool KonsoleKalendarAdd::addImportedCalendar()
         }
         if (m_variables->isVerbose()) {
             cout << i18n("Add Event with UID \"%1\". <Verbose>", event->uid()).toLocal8Bit().data()
-                << endl;
+                 << endl;
         }
         if (m_variables->isDryRun()) {
             continue;
@@ -194,8 +193,8 @@ bool KonsoleKalendarAdd::addImportedCalendar()
         }
     }
     qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendaradd.cpp::importCalendar() |"
-        << "Successfully imported file:"
-        << m_variables->getImportFile();
+                                 << "Successfully imported file:"
+                                 << m_variables->getImportFile();
     return true;
 }
 

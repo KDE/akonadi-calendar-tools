@@ -57,8 +57,8 @@ static void bailOut()
 
 static bool collectionIsReadOnly(const Akonadi::Collection &collection)
 {
-    return !(collection.rights() & Akonadi::Collection::CanChangeItem) ||
-           !(collection.rights() & Akonadi::Collection::CanDeleteItem);
+    return !(collection.rights() & Akonadi::Collection::CanChangeItem)
+           || !(collection.rights() & Akonadi::Collection::CanDeleteItem);
 }
 
 static bool incidenceIsOld(const KCalCore::Incidence::Ptr &incidence)
@@ -135,8 +135,7 @@ void CalendarJanitor::onItemsFetched(bool success, const QString &errorMessage)
     processNextCollection();
 }
 
-void CalendarJanitor::onModifyFinished(int changeId, const Akonadi::Item &item,
-                                       Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
+void CalendarJanitor::onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
     Q_UNUSED(changeId);
     if (resultCode != Akonadi::IncidenceChanger::ResultCodeSuccess) {
@@ -154,8 +153,7 @@ void CalendarJanitor::onModifyFinished(int changeId, const Akonadi::Item &item,
     }
 }
 
-void CalendarJanitor::onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &items,
-                                       Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
+void CalendarJanitor::onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &items, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
     Q_UNUSED(changeId);
     if (resultCode != Akonadi::IncidenceChanger::ResultCodeSuccess) {
@@ -271,8 +269,8 @@ void CalendarJanitor::sanityCheck1()
 
     foreach (const Akonadi::Item &item, m_itemsToProcess) {
         KCalCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
-        if (incidence->summary().isEmpty() && incidence->description().isEmpty() &&
-            incidence->attachments().isEmpty()) {
+        if (incidence->summary().isEmpty() && incidence->description().isEmpty()
+            && incidence->attachments().isEmpty()) {
             printFound(item);
             deleteIncidence(item);
         }
@@ -311,7 +309,7 @@ void CalendarJanitor::sanityCheck3()
         }
 
         QDateTime start = event->dtStart();
-        QDateTime end   = event->dtEnd();
+        QDateTime end = event->dtEnd();
 
         bool modify = false;
         QString message;
@@ -348,7 +346,7 @@ void CalendarJanitor::sanityCheck4()
         }
 
         QDateTime start = todo->dtStart();
-        QDateTime due   = todo->dtDue();
+        QDateTime due = todo->dtDue();
         bool modify = false;
         if (todo->recurs() && !start.isValid() && due.isValid()) {
             modify = true;
@@ -528,7 +526,7 @@ void CalendarJanitor::sanityCheck8()
         m_returnCode = -2;
     }
 
-    endTest(/**print=*/false);
+    endTest(/**print=*/ false);
 }
 
 void CalendarJanitor::sanityCheck9()
@@ -543,7 +541,7 @@ void CalendarJanitor::sanityCheck9()
 
                 QDateTime recId = incidence->recurrenceId();
                 QDateTime start = incidence->dtStart();
-                QDateTime end   = incidence->dateTime(KCalCore::Incidence::RoleEnd);
+                QDateTime end = incidence->dateTime(KCalCore::Incidence::RoleEnd);
 
                 KCalCore::Event::Ptr event = incidence.dynamicCast<KCalCore::Event>();
                 KCalCore::Todo::Ptr todo = incidence.dynamicCast<KCalCore::Todo>();
