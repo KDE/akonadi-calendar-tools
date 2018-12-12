@@ -89,15 +89,15 @@ private:
     Akonadi::IncidenceChanger *m_changer = nullptr;
     Akonadi::Collection m_currentCollection;
     Options::SanityCheck m_currentSanityCheck;
-    int m_pendingModifications;
-    int m_pendingDeletions;
-    bool m_strippingOldAlarms;
+    int m_pendingModifications = 0;
+    int m_pendingDeletions = 0;
+    bool m_strippingOldAlarms = false;
 
     QList<Akonadi::Item::Id> m_test1Results;
     QStringList m_test2Results;
 
-    int m_numDamaged;
-    bool m_fixingEnabled;
+    int m_numDamaged = 0;
+    bool m_fixingEnabled = false;
 
     QString m_summary; // to print at the end.
     QMultiMap<QString, KCalCore::Incidence::Ptr> m_incidenceMap;

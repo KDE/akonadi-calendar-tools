@@ -22,7 +22,7 @@
 
 #include "options.h"
 
-Options::Options() : m_action(ActionNone), m_stripOldAlarms(false)
+Options::Options()
 {
 }
 

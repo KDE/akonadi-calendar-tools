@@ -68,8 +68,8 @@ public:
     void setStripOldAlarms(bool strip);
 private:
     QList<Akonadi::Collection::Id> m_collectionIds;
-    Action m_action;
-    bool m_stripOldAlarms;
+    Action m_action = ActionNone;
+    bool m_stripOldAlarms = false;
 };
 
 #endif // OPTIONS_H
