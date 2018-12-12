@@ -73,7 +73,7 @@ static const char progVersion[] = KDEPIM_VERSION;
 int main(int argc, char *argv[])
 {
     KLocalizedString::setApplicationDomain("konsolekalendar");
-    QApplication app(argc, argv); // PORTING SCRIPT: move this to before the KAboutData initialization
+    QApplication app(argc, argv);
 
 
     KAboutData aboutData(QLatin1String(progName),
@@ -96,49 +96,33 @@ int main(int argc, char *argv[])
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("verbose"), i18n("Print helpful runtime messages")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("dry-run"),i18n("Print what would have been done, but do not execute")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("allow-gui"), i18n("Allow calendars which might need an interactive user interface")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(":"),i18n("Incidence types (these options can be combined):")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("event"), i18n("  Operate for Events only (Default)")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("todo"), i18n("  Operate for To-dos only [NOT WORKING YET]")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("journal"), i18n("  Operate for Journals only [NOT WORKING YET]")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(":"), i18n("Major operation modes:")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("view"), i18n("  Print incidences in specified export format")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("add"), i18n("  Insert an incidence into the calendar")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("change"), i18n("  Modify an existing incidence")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("delete"), i18n("  Remove an existing incidence")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("create <filename>"), i18n("  Create new Akonadi Resource for file")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("import <import-file>"), i18n("  Import this calendar to main calendar")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("import"), i18n("  Import this calendar to main calendar"),  QStringLiteral("[import-file]")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("list-calendars"), i18n("  List available calendars")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(":"), i18n("Operation modifiers:")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("all"), i18n("  View all calendar entries, ignoring date/time options")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("next"), i18n("  View next activity in calendar")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("show-next <days>"), i18n("  From start date show next # days' activities")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("uid <uid>"), i18n("  Incidence Unique-string identifier")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("date <start-date>"), i18n("  Start from this day [YYYY-MM-DD]")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("time <start-time>"), i18n("  Start from this time [HH:MM:SS]")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("end-date <end-date>"), i18n("  End at this day [YYYY-MM-DD]")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("end-time <end-time>"), i18n("  End at this time [HH:MM:SS]")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("epoch-start <epoch-time>"), i18n(" Start from this time [secs since epoch]")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("epoch-end <epoch-time>"), i18n("  End at this time [secs since epoch]")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("summary <summary>"), i18n("  Add summary to incidence (for add/change modes)")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("description <description>"), i18n("Add description to incidence (for add/change modes)")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("location <location>"), i18n("  Add location to incidence (for add/change modes)")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("calendar <calendar id>"), i18n("  Calendar to use when creating a new incidence")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(":"), i18n("Export options:")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("export-type <export-type>"), i18n("Export file type (Default: text)")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("export-file <export-file>"), i18n("Export to file (Default: stdout)")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("show-next"), i18n("  From start date show next # days' activities"), QStringLiteral("[days]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("uid"), i18n("  Incidence Unique-string identifier"), QStringLiteral("[uid]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("date"), i18n("  Start from this day [YYYY-MM-DD]"), QStringLiteral("[start-date]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("time"), i18n("  Start from this time [HH:MM:SS]"), QStringLiteral("[start-time]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("end-date"), i18n("  End at this day [YYYY-MM-DD]"), QStringLiteral("[end-date]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("end-time"), i18n("  End at this time [HH:MM:SS]"), QStringLiteral("[end-time]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("epoch-start"), i18n(" Start from this time [secs since epoch]"), QStringLiteral("[epoch-time]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("epoch-end"), i18n("  End at this time [secs since epoch]"), QStringLiteral("[epoch-time]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("summary"), i18n("  Add summary to incidence (for add/change modes)"), QStringLiteral("[summary]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("description"), i18n("Add description to incidence (for add/change modes)"), QStringLiteral("[description]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("location"), i18n("  Add location to incidence (for add/change modes)"), QStringLiteral("[location]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("calendar"), i18n("  Calendar to use when creating a new incidence"), QStringLiteral("[calendar id]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("export-type"), i18n("Export file type (Default: text)"), QStringLiteral("[export-type]")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("export-file"), i18n("Export to file (Default: stdout)"), QStringLiteral("[export-type]")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("export-list"), i18n("  Print list of export types supported and exit")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(""), i18n("Examples:\n"
-                                                                                  "  konsolekalendar --view\n"
-                                                                                  "  konsolekalendar --list-calendars\n"
-                                                                                  "  konsolekalendar --add --calendar 42 --date 2016-12-04 "
-                                                                                  "--time 10:00 --end-time 12:00 \\\n"
-                                                                                  "                  --summary \"Doctor Visit\" "
-                                                                                  "--description \"Get My Head Examined\"\n"
-                                                                                  "  konsolekalendar --delete --uid KOrganizer-1740326.803")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(""), i18n("Without any options konsolekalendar will output today's events\n"
-                                                                                  "from 7am to 5pm or nothing at all if there aren't any")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral(""), i18n("For more information visit the program home page at:\n"
-                                                                                  "  https://userbase.kde.org/KonsoleKalendar")));
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
