@@ -135,7 +135,7 @@ bool KonsoleKalendarChange::changeEvent()
     return status;
 }
 
-void KonsoleKalendarChange::printSpecs(const Event::Ptr &event)
+void KonsoleKalendarChange::printSpecs(const KCalCore::Event::Ptr &event)
 {
     cout << i18n("  UID:   %1",
                  event->uid()).toLocal8Bit().data()
