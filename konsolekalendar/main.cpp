@@ -536,7 +536,7 @@ int main(int argc, char *argv[])
                                      << "Epoch start:"
                                      << "(" << option << ")";
 
-        epochstart = (time_t)option.toULong(0, 10);
+        epochstart = (time_t)option.toULong(nullptr, 10);
     }
 
     /*
@@ -550,7 +550,7 @@ int main(int argc, char *argv[])
                                      << "Epoch end:"
                                      << "(" << option << ")";
 
-        epochend = (time_t)option.toULong(0, 10);
+        epochend = (time_t)option.toULong(nullptr, 10);
     }
 
     if (parser.isSet(QStringLiteral("all"))) {

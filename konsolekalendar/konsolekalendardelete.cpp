@@ -82,7 +82,7 @@ bool KonsoleKalendarDelete::deleteEvent()
             calendar->deleteEvent(event);
             loop.exec();
             qCDebug(KONSOLEKALENDAR_LOG) << "Finished deleting";
-            status = calendar->incidence(event->uid()) == 0;
+            status = calendar->incidence(event->uid()) == nullptr;
 
             if (status) {
                 cout << i18n("Success: \"%1\" deleted", event->summary()).data() << endl;

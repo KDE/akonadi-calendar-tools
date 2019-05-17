@@ -67,7 +67,7 @@ configure_file(console-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/console-versi
 
 
 
-
+#add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 
 add_subdirectory(calendarjanitor)
 add_subdirectory(konsolekalendar)
