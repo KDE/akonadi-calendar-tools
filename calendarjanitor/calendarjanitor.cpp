@@ -484,10 +484,10 @@ void CalendarJanitor::sanityCheck8()
     foreach (const Akonadi::Item &item, m_itemsToProcess) {
         KCalCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
         if (!incidence->attachments().isEmpty()) {
-            foreach (const KCalCore::Attachment::Ptr &attachment, incidence->attachments()) {
-                if (!attachment->isUri()) {
+            foreach (const KCalCore::Attachment &attachment, incidence->attachments()) {
+                if (!attachment.isUri()) {
                     numAttachments++;
-                    totalAttachmentSize += attachment->size();
+                    totalAttachmentSize += attachment.size();
                 }
             }
         }
