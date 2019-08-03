@@ -24,8 +24,8 @@
 
 #include <CalendarSupport/Utils>
 
-#include <KCalCore/Incidence>
-#include <KCalCore/FileStorage>
+#include <KCalendarCore/Incidence>
+#include <KCalendarCore/FileStorage>
 
 #include <AkonadiCore/CollectionFetchJob>
 #include <AkonadiCore/CollectionFetchScope>
@@ -76,7 +76,7 @@ void Backuper::backup(const QString &filename, const QList<Akonadi::Collection::
         return;
     }
     print(i18n("Backing up your calendar data..."));
-    m_calendar = KCalCore::MemoryCalendar::Ptr(new KCalCore::MemoryCalendar(QTimeZone::systemTimeZone()));
+    m_calendar = KCalendarCore::MemoryCalendar::Ptr(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
     m_requestedCollectionIds = collectionIds;
     m_backupInProgress = true;
     m_filename = filename;
@@ -84,7 +84,7 @@ void Backuper::backup(const QString &filename, const QList<Akonadi::Collection::
     Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
                                                                        Akonadi::CollectionFetchJob::Recursive);
 
-    job->fetchScope().setContentMimeTypes(KCalCore::Incidence::mimeTypes());
+    job->fetchScope().setContentMimeTypes(KCalendarCore::Incidence::mimeTypes());
     connect(job, &Akonadi::CollectionFetchJob::result, this, &Backuper::onCollectionsFetched);
     job->start();
 }
@@ -92,7 +92,7 @@ void Backuper::backup(const QString &filename, const QList<Akonadi::Collection::
 void Backuper::onCollectionsFetched(KJob *job)
 {
     if (job->error() == 0) {
-        QSet<QString> mimeTypeSet = KCalCore::Incidence::mimeTypes().toSet();
+        QSet<QString> mimeTypeSet = KCalendarCore::Incidence::mimeTypes().toSet();
         Akonadi::CollectionFetchJob *cfj = qobject_cast<Akonadi::CollectionFetchJob *>(job);
         foreach (const Akonadi::Collection &collection, cfj->collections()) {
             if (!m_requestedCollectionIds.isEmpty() && !m_requestedCollectionIds.contains(collection.id())) {
@@ -138,13 +138,13 @@ void Backuper::onCollectionLoaded(KJob *job)
         m_pendingCollections.removeAll(id);
 
         foreach (const Akonadi::Item &item, items) {
-            KCalCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
+            KCalendarCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
             Q_ASSERT(incidence);
             m_calendar->addIncidence(incidence);
         }
 
         if (m_pendingCollections.isEmpty()) { // We're done
-            KCalCore::FileStorage storage(m_calendar, m_filename);
+            KCalendarCore::FileStorage storage(m_calendar, m_filename);
             bool success = storage.save();
             QString message = success ? QString() : i18n("An error occurred");
             emitFinished(success, message);

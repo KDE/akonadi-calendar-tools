@@ -30,7 +30,7 @@
 
 #include "konsolekalendarvariables.h"
 
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 
 /**
  * @file konsolekalendardelete.h
@@ -72,7 +72,7 @@ private:
      *
      * @param event is a pointer to an Event that is to be printed.
      */
-    void printSpecs(const KCalCore::Event::Ptr &event);
+    void printSpecs(const KCalendarCore::Event::Ptr &event);
 
     //@cond PRIVATE
     KonsoleKalendarVariables *m_variables = nullptr;

@@ -22,7 +22,7 @@
 
 #include "collectionloader.h"
 
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 
 #include <AkonadiCore/CollectionFetchJob>
 #include <AkonadiCore/CollectionFetchScope>
@@ -41,7 +41,7 @@ void CollectionLoader::load()
     Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
                                                                        Akonadi::CollectionFetchJob::Recursive);
 
-    job->fetchScope().setContentMimeTypes(KCalCore::Incidence::mimeTypes());
+    job->fetchScope().setContentMimeTypes(KCalendarCore::Incidence::mimeTypes());
     connect(job, &Akonadi::CollectionFetchJob::result, this, &CollectionLoader::onCollectionsLoaded);
     job->start();
 }
@@ -57,7 +57,7 @@ void CollectionLoader::onCollectionsLoaded(KJob *job)
         Akonadi::CollectionFetchJob *cfj = qobject_cast<Akonadi::CollectionFetchJob *>(job);
         Q_ASSERT(cfj);
         foreach (const Akonadi::Collection &collection, cfj->collections()) {
-            QSet<QString> mimeTypeSet = KCalCore::Incidence::mimeTypes().toSet();
+            QSet<QString> mimeTypeSet = KCalendarCore::Incidence::mimeTypes().toSet();
             if (!mimeTypeSet.intersect(collection.contentMimeTypes().toSet()).isEmpty()) {
                 m_collections << collection;
             }

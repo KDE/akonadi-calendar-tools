@@ -64,7 +64,7 @@ public:
      * @param event pointer to the Event to export.
      * @param date is the QDate to be exported for.
      */
-    bool exportAsTxt(QTextStream *ts, const KCalCore::Event::Ptr &event, const QDate &date);
+    bool exportAsTxt(QTextStream *ts, const KCalendarCore::Event::Ptr &event, const QDate &date);
 
     /**
      * Export the Event in Short Text Mode.
@@ -74,7 +74,7 @@ public:
      * @param sameday flags that this Event is on the same date as the
      * previously exported Event.
      */
-    bool exportAsTxtShort(QTextStream *ts, const KCalCore::Event::Ptr &event, const QDate &date, bool sameday);
+    bool exportAsTxtShort(QTextStream *ts, const KCalendarCore::Event::Ptr &event, const QDate &date, bool sameday);
 
     /**
      * Export the Event in Comma-Separated Values (CSV) Mode.
@@ -82,7 +82,7 @@ public:
      * @param event pointer to the Event to export.
      * @param date is the QDate to be exported for.
      */
-    bool exportAsCSV(QTextStream *ts, const KCalCore::Event::Ptr &event, const QDate &date);
+    bool exportAsCSV(QTextStream *ts, const KCalendarCore::Event::Ptr &event, const QDate &date);
 
 private:
     //@cond PRIVATE

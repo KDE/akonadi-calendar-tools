@@ -30,7 +30,7 @@
 
 #include "konsolekalendarvariables.h"
 
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 
 /**
  * @file konsolekalendarchange.h
@@ -69,7 +69,7 @@ private:
      *
      * @param event is a pointer to an Event to print.
      */
-    void printSpecs(const KCalCore::Event::Ptr &event);
+    void printSpecs(const KCalendarCore::Event::Ptr &event);
 
     /**
      * Print Event specs as provided from the command line arguments.

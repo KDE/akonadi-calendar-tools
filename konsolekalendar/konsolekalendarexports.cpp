@@ -34,7 +34,7 @@
 
 #include "konsolekalendar_debug.h"
 
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 
 #include <QDateTime>
 #include <QLocale>
@@ -43,7 +43,7 @@
 #include <stdlib.h>
 #include <iostream>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace std;
 
 KonsoleKalendarExports::KonsoleKalendarExports(KonsoleKalendarVariables *vars)

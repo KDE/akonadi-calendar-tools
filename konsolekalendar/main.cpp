@@ -46,7 +46,7 @@
 #include "konsolekalendar_debug.h"
 
 
-#include <KCalCore/CalFormat>
+#include <KCalendarCore/CalFormat>
 
 #include <QDateTime>
 #include <QFile>
@@ -61,7 +61,7 @@
 #include <KAboutData>
 #include <QCommandLineParser>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace std;
 
 //@cond IGNORE
