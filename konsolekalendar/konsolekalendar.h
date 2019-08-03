@@ -30,7 +30,7 @@
 
 #include "konsolekalendarvariables.h"
 
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 #include <Akonadi/Calendar/FetchJobCalendar>
 
 #include <QDateTime>
@@ -125,7 +125,7 @@ private:
      * @param eventList which event we should print
      * @param dt is the date to use when printing the event for recurring events
      */
-    bool printEventList(QTextStream *ts, KCalCore::Event::List *eventList, QDate dt);
+    bool printEventList(QTextStream *ts, KCalendarCore::Event::List *eventList, QDate dt);
 
     /**
      * Prints a single event in many formats
@@ -134,7 +134,7 @@ private:
      * @param event which we should print
      * @param dt is the date to use when printing the event for recurring events
      */
-    bool printEvent(QTextStream *ts, const KCalCore::Event::Ptr &event, QDate dt);
+    bool printEvent(QTextStream *ts, const KCalendarCore::Event::Ptr &event, QDate dt);
 
     /**
      * Variables that changes stuff in program

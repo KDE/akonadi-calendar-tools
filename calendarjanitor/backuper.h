@@ -25,7 +25,7 @@
 
 #include "options.h"
 
-#include <KCalCore/MemoryCalendar>
+#include <KCalendarCore/MemoryCalendar>
 #include <AkonadiCore/Collection>
 
 #include <QObject>
@@ -56,7 +56,7 @@ private:
 
     Akonadi::Collection::List m_collections;
     QString m_filename;
-    KCalCore::MemoryCalendar::Ptr m_calendar;
+    KCalendarCore::MemoryCalendar::Ptr m_calendar;
 
     bool m_backupInProgress;
 };

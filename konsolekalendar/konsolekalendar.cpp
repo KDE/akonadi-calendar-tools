@@ -39,7 +39,7 @@
 #include "konsolekalendar_debug.h"
 #include <KLocalizedString>
 
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 #include <KCalUtils/HtmlExport>
 #include <kcalutils/htmlexportsettings.h>
 #include <AkonadiCore/AgentManager>
@@ -61,7 +61,7 @@
 #include <stdlib.h>
 #include <iostream>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace std;
 
 KonsoleKalendar::KonsoleKalendar(KonsoleKalendarVariables *variables)
@@ -86,9 +86,9 @@ bool KonsoleKalendar::printCalendarList()
     Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
                                                                        Akonadi::CollectionFetchJob::Recursive);
     QStringList mimeTypes = QStringList() << QStringLiteral("text/calendar")
-                                          << KCalCore::Event::eventMimeType()
-                                          << KCalCore::Todo::todoMimeType()
-                                          << KCalCore::Journal::journalMimeType();
+                                          << KCalendarCore::Event::eventMimeType()
+                                          << KCalendarCore::Todo::todoMimeType()
+                                          << KCalendarCore::Journal::journalMimeType();
     job->fetchScope().setContentMimeTypes(mimeTypes);
     QEventLoop loop;
     QObject::connect(job, &Akonadi::CollectionFetchJob::result, &loop, &QEventLoop::quit);
@@ -230,7 +230,7 @@ bool KonsoleKalendar::showInstance()
                     if (!sortedList.isEmpty()) {
                         // The code that was here before the akonadi port was really slow with 200 events
                         // this is much faster:
-                        foreach (const KCalCore::Event::Ptr &event, sortedList) {
+                        foreach (const KCalendarCore::Event::Ptr &event, sortedList) {
                             status &= printEvent(&ts, event, event->dtStart().date());
                         }
                     }

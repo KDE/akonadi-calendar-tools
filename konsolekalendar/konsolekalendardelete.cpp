@@ -39,7 +39,7 @@
 #include <KLocalizedString>
 #include <QEventLoop>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace std;
 
 KonsoleKalendarDelete::KonsoleKalendarDelete(KonsoleKalendarVariables *vars)

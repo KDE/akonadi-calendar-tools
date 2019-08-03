@@ -46,7 +46,7 @@
 #include <unistd.h>
 #include <time.h>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace std;
 
 KonsoleKalendarVariables::KonsoleKalendarVariables()

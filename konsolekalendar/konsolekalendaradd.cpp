@@ -38,8 +38,8 @@
 
 #include <KLocalizedString>
 
-#include <KCalCore/Event>
-#include <KCalCore/FileStorage>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/FileStorage>
 
 #include <Akonadi/Calendar/IncidenceChanger>
 #include <AkonadiCore/Collection>
@@ -54,7 +54,7 @@
 #include <iostream>
 #include <QStandardPaths>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace std;
 
 KonsoleKalendarAdd::KonsoleKalendarAdd(KonsoleKalendarVariables *vars)

@@ -25,7 +25,7 @@
 
 #include "options.h"
 
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 
 #include <Akonadi/Calendar/IncidenceChanger>
 #include <Akonadi/Calendar/FetchJobCalendar>
@@ -97,8 +97,8 @@ private:
     bool m_fixingEnabled = false;
 
     QString m_summary; // to print at the end.
-    QMultiMap<QString, KCalCore::Incidence::Ptr> m_incidenceMap;
-    QMap<KCalCore::Incidence::Ptr, Akonadi::Item> m_incidenceToItem;
+    QMultiMap<QString, KCalendarCore::Incidence::Ptr> m_incidenceMap;
+    QMap<KCalendarCore::Incidence::Ptr, Akonadi::Item> m_incidenceToItem;
 
     Akonadi::FetchJobCalendar::Ptr m_calendar;
 

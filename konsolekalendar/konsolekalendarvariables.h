@@ -28,7 +28,7 @@
 #ifndef KONSOLEKALENDARVARIABLES_H
 #define KONSOLEKALENDARVARIABLES_H
 
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 #include <Akonadi/Calendar/FetchJobCalendar>
 #include <AkonadiCore/Collection>
 
