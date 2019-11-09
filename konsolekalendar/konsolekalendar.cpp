@@ -311,7 +311,7 @@ bool KonsoleKalendar::showInstance()
                 //TODO: get progname and url from the values set in main
                 htmlSettings.setCreditName(QStringLiteral("KonsoleKalendar"));
                 htmlSettings.setCreditURL(
-                    QStringLiteral("http://pim.kde.org/components/konsolekalendar.php"));
+                    QStringLiteral("https://userbase.kde.org/KonsoleKalendar"));
 
                 htmlSettings.setExcludePrivate(true);
                 htmlSettings.setExcludeConfidential(true);
