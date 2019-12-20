@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 set(KDEPIM_VERSION_NUMBER "5.13.40")
 project(akonadi-calendar-tools VERSION ${KDEPIM_VERSION_NUMBER})
 
-set(KF5_MIN_VERSION "5.64.0")
+set(KF5_MIN_VERSION "5.65.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
