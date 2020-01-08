@@ -89,8 +89,6 @@ int main(int argc, char *argv[])
 
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
-    parser.addVersionOption();
-    parser.addHelpOption();
     aboutData.setupCommandLine(&parser);
 
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("verbose"), i18n("Print helpful runtime messages")));
