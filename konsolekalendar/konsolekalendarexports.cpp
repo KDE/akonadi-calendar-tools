@@ -78,7 +78,7 @@ bool KonsoleKalendarExports::exportAsTxt(QTextStream *ts, const Event::Ptr &even
     *ts << i18n("Date:")
         << "\t"
         << locale.toString(date)
-        << endl;
+        << '\n';
 
     // Print Event Starttime - Endtime, for Non-All-Day Events Only
     if (!event->allDay()) {
@@ -87,57 +87,57 @@ bool KonsoleKalendarExports::exportAsTxt(QTextStream *ts, const Event::Ptr &even
             << " - "
             << locale.toString(event->dtEnd().time());
     }
-    *ts << endl;
+    *ts << '\n';
 
     // Print Event Summary
     *ts << i18n("Summary:")
-        << endl;
+        << '\n';
     if (!event->summary().isEmpty()) {
         *ts << "\t"
             << event->summary()
-            << endl;
+            << '\n';
     } else {
         *ts << "\t"
             << i18n("(no summary available)")
-            << endl;
+            << '\n';
     }
 
     // Print Event Location
     *ts << i18n("Location:")
-        << endl;
+        << '\n';
     if (!event->location().isEmpty()) {
         *ts << "\t"
             << event->location()
-            << endl;
+            << '\n';
     } else {
         *ts << "\t"
             << i18n("(no location available)")
-            << endl;
+            << '\n';
     }
 
     // Print Event Description
     *ts << i18n("Description:")
-        << endl;
+        << '\n';
     if (!event->description().isEmpty()) {
         *ts << "\t"
             << event->description()
-            << endl;
+            << '\n';
     } else {
         *ts << "\t"
             << i18n("(no description available)")
-            << endl;
+            << '\n';
     }
 
     // Print Event UID
     *ts << i18n("UID:")
-        << endl
+        << '\n'
         << "\t"
         << event->uid()
-        << endl;
+        << '\n';
 
     // Print Line Separator
     *ts << "--------------------------------------------------"
-        << endl;
+        << '\n';
 
     return true;
 }
@@ -156,7 +156,7 @@ bool KonsoleKalendarExports::exportAsTxtShort(QTextStream *ts, const Event::Ptr 
     if (!sameday) {
         // If a new date, then Print the Event Date (in user's preferred format)
         *ts << locale.toString(date) << ":"
-            << endl;
+            << '\n';
     }
 
     // Print Event Starttime - Endtime
@@ -179,19 +179,19 @@ bool KonsoleKalendarExports::exportAsTxtShort(QTextStream *ts, const Event::Ptr 
         }
         *ts << event->location().replace(QLatin1Char('\n'), QLatin1Char(' '));
     }
-    *ts << endl;
+    *ts << '\n';
 
     // Print Event Description
     if (!event->description().isEmpty()) {
         *ts << "\t\t\t"
             << event->description().replace(QLatin1Char('\n'), QLatin1Char(' '))
-            << endl;
+            << '\n';
     }
 
 // By user request, no longer print UIDs if export-type==short
 
     // Print Separator
-    *ts << endl;
+    *ts << '\n';
 
     return true;
 }
@@ -237,7 +237,7 @@ bool KonsoleKalendarExports::exportAsCSV(QTextStream *ts, const Event::Ptr &even
         << delim << pF(event->location().replace(QLatin1Char('\n'), QLatin1Char(' ')))
         << delim << pF(event->description().replace(QLatin1Char('\n'), QLatin1Char(' ')))
         << delim << pF(event->uid())
-        << endl;
+        << '\n';
 
     return true;
 }

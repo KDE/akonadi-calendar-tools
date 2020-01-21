@@ -188,7 +188,7 @@ bool KonsoleKalendar::showInstance()
     Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
 
     if (m_variables->isDryRun()) {
-        cout << i18n("View Events <Dry Run>:").toLocal8Bit().data()
+        cout << qPrintable(i18n("View Events <Dry Run>:"))
              << endl;
         printSpecs();
     } else {
