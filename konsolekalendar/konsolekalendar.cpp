@@ -345,8 +345,14 @@ bool KonsoleKalendar::showInstance()
 //         htmlSettings.setTaskAttendees( false );
 //         htmlSettings.setTaskDueDate( true );
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                 htmlSettings.setDateStart(QDateTime(firstdate));
                 htmlSettings.setDateEnd(QDateTime(lastdate));
+#else
+                htmlSettings.setDateStart(QDateTime(firstdate.startOfDay()));
+                htmlSettings.setDateEnd(QDateTime(lastdate.startOfDay()));
+#endif
+
 
                 KCalUtils::HtmlExport *exp = new KCalUtils::HtmlExport(calendar.data(), &htmlSettings);
                 status = exp->save(&ts);
