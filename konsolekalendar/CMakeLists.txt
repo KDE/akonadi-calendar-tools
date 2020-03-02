@@ -13,7 +13,15 @@ set(konsolekalendar_SRCS
     konsolekalendar.cpp
     main.cpp )
 
-ecm_qt_declare_logging_category(konsolekalendar_SRCS HEADER konsolekalendar_debug.h IDENTIFIER KONSOLEKALENDAR_LOG CATEGORY_NAME org.kde.pim.konsolekalendar)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(konsolekalendar_SRCS HEADER konsolekalendar_debug.h IDENTIFIER KONSOLEKALENDAR_LOG CATEGORY_NAME org.kde.pim.konsolekalendar)
+else()
+    ecm_qt_declare_logging_category(konsolekalendar_SRCS HEADER konsolekalendar_debug.h IDENTIFIER KONSOLEKALENDAR_LOG CATEGORY_NAME org.kde.pim.konsolekalendar
+        DESCRIPTION "console (konsolekalendar)"
+        OLD_CATEGORY_NAMES log_konsolekalendar
+        EXPORT AKONADICALENDARTOOLS
+    )
+endif()
 
 add_executable(konsolekalendar ${konsolekalendar_SRCS})
 
