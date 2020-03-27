@@ -388,7 +388,6 @@ bool KonsoleKalendar::printEventList(QTextStream *ts, Event::List *eventList, QD
 bool KonsoleKalendar::printEvent(QTextStream *ts, const Event::Ptr &event, QDate dt)
 {
     bool status = false;
-    bool sameDay = true;
     KonsoleKalendarExports exports;
 
     if (event) {
@@ -399,14 +398,16 @@ bool KonsoleKalendar::printEvent(QTextStream *ts, const Event::Ptr &event, QDate
             status = exports.exportAsCSV(ts, event, dt);
             break;
 
-        case ExportTypeTextShort:
+        case ExportTypeTextShort: {
             qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::printEvent() |"
                                          << "TEXT-SHORT export";
+            bool sameDay = true;
             if (dt.daysTo(m_saveDate)) {
                 sameDay = false;
                 m_saveDate = dt;
             }
             status = exports.exportAsTxtShort(ts, event, dt, sameDay);
+        }
             break;
 
         case ExportTypeHTML:
