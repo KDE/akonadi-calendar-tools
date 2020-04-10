@@ -63,7 +63,7 @@ uint KonsoleKalendarEpoch::QDateTime2epoch(const QDateTime &dt)
     // SORRY QT DOESN'T HANDLE DAYLIGHT SAVINGS TIME.
 
     // Compute #seconds to subtract for local timezone difference from UTC.
-    int offset = QDateTime::currentDateTime().toUTC().toSecsSinceEpoch()
+    int offset = QDateTime::currentDateTimeUtc().toSecsSinceEpoch()
                  -QDateTime::currentDateTime().toSecsSinceEpoch();
     return dt.toSecsSinceEpoch() - offset;
 }
