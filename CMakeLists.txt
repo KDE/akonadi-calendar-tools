@@ -27,7 +27,7 @@ include(ECMQtDeclareLoggingCategory)
 
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION beta1)
+set(KDEPIM_DEV_VERSION alpha)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
@@ -70,6 +70,8 @@ if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
 	#add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
    add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054500)
 endif()
+add_definitions(-DQT_NO_SIGNALS_SLOTS_KEYWORDS)
+add_definitions(-DQT_NO_EMIT)
 
 add_subdirectory(calendarjanitor)
 add_subdirectory(konsolekalendar)
