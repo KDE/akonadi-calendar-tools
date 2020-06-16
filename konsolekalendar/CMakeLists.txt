@@ -25,7 +25,6 @@ target_link_libraries(konsolekalendar
     Qt5::DBus
     KF5::CalendarUtils
     KF5::CalendarCore
-    KF5::Libkdepim
     KF5::CalendarSupport
     KF5::AkonadiCalendar
     KF5::I18n
