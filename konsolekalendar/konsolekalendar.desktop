@@ -63,7 +63,6 @@ Name[tr]=KonsoleKalendar
 Name[ug]=KonsoleKalendar
 Name[uk]=Календар для консолі
 Name[wa]=KonsoleKalendar
-Name[x-test]=xxKonsoleKalendarxx
 Name[zh_CN]=KonsoleKalendar
 Name[zh_TW]=KonsoleKalendar
 Exec=kdialog --sorry "konsolekalendar is a command-line only program.  Please read the handbook at help:/konsolekalendar for more info."
