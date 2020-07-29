@@ -220,16 +220,15 @@ bool KonsoleKalendarExports::exportAsCSV(QTextStream *ts, const Event::Ptr &even
 
     QString delim = i18n(",");     // character to use as CSV field delimiter
     QString dquote = i18n("\"");   // character to use to quote CSV fields
-    QLocale locale;
     if (!event->allDay()) {
-        *ts <<          pF(locale.toString(date))
-            << delim << pF(locale.toString(event->dtStart().time()))
-            << delim << pF(locale.toString(date))
-            << delim << pF(locale.toString(event->dtEnd().time()));
+        *ts <<          pF(date.toString(Qt::ISODate))
+            << delim << pF(event->dtStart().time().toString(Qt::ISODate))
+            << delim << pF(date.toString(Qt::ISODate))
+            << delim << pF(event->dtEnd().time().toString(Qt::ISODate));
     } else {
-        *ts <<          pF(locale.toString(date))
+        *ts <<          pF(date.toString(Qt::ISODate))
             << delim << pF(QLatin1String(""))
-            << delim << pF(locale.toString(date))
+            << delim << pF(date.toString(Qt::ISODate))
             << delim << pF(QLatin1String(""));
     }
 
