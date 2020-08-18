@@ -3,12 +3,8 @@
 # tcm2kcal.pl -- converts a Turner Classic Movies (TCM) calendar
 #                web page into a KDE calendar file.
 ############################################################################
-# Copyright (c) 2003-2004 Allen Winter <winter@kde.org>                    #
-# All rights reserved.                                                     #
-# This program is free software; you can redistribute it and/or modify     #
-# it under the terms of the GNU General Public License as published by     #
-# the Free Software Foundation; either version 2 of the License, or        #
-# (at your option) any later version.                                      #
+# SPDX-FileCopyrightText: 2003-2004 Allen Winter <winter@kde.org>          #
+# SPDX-License-Identifier: GPL-2.0-or-later                                #
 ############################################################################
 #
 # This script is used to help test konsolekalendar.
