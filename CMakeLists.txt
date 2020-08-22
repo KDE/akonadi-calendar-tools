@@ -51,6 +51,7 @@ find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets)
 
 # Find KF5 package
 find_package(KF5DocTools ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF5I18n ${KF5_MIN_VERSION} REQUIRED)
 
 # Find KdepimLibs Package
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
