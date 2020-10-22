@@ -23,7 +23,6 @@
 #include "konsolekalendar_debug.h"
 #include <KLocalizedString>
 
-#include <KCalendarCore/Event>
 #include <KCalUtils/HtmlExport>
 #include <kcalutils/htmlexportsettings.h>
 #include <AkonadiCore/AgentManager>
@@ -33,7 +32,6 @@
 #include <AkonadiCore/Collection>
 #include <AkonadiCore/CollectionFetchScope>
 
-#include <QDateTime>
 #include <QDBusInterface>
 #include <QDBusReply>
 #include <QFile>

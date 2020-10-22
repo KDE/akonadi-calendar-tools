@@ -20,8 +20,6 @@
 #include "konsolekalendar_debug.h"
 #include <kconfig.h>
 
-#include <QDateTime>
-#include <QString>
 #include <QStringList>
 
 #include <stdlib.h>

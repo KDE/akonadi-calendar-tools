@@ -19,7 +19,6 @@
 #include <stdlib.h>
 #include <iostream>
 
-#include <QDateTime>
 using namespace std;
 
 KonsoleKalendarEpoch::KonsoleKalendarEpoch()

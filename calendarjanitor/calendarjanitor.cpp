@@ -18,7 +18,6 @@
 #include <KLocalizedString>
 
 #include <QList>
-#include <QString>
 #include <QTextStream>
 #include <QCoreApplication>
 
