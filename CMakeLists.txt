@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-set(PIM_VERSION "5.15.80")
+set(PIM_VERSION "5.16.40")
 project(akonadi-calendar-tools VERSION ${PIM_VERSION})
 
 set(KF5_MIN_VERSION "5.75.0")
@@ -27,7 +27,7 @@ include(ECMQtDeclareLoggingCategory)
 
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION beta)
+set(KDEPIM_DEV_VERSION alpha)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
