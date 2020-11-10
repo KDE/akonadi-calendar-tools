@@ -25,7 +25,6 @@
 #include <stdlib.h>
 #include <iostream>
 #include <stdio.h>
-#include <unistd.h>
 #include <time.h>
 
 using namespace KCalendarCore;
