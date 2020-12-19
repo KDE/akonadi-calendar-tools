@@ -40,19 +40,11 @@ void CollectionLoader::onCollectionsLoaded(KJob *job)
     if (job->error() == 0) {
         Akonadi::CollectionFetchJob *cfj = qobject_cast<Akonadi::CollectionFetchJob *>(job);
         Q_ASSERT(cfj);
-#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
-        QSet<QString> mimeTypeSet = KCalendarCore::Incidence::mimeTypes().toSet();
-#else
         const QStringList mimetypes = KCalendarCore::Incidence::mimeTypes();
         QSet<QString> mimeTypeSet = QSet<QString>(mimetypes.begin(), mimetypes.end());
-#endif
         foreach (const Akonadi::Collection &collection, cfj->collections()) {
             const QStringList contentMimeTypesLst = collection.contentMimeTypes();
-#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
-            QSet<QString> collectionMimeTypeSet = contentMimeTypesLst.toSet();
-#else
             QSet<QString> collectionMimeTypeSet = QSet<QString>(contentMimeTypesLst.begin(), contentMimeTypesLst.end());
-#endif
             if (!mimeTypeSet.intersect(collectionMimeTypeSet).isEmpty()) {
                 m_collections << collection;
             }

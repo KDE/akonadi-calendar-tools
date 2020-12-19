@@ -87,18 +87,10 @@ bool KonsoleKalendar::printCalendarList()
         cout << i18n("There are no calendars available.").toLocal8Bit().data() << endl;
     } else {
         cout << "--------------------------" << endl;
-#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
-        auto mimeTypeSet = mimeTypes.toSet();           // set changes by run method intersect
-#else
         auto mimeTypeSet = QSet<QString>(mimeTypes.begin(), mimeTypes.end());           // set changes by run method intersect
-#endif
         foreach (const Akonadi::Collection &collection, collections) {
             const QStringList contentMimeTypes = collection.contentMimeTypes();
-#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
-            auto collectionMimeTypeSet = contentMimeTypes.toSet();
-#else
             auto collectionMimeTypeSet = QSet<QString>(contentMimeTypes.begin(), contentMimeTypes.end());
-#endif
 
             if (!mimeTypeSet.intersect(collectionMimeTypeSet).isEmpty()) {
                 QString colId = QString::number(collection.id()).leftJustified(6, QLatin1Char(' '));

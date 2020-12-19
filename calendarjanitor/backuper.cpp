@@ -76,23 +76,15 @@ void Backuper::backup(const QString &filename, const QList<Akonadi::Collection::
 void Backuper::onCollectionsFetched(KJob *job)
 {
     if (job->error() == 0) {
-#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
-        QSet<QString> mimeTypeSet = KCalendarCore::Incidence::mimeTypes().toSet();
-#else
         const QStringList mimetypes = KCalendarCore::Incidence::mimeTypes();
         QSet<QString> mimeTypeSet = QSet<QString>(mimetypes.begin(), mimetypes.end());
-#endif
         Akonadi::CollectionFetchJob *cfj = qobject_cast<Akonadi::CollectionFetchJob *>(job);
         foreach (const Akonadi::Collection &collection, cfj->collections()) {
             if (!m_requestedCollectionIds.isEmpty() && !m_requestedCollectionIds.contains(collection.id())) {
                 continue;
             }
             const QStringList contentMimeTypesLst = collection.contentMimeTypes();
-#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
-            QSet<QString> collectionMimeTypeSet = contentMimeTypesLst.toSet();
-#else
             QSet<QString> collectionMimeTypeSet = QSet<QString>(contentMimeTypesLst.begin(), contentMimeTypesLst.end());
-#endif
             if (!mimeTypeSet.intersect(collectionMimeTypeSet).isEmpty()) {
                 m_collections << collection;
                 loadCollection(collection);
