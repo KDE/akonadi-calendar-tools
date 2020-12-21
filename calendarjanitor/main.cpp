@@ -33,16 +33,18 @@ static const char progDisplay[] = I18N_NOOP("CalendarJanitor");
 static const QString progVersion = QStringLiteral(KDEPIM_VERSION);
 static const char progDesc[] = I18N_NOOP("A command line interface to report and fix errors in your calendar data");
 
-static void print(const QString &message)
+#ifndef COMPILE_WITH_UNITY_CMAKE_SUPPORT
+static void printOut(const QString &message)
 {
     QTextStream out(stdout);
     out << message << "\n";
 }
+#endif
 
 static void printCollectionsUsage()
 {
-    print(i18n("Error while parsing %1", QStringLiteral("--collections")));
-    print(i18n("Example usage: %1", QStringLiteral("--collections 90,23,40")));
+    printOut(i18n("Error while parsing %1", QStringLiteral("--collections")));
+    printOut(i18n("Example usage: %1", QStringLiteral("--collections 90,23,40")));
 }
 
 static void silenceStderr()
@@ -105,17 +107,17 @@ int main(int argv, char *argc[])
     }
 
     if (parser.isSet(fixOpt) && parser.isSet(backupOpt)) {
-        print(i18n("--fix is incompatible with --backup"));
+        printOut(i18n("--fix is incompatible with --backup"));
         return -1;
     }
 
     if (parser.isSet(stripOldAlarmsOpt) && parser.isSet(backupOpt)) {
-        print(i18n("--strip-old-alarms is incompatible with --backup"));
+        printOut(i18n("--strip-old-alarms is incompatible with --backup"));
         return -1;
     }
 
     if (parser.isSet(stripOldAlarmsOpt) && parser.isSet(fixOpt)) {
-        print(i18n("--strip-old-alarms is incompatible with --fix"));
+        printOut(i18n("--strip-old-alarms is incompatible with --fix"));
         return -1;
     }
 
@@ -126,16 +128,16 @@ int main(int argv, char *argc[])
     QString backupFile;
     if (parser.isSet(fixOpt)) {
         janitorOptions.setAction(Options::ActionScanAndFix);
-        print(i18n("Running in fix mode."));
+        printOut(i18n("Running in fix mode."));
     } else if (parser.isSet(backupOpt)) {
         backupFile = parser.value(backupOpt);
         if (backupFile.isEmpty()) {
-            print(i18n("Please specify a output file."));
+            printOut(i18n("Please specify a output file."));
             return -1;
         }
         janitorOptions.setAction(Options::ActionBackup);
     } else {
-        print(i18n("Running in scan only mode."));
+        printOut(i18n("Running in scan only mode."));
         janitorOptions.setAction(Options::ActionScan);
     }
 

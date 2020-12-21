@@ -20,6 +20,9 @@ ecm_qt_declare_logging_category(konsolekalendar_SRCS HEADER konsolekalendar_debu
     )
 
 add_executable(konsolekalendar ${konsolekalendar_SRCS})
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(konsolekalendar PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(konsolekalendar
     Qt5::DBus

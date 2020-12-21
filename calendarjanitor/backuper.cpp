@@ -23,7 +23,7 @@
 
 #include <QCoreApplication>
 
-static void print(const QString &message)
+static void printOut(const QString &message)
 {
     QTextStream out(stdout);
     out << message << "\n";
@@ -32,9 +32,9 @@ static void print(const QString &message)
 void Backuper::emitFinished(bool success, const QString &message)
 {
     if (success) {
-        print(QLatin1Char('\n') + i18np("Backup was successful. %1 incidence was saved.", "Backup was successful. %1 incidences were saved.", m_calendar->incidences().count()));
+        printOut(QLatin1Char('\n') + i18np("Backup was successful. %1 incidence was saved.", "Backup was successful. %1 incidences were saved.", m_calendar->incidences().count()));
     } else {
-        print(message);
+        printOut(message);
     }
 
     m_calendar.clear();
@@ -59,7 +59,7 @@ void Backuper::backup(const QString &filename, const QList<Akonadi::Collection::
         emitFinished(false, i18n("A backup is already in progress."));
         return;
     }
-    print(i18n("Backing up your calendar data..."));
+    printOut(i18n("Backing up your calendar data..."));
     m_calendar = KCalendarCore::MemoryCalendar::Ptr(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
     m_requestedCollectionIds = collectionIds;
     m_backupInProgress = true;
@@ -103,7 +103,7 @@ void Backuper::onCollectionsFetched(KJob *job)
 
 void Backuper::loadCollection(const Akonadi::Collection &collection)
 {
-    print(i18n("Processing collection %1 (id=%2)...", collection.displayName(), collection.id()));
+    printOut(i18n("Processing collection %1 (id=%2)...", collection.displayName(), collection.id()));
     Akonadi::ItemFetchJob *ifj = new Akonadi::ItemFetchJob(collection, this);
     ifj->setProperty("collectionId", collection.id());
     ifj->fetchScope().fetchFullPayload(true);
