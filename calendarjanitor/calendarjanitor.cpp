@@ -120,7 +120,7 @@ void CalendarJanitor::onItemsFetched(bool success, const QString &errorMessage)
 
 void CalendarJanitor::onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
-    Q_UNUSED(changeId);
+    Q_UNUSED(changeId)
     if (resultCode != Akonadi::IncidenceChanger::ResultCodeSuccess) {
         print(i18n("Error while modifying incidence: %1", errorMessage));
         bailOut();
@@ -138,7 +138,7 @@ void CalendarJanitor::onModifyFinished(int changeId, const Akonadi::Item &item, 
 
 void CalendarJanitor::onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &items, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
 {
-    Q_UNUSED(changeId);
+    Q_UNUSED(changeId)
     if (resultCode != Akonadi::IncidenceChanger::ResultCodeSuccess) {
         print(i18n("Error while deleting incidence: %1", errorMessage));
         bailOut();
