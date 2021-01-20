@@ -85,9 +85,9 @@ int main(int argv, char *argc[])
     Options janitorOptions;
     if (parser.isSet(colsOpt)) {
         QString option = parser.value(colsOpt);
-        QStringList collections = option.split(QLatin1Char(','));
+        const QStringList collections = option.split(QLatin1Char(','));
         QList<Akonadi::Collection::Id> ids;
-        foreach (const QString &collection, collections) {
+        for (const QString &collection : collections) {
             bool ok = false;
             int num = collection.toInt(&ok);
             if (ok) {

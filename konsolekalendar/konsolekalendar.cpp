@@ -81,14 +81,14 @@ bool KonsoleKalendar::printCalendarList()
         return false;
     }
 
-    Akonadi::Collection::List collections = job->collections();
+    const Akonadi::Collection::List collections = job->collections();
 
     if (collections.isEmpty()) {
         cout << i18n("There are no calendars available.").toLocal8Bit().data() << endl;
     } else {
         cout << "--------------------------" << endl;
         auto mimeTypeSet = QSet<QString>(mimeTypes.begin(), mimeTypes.end());           // set changes by run method intersect
-        foreach (const Akonadi::Collection &collection, collections) {
+        for (const Akonadi::Collection &collection : collections) {
             const QStringList contentMimeTypes = collection.contentMimeTypes();
             auto collectionMimeTypeSet = QSet<QString>(contentMimeTypes.begin(), contentMimeTypes.end());
 
@@ -210,12 +210,12 @@ bool KonsoleKalendar::showInstance()
                     qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
                                                  << "view all events sorted list";
 
-                    Event::List sortedList = calendar->events(EventSortStartDate);
+                    const Event::List sortedList = calendar->events(EventSortStartDate);
                     qCDebug(KONSOLEKALENDAR_LOG) << "Found" << sortedList.count() << "events";
                     if (!sortedList.isEmpty()) {
                         // The code that was here before the akonadi port was really slow with 200 events
                         // this is much faster:
-                        foreach (const KCalendarCore::Event::Ptr &event, sortedList) {
+                        for (const KCalendarCore::Event::Ptr &event : sortedList) {
                             status &= printEvent(&ts, event, event->dtStart().date());
                         }
                     }

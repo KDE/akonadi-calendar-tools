@@ -151,7 +151,8 @@ bool KonsoleKalendarAdd::addImportedCalendar()
     QObject::connect(calendar.data(), &Akonadi::CalendarBase::createFinished,
                      &loop, &QEventLoop::quit);
     QElapsedTimer t;
-    foreach (const auto &event, cal->rawEvents()) {
+    const auto rawEvents = cal->rawEvents();
+    for (const auto &event : rawEvents) {
         if (calendar->incidence(event->uid()) != nullptr) {
             if (m_variables->isVerbose()) {
                 cout << i18n("Insert Event skipped, because UID \"%1\" is already known. <Verbose>", event->uid()).toLocal8Bit().data()

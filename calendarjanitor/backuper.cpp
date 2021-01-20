@@ -79,7 +79,8 @@ void Backuper::onCollectionsFetched(KJob *job)
         const QStringList mimetypes = KCalendarCore::Incidence::mimeTypes();
         QSet<QString> mimeTypeSet = QSet<QString>(mimetypes.begin(), mimetypes.end());
         Akonadi::CollectionFetchJob *cfj = qobject_cast<Akonadi::CollectionFetchJob *>(job);
-        foreach (const Akonadi::Collection &collection, cfj->collections()) {
+        const auto collections = cfj->collections();
+        for (const Akonadi::Collection &collection : collections) {
             if (!m_requestedCollectionIds.isEmpty() && !m_requestedCollectionIds.contains(collection.id())) {
                 continue;
             }
@@ -121,10 +122,10 @@ void Backuper::onCollectionLoaded(KJob *job)
         Akonadi::ItemFetchJob *ifj = qobject_cast<Akonadi::ItemFetchJob *>(job);
         Akonadi::Collection::Id id = ifj->property("collectionId").toInt();
         Q_ASSERT(id != -1);
-        Akonadi::Item::List items = ifj->items();
+        const Akonadi::Item::List items = ifj->items();
         m_pendingCollections.removeAll(id);
 
-        foreach (const Akonadi::Item &item, items) {
+        for (const Akonadi::Item &item : items) {
             KCalendarCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
             Q_ASSERT(incidence);
             m_calendar->addIncidence(incidence);
