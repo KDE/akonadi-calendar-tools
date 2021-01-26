@@ -20,12 +20,12 @@
 
 #include <KCalendarCore/Event>
 
+#include <KLocalizedString>
 #include <QDateTime>
 #include <QLocale>
-#include <KLocalizedString>
 
-#include <stdlib.h>
 #include <iostream>
+#include <stdlib.h>
 
 using namespace KCalendarCore;
 using namespace std;
@@ -59,69 +59,43 @@ bool KonsoleKalendarExports::exportAsTxt(QTextStream *ts, const Event::Ptr &even
     QLocale locale;
 
     // Print Event Date (in user's preferred format)
-    *ts << i18n("Date:")
-        << "\t"
-        << locale.toString(date)
-        << '\n';
+    *ts << i18n("Date:") << "\t" << locale.toString(date) << '\n';
 
     // Print Event Starttime - Endtime, for Non-All-Day Events Only
     if (!event->allDay()) {
-        *ts << "\t"
-            << locale.toString(event->dtStart().time())
-            << " - "
-            << locale.toString(event->dtEnd().time());
+        *ts << "\t" << locale.toString(event->dtStart().time()) << " - " << locale.toString(event->dtEnd().time());
     }
     *ts << '\n';
 
     // Print Event Summary
-    *ts << i18n("Summary:")
-        << '\n';
+    *ts << i18n("Summary:") << '\n';
     if (!event->summary().isEmpty()) {
-        *ts << "\t"
-            << event->summary()
-            << '\n';
+        *ts << "\t" << event->summary() << '\n';
     } else {
-        *ts << "\t"
-            << i18n("(no summary available)")
-            << '\n';
+        *ts << "\t" << i18n("(no summary available)") << '\n';
     }
 
     // Print Event Location
-    *ts << i18n("Location:")
-        << '\n';
+    *ts << i18n("Location:") << '\n';
     if (!event->location().isEmpty()) {
-        *ts << "\t"
-            << event->location()
-            << '\n';
+        *ts << "\t" << event->location() << '\n';
     } else {
-        *ts << "\t"
-            << i18n("(no location available)")
-            << '\n';
+        *ts << "\t" << i18n("(no location available)") << '\n';
     }
 
     // Print Event Description
-    *ts << i18n("Description:")
-        << '\n';
+    *ts << i18n("Description:") << '\n';
     if (!event->description().isEmpty()) {
-        *ts << "\t"
-            << event->description()
-            << '\n';
+        *ts << "\t" << event->description() << '\n';
     } else {
-        *ts << "\t"
-            << i18n("(no description available)")
-            << '\n';
+        *ts << "\t" << i18n("(no description available)") << '\n';
     }
 
     // Print Event UID
-    *ts << i18n("UID:")
-        << '\n'
-        << "\t"
-        << event->uid()
-        << '\n';
+    *ts << i18n("UID:") << '\n' << "\t" << event->uid() << '\n';
 
     // Print Line Separator
-    *ts << "--------------------------------------------------"
-        << '\n';
+    *ts << "--------------------------------------------------" << '\n';
 
     return true;
 }
@@ -139,15 +113,12 @@ bool KonsoleKalendarExports::exportAsTxtShort(QTextStream *ts, const Event::Ptr 
 
     if (!sameday) {
         // If a new date, then Print the Event Date (in user's preferred format)
-        *ts << locale.toString(date) << ":"
-            << '\n';
+        *ts << locale.toString(date) << ":" << '\n';
     }
 
     // Print Event Starttime - Endtime
     if (!event->allDay()) {
-        *ts << locale.toString(event->dtStart().time())
-            << " - "
-            << locale.toString(event->dtEnd().time());
+        *ts << locale.toString(event->dtStart().time()) << " - " << locale.toString(event->dtEnd().time());
     } else {
         *ts << i18n("[all day]\t");
     }
@@ -167,12 +138,10 @@ bool KonsoleKalendarExports::exportAsTxtShort(QTextStream *ts, const Event::Ptr 
 
     // Print Event Description
     if (!event->description().isEmpty()) {
-        *ts << "\t\t\t"
-            << event->description().replace(QLatin1Char('\n'), QLatin1Char(' '))
-            << '\n';
+        *ts << "\t\t\t" << event->description().replace(QLatin1Char('\n'), QLatin1Char(' ')) << '\n';
     }
 
-// By user request, no longer print UIDs if export-type==short
+    // By user request, no longer print UIDs if export-type==short
 
     // Print Separator
     *ts << '\n';
@@ -193,7 +162,7 @@ QString KonsoleKalendarExports::processField(const QString &field, const QString
 }
 
 //@cond IGNORE
-#define pF(x)  processField((x), dquote)
+#define pF(x) processField((x), dquote)
 //@endcond
 
 bool KonsoleKalendarExports::exportAsCSV(QTextStream *ts, const Event::Ptr &event, const QDate &date)
@@ -202,25 +171,18 @@ bool KonsoleKalendarExports::exportAsCSV(QTextStream *ts, const Event::Ptr &even
     //
     // startdate,starttime,enddate,endtime,summary,location,description,UID
 
-    QString delim = i18n(",");     // character to use as CSV field delimiter
-    QString dquote = i18n("\"");   // character to use to quote CSV fields
+    QString delim = i18n(","); // character to use as CSV field delimiter
+    QString dquote = i18n("\""); // character to use to quote CSV fields
     if (!event->allDay()) {
-        *ts <<          pF(date.toString(Qt::ISODate))
-            << delim << pF(event->dtStart().time().toString(Qt::ISODate))
-            << delim << pF(date.toString(Qt::ISODate))
-            << delim << pF(event->dtEnd().time().toString(Qt::ISODate));
+        *ts << pF(date.toString(Qt::ISODate)) << delim << pF(event->dtStart().time().toString(Qt::ISODate)) << delim << pF(date.toString(Qt::ISODate)) << delim
+            << pF(event->dtEnd().time().toString(Qt::ISODate));
     } else {
-        *ts <<          pF(date.toString(Qt::ISODate))
-            << delim << pF(QLatin1String(""))
-            << delim << pF(date.toString(Qt::ISODate))
-            << delim << pF(QLatin1String(""));
+        *ts << pF(date.toString(Qt::ISODate)) << delim << pF(QLatin1String("")) << delim << pF(date.toString(Qt::ISODate)) << delim << pF(QLatin1String(""));
     }
 
-    *ts << delim << pF(event->summary().replace(QLatin1Char('\n'), QLatin1Char(' ')))
-        << delim << pF(event->location().replace(QLatin1Char('\n'), QLatin1Char(' ')))
-        << delim << pF(event->description().replace(QLatin1Char('\n'), QLatin1Char(' ')))
-        << delim << pF(event->uid())
-        << '\n';
+    *ts << delim << pF(event->summary().replace(QLatin1Char('\n'), QLatin1Char(' '))) << delim
+        << pF(event->location().replace(QLatin1Char('\n'), QLatin1Char(' '))) << delim << pF(event->description().replace(QLatin1Char('\n'), QLatin1Char(' ')))
+        << delim << pF(event->uid()) << '\n';
 
     return true;
 }

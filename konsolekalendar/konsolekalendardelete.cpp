@@ -16,8 +16,8 @@
  */
 #include "konsolekalendardelete.h"
 
-#include <stdlib.h>
 #include <iostream>
+#include <stdlib.h>
 
 #include "konsolekalendar_debug.h"
 #include <KLocalizedString>
@@ -47,16 +47,13 @@ bool KonsoleKalendarDelete::deleteEvent()
     Event::Ptr event = m_variables->getCalendar()->event(m_variables->getUID());
     if (event) {
         if (m_variables->isDryRun()) {
-            cout << i18n("Delete Event <Dry Run>:").data()
-                 << endl;
+            cout << i18n("Delete Event <Dry Run>:").data() << endl;
             printSpecs(event);
         } else {
-            qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendardelete.cpp:deleteEvent() :"
-                                         << m_variables->getUID().data();
+            qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendardelete.cpp:deleteEvent() :" << m_variables->getUID().data();
 
             if (m_variables->isVerbose()) {
-                cout << i18n("Delete Event <Verbose>:").data()
-                     << endl;
+                cout << i18n("Delete Event <Verbose>:").data() << endl;
                 printSpecs(event);
             }
 
@@ -82,26 +79,16 @@ bool KonsoleKalendarDelete::deleteEvent()
 
 void KonsoleKalendarDelete::printSpecs(const Event::Ptr &event)
 {
-    cout << i18n("  UID:   %1", m_variables->getUID()).data()
-         << endl;
+    cout << i18n("  UID:   %1", m_variables->getUID()).data() << endl;
 
-    cout << i18n("  What:  %1", event->summary()).data()
-         << endl;
+    cout << i18n("  What:  %1", event->summary()).data() << endl;
 
     const auto timeZone = m_variables->getCalendar()->timeZone();
-    cout << i18n("  Begin: %1",
-                 event->dtStart().toTimeZone(timeZone).toString(Qt::TextDate)).data()
-         << endl;
+    cout << i18n("  Begin: %1", event->dtStart().toTimeZone(timeZone).toString(Qt::TextDate)).data() << endl;
 
-    cout << i18n("  End:   %1",
-                 event->dtEnd().toTimeZone(timeZone).toString(Qt::TextDate)).data()
-         << endl;
+    cout << i18n("  End:   %1", event->dtEnd().toTimeZone(timeZone).toString(Qt::TextDate)).data() << endl;
 
-    cout << i18n("  Desc:  %1",
-                 event->description()).data()
-         << endl;
+    cout << i18n("  Desc:  %1", event->description()).data() << endl;
 
-    cout << i18n("  Location:  %1",
-                 event->location()).data()
-         << endl;
+    cout << i18n("  Location:  %1", event->location()).data() << endl;
 }

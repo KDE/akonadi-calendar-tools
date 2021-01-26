@@ -14,8 +14,8 @@
 
 #include "konsolekalendarvariables.h"
 
-#include <KCalendarCore/Event>
 #include <Akonadi/Calendar/FetchJobCalendar>
+#include <KCalendarCore/Event>
 
 #include <QDateTime>
 

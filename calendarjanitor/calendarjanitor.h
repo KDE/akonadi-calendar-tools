@@ -11,13 +11,13 @@
 
 #include <KCalendarCore/Incidence>
 
-#include <Akonadi/Calendar/IncidenceChanger>
 #include <Akonadi/Calendar/FetchJobCalendar>
+#include <Akonadi/Calendar/IncidenceChanger>
 #include <AkonadiCore/Collection>
 #include <AkonadiCore/Item>
+#include <QMultiMap>
 #include <QObject>
 #include <QString>
-#include <QMultiMap>
 
 class CollectionLoader;
 

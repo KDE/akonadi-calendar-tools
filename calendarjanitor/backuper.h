@@ -9,11 +9,11 @@
 
 #include "options.h"
 
-#include <KCalendarCore/MemoryCalendar>
 #include <AkonadiCore/Collection>
+#include <KCalendarCore/MemoryCalendar>
 
-#include <QObject>
 #include <QList>
+#include <QObject>
 
 class KJob;
 

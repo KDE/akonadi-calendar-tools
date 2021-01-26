@@ -9,17 +9,17 @@
 
 #include <CalendarSupport/Utils>
 
-#include <KCalendarCore/Attachment>
 #include <KCalendarCore/Alarm>
+#include <KCalendarCore/Attachment>
 #include <KCalendarCore/Event>
-#include <KCalendarCore/Todo>
 #include <KCalendarCore/Journal>
+#include <KCalendarCore/Todo>
 
 #include <KLocalizedString>
 
+#include <QCoreApplication>
 #include <QList>
 #include <QTextStream>
-#include <QCoreApplication>
 
 #define TEXT_WIDTH 75
 
@@ -40,8 +40,7 @@ static void bailOut()
 
 static bool collectionIsReadOnly(const Akonadi::Collection &collection)
 {
-    return !(collection.rights() & Akonadi::Collection::CanChangeItem)
-           || !(collection.rights() & Akonadi::Collection::CanDeleteItem);
+    return !(collection.rights() & Akonadi::Collection::CanChangeItem) || !(collection.rights() & Akonadi::Collection::CanDeleteItem);
 }
 
 static bool incidenceIsOld(const KCalendarCore::Incidence::Ptr &incidence)
@@ -58,7 +57,8 @@ static bool incidenceIsOld(const KCalendarCore::Incidence::Ptr &incidence)
     return datetime.isValid() && datetime.daysTo(QDateTime::currentDateTime()) > 365;
 }
 
-CalendarJanitor::CalendarJanitor(const Options &options, QObject *parent) : QObject(parent)
+CalendarJanitor::CalendarJanitor(const Options &options, QObject *parent)
+    : QObject(parent)
     , m_collectionLoader(new CollectionLoader(this))
     , m_options(options)
     , m_currentSanityCheck(Options::CheckNone)
@@ -137,7 +137,10 @@ void CalendarJanitor::onModifyFinished(int changeId, const Akonadi::Item &item, 
     }
 }
 
-void CalendarJanitor::onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &items, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage)
+void CalendarJanitor::onDeleteFinished(int changeId,
+                                       const QVector<Akonadi::Item::Id> &items,
+                                       Akonadi::IncidenceChanger::ResultCode resultCode,
+                                       const QString &errorMessage)
 {
     Q_UNUSED(changeId)
     if (resultCode != Akonadi::IncidenceChanger::ResultCodeSuccess) {
@@ -253,8 +256,7 @@ void CalendarJanitor::sanityCheck1()
 
     for (const Akonadi::Item &item : qAsConst(m_itemsToProcess)) {
         KCalendarCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
-        if (incidence->summary().isEmpty() && incidence->description().isEmpty()
-            && incidence->attachments().isEmpty()) {
+        if (incidence->summary().isEmpty() && incidence->description().isEmpty() && incidence->attachments().isEmpty()) {
             printFound(item);
             deleteIncidence(item);
         }
@@ -511,7 +513,7 @@ void CalendarJanitor::sanityCheck8()
         m_returnCode = -2;
     }
 
-    endTest(/**print=*/ false);
+    endTest(/**print=*/false);
 }
 
 void CalendarJanitor::sanityCheck9()
@@ -557,8 +559,7 @@ void CalendarJanitor::sanityCheck9()
         }
     }
 
-    endTest(true, i18n("In fix mode the RECURRING-ID property will be unset and UID changed."),
-            i18n("Recurrence cleared."));
+    endTest(true, i18n("In fix mode the RECURRING-ID property will be unset and UID changed."), i18n("Recurrence cleared."));
 }
 
 void CalendarJanitor::stripOldAlarms()

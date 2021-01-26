@@ -12,12 +12,12 @@
 #ifndef KONSOLEKALENDARVARIABLES_H
 #define KONSOLEKALENDARVARIABLES_H
 
-#include <KCalendarCore/Event>
 #include <Akonadi/Calendar/FetchJobCalendar>
 #include <AkonadiCore/Collection>
+#include <KCalendarCore/Event>
 
-#include <QString>
 #include <QDateTime>
+#include <QString>
 
 /**
  * @file konsolekalendarvariables.h

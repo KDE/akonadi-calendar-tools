@@ -8,16 +8,16 @@
 
 #include <CalendarSupport/Utils>
 
-#include <KCalendarCore/Incidence>
 #include <KCalendarCore/FileStorage>
+#include <KCalendarCore/Incidence>
 
 #include <AkonadiCore/CollectionFetchJob>
 #include <AkonadiCore/CollectionFetchScope>
 #include <AkonadiCore/ItemFetchJob>
 #include <AkonadiCore/ItemFetchScope>
 
-#include <KLocalizedString>
 #include <KJob>
+#include <KLocalizedString>
 #include <QDebug>
 #include <QTimeZone>
 
@@ -32,7 +32,9 @@ static void printOut(const QString &message)
 void Backuper::emitFinished(bool success, const QString &message)
 {
     if (success) {
-        printOut(QLatin1Char('\n') + i18np("Backup was successful. %1 incidence was saved.", "Backup was successful. %1 incidences were saved.", m_calendar->incidences().count()));
+        printOut(
+            QLatin1Char('\n')
+            + i18np("Backup was successful. %1 incidence was saved.", "Backup was successful. %1 incidences were saved.", m_calendar->incidences().count()));
     } else {
         printOut(message);
     }
@@ -43,7 +45,8 @@ void Backuper::emitFinished(bool success, const QString &message)
     qApp->exit(success ? 0 : -1); // TODO: If we move this class to kdepimlibs, remove this
 }
 
-Backuper::Backuper(QObject *parent) : QObject(parent)
+Backuper::Backuper(QObject *parent)
+    : QObject(parent)
     , m_backupInProgress(false)
 {
 }
@@ -65,8 +68,7 @@ void Backuper::backup(const QString &filename, const QList<Akonadi::Collection::
     m_backupInProgress = true;
     m_filename = filename;
 
-    Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
-                                                                       Akonadi::CollectionFetchJob::Recursive);
+    Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
 
     job->fetchScope().setContentMimeTypes(KCalendarCore::Incidence::mimeTypes());
     connect(job, &Akonadi::CollectionFetchJob::result, this, &Backuper::onCollectionsFetched);

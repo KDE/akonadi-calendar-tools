@@ -30,7 +30,6 @@
 class KonsoleKalendarChange
 {
 public:
-
     /**
      * Constructs a KonsoleKalendarChange object from command line arguments.
      * @param vars is a KonsoleKalendarVariable object with Event information.
@@ -38,8 +37,8 @@ public:
     explicit KonsoleKalendarChange(KonsoleKalendarVariables *vars);
 
     /**
-       * Destructor
-       */
+     * Destructor
+     */
     ~KonsoleKalendarChange();
 
     /**

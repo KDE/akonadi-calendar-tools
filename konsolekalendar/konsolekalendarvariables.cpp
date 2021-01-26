@@ -16,15 +16,15 @@
  */
 #include "konsolekalendarvariables.h"
 
-#include <KLocalizedString>
 #include "konsolekalendar_debug.h"
+#include <KLocalizedString>
 #include <kconfig.h>
 
 #include <QStringList>
 
-#include <stdlib.h>
 #include <iostream>
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 using namespace KCalendarCore;
@@ -46,9 +46,9 @@ KonsoleKalendarVariables::KonsoleKalendarVariables()
     m_bDescription = false;
     m_description.clear();
     m_bLocation = false;
-    m_location = QStringLiteral("Default location"); //i18n ?
+    m_location = QStringLiteral("Default location"); // i18n ?
     m_bSummary = false;
-    m_summary = QStringLiteral("Default summary"); //i18n?
+    m_summary = QStringLiteral("Default summary"); // i18n?
     m_bFloating = true;
     m_bAllowGui = false;
     m_collectionId = -1;

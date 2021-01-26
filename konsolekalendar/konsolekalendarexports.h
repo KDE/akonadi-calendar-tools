@@ -30,7 +30,6 @@
 class KonsoleKalendarExports
 {
 public:
-
     /**
      * Constructs a KonsoleKalendarChange object from command line arguments.
      * @param vars is a KonsoleKalendarVariable object with Event information.

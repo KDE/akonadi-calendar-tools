@@ -30,7 +30,6 @@
 class KonsoleKalendarDelete
 {
 public:
-
     /**
      * Constructs a KonsoleKalendarDelete object from command line arguments.
      *
@@ -50,7 +49,6 @@ public:
     bool deleteEvent();
 
 private:
-
     /**
      * Print event specs for dryrun and verbose options.
      *

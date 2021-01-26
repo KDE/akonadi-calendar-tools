@@ -4,27 +4,27 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
+#include "backuper.h"
 #include "calendarjanitor.h"
 #include "options.h"
-#include "backuper.h"
 
 #include "console-version.h"
 
 #include <KAboutData>
 #include <KLocalizedString>
 
-#include <QCoreApplication>
-#include <QCommandLineParser>
 #include <QCommandLineOption>
-#include <QTextStream>
+#include <QCommandLineParser>
+#include <QCoreApplication>
 #include <QString>
+#include <QTextStream>
 #include <qglobal.h>
 
 #ifdef Q_OS_UNIX
-#    include <sys/types.h>
-#    include <sys/stat.h>
-#    include <fcntl.h>
-#    include <unistd.h>
+#include <fcntl.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
 #endif
 
 static const QString progName = QStringLiteral("calendarjanitor");
@@ -51,12 +51,12 @@ static void silenceStderr()
 {
 #ifdef Q_OS_UNIX
     if (qgetenv("KDE_CALENDARJANITOR_DEBUG") != "1") {
-        //krazy:cond=syscalls since UNIX-only code
+        // krazy:cond=syscalls since UNIX-only code
         // Disable stderr so we can actually read what's going on
         int fd = ::open("/dev/null", O_WRONLY);
         ::dup2(fd, 2);
         ::close(fd);
-        //krazy:endcond=syscalls
+        // krazy:endcond=syscalls
     }
 #endif
 }
@@ -76,7 +76,7 @@ int main(int argv, char *argc[])
     QCommandLineOption fixOpt(QStringLiteral("fix"), i18n("Fix broken incidences"));
     QCommandLineOption backupOpt(QStringLiteral("backup"), i18n("Backup your calendar"), QStringLiteral("output.ics"));
     QCommandLineOption stripOldAlarmsOpt(QStringLiteral("strip-old-alarms"), i18n("Delete alarms older than 365 days"));
-    parser.addOptions({ colsOpt, fixOpt, backupOpt, stripOldAlarmsOpt });
+    parser.addOptions({colsOpt, fixOpt, backupOpt, stripOldAlarmsOpt});
     aboutData.setupCommandLine(&parser);
 
     parser.process(app);
@@ -142,15 +142,13 @@ int main(int argv, char *argc[])
     }
 
     switch (janitorOptions.action()) {
-    case Options::ActionBackup:
-    {
+    case Options::ActionBackup: {
         Backuper *backuper = new Backuper();
         backuper->backup(backupFile, janitorOptions.collections());
         break;
     }
     case Options::ActionScan:
-    case Options::ActionScanAndFix:
-    {
+    case Options::ActionScanAndFix: {
         CalendarJanitor *janitor = new CalendarJanitor(janitorOptions);
         janitor->start();
         break;
