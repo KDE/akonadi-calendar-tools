@@ -25,7 +25,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(konsolekalendar
-    Qt::DBus
+    Qt5::DBus
     KF5::CalendarUtils
     KF5::CalendarCore
     KF5::CalendarSupport
