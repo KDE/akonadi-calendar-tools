@@ -9,8 +9,7 @@
  *                                                                            *
  ******************************************************************************/
 
-#ifndef KONSOLEKALENDARDELETE_H
-#define KONSOLEKALENDARDELETE_H
+#pragma once
 
 #include "konsolekalendarvariables.h"
 
@@ -61,4 +60,3 @@ private:
     //@endcond
 };
 
-#endif

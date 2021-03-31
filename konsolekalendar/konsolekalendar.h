@@ -9,8 +9,7 @@
  *                                                                            *
  ******************************************************************************/
 
-#ifndef KONSOLEKALENDAR_H
-#define KONSOLEKALENDAR_H
+#pragma once
 
 #include "konsolekalendarvariables.h"
 
@@ -136,4 +135,3 @@ private:
     QDate m_saveDate;
 };
 
-#endif

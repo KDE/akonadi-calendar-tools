@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef CALENDARJANITOR_H
-#define CALENDARJANITOR_H
+#pragma once
 
 #include "options.h"
 
@@ -89,4 +88,3 @@ private:
     int m_returnCode;
 };
 
-#endif // CALENDARJANITOR_H

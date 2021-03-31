@@ -9,8 +9,7 @@
  *                                                                             *
  ******************************************************************************/
 
-#ifndef KONSOLEKALENDAREXPORTS_H
-#define KONSOLEKALENDAREXPORTS_H
+#pragma once
 
 #include <QTextStream>
 
@@ -83,4 +82,3 @@ private:
     QString processField(const QString &field, const QString &dquote);
 };
 
-#endif

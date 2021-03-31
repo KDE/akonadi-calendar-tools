@@ -9,8 +9,7 @@
  *                                                                            *
  *****************************************************************************/
 
-#ifndef KONSOLEKALENDARVARIABLES_H
-#define KONSOLEKALENDARVARIABLES_H
+#pragma once
 
 #include <Akonadi/Calendar/FetchJobCalendar>
 #include <AkonadiCore/Collection>
@@ -396,4 +395,3 @@ private:
     //@endcond
 };
 
-#endif

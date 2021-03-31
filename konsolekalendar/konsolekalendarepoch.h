@@ -9,8 +9,7 @@
  *                                                                            *
  ******************************************************************************/
 
-#ifndef KONSOLEKALENDAREPOCH_H
-#define KONSOLEKALENDAREPOCH_H
+#pragma once
 
 #include <QDateTime>
 
@@ -50,4 +49,3 @@ public:
     static uint QDateTime2epoch(const QDateTime &dt);
 };
 
-#endif

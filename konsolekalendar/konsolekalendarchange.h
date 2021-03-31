@@ -9,8 +9,7 @@
  *                                                                            *
  ******************************************************************************/
 
-#ifndef KONSOLEKALENDARCHANGE_H
-#define KONSOLEKALENDARCHANGE_H
+#pragma once
 
 #include "konsolekalendarvariables.h"
 
@@ -64,4 +63,3 @@ private:
     //@endcond
 };
 
-#endif

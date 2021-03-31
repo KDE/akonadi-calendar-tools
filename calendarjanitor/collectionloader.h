@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef COLLECTIONLOADER_H
-#define COLLECTIONLOADER_H
+#pragma once
 
 #include <AkonadiCore/Collection>
 
@@ -31,4 +30,3 @@ private:
     Akonadi::Collection::List m_collections;
 };
 
-#endif // COLLECTIONLOADER_H

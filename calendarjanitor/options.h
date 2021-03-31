@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef OPTIONS_H
-#define OPTIONS_H
+#pragma once
 
 #include <AkonadiCore/Collection>
 #include <QList>
@@ -51,4 +50,3 @@ private:
     bool m_stripOldAlarms = false;
 };
 
-#endif // OPTIONS_H
