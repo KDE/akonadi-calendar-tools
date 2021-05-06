@@ -68,7 +68,7 @@ void Backuper::backup(const QString &filename, const QList<Akonadi::Collection::
     m_backupInProgress = true;
     m_filename = filename;
 
-    Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
+    auto job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
 
     job->fetchScope().setContentMimeTypes(KCalendarCore::Incidence::mimeTypes());
     connect(job, &Akonadi::CollectionFetchJob::result, this, &Backuper::onCollectionsFetched);
@@ -80,7 +80,7 @@ void Backuper::onCollectionsFetched(KJob *job)
     if (job->error() == 0) {
         const QStringList mimetypes = KCalendarCore::Incidence::mimeTypes();
         QSet<QString> mimeTypeSet = QSet<QString>(mimetypes.begin(), mimetypes.end());
-        Akonadi::CollectionFetchJob *cfj = qobject_cast<Akonadi::CollectionFetchJob *>(job);
+        auto cfj = qobject_cast<Akonadi::CollectionFetchJob *>(job);
         const auto collections = cfj->collections();
         for (const Akonadi::Collection &collection : collections) {
             if (!m_requestedCollectionIds.isEmpty() && !m_requestedCollectionIds.contains(collection.id())) {
@@ -107,7 +107,7 @@ void Backuper::onCollectionsFetched(KJob *job)
 void Backuper::loadCollection(const Akonadi::Collection &collection)
 {
     printOut(i18n("Processing collection %1 (id=%2)...", collection.displayName(), collection.id()));
-    Akonadi::ItemFetchJob *ifj = new Akonadi::ItemFetchJob(collection, this);
+    auto ifj = new Akonadi::ItemFetchJob(collection, this);
     ifj->setProperty("collectionId", collection.id());
     ifj->fetchScope().fetchFullPayload(true);
     connect(ifj, &Akonadi::ItemFetchJob::result, this, &Backuper::onCollectionLoaded);
@@ -121,7 +121,7 @@ void Backuper::onCollectionLoaded(KJob *job)
         m_calendar.clear();
         emitFinished(false, job->errorString());
     } else {
-        Akonadi::ItemFetchJob *ifj = qobject_cast<Akonadi::ItemFetchJob *>(job);
+        auto ifj = qobject_cast<Akonadi::ItemFetchJob *>(job);
         Akonadi::Collection::Id id = ifj->property("collectionId").toInt();
         Q_ASSERT(id != -1);
         const Akonadi::Item::List items = ifj->items();

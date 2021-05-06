@@ -65,7 +65,7 @@ bool KonsoleKalendar::importCalendar()
 
 bool KonsoleKalendar::printCalendarList()
 {
-    Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
+    auto job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
     const QStringList mimeTypes = QStringList() << QStringLiteral("text/calendar") << KCalendarCore::Event::eventMimeType()
                                                 << KCalendarCore::Todo::todoMimeType() << KCalendarCore::Journal::journalMimeType();
     job->fetchScope().setContentMimeTypes(mimeTypes);
@@ -109,7 +109,7 @@ bool KonsoleKalendar::printCalendarList()
 bool KonsoleKalendar::createAkonadiResource(const QString &icalFileUri)
 {
     Akonadi::AgentType type = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
-    Akonadi::AgentInstanceCreateJob *job = new Akonadi::AgentInstanceCreateJob(type);
+    auto job = new Akonadi::AgentInstanceCreateJob(type);
     QEventLoop loop;
     QObject::connect(job, &Akonadi::CollectionFetchJob::result, &loop, &QEventLoop::quit);
     job->start();
@@ -253,7 +253,7 @@ bool KonsoleKalendar::showInstance()
                                                  << "HTML view all events sorted list";
                     // sort the events for this date by start date
                     // in order to determine the date range.
-                    Event::List *events = new Event::List(calendar->rawEvents(EventSortStartDate, SortDirectionAscending));
+                    auto events = new Event::List(calendar->rawEvents(EventSortStartDate, SortDirectionAscending));
                     firstdate = events->first()->dtStart().date();
                     lastdate = events->last()->dtStart().date();
                 } else if (m_variables->isUID()) {
@@ -307,7 +307,7 @@ bool KonsoleKalendar::showInstance()
                 htmlSettings.setDateStart(QDateTime(firstdate.startOfDay()));
                 htmlSettings.setDateEnd(QDateTime(lastdate.startOfDay()));
 
-                KCalUtils::HtmlExport *exp = new KCalUtils::HtmlExport(calendar.data(), &htmlSettings);
+                auto exp = new KCalUtils::HtmlExport(calendar.data(), &htmlSettings);
                 status = exp->save(&ts);
                 delete exp;
             }

@@ -537,7 +537,7 @@ int main(int argc, char *argv[])
                                      << "(" << option << ")";
     }
 
-    KonsoleKalendar *konsolekalendar = new KonsoleKalendar(&variables);
+    auto konsolekalendar = new KonsoleKalendar(&variables);
 
     if (parser.isSet(QStringLiteral("list-calendars"))) {
         konsolekalendar->printCalendarList();

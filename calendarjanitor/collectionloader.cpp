@@ -22,7 +22,7 @@ CollectionLoader::CollectionLoader(QObject *parent)
 
 void CollectionLoader::load()
 {
-    Akonadi::CollectionFetchJob *job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
+    auto job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
 
     job->fetchScope().setContentMimeTypes(KCalendarCore::Incidence::mimeTypes());
     connect(job, &Akonadi::CollectionFetchJob::result, this, &CollectionLoader::onCollectionsLoaded);
@@ -37,7 +37,7 @@ Akonadi::Collection::List CollectionLoader::collections() const
 void CollectionLoader::onCollectionsLoaded(KJob *job)
 {
     if (job->error() == 0) {
-        Akonadi::CollectionFetchJob *cfj = qobject_cast<Akonadi::CollectionFetchJob *>(job);
+        auto cfj = qobject_cast<Akonadi::CollectionFetchJob *>(job);
         Q_ASSERT(cfj);
         const QStringList mimetypes = KCalendarCore::Incidence::mimeTypes();
         QSet<QString> mimeTypeSet = QSet<QString>(mimetypes.begin(), mimetypes.end());

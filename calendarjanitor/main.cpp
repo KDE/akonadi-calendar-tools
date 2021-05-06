@@ -143,13 +143,13 @@ int main(int argv, char *argc[])
 
     switch (janitorOptions.action()) {
     case Options::ActionBackup: {
-        Backuper *backuper = new Backuper();
+        auto backuper = new Backuper();
         backuper->backup(backupFile, janitorOptions.collections());
         break;
     }
     case Options::ActionScan:
     case Options::ActionScanAndFix: {
-        CalendarJanitor *janitor = new CalendarJanitor(janitorOptions);
+        auto janitor = new CalendarJanitor(janitorOptions);
         janitor->start();
         break;
     }
