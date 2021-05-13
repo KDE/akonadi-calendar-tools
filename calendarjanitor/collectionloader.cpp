@@ -45,7 +45,7 @@ void CollectionLoader::onCollectionsLoaded(KJob *job)
         for (const Akonadi::Collection &collection : collections) {
             const QStringList contentMimeTypesLst = collection.contentMimeTypes();
             QSet<QString> collectionMimeTypeSet = QSet<QString>(contentMimeTypesLst.begin(), contentMimeTypesLst.end());
-            if (!mimeTypeSet.intersect(collectionMimeTypeSet).isEmpty()) {
+            if (mimeTypeSet.intersects(collectionMimeTypeSet)) {
                 m_collections << collection;
             }
         }

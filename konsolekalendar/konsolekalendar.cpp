@@ -89,7 +89,7 @@ bool KonsoleKalendar::printCalendarList()
             const QStringList contentMimeTypes = collection.contentMimeTypes();
             auto collectionMimeTypeSet = QSet<QString>(contentMimeTypes.begin(), contentMimeTypes.end());
 
-            if (!mimeTypeSet.intersect(collectionMimeTypeSet).isEmpty()) {
+            if (mimeTypeSet.intersects(collectionMimeTypeSet)) {
                 QString colId = QString::number(collection.id()).leftJustified(6, QLatin1Char(' '));
                 colId += QLatin1String("- ");
 
