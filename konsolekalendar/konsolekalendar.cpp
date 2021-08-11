@@ -130,6 +130,11 @@ bool KonsoleKalendar::createAkonadiResource(const QString &icalFileUri)
         qCWarning(KONSOLEKALENDAR_LOG) << "Could not set setting 'path': " << reply.error().message();
         return false;
     }
+    reply = iface.call(QStringLiteral("save"));
+    if (!reply.isValid()) {
+        qCWarning(KONSOLEKALENDAR_LOG) << "Could not save settings: " << reply.error().message();
+        return false;
+    }
     inst.reconfigure();
     return true;
 }
