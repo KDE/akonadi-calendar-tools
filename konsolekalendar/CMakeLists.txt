@@ -1,9 +1,12 @@
 
 add_subdirectory(pics) 
 
-########### next target ###############
+add_executable(konsolekalendar)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(konsolekalendar PROPERTIES UNITY_BUILD ON)
+endif()
 
-set(konsolekalendar_SRCS 
+target_sources(konsolekalendar PRIVATE
     konsolekalendarepoch.cpp
     konsolekalendardelete.cpp
     konsolekalendarchange.cpp
@@ -13,16 +16,14 @@ set(konsolekalendar_SRCS
     konsolekalendar.cpp
     main.cpp )
 
-ecm_qt_declare_logging_category(konsolekalendar_SRCS HEADER konsolekalendar_debug.h IDENTIFIER KONSOLEKALENDAR_LOG CATEGORY_NAME org.kde.pim.konsolekalendar
-        DESCRIPTION "console (konsolekalendar)"
-        OLD_CATEGORY_NAMES log_konsolekalendar
-        EXPORT AKONADICALENDARTOOLS
+ecm_qt_declare_logging_category(konsolekalendar
+    HEADER konsolekalendar_debug.h
+    IDENTIFIER KONSOLEKALENDAR_LOG
+    CATEGORY_NAME org.kde.pim.konsolekalendar
+    DESCRIPTION "console (konsolekalendar)"
+    OLD_CATEGORY_NAMES log_konsolekalendar
+    EXPORT AKONADICALENDARTOOLS
     )
-
-add_executable(konsolekalendar ${konsolekalendar_SRCS})
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(konsolekalendar PROPERTIES UNITY_BUILD ON)
-endif()
 
 target_link_libraries(konsolekalendar
     Qt::DBus
