@@ -559,7 +559,8 @@ int main(int argc, char *argv[])
     /***************************************************************************
      * Glorious date/time checking and setting code                            *
      ***************************************************************************/
-    QDateTime startdatetime, enddatetime;
+    QDateTime startdatetime;
+    QDateTime enddatetime;
 
     // Handle case with either date or end-date unspecified
     if (!parser.isSet(QStringLiteral("end-date")) && !parser.isSet(QStringLiteral("show-next")) && parser.isSet(QStringLiteral("date"))) {

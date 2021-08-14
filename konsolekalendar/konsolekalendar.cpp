@@ -252,7 +252,8 @@ bool KonsoleKalendar::showInstance()
                     }
                 }
             } else {
-                QDate firstdate, lastdate;
+                QDate firstdate;
+                QDate lastdate;
                 if (m_variables->getAll()) {
                     qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
                                                  << "HTML view all events sorted list";
