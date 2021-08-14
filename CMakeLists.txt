@@ -22,7 +22,6 @@ include(ECMGeneratePriFile)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-set(KDE_COMPILERSETTINGS_LEVEL 5.85.0)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
@@ -70,8 +69,6 @@ configure_file(console-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/console-versi
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055600)
 add_definitions(-DQT_NO_EMIT)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
