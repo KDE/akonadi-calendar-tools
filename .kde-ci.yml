@@ -4,6 +4,7 @@
 Dependencies:
 - 'on': ['@all']
   'require':
+    'frameworks/extra-cmake-modules': '@latest'
     'frameworks/kdelibs4support' : '@latest'
     'frameworks/kcalendarcore' : '@latest'
     'kde/pim/akonadi' : '@same'
