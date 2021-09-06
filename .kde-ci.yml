@@ -6,8 +6,8 @@ Dependencies:
   'require':
     'frameworks/kdelibs4support' : '@latest'
     'frameworks/kcalendarcore' : '@latest'
-    'kde/pim/akonadi' : '@latest'
-    'kde/pim/akonadi-calendar' : '@latest'
-    'kde/pim/calendarsupport' : '@latest'
-    'kde/pim/kcalutils' : '@latest'
-    'kde/pim/libkdepim' : '@latest'
+    'kde/pim/akonadi' : '@same'
+    'kde/pim/akonadi-calendar' : '@same'
+    'kde/pim/calendarsupport' : '@same'
+    'kde/pim/kcalutils' : '@same'
+    'kde/pim/libkdepim' : '@same'
