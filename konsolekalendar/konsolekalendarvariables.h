@@ -12,7 +12,7 @@
 #pragma once
 
 #include <Akonadi/Calendar/FetchJobCalendar>
-#include <AkonadiCore/Collection>
+#include <Akonadi/Collection>
 #include <KCalendarCore/Event>
 
 #include <QDateTime>

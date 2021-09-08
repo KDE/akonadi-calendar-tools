@@ -8,7 +8,7 @@
 
 #include "options.h"
 
-#include <AkonadiCore/Collection>
+#include <Akonadi/Collection>
 #include <KCalendarCore/MemoryCalendar>
 
 #include <QList>

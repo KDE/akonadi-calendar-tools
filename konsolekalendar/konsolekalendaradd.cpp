@@ -26,7 +26,7 @@
 #include <KCalendarCore/FileStorage>
 
 #include <Akonadi/Calendar/IncidenceChanger>
-#include <AkonadiCore/Collection>
+#include <Akonadi/Collection>
 
 #include <QDateTime>
 #include <QElapsedTimer>

@@ -12,8 +12,8 @@
 
 #include <Akonadi/Calendar/FetchJobCalendar>
 #include <Akonadi/Calendar/IncidenceChanger>
-#include <AkonadiCore/Collection>
-#include <AkonadiCore/Item>
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 #include <QMultiMap>
 #include <QObject>
 #include <QString>

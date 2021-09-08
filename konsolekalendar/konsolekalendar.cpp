@@ -23,12 +23,12 @@
 #include "konsolekalendar_debug.h"
 #include <KLocalizedString>
 
-#include <AkonadiCore/AgentInstance>
-#include <AkonadiCore/AgentInstanceCreateJob>
-#include <AkonadiCore/AgentManager>
-#include <AkonadiCore/Collection>
-#include <AkonadiCore/CollectionFetchJob>
-#include <AkonadiCore/CollectionFetchScope>
+#include <Akonadi/AgentInstance>
+#include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentManager>
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
 #include <KCalUtils/HtmlExport>
 #include <kcalutils/htmlexportsettings.h>
 

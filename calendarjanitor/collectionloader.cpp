@@ -8,8 +8,8 @@
 
 #include <KCalendarCore/Incidence>
 
-#include <AkonadiCore/CollectionFetchJob>
-#include <AkonadiCore/CollectionFetchScope>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
 #include <QSet>
 #include <QString>
 
