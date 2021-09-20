@@ -15,10 +15,5 @@
   build against older kdelibs releases.
 */
 
-#ifndef CONSOLE_VERSION_H
-#define CONSOLE_VERSION_H
-
-
+#pragma once
 #define KDEPIM_VERSION "@KDEPIM_VERSION@"
-
-#endif
