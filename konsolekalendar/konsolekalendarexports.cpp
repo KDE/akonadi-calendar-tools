@@ -21,7 +21,6 @@
 #include <KCalendarCore/Event>
 
 #include <KLocalizedString>
-#include <QDateTime>
 #include <QLocale>
 
 #include <iostream>

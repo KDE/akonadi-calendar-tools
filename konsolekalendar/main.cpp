@@ -33,7 +33,6 @@
 #include <QElapsedTimer>
 #include <QEventLoop>
 #include <QFile>
-#include <QFileInfo>
 
 #include <KAboutData>
 #include <QApplication>

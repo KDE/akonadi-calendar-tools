@@ -20,7 +20,6 @@
 #include <KLocalizedString>
 #include <kconfig.h>
 
-#include <QStringList>
 
 #include <iostream>
 #include <stdio.h>
