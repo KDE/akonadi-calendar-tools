@@ -14,6 +14,14 @@ target_sources(konsolekalendar PRIVATE
     konsolekalendaradd.cpp
     konsolekalendarexports.cpp
     konsolekalendar.cpp
+    konsolekalendarepoch.h
+    konsolekalendardelete.h
+    konsolekalendarchange.h
+    konsolekalendarvariables.h
+    konsolekalendaradd.h
+    konsolekalendarexports.h
+    konsolekalendar.h
+
     main.cpp )
 
 ecm_qt_declare_logging_category(konsolekalendar

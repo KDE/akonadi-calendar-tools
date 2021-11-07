@@ -4,11 +4,16 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_sources(calendarjanitor PRIVATE
+    main.cpp
     backuper.cpp
     calendarjanitor.cpp
     collectionloader.cpp
-    main.cpp
-    options.cpp)
+    options.cpp
+    backuper.h
+    calendarjanitor.h
+    collectionloader.h
+    options.h
+    )
 
 target_link_libraries(calendarjanitor
     KF5::CalendarUtils
