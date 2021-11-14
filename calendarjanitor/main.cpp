@@ -27,12 +27,6 @@
 #include <unistd.h>
 #endif
 
-static const QString progName = QStringLiteral("calendarjanitor");
-static const char progDisplay[] = I18N_NOOP("CalendarJanitor");
-
-static const QString progVersion = QStringLiteral(KDEPIM_VERSION);
-static const char progDesc[] = I18N_NOOP("A command line interface to report and fix errors in your calendar data");
-
 #ifndef COMPILE_WITH_UNITY_CMAKE_SUPPORT
 static void printOut(const QString &message)
 {
@@ -64,10 +58,10 @@ static void silenceStderr()
 int main(int argv, char *argc[])
 {
     KLocalizedString::setApplicationDomain("calendarjanitor");
-    KAboutData aboutData(progName, i18n(progDisplay), progVersion);
+    KAboutData aboutData(QStringLiteral("calendarjanitor"), i18n("CalendarJanitor"), QStringLiteral(KDEPIM_VERSION));
     aboutData.setLicense(KAboutLicense::GPL_V2, KAboutLicense::OrLaterVersions);
     aboutData.addAuthor(i18n("Sérgio Martins"), i18n("Maintainer"), QStringLiteral("iamsergiogmail.com"));
-    aboutData.setShortDescription(i18n(progDesc));
+    aboutData.setShortDescription(i18n("A command line interface to report and fix errors in your calendar data"));
 
     QCoreApplication app(argv, argc);
 
