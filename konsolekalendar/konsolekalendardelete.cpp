@@ -16,8 +16,8 @@
  */
 #include "konsolekalendardelete.h"
 
+#include <cstdlib>
 #include <iostream>
-#include <stdlib.h>
 
 #include "konsolekalendar_debug.h"
 #include <KLocalizedString>
@@ -31,9 +31,7 @@ KonsoleKalendarDelete::KonsoleKalendarDelete(KonsoleKalendarVariables *vars)
     m_variables = vars;
 }
 
-KonsoleKalendarDelete::~KonsoleKalendarDelete()
-{
-}
+KonsoleKalendarDelete::~KonsoleKalendarDelete() = default;
 
 bool KonsoleKalendarDelete::deleteEvent()
 {

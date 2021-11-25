@@ -23,8 +23,8 @@
 #include <KLocalizedString>
 #include <QLocale>
 
+#include <cstdlib>
 #include <iostream>
-#include <stdlib.h>
 
 using namespace KCalendarCore;
 using namespace std;
@@ -35,9 +35,7 @@ KonsoleKalendarExports::KonsoleKalendarExports(KonsoleKalendarVariables *vars)
     m_firstEntry = true;
 }
 
-KonsoleKalendarExports::~KonsoleKalendarExports()
-{
-}
+KonsoleKalendarExports::~KonsoleKalendarExports() = default;
 
 bool KonsoleKalendarExports::exportAsTxt(QTextStream *ts, const Event::Ptr &event, const QDate &date)
 {

@@ -37,9 +37,9 @@
 #include <KAboutData>
 #include <QApplication>
 #include <QCommandLineParser>
+#include <cstdlib>
+#include <ctime>
 #include <iostream>
-#include <stdlib.h>
-#include <time.h>
 
 using namespace KCalendarCore;
 using namespace std;

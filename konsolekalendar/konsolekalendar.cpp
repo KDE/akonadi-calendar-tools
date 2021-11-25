@@ -39,9 +39,9 @@
 #include <QFileInfo>
 #include <QTextStream>
 
+#include <cstdio>
+#include <cstdlib>
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
 
 using namespace KCalendarCore;
 using namespace std;
@@ -51,9 +51,7 @@ KonsoleKalendar::KonsoleKalendar(KonsoleKalendarVariables *variables)
     m_variables = variables;
 }
 
-KonsoleKalendar::~KonsoleKalendar()
-{
-}
+KonsoleKalendar::~KonsoleKalendar() = default;
 
 bool KonsoleKalendar::importCalendar()
 {

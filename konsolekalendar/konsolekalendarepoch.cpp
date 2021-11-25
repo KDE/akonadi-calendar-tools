@@ -16,18 +16,14 @@
  */
 #include "konsolekalendarepoch.h"
 
+#include <cstdlib>
 #include <iostream>
-#include <stdlib.h>
 
 using namespace std;
 
-KonsoleKalendarEpoch::KonsoleKalendarEpoch()
-{
-}
+KonsoleKalendarEpoch::KonsoleKalendarEpoch() = default;
 
-KonsoleKalendarEpoch::~KonsoleKalendarEpoch()
-{
-}
+KonsoleKalendarEpoch::~KonsoleKalendarEpoch() = default;
 
 // By "epoch" we mean the number of seconds since 00:00:00 UTC on January 1 1970
 

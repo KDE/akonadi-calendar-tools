@@ -6,9 +6,7 @@
 
 #include "options.h"
 
-Options::Options()
-{
-}
+Options::Options() = default;
 
 void Options::setAction(Options::Action action)
 {

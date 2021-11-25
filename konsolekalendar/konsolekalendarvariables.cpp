@@ -20,11 +20,10 @@
 #include <KLocalizedString>
 #include <kconfig.h>
 
-
+#include <cstdio>
+#include <cstdlib>
+#include <ctime>
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 using namespace KCalendarCore;
 using namespace std;
@@ -53,9 +52,7 @@ KonsoleKalendarVariables::KonsoleKalendarVariables()
     m_collectionId = -1;
 }
 
-KonsoleKalendarVariables::~KonsoleKalendarVariables()
-{
-}
+KonsoleKalendarVariables::~KonsoleKalendarVariables() = default;
 
 void KonsoleKalendarVariables::setUID(const QString &uid)
 {

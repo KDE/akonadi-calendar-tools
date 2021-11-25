@@ -34,8 +34,8 @@
 #include <QTimeZone>
 
 #include <QStandardPaths>
+#include <cstdlib>
 #include <iostream>
-#include <stdlib.h>
 
 using namespace KCalendarCore;
 using namespace std;
@@ -45,9 +45,7 @@ KonsoleKalendarAdd::KonsoleKalendarAdd(KonsoleKalendarVariables *vars)
     m_variables = vars;
 }
 
-KonsoleKalendarAdd::~KonsoleKalendarAdd()
-{
-}
+KonsoleKalendarAdd::~KonsoleKalendarAdd() = default;
 
 /**
  * Adds event to Calendar

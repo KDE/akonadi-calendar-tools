@@ -22,8 +22,8 @@
 #include <QElapsedTimer>
 #include <QEventLoop>
 
+#include <cstdlib>
 #include <iostream>
-#include <stdlib.h>
 
 using namespace KCalendarCore;
 using namespace std;
@@ -33,9 +33,7 @@ KonsoleKalendarChange::KonsoleKalendarChange(KonsoleKalendarVariables *vars)
     m_variables = vars;
 }
 
-KonsoleKalendarChange::~KonsoleKalendarChange()
-{
-}
+KonsoleKalendarChange::~KonsoleKalendarChange() = default;
 
 bool KonsoleKalendarChange::changeEvent()
 {
