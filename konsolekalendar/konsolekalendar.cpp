@@ -29,8 +29,8 @@
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
+#include <KCalUtils/HTMLExportSettings>
 #include <KCalUtils/HtmlExport>
-#include <kcalutils/htmlexportsettings.h>
 
 #include <QDBusInterface>
 #include <QDBusReply>
