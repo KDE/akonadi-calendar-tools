@@ -25,8 +25,8 @@
 #include <KCalendarCore/Event>
 #include <KCalendarCore/FileStorage>
 
-#include <Akonadi/Calendar/IncidenceChanger>
 #include <Akonadi/Collection>
+#include <Akonadi/IncidenceChanger>
 
 #include <QElapsedTimer>
 #include <QEventLoop>

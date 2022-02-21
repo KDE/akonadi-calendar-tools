@@ -10,9 +10,9 @@
 
 #include <KCalendarCore/Incidence>
 
-#include <Akonadi/Calendar/FetchJobCalendar>
-#include <Akonadi/Calendar/IncidenceChanger>
 #include <Akonadi/Collection>
+#include <Akonadi/FetchJobCalendar>
+#include <Akonadi/IncidenceChanger>
 #include <Akonadi/Item>
 #include <QMultiMap>
 #include <QObject>

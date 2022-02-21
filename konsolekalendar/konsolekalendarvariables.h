@@ -11,8 +11,8 @@
 
 #pragma once
 
-#include <Akonadi/Calendar/FetchJobCalendar>
 #include <Akonadi/Collection>
+#include <Akonadi/FetchJobCalendar>
 #include <KCalendarCore/Event>
 
 #include <QDateTime>
