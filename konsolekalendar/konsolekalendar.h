@@ -134,4 +134,3 @@ private:
      */
     QDate m_saveDate;
 };
-

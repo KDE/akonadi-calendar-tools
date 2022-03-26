@@ -87,4 +87,3 @@ private:
 
     int m_returnCode;
 };
-

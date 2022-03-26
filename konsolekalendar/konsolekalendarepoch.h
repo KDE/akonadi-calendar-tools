@@ -48,4 +48,3 @@ public:
      */
     static uint QDateTime2epoch(const QDateTime &dt);
 };
-

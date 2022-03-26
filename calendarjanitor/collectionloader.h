@@ -29,4 +29,3 @@ private Q_SLOTS:
 private:
     Akonadi::Collection::List m_collections;
 };
-

@@ -394,4 +394,3 @@ private:
     Akonadi::FetchJobCalendar::Ptr m_calendar;
     //@endcond
 };
-

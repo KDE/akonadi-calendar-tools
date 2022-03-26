@@ -62,4 +62,3 @@ private:
     KonsoleKalendarVariables *m_variables = nullptr;
     //@endcond
 };
-

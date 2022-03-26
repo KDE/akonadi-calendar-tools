@@ -49,4 +49,3 @@ private:
     Action m_action = ActionNone;
     bool m_stripOldAlarms = false;
 };
-

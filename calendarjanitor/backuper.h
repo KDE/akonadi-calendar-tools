@@ -43,4 +43,3 @@ private:
 
     bool m_backupInProgress;
 };
-

@@ -81,4 +81,3 @@ private:
      */
     QString processField(const QString &field, const QString &dquote);
 };
-
