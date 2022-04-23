@@ -6,11 +6,10 @@
 
 #include "backuper.h"
 
-#include <CalendarSupport/Utils>
-
 #include <KCalendarCore/FileStorage>
 #include <KCalendarCore/Incidence>
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/ItemFetchJob>
@@ -128,7 +127,7 @@ void Backuper::onCollectionLoaded(KJob *job)
         m_pendingCollections.removeAll(id);
 
         for (const Akonadi::Item &item : items) {
-            KCalendarCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
+            KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
             Q_ASSERT(incidence);
             m_calendar->addIncidence(incidence);
         }
