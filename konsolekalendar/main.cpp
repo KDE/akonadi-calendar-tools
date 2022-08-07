@@ -550,7 +550,7 @@ int main(int argc, char *argv[])
     QElapsedTimer t;
     t.start();
     loop.exec();
-    qCDebug(KONSOLEKALENDAR_LOG) << "Calendar loaded in" << t.elapsed() << "ms; success=" << calendar->isLoaded()
+    qCDebug(KONSOLEKALENDAR_LOG) << "Calendar loaded in" << t.elapsed() << "ms; success=" << !calendar->isLoading()
                                  << "; num incidences=" << calendar->incidences().count();
 
     variables.setCalendar(calendar);
