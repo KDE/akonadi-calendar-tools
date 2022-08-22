@@ -72,6 +72,5 @@ Exec=kdialog --sorry "konsolekalendar is a command-line only program.  Please re
 Icon=konsolekalendar
 Type=Application
 X-DocPath=konsolekalendar/index.html
-Terminal=false
 NoDisplay=true
 Categories=Qt;KDE;Utility;X-KDE-More;
