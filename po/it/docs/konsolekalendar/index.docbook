@@ -1,0 +1,1474 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+
+  <!ENTITY konsolekalendar "<application
+>KonsoleKalendar</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE">
+]>
+<!-- The language must NOT be changed here. -->
+
+<book id="konsolekalendar" lang="&language;">
+
+<bookinfo id="konsolekalendarinfo">
+
+<title
+>Manuale di &konsolekalendar;</title>
+
+<authorgroup>
+<author
+><firstname
+>Tuukka</firstname
+> <surname
+>Pasanen</surname
+> <affiliation
+><address
+><email
+>illuusio@mailcity.com</email
+></address
+></affiliation>
+</author>
+
+<author
+><firstname
+>Allen</firstname
+> <surname
+>Winter</surname
+> <affiliation
+><address
+><email
+>winterz@kde.org</email
+></address
+></affiliation>
+</author>
+
+<othercredit role="reviewer"
+><firstname
+>Malcolm</firstname
+> <surname
+>Hunter</surname
+> <affiliation
+><address
+><email
+>malcolm.hunter@gmx.co.uk</email
+></address
+></affiliation>
+<contrib
+>Revisore</contrib>
+</othercredit>
+<othercredit role="translator"
+><firstname
+>Vincenzo</firstname
+><surname
+>Reale</surname
+><affiliation
+><address
+><email
+>smart2128vr@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Luciano</firstname
+><surname
+>Montanaro</surname
+><affiliation
+><address
+><email
+>mikelima@cirulla.net</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2002</year
+><year
+>2004</year
+><holder
+>Tuukka Pasanen</holder>
+</copyright>
+
+<copyright>
+<year
+>2003</year
+><year
+>2007</year
+><holder
+>Allen Winter</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Don't change format of date and version of the documentation -->
+
+<date
+>23/11/2016</date>
+<releaseinfo
+>5.1.3 (Applications 16.12)</releaseinfo>
+
+<abstract>
+<para
+>&konsolekalendar; è un'interfaccia a riga di comando per i calendari di &kde;.</para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>&package;</keyword>
+<keyword
+>&kappname;</keyword>
+<keyword
+>KOrganizer</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introduzione</title>
+
+<para
+>&konsolekalendar; è un'interfaccia a riga di comando per i calendari. Permette di visualizzare, inserire, rimuovere o modificare gli eventi di calendario per mezzo della riga di comando o di un linguaggio di script. Inoltre, &konsolekalendar; può creare un nuovo calendario, esportare un calendario in una varietà di altri formati e importare altri calendari.</para>
+
+<para
+>In modalità base, &konsolekalendar; mostra l'elenco di eventi del calendario predefinito per il giorno attuale (dalle 7:00 alle 17:00).</para>
+
+<para
+>Funzionalità principali di &konsolekalendar;: <itemizedlist>
+<listitem
+><para
+>Visualizza le voci di calendario da una data/ora di inizio ad una data/ora di fine</para
+></listitem>
+<listitem
+><para
+>Inserisci (aggiungi) voci al calendario</para
+></listitem>
+<listitem
+><para
+>Rimuovi (elimina) voci dal calendario</para
+></listitem>
+<listitem
+><para
+>Modifica (cambia) voci del calendario</para
+></listitem>
+<listitem
+><para
+>Crea un nuovo calendario</para
+></listitem>
+<listitem
+><para
+>Esportazione di voci del calendario verso altri formati di file</para
+></listitem>
+<listitem
+><para
+>Importare un calendario esistente</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>&konsolekalendar; <emphasis
+>non</emphasis
+> è un'altra interfaccia utente per un calendario di &kde; (ad es. &korganizer;) &konsolekalendar; è pensato per gli usi in cui un'interfaccia grafica non è pratica o non è possibile.</para>
+
+<para
+>&konsolekalendar; <emphasis
+>non fornisce</emphasis
+> un linguaggio completo per le ricerche nel calendario dell'utente, e non è nemmeno nell'intenzione dell'autore la scrittura di tale funzionalità. Sono fornite delle primitive opzioni da riga di comando per l'accesso agli eventi del calendario in un intervallo di date o di ore consecutivi. </para>
+
+</chapter>
+
+<chapter id="features">
+<title
+>Funzionalità</title>
+<para
+>In questo capitolo imparerai le funzioni principali di &konsolekalendar; e come controllarle con i parametri da riga di comando (ricorda che &konsolekalendar; non ha un'interfaccia grafica; è un programma usabile solo da riga di comando).</para>
+
+<para
+>Si imparerà a inserire, eliminare e cambiare gli eventi del calendario, e a esportarli in altri formati di file. La creazione e l'importazione dei calendari sarà inoltre descritta in questo capitolo. </para>
+
+<sect1 id="viewing">
+<title
+>Visualizzazione degli eventi</title>
+
+<para
+>Nella modalità predefinita, od se usi l'opzione <parameter
+>--view</parameter
+>, &konsolekalendar; elencherà tutti gli eventi all'interno di un intervallo di date o di ore specificate.</para>
+
+<para>
+<informalexample
+><para
+>Per vedere tutti gli eventi di oggi (dalle 7:00 alle 17:00), basta eseguire:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Nel prossimo esempio, vedremo tutti gli eventi per la settimana del 18-22 agosto:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--view</option
+> <option
+>--date <replaceable
+>2016-08-18</replaceable
+> </option
+> <option
+>--end-date <replaceable
+>2016-08-22</replaceable
+></option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Mostra il prossimo evento (o i prossimi eventi) dall'ora attuale in avanti:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Per vedere tutti gli eventi dei prossimi cinque giorni usa:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--show-next</option
+> <replaceable
+>5</replaceable>
+
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="inserting">
+<title
+>Inserimento degli eventi</title>
+
+<para
+>&konsolekalendar; può inserire eventi in un calendario o in una risorsa calendario con l'argomento della riga di comando <parameter
+>--add</parameter
+>. Gli eventi inseriti correttamente saranno mostrati immediatamente dalle applicazioni di calendario di &kde; (come &korganizer;).</para>
+
+<para
+>Si ottiene un elenco di tutti i calendari e il rispettivo ID utilizzando: </para>
+
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--list-calendars</option
+></userinput
+></screen>
+
+<para>
+<informalexample
+><para
+>Nel prossimo esempio, un evento che inizia il 2016-12-01 (1 dicembre 2016) alle 10:00 e che termina alle 12:00, con il riassunto "Visita medica" sarà inserito nella risorsa di calendario dell'utente con ID 8:</para>
+
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-03</replaceable
+></option
+> <option
+>--time <replaceable
+>10:00</replaceable
+></option
+> \
+<option
+>--end-time <replaceable
+>12:00</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Visita medica"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>In questo esempio, viene aggiunto un evento di compleanno nella risorsa di calendario dell'utente con ID 8:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-06</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Mio compleanno"</replaceable
+></option
+> \
+<option
+>--description <replaceable
+>"Festa"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Qui una vacanza di una settimana è inserita in un calendario con ID 8:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar <replaceable
+>12</replaceable
+></option
+> <option
+>--date <replaceable
+>2017-08-01</replaceable
+></option
+> \
+<option
+>--end-date <replaceable
+>2017-08-07</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Vacanza"</replaceable
+></option
+> <option
+>--description <replaceable
+>"Non mi troverà mai nessuno!"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="deleting">
+<title
+>Eliminazione di voci</title>
+
+<para
+>&konsolekalendar; supporta la rimozione delle voci da un file di calendario o da una risorsa con l'argomento da riga di comando <parameter
+>--delete</parameter
+>. Le voci del calendario da eliminare sono specificati esattamente con il loro <acronym
+>UID</acronym
+> (stringa di identificazione univoca) utilizzando l'opzione <parameter
+>--uid</parameter
+>. Gli <acronym
+>UID</acronym
+> si possono ricavare a prima vista esaminando l'evento, attraverso l'uso delle opzioni <parameter
+>--view</parameter
+>, <parameter
+>--next</parameter
+> o <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>Gli eventi eliminati correttamente saranno rimossi immediatamente anche dalle applicazioni di calendario di &kde; (come ad esempio &korganizer;).</para>
+
+<warning
+><para
+>Una volta che elimini qualcosa dal calendario, <emphasis
+>non c'è modo</emphasis
+> di recuperarla! In altre parole, una volta eliminata una voce non puoi annullare l'eliminazione. La voce se n'è andata per sempre.</para
+></warning>
+
+<para>
+<informalexample
+><para
+>Ecco come cancellare una voce dal calendario con l'<acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--delete</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="changing">
+<title
+>Modifica delle voci</title>
+
+<para
+>&konsolekalendar; supporta la modifica di voci esistenti in un file o in una risorsa utilizzando l'argomento da riga di comando <parameter
+>--change</parameter
+>. Le voci del calendario da modificare sono specificate esattamente con la stringa di identificazione univoca (<acronym
+>UID</acronym
+>) utilizzando l'opzione <parameter
+>--uid</parameter
+>. Gli <acronym
+>UID</acronym
+> si possono ricavare a prima vista esaminando l'evento, con le opzioni <parameter
+>--view</parameter
+>, <parameter
+>--next</parameter
+> o <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>Le modifiche si comportano come l'inserimento: puoi cambiare la data e l'ora di inizio di un evento, il riassunto, il luogo e la descrizione. Gli eventi modificati con successo saranno immediatamente mostrati modificati dalle applicazioni di calendario di &kde; (&korganizer;).</para>
+
+<para
+><emphasis
+>Esempio:</emphasis
+> ora cambiamo il riassunto e la descrizione di una voce del calendario con l'<acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<informalexample>
+<para
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--change</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Devo farmi vedere la testa"</replaceable
+></option
+> <option
+>--description <replaceable
+>"non devo più andare dal dottore!"</replaceable
+></option
+> </userinput
+> </para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="creating">
+<title
+>Creazione di un nuovo file di calendario</title>
+
+<para
+>&konsolekalendar; può essere utilizzato per creare nuovi calendari da file esistenti. È possibile creare il calendario utilizzando l'opzione <option
+>--create</option
+> con il nome del file come argomento. Il file deve essere un file valido <acronym
+>iCal</acronym
+> o <acronym
+>vCal</acronym
+>.</para>
+<para
+>Nota: non è possibile utilizzare l'opzione <option
+>--dry-run</option
+> per provare se la risorsa può essere creata.</para>
+
+<para
+>Nota: &konsolekalendar; richiede il file per funzionare, per cui non di deve eliminare mai il file a mano. </para>
+
+<para
+>Nota tecnica a margine: &konsolekalendar; crea con questo comando una nuova risorsa <acronym
+>Akonadi</acronym
+> che punta a questo file. Non impedisce di creare più risorse che puntano allo stesso file. </para>
+
+<para>
+<informalexample
+><para
+>Create un nuovo calendario da un file esistente chiamato <filename
+><replaceable
+>vacanza.ics</replaceable
+></filename
+>:</para>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--create</option
+> <option
+><replaceable
+>vacation.ics</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para
+>La risorsa sarà chiamata <quote
+>vacanza</quote
+> utilizzando <option
+>--list-calendars</option
+></para>
+
+<para
+>Non è possibile eliminare una risorsa <acronym
+>Akonadi</acronym
+> con &konsolekalendar;, è necessario utilizzare &korganizer; o <application
+>akonadiconsole</application
+>. </para>
+
+</sect1>
+
+<sect1 id="exporting">
+<title
+>Esportazione verso altri formati</title>
+
+<para
+>&konsolekalendar; può esportare un calendario in altri formati conosciuti. L'esportazione è una forma particolare di visualizzazione. Normalmente, gli eventi sono mostrati nel formato <quote
+>testuale di &konsolekalendar;</quote
+>. Per cambiare la visualizzazione, utilizzare l'argomento della riga di comando <parameter
+>--export-type</parameter
+>.</para>
+
+<para
+>Per vedere l'elenco di tutti i formati di esportazione disponibili, usa l'opzione <parameter
+>--export-list</parameter
+> così:</para>
+
+<para>
+<informalexample>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--export-list</option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="formats">
+<title
+>Formati di esportazione</title>
+
+<para
+>Alcuni, ma non necessariamente tutti, i formati disponibili sono descritti in questa sezione.</para>
+
+<sect2 id="native-format">
+<title
+>Formato testuale di &konsolekalendar;</title>
+
+<para
+>Il formato testuale di &konsolekalendar; è il formato nativo di &konsolekalendar; ed è pensato per essere di facile lettura e interpretazione da parte di eventuali script successivi.</para>
+
+<para
+>Il formato testuale di &konsolekalendar; è: <informalexample
+> <screen
+>Date:\t&lt;Data dell'occorrenza&gt;(dddd yyyy-MM-dd)
+[\t&lt;Ora d'inizio dell'occorrenza&gt;(hh:mm) - &lt;Ora di fine dell'occorrenza&gt;(hh:mm)]
+Summary:
+\t&lt;Riassunto | "(no summary available)"&gt;
+Location:
+\t&lt;Luogo dell'occorrenza | "(no location available)"&gt;
+Description:
+\t&lt;Descrizione dell'occorrenza | "(no description available)"&gt;
+UID:
+\t&lt;UID dell'occorrenza&gt;
+--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+<para
+>Risultato di <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Text</option
+></userinput
+>: <informalexample
+> <screen
+>Data:   Martedì 29/11/2016
+        08:00 - 09:00
+Riepilogo:
+        Incontro del gruppo di lavoro
+Luogo:
+        Sala conferenze
+Descrizione:
+        Incontro con tutto il gruppo per discutere il progetto.
+UID:
+        &konsolekalendar;--1924621834.134
+--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="short-format">
+<title
+>Formato testuale breve di &konsolekalendar;</title>
+
+<para
+>Il formato testuale breve fornisce una versione più compatta e meno prolissa del formato nativo di &konsolekalendar;.</para>
+
+<para
+>Il formato testuale breve di &konsolekalendar; è: <informalexample
+> <screen
+>[--------------------------------------------------]
+{&lt;Data occorrenza&gt;(dddd yyyy-MM-dd)]
+[&lt;Ora di inizio occorrenza&gt;(hh:mm) - &lt;Ora di fine occorrenza&gt;(hh:mm) | "\t"]
+\t&lt;Riassunto occorrenza | \t&gt;[, &lt;Luogo occorrenza&gt;]
+\t\t&lt;Descrizione occorrenza | "\t"&gt;
+</screen>
+</informalexample>
+</para>
+
+<para
+>Risultato di <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Short</option
+></userinput
+>: <informalexample
+> <screen
+>--------------------------------------------------
+Martedì 2003-11-01
+08:00 - 09:00   Incontro del gruppo di lavoro, Sala conferenze
+                Incontro con tutto il gruppo per discutere il progetto.
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="csv-format">
+<title
+>Formato <acronym
+>CSV</acronym
+> (Valori separati da virgole)</title>
+
+<para
+>Il formato CSV visualizza i valori degli eventi nello stesso ordine del formato testuale di &konsolekalendar;. L'unica differenza è che tutte le informazioni sono sulla stessa riga, con tutti i campi separati da virgole. I file esportati risultanti possono essere importati direttamente in programmi di foglio di calcolo come &calligrasheets;, <application
+>LibreOffice.org Calc</application
+> e <application
+>&Microsoft; Excel</application
+>. Inoltre il formato <acronym
+>CSV</acronym
+> è facile da interpretare da script aggiuntivi.</para>
+
+<para
+>Il formato <acronym
+>CSV</acronym
+> (Valori separati da virgole) è: <informalexample
+> <screen
+>"Giorno della settimana, Giorno del mese, Anno","HH:MM","Giorno della settimana, Giorno del mese, Anno","HH:MM","Riepilogo","Luogo","Descrizione","UID"
+</screen>
+</informalexample>
+</para>
+
+<para
+>Risultato di <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>CSV</option
+></userinput
+>: <informalexample
+> <screen
+>"Martedì, 29 novembre 2016","08:00","Martedì, 29 novembre 2016","09:00",Incontro del gruppo di lavoro","Sala conferenze","Incontro nella sala conferenze grande \
+con tutto il gruppo di lavoro".,"&konsolekalendar;-1924621834.134"
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="html-format">
+<title
+>Formato &HTML;</title>
+
+<para
+>Il formato di esportazione &HTML; produrrà un file &HTML; valido che può essere pubblicato sul <acronym
+>WWW</acronym
+>. Questo formato di esportazione non è adatto per l'interpretazione da parte di altri script successivi, ma è molto comodo per la pubblicazione di calendari per una facile consultazione pubblica.</para>
+<!--FIXME
+exports only the template without any incidence data
+<para
+><emphasis
+>TODO:</emphasis
+> Insert screenshot here</para>
+-->
+</sect2>
+
+<sect2 id="html-month-format">
+<title
+>Formato <acronym
+>HTMLmonth</acronym
+></title>
+
+<para
+>Questo formato produce un file &HTML; con tutti gli appuntamenti del mese specificati nell'intervallo di date. Questo formato di esportazione non è adatto per l'interpretazione da parte di altri script successivi, ma è molto comodo per la pubblicazione di calendari per una facile consultazione pubblica.</para>
+<!--FIXME
+exports only the template without any incidence data
+<para
+><emphasis
+>TODO:</emphasis
+> Insert screenshot here</para>
+-->
+</sect2>
+
+</sect1>
+
+<sect1 id="importing">
+<title
+>Importare calendari</title>
+
+<para
+>&konsolekalendar; può importare un file di calendario iCal o vCal in un calendario. Tutti gli eventi del calendario da cui viene importato saranno inseriti, esclusi gli eventi identici, che sono già parte del calendario.</para>
+
+<para>
+<informalexample
+><para
+>Per importare un file di calendario <replaceable
+>vacanza.ics</replaceable
+> nel calendario con ID <replaceable
+>8</replaceable
+> eseguire:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--import <replaceable
+>vacation.ics</replaceable
+></option
+> <option
+>--calendar <replaceable
+>8</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="features-commandline-options">
+<title
+>Argomenti di linea di comando</title>
+
+<para
+>&konsolekalendar; gestisce le seguenti opzioni:</para>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row>
+  <entry
+>Opzione</entry>
+  <entry
+>Descrizione</entry>
+</row>
+</thead>
+<tbody>
+<row>
+  <entry
+><emphasis
+>Opzioni generiche:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--help, --help-all</option
+></entry>
+  <entry
+>Mostra un messaggio di aiuto sulle opzioni del programma.</entry>
+</row>
+<row>
+  <entry
+><option
+>--author</option
+></entry>
+  <entry
+>Mostra le informazioni sugli autori del programma.</entry>
+</row>
+<row>
+  <entry
+><option
+>-v, --version</option
+></entry>
+  <entry
+>Mostra delle informazioni sulla versione del programma.</entry>
+</row>
+<row>
+  <entry
+><option
+>--license</option
+></entry>
+  <entry
+>Mostra le informazioni sulla licenza d'uso del programma.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Opzioni:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--verbose</option
+></entry>
+  <entry
+>Stampa messaggi di aiuto sull'esecuzione.</entry>
+</row>
+<row>
+  <entry
+><option
+>--dry-run</option
+></entry>
+  <entry
+>Stampa che cosa sarebbe stato fatto, ma senza eseguire. Non cambia nessun file; non inserisce né rimuove o modifica file esistenti, e non crea nuovi file.</entry>
+</row>
+<row>
+  <entry
+><option
+>--allow-gui</option
+></entry>
+  <entry
+>Permette l'uso di risorse che possono richiedere un'interfaccia utente interattiva. Nelle normali operazioni, sono usate solo le risorse che non richiedono mai un'interfaccia utente (come i calendari basati su file).</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Tipi di occorrenza (queste opzioni possono essere combinate):</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--event</option
+></entry>
+  <entry
+>Opera solo su Eventi. (Predefinito)</entry>
+</row>
+<row>
+  <entry
+><option
+>--todo</option
+></entry>
+  <entry
+>Opera solo su Cose da fare. (Non implementata)</entry>
+</row>
+<row>
+  <entry
+><option
+>--journal</option
+></entry>
+  <entry
+>Opera solo su Diari. (Non implementata)</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Modalità principali di operazione:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--view</option
+></entry>
+  <entry
+>Stampa gli eventi del calendario nel formato di esportazione specificato.</entry>
+</row>
+<row>
+  <entry
+><option
+>--add</option
+></entry>
+  <entry
+>Aggiunge un evento al calendario.</entry>
+</row>
+<row>
+  <entry
+><option
+>--change</option
+></entry>
+  <entry
+>Modifica un evento esistente nel calendario.</entry>
+</row>
+<row>
+  <entry
+><option
+>--delete</option
+></entry>
+  <entry
+>Rimuove un evento esistente del calendario.</entry>
+</row>
+<row>
+  <entry
+><option
+>--date</option
+> <replaceable
+>&nbsp;nomefile</replaceable
+> </entry>
+  <entry
+>Crea un nuovo calendario da un file esistente.</entry>
+</row>
+<row>
+  <entry
+><option
+>--import</option
+> <replaceable
+>&nbsp;file-da-importare</replaceable
+></entry>
+  <entry
+>Importa questo calendario nel calendario principale.</entry>
+</row>
+<row>
+  <entry
+><option
+>--list-calendars</option
+></entry>
+  <entry
+>Elenca i calendari disponibili.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Modificatori dell'operazione:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--all</option
+></entry>
+  <entry
+>Mostra tutte le voci del calendario.</entry>
+</row>
+<row>
+  <entry
+><option
+>--next</option
+></entry>
+  <entry
+>Mostra l'attività successiva nel calendario.</entry>
+</row>
+<row>
+  <entry
+><option
+>--show-next</option
+> <replaceable
+>&nbsp;giorni</replaceable
+></entry>
+  <entry
+>Iniziando dalla data specificata mostra i prossimi n giorni di attività.</entry>
+</row>
+<row>
+  <entry
+><option
+>--uid</option
+> <replaceable
+>&nbsp;UID</replaceable
+></entry>
+  <entry
+>Mostra, elimina o cambia l'evento con questa stringa di identificazione univoca.</entry>
+</row>
+<row>
+  <entry
+><option
+>--date</option
+> <replaceable
+>&nbsp;data</replaceable
+></entry>
+  <entry
+>Inizia da questo giorno [[AAAA-MM-GG]]. Il giorno predefinito è oggi</entry>
+</row>
+<row>
+  <entry
+><option
+>--time</option
+> <replaceable
+>&nbsp;ora</replaceable
+></entry>
+  <entry
+>Inizia da quest'ora [[HH:MM]]. L'ora predefinita per l'inizio è 07:00. <para
+>Per aggiungere o eliminare un evento fluttuante, usa una delle opzioni <option
+>--time float</option
+> o <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--end-date</option
+> <replaceable
+>&nbsp;data-di-fine</replaceable
+></entry>
+  <entry
+>Termina in questo giorno [AAAA-MM-GG]. Il valore predefinito è impostato con <option
+>--date</option
+>.</entry>
+</row>
+<row>
+  <entry
+><option
+>--end-time</option
+> <replaceable
+>&nbsp;ora-di-fine</replaceable
+></entry>
+  <entry
+>Termina a quest'ora [HH:MM]. L'ora di fine predefinita per la visione è 17:00. <para
+>Per aggiungere o eliminare un evento fluttuante, usa una delle opzioni <option
+>--time float</option
+> o <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-start</option
+> <replaceable
+>&nbsp;ora-epoca</replaceable
+></entry>
+  <entry
+>Inizia da quest'ora [secondi dall'inizio dell'epoca UNIX].</entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-end</option
+> <replaceable
+>&nbsp;ora-epoca</replaceable
+></entry>
+  <entry
+>Termina a quest'ora [secondi dall'inizio dell'epoca UNIX].</entry>
+</row>
+<row>
+  <entry
+><option
+>--summary</option
+> <replaceable
+>&nbsp;riassunto</replaceable
+></entry>
+  <entry
+>Aggiunge un riassunto all'evento (funziona con --add e --change).</entry>
+</row>
+<row>
+  <entry
+><option
+>--description</option
+> <replaceable
+>&nbsp;descrizione</replaceable
+></entry>
+  <entry
+>Aggiunge una descrizione all'evento (funziona con --add e --change).</entry>
+</row>
+<row>
+  <entry
+><option
+>--location</option
+> <replaceable
+>&nbsp;posizione</replaceable
+></entry>
+  <entry
+>Aggiunge un luogo all'evento (funziona con --add e --change).</entry>
+</row>
+<row>
+  <entry
+><option
+>--calendar</option
+> <replaceable
+>&nbsp;id</replaceable
+></entry>
+  <entry
+>Specifica il calendario da utilizzare. <para
+>Se non specificato verrà usata la risorsa di &korganizer; predefinita.</para
+></entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Opzioni di esportazione:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--export-type</option
+> <replaceable
+>&nbsp;tipo-di-esportazione</replaceable
+></entry>
+  <entry
+>Tipo di file da esportare. In mancanza dell'opzione, viene usato il tipo Testo</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-file</option
+> <replaceable
+>&nbsp;file-da-esportare</replaceable
+></entry>
+  <entry
+>File da usare per l'esportazione. Se non specificato, l'output è scritto sull'output standard.</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-list</option
+></entry>
+  <entry
+>Stampa l'elenco dei tipi di esportazione supportati ed esce.</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Domande e risposte</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Quali file di configurazione usa &konsolekalendar;?</para>
+</question>
+<answer>
+<para
+>Nessuno.</para>
+</answer>
+</qandaentry>
+
+
+<qandaentry>
+<question>
+<para
+>Qual è il nome dell'applicazione di &konsolekalendar;?</para>
+</question>
+<answer>
+<para
+>Il nome dell'applicazione di &konsolekalendar; è <application
+>konsolekalendar</application
+>.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Qual è il formato di specifica della data?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; rifiuta le date specificate sulla riga di comando a meno che non siano specificate secondo gli standard ISO 8601, cioè: AAAA-MM-GG, dove AAAA rappresenta l'anno specificato con quattro cifre (come 2003) MM rappresenta il mese specificato con due cifre (01, 02, ..., 12) ed GG rappresenta il giorno specificato con due cifre (01, 02, ..., 31).</para>
+<para
+>&konsolekalendar; esporta sempre le date secondo il formato ISO 8601.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Qual è il formato di specifica dell'ora?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; rifiuta l'ora specificata sulla riga di comando a meno che non sia specificata secondo gli standard ISO 8601, cioè: HH:MM:SS, dove HH rappresenta l'ora specificata con due cifre (01, 02, ..., 24) MM rappresenta i minuti specificati con due cifre (00, 01, ..., 59) ed SS rappresenta i secondi (00, 01, ..., 59).</para>
+<para
+>&konsolekalendar; esporta sempre le ore secondo il formato ISO 8601.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&konsolekalendar; può inserire un nuovo evento identico ad uno già presente nel calendario?</para>
+</question>
+<answer>
+<para
+>No. Vedi la prossima domanda.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Come fa &konsolekalendar; a determinare che un evento è identico ad uno già presente nel calendario?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; confronta la data ed ora di inizio specificata, l'ora e la data di fine, ed il riassunto con tutti gli eventi del calendario. Una corrispondenza fra gli eventi si determina quando tutti e tre questi valori corrispondono con un evento esistente. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>È possibile cambiare un evento non-fluttuante in un evento fluttuante?</para>
+</question>
+<answer>
+<para
+>Sì Usa l'opzione <option
+>--time float</option
+> con <option
+>--change</option
+>. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Come mai gli <acronym
+>UID</acronym
+> degli eventi vengono stampati in quasi tutti i formati di esportazione?</para>
+</question>
+<answer>
+<para
+>Perché è necessario specificare l'<acronym
+>UID</acronym
+> per eliminare o cambiare un evento. Se non vuoi vedere l'<acronym
+>UID</acronym
+> degli eventi usa il tipo di esportazione <emphasis
+>breve</emphasis
+> (<option
+>--export-type short</option
+>). </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Posso far aggiungere domande alla <acronym
+>FAQ</acronym
+>?</para>
+</question>
+<answer>
+<para
+>Invia le tue domande (in inglese) a <email
+>illuusio@lycos.com</email
+>.</para>
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+
+<chapter id="credits">
+
+<title
+>Riconoscimenti e licenza</title>
+
+<para
+>Il programma &konsolekalendar; è copyright 2002-2007:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Questa documentazione è copyright 2003:</para>
+<itemizedlist>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Traduzione: Vincenzo Reale <email
+>smart2128vr@gmail.com</email
+></para
+><para
+>Traduzione: Luciano Montanaro <email
+>mikelima@cirulla.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

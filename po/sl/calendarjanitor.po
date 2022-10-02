@@ -1,0 +1,395 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-24 00:44+0000\n"
+"PO-Revision-Date: 2020-03-14 13:57+0100\n"
+"Last-Translator: \n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 2.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Vito Smolej,Andrej Mernik,Matjaž Jeran"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "smolejv@gmx.net,andrejm@ubuntu.si,matjaz.jeran@amis.net"
+
+#: backuper.cpp:36
+#, kde-format
+msgid "Backup was successful. %1 incidence was saved."
+msgid_plural "Backup was successful. %1 incidences were saved."
+msgstr[0] "Varnostno kopiranje je uspelo. %1 pojavitev je bila shranjena."
+msgstr[1] "Varnostno kopiranje je uspelo. %1 pojavitvi sta bili shranjeni."
+msgstr[2] "Varnostno kopiranje je uspelo. %1 pojavitve so bile shranjene."
+msgstr[3] "Varnostno kopiranje je uspelo. %1 pojavitev je bilo shranjenih."
+
+#: backuper.cpp:56
+#, kde-format
+msgid "File is empty."
+msgstr "Datoteka je prazna."
+
+#: backuper.cpp:61
+#, kde-format
+msgid "A backup is already in progress."
+msgstr "Varnostno kopiranje že poteka."
+
+#: backuper.cpp:64
+#, kde-format
+msgid "Backing up your calendar data..."
+msgstr "Varnostno kopiranje vaših podatkov v koledarju ..."
+
+#: backuper.cpp:97
+#, kde-format
+msgid "No data to backup."
+msgstr "Ni podatkov za varnostno kopiranje."
+
+#: backuper.cpp:108 calendarjanitor.cpp:173
+#, kde-format
+msgid "Processing collection %1 (id=%2)..."
+msgstr "Obdelovanje zbirke %1 (id=%2) ..."
+
+#: backuper.cpp:138
+#, kde-format
+msgid "An error occurred"
+msgstr "Prišlo je do napake"
+
+#: calendarjanitor.cpp:37
+#, kde-format
+msgid ""
+"Bailing out. Fix your akonadi setup first. These kind of errors should not "
+"happen."
+msgstr ""
+"Opuščanje. Najprej popravite namestitev akonadi. Do te vrste napak ne bi "
+"smelo priti."
+
+#: calendarjanitor.cpp:85
+#, kde-format
+msgid "Error while fetching collections"
+msgstr "Napaka med pridobivanjem zbirk"
+
+#: calendarjanitor.cpp:99
+#, kde-format
+msgid "There are no collections to process."
+msgstr "Ni zbirk za obdelavo."
+
+#: calendarjanitor.cpp:126
+#, kde-format
+msgid "Error while modifying incidence: %1"
+msgstr "Napaka med spreminjanjem pojavitve: %1"
+
+#: calendarjanitor.cpp:131
+#, kde-format
+msgid "Fixed item %1"
+msgstr "Predmet %1 popravljen"
+
+#: calendarjanitor.cpp:147
+#, kde-format
+msgid "Error while deleting incidence: %1"
+msgstr "Napaka med brisanjem pojavitve: %1"
+
+#: calendarjanitor.cpp:151
+#, kde-format
+msgid "Deleted item %1"
+msgstr "Predmet %1 izbrisan"
+
+#: calendarjanitor.cpp:177
+#, kde-format
+msgid "Collection is read only, disabling fix mode."
+msgstr "Zbirka je samo za branje, onemogočanje načina za popravke."
+
+#: calendarjanitor.cpp:179
+#, kde-format
+msgid "Collection is read only, skipping it."
+msgstr "Zbirka je samo za branje, zato bo preskočena."
+
+#: calendarjanitor.cpp:187
+#, kde-format
+msgid "Collection is empty, ignoring it."
+msgstr "Zbirka je prazna, zato bo prezrta."
+
+#: calendarjanitor.cpp:255
+#, kde-format
+msgid "Checking for incidences with empty summary and description..."
+msgstr "Preverjanje za pojavitvami s praznim povzetkom in opisom ..."
+
+#: calendarjanitor.cpp:270
+#, kde-format
+msgid "Checking for incidences with empty UID..."
+msgstr "Preverjanje za pojavitvami s praznim UID ..."
+
+#: calendarjanitor.cpp:289
+#, kde-format
+msgid "Checking for events with invalid DTSTART..."
+msgstr "Preverjanje za dogodki z neveljavnim DTSTART ..."
+
+#: calendarjanitor.cpp:326
+#, kde-format
+msgid "Checking for recurring to-dos with invalid DTSTART..."
+msgstr "Preverjanje za ponavljajočimi se opravili z neveljavnim DTSTART ..."
+
+#: calendarjanitor.cpp:362
+#, kde-format
+msgid "Checking for journals with invalid DTSTART..."
+msgstr "Preverjanje za dnevniki z neveljavnim DTSTART ..."
+
+#: calendarjanitor.cpp:383
+#, kde-format
+msgid "Checking for orphans..."
+msgstr "Preverjanje za sirotami ..."
+
+#: calendarjanitor.cpp:389
+#, kde-format
+msgid "The following incidences are children of nonexistent parents"
+msgstr "Naslednje pojavitve so podrejene neobstoječim nadrejenim"
+
+#: calendarjanitor.cpp:398
+#, kde-format
+msgid "In fix mode these children will be unparented."
+msgstr "V načinu za popravke bodo te podrejene ostale brez nadrejenih."
+
+#: calendarjanitor.cpp:398
+#, kde-format
+msgid "Children were successfully unparented."
+msgstr "Podrejene so uspešno izgubile nadrejene."
+
+#: calendarjanitor.cpp:403
+#, kde-format
+msgid "Checking for duplicate UIDs..."
+msgstr "Preverjanje za podvojenimi UID-ji ..."
+
+#: calendarjanitor.cpp:460
+#, kde-format
+msgid "Gathering statistics..."
+msgstr "Zbiranje statističnih podatkov ..."
+
+#: calendarjanitor.cpp:498
+#, kde-format
+msgid "Events"
+msgstr "Dogodki"
+
+#: calendarjanitor.cpp:499
+#, kde-format
+msgid "Todos"
+msgstr "Opravila"
+
+#: calendarjanitor.cpp:500
+#, kde-format
+msgid "Journals"
+msgstr "Dnevniki"
+
+#: calendarjanitor.cpp:501
+#, kde-format
+msgid "Passed events and to-dos (>365 days)"
+msgstr "Pretekli dogodki in opravila (> 365 dni)"
+
+#: calendarjanitor.cpp:502
+#, kde-format
+msgid "Old incidences with alarms"
+msgstr "Stare pojavitve z alarmi"
+
+#: calendarjanitor.cpp:503
+#, kde-format
+msgid "Inline attachments"
+msgstr "Znotrajvrstične priloge"
+
+#: calendarjanitor.cpp:504
+#, kde-format
+msgid "Items with empty remote id [!!]"
+msgstr "Predmeti s praznim oddaljenim id [!!]"
+
+#: calendarjanitor.cpp:507
+#, kde-format
+msgid "Total size of inline attachments (bytes)"
+msgstr "Skupna velikost znotrajvrstičnih prilog (bajti)"
+
+#: calendarjanitor.cpp:509
+#, kde-format
+msgid "Total size of inline attachments (KB)"
+msgstr "Skupna velikost znotrajvrstičnih prilog (KB)"
+
+#: calendarjanitor.cpp:521
+#, kde-format
+msgid ""
+"Checking for RECURRING-ID incidences with nonexistent master incidence..."
+msgstr ""
+"Preverjanje za pojavitvami RECURRING-ID z neobstoječo matično pojavitvijo ..."
+
+#: calendarjanitor.cpp:562
+#, kde-format
+msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
+msgstr ""
+"V načinu za popravke bo lastnost RECURRING-ID odstranjena in UID se bo "
+"spremenil."
+
+#: calendarjanitor.cpp:562
+#, kde-format
+msgid "Recurrence cleared."
+msgstr "Ponovitev počiščena."
+
+#: calendarjanitor.cpp:567
+#, kde-format
+msgid "Deleting alarms older than 365 days..."
+msgstr "Brisanje alarmov, starejših od 365 dni ..."
+
+#: calendarjanitor.cpp:585 calendarjanitor.cpp:599
+#, kde-format
+msgid "invalid"
+msgstr "neveljavno"
+
+#: calendarjanitor.cpp:602
+#, kde-format
+msgid "recurrent"
+msgstr "ponavljajoče"
+
+#: calendarjanitor.cpp:620
+#, kde-format
+msgid "Found buggy incidence:"
+msgstr "Najdena hroščata pojavitev:"
+
+#: calendarjanitor.cpp:621
+#, kde-format
+msgid "id=%1; summary=\"%2\""
+msgstr "id=%1; povzetek=\"%2\""
+
+#: main.cpp:40
+#, kde-format
+msgid "Error while parsing %1"
+msgstr "Napaka med razčlenjevanjem %1"
+
+#: main.cpp:41
+#, kde-format
+msgid "Example usage: %1"
+msgstr "Primer uporabe: %1"
+
+#: main.cpp:61
+#, kde-format
+msgid "CalendarJanitor"
+msgstr "CalendarJanitor"
+
+#: main.cpp:63
+#, kde-format
+msgid "Sérgio Martins"
+msgstr "Sérgio Martins"
+
+#: main.cpp:63
+#, kde-format
+msgid "Maintainer"
+msgstr "Vzdrževalec"
+
+#: main.cpp:64
+#, kde-format
+msgid "A command line interface to report and fix errors in your calendar data"
+msgstr ""
+"Vmesnik ukazne vrstice za poročanje o napakah in njihovo popravljanje v "
+"vaših koledarjih"
+
+#: main.cpp:69
+#, kde-format
+msgid "Comma-separated list of collection ids to scan"
+msgstr "Z vejico ločen seznam ID-jev zbirk, ki bodo preiskane"
+
+#: main.cpp:70
+#, kde-format
+msgid "Fix broken incidences"
+msgstr "Popravi pokvarjene pojavitve"
+
+#: main.cpp:71
+#, kde-format
+msgid "Backup your calendar"
+msgstr "Varnostno kopiraj moj koledar"
+
+#: main.cpp:72
+#, kde-format
+msgid "Delete alarms older than 365 days"
+msgstr "Brisanje alarmov starejših od 365 dni"
+
+#: main.cpp:104
+#, kde-format
+msgid "--fix is incompatible with --backup"
+msgstr "--fix ni združljiv z --backup"
+
+#: main.cpp:109
+#, kde-format
+msgid "--strip-old-alarms is incompatible with --backup"
+msgstr "--strip-old-alarms ni združljiv z --backup"
+
+#: main.cpp:114
+#, kde-format
+msgid "--strip-old-alarms is incompatible with --fix"
+msgstr "--strip-old-alarms ni združljiv s --fix"
+
+#: main.cpp:125
+#, kde-format
+msgid "Running in fix mode."
+msgstr "Teče v načinu za popravke."
+
+#: main.cpp:129
+#, kde-format
+msgid "Please specify a output file."
+msgstr "Navedite izhodno datoteko."
+
+#: main.cpp:134
+#, kde-format
+msgid "Running in scan only mode."
+msgstr "Teče v načinu samo za preiskovanje."
+
+#~ msgid "(c) 2013, Sérgio Martins"
+#~ msgstr "(C) 2013, Sérgio Martins"
+
+#~ msgid ""
+#~ "\n"
+#~ "Examples:\n"
+#~ "\n"
+#~ "Scan all collections:\n"
+#~ "$ calendarjanitor\n"
+#~ "\n"
+#~ "Scan and fix all collections:\n"
+#~ "$ calendarjanitor --fix\n"
+#~ "\n"
+#~ "Scan and fix some collections:\n"
+#~ "$ calendarjanitor --collections 10,20 --fix\n"
+#~ "\n"
+#~ "Backup all collections:\n"
+#~ "$ calendarjanitor --backup backup.ics\n"
+#~ "\n"
+#~ "Backup some collections:\n"
+#~ "$ calendarjanitor --backup backup.ics --collections 10,20\n"
+#~ "\n"
+#~ "Strip alarms from incidences older than 365 days:\n"
+#~ "$ calendarjanitor --strip-old-alarms --collections 10,20"
+#~ msgstr ""
+#~ "\n"
+#~ "Primeri: \n"
+#~ "\n"
+#~ "Preišči vse zbirke: \n"
+#~ " $ calendarjanitor \n"
+#~ "\n"
+#~ "Preišči in popravi vse zbirke: \n"
+#~ " $ calendarjanitor --fix \n"
+#~ "\n"
+#~ "Preišči in popravi nekatere zbirke: \n"
+#~ " $ calendarjanitor --collections 10,20 - -fix \n"
+#~ "\n"
+#~ "Varnostna kopija vseh zbirk: \n"
+#~ " $ calendarjanitor --backup backup.ics \n"
+#~ "\n"
+#~ "Varnostna kopija nekaterih zbirk: \n"
+#~ " $ calendarjanitor --backup backup.ics --collections 10,20 \n"
+#~ "\n"
+#~ "Odstrani alarme za pojavitve starejše od 365 dni: \n"
+#~ " $ calendarjanitor --strip-old-alarmi --collections 10,20"

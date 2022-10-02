@@ -1,0 +1,401 @@
+# Translation of calendarjanitor.po to Ukrainian
+# Copyright (C) 2013-2017 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2013, 2015, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: calendarjanitor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-24 00:44+0000\n"
+"PO-Revision-Date: 2017-09-14 09:03+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Юрій Чорноіван"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "yurchor@ukr.net"
+
+#: backuper.cpp:36
+#, kde-format
+msgid "Backup was successful. %1 incidence was saved."
+msgid_plural "Backup was successful. %1 incidences were saved."
+msgstr[0] "Створення резервної копії завершено. Було збережено %1 запис."
+msgstr[1] "Створення резервної копії завершено. Було збережено %1 записи."
+msgstr[2] "Створення резервної копії завершено. Було збережено %1 записів."
+msgstr[3] "Створення резервної копії завершено. Було збережено один запис."
+
+#: backuper.cpp:56
+#, kde-format
+msgid "File is empty."
+msgstr "Файл є порожнім."
+
+#: backuper.cpp:61
+#, kde-format
+msgid "A backup is already in progress."
+msgstr "Зараз вже виконується створення резервної копії."
+
+#: backuper.cpp:64
+#, kde-format
+msgid "Backing up your calendar data..."
+msgstr "Створюємо резервну копію даних вашого календаря…"
+
+#: backuper.cpp:97
+#, kde-format
+msgid "No data to backup."
+msgstr "Немає даних для створення резервної копії."
+
+#: backuper.cpp:108 calendarjanitor.cpp:173
+#, kde-format
+msgid "Processing collection %1 (id=%2)..."
+msgstr "Обробляємо збірку %1 (ідентифікатор=%2)…"
+
+#: backuper.cpp:138
+#, kde-format
+msgid "An error occurred"
+msgstr "Сталася помилка"
+
+#: calendarjanitor.cpp:37
+#, kde-format
+msgid ""
+"Bailing out. Fix your akonadi setup first. These kind of errors should not "
+"happen."
+msgstr ""
+"Припиняємо обробку. Спочатку виправте akonadi у вашій системі. У нормальний "
+"системі не повинно траплятися таких помилок."
+
+#: calendarjanitor.cpp:85
+#, kde-format
+msgid "Error while fetching collections"
+msgstr "Помилка під час отримання збірок"
+
+#: calendarjanitor.cpp:99
+#, kde-format
+msgid "There are no collections to process."
+msgstr "Немає збірок для обробки."
+
+#: calendarjanitor.cpp:126
+#, kde-format
+msgid "Error while modifying incidence: %1"
+msgstr "Помилка під час спроби внесення змін до запису: %1"
+
+#: calendarjanitor.cpp:131
+#, kde-format
+msgid "Fixed item %1"
+msgstr "Виправлено запис %1"
+
+#: calendarjanitor.cpp:147
+#, kde-format
+msgid "Error while deleting incidence: %1"
+msgstr "Помилка під час спроби вилучення запису: %1"
+
+#: calendarjanitor.cpp:151
+#, kde-format
+msgid "Deleted item %1"
+msgstr "Вилучено запис %1"
+
+#: calendarjanitor.cpp:177
+#, kde-format
+msgid "Collection is read only, disabling fix mode."
+msgstr "Збірку призначено лише для читання, вимикаємо режим виправлення."
+
+#: calendarjanitor.cpp:179
+#, kde-format
+msgid "Collection is read only, skipping it."
+msgstr "Збірку призначено лише для читання, пропускаємо її."
+
+#: calendarjanitor.cpp:187
+#, kde-format
+msgid "Collection is empty, ignoring it."
+msgstr "Збірка є порожньою, пропускаємо її."
+
+#: calendarjanitor.cpp:255
+#, kde-format
+msgid "Checking for incidences with empty summary and description..."
+msgstr "Перевіряємо, чи є записи з порожнім резюме і описом…"
+
+#: calendarjanitor.cpp:270
+#, kde-format
+msgid "Checking for incidences with empty UID..."
+msgstr "Перевіряємо, чи є записи з порожнім ідентифікатором…"
+
+#: calendarjanitor.cpp:289
+#, kde-format
+msgid "Checking for events with invalid DTSTART..."
+msgstr "Перевіряємо, чи є записи подій з некоректним значенням DTSTART…"
+
+#: calendarjanitor.cpp:326
+#, kde-format
+msgid "Checking for recurring to-dos with invalid DTSTART..."
+msgstr ""
+"Перевіряємо, чи є записи повторюваних завдань з некоректним значенням "
+"DTSTART…"
+
+#: calendarjanitor.cpp:362
+#, kde-format
+msgid "Checking for journals with invalid DTSTART..."
+msgstr "Перевіряємо, чи є журнали з некоректним значенням DTSTART…"
+
+#: calendarjanitor.cpp:383
+#, kde-format
+msgid "Checking for orphans..."
+msgstr "Шукаємо осиротілі записи…"
+
+#: calendarjanitor.cpp:389
+#, kde-format
+msgid "The following incidences are children of nonexistent parents"
+msgstr ""
+"Вказані нижче записи є дочірніми записами без наявного батьківського запису"
+
+#: calendarjanitor.cpp:398
+#, kde-format
+msgid "In fix mode these children will be unparented."
+msgstr "У процесі виправлення підлеглий стан цих записів буде скасовано."
+
+#: calendarjanitor.cpp:398
+#, kde-format
+msgid "Children were successfully unparented."
+msgstr "Підлеглий стан дочірніх записів успішно скасовано."
+
+#: calendarjanitor.cpp:403
+#, kde-format
+msgid "Checking for duplicate UIDs..."
+msgstr "Перевіряємо, чи є дублікати ідентифікаторів…"
+
+#: calendarjanitor.cpp:460
+#, kde-format
+msgid "Gathering statistics..."
+msgstr "Збираємо статистичні дані…"
+
+#: calendarjanitor.cpp:498
+#, kde-format
+msgid "Events"
+msgstr "Події"
+
+#: calendarjanitor.cpp:499
+#, kde-format
+msgid "Todos"
+msgstr "Завдання"
+
+#: calendarjanitor.cpp:500
+#, kde-format
+msgid "Journals"
+msgstr "Журнали"
+
+#: calendarjanitor.cpp:501
+#, kde-format
+msgid "Passed events and to-dos (>365 days)"
+msgstr "Події та завдання у минулому (>365 днів)"
+
+#: calendarjanitor.cpp:502
+#, kde-format
+msgid "Old incidences with alarms"
+msgstr "Застарілі записи з нагадуваннями"
+
+#: calendarjanitor.cpp:503
+#, kde-format
+msgid "Inline attachments"
+msgstr "Вбудовані долучення"
+
+#: calendarjanitor.cpp:504
+#, kde-format
+msgid "Items with empty remote id [!!]"
+msgstr "Записи з порожнім віддаленим ідентифікатором [!!]"
+
+#: calendarjanitor.cpp:507
+#, kde-format
+msgid "Total size of inline attachments (bytes)"
+msgstr "Загальний розмір вбудованих долучень (у байтах)"
+
+#: calendarjanitor.cpp:509
+#, kde-format
+msgid "Total size of inline attachments (KB)"
+msgstr "Загальний розмір вбудованих долучень (у кБ)"
+
+#: calendarjanitor.cpp:521
+#, kde-format
+msgid ""
+"Checking for RECURRING-ID incidences with nonexistent master incidence..."
+msgstr ""
+"Перевіряємо, чи є записи з RECURRING-ID і основним записом, якого не існує…"
+
+#: calendarjanitor.cpp:562
+#, kde-format
+msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
+msgstr ""
+"У процесі виправлення властивість RECURRING-ID буде вимкнено, а UID буде "
+"змінено."
+
+#: calendarjanitor.cpp:562
+#, kde-format
+msgid "Recurrence cleared."
+msgstr "Повторення вимкнено."
+
+#: calendarjanitor.cpp:567
+#, kde-format
+msgid "Deleting alarms older than 365 days..."
+msgstr "Вилучаємо нагадування, старіші за 365 днів…"
+
+#: calendarjanitor.cpp:585 calendarjanitor.cpp:599
+#, kde-format
+msgid "invalid"
+msgstr "некоректний"
+
+#: calendarjanitor.cpp:602
+#, kde-format
+msgid "recurrent"
+msgstr "повторюваний"
+
+#: calendarjanitor.cpp:620
+#, kde-format
+msgid "Found buggy incidence:"
+msgstr "Виявлено помилковий запис:"
+
+#: calendarjanitor.cpp:621
+#, kde-format
+msgid "id=%1; summary=\"%2\""
+msgstr "ідентифікатор=%1; резюме=«%2»"
+
+#: main.cpp:40
+#, kde-format
+msgid "Error while parsing %1"
+msgstr "Помилка під час обробки %1"
+
+#: main.cpp:41
+#, kde-format
+msgid "Example usage: %1"
+msgstr "Приклад використання: %1"
+
+#: main.cpp:61
+#, kde-format
+msgid "CalendarJanitor"
+msgstr "Нагладач за календарями"
+
+#: main.cpp:63
+#, kde-format
+msgid "Sérgio Martins"
+msgstr "Sérgio Martins"
+
+#: main.cpp:63
+#, kde-format
+msgid "Maintainer"
+msgstr "Супровідник"
+
+#: main.cpp:64
+#, kde-format
+msgid "A command line interface to report and fix errors in your calendar data"
+msgstr ""
+"Інтерфейс командного рядка для діагностики і виправлення помилок у даних "
+"ваших календарів"
+
+#: main.cpp:69
+#, kde-format
+msgid "Comma-separated list of collection ids to scan"
+msgstr "Список відокремлених комами ідентифікаторів збірок, які слід сканувати"
+
+#: main.cpp:70
+#, kde-format
+msgid "Fix broken incidences"
+msgstr "Виправити помилкові записи"
+
+#: main.cpp:71
+#, kde-format
+msgid "Backup your calendar"
+msgstr "Створити резервну копію вашого календаря"
+
+#: main.cpp:72
+#, kde-format
+msgid "Delete alarms older than 365 days"
+msgstr "Вилучити нагадування, старіші за 365 днів"
+
+#: main.cpp:104
+#, kde-format
+msgid "--fix is incompatible with --backup"
+msgstr "--fix не можна використовувати разом з --backup"
+
+#: main.cpp:109
+#, kde-format
+msgid "--strip-old-alarms is incompatible with --backup"
+msgstr "--strip-old-alarms не можна використовувати разом з --backup"
+
+#: main.cpp:114
+#, kde-format
+msgid "--strip-old-alarms is incompatible with --fix"
+msgstr "--strip-old-alarms не можна використовувати разом з --fix"
+
+#: main.cpp:125
+#, kde-format
+msgid "Running in fix mode."
+msgstr "Працюємо у режимі виправлення."
+
+#: main.cpp:129
+#, kde-format
+msgid "Please specify a output file."
+msgstr "Будь ласка, вкажіть файл для виведення даних."
+
+#: main.cpp:134
+#, kde-format
+msgid "Running in scan only mode."
+msgstr "Працюємо у режимі лише сканування."
+
+#~ msgid "(c) 2013, Sérgio Martins"
+#~ msgstr "© Sérgio Martins, 2013"
+
+#~ msgid ""
+#~ "\n"
+#~ "Examples:\n"
+#~ "\n"
+#~ "Scan all collections:\n"
+#~ "$ calendarjanitor\n"
+#~ "\n"
+#~ "Scan and fix all collections:\n"
+#~ "$ calendarjanitor --fix\n"
+#~ "\n"
+#~ "Scan and fix some collections:\n"
+#~ "$ calendarjanitor --collections 10,20 --fix\n"
+#~ "\n"
+#~ "Backup all collections:\n"
+#~ "$ calendarjanitor --backup backup.ics\n"
+#~ "\n"
+#~ "Backup some collections:\n"
+#~ "$ calendarjanitor --backup backup.ics --collections 10,20\n"
+#~ "\n"
+#~ "Strip alarms from incidences older than 365 days:\n"
+#~ "$ calendarjanitor --strip-old-alarms --collections 10,20"
+#~ msgstr ""
+#~ "\n"
+#~ "Приклади:\n"
+#~ "\n"
+#~ "Виконати сканування усіх збірок:\n"
+#~ "$ calendarjanitor\n"
+#~ "\n"
+#~ "Виконати сканування та виправлення усіх збірок:\n"
+#~ "$ calendarjanitor --fix\n"
+#~ "\n"
+#~ "Виконати сканування та виправлення деяких збірок:\n"
+#~ "$ calendarjanitor --collections 10,20 --fix\n"
+#~ "\n"
+#~ "Створити резервну копію усіх збірок:\n"
+#~ "$ calendarjanitor --backup backup.ics\n"
+#~ "\n"
+#~ "Створити резервну копію деяких збірок:\n"
+#~ "$ calendarjanitor --backup backup.ics --collections 10,20 \n"
+#~ "Вилучити нагадування щодо подій, які мали статися понад 365 днів тому:\n"
+#~ "$ calendarjanitor --strip-old-alarms --collections 10,20"
+
+#~ msgid "Processing collection %1 (id=%2) ..."
+#~ msgstr "Обробляємо збірку %1 (ідентифікатор=%2)…"

@@ -1,0 +1,737 @@
+# translation of konsolekalendar.po to
+# translation of konsolekalendar.po to
+# translation of konsolekalendar.po to
+# Copyright (C) 2004 Free Software Foundation, Inc.
+#
+# Ambalam <tamilpc@ambalam.com>, 2004.
+# root <root@localhost.localdomain>, 2004.
+# Kishore G <kishore96@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: konsolekalendar\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-11-26 00:28+0000\n"
+"PO-Revision-Date: 2021-01-16 21:55+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "saravanan"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "unlucky4ever@yahoo.com"
+
+#: konsolekalendar.cpp:82
+#, kde-format
+msgid "There are no calendars available."
+msgstr "நாள்காட்டிகள் எதுவும் இல்லை."
+
+#: konsolekalendar.cpp:97
+#, kde-format
+msgid "(Read only)"
+msgstr "(படித்தல் மட்டும்)"
+
+#: konsolekalendar.cpp:147
+#, fuzzy, kde-format
+#| msgid "Create Calendar <Dry Run>: %1"
+msgid "Create Calendar <Dry Run>: %1"
+msgstr "நாள்காட்டியை உருவாக்கு<வெள்ளோட்டம்>:%1"
+
+#: konsolekalendar.cpp:153
+#, fuzzy, kde-format
+#| msgid "Create Calendar <Verbose>: %1"
+msgid "Create Calendar <Verbose>: %1"
+msgstr "நாள்காட்டியை உருவாக்கு<Verbose>:%1"
+
+#: konsolekalendar.cpp:172
+#, fuzzy, kde-format
+#| msgid "View Events <Dry Run>:"
+msgid "View Events <Dry Run>:"
+msgstr "செயல்களை பார்வையிடு< வெள்ளோட்டம்>:"
+
+#: konsolekalendar.cpp:194
+#, fuzzy, kde-format
+#| msgid "Insert Event <Verbose>:"
+msgid "View Event <Verbose>:"
+msgstr "செயலை நுழை<Verbose>:"
+
+#: konsolekalendar.cpp:267
+#, kde-format
+msgid "Sorry, export to HTML by UID is not supported yet"
+msgstr "மன்னிக்கவும்,  HTML க்கு UID இன்னும் ஏற்றுமதி ஆகவில்லை"
+
+#: konsolekalendar.cpp:288
+#, kde-format
+msgid "Events:"
+msgstr "நிகழ்வுகள்:"
+
+#: konsolekalendar.cpp:292
+#, kde-format
+msgid "Events: %1"
+msgstr "நிகழ்வுகள்: %1"
+
+#: konsolekalendar.cpp:294
+#, kde-format
+msgid "Events: %1 - %2"
+msgstr "நிகழ்வுகள்: %1 - %2"
+
+#: konsolekalendar.cpp:434 konsolekalendaradd.cpp:175
+#: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
+#: konsolekalendardelete.cpp:82
+#, kde-format
+msgid "  What:  %1"
+msgstr "என்ன: %1"
+
+#: konsolekalendar.cpp:436 konsolekalendaradd.cpp:177
+#: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
+#: konsolekalendardelete.cpp:85
+#, kde-format
+msgid "  Begin: %1"
+msgstr "ஆரம்பி: %1"
+
+#: konsolekalendar.cpp:438 konsolekalendaradd.cpp:179
+#: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
+#: konsolekalendardelete.cpp:87
+#, kde-format
+msgid "  End:   %1"
+msgstr "முடிவு: %1"
+
+#: konsolekalendar.cpp:441 konsolekalendaradd.cpp:182
+#, kde-format
+msgid "  No Time Associated with Event"
+msgstr "எந்த நேரமும் செயலுடன் தொடர்புடையதாக இல்லை "
+
+#: konsolekalendar.cpp:444 konsolekalendaradd.cpp:185
+#: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
+#: konsolekalendardelete.cpp:89
+#, kde-format
+msgid "  Desc:  %1"
+msgstr "விவரம்: %1"
+
+#: konsolekalendar.cpp:446 konsolekalendaradd.cpp:187
+#: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
+#: konsolekalendardelete.cpp:91
+#, kde-format
+msgid "  Location:  %1"
+msgstr "இடம்: %1"
+
+#: konsolekalendaradd.cpp:61
+#, kde-format
+msgid "Insert Event <Dry Run>:"
+msgstr "செயலை நுழை<வெள்ளோட்டம்>:"
+
+#: konsolekalendaradd.cpp:65
+#, kde-format
+msgid "Insert Event <Verbose>:"
+msgstr "செயலை நுழை<Verbose>:"
+
+#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:133
+#, fuzzy, kde-format
+msgid "Calendar is invalid. Please specify one with --calendar"
+msgstr "நாள்காட்டி தவறானது. '--calendar'-ஐக் கொண்டு ஒன்றை குறிப்பிடவும்"
+
+#: konsolekalendaradd.cpp:104
+#, kde-format
+msgid "Success: \"%1\" inserted"
+msgstr "வெற்றி:\"%1\" நுழைக்கப்பட்டது"
+
+#: konsolekalendaradd.cpp:106
+#, kde-format
+msgid "Failure: \"%1\" not inserted"
+msgstr "தோல்வியுற்றன:\"%1\" நுழைக்கப்படவில்லை"
+
+#: konsolekalendaradd.cpp:147
+#, kde-format
+msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+msgstr ""
+
+#: konsolekalendaradd.cpp:154
+#, kde-format
+msgid "Add Event with UID \"%1\". <Verbose>"
+msgstr ""
+
+#: konsolekalendarchange.cpp:50
+#, fuzzy, kde-format
+#| msgid "Insert Event <Dry Run>:"
+msgid "Change Event <Dry Run>:"
+msgstr "செயலை நுழை<வெள்ளோட்டம்>:"
+
+#: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
+#, fuzzy, kde-format
+#| msgid "Insert Event <Dry Run>:"
+msgid "To Event <Dry Run>:"
+msgstr "செயலை நுழை<வெள்ளோட்டம்>:"
+
+#: konsolekalendarchange.cpp:59
+#, fuzzy, kde-format
+#| msgid "Insert Event <Verbose>:"
+msgid "Change Event <Verbose>:"
+msgstr "செயலை நுழை<Verbose>:"
+
+#: konsolekalendarchange.cpp:101
+#, kde-format
+msgid "Success: \"%1\" changed"
+msgstr "வெற்றி:\"%1\" மாற்றப்பட்டது"
+
+#: konsolekalendarchange.cpp:103
+#, kde-format
+msgid "Failure: \"%1\" not changed"
+msgstr "தோல்வியுற்றன: \"%1\" மாற்ற முடியாது"
+
+#: konsolekalendarchange.cpp:114 konsolekalendarchange.cpp:130
+#: konsolekalendardelete.cpp:80
+#, kde-format
+msgid "  UID:   %1"
+msgstr "  UID:  %1"
+
+#: konsolekalendardelete.cpp:48
+#, fuzzy, kde-format
+#| msgid "Insert Event <Dry Run>:"
+msgid "Delete Event <Dry Run>:"
+msgstr "செயலை நுழை<வெள்ளோட்டம்>:"
+
+#: konsolekalendardelete.cpp:54
+#, fuzzy, kde-format
+#| msgid "Insert Event <Verbose>:"
+msgid "Delete Event <Verbose>:"
+msgstr "செயலை நுழை<Verbose>:"
+
+#: konsolekalendardelete.cpp:67
+#, kde-format
+msgid "Success: \"%1\" deleted"
+msgstr "வெற்றி:\"%1\" அழிக்கப்பட்டது"
+
+#: konsolekalendardelete.cpp:69
+#, kde-format
+msgid "Error deleting: \"%1\""
+msgstr "நீக்குவதில் பிழை: \"%1\""
+
+#: konsolekalendarexports.cpp:59
+#, kde-format
+msgid "Date:"
+msgstr "தேதி:"
+
+#: konsolekalendarexports.cpp:68
+#, kde-format
+msgid "Summary:"
+msgstr "சுருக்கம்:"
+
+#: konsolekalendarexports.cpp:72
+#, kde-format
+msgid "(no summary available)"
+msgstr "(விவரிப்பு இல்லை)"
+
+#: konsolekalendarexports.cpp:76
+#, kde-format
+msgid "Location:"
+msgstr "இடம்:"
+
+#: konsolekalendarexports.cpp:80
+#, kde-format
+msgid "(no location available)"
+msgstr "(இடம் இல்லை)"
+
+#: konsolekalendarexports.cpp:84
+#, kde-format
+msgid "Description:"
+msgstr "விவரம்:"
+
+#: konsolekalendarexports.cpp:88
+#, kde-format
+msgid "(no description available)"
+msgstr "(விவரணம் இல்லை)"
+
+#: konsolekalendarexports.cpp:92
+#, kde-format
+msgid "UID:"
+msgstr "UID:"
+
+#: konsolekalendarexports.cpp:120
+#, kde-format
+msgid "[all day]\t"
+msgstr "(முழு நாள்)\t"
+
+#: konsolekalendarexports.cpp:171
+#, kde-format
+msgid ","
+msgstr ","
+
+#: konsolekalendarexports.cpp:172
+#, kde-format
+msgid "\""
+msgstr "\""
+
+#: main.cpp:59
+#, kde-format
+msgid "KonsoleKalendar"
+msgstr ""
+
+#: main.cpp:61
+#, kde-format
+msgid "A command line interface to KDE calendars"
+msgstr ""
+
+#: main.cpp:63
+#, kde-format
+msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
+msgstr ""
+
+#: main.cpp:65
+#, kde-format
+msgid "Laurent Montel"
+msgstr ""
+
+#: main.cpp:65
+#, kde-format
+msgid "Bug fixing"
+msgstr ""
+
+#: main.cpp:66
+#, kde-format
+msgid "Allen Winter"
+msgstr ""
+
+#: main.cpp:66
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: main.cpp:67
+#, kde-format
+msgid "Tuukka Pasanen"
+msgstr ""
+
+#: main.cpp:67
+#, kde-format
+msgid "Author"
+msgstr "ஆசிரியர்"
+
+#: main.cpp:73
+#, kde-format
+msgid "Print helpful runtime messages"
+msgstr "உதவி செயல்நேர செய்திகளை அச்சிடு"
+
+#: main.cpp:74
+#, kde-format
+msgid "Print what would have been done, but do not execute"
+msgstr "என்ன நடக்கும் என்பதை அச்சிடு ஆனால் வெளியிடாதீர்கள்"
+
+#: main.cpp:75
+#, kde-format
+msgid "Allow calendars which might need an interactive user interface"
+msgstr ""
+
+#: main.cpp:76
+#, fuzzy, kde-format
+#| msgid "  Operate for Events only (Default)"
+msgid "Operate for Events only (Default)"
+msgstr "நிகழ்வுகளை செயல்படுத்த மட்டும் (முன்னிருப்பு)"
+
+#: main.cpp:77
+#, fuzzy, kde-format
+#| msgid "  Operate for To-dos only [NOT WORKING YET]"
+msgid "Operate for To-dos only [NOT WORKING YET]"
+msgstr "செய்யவேண்டியவைகளை மட்டும் செயல்பட்டுது (இன்னும் செயல்படவில்லை)"
+
+#: main.cpp:78
+#, fuzzy, kde-format
+#| msgid "  Operate for Journals only [NOT WORKING YET]"
+msgid "Operate for Journals only [NOT WORKING YET]"
+msgstr "பத்திரிகைகளுக்கு மட்டும் செயல்படுத்து (இன்னும் செயல்படவில்லை)"
+
+#: main.cpp:79
+#, fuzzy, kde-format
+#| msgid "  Print incidences in specified export format"
+msgid "Print incidences in specified export format"
+msgstr "செயல்களை குறிப்பிட்ட ஏற்றுமதி வடிவத்தில் அச்சிடு"
+
+#: main.cpp:80
+#, fuzzy, kde-format
+#| msgid "  Insert an incidence into the calendar"
+msgid "Insert an incidence into the calendar"
+msgstr "நாள்காட்டியில் ஒரு நிகழ்வை சொருகு"
+
+#: main.cpp:81
+#, fuzzy, kde-format
+#| msgid "  Modify an existing incidence"
+msgid "Modify an existing incidence"
+msgstr "தற்போதுள்ள ஒரு நிகழ்வை மாற்று"
+
+#: main.cpp:82
+#, fuzzy, kde-format
+#| msgid "  Remove an existing incidence"
+msgid "Remove an existing incidence"
+msgstr "தற்போதுள்ள ஒரு நிகழ்வை நீக்கு"
+
+#: main.cpp:83
+#, kde-format
+msgid "Create new Akonadi Resource for file"
+msgstr ""
+
+#: main.cpp:85
+#, fuzzy, kde-format
+#| msgid "  Import this calendar to main calendar"
+msgid "Import this calendar to main calendar"
+msgstr "இந்த நாள்காட்டியை மூல நாள்காட்டிக்கு இறக்குமதி செய்"
+
+#: main.cpp:86
+#, kde-format
+msgid "List available calendars"
+msgstr "உள்ள நாள்காட்டிகளை பட்டியலிடு"
+
+#: main.cpp:87
+#, fuzzy, kde-format
+msgid "View all calendar entries, ignoring date/time options"
+msgstr "எல்லா நாள்காட்டி உள்ளீடுகளையும் பார்வையிடு"
+
+#: main.cpp:88
+#, fuzzy, kde-format
+#| msgid "  View next activity in calendar"
+msgid "View next activity in calendar"
+msgstr "நாள்காட்டியில் அடுத்த செயலை காட்டு"
+
+#: main.cpp:90
+#, fuzzy, kde-format
+#| msgid "  From start date show next # days' activities"
+msgid "From start date show next # days' activities"
+msgstr "துவக்கிய நாளிலிருந்து அடுத்த# நாட்களின் செயல்களை காண்பி"
+
+#: main.cpp:91
+#, fuzzy, kde-format
+#| msgid "  Incidence Unique-string identifier"
+msgid "Incidence Unique-string identifier"
+msgstr "தனி-சர அடையாளம் காட்டிச் செயல்"
+
+#: main.cpp:92
+#, fuzzy, kde-format
+#| msgid "  Start from this day [YYYY-MM-DD]"
+msgid "Start from this day [YYYY-MM-DD]"
+msgstr "இந்த நாளிருந்து ஆரம்பிக்கும் [YYYY-MM-DD]"
+
+#: main.cpp:93
+#, fuzzy, kde-format
+#| msgid "  Start from this time [HH:MM:SS]"
+msgid "Start from this time [HH:MM:SS]"
+msgstr "இந்த நேரத்திலிருந்து ஆரம்பிக்கவும் [HH:MM:SS]"
+
+#: main.cpp:94
+#, fuzzy, kde-format
+#| msgid "  End at this day [YYYY-MM-DD]"
+msgid "End at this day [YYYY-MM-DD]"
+msgstr "இந்த நாளில் முடிக்கவும் [YYYY-MM-DD]"
+
+#: main.cpp:95
+#, fuzzy, kde-format
+#| msgid "  End at this time [HH:MM:SS]"
+msgid "End at this time [HH:MM:SS]"
+msgstr "இந்த நேரத்தில் முடிக்கவும்[HH:MM:SS]"
+
+#: main.cpp:97
+#, fuzzy, kde-format
+#| msgid " Start from this time [secs since epoch]"
+msgid "Start from this time [secs since epoch]"
+msgstr "இந்த நேரத்திலிருந்து ஆரம்பி (epoch நொடியிலிருந்து]"
+
+#: main.cpp:99
+#, fuzzy, kde-format
+#| msgid "  End at this time [secs since epoch]"
+msgid "End at this time [secs since epoch]"
+msgstr "இந்த நேரத்தில் முடிக்கவும்(epoch நொடியிலிருந்து]"
+
+#: main.cpp:101
+#, fuzzy, kde-format
+#| msgid "  Add summary to incidence (for add/change modes)"
+msgid "Add summary to incidence (for add/change modes)"
+msgstr "செயலில் சுருக்கத்தை சேர் (வகைகளைச் சேர்க்க/மாற்ற)"
+
+#: main.cpp:103
+#, kde-format
+msgid "Add description to incidence (for add/change modes)"
+msgstr "செயலுக்கான விவரிப்பைச் சேர் (வகைகளைச் சேர்க்க/மாற்ற)"
+
+#: main.cpp:106
+#, fuzzy, kde-format
+#| msgid "  Add location to incidence (for add/change modes)"
+msgid "Add location to incidence (for add/change modes)"
+msgstr "செயலுக்கான இடத்தை சேர் (வகைகளைச் சேர்க்க/மாற்ற)"
+
+#: main.cpp:109
+#, kde-format
+msgid "Calendar to use when creating a new incidence"
+msgstr ""
+
+#: main.cpp:112
+#, kde-format
+msgid "Export file type (Default: text)"
+msgstr "ஏற்றுமதி கோப்பு வகை (முன்னிருப்பு:உரை)"
+
+#: main.cpp:114
+#, kde-format
+msgid "Export to file (Default: stdout)"
+msgstr "கோப்புக்கு ஏற்றுமதி செய் (முன்னிருப்பு:stdout)"
+
+#: main.cpp:115
+#, fuzzy, kde-format
+#| msgid "  Print list of export types supported and exit"
+msgid "Print list of export types supported and exit"
+msgstr "ஆதரிக்கப்பட்ட ஏற்றுமதி வகைகளின் பட்டியலை அச்சடித்து. பிறகு வெளியேறு"
+
+#: main.cpp:164
+#, kde-format
+msgid "%1 supports these export formats:"
+msgstr ""
+
+#: main.cpp:165
+#, kde-format
+msgctxt "the default export format"
+msgid "  %1 [Default]"
+msgstr "%1 [இயல்பிருப்பு]"
+
+#: main.cpp:166
+#, kde-format
+msgctxt "short text export"
+msgid "  %1 (like %2, but more compact)"
+msgstr ""
+
+#: main.cpp:167
+#, kde-format
+msgctxt "HTML export"
+msgid "  %1"
+msgstr ""
+
+#: main.cpp:168
+#, kde-format
+msgctxt "HTMLmonth export"
+msgid "  %1 (like %2, but in a month view)"
+msgstr ""
+
+#: main.cpp:170
+#, kde-format
+msgctxt "comma-separated values export"
+msgid "  %1 (Comma-Separated Values)"
+msgstr ""
+
+#: main.cpp:185
+#, kde-format
+msgid "Sorry, To-dos are not working yet."
+msgstr "மன்னிக்கவும், செய்யவேண்டியவைகள் இன்னும் இயங்கவில்லை."
+
+#: main.cpp:191
+#, kde-format
+msgid "Sorry, Journals are not working yet."
+msgstr "மன்னிக்கவும், பத்திரிகைகள் இன்னும் இயங்கவில்லை"
+
+#: main.cpp:223
+#, kde-format
+msgid "Invalid Export Type Specified: %1"
+msgstr "முறையற்ற ஏற்ற வேண்டிய வகையை குறிப்பிடுக: %1"
+
+#: main.cpp:382
+#, kde-format
+msgid "Invalid Start Date Specified: %1"
+msgstr "முறையற்ற ஆரம்பிக்க வேண்டிய தேதியை குறிப்பிடுக: %1"
+
+#: main.cpp:407
+#, kde-format
+msgid "Invalid Start Time Specified: %1"
+msgstr "முறையற்ற ஆரம்ப நேரம் குறிப்பிடப்பட்டுள்ளது: %1"
+
+#: main.cpp:432
+#, kde-format
+msgid "Invalid End Date Specified: %1"
+msgstr "முறையற்ற முடிவு தேதி குறிப்பிடப்பட்டுள்ளது: %1"
+
+#: main.cpp:452
+#, kde-format
+msgid "Invalid Date Count Specified: %1"
+msgstr "முறையற்ற தேதி எண்ணிக்கை குறிப்பிடப்பட்டுள்ளது: %1"
+
+#: main.cpp:480
+#, kde-format
+msgid "Invalid End Time Specified: %1"
+msgstr "முறையற்ற முடிவு நேரம் குறிப்பிடப்பட்டுள்ளது: %1"
+
+#: main.cpp:673
+#, kde-format
+msgid ""
+"Only 1 operation mode (view, add, change, delete, create) permitted at any "
+"one time"
+msgstr ""
+"வெறும் 1 செயல்பாட்டு முறை(பார்வை, சேர்,மாற்று, அழி, உருவாக்கு) ஒரு நேரத்தில் ஒன்று "
+"மட்டுமே அனுமதிக்கப்படும்"
+
+#: main.cpp:684
+#, kde-format
+msgid "Ending Date/Time occurs before the Starting Date/Time"
+msgstr "முடியும் தேதி/ஆரம்ப தேதி/நேரத்திற்கு முன் நிகழும் நேரம்"
+
+#: main.cpp:703
+#, kde-format
+msgid "Calendar %1 successfully imported"
+msgstr "%1  நாள்காட்டி வெற்றிகரமாக இறக்குமதி செய்யப்பட்டது"
+
+#: main.cpp:706
+#, kde-format
+msgid "Unable to import calendar: %1"
+msgstr "நாள்காட்டியை இறக்குமதி செய்ய முடியவில்லை: %1 "
+
+#: main.cpp:717
+#, kde-format
+msgid "Attempting to insert an event that already exists"
+msgstr "ஏற்கனவே உள்ள ஒரு செயலை நுழைப்பதற்கான முயற்சி"
+
+#: main.cpp:727 main.cpp:747
+#, kde-format
+msgid "Missing event UID: use --uid command line option"
+msgstr "தொலைக்கப்பட்ட UID நிகழ்வின்: --uid கட்டளை வரி விருப்பத்தை பயன்படுத்து"
+
+#: main.cpp:735
+#, kde-format
+msgid "No such event UID: change event failed"
+msgstr "அத்தகைய UID நிகழ்வுகள் இல்லை: நிகழ்வு மாற்ற இயலவில்லை"
+
+#: main.cpp:755
+#, kde-format
+msgid "No such event UID: delete event failed"
+msgstr "அத்தகைய UID நிகழ்வுகள் இல்லை: நிகழ்வுகளை அழிக்க இயலவில்லை"
+
+#: main.cpp:766
+#, kde-format
+msgid "Cannot open specified export file: %1"
+msgstr "குறிப்பிட்ட ஏற்றுமதி கோப்பினை திறக்க முடியவில்லை: %1 "
+
+#: main.cpp:776
+#, kde-format
+msgid "Cannot create Akonadi resource from file: %1"
+msgstr ""
+
+#~ msgid "Incidence types (these options can be combined):"
+#~ msgstr "செயல் வகைகள் (இந்த விருப்பத்தேர்வுகளை சேர்க்கலாம்):"
+
+#~ msgid "Major operation modes:"
+#~ msgstr "முக்கியமான செயல்பாட்டு முறைகள்:"
+
+#~ msgid "Operation modifiers:"
+#~ msgstr "செயல் மாற்றி:"
+
+#~ msgid "Export options:"
+#~ msgstr "ஏற்றுமதி விருப்பங்கள்:"
+
+#, fuzzy
+#~| msgid ""
+#~| "Examples:\n"
+#~| "  konsolekalendar --view\n"
+#~| "  konsolekalendar --add --date 2003-06-04 --time 10:00 --end-time 12:00 "
+#~| "\\\n"
+#~| "                  --summary \"Doctor Visit\" --description \"Get My Head "
+#~| "Examined\"\n"
+#~| "  konsolekalendar --delete --uid KOrganizer-1740326.803"
+#~ msgid ""
+#~ "Examples:\n"
+#~ "  konsolekalendar --view\n"
+#~ "  konsolekalendar --list-calendars\n"
+#~ "  konsolekalendar --add --calendar 42 --date 2016-12-04 --time 10:00 --"
+#~ "end-time 12:00 \\\n"
+#~ "                  --summary \"Doctor Visit\" --description \"Get My Head "
+#~ "Examined\"\n"
+#~ "  konsolekalendar --delete --uid KOrganizer-1740326.803"
+#~ msgstr ""
+#~ "எடுத்துக்காட்டுகள்:\n"
+#~ "  konsolekalendar --பார்வையிடல்\n"
+#~ "  konsolekalendar --சேர் --தேதி 2003-06-04 --நேரம் 10:00 --முடிவு நேரம்12:00 "
+#~ "\\\n"
+#~ "                  --சுருக்கம் \"மருத்துவர் வருகை\" --விவரிப்பு \"என் தலையை "
+#~ "ஆராய்ச்சி செய்\"\n"
+#~ "  konsolekalendar --நீக்கு--uid Kநிர்வகிப்பவர்-1740380426.803"
+
+#, fuzzy
+#~| msgid ""
+#~| "For more information visit the program home page at:\n"
+#~| "  http://pim.kde.org/components/konsolekalendar.php"
+#~ msgid ""
+#~ "For more information visit the program home page at:\n"
+#~ "  https://userbase.kde.org/KonsoleKalendar"
+#~ msgstr ""
+#~ "மேலும் பல தகவல்களுக்கு நிரலின் முதல் பக்கத்தை காணவும்:\n"
+#~ "  http://pim.kde.org/components/konsolekalendar.php"
+
+#~ msgid "  Create new calendar file if one does not exist"
+#~ msgstr "நாள்காட்டி கோப்பு இல்லையென்றால் புதிய ஒன்றை உருவாக்கு"
+
+#, fuzzy
+#~| msgid "View Event <Verbose>:"
+#~ msgid "View Event &lt;Verbose&gt;:"
+#~ msgstr "செயலை பார்வையிடு<Verbose>:"
+
+#, fuzzy
+#~| msgid "Change Event <Dry Run>:"
+#~ msgid "Insert Event &lt;Dry Run&gt;:"
+#~ msgstr "செயலை மாற்று<வெள்ளோட்டம்>:"
+
+#, fuzzy
+#~| msgid "Change Event <Verbose>:"
+#~ msgid "Insert Event &lt;Verbose&gt;:"
+#~ msgstr "செயலை மாற்று<Verbose>:"
+
+#, fuzzy
+#~| msgid "Change Event <Dry Run>:"
+#~ msgid "Change Event &lt;Dry Run&gt;:"
+#~ msgstr "செயலை மாற்று<வெள்ளோட்டம்>:"
+
+#, fuzzy
+#~| msgid "To Event <Dry Run>:"
+#~ msgid "To Event &lt;Dry Run&gt;:"
+#~ msgstr "செயலுக்காக < வெள்ளோட்டம்>:"
+
+#, fuzzy
+#~| msgid "Change Event <Verbose>:"
+#~ msgid "Change Event &lt;Verbose&gt;:"
+#~ msgstr "செயலை மாற்று<Verbose>:"
+
+#, fuzzy
+#~| msgid "Delete Event <Dry Run>:"
+#~ msgid "Delete Event &lt;Dry Run&gt;:"
+#~ msgstr "செயலை அழி <வெள்ளோட்டம்>:"
+
+#, fuzzy
+#~| msgid "Delete Event <Verbose>:"
+#~ msgid "Delete Event &lt;Verbose&gt;:"
+#~ msgstr "செயலை அழி <Verbose>:"
+
+#~ msgid "Specify which calendar you want to use"
+#~ msgstr "எந்த நாள்காட்டி பயன்படுத்த வேண்டும் என்பதை குறிப்பிடுக "
+
+#~ msgid "Calendar %1 already exists"
+#~ msgstr "%1 நாள்காட்டி ஏற்கனவே உள்ளது"
+
+#~ msgid "Calendar %1 successfully created"
+#~ msgstr "%1 நாள்காட்டி வெற்றிகரமாக உருவாக்கப்பட்டது"
+
+#~ msgid "Unable to create calendar: %1"
+#~ msgstr "நாள்காட்டியை உருவாக்க முடியவில்லை: %1 "
+
+#~ msgid "Calendar file not found %1"
+#~ msgstr "%1  நாள்காட்டி கோப்பு கிடைக்கவில்லை."
+
+#~ msgid "Try --create to create new calendar file"
+#~ msgstr "புதிய நாள்காட்டி கோப்பினை உருவாக்க முயற்சி செய்"
+
+#~ msgid "Active Calendar"
+#~ msgstr "இயங்கும் நாள்காட்டி"
+
+#, fuzzy
+#~ msgid "Default Calendar"
+#~ msgstr "இயங்கும் நாள்காட்டி"
+
+#~ msgid "Primary Author"
+#~ msgstr "மூல ஆசிரியர்"

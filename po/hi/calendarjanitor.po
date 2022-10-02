@@ -1,0 +1,340 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the akonadi-calendar-tools package.
+#
+# Raghavendra kamath <raghu@raghukamath.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi-calendar-tools\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-24 00:44+0000\n"
+"PO-Revision-Date: 2021-07-06 22:17+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 21.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "राघवेंद्र कामत"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "raghu@raghukamath.com"
+
+#: backuper.cpp:36
+#, kde-format
+msgid "Backup was successful. %1 incidence was saved."
+msgid_plural "Backup was successful. %1 incidences were saved."
+msgstr[0] "बैकअप सफल हुआ। %1 घटना सहेजी गई ।"
+msgstr[1] "बैकअप सफल हुआ। %1 घटनााएँ सहेजीं गईं ।"
+
+#: backuper.cpp:56
+#, kde-format
+msgid "File is empty."
+msgstr "फ़ाइल खाली है।"
+
+#: backuper.cpp:61
+#, kde-format
+msgid "A backup is already in progress."
+msgstr "एक और बैकअप पहले से चल रहा है।"
+
+#: backuper.cpp:64
+#, kde-format
+msgid "Backing up your calendar data..."
+msgstr "आपका कैलेंडर डेटा बैकअप करें..."
+
+#: backuper.cpp:97
+#, kde-format
+msgid "No data to backup."
+msgstr "बैकअप के लिए कोई डेटा नहीं।"
+
+#: backuper.cpp:108 calendarjanitor.cpp:173
+#, kde-format
+msgid "Processing collection %1 (id=%2)..."
+msgstr "संग्रह का प्रक्रमण %1 (id=%2)..."
+
+#: backuper.cpp:138
+#, kde-format
+msgid "An error occurred"
+msgstr "एक त्रुटि हुई"
+
+#: calendarjanitor.cpp:37
+#, kde-format
+msgid ""
+"Bailing out. Fix your akonadi setup first. These kind of errors should not "
+"happen."
+msgstr ""
+"बंद हो रहा है। पहले अपना एकॉनाडी सेटअप ठीक करें। इस तरह की त्रुटियां नहीं होनी चाहिए।"
+
+#: calendarjanitor.cpp:85
+#, kde-format
+msgid "Error while fetching collections"
+msgstr "संग्रहों को प्राप्त करते समय त्रुटि"
+
+#: calendarjanitor.cpp:99
+#, kde-format
+msgid "There are no collections to process."
+msgstr "प्रक्रमण के लिए कोई संग्रह नहीं है।"
+
+#: calendarjanitor.cpp:126
+#, kde-format
+msgid "Error while modifying incidence: %1"
+msgstr "घटना को बदलते समय त्रुटि: %1"
+
+#: calendarjanitor.cpp:131
+#, kde-format
+msgid "Fixed item %1"
+msgstr "%1को सुधारा"
+
+#: calendarjanitor.cpp:147
+#, kde-format
+msgid "Error while deleting incidence: %1"
+msgstr "घटना को मिटाते समय त्रुटि: %1 "
+
+#: calendarjanitor.cpp:151
+#, kde-format
+msgid "Deleted item %1"
+msgstr "%1को मिटाया"
+
+#: calendarjanitor.cpp:177
+#, kde-format
+msgid "Collection is read only, disabling fix mode."
+msgstr "संग्रह केवल पठनीय है, सुधारण मोड बंद किया।"
+
+#: calendarjanitor.cpp:179
+#, kde-format
+msgid "Collection is read only, skipping it."
+msgstr "संग्रह केवल पठनीय है, इसे छोड़ रहा है।"
+
+#: calendarjanitor.cpp:187
+#, kde-format
+msgid "Collection is empty, ignoring it."
+msgstr "संग्रह खाली है, इसे अनदेखा किया जाएगा।"
+
+#: calendarjanitor.cpp:255
+#, kde-format
+msgid "Checking for incidences with empty summary and description..."
+msgstr "खाली सारांश और विवरण वाले घटनाओं की जाँच ..."
+
+#: calendarjanitor.cpp:270
+#, kde-format
+msgid "Checking for incidences with empty UID..."
+msgstr "खाली यूआईडी के साथ के घटनाओं के लिए जांच..."
+
+#: calendarjanitor.cpp:289
+#, kde-format
+msgid "Checking for events with invalid DTSTART..."
+msgstr "अमान्य DTSTART युक्त घटनाओं के लिए जांच..."
+
+#: calendarjanitor.cpp:326
+#, kde-format
+msgid "Checking for recurring to-dos with invalid DTSTART..."
+msgstr "अमान्य DTSTART वाले आवर्ती कार्य सूचियों के लिए जाँच..."
+
+#: calendarjanitor.cpp:362
+#, kde-format
+msgid "Checking for journals with invalid DTSTART..."
+msgstr "अमान्य DTSTART युक्त दैनिकीयों के लिए जांच..."
+
+#: calendarjanitor.cpp:383
+#, kde-format
+msgid "Checking for orphans..."
+msgstr "अनाथों के लिए जाँच..."
+
+#: calendarjanitor.cpp:389
+#, kde-format
+msgid "The following incidences are children of nonexistent parents"
+msgstr "निम्नांकित उप घटनाएँ मुख्य घटना रहित हैं।"
+
+#: calendarjanitor.cpp:398
+#, kde-format
+msgid "In fix mode these children will be unparented."
+msgstr "सुधारण मोड में इन उप घटनाओं को अलग किया जाएगा"
+
+#: calendarjanitor.cpp:398
+#, kde-format
+msgid "Children were successfully unparented."
+msgstr "उप घटनाओं को सफलतापूर्वक अलग किया."
+
+#: calendarjanitor.cpp:403
+#, kde-format
+msgid "Checking for duplicate UIDs..."
+msgstr "दोहरे यूआईडीयों के लिए जाँच..."
+
+#: calendarjanitor.cpp:460
+#, kde-format
+msgid "Gathering statistics..."
+msgstr "आँकड़ों को इकट्ठा करना"
+
+#: calendarjanitor.cpp:498
+#, kde-format
+msgid "Events"
+msgstr "कार्यक्रम"
+
+#: calendarjanitor.cpp:499
+#, kde-format
+msgid "Todos"
+msgstr "कार्य-सूची"
+
+#: calendarjanitor.cpp:500
+#, kde-format
+msgid "Journals"
+msgstr "दैनिकी"
+
+#: calendarjanitor.cpp:501
+#, kde-format
+msgid "Passed events and to-dos (>365 days)"
+msgstr "व्यतीत हुई घटनाएँ और कार्य सूची (>३६५ दिन)"
+
+#: calendarjanitor.cpp:502
+#, kde-format
+msgid "Old incidences with alarms"
+msgstr "अलार्म के साथ पुरानी घटनाएं"
+
+#: calendarjanitor.cpp:503
+#, kde-format
+msgid "Inline attachments"
+msgstr "इनलाइन एटेचमेंट्स"
+
+#: calendarjanitor.cpp:504
+#, kde-format
+msgid "Items with empty remote id [!!]"
+msgstr "खाली रिमोट आईडी वाली वस्तुएं  [!!]"
+
+#: calendarjanitor.cpp:507
+#, kde-format
+msgid "Total size of inline attachments (bytes)"
+msgstr "इनलाइन एटेचमेंट्स का कुल साइज़ (बाईट्स)"
+
+#: calendarjanitor.cpp:509
+#, kde-format
+msgid "Total size of inline attachments (KB)"
+msgstr "इनलाइन एटेचमेंट्स का कुल साइज़"
+
+#: calendarjanitor.cpp:521
+#, kde-format
+msgid ""
+"Checking for RECURRING-ID incidences with nonexistent master incidence..."
+msgstr "अस्तित्व विहीन मुख्य घटना के साथ RECURRING-ID घटनाओं के लिए जांच..."
+
+#: calendarjanitor.cpp:562
+#, kde-format
+msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
+msgstr "सुधारण मोड में RECURRING-ID गुण अप्रचलित होगी और UID बदल जाएगी।"
+
+#: calendarjanitor.cpp:562
+#, kde-format
+msgid "Recurrence cleared."
+msgstr "पुनरावृत्ति को निकाल दिया।"
+
+#: calendarjanitor.cpp:567
+#, kde-format
+msgid "Deleting alarms older than 365 days..."
+msgstr "३६५ दिनों से अधिक पुराने अलार्मों को मिटाएं..."
+
+#: calendarjanitor.cpp:585 calendarjanitor.cpp:599
+#, kde-format
+msgid "invalid"
+msgstr "अमान्य"
+
+#: calendarjanitor.cpp:602
+#, kde-format
+msgid "recurrent"
+msgstr "आवर्तक"
+
+#: calendarjanitor.cpp:620
+#, kde-format
+msgid "Found buggy incidence:"
+msgstr "खराब घटना मिली:"
+
+#: calendarjanitor.cpp:621
+#, kde-format
+msgid "id=%1; summary=\"%2\""
+msgstr "आईडी=%1;सारांश=\"%2\""
+
+#: main.cpp:40
+#, kde-format
+msgid "Error while parsing %1"
+msgstr "%1 पार्स करते समय त्रुटि"
+
+#: main.cpp:41
+#, kde-format
+msgid "Example usage: %1"
+msgstr "उदाहरण उपयोग: %1"
+
+#: main.cpp:61
+#, kde-format
+msgid "CalendarJanitor"
+msgstr "कैलेंडरजेनिटर"
+
+#: main.cpp:63
+#, kde-format
+msgid "Sérgio Martins"
+msgstr "सर्जियो मार्टिन्स"
+
+#: main.cpp:63
+#, kde-format
+msgid "Maintainer"
+msgstr "अनुरक्षक"
+
+#: main.cpp:64
+#, kde-format
+msgid "A command line interface to report and fix errors in your calendar data"
+msgstr ""
+"आपके कैलेंडर डेटा में त्रुटियों की रिपोर्ट करने और उन्हें ठीक करने के लिए एक कमांड लाइन अंतराफलक"
+
+#: main.cpp:69
+#, kde-format
+msgid "Comma-separated list of collection ids to scan"
+msgstr "स्कैन करने के लिए संग्रह आईडी की अल्पविराम-पृथक सूची"
+
+#: main.cpp:70
+#, kde-format
+msgid "Fix broken incidences"
+msgstr "बिगडी हुई घटनाएँ सुधारें"
+
+#: main.cpp:71
+#, kde-format
+msgid "Backup your calendar"
+msgstr "आपका कैलेंडर बैकअप करें"
+
+#: main.cpp:72
+#, kde-format
+msgid "Delete alarms older than 365 days"
+msgstr "३६५ दिनों से अधिक पुराने अलार्मों को मिटाएं"
+
+#: main.cpp:104
+#, kde-format
+msgid "--fix is incompatible with --backup"
+msgstr "--backup के साथ --fix अनुचित है"
+
+#: main.cpp:109
+#, kde-format
+msgid "--strip-old-alarms is incompatible with --backup"
+msgstr "--backup के साथ --strip-old-alarms अनुचित है"
+
+#: main.cpp:114
+#, kde-format
+msgid "--strip-old-alarms is incompatible with --fix"
+msgstr "--fix के साथ --strip-old-alarms अनुचित है"
+
+#: main.cpp:125
+#, kde-format
+msgid "Running in fix mode."
+msgstr "सुधार मोड में चल रहा है।"
+
+#: main.cpp:129
+#, kde-format
+msgid "Please specify a output file."
+msgstr "कृपया आउटपुट फ़ाइल निर्दिष्ट करें।"
+
+#: main.cpp:134
+#, kde-format
+msgid "Running in scan only mode."
+msgstr "सिर्फ स्कैन मोड मे चल रहा है।"

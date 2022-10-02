@@ -1,0 +1,1457 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+
+  <!ENTITY konsolekalendar "<application
+>KonsoleKalendar</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE">
+]>
+<!-- The language must NOT be changed here. -->
+
+<book id="konsolekalendar" lang="&language;">
+
+<bookinfo id="konsolekalendarinfo">
+
+<title
+>Підручник з &konsolekalendar;</title>
+
+<authorgroup>
+<author
+><firstname
+>Tuukka</firstname
+> <surname
+>Pasanen</surname
+> <affiliation
+><address
+><email
+>illuusio@mailcity.com</email
+></address
+></affiliation>
+</author>
+
+<author
+><firstname
+>Allen</firstname
+> <surname
+>Winter</surname
+> <affiliation
+><address
+><email
+>winterz@kde.org</email
+></address
+></affiliation>
+</author>
+
+<othercredit role="reviewer"
+><firstname
+>Malcolm</firstname
+> <surname
+>Hunter</surname
+> <affiliation
+><address
+><email
+>malcolm.hunter@gmx.co.uk</email
+></address
+></affiliation>
+<contrib
+>Рецензент</contrib>
+</othercredit>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2002</year
+><year
+>2004</year
+><holder
+>Tuukka Pasanen</holder>
+</copyright>
+
+<copyright>
+<year
+>2003</year
+><year
+>2007</year
+><holder
+>Allen Winter</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Don't change format of date and version of the documentation -->
+
+<date
+>23 листопада 2016 року</date>
+<releaseinfo
+>5.1.3 (Програми 16.12)</releaseinfo>
+
+<abstract>
+<para
+>&konsolekalendar; — це інтерфейс командного рядка для календарів &kde;.</para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>пакунок</keyword>
+<keyword
+>&kappname;</keyword>
+<keyword
+>KOrganizer</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Вступ</title>
+
+<para
+>&konsolekalendar; — це інтерфейс командного рядка для календарів. За його допомогою ви можете переглядати, вставляти, вилучати та змінювати записи подій календаря за допомогою командного рядка або мови для написання скриптів. Крім того, за допомогою &konsolekalendar; можна створити новий календар, експортувати календар до різноманітних інших форматів та імпортувати інший календар.</para>
+
+<para
+>У базовому режимі роботи програми &konsolekalendar; показує список записів подій у вашому типовому календарі для поточної дати (з 7:00 до 17:00).</para>
+
+<para
+>Основні можливості &konsolekalendar;: <itemizedlist>
+<listitem
+><para
+>Перегляд записів календаря з початкової дати/часу до кінцевої дати/часу</para
+></listitem>
+<listitem
+><para
+>Вставка (додавання) записів календаря</para
+></listitem>
+<listitem
+><para
+>Вилучення записів календаря</para
+></listitem>
+<listitem
+><para
+>Зміна записів календаря</para
+></listitem>
+<listitem
+><para
+>Створення нового календаря</para
+></listitem>
+<listitem
+><para
+>Експорт записів календаря до файлів інших форматів</para
+></listitem>
+<listitem
+><para
+>Імпорт наявного календаря</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>&konsolekalendar; <emphasis
+>не</emphasis
+> є ще одним графічним інтерфейсом до календаря &kde; (тобто &korganizer;). &konsolekalendar; призначено лише для використання у тих випадках, коли графічний інтерфейс користувача недоцільно або неможливо використовувати.</para>
+
+<para
+>У &konsolekalendar; <emphasis
+>немає</emphasis
+> повноцінної мови для виконання запитів до календаря користувача: метою авторів не було створення подібної можливості. Програма надає у ваше розпорядження базові параметри командного рядка для доступу до записів подій календаря, які належать до послідовного діапазону дат/часу. </para>
+
+</chapter>
+
+<chapter id="features">
+<title
+>Можливості</title>
+<para
+>З цієї глави ви дізнаєтеся про основні можливості &konsolekalendar; та про те, як керувати цими можливостями за допомогою параметрів командного рядка (слід пам’ятати, що у &konsolekalendar; немає графічного інтерфейсу користувача, програму призначено лише для роботи у командному рядку).</para>
+
+<para
+>Ви дізнаєтеся про те, як вставляти, вилучати і змінювати записи подій календаря, а також про те, як експортувати записи подій до файлів у інших форматах. У цій главі також обговорюватимуться питання щодо створення та імпортування календарів. </para>
+
+<sect1 id="viewing">
+<title
+>Перегляд записів подій</title>
+
+<para
+>У типовому режимі або у режимі з використанням параметра <parameter
+>--view</parameter
+> &konsolekalendar; покаже вам список подій у певному діапазоні дат/часу.</para>
+
+<para>
+<informalexample
+><para
+>Щоб переглянути сьогоднішні події (з 7:00 до 17:00), достатньо виконати команду:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>У наступному прикладі ми переглянемо записи про події протягом тижня з 18 серпня до 22 серпня:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--view</option
+> <option
+>--date <replaceable
+>2016-08-18</replaceable
+> </option
+> <option
+>--end-date <replaceable
+>2016-08-22</replaceable
+></option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Показ наступного запису (записів) про події від поточного часу уперед:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Щоб переглянути всі записи про події протягом наступних 5 днів, виконайте команду:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--show-next</option
+> <replaceable
+>5</replaceable>
+
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="inserting">
+<title
+>Вставка записів про події</title>
+
+<para
+>&konsolekalendar; може вставляти записи про події до календаря або ресурсу календаря за допомогою аргументу параметра командного рядка <parameter
+>--add</parameter
+>. Успішно вставлені записи можна буде негайно бачити у програмах, які працюють з календарем &kde; (наприклад, &korganizer;).</para>
+
+<para
+>Отримати список усіх календарів разом із їхніми ідентифікаторами: </para>
+
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--list-calendars</option
+></userinput
+></screen>
+
+<para>
+<informalexample
+><para
+>У наступному прикладі до ресурсу календаря користувача із ідентифікатором 8 буде додано запис про подію, яка починається 2016-12-01 (1 грудня 2016 року) о 10:00 і завершується о 12:00, з резюме «Відвідання лікаря»:</para>
+
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-03</replaceable
+></option
+> <option
+>--time <replaceable
+>10:00</replaceable
+></option
+> \
+<option
+>--end-time <replaceable
+>12:00</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Відвідання лікаря"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>У цьому прикладі до ресурсу календаря користувача із ідентифікатором 8 буде додано запис про день народження:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-06</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Мій день народження"</replaceable
+></option
+> \
+<option
+>--description <replaceable
+>"Час для вечірки"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Приклад вставлення одного тижня відпустки до календаря із ідентифікатором 8:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar <replaceable
+>12</replaceable
+></option
+> <option
+>--date <replaceable
+>2017-08-01</replaceable
+></option
+> \
+<option
+>--end-date <replaceable
+>2017-08-07</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Відпустка"</replaceable
+></option
+> <option
+>--description <replaceable
+>"І ніхто мене не знайде!"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="deleting">
+<title
+>Вилучення записів</title>
+
+<para
+>За допомогою &konsolekalendar; ви можете вилучати записи з файла календаря за допомогою аргументу параметра командного рядка <parameter
+>--delete</parameter
+>. Вказати записи календаря, які слід вилучити, можна за допомогою їх унікального рядкового ідентифікатора (<acronym
+>UID</acronym
+>), вказаного як аргумент параметра <parameter
+>--uid</parameter
+>. <acronym
+>UID</acronym
+> можна визначити з відомостей, отриманих під час перегляду події за допомогою параметрів <parameter
+>--view</parameter
+>, <parameter
+>--next</parameter
+> та <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>Успішно вилучені записи про події негайно зникнуть з відомостей програм для роботи з календарями &kde; (наприклад, &korganizer;).</para>
+
+<warning
+><para
+>Після вилучення інформації з календаря її <emphasis
+>неможливо</emphasis
+> відновити! Іншими словами, якщо ви вилучили запис, ви не зможете скасувати вилучення. Запис уже не повернеш.</para
+></warning>
+
+<para>
+<informalexample
+><para
+>У наступному прикладі ми вилучимо запис з <acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--delete</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="changing">
+<title
+>Зміна записів</title>
+
+<para
+>&konsolekalendar; підтримує зміну існуючих записів у файлі календаря або ресурсі, за допомогою аргументу параметра командного рядка <parameter
+>--change</parameter
+>. Записи календаря, які потрібно змінити, вказуються за допомогою їх унікального рядкового ідентифікатора (<acronym
+>UID</acronym
+>), вказаного як аргумент параметра <parameter
+>--uid</parameter
+>. <acronym
+>UID</acronym
+> можна визначити з відомостей, отриманих під час перегляду події за допомогою параметрів <parameter
+>--view</parameter
+>, <parameter
+>--next</parameter
+> та <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>Зміна запису подібна до вставки: ви можете змінити дату і час початку події, її дату і час завершення, резюме, місце і опис. Успішно змінені записи про події негайно буде змінено у відомостях програм для роботи з календарями &kde; (наприклад, &korganizer;).</para>
+
+<para
+><emphasis
+>Приклад:</emphasis
+> щоб змінити резюме та опис запису календаря з <acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>, слід виконати команду:</para>
+
+<para>
+<informalexample>
+<para
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--change</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Перевіряли чи не хворий на голову"</replaceable
+></option
+> <option
+>--description <replaceable
+>"більше не піду до цього лікаря!"</replaceable
+></option
+> </userinput
+> </para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="creating">
+<title
+>Створення нового файла календаря</title>
+
+<para
+>&konsolekalendar; можна скористатися для створення календарів на основі наявних файлів. Ви можете створити календар за допомогою параметра <option
+>--create</option
+> із аргументом, назвою файла. Файл має бути коректним файлом у форматі <acronym
+>iCal</acronym
+> або <acronym
+>vCal</acronym
+>.</para>
+<para
+>Зауваження: ви не зможете скористатися параметром <option
+>--dry-run</option
+> для тестування того, чи може бути створено ресурс.</para>
+
+<para
+>Зауваження: &konsolekalendar; потрібен файл для роботи, отже ніколи не вилучайте файл вручну. </para>
+
+<para
+>Технічне зауваження: &konsolekalendar; за допомогою цієї команди створює ресурс <acronym
+>Akonadi</acronym
+>, що вказує на файл. Програма не запобігає створенню декількох ресурсів, що посилаються на один і той самий файл. </para>
+
+<para>
+<informalexample
+><para
+>Створення календаря на основі наявного файла із назвою <filename
+><replaceable
+>vacation.ics</replaceable
+></filename
+>:</para>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--create</option
+> <option
+><replaceable
+>vacation.ics</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para
+>Ресурс буде названо <quote
+>vacation</quote
+> з використанням <option
+>--list-calendars</option
+></para>
+
+<para
+>За допомогою &konsolekalendar; не можна вилучати ресурси <acronym
+>Akonadi</acronym
+>. Для цього вам доведеться скористатися &korganizer; або <application
+>akonadiconsole</application
+>. </para>
+
+</sect1>
+
+<sect1 id="exporting">
+<title
+>Експорт до інших форматів</title>
+
+<para
+>&konsolekalendar; може експортувати календар до інших добре відомих форматів. Експорт є особливою формою перегляду. Типово, записи про події буде показано у форматі <quote
+>тексту &konsolekalendar;</quote
+>. Щоб змінити формат перегляду, скористайтеся аргументом параметра командного рядка <parameter
+>--export-type</parameter
+>.</para>
+
+<para
+>Щоб переглянути список всіх форматів експорту, які підтримуються програмою, скористайтесь параметром <parameter
+>--export-list</parameter
+>, у вигляді команди:</para>
+
+<para>
+<informalexample>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--export-list</option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="formats">
+<title
+>Формати експорту</title>
+
+<para
+>У цьому розділі описано деякі (але не обов’язково всі) з підтримуваних форматів.</para>
+
+<sect2 id="native-format">
+<title
+>Текстовий формат &konsolekalendar;</title>
+
+<para
+>Текстовий формат &konsolekalendar; є рідним форматом &konsolekalendar;, його розроблено для того, щоб зробити читання та обробку наступними скриптами зручною.</para>
+
+<para
+>Текстовий формат запису &konsolekalendar; виглядає так: <informalexample
+> <screen
+>Дата:\t&lt;Дата події&gt;(дддд рррр-ММ-дд)
+[\t&lt;Час початку події&gt;(гг:хх) - &lt;Час завершення події&gt;(гг:хх)]
+Короткий підсумок:
+\t&lt;Резюме події | "(резюме не вказано)"&gt;
+Місце події:
+\t&lt;Місце події | "(місця не вказано)"&gt;
+Опис:
+\t&lt;Опис події | "(опису події не вказано)"&gt;
+UID:
+\t&lt;UID події&gt;
+--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+<para
+>Output of <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Text</option
+></userinput
+>: <informalexample
+> <screen
+>Дата:   Вівторок 2016-11-29
+        08:00 - 09:00
+Короткий підсумок:
+        Робоча нарада
+Місце проведення:
+        Конференц-зал
+Опис:
+        Зустріч з персоналом для обговорення проєкту.
+UID:
+        &konsolekalendar;-1924621834.134
+--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="short-format">
+<title
+>Скорочений текстовий формат &konsolekalendar;</title>
+
+<para
+>Скорочений текстовий формат — це компактніша згорнутіша версія рідного формату &konsolekalendar;.</para>
+
+<para
+>Скорочений текстовий формат &konsolekalendar; виглядає так: <informalexample
+> <screen
+>[--------------------------------------------------]
+{&lt;Дата події&gt;(дддд рррр-ММ-дд)]
+[&lt;Час початку події&gt;(гг:хх) - &lt;Час завершення події&gt;(гг:хх) | "\t"]
+\t&lt;Резюме події | \t&gt;[, &lt;Місце події&gt;]
+\t\t&lt;Опис події | "\t"&gt;
+</screen>
+</informalexample>
+</para>
+
+<para
+>Output of <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Short</option
+></userinput
+>: <informalexample
+> <screen
+>--------------------------------------------------
+Вівторок 2016-11-29
+08:00 - 09:00   Робоча нарада, Конференц-зал
+                Зустріч з персоналом для обговорення проєкту.
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="csv-format">
+<title
+>Формат значень, відокремлених комами (<acronym
+>CSV</acronym
+>)</title>
+
+<para
+>У форматі значень, відокремлиних комами, значення запису події буде показано у тому ж порядку, що і у текстовому форматі &konsolekalendar;. Єдиною різницею є те, що всі відомості окремого запису буде подано у одного рядка зі значеннями, відокремленими комами. Отримані в результаті такого експорту файли, можна напряму імпортувати до програм електронних таблиць, зокрема &calligrasheets;, <application
+>OpenOffice.org Calc</application
+> і <application
+>&Microsoft; Excel</application
+>. Крім того, формат <acronym
+>CSV</acronym
+> є простим для наступної обробки скриптами.</para>
+
+<para
+>Формат значень, відокремлених комами (<acronym
+>CSV</acronym
+>): <informalexample
+> <screen
+>"День тижня, День місяця, Рік","ГГ:ХХ","День тижня, День місяця, Рік","ГГ:ХХ","Резюме","Місце","Опис","UID"
+</screen>
+</informalexample>
+</para>
+
+<para
+>Виведення команди <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>CSV</option
+></userinput
+>: <informalexample
+> <screen
+>"Вівторок, 29 листопада, 2016","08:00","Вівторок, 29 листопада, 2016","09:00","Робоча нарада","Конференц-зала","Нарада у великій конференц- \
+залі із усім персоналом.","&konsolekalendar;-1924621834.134"
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="html-format">
+<title
+>Формат &HTML;</title>
+
+<para
+>За формату експорту &HTML; буде створено коректний файл &HTML;, придатний для опублікування у <acronym
+>WWW</acronym
+>. Цей формат експорту не придатний для наступної обробки скриптами, але дуже зручний для оприлюднення календарів для публічного перегляду.</para>
+<!--FIXME
+exports only the template without any incidence data
+<para
+><emphasis
+>TODO:</emphasis
+> Insert screenshot here</para>
+-->
+</sect2>
+
+<sect2 id="html-month-format">
+<title
+>Формат <acronym
+>HTMLmonth</acronym
+></title>
+
+<para
+>За використання цього формату буде створено файл &HTML; з переліком усіх зустрічей протягом місяців, вказаних у діапазоні дат. Цей формат експорту не придатний для наступної обробки скриптами, але дуже зручний для оприлюднення календарів для публічного перегляду.</para>
+<!--FIXME
+exports only the template without any incidence data
+<para
+><emphasis
+>TODO:</emphasis
+> Insert screenshot here</para>
+-->
+</sect2>
+
+</sect1>
+
+<sect1 id="importing">
+<title
+>Імпорт календарів</title>
+
+<para
+>&konsolekalendar; може імпортувати файли календарів iCal або vCal до календаря &kde;. Всі записи про події з імпортованого календаря буде вставлено, буде пропущено ідентичні записи подій, які вже є частиною календаря.</para>
+
+<para>
+<informalexample
+><para
+>Щоб імпортувати файл календаря <replaceable
+>vacation.ics</replaceable
+> до календаря із ідентифікатором <replaceable
+>8</replaceable
+> віддайте таку команду:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--import <replaceable
+>vacation.ics</replaceable
+></option
+> <option
+>--calendar <replaceable
+>8</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="features-commandline-options">
+<title
+>Параметри командного рядка</title>
+
+<para
+>&konsolekalendar; підтримує такі параметри:</para>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row>
+  <entry
+>Параметр</entry>
+  <entry
+>Опис</entry>
+</row>
+</thead>
+<tbody>
+<row>
+  <entry
+><emphasis
+>Загальні параметри:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--help, --help-all</option
+></entry>
+  <entry
+>Показує довідку з параметрів програми.</entry>
+</row>
+<row>
+  <entry
+><option
+>--author</option
+></entry>
+  <entry
+>Показує відомості про авторів програми.</entry>
+</row>
+<row>
+  <entry
+><option
+>-v, --version</option
+></entry>
+  <entry
+>Показує відомості щодо версії програми.</entry>
+</row>
+<row>
+  <entry
+><option
+>--license</option
+></entry>
+  <entry
+>Показує інформацію про ліцензування програми.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Параметри:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--verbose</option
+></entry>
+  <entry
+>Виводить корисні повідомлення під час виконання програми.</entry>
+</row>
+<row>
+  <entry
+><option
+>--dry-run</option
+></entry>
+  <entry
+>Виводить інформацію про те, що має бути зроблено, але при цьому програма не виконує жодних дій. Жодного файла не буде змінено, не буде виконано вставки, зміни вилучення будь-якого з існуючих файлів, а також не буде створено жодного нового файла.</entry>
+</row>
+<row>
+  <entry
+><option
+>--allow-gui</option
+></entry>
+  <entry
+>Дозволити ресурси, яким для роботи може знадобитися інтерактивний інтерфейс користувача. За звичайних операцій буде використано лише ресурси, яким ніколи не потрібно буде втручання користувача (наприклад, календарі у файлах).</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Типи подій (ці параметри можуть бути поєднані):</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--event</option
+></entry>
+  <entry
+>Тільки для подій (типовий).</entry>
+</row>
+<row>
+  <entry
+><option
+>--todo</option
+></entry>
+  <entry
+>Працювати лише із записами завдань. (Ще не реалізовано)</entry>
+</row>
+<row>
+  <entry
+><option
+>--journal</option
+></entry>
+  <entry
+>Працювати лише із записами журналів. (Ще не реалізовано)</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Головні режими роботи:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--view</option
+></entry>
+  <entry
+>Вивести події календаря у вказаному експортному форматі.</entry>
+</row>
+<row>
+  <entry
+><option
+>--add</option
+></entry>
+  <entry
+>Додає подію до календаря.</entry>
+</row>
+<row>
+  <entry
+><option
+>--change</option
+></entry>
+  <entry
+>Змінює існуючу подію з календаря.</entry>
+</row>
+<row>
+  <entry
+><option
+>--delete</option
+></entry>
+  <entry
+>Вилучає існуючу подію з календаря.</entry>
+</row>
+<row>
+  <entry
+><option
+>--create</option
+> <replaceable
+>&nbsp;назва_файла</replaceable
+> </entry>
+  <entry
+>Створити календар з наявного файла.</entry>
+</row>
+<row>
+  <entry
+><option
+>--import</option
+> <replaceable
+>&nbsp;імпортований-файл</replaceable
+></entry>
+  <entry
+>Імпортувати вказаний календар до основного календаря.</entry>
+</row>
+<row>
+  <entry
+><option
+>--list-calendars</option
+></entry>
+  <entry
+>Показати список доступних календарів.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Модифікатори дій:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--all</option
+></entry>
+  <entry
+>Переглянути всі записи календаря.</entry>
+</row>
+<row>
+  <entry
+><option
+>--next</option
+></entry>
+  <entry
+>Переглянути наступну подію з календаря.</entry>
+</row>
+<row>
+  <entry
+><option
+>--show-next</option
+> <replaceable
+>&nbsp;кількість_днів</replaceable
+></entry>
+  <entry
+>Показати записи про події протягом вказаної кількості днів від поточного дня.</entry>
+</row>
+<row>
+  <entry
+><option
+>--uid</option
+> <replaceable
+>&nbsp;UID</replaceable
+></entry>
+  <entry
+>Переглянути, вилучити або змінити запис про подію з цим унікальним рядковим ідентифікатором (UID).</entry>
+</row>
+<row>
+  <entry
+><option
+>--date</option
+> <replaceable
+>&nbsp;дата</replaceable
+></entry>
+  <entry
+>Почати з вказаного дня [РРРР-ММ-ДД]. Типовою датою є поточний день</entry>
+</row>
+<row>
+  <entry
+><option
+>--time</option
+> <replaceable
+>&nbsp;час</replaceable
+></entry>
+  <entry
+>Почати з вказаного часу [ГГ:ХХ]. Типовим часом перегляду є 07:00. <para
+>Щоб додати або змінити рухомий запис про подію, скористайтеся параметрами <option
+>--time float</option
+> та <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--end-date</option
+> <replaceable
+>&nbsp;дата-завершення</replaceable
+></entry>
+  <entry
+>Завершити у цей день [РРРР-ММ-ДД]. Типове значення, встановлюється параметром <option
+>--date</option
+>.</entry>
+</row>
+<row>
+  <entry
+><option
+>--end-time</option
+> <replaceable
+>&nbsp;час-завершення</replaceable
+></entry>
+  <entry
+>Завершити у цей час [ГГ:ХХ]. Типовим часом завершення перегляду є 17:00. <para
+>Щоб додати або змінити рухомий запис про подію, скористайтеся параметрами <option
+>--time float</option
+> та <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-start</option
+> <replaceable
+>&nbsp;час-епохи</replaceable
+></entry>
+  <entry
+>Почати з вказаного часу [у секундах епохи].</entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-end</option
+> <replaceable
+>&nbsp;час-епохи</replaceable
+></entry>
+  <entry
+>Завершити у цей час [у секундах епохи].</entry>
+</row>
+<row>
+  <entry
+><option
+>--summary</option
+> <replaceable
+>&nbsp;резюме</replaceable
+></entry>
+  <entry
+>Додати резюме події (працює з add і change).</entry>
+</row>
+<row>
+  <entry
+><option
+>--description</option
+> <replaceable
+>&nbsp;опис</replaceable
+></entry>
+  <entry
+>Додати опис події (працює з add і change).</entry>
+</row>
+<row>
+  <entry
+><option
+>--location</option
+> <replaceable
+>&nbsp;місце</replaceable
+></entry>
+  <entry
+>Додати місце події (працює з add і change).</entry>
+</row>
+<row>
+  <entry
+><option
+>--calendar</option
+> <replaceable
+>&nbsp;ідентифікатор</replaceable
+></entry>
+  <entry
+>Вказує, який календар слід використовувати. <para
+>Якщо не вказано іншого, буде використано ваш типовий ресурс &korganizer;.</para
+></entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Параметри експорту:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--export-type</option
+> <replaceable
+>&nbsp;тип-експорту</replaceable
+></entry>
+  <entry
+>Експортувати до файла вказаного типу. Типовим типом файлів для експорту є «Text»</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-file</option
+> <replaceable
+>&nbsp;файл-експорту</replaceable
+></entry>
+  <entry
+>Експортувати до файла. Типово, виведену інформацію буде записано до стандартного виводу інформації.</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-list</option
+></entry>
+  <entry
+>Вивести список типів для експорту і завершити роботу програми.</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Запитання і відповіді</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Які файли налаштувань використовує &konsolekalendar;?</para>
+</question>
+<answer>
+<para
+>Ніяких.</para>
+</answer>
+</qandaentry>
+
+
+<qandaentry>
+<question>
+<para
+>Яка назва виконуваного файла &konsolekalendar;?</para>
+</question>
+<answer>
+<para
+>Назвою виконуваного файла &konsolekalendar; є <application
+>konsolekalendar</application
+>.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>За якою специфікацією слід вказувати дати?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; не зважатиме на дати, вказані у командному рядку, якщо їх не буде вказано відповідно до стандартів ISO 8601, а саме: РРРР-ММ-ДД. Де РРРР відповідає чотиризначному запису року (на зразок 2003), ММ відповідає двоцифровому запису місяця (01,02,..,12), а ДД відповідає двоцифровому запису дня (01,02,...,31).</para>
+<para
+>&konsolekalendar; завжди експортує дати відповідно до формату ISO 8601.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>За якою специфікацією слід вказувати час?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; не зважатиме на значення часу, вказані у командному рядку, якщо їх не буде вказано відповідно до стандартів ISO 8601, а саме: ГГ:ХХ:СС. Де ГГ відповідає двоцифровому запису годин (01,02,...,24), ХХ  відповідає двоцифровому запису хвилин (01,02,..,60), а СС відповідає двоцифровому запису секунд (01,02,...,60).</para>
+<para
+>&konsolekalendar; завжди експортує час відповідно до формату ISO 8601.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Чи буде &konsolekalendar; вставляти записи про події, які повністю збігаються з тими, які вже є у календарі?</para>
+</question>
+<answer>
+<para
+>Ні. Див. наступне питання.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Як &konsolekalendar; визначає, чи ідентичний запис про подію записові, який вже є у календарі?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; перевіряє вказані дату і час початку, дату і час завершення, а також резюме з відповідними даними записів про події з календаря. Записи про події вважатимуться ідентичними, якщо всі ці три значення збігатимуться зі значеннями існуючої події. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Чи можна зробити нерухому подію рухомою?</para>
+</question>
+<answer>
+<para
+>Так. Скористайтеся параметром <option
+>--time float</option
+> разом з параметром <option
+>--change</option
+>. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Чому у більшості з форматів експорту виводиться і <acronym
+>UID</acronym
+>?</para>
+</question>
+<answer>
+<para
+>Тому що, якщо вам потрібно вилучити або змінити подію, слід вказувати <acronym
+>UID</acronym
+>. Якщо ви не бажаєте бачити у виведеній інформації <acronym
+>UID</acronym
+> подій, скористайтеся типом експорту <emphasis
+>short</emphasis
+> (<option
+>--export-type short</option
+>). </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Як додати своє питання до цих <acronym
+>ЧаП</acronym
+>?</para>
+</question>
+<answer>
+<para
+>Надсилайте ваші запитання за адресою електронної пошти <email
+>winter@kde.org</email
+>.</para>
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+
+<chapter id="credits">
+
+<title
+>Подяки і ліцензія</title>
+
+<para
+>Авторські права на програму &konsolekalendar; належать (©2002–2007):</para>
+
+<itemizedlist>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Авторські права на документацію до програми належать (©2003):</para>
+<itemizedlist>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Переклад українською: Юрій Чорноіван <email
+>yurchor@ukr.net</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

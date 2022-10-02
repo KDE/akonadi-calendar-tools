@@ -1,0 +1,1370 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+
+  <!ENTITY konsolekalendar "<application
+>KonsoleKalendar</application
+>">
+  <!ENTITY kappname "KonsoleKalendar">
+  <!ENTITY package "kdepim">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Estonian  "INCLUDE">
+]>
+<!-- The language must NOT be changed here. -->
+
+<book id="konsolekalendar" lang="&language;">
+
+<bookinfo id="konsolekalendarinfo">
+
+<title
+>&konsolekalendar;i käsiraamat</title>
+
+<authorgroup>
+<author
+><firstname
+>Tuukka</firstname
+> <surname
+>Pasanen</surname
+> <affiliation
+><address
+><email
+>illuusio@mailcity.com</email
+></address
+></affiliation>
+</author>
+
+<author
+><firstname
+>Allen</firstname
+> <surname
+>Winter</surname
+> <affiliation
+><address
+><email
+>winterz@kde.org</email
+></address
+></affiliation>
+</author>
+
+<othercredit role="reviewer"
+><firstname
+>Malcolm</firstname
+> <surname
+>Hunter</surname
+> <affiliation
+><address
+><email
+>malcolm.hunter@gmx.co.uk</email
+></address
+></affiliation>
+<contrib
+>Korrektor</contrib>
+</othercredit>
+<othercredit role="translator"
+><firstname
+>Marek</firstname
+> <surname
+>Laane</surname
+> <affiliation
+><address
+><email
+>bald@starman.ee</email
+></address
+></affiliation
+><contrib
+>Tõlge eesti keelde</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2002</year
+><year
+>2004</year
+><holder
+>Tuukka Pasanen</holder>
+</copyright>
+
+<copyright>
+<year
+>2003</year
+><year
+>2007</year
+><holder
+>Allen Winter</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Don't change format of date and version of the documentation -->
+
+<date
+>2004-04-15</date>
+<releaseinfo
+>1.1.1</releaseinfo>
+
+<abstract>
+<para
+>&konsolekalendar; on &kde; kalendrite käsurealiides.</para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>&package;</keyword>
+<keyword
+>&kappname;</keyword>
+<keyword
+>KOrganizer</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Sissejuhatus</title>
+
+<para
+>&konsolekalendar; &kde; kalendrite käsurealiides. See võimaldab vaadata, lisada, eemaldada või muuta kalendris esinevaid sündmusi käsureal või skriptikeele vahendusel. Lisaks võib &konsolekalendar; luua uue &kde; kalendri, eksportida &kde; kalendri paljudesse muudesse vormingutesse ning importida mõne muu &kde; kalendri.</para>
+
+<para
+>Põhirežiimis näitab &konsolekalendar; käesoleva päeva vaikekalendri sündmusi (ajavahemikus 7:00 kuni 17:00).</para>
+
+<para
+>&konsolekalendar;i põhiomadused: <itemizedlist>
+<listitem
+><para
+>Kalendrikirjete näitamine alguskuupäevast/ajast lõppkuupäeva/ajani</para
+></listitem>
+<listitem
+><para
+>Kalendrikirjete lisamine</para
+></listitem>
+<listitem
+><para
+>Kalendrikirjete kustutamine</para
+></listitem>
+<listitem
+><para
+>Kalendrikirjete muutmine</para
+></listitem>
+<listitem
+><para
+>Uue kalendri loomine</para
+></listitem>
+<listitem
+><para
+>Kalendrikirjete eksport muudesse failivormingutesse</para
+></listitem>
+<listitem
+><para
+>Olemasoleva &kde; kalendri import</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>&konsolekalendar; <emphasis
+>ei ole</emphasis
+> lihtsalt veel üks &kde; kalendri (st. &korganizer;i) graafiline kasutajaliides. &konsolekalendar; on mõeldud just sellisteks juhtumiteks, kus graafilise kasutajaliidese kasutamine ei ole mõttekas või võimalikki.</para>
+
+<para
+>&konsolekalendar; <emphasis
+>ei paku</emphasis
+> kõiki võimalusi kasutaja kalendrile päringute esitamiseks ning autoril ei ole ka kavas midagi sellist kunagi pakkuda. Küll pakutakse põhilisi käsurea võtmeid ligipääsuks kalendri sündmustele ajalises järgnevuses ehk ajatemplite alusel. </para>
+
+</chapter>
+
+<chapter id="features">
+<title
+>Võimalused</title>
+<para
+>Selles peatükis tutvustame &konsolekalendar;i mitmesuguseid võimalusi ehk siis asju, mida saab määrata käsureal (pea meeles, et &konsolekalendar; ei ole mitte graafiline kasutajaliides, vaid ainult ja ainult käsureaprogramm).</para>
+
+<para
+>Samuti tuleb siin juttu kalendri sündmuste lisamisest, kustutamisest ja muutmisest ning sündmuste eksportimisest muudesse failivormingutesse. Käsitleme ka &kde; kalendrite loomis ja importimist. </para>
+
+<sect1 id="viewing">
+<title
+>Sündmuste vaatamine</title>
+
+<para
+>Vaikerežiimis või võtmega <parameter
+>--view</parameter
+> näitab &konsolekalendar; kõiki määratud ajavahemikku jäävaid sündmusi.</para>
+
+<para>
+<informalexample
+><para
+>Kõigi tänaste sündmuste (7:00 kuni 17:00) vaatamiseks anna käsk:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Järgmises näites saab näha kõiki nädalasse 18.-22. august jäävaid sündmusi:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--view</option
+> <option
+>--date <replaceable
+>2003-08-18</replaceable
+> </option
+> <option
+>--end-date <replaceable
+>2003-08-22</replaceable
+></option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Järgnevate sündmuste nägemiseks kalendris alates käesolevast hetkest anna käsk:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Kõigi järgmise viie päeva sündmuste vaatamiseks anna käsk:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--show-next</option
+> <replaceable
+>5</replaceable>
+
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="inserting">
+<title
+>Sündmuste lisamine</title>
+
+<para
+>&konsolekalendar; võib lisada sündmusi &kde; kalendrisse, kui anda käsureal võti <parameter
+>--add</parameter
+>. Edukalt sisestatud sündmused ilmuvad kohe nähtavale &kde; kalendrirakendustes (näiteks &korganizer;).</para>
+
+<para>
+<informalexample
+><para
+>Järgmises näites lisatakse kasutaja vaikekalendrisse sündmus, mis algab 2003-06-04 (4. juunil 2003) 10:00 ja lõpeb 12:00 ning mille kokkuvõte on "Arsti visiit":</para>
+
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--date <replaceable
+>2003-06-04</replaceable
+></option
+> <option
+>--time <replaceable
+>10:00</replaceable
+></option
+> \
+<option
+>--end-time <replaceable
+>12:00</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Arsti visiit"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Selles näites lisatakse kasutaja vaikekalendrisse sünnipäev:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--date <replaceable
+>2003-06-06</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Minu sünnipäev"</replaceable
+></option
+> \
+<option
+>--description <replaceable
+>"Aeg pidu panna"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Siin aga lisatakse jagatud <replaceable
+>puhkuse</replaceable
+> kalendrisse nädal puhkust:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--file <replaceable
+>vacation.ics</replaceable
+></option
+> <option
+>--date <replaceable
+>2003-08-01</replaceable
+></option
+> \
+<option
+>--end-date <replaceable
+>2003-08-07</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Puhkus"</replaceable
+></option
+> <option
+>--description <replaceable
+>"Keegi ei saa mind kätte!"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="deleting">
+<title
+>Kirjete eemaldamine</title>
+
+<para
+>&konsolekalendar; toetab kirjete eemaldamist kalendrifailist, kui anda käsureal võti <parameter
+>--delete</parameter
+>. Eemaldatavaid kalendrikirjeid saab täpselt määrata nende unikaalse identifikaatori (<acronym
+>UID</acronym
+>) abil, kasutades võtit <parameter
+>--uid</parameter
+>. <acronym
+>UIDs</acronym
+> leidmiseks tuleks esmalt sündmust vaadata, mida saab teha võtmega <parameter
+>--view</parameter
+>.</para>
+
+<para
+>Edukalt eemaldatud sündmused kustutatakse kohe ka &kde; kalendrirakendustest (näiteks &korganizer;).</para>
+
+<warning
+><para
+>Kui midagi kalendrist kustutada, <emphasis
+>ei saa</emphasis
+> seda tagasi võtta! See tähendab, et kui sündmus on kustutatud, siis on see lõplik.</para
+></warning>
+
+<para>
+<informalexample
+><para
+>Selles näites kustutame kalendrist kirje, mille <acronym
+>UID</acronym
+> on <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--delete</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="changing">
+<title
+>Kirjete muutmine</title>
+
+<para
+>&konsolekalendar; toetab olemasolevate kirjete muutmist kalendrifailis, kui anda käsureal võti <parameter
+>--change</parameter
+>. Muudetavaid kalendrikirjeid saab täpselt määrata nende unikaalse identifikaatori (<acronym
+>UID</acronym
+>) abil, kasutades võtit <parameter
+>--uid</parameter
+>. <acronym
+>UIDs</acronym
+> leidmiseks tuleks esmalt sündmust vaadata, mida saab teha võtmega <parameter
+>--view</parameter
+>.</para>
+
+<para
+>Muutmine käib sarnaselt lisamisega: muuta saab sündmuse algus- ja lõppkuupäeva, algus- ja lõppaega, kirjeldust ja kokkuvõtet. Edukalt muudetud sündmused on muudetud kujul kohe näha ka &kde; kalendrirakendustes (näiteks &korganizer;).</para>
+
+<para
+><emphasis
+>Näide:</emphasis
+> muudame kokkuvõtet ja kirjeldust kalendrikirjel, mille <acronym
+>UID</acronym
+> on <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<informalexample>
+<para
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--change</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Lasen oma pead uurida"</replaceable
+></option
+> <option
+>--description <replaceable
+>"selle arsti juurde ma enam ei lähe!"</replaceable
+></option
+> </userinput
+> </para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="creating">
+<title
+>Uue kalendrifaili loomine</title>
+
+<para
+>&konsolekalendar;i abil võib luua uue &kde; kalendrifaili. Et kirjet ei saa lisada kalendrisse, mida ei ole olemas, tuleb esmalt luua fail, mida saab teha võtmetega <parameter
+>--create</parameter
+> ja <parameter
+>--file</parameter
+>.</para>
+
+<para>
+<informalexample
+><para
+>Loome kalendrifaili nimega <filename
+><replaceable
+>/data/share/calendars/vacation.ics</replaceable
+></filename
+>:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--create</option
+> <option
+>--file <replaceable
+>/data/share/calendars/vacation.ics</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="exporting">
+<title
+>Eksportimine muudesse vormingutesse</title>
+
+<para
+>&konsolekalendar; võib eksportida &kde; kalendri muudesse levinud vormingutesse. Eksportimine om vaatamise spetsiifiline vorm. Vaikimisi vaadatakse sündmusi <quote
+>&konsolekalendar;i teksti</quote
+> vormingus. Vaatevormingu muutmisest tuleb kasutada võtit <parameter
+>--export-type</parameter
+>.</para>
+
+<para
+>Kõigi toetatud ekspordivormingute nägemiseks kasuta võtit <parameter
+>--export-list</parameter
+>:</para>
+
+<para>
+<informalexample>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--export-list</option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="formats">
+<title
+>Ekspordivormingud</title>
+
+<para
+>Selles osas kirjeldatakse mõningaid, kuid tingimata mitte kõiki toetatud vorminguid.</para>
+
+<sect2 id="native-format">
+<title
+>&konsolekalendar;i teksti vorming</title>
+
+<para
+>&konsolekalendar;i teksti vorming on &konsolekalendar;i loomupärane vorming, mis on mõeldud võimalikult mugavaks lugemiseks ja võimalikele skriptidele parsitavaks.</para>
+
+<para
+>&konsolekalendar;i teksti vorming on: <informalexample
+> <screen
+>Date:\t&lt;Sündmuse kuupäev&gt;(dddd yyyy-MM-dd)
+[\t&lt;Sündmuse algusaeg&gt;(hh:mm) - &lt;Sündmuse lõpuaeg&gt;(hh:mm)]
+Summary:
+\t&lt;Sündmuse kokkuvõte | "(kokkuvõte puudub)"&gt;
+Location:
+\t&lt;Sündmuse asukoht | "(asukoht puudub)"&gt;
+Description:
+\t&lt;Sündmuse kirjeldus | "(kirjeldus puudub)"&gt;
+UID:
+\t&lt;Sündmuse UID&gt;
+--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+<para
+>Näiteks: <informalexample
+> <screen
+>Date:   Teisipäev 2003-11-01
+        08:00 - 09:00
+Summary:
+        Üldkoosolek
+Location:
+        Konverentsisaal
+Description:
+        Kõigi töötajate koosolek projekti arutamiseks.
+UID:
+        &konsolekalendar;-1128954167.1013
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="short-format">
+<title
+>&konsolekalendar;i lühikese teksti vorming</title>
+
+<para
+>Lühikese teksti vorming võimaldab &konsolekalendar;i loomupärase vormingu kompaktsemat ja napisõnalisemat esitust.</para>
+
+<para
+>&konsolekalendar;i lühikese teksti vorming on: <informalexample
+> <screen
+>[--------------------------------------------------]
+{&lt;Sündmuse kuupäev&gt;(dddd yyyy-MM-dd)]
+[&lt;Sündmuse algusaeg&gt;(hh:mm) - &lt;Sündmuse lõpuaeg&gt;(hh:mm) | "\t"]
+\t&lt;Sündmuse kokkuvõte | \t&gt;[, &lt;Sündmuse asukoht&gt;]
+\t\t&lt;Sündmuse kirjeldus | "\t"&gt;
+</screen>
+</informalexample>
+</para>
+
+<para
+>Näiteks: <informalexample
+> <screen
+>--------------------------------------------------
+Teisipäev 2003-11-01
+08:00 - 09:00   Üldkoosolek, Konverentsisaal
+                Kõigi töötajate koosolek projekti arutamiseks.
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="csv-format">
+<title
+>Komadega eraldatud väärtuste (<acronym
+>CSV</acronym
+>) vorming</title>
+
+<para
+>Komadega eraldatud väärtuste vorming näitab sündmuste väärtusi samas järjekorras nagu &konsolekalendar;i teksti vorming. Ainus erinevus on see, et kogu info on esitatud ühes reas, iga väli eraldatud komaga. Tulemuseks olevat eksportfaili saab vahetult importida tabelarvutusprogrammidesse, näiteks &kspread;, <application
+>OpenOffice.org Calc</application
+> ja <application
+>&Microsoft; Excel</application
+>. Ka skriptid tulevad <acronym
+>CSV</acronym
+> vorminguga hõlpsasti toime.</para>
+
+<para
+>Komadega eraldatud väärtuste (<acronym
+>CSV</acronym
+>) vorming on: <informalexample
+> <screen
+>YYYY-MM-DD,HH:MM,YYYY-MM-DD,HH:MM,Kokkuvõte,Asukoht,Kirjeldus,UID
+</screen>
+</informalexample>
+</para>
+
+<para
+>Näiteks: <informalexample
+> <screen
+>2003-11-01,08:00,2003-11-01,09:00,Üldkoosolek,Konverentsisaal,Kõigi töötajate koosolek \
+suures konverentsisaalis.,&konsolekalendar;-1128954167.1013
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="html-format">
+<title
+>&HTML; vorming</title>
+
+<para
+>&HTML; ekspordivorming annab tulemuseks korrektse &HTML;-faili, mida saab avaldada veebis (<acronym
+>WWW</acronym
+>). See ekspordivorming ei sobi eriti skriptidele, kuid on samas väga mõnus avalikult väljapandavate kalendrite loomiseks.</para>
+
+<para
+><emphasis
+>TEGEMATA:</emphasis
+> lisada siia pilt</para>
+
+</sect2>
+
+<sect2 id="html-month-format">
+<title
+><acronym
+>HTMLmonth</acronym
+> vorming</title>
+
+<para
+>See vorming annab tulemuseks &HTML;-faili, mis näitab kõiki kohtumisi kuus määratud ajavahemikus. See ekspordivorming ei sobi eriti skriptidele, kuid on samas väga mõnus avalikult väljapandavate kalendrite loomiseks.</para>
+
+<para
+><emphasis
+>TEGEMATA:</emphasis
+> lisada siia pilt</para>
+
+</sect2>
+
+</sect1>
+
+<sect1 id="importing">
+<title
+>Kalendrite importimine</title>
+
+<para
+>&konsolekalendar; suudab importida iCali või vCali kalendrifaili &kde; kalendriks. Lisatakse kõik imporditava kalendri sündmused, ka siis, kui need peaksid olema identsed. Loodetavasti juba järgmises &konsolekalendar;i versioonis identseid sündmusi enam ei lisata.</para>
+
+<para>
+<informalexample
+><para
+>Importimaks kalendrifaili <filename
+><replaceable
+>another.ics</replaceable
+></filename
+> kalendrisse <filename
+><replaceable
+>current.ics</replaceable
+></filename
+>:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--import <replaceable
+>another.ics</replaceable
+></option
+> <option
+>--file <replaceable
+>current.ics</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="features-commandline-options">
+<title
+>Käsurea võtmed</title>
+
+<para
+>&konsolekalendar; toetab järgmisi võtmeid:</para>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row>
+  <entry
+>Võti</entry>
+  <entry
+>Kirjeldus</entry>
+</row>
+</thead>
+<tbody>
+<row>
+  <entry
+><option
+>--help, --help-all</option
+></entry>
+  <entry
+>Näitab abiteadet rakenduse võtmete kohta.</entry>
+</row>
+<row>
+  <entry
+><option
+>--author</option
+></entry>
+  <entry
+>Näitab infot rakenduse autori kohta.</entry>
+</row>
+<row>
+  <entry
+><option
+>-v, --version</option
+></entry>
+  <entry
+>Näitab rakenduse versiooni.</entry>
+</row>
+<row>
+  <entry
+><option
+>--license</option
+></entry>
+  <entry
+>Näitab infot rakenduse litsentsi kohta.</entry>
+</row>
+<row>
+  <entry
+><option
+>--verbose</option
+></entry>
+  <entry
+>Näitab töö ajal selgitavaid teateid.</entry>
+</row>
+<row>
+  <entry
+><option
+>--dry-run</option
+></entry>
+  <entry
+>Näitab, mida mingi käsk teeb, kuid ei rakenda seda tegelikult. Ei muuda ühtegi faili, ei lisa, eemalda ega muuda olemasolevaid faile ega loo uusi faile.</entry>
+</row>
+<row>
+  <entry
+><option
+>--allow-gui</option
+></entry>
+  <entry
+>Ressursside võimaldamine, mis võivad vajada interaktiivset kasutajaliidest. Tavalise töö korral kasutatakse ainult ressursse, mis ei vaja kunagi kasutajaliidest (näiteks failipõhised kalendrid).</entry>
+</row>
+<row>
+  <entry
+><option
+>--file</option
+> <replaceable
+>&nbsp;kalendrifail</replaceable
+></entry>
+  <entry
+>Määrab, millist kalendrifaili kasutada. <para
+>Kui on määramata, kasutatakse &korganizer;i vaikekalendrit.</para
+></entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Peamised töörežiimid:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--view</option
+></entry>
+  <entry
+>Näitab kalendris olevaid sündmusi määratud vormingus.</entry>
+</row>
+<row>
+  <entry
+><option
+>--add</option
+></entry>
+  <entry
+>Lisab kalendrisse sündmuse.</entry>
+</row>
+<row>
+  <entry
+><option
+>--change</option
+></entry>
+  <entry
+>Muudab kalendris olevat sündmust.</entry>
+</row>
+<row>
+  <entry
+><option
+>--delete</option
+></entry>
+  <entry
+>Eemaldab kalendrist sündmuse.</entry>
+</row>
+<row>
+  <entry
+><option
+>--create</option
+></entry>
+  <entry
+>Loob uue kalendrikirje, kui sellist veel ei ole.</entry>
+</row>
+<row>
+  <entry
+><option
+>--import</option
+> <replaceable
+>&nbsp;importfail</replaceable
+></entry>
+  <entry
+>Impordib määratud kalendri põhikalendrisse.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Töörežiimide lisavõtmed:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--all</option
+></entry>
+  <entry
+>Näitab kõiki kalendrikirjeid.</entry>
+</row>
+<row>
+  <entry
+><option
+>--next</option
+></entry>
+  <entry
+>Näitab järgmist sündmust kalendris.</entry>
+</row>
+<row>
+  <entry
+><option
+>--show-next</option
+> <replaceable
+>&nbsp;päevad</replaceable
+></entry>
+  <entry
+>Näitab alates määratud päevast sündmusi järgneval # päeval.</entry>
+</row>
+<row>
+  <entry
+><option
+>--uid</option
+> <replaceable
+>&nbsp;UID</replaceable
+></entry>
+  <entry
+>Näitab, kustutab või muudab sündmust, millel on määratud unikaalne identifikaator.</entry>
+</row>
+<row>
+  <entry
+><option
+>--date</option
+> <replaceable
+>&nbsp;kuupäev</replaceable
+></entry>
+  <entry
+>Alustab määratud kuupäevaga [YYYY-MM-DD]. Vaikimisi on see täna (Today)</entry>
+</row>
+<row>
+  <entry
+><option
+>--time</option
+> <replaceable
+>&nbsp;kellaaeg</replaceable
+></entry>
+  <entry
+>Alustab määratud ajaga [HH:MM]. Vaikimisi 07:00. <para
+>Liikuva sündmuse lisamiseks või muutmiseks kasuta võtit <option
+>--time float</option
+> või <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--end-date</option
+> <replaceable
+>&nbsp;lõppkuupäev</replaceable
+></entry>
+  <entry
+>Lõpetab määratud kuupäevaga [YYYY-MM-DD]. Vaikimisi sama, mis <replaceable
+>--date</replaceable
+>.</entry>
+</row>
+<row>
+  <entry
+><option
+>--end-time</option
+> <replaceable
+>&nbsp;lõppaeg</replaceable
+></entry>
+  <entry
+>Lõpetab määratud ajal [HH:MM]. Vaikimisi 17:00 <para
+>Liikuva sündmuse lisamiseks või muutmiseks kasuta võtit <option
+>--time float</option
+> või <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-start</option
+> <replaceable
+>&nbsp;epohhiaeg</replaceable
+></entry>
+  <entry
+>Alustab määratud ajast [sekundit alates epohhist].</entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-end</option
+> <replaceable
+>&nbsp;epohhiaeg</replaceable
+></entry>
+  <entry
+>Lõpetab määratud ajal [sekundit alates epohhist].</entry>
+</row>
+<row>
+  <entry
+><option
+>--summary</option
+> <replaceable
+>&nbsp;kokkuvõte</replaceable
+></entry>
+  <entry
+>Lisab sündmusele kokkuvõtte (lisamisel ja muutmisel).</entry>
+</row>
+<row>
+  <entry
+><option
+>--description</option
+> <replaceable
+>&nbsp;kirjeldus</replaceable
+></entry>
+  <entry
+>Lisab sündmusele kirjelduse (lisamisel ja muutmisel).</entry>
+</row>
+<row>
+  <entry
+><option
+>--location</option
+> <replaceable
+>&nbsp;asukoht</replaceable
+></entry>
+  <entry
+>Lisab sündmusele asukoha (lisamisel ja muutmisel).</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Ekspordivõtmed:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--export-type</option
+> <replaceable
+>&nbsp;eksporttüüp</replaceable
+></entry>
+  <entry
+>Eksportfaili tüüp. Vaikimisi on see tekst (Text)</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-file</option
+> <replaceable
+>&nbsp;eksportfail</replaceable
+></entry>
+  <entry
+>Ekspordib faili. Vaikimisi kirjutatakse väljund standardväljundisse (stdout).</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-list</option
+></entry>
+  <entry
+>Näitab toetatud eksporttüüpide nimekirja.</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Küsimused ja vastused</title>
+&reporting.bugs; &updating.documentation; <qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Milliseid konfiguratsioonifaile &konsolekalendar; kasutab?</para>
+</question>
+<answer>
+<para
+>Mitte ühtki.</para>
+</answer>
+</qandaentry>
+
+
+<qandaentry>
+<question>
+<para
+>Mis on &konsolekalendar;i rakenduse nimi?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar;i rakenduse nimi on <application
+>konsolekalendar</application
+>.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Milline on kuupäeva vorming?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; ei arvesta käsureal antud kuupäevi, kui need ei vasta ISO 8601 standardile, see tähendab, ei ole kujul YYYY-MM-DD, kus YYYY on neljakohaline aastanumber (näiteks 2003), MM kahekohaline kuu (01, 02...12) ja DD kahekohaline päev (01, 02...31).</para>
+<para
+>&konsolekalendar; ekspordib kuupäeva alati vastavalt ISO 8601 vormingule.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Milline on kellaaja vorming?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; ei arvesta käsureal antud kellaaegu, kui need ei vasta ISO 8601 standardile, see tähendab, ei ole kujul HH:MM:SS, kus HH on kahekohaline tundide number (01, 02...24), MM kahekohaline minutite number (01, 02...60) ja DD kahekohaline sekundite number (01, 02...60).</para>
+<para
+>&konsolekalendar; ekspordib kellaaja alati vastavalt ISO 8601 vormingule.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Kas &konsolekalendar; lisab uue sündmuse, kui see on identne kalendris juba leiduva sündmusega?</para>
+</question>
+<answer>
+<para
+>Ei. Vaata järgmist küsimust.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Kuidas &konsolekalendar; määrab, kas lisatav sündmus on identne mõne juba kalendris olemasoleva sündmusega?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; võrdleb lisatava sündmuse algus- ja lõppkuupäeva, algus- ja lõppkellaaega ning kokkuvõtet kõigi kalendris olemasolevate sündmuste vastavate väärtustega. Sündmused loetakse identseks, kui kõik kolm vääartust kattuvad. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Kas mitteliikuvat sündmust saab muuta liikuvaks?</para>
+</question>
+<answer>
+<para
+>Jah. Kasuta võtit <option
+>--time float</option
+> koos võtmega <option
+>--change</option
+>. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Miks enamik eksportimisvorminguid lisab <acronym
+>UID</acronym
+>?</para>
+</question>
+<answer>
+<para
+>Sündmuse kustutamiseks või muutmiseks on vaja teada selle <acronym
+>UID</acronym
+>-d. Kui sa ei soovi <acronym
+>UIDs</acronym
+> lisamist, kasuta <emphasis
+>lühikest</emphasis
+> eksporditüüpi (<option
+>--export-type short</option
+>). </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Kuidas saan lisada oma küsimuse sellele <acronym
+>FAQ</acronym
+>-ile?</para>
+</question>
+<answer>
+<para
+>Saada oma küsimus aadressile <email
+>winter@kde.org</email
+>.</para>
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+
+<chapter id="credits">
+
+<title
+>Autorid ja litsents</title>
+
+<para
+>&konsolekalendar;i rakenduse autoriõigus 2002-2007:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Dokumentatsiooni autoriõigus 2003:</para>
+<itemizedlist>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Tõlge eesti keelde: Marek Laane <email
+>bald@starman.ee</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Paigaldamine</title>
+
+<sect1 id="obtaining-application">
+<title
+>&konsolekalendar;i hankimine</title>
+&install.intro.documentation; <para
+>&konsolekalendar; kuulub &kde;4 koosseisu ega ole omaette saadaval. </para>
+
+</sect1>
+
+<sect1 id="requirements">
+<title
+>Nõuded</title>
+
+<para
+>&konsolekalendar;i paigaldamiseks on vajalikud &kde; standardteegid (paketid <filename
+>kdelibs</filename
+> ja <filename
+>kdepimlibs</filename
+>). Lähtetekstist kompileerimiseks on vajalikud ka &Qt;, <filename
+>kdelibs</filename
+> ja <filename
+>kdepimlibs</filename
+> arenduspaketid.</para>
+
+<para
+>Muudatuste nimekirja leiab failist <filename
+>ChangeLog</filename
+>.</para>
+</sect1>
+
+<sect1 id="configuration">
+<title
+>Seadistamine</title>
+
+<para
+>Et &konsolekalendar; töötaks &kde; töölaual, ei ole vaja midagi spetsiaalselt seadistada.</para>
+
+</sect1>
+
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

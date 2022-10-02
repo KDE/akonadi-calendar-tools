@@ -1,0 +1,693 @@
+# translation of konsolekalendar.po to Estonian
+# Copyright (C) 2002, 2005 Free Software Foundation, Inc.
+#
+# Toomas Nurmoja <toomas.nurmoja@mail.ee>, 2002.
+# Hasso Tepper <hasso@kde.org>, 2005.
+# Marek Laane <bald@smail.ee>, 2009, 2014, 2016, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: konsolekalendar\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-11-26 00:28+0000\n"
+"PO-Revision-Date: 2019-11-16 21:06+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Toomas Nurmoja, Marek Laane"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "toomas.nurmoja@mail.ee, qiilaq69@gmail.com"
+
+#: konsolekalendar.cpp:82
+#, kde-format
+msgid "There are no calendars available."
+msgstr "Ühtegi kalendrit pole saadaval."
+
+#: konsolekalendar.cpp:97
+#, kde-format
+msgid "(Read only)"
+msgstr "(kirjutuskaitstud)"
+
+#: konsolekalendar.cpp:147
+#, kde-format
+msgid "Create Calendar <Dry Run>: %1"
+msgstr "Kalendri loomise <test>: %1"
+
+#: konsolekalendar.cpp:153
+#, kde-format
+msgid "Create Calendar <Verbose>: %1"
+msgstr "Kalendri loomine <selgitavas režiimis>: %1"
+
+#: konsolekalendar.cpp:172
+#, kde-format
+msgid "View Events <Dry Run>:"
+msgstr "Sündmuste vaatamise <test>:"
+
+#: konsolekalendar.cpp:194
+#, kde-format
+msgid "View Event <Verbose>:"
+msgstr "Sündmuse vaatamine <selgitavas režiimis>:"
+
+#: konsolekalendar.cpp:267
+#, kde-format
+msgid "Sorry, export to HTML by UID is not supported yet"
+msgstr "Vabandust, eksport HTML vormingusse UID järgi pole veel toetatud"
+
+#: konsolekalendar.cpp:288
+#, kde-format
+msgid "Events:"
+msgstr "Sündmused:"
+
+#: konsolekalendar.cpp:292
+#, kde-format
+msgid "Events: %1"
+msgstr "Sündmused: %1"
+
+#: konsolekalendar.cpp:294
+#, kde-format
+msgid "Events: %1 - %2"
+msgstr "Sündmused: %1 - %2"
+
+#: konsolekalendar.cpp:434 konsolekalendaradd.cpp:175
+#: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
+#: konsolekalendardelete.cpp:82
+#, kde-format
+msgid "  What:  %1"
+msgstr "  Mis:  %1"
+
+#: konsolekalendar.cpp:436 konsolekalendaradd.cpp:177
+#: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
+#: konsolekalendardelete.cpp:85
+#, kde-format
+msgid "  Begin: %1"
+msgstr "  Algus: %1"
+
+#: konsolekalendar.cpp:438 konsolekalendaradd.cpp:179
+#: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
+#: konsolekalendardelete.cpp:87
+#, kde-format
+msgid "  End:   %1"
+msgstr "  Lõpp:   %1"
+
+#: konsolekalendar.cpp:441 konsolekalendaradd.cpp:182
+#, kde-format
+msgid "  No Time Associated with Event"
+msgstr "  Sündmusega pole seotud ühtki aega"
+
+#: konsolekalendar.cpp:444 konsolekalendaradd.cpp:185
+#: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
+#: konsolekalendardelete.cpp:89
+#, kde-format
+msgid "  Desc:  %1"
+msgstr "  Kirj:  %1"
+
+#: konsolekalendar.cpp:446 konsolekalendaradd.cpp:187
+#: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
+#: konsolekalendardelete.cpp:91
+#, kde-format
+msgid "  Location:  %1"
+msgstr "  Asukoht:  %1"
+
+#: konsolekalendaradd.cpp:61
+#, kde-format
+msgid "Insert Event <Dry Run>:"
+msgstr "Sündmuse lisamise <test>:"
+
+#: konsolekalendaradd.cpp:65
+#, kde-format
+msgid "Insert Event <Verbose>:"
+msgstr "Sündmuse lisamine <selgitavas režiimis>:"
+
+#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:133
+#, kde-format
+msgid "Calendar is invalid. Please specify one with --calendar"
+msgstr "Kalender on vigane. Palun määra kalender võtmega --calendar"
+
+#: konsolekalendaradd.cpp:104
+#, kde-format
+msgid "Success: \"%1\" inserted"
+msgstr "Õnnestus: \"%1\" lisatud"
+
+#: konsolekalendaradd.cpp:106
+#, kde-format
+msgid "Failure: \"%1\" not inserted"
+msgstr "Nurjus: \"%1\" jäi lisamata"
+
+#: konsolekalendaradd.cpp:147
+#, kde-format
+msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+msgstr ""
+"Sündmuse lisamine jäeti vahele, sest UID \"%1\" on juba teada. <Selgitavas "
+"režiimis>"
+
+#: konsolekalendaradd.cpp:154
+#, kde-format
+msgid "Add Event with UID \"%1\". <Verbose>"
+msgstr "Sündmuse lisamine UID-ga \"%1\". <Selgitavas režiimis>"
+
+#: konsolekalendarchange.cpp:50
+#, kde-format
+msgid "Change Event <Dry Run>:"
+msgstr "Sündmuse muutmise <test>:"
+
+#: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
+#, kde-format
+msgid "To Event <Dry Run>:"
+msgstr "Sündmusele <test>:"
+
+#: konsolekalendarchange.cpp:59
+#, kde-format
+msgid "Change Event <Verbose>:"
+msgstr "Sündmuse muutmine <selgitavas režiimis>:"
+
+#: konsolekalendarchange.cpp:101
+#, kde-format
+msgid "Success: \"%1\" changed"
+msgstr "Õnnestus: \"%1\" muudetud"
+
+#: konsolekalendarchange.cpp:103
+#, kde-format
+msgid "Failure: \"%1\" not changed"
+msgstr "Nurjus: \"%1\" jäi muutmata"
+
+#: konsolekalendarchange.cpp:114 konsolekalendarchange.cpp:130
+#: konsolekalendardelete.cpp:80
+#, kde-format
+msgid "  UID:   %1"
+msgstr "  UID:   %1"
+
+#: konsolekalendardelete.cpp:48
+#, kde-format
+msgid "Delete Event <Dry Run>:"
+msgstr "Sündmuse kustutamise <test>:"
+
+#: konsolekalendardelete.cpp:54
+#, kde-format
+msgid "Delete Event <Verbose>:"
+msgstr "Sündmuse kustutamine <selgitavas režiimis>:"
+
+#: konsolekalendardelete.cpp:67
+#, kde-format
+msgid "Success: \"%1\" deleted"
+msgstr "Õnnestus: \"%1\" kustutatud"
+
+#: konsolekalendardelete.cpp:69
+#, kde-format
+msgid "Error deleting: \"%1\""
+msgstr "Tõrge \"%1\" kustutamisel"
+
+#: konsolekalendarexports.cpp:59
+#, kde-format
+msgid "Date:"
+msgstr "Kuupäev:"
+
+#: konsolekalendarexports.cpp:68
+#, kde-format
+msgid "Summary:"
+msgstr "Kokkuvõte:"
+
+#: konsolekalendarexports.cpp:72
+#, kde-format
+msgid "(no summary available)"
+msgstr "(kokkuvõtet pole)"
+
+#: konsolekalendarexports.cpp:76
+#, kde-format
+msgid "Location:"
+msgstr "Asukoht:"
+
+#: konsolekalendarexports.cpp:80
+#, kde-format
+msgid "(no location available)"
+msgstr "(asukohta pole)"
+
+#: konsolekalendarexports.cpp:84
+#, kde-format
+msgid "Description:"
+msgstr "Kirjeldus:"
+
+#: konsolekalendarexports.cpp:88
+#, kde-format
+msgid "(no description available)"
+msgstr "(kirjeldust pole)"
+
+#: konsolekalendarexports.cpp:92
+#, kde-format
+msgid "UID:"
+msgstr "UID:"
+
+#: konsolekalendarexports.cpp:120
+#, kde-format
+msgid "[all day]\t"
+msgstr "[kogu päev]\t"
+
+#: konsolekalendarexports.cpp:171
+#, kde-format
+msgid ","
+msgstr ","
+
+#: konsolekalendarexports.cpp:172
+#, kde-format
+msgid "\""
+msgstr "\""
+
+#: main.cpp:59
+#, kde-format
+msgid "KonsoleKalendar"
+msgstr "KonsoleKalendar"
+
+#: main.cpp:61
+#, kde-format
+msgid "A command line interface to KDE calendars"
+msgstr "KDE kalendrite käsurealiides"
+
+#: main.cpp:63
+#, kde-format
+msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
+msgstr "(c) 2002-2009: Tuukka Pasanen ja Allen Winter"
+
+#: main.cpp:65
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: main.cpp:65
+#, kde-format
+msgid "Bug fixing"
+msgstr "Vigade parandamine"
+
+#: main.cpp:66
+#, kde-format
+msgid "Allen Winter"
+msgstr "Allen Winter"
+
+#: main.cpp:66
+#, kde-format
+msgid "Maintainer"
+msgstr "Hooldaja"
+
+#: main.cpp:67
+#, kde-format
+msgid "Tuukka Pasanen"
+msgstr "Tuukka Pasanen"
+
+#: main.cpp:67
+#, kde-format
+msgid "Author"
+msgstr "Autor"
+
+#: main.cpp:73
+#, kde-format
+msgid "Print helpful runtime messages"
+msgstr "Näitab töötamise ajal abiteateid"
+
+#: main.cpp:74
+#, kde-format
+msgid "Print what would have been done, but do not execute"
+msgstr "Näitab, mida saab teha, aga ei tee päriselt"
+
+#: main.cpp:75
+#, kde-format
+msgid "Allow calendars which might need an interactive user interface"
+msgstr "Kalendrite lubamine, mis võivad vajada interaktiivset kasutajaliidest"
+
+#: main.cpp:76
+#, kde-format
+msgid "Operate for Events only (Default)"
+msgstr "  ainult sündmuste korral (vaikimisi)"
+
+#: main.cpp:77
+#, kde-format
+msgid "Operate for To-dos only [NOT WORKING YET]"
+msgstr "  ainult ülesannete korral [EI TOIMI VEEL]"
+
+#: main.cpp:78
+#, kde-format
+msgid "Operate for Journals only [NOT WORKING YET]"
+msgstr "  ainult päeviku sissekannete korral [EI TOIMI VEEL]"
+
+#: main.cpp:79
+#, kde-format
+msgid "Print incidences in specified export format"
+msgstr "Intsidentide näitamine määratud eksportvormingus"
+
+#: main.cpp:80
+#, kde-format
+msgid "Insert an incidence into the calendar"
+msgstr "Intsidendi lisamine kalendrisse"
+
+#: main.cpp:81
+#, kde-format
+msgid "Modify an existing incidence"
+msgstr "Olemasoleva intsidendi muutmine"
+
+#: main.cpp:82
+#, kde-format
+msgid "Remove an existing incidence"
+msgstr "Olemasoleva intsidendi eemaldamine"
+
+#: main.cpp:83
+#, kde-format
+msgid "Create new Akonadi Resource for file"
+msgstr "Uue Akonadi ressursi loomine failile"
+
+#: main.cpp:85
+#, kde-format
+msgid "Import this calendar to main calendar"
+msgstr "Käesoleva kalendri import põhikalendrisse"
+
+#: main.cpp:86
+#, kde-format
+msgid "List available calendars"
+msgstr "Saadaolevate kalendrite loend"
+
+#: main.cpp:87
+#, kde-format
+msgid "View all calendar entries, ignoring date/time options"
+msgstr "Kalendri kõigi kirjete vaatamine, kuupäeva/kellaajavalikute eiramine"
+
+#: main.cpp:88
+#, kde-format
+msgid "View next activity in calendar"
+msgstr "Järgmise sündmuse vaatamine kalendris"
+
+#: main.cpp:90
+#, kde-format
+msgid "From start date show next # days' activities"
+msgstr "Alates alguspäevast näidatakse # päeva sündmusi"
+
+#: main.cpp:91
+#, kde-format
+msgid "Incidence Unique-string identifier"
+msgstr "Intsidendi unikaalne identifikaator"
+
+#: main.cpp:92
+#, kde-format
+msgid "Start from this day [YYYY-MM-DD]"
+msgstr "Alates päevast [YYYY-MM-DD]"
+
+#: main.cpp:93
+#, kde-format
+msgid "Start from this time [HH:MM:SS]"
+msgstr "Alates kellaajast [HH:MM:SS]"
+
+#: main.cpp:94
+#, kde-format
+msgid "End at this day [YYYY-MM-DD]"
+msgstr "Kuni päevani [YYYY-MM-DD]"
+
+#: main.cpp:95
+#, kde-format
+msgid "End at this time [HH:MM:SS]"
+msgstr "Kuni kellaajani [HH:MM:SS]"
+
+#: main.cpp:97
+#, kde-format
+msgid "Start from this time [secs since epoch]"
+msgstr "Alates kellaajast [sekundeid epohhist]"
+
+#: main.cpp:99
+#, kde-format
+msgid "End at this time [secs since epoch]"
+msgstr "Kuni kellaajani [sekundeid epohhist]"
+
+#: main.cpp:101
+#, kde-format
+msgid "Add summary to incidence (for add/change modes)"
+msgstr "Intsidendile kokkuvõtte lisamine (lisamis/muutmisrežiimis)"
+
+#: main.cpp:103
+#, kde-format
+msgid "Add description to incidence (for add/change modes)"
+msgstr "Intsidendile kirjelduse lisamine (lisamis/muutmisrežiimis)"
+
+#: main.cpp:106
+#, kde-format
+msgid "Add location to incidence (for add/change modes)"
+msgstr "Intsidendile asukoha lisamine (lisamis/muutmisrežiimis)"
+
+#: main.cpp:109
+#, kde-format
+msgid "Calendar to use when creating a new incidence"
+msgstr "Uue sündmuse loomisel kasutatav kalender"
+
+#: main.cpp:112
+#, kde-format
+msgid "Export file type (Default: text)"
+msgstr "Eksportfaili tüüp (vaikimisi: text)"
+
+#: main.cpp:114
+#, kde-format
+msgid "Export to file (Default: stdout)"
+msgstr "Ekport faili (vaikimisi: stdout)"
+
+#: main.cpp:115
+#, kde-format
+msgid "Print list of export types supported and exit"
+msgstr "Toetatud eksporttüüpide nimekirja näitamine ja väljumine"
+
+#: main.cpp:164
+#, kde-format
+msgid "%1 supports these export formats:"
+msgstr "%1 toetab järgmisi ekspordivrominguid:"
+
+#: main.cpp:165
+#, kde-format
+msgctxt "the default export format"
+msgid "  %1 [Default]"
+msgstr "  %1 [Vaikimisi]"
+
+#: main.cpp:166
+#, kde-format
+msgctxt "short text export"
+msgid "  %1 (like %2, but more compact)"
+msgstr "  %1 (nagu %2, aga kompaktsem)"
+
+#: main.cpp:167
+#, kde-format
+msgctxt "HTML export"
+msgid "  %1"
+msgstr "  %1"
+
+#: main.cpp:168
+#, kde-format
+msgctxt "HTMLmonth export"
+msgid "  %1 (like %2, but in a month view)"
+msgstr "  %1 (nagu %2, aga kuuvaatena)"
+
+#: main.cpp:170
+#, kde-format
+msgctxt "comma-separated values export"
+msgid "  %1 (Comma-Separated Values)"
+msgstr "  %1 (komadega eraldatud väärtused)"
+
+#: main.cpp:185
+#, kde-format
+msgid "Sorry, To-dos are not working yet."
+msgstr "Vabandust, ülesandeid ei saa veel kasutada."
+
+#: main.cpp:191
+#, kde-format
+msgid "Sorry, Journals are not working yet."
+msgstr "Vabandust, päevikut ei saa veel kasutada."
+
+#: main.cpp:223
+#, kde-format
+msgid "Invalid Export Type Specified: %1"
+msgstr "Määrati vigane eksporttüüp: %1"
+
+#: main.cpp:382
+#, kde-format
+msgid "Invalid Start Date Specified: %1"
+msgstr "Määrati vigane alguskuupäev: %1"
+
+#: main.cpp:407
+#, kde-format
+msgid "Invalid Start Time Specified: %1"
+msgstr "Määrati vigane algusaeg: %1"
+
+#: main.cpp:432
+#, kde-format
+msgid "Invalid End Date Specified: %1"
+msgstr "Määrati vigane lõppkuupäev: %1"
+
+#: main.cpp:452
+#, kde-format
+msgid "Invalid Date Count Specified: %1"
+msgstr "Määrati vigane päevade arv: %1"
+
+#: main.cpp:480
+#, kde-format
+msgid "Invalid End Time Specified: %1"
+msgstr "Määrati vigane lõppaeg: %1"
+
+#: main.cpp:673
+#, kde-format
+msgid ""
+"Only 1 operation mode (view, add, change, delete, create) permitted at any "
+"one time"
+msgstr ""
+"Korraga on lubatud ainult üks tegutsemisrežiim (vaatamine, lisamine, "
+"muutmine, kustutamine, loomine)"
+
+#: main.cpp:684
+#, kde-format
+msgid "Ending Date/Time occurs before the Starting Date/Time"
+msgstr "Lõppkuupäev/aeg on varasem kui alguskuupäev/aeg"
+
+#: main.cpp:703
+#, kde-format
+msgid "Calendar %1 successfully imported"
+msgstr "Kalender %1 edukalt limporditud"
+
+#: main.cpp:706
+#, kde-format
+msgid "Unable to import calendar: %1"
+msgstr "Kalendri import nurjus: %1"
+
+#: main.cpp:717
+#, kde-format
+msgid "Attempting to insert an event that already exists"
+msgstr "Püüti lisada sündmus, mis on juba olemas"
+
+#: main.cpp:727 main.cpp:747
+#, kde-format
+msgid "Missing event UID: use --uid command line option"
+msgstr "Puudub sündmuse UID: kasuta käsureavõtit --uid"
+
+#: main.cpp:735
+#, kde-format
+msgid "No such event UID: change event failed"
+msgstr "Sellist sündmuse UID-d pole olemas: muutmine nurjus"
+
+#: main.cpp:755
+#, kde-format
+msgid "No such event UID: delete event failed"
+msgstr "Sellist sündmuse UID-d pole olemas: kustutamine nurjus"
+
+#: main.cpp:766
+#, kde-format
+msgid "Cannot open specified export file: %1"
+msgstr "Määratud eksportfaili avamine nurjus: %1"
+
+#: main.cpp:776
+#, kde-format
+msgid "Cannot create Akonadi resource from file: %1"
+msgstr "Akonadi ressursi loomine failist nurjus: %1"
+
+#~ msgid "Incidence types (these options can be combined):"
+#~ msgstr "Intsidendi tüübid (valikuid saab kombineerida):"
+
+#~ msgid "Major operation modes:"
+#~ msgstr "Peamised tegutsemisrežiimid:"
+
+#~ msgid "Operation modifiers:"
+#~ msgstr "Toimingute võtmed:"
+
+#~ msgid "Export options:"
+#~ msgstr "Ekspordivõtmed:"
+
+#, fuzzy
+#~| msgid ""
+#~| "Examples:\n"
+#~| "  konsolekalendar --view\n"
+#~| "  konsolekalendar --list-calendars\n"
+#~| "  konsolekalendar --add --collection 42 --date 2003-06-04 --time 10:00 --"
+#~| "end-time 12:00 \\\n"
+#~| "                  --summary \"Doctor Visit\" --description \"Get My Head "
+#~| "Examined\"\n"
+#~| "  konsolekalendar --delete --uid KOrganizer-1740326.803"
+#~ msgid ""
+#~ "Examples:\n"
+#~ "  konsolekalendar --view\n"
+#~ "  konsolekalendar --list-calendars\n"
+#~ "  konsolekalendar --add --calendar 42 --date 2016-12-04 --time 10:00 --"
+#~ "end-time 12:00 \\\n"
+#~ "                  --summary \"Doctor Visit\" --description \"Get My Head "
+#~ "Examined\"\n"
+#~ "  konsolekalendar --delete --uid KOrganizer-1740326.803"
+#~ msgstr ""
+#~ "Examples:\n"
+#~ "  konsolekalendar --view\n"
+#~ "  konsolekalendar --list-calendars\n"
+#~ "  konsolekalendar --add --collection 42 --date 2003-06-04 --time 10:00 --"
+#~ "end-time 12:00 \\\n"
+#~ "                  --summary \"Arsti visiit\" --description \"Las vaatab, "
+#~ "mis mu peaga lahti on\"\n"
+#~ "  konsolekalendar --delete --uid KOrganizer-1740326.803"
+
+#, fuzzy
+#~| msgid ""
+#~| "For more information visit the program home page at:\n"
+#~| "  http://pim.kde.org/components/konsolekalendar.php"
+#~ msgid ""
+#~ "For more information visit the program home page at:\n"
+#~ "  https://userbase.kde.org/KonsoleKalendar"
+#~ msgstr ""
+#~ "Rohkem infot leiab rakenduse koduleheküljelt:\n"
+#~ "  http://pim.kde.org/components/konsolekalendar.php"
+
+#~ msgid "  Create new calendar file if one does not exist"
+#~ msgstr "  Uue kalendrifaili loomine, kui seda veel pole"
+
+#~ msgid "View Event &lt;Verbose&gt;:"
+#~ msgstr "Sündmuse vaatamine &lt;selgitavas režiimis&gt;:"
+
+#~ msgid "Insert Event &lt;Dry Run&gt;:"
+#~ msgstr "Sündmuse muutmise &lt;test&gt;:"
+
+#~ msgid "Insert Event &lt;Verbose&gt;:"
+#~ msgstr "Sündmuse muutmine &lt;selgitavas režiimis&gt;:"
+
+#~ msgid "Change Event &lt;Dry Run&gt;:"
+#~ msgstr "Sündmuse muutmise &lt;test&gt;:"
+
+#~ msgid "To Event &lt;Dry Run&gt;:"
+#~ msgstr "Sündmuse &lt;test&gt;:"
+
+#~ msgid "Change Event &lt;Verbose&gt;:"
+#~ msgstr "Sündmuse muutmine &lt;selgitavas režiimis&gt;:"
+
+#~ msgid "Delete Event &lt;Dry Run&gt;:"
+#~ msgstr "Sündmuse kustutamise &lt;test&gt;:"
+
+#~ msgid "Delete Event &lt;Verbose&gt;:"
+#~ msgstr "Sündmuse kustutamine &lt;selgitavas režiimis&gt;:"
+
+#~ msgid "Specify which calendar you want to use"
+#~ msgstr "Määrab, millist kalendrit kasutada"
+
+#~ msgid "Attempting to create a remote file %1"
+#~ msgstr "Püütakse luua võrgufaili %1"
+
+#~ msgid "Calendar %1 already exists"
+#~ msgstr "Kalender %1 on juba olemas"
+
+#~ msgid "Calendar %1 successfully created"
+#~ msgstr "Kalender %1 edukalt loodud"
+
+#~ msgid "Unable to create calendar: %1"
+#~ msgstr "Kalendri loomine nurjus: %1"
+
+#~ msgid "Calendar file not found %1"
+#~ msgstr "Kalendrifaili ei leitud: %1"
+
+#~ msgid "Try --create to create new calendar file"
+#~ msgstr "Proovi võtmega --create luua uus kalendrifail"
+
+#~ msgid "Active Calendar"
+#~ msgstr "Aktiivne kalender"
+
+#~ msgid "Default Calendar"
+#~ msgstr "Vaikimisi kalender"

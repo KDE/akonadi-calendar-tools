@@ -1,0 +1,656 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: konsolekalendar\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-11-26 00:28+0000\n"
+"PO-Revision-Date: 2020-04-05 13:02+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.04.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "박신조"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde@peremen.name"
+
+#: konsolekalendar.cpp:82
+#, kde-format
+msgid "There are no calendars available."
+msgstr "사용 가능한 달력이 없습니다."
+
+#: konsolekalendar.cpp:97
+#, kde-format
+msgid "(Read only)"
+msgstr "(읽기 전용)"
+
+#: konsolekalendar.cpp:147
+#, kde-format
+msgid "Create Calendar <Dry Run>: %1"
+msgstr "달력 생성 <예비 실행>: %1"
+
+#: konsolekalendar.cpp:153
+#, kde-format
+msgid "Create Calendar <Verbose>: %1"
+msgstr "달력 생성 <자세히>: %1"
+
+#: konsolekalendar.cpp:172
+#, kde-format
+msgid "View Events <Dry Run>:"
+msgstr "일정 보기 <예비 실행>:"
+
+#: konsolekalendar.cpp:194
+#, kde-format
+msgid "View Event <Verbose>:"
+msgstr "일정 보기 <자세히>:"
+
+#: konsolekalendar.cpp:267
+#, kde-format
+msgid "Sorry, export to HTML by UID is not supported yet"
+msgstr "UID를 통한 HTML 내보내기는 아직 지원되지 않습니다"
+
+#: konsolekalendar.cpp:288
+#, kde-format
+msgid "Events:"
+msgstr "행사:"
+
+#: konsolekalendar.cpp:292
+#, kde-format
+msgid "Events: %1"
+msgstr "행사: %1"
+
+#: konsolekalendar.cpp:294
+#, kde-format
+msgid "Events: %1 - %2"
+msgstr "행사: %1 - %2"
+
+#: konsolekalendar.cpp:434 konsolekalendaradd.cpp:175
+#: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
+#: konsolekalendardelete.cpp:82
+#, kde-format
+msgid "  What:  %1"
+msgstr "  내용:  %1"
+
+#: konsolekalendar.cpp:436 konsolekalendaradd.cpp:177
+#: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
+#: konsolekalendardelete.cpp:85
+#, kde-format
+msgid "  Begin: %1"
+msgstr "  시작: %1"
+
+#: konsolekalendar.cpp:438 konsolekalendaradd.cpp:179
+#: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
+#: konsolekalendardelete.cpp:87
+#, kde-format
+msgid "  End:   %1"
+msgstr "  종료: %1"
+
+#: konsolekalendar.cpp:441 konsolekalendaradd.cpp:182
+#, kde-format
+msgid "  No Time Associated with Event"
+msgstr "  일정에 시간이 등록되지 않았음"
+
+#: konsolekalendar.cpp:444 konsolekalendaradd.cpp:185
+#: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
+#: konsolekalendardelete.cpp:89
+#, kde-format
+msgid "  Desc:  %1"
+msgstr "  설명: %1"
+
+#: konsolekalendar.cpp:446 konsolekalendaradd.cpp:187
+#: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
+#: konsolekalendardelete.cpp:91
+#, kde-format
+msgid "  Location:  %1"
+msgstr "  위치: %1"
+
+#: konsolekalendaradd.cpp:61
+#, kde-format
+msgid "Insert Event <Dry Run>:"
+msgstr "일정 삽입 <예비 실행>:"
+
+#: konsolekalendaradd.cpp:65
+#, kde-format
+msgid "Insert Event <Verbose>:"
+msgstr "일정 삽입 <자세히>:"
+
+#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:133
+#, kde-format
+msgid "Calendar is invalid. Please specify one with --calendar"
+msgstr "달력이 잘못되었습니다. --calendar 옵션으로 하나를 지정하십시오"
+
+#: konsolekalendaradd.cpp:104
+#, kde-format
+msgid "Success: \"%1\" inserted"
+msgstr "성공: \"%1\" 삽입됨"
+
+#: konsolekalendaradd.cpp:106
+#, kde-format
+msgid "Failure: \"%1\" not inserted"
+msgstr "실패: \"%1\" 삽입되지 않음"
+
+#: konsolekalendaradd.cpp:147
+#, kde-format
+msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+msgstr ""
+"UID \"%1\"이(가) 이미 알려져 있으므로 이벤트 삽입을 건너뜁니다. <Verbose>"
+
+#: konsolekalendaradd.cpp:154
+#, kde-format
+msgid "Add Event with UID \"%1\". <Verbose>"
+msgstr "UID가 \"%1\"인 이벤트를 추가합니다.<Verbose>"
+
+#: konsolekalendarchange.cpp:50
+#, kde-format
+msgid "Change Event <Dry Run>:"
+msgstr "일정 변경 <예비 실행>:"
+
+#: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
+#, kde-format
+msgid "To Event <Dry Run>:"
+msgstr "일정으로 <예비 실행>:"
+
+#: konsolekalendarchange.cpp:59
+#, kde-format
+msgid "Change Event <Verbose>:"
+msgstr "일정 변경 <자세히>:"
+
+#: konsolekalendarchange.cpp:101
+#, kde-format
+msgid "Success: \"%1\" changed"
+msgstr "성공: \"%1\" 변경됨"
+
+#: konsolekalendarchange.cpp:103
+#, kde-format
+msgid "Failure: \"%1\" not changed"
+msgstr "실패: \"%1\" 변경되지 않음"
+
+#: konsolekalendarchange.cpp:114 konsolekalendarchange.cpp:130
+#: konsolekalendardelete.cpp:80
+#, kde-format
+msgid "  UID:   %1"
+msgstr "  UID: %1"
+
+#: konsolekalendardelete.cpp:48
+#, kde-format
+msgid "Delete Event <Dry Run>:"
+msgstr "일정 삭제 <예비 실행>:"
+
+#: konsolekalendardelete.cpp:54
+#, kde-format
+msgid "Delete Event <Verbose>:"
+msgstr "일정 삭제 <자세히>:"
+
+#: konsolekalendardelete.cpp:67
+#, kde-format
+msgid "Success: \"%1\" deleted"
+msgstr "성공: \"%1\" 삭제됨"
+
+#: konsolekalendardelete.cpp:69
+#, kde-format
+msgid "Error deleting: \"%1\""
+msgstr "삭제 오류: \"%1\""
+
+#: konsolekalendarexports.cpp:59
+#, kde-format
+msgid "Date:"
+msgstr "날짜:"
+
+#: konsolekalendarexports.cpp:68
+#, kde-format
+msgid "Summary:"
+msgstr "요약:"
+
+#: konsolekalendarexports.cpp:72
+#, kde-format
+msgid "(no summary available)"
+msgstr "(요약 없음)"
+
+#: konsolekalendarexports.cpp:76
+#, kde-format
+msgid "Location:"
+msgstr "위치:"
+
+#: konsolekalendarexports.cpp:80
+#, kde-format
+msgid "(no location available)"
+msgstr "(위치 없음)"
+
+#: konsolekalendarexports.cpp:84
+#, kde-format
+msgid "Description:"
+msgstr "설명:"
+
+#: konsolekalendarexports.cpp:88
+#, kde-format
+msgid "(no description available)"
+msgstr "(설명 없음)"
+
+#: konsolekalendarexports.cpp:92
+#, kde-format
+msgid "UID:"
+msgstr "UID:"
+
+#: konsolekalendarexports.cpp:120
+#, kde-format
+msgid "[all day]\t"
+msgstr "[하루 종일]\t"
+
+#: konsolekalendarexports.cpp:171
+#, kde-format
+msgid ","
+msgstr ","
+
+#: konsolekalendarexports.cpp:172
+#, kde-format
+msgid "\""
+msgstr "\""
+
+#: main.cpp:59
+#, kde-format
+msgid "KonsoleKalendar"
+msgstr "KonsoleKalendar"
+
+#: main.cpp:61
+#, kde-format
+msgid "A command line interface to KDE calendars"
+msgstr "KDE 달력 명령행 인터페이스"
+
+#: main.cpp:63
+#, kde-format
+msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
+msgstr "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
+
+#: main.cpp:65
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: main.cpp:65
+#, kde-format
+msgid "Bug fixing"
+msgstr "버그 수정"
+
+#: main.cpp:66
+#, kde-format
+msgid "Allen Winter"
+msgstr "Allen Winter"
+
+#: main.cpp:66
+#, kde-format
+msgid "Maintainer"
+msgstr "관리자"
+
+#: main.cpp:67
+#, kde-format
+msgid "Tuukka Pasanen"
+msgstr "Tuukka Pasanen"
+
+#: main.cpp:67
+#, kde-format
+msgid "Author"
+msgstr "작성자"
+
+#: main.cpp:73
+#, kde-format
+msgid "Print helpful runtime messages"
+msgstr "유용한 런타임 메시지 인쇄"
+
+#: main.cpp:74
+#, kde-format
+msgid "Print what would have been done, but do not execute"
+msgstr "취할 행동을 출력만 하고 실행하지 않음"
+
+#: main.cpp:75
+#, kde-format
+msgid "Allow calendars which might need an interactive user interface"
+msgstr "인터랙티브 사용자 인터페이스가 필요할 수도 있는 달력 허용"
+
+#: main.cpp:76
+#, kde-format
+msgid "Operate for Events only (Default)"
+msgstr "일정에 대해서만 (기본값)"
+
+#: main.cpp:77
+#, kde-format
+msgid "Operate for To-dos only [NOT WORKING YET]"
+msgstr "할 일에 대해서만 [아직 지원하지 않음]"
+
+#: main.cpp:78
+#, kde-format
+msgid "Operate for Journals only [NOT WORKING YET]"
+msgstr "저널에 관해서만 [아직 지원하지 않음]"
+
+#: main.cpp:79
+#, kde-format
+msgid "Print incidences in specified export format"
+msgstr "지정한 내보내기 형식으로 사건 인쇄"
+
+#: main.cpp:80
+#, kde-format
+msgid "Insert an incidence into the calendar"
+msgstr "달력에 사건 추가"
+
+#: main.cpp:81
+#, kde-format
+msgid "Modify an existing incidence"
+msgstr "존재하는 사건 수정"
+
+#: main.cpp:82
+#, kde-format
+msgid "Remove an existing incidence"
+msgstr "존재하는 사건 삭제"
+
+#: main.cpp:83
+#, kde-format
+msgid "Create new Akonadi Resource for file"
+msgstr "파일에 해당하는 새 Akonadi 자원 만들기"
+
+#: main.cpp:85
+#, kde-format
+msgid "Import this calendar to main calendar"
+msgstr "이 달력을 기본 달력으로 가져오기"
+
+#: main.cpp:86
+#, kde-format
+msgid "List available calendars"
+msgstr "사용 가능한 달력 목록"
+
+#: main.cpp:87
+#, kde-format
+msgid "View all calendar entries, ignoring date/time options"
+msgstr "날짜/시간 옵션을 무시하고 모든 달력 항목 보기"
+
+#: main.cpp:88
+#, kde-format
+msgid "View next activity in calendar"
+msgstr "달력에서 다음 활동 보기"
+
+#: main.cpp:90
+#, kde-format
+msgid "From start date show next # days' activities"
+msgstr "시작 날짜부터 다음 #일 동안의 활동 보기"
+
+#: main.cpp:91
+#, kde-format
+msgid "Incidence Unique-string identifier"
+msgstr "사건별 유일한 문자열 식별자"
+
+#: main.cpp:92
+#, kde-format
+msgid "Start from this day [YYYY-MM-DD]"
+msgstr "이 날부터 시작 [YYYY-MM-DD]"
+
+#: main.cpp:93
+#, kde-format
+msgid "Start from this time [HH:MM:SS]"
+msgstr "이 시간부터 시작 [HH:MM:SS]"
+
+#: main.cpp:94
+#, kde-format
+msgid "End at this day [YYYY-MM-DD]"
+msgstr "이 날에 끝남 [YYYY-MM-DD]"
+
+#: main.cpp:95
+#, kde-format
+msgid "End at this time [HH:MM:SS]"
+msgstr "이 시간에 끝남 [HH:MM:SS]"
+
+#: main.cpp:97
+#, kde-format
+msgid "Start from this time [secs since epoch]"
+msgstr " 시간에 시작 [epoch 이후 초]"
+
+#: main.cpp:99
+#, kde-format
+msgid "End at this time [secs since epoch]"
+msgstr "이 시간에 종료 [epoch 이후 초]"
+
+#: main.cpp:101
+#, kde-format
+msgid "Add summary to incidence (for add/change modes)"
+msgstr "사건에 요약 추가 (추가/수정 모드에서)"
+
+#: main.cpp:103
+#, kde-format
+msgid "Add description to incidence (for add/change modes)"
+msgstr "사건에 설명 추가 (추가/수정 모드에서)"
+
+#: main.cpp:106
+#, kde-format
+msgid "Add location to incidence (for add/change modes)"
+msgstr "사건에 위치 추가 (추가/수정 모드에서)"
+
+#: main.cpp:109
+#, kde-format
+msgid "Calendar to use when creating a new incidence"
+msgstr "새 반복 항목을 만들 달력"
+
+#: main.cpp:112
+#, kde-format
+msgid "Export file type (Default: text)"
+msgstr "내보낼 파일 형식 (기본값: 텍스트)"
+
+#: main.cpp:114
+#, kde-format
+msgid "Export to file (Default: stdout)"
+msgstr "파일로 내보내기 (기본: 표준 출력)"
+
+#: main.cpp:115
+#, kde-format
+msgid "Print list of export types supported and exit"
+msgstr "지원되는 내보내기 형식 목록을 출력하고 종료"
+
+#: main.cpp:164
+#, kde-format
+msgid "%1 supports these export formats:"
+msgstr "%1은(는) 다음 출력 형식을 지원합니다:"
+
+#: main.cpp:165
+#, kde-format
+msgctxt "the default export format"
+msgid "  %1 [Default]"
+msgstr "  %1 [기본값]"
+
+#: main.cpp:166
+#, kde-format
+msgctxt "short text export"
+msgid "  %1 (like %2, but more compact)"
+msgstr "  %1 (%2와(과) 비슷하지만 더 작음)"
+
+#: main.cpp:167
+#, kde-format
+msgctxt "HTML export"
+msgid "  %1"
+msgstr "  %1"
+
+#: main.cpp:168
+#, kde-format
+msgctxt "HTMLmonth export"
+msgid "  %1 (like %2, but in a month view)"
+msgstr "  %1 (%2와(과) 같지만 달 단위 보기)"
+
+#: main.cpp:170
+#, kde-format
+msgctxt "comma-separated values export"
+msgid "  %1 (Comma-Separated Values)"
+msgstr "  %1 (쉼표로 구분된 값)"
+
+#: main.cpp:185
+#, kde-format
+msgid "Sorry, To-dos are not working yet."
+msgstr "작업은 아직 지원하지 않습니다."
+
+#: main.cpp:191
+#, kde-format
+msgid "Sorry, Journals are not working yet."
+msgstr "저널은 아직 지원하지 않습니다."
+
+#: main.cpp:223
+#, kde-format
+msgid "Invalid Export Type Specified: %1"
+msgstr "잘못된 내보내기 형식 지정됨: %1"
+
+#: main.cpp:382
+#, kde-format
+msgid "Invalid Start Date Specified: %1"
+msgstr "잘못된 시작 날짜 지정됨: %1"
+
+#: main.cpp:407
+#, kde-format
+msgid "Invalid Start Time Specified: %1"
+msgstr "잘못된 시작 시간 지정됨: %1"
+
+#: main.cpp:432
+#, kde-format
+msgid "Invalid End Date Specified: %1"
+msgstr "잘못된 종료 날짜 지정됨: %1"
+
+#: main.cpp:452
+#, kde-format
+msgid "Invalid Date Count Specified: %1"
+msgstr "잘못된 날짜 수 지정됨: %1"
+
+#: main.cpp:480
+#, kde-format
+msgid "Invalid End Time Specified: %1"
+msgstr "잘못된 종료 시간 지정됨: %1"
+
+#: main.cpp:673
+#, kde-format
+msgid ""
+"Only 1 operation mode (view, add, change, delete, create) permitted at any "
+"one time"
+msgstr "단일 진행 모드 (보기, 추가, 변경, 삭제, 만들기) 아무 때나 허용"
+
+#: main.cpp:684
+#, kde-format
+msgid "Ending Date/Time occurs before the Starting Date/Time"
+msgstr "시작 날짜/시간 전에 종료 날짜/시간 발생"
+
+#: main.cpp:703
+#, kde-format
+msgid "Calendar %1 successfully imported"
+msgstr "달력 %1을(를) 성공적으로 가져왔습니다"
+
+#: main.cpp:706
+#, kde-format
+msgid "Unable to import calendar: %1"
+msgstr "달력을 가져올 수 없습니다: %1"
+
+#: main.cpp:717
+#, kde-format
+msgid "Attempting to insert an event that already exists"
+msgstr "이미 있는 일정 삽입 시도"
+
+#: main.cpp:727 main.cpp:747
+#, kde-format
+msgid "Missing event UID: use --uid command line option"
+msgstr "없는 일정 UID: 사용 --uid 명령행 옵션"
+
+#: main.cpp:735
+#, kde-format
+msgid "No such event UID: change event failed"
+msgstr "그런 일정 UID없음: 일정 변경 실패"
+
+#: main.cpp:755
+#, kde-format
+msgid "No such event UID: delete event failed"
+msgstr "그런 일정 UID없음: 일정 삭제 실패"
+
+#: main.cpp:766
+#, kde-format
+msgid "Cannot open specified export file: %1"
+msgstr "지정된 내보내기 파일을 열 수 없습니다: %1"
+
+#: main.cpp:776
+#, kde-format
+msgid "Cannot create Akonadi resource from file: %1"
+msgstr "파일에서 Akonadi 자원을 만들 수 없음: %1"
+
+#~ msgid "Incidence types (these options can be combined):"
+#~ msgstr "사건 종류 (동시에 사용할 수 있음):"
+
+#~ msgid "Major operation modes:"
+#~ msgstr "주 진행 모드:"
+
+#~ msgid "Operation modifiers:"
+#~ msgstr "진행 수정자:"
+
+#~ msgid "Export options:"
+#~ msgstr "내보내기 옵션:"
+
+#~ msgid ""
+#~ "Examples:\n"
+#~ "  konsolekalendar --view\n"
+#~ "  konsolekalendar --list-calendars\n"
+#~ "  konsolekalendar --add --calendar 42 --date 2016-12-04 --time 10:00 --"
+#~ "end-time 12:00 \\\n"
+#~ "                  --summary \"Doctor Visit\" --description \"Get My Head "
+#~ "Examined\"\n"
+#~ "  konsolekalendar --delete --uid KOrganizer-1740326.803"
+#~ msgstr ""
+#~ "예시:\n"
+#~ "  konsolekalendar --view\n"
+#~ "  konsolekalendar --list-calendars\n"
+#~ "  konsolekalendar --add --collection 42 --date 2016-12-04 --time 10:00 --"
+#~ "end-time 12:00 \\\n"
+#~ "                  --summary \"의사 방문\" --description \"머리 검사\"\n"
+#~ "  konsolekalendar --delete --uid KOrganizer-1740326.803"
+
+#~ msgid ""
+#~ "Without any options konsolekalendar will output today's events\n"
+#~ "from 7am to 5pm or nothing at all if there aren't any"
+#~ msgstr ""
+#~ "옵션을 사용하지 않으면 konsolekalendar에서 오늘 오전 7시부터\n"
+#~ "오후 5시까지 예정된 행사를 출력하며, 없으면 아무것도 출력하지 않습니다"
+
+#~ msgid ""
+#~ "For more information visit the program home page at:\n"
+#~ "  https://userbase.kde.org/KonsoleKalendar"
+#~ msgstr ""
+#~ "더 많은 정보를 원하면 프로그램 홈페이지를 방문하십시오:\n"
+#~ "  http://userbase.kde.org/KonsoleKalendar"
+
+#~ msgid "  Create new calendar file if one does not exist"
+#~ msgstr "  존재하지 않을 경우 새 달력 파일 만들기"
+
+#~ msgid "Specify which calendar you want to use"
+#~ msgstr "사용할 달력 지정"
+
+#~ msgid "Attempting to create a remote file %1"
+#~ msgstr "원격 파일 %1을(를) 만드는 중"
+
+#~ msgid "Calendar %1 already exists"
+#~ msgstr "달력 %1이(가) 이미 존재함"
+
+#~ msgid "Calendar %1 successfully created"
+#~ msgstr "달력 %1을(를) 성공적으로 만들었습니다"
+
+#~ msgid "Unable to create calendar: %1"
+#~ msgstr "달력을 만들 수 없음: %1"
+
+#~ msgid "Calendar file not found %1"
+#~ msgstr "달력 파일을 찾을 수 없습니다 %1"
+
+#~ msgid "Try --create to create new calendar file"
+#~ msgstr "시도 --새 달력 파일을 만들기위해 만듦"
+
+#~ msgid "Active Calendar"
+#~ msgstr "달력 활성화"
+
+#~ msgid "Default Calendar"
+#~ msgstr "기본 달력"

@@ -1,0 +1,1434 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+
+  <!ENTITY konsolekalendar "<application
+>KonsoleKalendar</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+<!-- The language must NOT be changed here. -->
+
+<book id="konsolekalendar" lang="&language;">
+
+<bookinfo id="konsolekalendarinfo">
+
+<title
+>Het handboek van &konsolekalendar;</title>
+
+<authorgroup>
+<author
+><firstname
+>Tuukka</firstname
+> <surname
+>Pasanen</surname
+> <affiliation
+><address
+><email
+>illuusio@mailcity.com</email
+></address
+></affiliation>
+</author>
+
+<author
+><firstname
+>Allen</firstname
+> <surname
+>Winter</surname
+> <affiliation
+><address
+><email
+>winterz@kde.org</email
+></address
+></affiliation>
+</author>
+
+<othercredit role="reviewer"
+><firstname
+>Malcolm</firstname
+> <surname
+>Hunter</surname
+> <affiliation
+><address
+><email
+>malcolm.hunter@gmx.co.uk</email
+></address
+></affiliation>
+<contrib
+>Nalezer</contrib>
+</othercredit>
+&Tom.Albers;&Sander.Koning;&Natalie.Koning; 
+</authorgroup>
+
+<copyright>
+<year
+>2002</year
+><year
+>2004</year
+><holder
+>Tuukka Pasanen</holder>
+</copyright>
+
+<copyright>
+<year
+>2003</year
+><year
+>2007</year
+><holder
+>Allen Winter</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Don't change format of date and version of the documentation -->
+
+<date
+>2016-11-23</date>
+<releaseinfo
+>5.1.3 (Applications 16.12)</releaseinfo>
+
+<abstract>
+<para
+>Met &konsolekalendar; kunt u via een comandoregel de &kde;-agenda raadplegen.</para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>&package;</keyword>
+<keyword
+>&kappname;</keyword>
+<keyword
+>KOrganizer</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inleiding</title>
+
+<para
+>&konsolekalendar; is een interface op de commandoregel naar agenda's. U kunt evenementen bekijken, wijzigen of verwijderen vanaf een commandoregel of via een scripttaal. Tevens is het mogelijk om via &konsolekalendar; een nieuwe agenda te beginnen, een bestaande agenda te exporteren naar verschillende formaten of een andere agenda te importeren.</para>
+
+<para
+>De eenvoudigste toepassing van &konsolekalendar; is om de evenementen in uw standaardagenda van vandaag (tussen 7:00u en 17:00u) weer te geven.</para>
+
+<para
+>De hoofdfuncties van &konsolekalendar;: <itemizedlist>
+<listitem
+><para
+>Evenementen tussen twee data en tijdstippen bekijken</para
+></listitem>
+<listitem
+><para
+>Evenementen toevoegen</para
+></listitem>
+<listitem
+><para
+>Evenementen verwijderen</para
+></listitem>
+<listitem
+><para
+>Evenementen wijzigen</para
+></listitem>
+<listitem
+><para
+>Een nieuwe agenda creëren</para
+></listitem>
+<listitem
+><para
+>Kalendergegevens exporteren naar andere bestandsformaten</para
+></listitem>
+<listitem
+><para
+>Een bestaande agenda importeren</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>&konsolekalendar; heeft <emphasis
+>geen</emphasis
+> grafische schil voor de &kde;-agenda. Dit heeft &korganizer; bijvoorbeeld wel. &konsolekalendar; is gemaakt voor gebruikers die geen grafische desktop geactiveerd hebben of waarvoor een grafische desktop onhandig zou zijn.</para>
+
+<para
+>&konsolekalendar; is <emphasis
+>geen</emphasis
+> complete set met alle mogelijke commando's om agenda's te raadplegen. Dat is ook nooit de bedoeling geweest van de auteur. Er kunnen alleen eenvoudige opties worden gebruikt om evenementen van de agenda op te roepen, te wijzigen en te verwijderen. </para>
+
+</chapter>
+
+<chapter id="features">
+<title
+>Mogelijkheden</title>
+<para
+>In dit hoofdstuk vindt u uitleg over de belangrijkste mogelijkheden van &konsolekalendar; en hoe u deze via parameters op de commandoregel kunt gebruiken (bedenk dat &konsolekalendar; geen grafische schil biedt, het kan alleen op de commandoregel gebruikt worden).</para>
+
+<para
+>U vindt uitleg over het toevoegen, verwijderen en wijzigen van evenementen en hoe u evenementen kunt exporteren naar bepaalde bestandsformaten. Tevens wordt er aandacht besteed aan het importeren en creëren van agenda's. </para>
+
+<sect1 id="viewing">
+<title
+>Evenementen bekijken</title>
+
+<para
+>Standaard, of door het opgeven van de parameter <parameter
+>--view</parameter
+> zal &konsolekalendar; de evenementen weergeven die in een bepaalde periode vallen.</para>
+
+<para>
+<informalexample
+><para
+>Om alle evenementen van vandaag (tussen 7:00u en 17:00u) te zien, voert u het volgende commando uit:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>In het volgende voorbeeld ziet u alle evenementen voor de week van 18 tot 22 augustus:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--view</option
+> <option
+>--date <replaceable
+>2016-08-18</replaceable
+> </option
+> <option
+>--end-date <replaceable
+>2016-08-22</replaceable
+></option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Om de komende evenementen vanaf het huidige tijdstip te bekijken:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Om de evenementen voor de komende vijf dagen te bekijken:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--show-next</option
+> <replaceable
+>5</replaceable>
+
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="inserting">
+<title
+>Evenementen toevoegen</title>
+
+<para
+>&konsolekalendar; kan evenementen toevoegen in een agenda door de parameter <parameter
+>-add</parameter
+> te gebruiken. Evenementen die succesvol toegevoegd zijn, worden direct getoond in &kde;-agendatoepassingen, zoals &korganizer;.</para>
+
+<para
+>U krijgt een lijst met alle agenda's en hun id's met: </para>
+
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--list-calendars</option
+></userinput
+></screen>
+
+<para>
+<informalexample
+><para
+>In het volgende voorbeeld voegen we een evenement toe op 2016-12-01 (1 december 2016) om 10:00 uur. Het eindigt om 12:00 uur en heeft als titel "Tandarts bezoek". Het zal in de agendahulpbron met de id 8 worden ingevoegd:</para>
+
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-04</replaceable
+></option
+> <option
+>--time <replaceable
+>10:00</replaceable
+></option
+> \
+<option
+>--end-time <replaceable
+>12:00</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Tandarts bezoek"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>In het volgende voorbeeld wordt een verjaardag toegevoegd aan de agendahulpbron met id 8:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-06</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Mijn verjaardag"</replaceable
+></option
+> \
+<option
+>--description <replaceable
+>"Feestje bouwen!"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Op de volgende manier kunt u een week vakantie in een agenda met id 8 invoegen:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar <replaceable
+>12</replaceable
+></option
+> <option
+>--date <replaceable
+>2017-08-01</replaceable
+></option
+> \
+<option
+>--end-date <replaceable
+>2017-08-07</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Vacantie"</replaceable
+></option
+> <option
+>--description <replaceable
+>"Onbereikbaar voor iedereen!"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="deleting">
+<title
+>Evenementen verwijderen</title>
+
+<para
+>U kunt evenementen verwijderen met behulp van &konsolekalendar; door de volgende parameter te gebruiken: <parameter
+>--delete</parameter
+>. Evenementen worden verwijderd door de unieke identificatie-code (<acronym
+>UID</acronym
+>) te gebruiken bij de parameter <parameter
+>--uid</parameter
+>. <acronym
+>UID's</acronym
+>s kunnen gevonden worden door het evenement eerst te bekijken met de opties <parameter
+>--view</parameter
+>, <parameter
+>--next</parameter
+> of <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>Evenementen die succesvol worden verwijderd, worden ook direct verwijderd uit &kde;-agendatoepassingen zoals &korganizer;.</para>
+
+<warning
+><para
+>Wanneer u evenementen verwijdert kan dit <emphasis
+>niet</emphasis
+> ongedaan gemaakt worden. Met andere woorden, weg is weg, voorgoed.</para
+></warning>
+
+<para>
+<informalexample
+><para
+>Voorbeeld van het verwijderen van een evenement met het <acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--delete</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="changing">
+<title
+>Evenementen wijzigen</title>
+
+<para
+>In &konsolekalendar; kunnen evenementen gewijzigd worden door gebruik te maken van de parameter <parameter
+>--change</parameter
+>. Het wijzigen van evenementen gaat aan de hand van de unieke identificatie-code (<acronym
+>UID</acronym
+>), die wordt opgegeven bij de parameter <parameter
+>--uid</parameter
+>. <acronym
+>UID</acronym
+>s kunnen worden gevonden door het evenement met de opties <parameter
+>--view</parameter
+>, <parameter
+>--next</parameter
+> of <parameter
+>--show-next</parameter
+> te bekijken.</para>
+
+<para
+>Wijzigen werkt op dezelfde manierals toevoegen: u kunt de start- en eindtijd wijzigen, de start- en einddatum, de titel, de samenvatting, de locatie en de beschrijving. Gewijzigde evenementen worden direct zichtbaar in &kde;-agendatoepassingen zoals &korganizer;.</para>
+
+<para
+><emphasis
+>Voorbeeld:</emphasis
+> het wijzigen van de titel en beschrijving van een evenement met <acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<informalexample>
+<para
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--change</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Mijn hoofd laten nakijken"</replaceable
+></option
+> <option
+>--description <replaceable
+>"Niet meer naar die dokter toe!"</replaceable
+></option
+> </userinput
+> </para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="creating">
+<title
+>Een nieuw agendabestand creëren</title>
+
+<para
+>&konsolekalendar; kan gebruikt worden om nieuwe agenda's uit bestaande bestanden te maken. U kunt de agenda aanmaken met de optie <option
+>--create</option
+> met de bestandsnaam als argument. Het bestand moet een geldig <acronym
+>iCal</acronym
+> of <acronym
+>vCal</acronym
+> bestand zijn.</para>
+<para
+>Opmerking: U kunt de optie <option
+>--dry-run</option
+> niet gebruiken om te testen of de hulpbron kan worden aangemaakt.</para>
+
+<para
+>Opmerking: &konsolekalendar; heeft het bestand nodig om te werken, verwijder het bestand dus nooit handmatig. </para>
+
+<para
+>Technische opmerking: &konsolekalendar; maakt met dit commando een nieuwe <acronym
+>Akonadi</acronym
+>-hulpbron aan die naar dit bestand wijst. Het voorkomt niet om meerdere hulpbronnen aan te maken die allen naar hetzelfde bestand wijzen. </para>
+
+<para>
+<informalexample
+><para
+>Maak een agendabestand aan met de naam <filename
+><replaceable
+>/data/share/calendars/vacation.ics</replaceable
+></filename
+>:</para>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--create</option
+> <option
+>--file <replaceable
+>vacation.ics</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para
+>De hulpbron zal de naam <quote
+>vacation</quote
+> krijgen met <option
+>--list-calendars</option
+></para>
+
+<para
+>Het is niet mogelijk om een <acronym
+>Akonadi</acronym
+>-hulpbron te verwijderen met &konsolekalendar;, u moet &korganizer; gebruiken of <application
+>akonadiconsole</application
+>. </para>
+
+</sect1>
+
+<sect1 id="exporting">
+<title
+>Exporteren naar andere formaten</title>
+
+<para
+>&konsolekalendar; kan agenda's exporteren naar andere populaire formaten. Exporteren is eigenlijk een aparte manier van bekijken. Standaard worden evenementen bekeken in het <quote
+>&konsolekalendar; tekst</quote
+>-formaat. Om het formaat te wijzigen, wordt de parameter <parameter
+>--export-type</parameter
+> gebruikt.</para>
+
+<para
+>Om een lijst met de verschillende exportformaten te zien, gebruikt u de parameter <parameter
+>--export-list</parameter
+>:</para>
+
+<para>
+<informalexample>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--export-list</option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="formats">
+<title
+>Exportformaten</title>
+
+<para
+>Enkele formaten, maar niet allemaal, worden in het volgende gedeelte beschreven.</para>
+
+<sect2 id="native-format">
+<title
+>&konsolekalendar; Tekst-formaat</title>
+
+<para
+>Het &konsolekalendar; tekst-formaat is het standaardformaat dat door &konsolekalendar; gebruikt wordt. Het is ontwikkeld om op een prettige manier de evenementen te kunnen bekijken en om andere scripts de mogelijkheid te geven de gegevens te verwerken.</para>
+
+<para
+>Het &konsolekalendar;-tekstformaat ziet er als volgt uit: <informalexample
+> <screen
+>Date:\t&lt;Datum evenement&gt;(dddd jjjj-MM-dd)
+[\t&lt;Starttijd evenement&gt;(uu:mm) - &lt;Eindtijd evenement&gt;(uu:mm)]
+Titel:
+\t&lt;Titel van evenement | "(geen titel beschikbaar)"&gt;
+Locatie:
+\t&lt;Locatie van evenement | "(geen locatie beschikbaar)"&gt;
+Omschrijving:
+\t&lt;Omschrijving van evenement | "(geen omschrijving beschikbaar)"&gt;
+UID:
+\t&lt;UID van het evenement&gt;
+--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+<para
+>Uitvoer van <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Text</option
+></userinput
+>: <informalexample
+> <screen
+>Datum:   dinsdag 2016-11-29
+        08:00 - 09:00
+Titel:
+        Directievergadering
+Locatie:
+        Vergaderruimte
+Omschrijving:
+        Vergadering van complete staf over het project.
+UID:
+        &konsolekalendar;-1924621834.134
+--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="short-format">
+<title
+>Verkort &konsolekalendar;-tekstformaat</title>
+
+<para
+>Het verkorte tekstformaat is een compacte, minder uitgebreide versie van het gebruikelijke &konsolekalendar;-tekstformaat.</para>
+
+<para
+>Het verkorte &konsolekalendar;-tekstformaat ziet er als volgt uit: <informalexample
+> <screen
+>[--------------------------------------------------]
+{&lt;Datum evenement&gt;(dddd jjjj-MM-dd)]
+[&lt;Starttijd evenement&gt;(uu:mm) - &lt;Eindtijd evenement&gt;(uu:mm) | "\t"]
+\t&lt;Titel evenement | \t&gt;[, &lt;Locatie evenement&gt;]
+\t\t&lt;Omschrijving evenement | "\t"&gt;
+</screen>
+</informalexample>
+</para>
+
+<para
+>Uitvoer van <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Short</option
+></userinput
+>: <informalexample
+> <screen
+>--------------------------------------------------
+Dinsdag 2016-11-29
+08:00 - 09:00   Directievergadering, Vergaderruimte
+                vergadering van complete staf over het project.
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="csv-format">
+<title
+>Door komma's gescheiden (<acronym
+>CSV</acronym
+>) formaat</title>
+
+<para
+>In het door komma's gescheiden formaat staan de velden in dezelfde volgorde als het &konsolekalendar;-tekstformaat. Het enige verschil is dat alle gegevens op één regel staan en gescheiden worden door een komma. Indien de gegevens in een bestand worden opgeslagen, kunnen deze zonder veel problemen in een spreadsheet worden geïmporteerd. Voorbeelden hiervan zijn &calligrasheets;, <application
+>OpenOffice.org Calc</application
+> en <application
+>&Microsoft; Excel</application
+>. Ook is dit formaat uitermate geschikt voor verdere verwerking door andere scripts en toepassingen.</para>
+
+<para
+>Het door komma's gescheiden formaat ziet er als volgt uit: <informalexample
+> <screen
+>"Weekdag, Maand dag, Jaar","HH:MM","Weekdag, Maand dag, Jaar","HH:MM","Samenvatting","Locatie","Beschrijving","UID"
+</screen>
+</informalexample>
+</para>
+
+<para
+>Uitvoer van <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>CSV</option
+></userinput
+>: <informalexample
+> <screen
+>"Tuesday, November 29, 2016","08:00","Tuesday, November 29, 2016","09:00","Staff Meeting","Conference Room","Meet in the big conference \
+room with the entire staff.","&konsolekalendar;-1924621834.134"
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="html-format">
+<title
+>&HTML;-opmaak</title>
+
+<para
+>Het &HTML;-formaat zal een geldig HTML-bestand aanmaken dat geschikt is om op het <acronym
+>WWW</acronym
+> te publiceren. Dit formaat is niet geschikt voor verdere bewerkingen door andere scripts, maar is erg goed voor het publiceren van agenda's op het internet.</para>
+<!--FIXME
+exports only the template without any incidence data
+<para
+><emphasis
+>TODO:</emphasis
+> Insert screenshot here</para>
+-->
+</sect2>
+
+<sect2 id="html-month-format">
+<title
+><acronym
+>HTMLmonth</acronym
+>-formaat</title>
+
+<para
+>Dit formaat maakt een &HTML;-bestand aan dat alle afspraken in de maanden uit het opgegeven datumbereik toont. Dit formaat is niet geschikt voor verdere bewerkingen door andere scripts, maar is erg goed voor het publiceren van agenda's op het internet.</para>
+<!--FIXME
+exports only the template without any incidence data
+<para
+><emphasis
+>TODO:</emphasis
+> Insert screenshot here</para>
+-->
+</sect2>
+
+</sect1>
+
+<sect1 id="importing">
+<title
+>Kalenders importeren</title>
+
+<para
+>&konsolekalendar; kan een iCal- of vCal-agenda importeren in een agenda. Alle evenementen van de agenda die worden geïmporteerd, worden ook toegevoegd aan de agenda met overslaan van identieke evenementen die al in de agenda zitten.</para>
+
+<para>
+<informalexample
+><para
+>Om een agendabestand <replaceable
+>vacation.ics</replaceable
+> te importeren in de agenda met de id <replaceable
+>8</replaceable
+> voer uit:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--import <replaceable
+>vacation.ics</replaceable
+></option
+> <option
+>--calendar <replaceable
+>8</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="features-commandline-options">
+<title
+>Commandoregel-parameters</title>
+
+<para
+>&konsolekalendar; ondersteunt de volgende parameters:</para>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row>
+  <entry
+>Parameter</entry>
+  <entry
+>Beschrijving</entry>
+</row>
+</thead>
+<tbody>
+<row>
+  <entry
+><emphasis
+>Algemene opties:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--help, --help-all</option
+></entry>
+  <entry
+>Toont informatie over de mogelijke parameters.</entry>
+</row>
+<row>
+  <entry
+><option
+>--author</option
+></entry>
+  <entry
+>Toont gegevens over de auteur van dit programma.</entry>
+</row>
+<row>
+  <entry
+><option
+>-v, --version</option
+></entry>
+  <entry
+>Toont het versienummer van dit programma.</entry>
+</row>
+<row>
+  <entry
+><option
+>--license</option
+></entry>
+  <entry
+>Toont de licentie van dit programma.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Opties:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--verbose</option
+></entry>
+  <entry
+>Geeft meer informatie tijdens het uitvoeren van commando's.</entry>
+</row>
+<row>
+  <entry
+><option
+>--dry-run</option
+></entry>
+  <entry
+>Drukt af wat er gedaan zou gaan worden zonder deze parameter. Nu veranderen er geen bestanden, er wordt niets toegevoegd, gewijzigd of verwijderd. Ook worden geen nieuwe bestanden aangemaakt.</entry>
+</row>
+<row>
+  <entry
+><option
+>--allow-gui</option
+></entry>
+  <entry
+>Staat bronnen toe die mogelijk een interactief gebruikersinterface nodig hebben. In het normale  werken worden alleen bronnen gebruikt die geen gebruikersinterface nodig hebben (zoals agenda's in een bestand).</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Itemtype (deze opties kunnen gecombineerd worden):</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--event</option
+></entry>
+  <entry
+>Alleen op evenementen uitvoeren (standaard)</entry>
+</row>
+<row>
+  <entry
+><option
+>--todo</option
+></entry>
+  <entry
+>Alleen op Taken uitvoeren. (Niet geïmplementeerd)</entry>
+</row>
+<row>
+  <entry
+><option
+>--journal</option
+></entry>
+  <entry
+>Alleen op journaals uitvoeren. (Niet geïmplementeerd)</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Hoofdhandelingen:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--view</option
+></entry>
+  <entry
+>Toont de evenementen in het opgegeven exportformaat.</entry>
+</row>
+<row>
+  <entry
+><option
+>--add</option
+></entry>
+  <entry
+>Voegt een evenement toe aan de agenda.</entry>
+</row>
+<row>
+  <entry
+><option
+>--change</option
+></entry>
+  <entry
+>Wijzigt een bestaand evenement.</entry>
+</row>
+<row>
+  <entry
+><option
+>--delete</option
+></entry>
+  <entry
+>Verwijdert een bestaand evenement.</entry>
+</row>
+<row>
+  <entry
+><option
+>--create</option
+> <replaceable
+>&nbsp;bestandsnaam</replaceable
+> </entry>
+  <entry
+>Een nieuwe agenda uit een bestaand bestand aanmaken.</entry>
+</row>
+<row>
+  <entry
+><option
+>--import</option
+> <replaceable
+>&nbsp;importbestand</replaceable
+></entry>
+  <entry
+>Importeert deze agenda in de huidige agenda.</entry>
+</row>
+<row>
+  <entry
+><option
+>--list-calendars</option
+></entry>
+  <entry
+>Maak lijst van beschikbare agenda's.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Handeling aanpassen:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--all</option
+></entry>
+  <entry
+>Toont alle evenementen.</entry>
+</row>
+<row>
+  <entry
+><option
+>--next</option
+></entry>
+  <entry
+>Toont het volgende evenement.</entry>
+</row>
+<row>
+  <entry
+><option
+>--show-next</option
+> <replaceable
+>&nbsp;dagen</replaceable
+></entry>
+  <entry
+>Toont de evenementen binnen het opgegeven aantal dagen.</entry>
+</row>
+<row>
+  <entry
+><option
+>--uid</option
+> <replaceable
+>&nbsp;UID</replaceable
+></entry>
+  <entry
+>Toont, verwijdert of wijzigt de evenementen met deze unieke identificatiecode.</entry>
+</row>
+<row>
+  <entry
+><option
+>--date</option
+> <replaceable
+>&nbsp;datum</replaceable
+></entry>
+  <entry
+>Start vanaf deze dag [JJJJ-MM-DD]. Standaard is dit vandaag</entry>
+</row>
+<row>
+  <entry
+><option
+>--time</option
+> <replaceable
+>&nbsp;tijd</replaceable
+></entry>
+  <entry
+>Start vanaf dit tijdstip [UU:MM]. Standaard is dit 07:00u. <para
+>Om een evenement toe te voegen of te wijzigen zonder dat deze een vaste tijd heeft, gebruikt u <option
+>--time float</option
+> of <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--end-date</option
+> <replaceable
+>&nbsp;einddatum</replaceable
+></entry>
+  <entry
+>Eindig op deze dag [JJJJ-MM-DD]. Standaard is hetgeen opgegeven is bij <option
+>--date</option
+>.</entry>
+</row>
+<row>
+  <entry
+><option
+>--end-time</option
+> <replaceable
+>&nbsp;eindtijd</replaceable
+></entry>
+  <entry
+>Eindig op dit tijdstip [UU:MM]. Standaard is dit 17:00u. <para
+>Om een evenement toe te voegen of te wijzigen zonder dat deze een vaste tijd heeft, gebruikt u <option
+>--time float</option
+> of <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-start</option
+> <replaceable
+>&nbsp;epoch-tijd</replaceable
+></entry>
+  <entry
+>Start op dit tijdstip. De waarde is het aantal seconden sinds epoch.</entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-end</option
+> <replaceable
+>&nbsp;epoch-tijd</replaceable
+></entry>
+  <entry
+>Eindig op dit tijdstip. De waarde is het aantal seconden sinds epoch.</entry>
+</row>
+<row>
+  <entry
+><option
+>--summary</option
+> <replaceable
+>&nbsp;titel</replaceable
+></entry>
+  <entry
+>Geeft een titel aan het evenement (werkt bij toevoegen en wijzigen).</entry>
+</row>
+<row>
+  <entry
+><option
+>--description</option
+> <replaceable
+>&nbsp;omschrijving</replaceable
+></entry>
+  <entry
+>Geeft een omschrijving aan het evenement (werkt bij toevoegen en wijzigen).</entry>
+</row>
+<row>
+  <entry
+><option
+>--location</option
+> <replaceable
+>&nbsp;locatie</replaceable
+></entry>
+  <entry
+>Geeft een locatie aan het evenement (werkt bij toevoegen en wijzigen).</entry>
+</row>
+<row>
+  <entry
+><option
+>--calendar</option
+> <replaceable
+>&nbsp;id</replaceable
+></entry>
+  <entry
+>Specificeert een te gebruiken agenda. <para
+>Indien niet opgegeven wordt de standaard &korganizer;-agenda gebruikt.</para
+></entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Exportopties:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--export-type</option
+> <replaceable
+>&nbsp;export-type</replaceable
+></entry>
+  <entry
+>Exportformaat. Het standaard formaat is Tekst</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-file</option
+> <replaceable
+>&nbsp;exportbestand</replaceable
+></entry>
+  <entry
+>Exporteert naar een bestand. Standaard wordt naar het beeldscherm geëxporteerd.</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-list</option
+></entry>
+  <entry
+>Toont een lijst met exportformaten.</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Vragen en antwoorden</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Welk configuratiebestand wordt door &konsolekalendar; gebruikt?</para>
+</question>
+<answer>
+<para
+>Geen.</para>
+</answer>
+</qandaentry>
+
+
+<qandaentry>
+<question>
+<para
+>Wat zijn de applicatienamen van &konsolekalendar;?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar;'s applicatienaam is <application
+>konsolekalendar</application
+>.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Welk datumformaat wordt er gebruikt?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; weigert alle data op de commandoregel die niet voldoen aan de ISO 8601 standaard. Dit formaat is: JJJJ-MM-DD. JJJJ staat voor het jaartal in vier cijfers (zoals 2003). MM staat voor de maand in twee cijfers (01,02,..,12) en DD staat voor de dag (01,02,..,31).</para>
+<para
+>&konsolekalendar; gebruikt bij het exporteren altijd het ISO 8601-formaat.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Welk formaat wordt er voor de tijd gebruikt?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; weigert alle tijden op de commandoregel die niet voldoen aan de ISO 8601 standaard. Dit formaat is: HH:MM:SS. HH staat voor de uren in twee cijfers (00,01,..,24). MM staat voor de minuten in twee cijfers (01,02,..,60) en SS staat voor de seconden (01,02,..,60).</para>
+<para
+>&konsolekalendar; gebruikt bij het exporteren altijd het ISO 8601-formaat.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Zal &konsolekalendar; een nieuw evenement aanmaken dat identiek is aan een reeds bestaand evenement?</para>
+</question>
+<answer>
+<para
+>Nee, zie volgende vraag.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Hoe bepaalt &konsolekalendar; of een evenement identiek is aan een reeds bestaand evenement?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; kijkt naar de opgegeven start- en eindtijd, start- en einddatum, titel en omschrijving. Een evenement is identiek als alle waarden hetzelfde zijn. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Kan een evenement zonder vast tijdstip veranderd worden in een evenement met een vast tijdstip?</para>
+</question>
+<answer>
+<para
+>Ja. Door gebruik te maken van de <option
+>--time float</option
+> en de <option
+>--change</option
+> parameters. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Waarom worden <acronym
+>UID</acronym
+>s getoond bij de meeste exportformaten?</para>
+</question>
+<answer>
+<para
+>Omdat u de <acronym
+>UID</acronym
+> moet opgeven als u een evenement wilt wijzigen of verwijderen. Indien u de <acronym
+>UID</acronym
+> van evenementen niet wilt zien, kunt u gebruik maken van het <emphasis
+>verkorte</emphasis
+> exportformaat (<option
+>--export-type short</option
+>). </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Hoe kan ik mijn vraag toevoegen aan deze <acronym
+>FAQ</acronym
+>?</para>
+</question>
+<answer>
+<para
+>Stuur uw vragen naar <email
+>winter@kde.org</email
+>.</para>
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+
+<chapter id="credits">
+
+<title
+>Dankbetuigingen en licentie</title>
+
+<para
+>&konsolekalendar; programma copyright 2002,2007:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Documentatie copyright 2003:</para>
+<itemizedlist>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+</itemizedlist>
+
+&vertaling.tom;&vertaling.sander;&nagelezen.natalie; &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

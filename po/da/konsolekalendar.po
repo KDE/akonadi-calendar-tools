@@ -1,0 +1,669 @@
+# translation of konsolekalendar.po to dansk
+# Danish translation of konsolekalendar
+# Copyright (C).
+#
+# Erik Kjær Pedersen <erik@binghamton.edu>, 2002, 2003, 2004, 2005, 2006.
+# Jan Madsen <jan.madsen.pt@gmail.com>, 2008.
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2011, 2013, 2016, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: konsolekalendar\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-11-26 00:28+0000\n"
+"PO-Revision-Date: 2020-07-30 20:32+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Erik Kjær Pedersen,Jan Madsen"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "erik@binghamton.edu,jan.madsen.pt@gmail.com"
+
+#: konsolekalendar.cpp:82
+#, kde-format
+msgid "There are no calendars available."
+msgstr "Der er ingen kalendere tilgængelige."
+
+#: konsolekalendar.cpp:97
+#, kde-format
+msgid "(Read only)"
+msgstr "(Skrivebeskyttet)"
+
+#: konsolekalendar.cpp:147
+#, kde-format
+msgid "Create Calendar <Dry Run>: %1"
+msgstr "Opre kalender <testkørsel>: %1"
+
+#: konsolekalendar.cpp:153
+#, kde-format
+msgid "Create Calendar <Verbose>: %1"
+msgstr "Opret kalender <uddybende>: %1"
+
+#: konsolekalendar.cpp:172
+#, kde-format
+msgid "View Events <Dry Run>:"
+msgstr "Vis begivenheder <testkørsel>:"
+
+#: konsolekalendar.cpp:194
+#, kde-format
+msgid "View Event <Verbose>:"
+msgstr "Vis begivenhed <uddybende>:"
+
+#: konsolekalendar.cpp:267
+#, kde-format
+msgid "Sorry, export to HTML by UID is not supported yet"
+msgstr "Eksport til HTML ved UID er ikke understøttet endnu"
+
+#: konsolekalendar.cpp:288
+#, kde-format
+msgid "Events:"
+msgstr "Begivenheder:"
+
+#: konsolekalendar.cpp:292
+#, kde-format
+msgid "Events: %1"
+msgstr "Begivenheder: %1"
+
+#: konsolekalendar.cpp:294
+#, kde-format
+msgid "Events: %1 - %2"
+msgstr "Begivenheder: %1 - %2"
+
+#: konsolekalendar.cpp:434 konsolekalendaradd.cpp:175
+#: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
+#: konsolekalendardelete.cpp:82
+#, kde-format
+msgid "  What:  %1"
+msgstr "  Hvad: %1"
+
+#: konsolekalendar.cpp:436 konsolekalendaradd.cpp:177
+#: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
+#: konsolekalendardelete.cpp:85
+#, kde-format
+msgid "  Begin: %1"
+msgstr "  Begynd: %1"
+
+#: konsolekalendar.cpp:438 konsolekalendaradd.cpp:179
+#: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
+#: konsolekalendardelete.cpp:87
+#, kde-format
+msgid "  End:   %1"
+msgstr "  Slut: %1"
+
+#: konsolekalendar.cpp:441 konsolekalendaradd.cpp:182
+#, kde-format
+msgid "  No Time Associated with Event"
+msgstr "  Intet tidspunkt knyttet til begivenhed"
+
+#: konsolekalendar.cpp:444 konsolekalendaradd.cpp:185
+#: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
+#: konsolekalendardelete.cpp:89
+#, kde-format
+msgid "  Desc:  %1"
+msgstr "  Beskr.:  %1"
+
+#: konsolekalendar.cpp:446 konsolekalendaradd.cpp:187
+#: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
+#: konsolekalendardelete.cpp:91
+#, kde-format
+msgid "  Location:  %1"
+msgstr "  Sted:  %1"
+
+#: konsolekalendaradd.cpp:61
+#, kde-format
+msgid "Insert Event <Dry Run>:"
+msgstr "Indsæt begivenhed <testkørsel>:"
+
+#: konsolekalendaradd.cpp:65
+#, kde-format
+msgid "Insert Event <Verbose>:"
+msgstr "Indsæt begivenhed <uddybende>:"
+
+#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:133
+#, kde-format
+msgid "Calendar is invalid. Please specify one with --calendar"
+msgstr "Kalenderen er ugyldig. Angiv en med --calendar"
+
+#: konsolekalendaradd.cpp:104
+#, kde-format
+msgid "Success: \"%1\" inserted"
+msgstr "Lykkedes: \"%1\" indsat"
+
+#: konsolekalendaradd.cpp:106
+#, kde-format
+msgid "Failure: \"%1\" not inserted"
+msgstr "Fejl: \"%1\" ikke indsat"
+
+#: konsolekalendaradd.cpp:147
+#, kde-format
+msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+msgstr ""
+"Indsættelse af begivenhed skippet, fordi UID \"%1\" allerede er kendt."
+"<Verbose>"
+
+#: konsolekalendaradd.cpp:154
+#, kde-format
+msgid "Add Event with UID \"%1\". <Verbose>"
+msgstr "Tilføj begivenhed med UID \"%1\". <Verbose>"
+
+#: konsolekalendarchange.cpp:50
+#, kde-format
+msgid "Change Event <Dry Run>:"
+msgstr "Ændr begivenhed <testkørsel>:"
+
+#: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
+#, kde-format
+msgid "To Event <Dry Run>:"
+msgstr "Til begivenhed <testkørsel>:"
+
+#: konsolekalendarchange.cpp:59
+#, kde-format
+msgid "Change Event <Verbose>:"
+msgstr "Ændr begivenhed <uddybende>:"
+
+#: konsolekalendarchange.cpp:101
+#, kde-format
+msgid "Success: \"%1\" changed"
+msgstr "Lykkedes: \"%1\" ændret"
+
+#: konsolekalendarchange.cpp:103
+#, kde-format
+msgid "Failure: \"%1\" not changed"
+msgstr "Fejl: \"%1\" ikke ændret"
+
+#: konsolekalendarchange.cpp:114 konsolekalendarchange.cpp:130
+#: konsolekalendardelete.cpp:80
+#, kde-format
+msgid "  UID:   %1"
+msgstr "  UID:   %1"
+
+#: konsolekalendardelete.cpp:48
+#, kde-format
+msgid "Delete Event <Dry Run>:"
+msgstr "Slet begivenhed <testkørsel>:"
+
+#: konsolekalendardelete.cpp:54
+#, kde-format
+msgid "Delete Event <Verbose>:"
+msgstr "Slet begivenhed <uddybende>:"
+
+#: konsolekalendardelete.cpp:67
+#, kde-format
+msgid "Success: \"%1\" deleted"
+msgstr "Lykkedes: \"%1\" slettet"
+
+#: konsolekalendardelete.cpp:69
+#, kde-format
+msgid "Error deleting: \"%1\""
+msgstr "Fejl ved sletning af: \"%1\""
+
+#: konsolekalendarexports.cpp:59
+#, kde-format
+msgid "Date:"
+msgstr "Dato:"
+
+#: konsolekalendarexports.cpp:68
+#, kde-format
+msgid "Summary:"
+msgstr "Oversigt:"
+
+#: konsolekalendarexports.cpp:72
+#, kde-format
+msgid "(no summary available)"
+msgstr "(ingen oversigt tilgængeligt)"
+
+#: konsolekalendarexports.cpp:76
+#, kde-format
+msgid "Location:"
+msgstr "Sted:"
+
+#: konsolekalendarexports.cpp:80
+#, kde-format
+msgid "(no location available)"
+msgstr "(intet sted tilgængeligt)"
+
+#: konsolekalendarexports.cpp:84
+#, kde-format
+msgid "Description:"
+msgstr "Beskrivelse:"
+
+#: konsolekalendarexports.cpp:88
+#, kde-format
+msgid "(no description available)"
+msgstr "(ingen beskrivelse tilgængelig)"
+
+#: konsolekalendarexports.cpp:92
+#, kde-format
+msgid "UID:"
+msgstr "UID:"
+
+#: konsolekalendarexports.cpp:120
+#, kde-format
+msgid "[all day]\t"
+msgstr "[hele dagen]\t"
+
+#: konsolekalendarexports.cpp:171
+#, kde-format
+msgid ","
+msgstr ","
+
+#: konsolekalendarexports.cpp:172
+#, kde-format
+msgid "\""
+msgstr "\""
+
+#: main.cpp:59
+#, kde-format
+msgid "KonsoleKalendar"
+msgstr "KonsoleKalendar"
+
+#: main.cpp:61
+#, kde-format
+msgid "A command line interface to KDE calendars"
+msgstr "Kommandolinjegrænseflade til KDE-kalendere"
+
+#: main.cpp:63
+#, kde-format
+msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
+msgstr "(c) 2002-2009, Tuukka Pasanen og Allen Winter"
+
+#: main.cpp:65
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: main.cpp:65
+#, kde-format
+msgid "Bug fixing"
+msgstr "Fejlrettelse"
+
+#: main.cpp:66
+#, kde-format
+msgid "Allen Winter"
+msgstr "Allen Winter"
+
+#: main.cpp:66
+#, kde-format
+msgid "Maintainer"
+msgstr "Vedligeholder"
+
+#: main.cpp:67
+#, kde-format
+msgid "Tuukka Pasanen"
+msgstr "Tuukka Pasanen"
+
+#: main.cpp:67
+#, kde-format
+msgid "Author"
+msgstr "Udvikler"
+
+#: main.cpp:73
+#, kde-format
+msgid "Print helpful runtime messages"
+msgstr "Udskriv hjælpsomme beskeder under kørslen"
+
+#: main.cpp:74
+#, kde-format
+msgid "Print what would have been done, but do not execute"
+msgstr "Udskriv hvad der skulle have været gjort, men gør det ikke"
+
+#: main.cpp:75
+#, kde-format
+msgid "Allow calendars which might need an interactive user interface"
+msgstr "Tillad kalendere som kan behøve en interaktiv brugerflade"
+
+#: main.cpp:76
+#, kde-format
+msgid "Operate for Events only (Default)"
+msgstr "Behandl kun begivenheder (standard)"
+
+#: main.cpp:77
+#, kde-format
+msgid "Operate for To-dos only [NOT WORKING YET]"
+msgstr "Behandl kun gøremål [VIRKER IKKE ENDNU]"
+
+#: main.cpp:78
+#, kde-format
+msgid "Operate for Journals only [NOT WORKING YET]"
+msgstr "Behandl kun journaler [VIRKER IKKE ENDNU]"
+
+#: main.cpp:79
+#, kde-format
+msgid "Print incidences in specified export format"
+msgstr "Udskriv forekomster i angivet eksportformat"
+
+#: main.cpp:80
+#, kde-format
+msgid "Insert an incidence into the calendar"
+msgstr "Indsæt en forekomst i kalenderen"
+
+#: main.cpp:81
+#, kde-format
+msgid "Modify an existing incidence"
+msgstr "Ændr en eksisterende forekomst"
+
+#: main.cpp:82
+#, kde-format
+msgid "Remove an existing incidence"
+msgstr "Fjern en eksisterende forekomst"
+
+#: main.cpp:83
+#, kde-format
+msgid "Create new Akonadi Resource for file"
+msgstr "Opret ny Akonadi-ressource for filen"
+
+#: main.cpp:85
+#, kde-format
+msgid "Import this calendar to main calendar"
+msgstr "Importér denne kalender til hovedkalender"
+
+#: main.cpp:86
+#, kde-format
+msgid "List available calendars"
+msgstr "Oplist tilgængelige kalendere"
+
+#: main.cpp:87
+#, kde-format
+msgid "View all calendar entries, ignoring date/time options"
+msgstr "Vis alle kalenderindgange, ignorér dato-/klokkeslætsvalg"
+
+#: main.cpp:88
+#, kde-format
+msgid "View next activity in calendar"
+msgstr "Vis næste aktivitet i kalender"
+
+#: main.cpp:90
+#, kde-format
+msgid "From start date show next # days' activities"
+msgstr "Fra startdatoen, vis de næste # dages aktiviteter"
+
+#: main.cpp:91
+#, kde-format
+msgid "Incidence Unique-string identifier"
+msgstr "Forekomstens entydige streng-identificering"
+
+#: main.cpp:92
+#, kde-format
+msgid "Start from this day [YYYY-MM-DD]"
+msgstr "Start fra denne dag [ÅÅÅÅ-MM-DD]"
+
+#: main.cpp:93
+#, kde-format
+msgid "Start from this time [HH:MM:SS]"
+msgstr "Start fra dette tidspunkt [TT:MM:SS]"
+
+#: main.cpp:94
+#, kde-format
+msgid "End at this day [YYYY-MM-DD]"
+msgstr "Slut på denne dag [ÅÅÅÅ-MM-DD]"
+
+#: main.cpp:95
+#, kde-format
+msgid "End at this time [HH:MM:SS]"
+msgstr "Slut på dette tidspunkt [TT:MM:SS]"
+
+#: main.cpp:97
+#, kde-format
+msgid "Start from this time [secs since epoch]"
+msgstr "Start fra dette tidspunkt [sek. siden epoke]"
+
+#: main.cpp:99
+#, kde-format
+msgid "End at this time [secs since epoch]"
+msgstr "Slut på dette tidspunkt [sek. siden epoke]"
+
+#: main.cpp:101
+#, kde-format
+msgid "Add summary to incidence (for add/change modes)"
+msgstr "Føj oversigt til forekomst (for tilføj-/ændr-tilstande)"
+
+#: main.cpp:103
+#, kde-format
+msgid "Add description to incidence (for add/change modes)"
+msgstr "Føj beskrivelse til forekomst (for tilføj-/ændr-tilstande)"
+
+#: main.cpp:106
+#, kde-format
+msgid "Add location to incidence (for add/change modes)"
+msgstr "Føj sted til forekomst (for tilføj-/ændr-tilstande)"
+
+#: main.cpp:109
+#, kde-format
+msgid "Calendar to use when creating a new incidence"
+msgstr "Kalender der skal bruges ved oprettelse af en ny forekomst"
+
+#: main.cpp:112
+#, kde-format
+msgid "Export file type (Default: text)"
+msgstr "Eksportfil-type (Standard: tekst)"
+
+#: main.cpp:114
+#, kde-format
+msgid "Export to file (Default: stdout)"
+msgstr "Eksportér til fil (Standard: stdout)"
+
+#: main.cpp:115
+#, kde-format
+msgid "Print list of export types supported and exit"
+msgstr "Skriv liste over eksporttyper, der er understøttede, og afslut"
+
+#: main.cpp:164
+#, kde-format
+msgid "%1 supports these export formats:"
+msgstr "%1 understøtter disse eksportformater:"
+
+#: main.cpp:165
+#, kde-format
+msgctxt "the default export format"
+msgid "  %1 [Default]"
+msgstr "  %1 [standard]"
+
+#: main.cpp:166
+#, kde-format
+msgctxt "short text export"
+msgid "  %1 (like %2, but more compact)"
+msgstr "  %1 (som %2, men mere kompakt)"
+
+#: main.cpp:167
+#, kde-format
+msgctxt "HTML export"
+msgid "  %1"
+msgstr "  %1"
+
+#: main.cpp:168
+#, kde-format
+msgctxt "HTMLmonth export"
+msgid "  %1 (like %2, but in a month view)"
+msgstr "  %1 (som %2, men i månedsvisning)"
+
+#: main.cpp:170
+#, kde-format
+msgctxt "comma-separated values export"
+msgid "  %1 (Comma-Separated Values)"
+msgstr "  %1 (Kommaadskilte værdier)"
+
+#: main.cpp:185
+#, kde-format
+msgid "Sorry, To-dos are not working yet."
+msgstr "Gøremål virker desværre ikke endnu."
+
+#: main.cpp:191
+#, kde-format
+msgid "Sorry, Journals are not working yet."
+msgstr "Journaler virker desværre ikke endnu."
+
+#: main.cpp:223
+#, kde-format
+msgid "Invalid Export Type Specified: %1"
+msgstr "Ugyldig eksporttype angivet: %1"
+
+#: main.cpp:382
+#, kde-format
+msgid "Invalid Start Date Specified: %1"
+msgstr "Ugyldig startdato angivet: %1"
+
+#: main.cpp:407
+#, kde-format
+msgid "Invalid Start Time Specified: %1"
+msgstr "Ugyldigt starttidspunkt angivet: %1"
+
+#: main.cpp:432
+#, kde-format
+msgid "Invalid End Date Specified: %1"
+msgstr "Ugyldig slutdato angivet: %1"
+
+#: main.cpp:452
+#, kde-format
+msgid "Invalid Date Count Specified: %1"
+msgstr "Ugyldigt datoantal angivet: %1"
+
+#: main.cpp:480
+#, kde-format
+msgid "Invalid End Time Specified: %1"
+msgstr "Ugyldigt sluttidspunkt angivet: %1"
+
+#: main.cpp:673
+#, kde-format
+msgid ""
+"Only 1 operation mode (view, add, change, delete, create) permitted at any "
+"one time"
+msgstr ""
+"Kun 1 operationstilstand (vis, tilføj, ændr, slet, opret) tilladt på én gang"
+
+#: main.cpp:684
+#, kde-format
+msgid "Ending Date/Time occurs before the Starting Date/Time"
+msgstr "Slutdato/-klokkeslæt er før startdato/-tidspunkt"
+
+#: main.cpp:703
+#, kde-format
+msgid "Calendar %1 successfully imported"
+msgstr "Kalenderen %1 er importeret"
+
+#: main.cpp:706
+#, kde-format
+msgid "Unable to import calendar: %1"
+msgstr "Kan ikke importere kalender: %1"
+
+#: main.cpp:717
+#, kde-format
+msgid "Attempting to insert an event that already exists"
+msgstr "Forsøger at indsætte en begivenhed, der allerede eksisterer"
+
+#: main.cpp:727 main.cpp:747
+#, kde-format
+msgid "Missing event UID: use --uid command line option"
+msgstr "Manglende begivenheds-UID: brug --uid kommandolinjeflaget"
+
+#: main.cpp:735
+#, kde-format
+msgid "No such event UID: change event failed"
+msgstr "Ingen sådan begivenheds-UID: ændring af begivenhed fejlede"
+
+#: main.cpp:755
+#, kde-format
+msgid "No such event UID: delete event failed"
+msgstr "Ingen sådan begivenheds-UID: sletning af begivenhed fejlede"
+
+#: main.cpp:766
+#, kde-format
+msgid "Cannot open specified export file: %1"
+msgstr "Kan ikke åbne den angivne eksport-fil: %1"
+
+#: main.cpp:776
+#, kde-format
+msgid "Cannot create Akonadi resource from file: %1"
+msgstr "Kan ikke oprette Akonadi-ressource fra filen: %1"
+
+#~ msgid "Incidence types (these options can be combined):"
+#~ msgstr "Forekomsttyper (disse tilvalg kan kombineres):"
+
+#~ msgid "Major operation modes:"
+#~ msgstr "Væsentligste operationstilstande:"
+
+#~ msgid "Operation modifiers:"
+#~ msgstr "Operationsændrere:"
+
+#~ msgid "Export options:"
+#~ msgstr "Eksport-tilvalg:"
+
+#, fuzzy
+#~| msgid ""
+#~| "Examples:\n"
+#~| "  konsolekalendar --view\n"
+#~| "  konsolekalendar --list-calendars\n"
+#~| "  konsolekalendar --add --collection 42 --date 2003-06-04 --time 10:00 --"
+#~| "end-time 12:00 \\\n"
+#~| "                  --summary \"Doctor Visit\" --description \"Get My Head "
+#~| "Examined\"\n"
+#~| "  konsolekalendar --delete --uid KOrganizer-1740326.803"
+#~ msgid ""
+#~ "Examples:\n"
+#~ "  konsolekalendar --view\n"
+#~ "  konsolekalendar --list-calendars\n"
+#~ "  konsolekalendar --add --calendar 42 --date 2016-12-04 --time 10:00 --"
+#~ "end-time 12:00 \\\n"
+#~ "                  --summary \"Doctor Visit\" --description \"Get My Head "
+#~ "Examined\"\n"
+#~ "  konsolekalendar --delete --uid KOrganizer-1740326.803"
+#~ msgstr ""
+#~ "Eksempler:\n"
+#~ "  konsolekalendar --view\n"
+#~ "  konsolekalendar --list-calendars\n"
+#~ "  konsolekalendar --add --collection 42 --date 2003-06-04 --time 10:00 --"
+#~ "end-time 12:00 \\\n"
+#~ "                  --summary \"Lægebesøg\" --description \"Få mit hovede "
+#~ "undersøgt\"\n"
+#~ "  konsolekalendar --delete --uid KOrganizer-1740326.803"
+
+#, fuzzy
+#~| msgid ""
+#~| "For more information visit the program home page at:\n"
+#~| "  http://pim.kde.org/components/konsolekalendar.php"
+#~ msgid ""
+#~ "For more information visit the program home page at:\n"
+#~ "  https://userbase.kde.org/KonsoleKalendar"
+#~ msgstr ""
+#~ "For mere information besøg programmets hjemmeside på:\n"
+#~ "  http://pim.kde.org/components/konsolekalendar.php"
+
+#~ msgid "  Create new calendar file if one does not exist"
+#~ msgstr " Opret ny kalenderfil, hvis ingen findes"
+
+#~ msgid "Specify which calendar you want to use"
+#~ msgstr "Angiv hvilken kalender du ønsker at bruge"
+
+#~ msgid "Attempting to create a remote file %1"
+#~ msgstr "Forsøger at oprette en ekstern fil %1"
+
+#~ msgid "Calendar %1 already exists"
+#~ msgstr "Kalenderen %1 eksisterer allerede"
+
+#~ msgid "Calendar %1 successfully created"
+#~ msgstr "Kalenderen %1 er oprettet"
+
+#~ msgid "Unable to create calendar: %1"
+#~ msgstr "Kan ikke oprette kalender: %1"
+
+#~ msgid "Calendar file not found %1"
+#~ msgstr "Kalenderfil ikke fundet %1"
+
+#~ msgid "Try --create to create new calendar file"
+#~ msgstr "Prøv --create for at oprette ny kalenderfil "
+
+#~ msgid "Active Calendar"
+#~ msgstr "Aktiv kalender"
+
+#~ msgid "Default Calendar"
+#~ msgstr "Standardkalender"

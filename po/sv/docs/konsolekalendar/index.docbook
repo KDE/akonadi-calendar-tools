@@ -1,0 +1,1450 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+
+  <!ENTITY konsolekalendar "<application
+>KonsoleKalendar</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE">
+]>
+<!-- The language must NOT be changed here. -->
+
+<book id="konsolekalendar" lang="&language;">
+
+<bookinfo id="konsolekalendarinfo">
+
+<title
+>Handbok &konsolekalendar;</title>
+
+<authorgroup>
+<author
+><firstname
+>Tuukka</firstname
+> <surname
+>Pasanen</surname
+> <affiliation
+><address
+><email
+>illuusio@mailcity.com</email
+></address
+></affiliation>
+</author>
+
+<author
+><firstname
+>Allen</firstname
+> <surname
+>Winter</surname
+> <affiliation
+><address
+><email
+>winterz@kde.org</email
+></address
+></affiliation>
+</author>
+
+<othercredit role="reviewer"
+><firstname
+>Malcolm</firstname
+> <surname
+>Hunter</surname
+> <affiliation
+><address
+><email
+>malcolm.hunter@gmx.co.uk</email
+></address
+></affiliation>
+<contrib
+>Granskning</contrib>
+</othercredit>
+<othercredit role="translator"
+><firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+><affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+><contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2002</year
+><year
+>2004</year
+><holder
+>Tuukka Pasanen</holder>
+</copyright>
+
+<copyright>
+<year
+>2003</year
+><year
+>2007</year
+><holder
+>Allen Winter</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Don't change format of date and version of the documentation -->
+
+<date
+>2016-11-23</date>
+<releaseinfo
+>5.1.3 (Program 16.12)</releaseinfo>
+
+<abstract>
+<para
+>&konsolekalendar; är ett kommandoradgränssnitt för &kde;:s kalendrar.</para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>&package;</keyword>
+<keyword
+>&kappname;</keyword>
+<keyword
+>KOrganizer</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inledning</title>
+
+<para
+>&konsolekalendar; är ett kommandoradsgränssnitt för kalendrar. Det låter dig visa, infoga, ta bort eller ändra kalenderhändelser via kommandoraden eller från ett skriptspråk. Dessutom kan &konsolekalendar; skapa en ny kalender, exportera en kalender till ett antal andra format, och importera en annan kalender.</para>
+
+<para
+>I sitt grundläggande läge visar &konsolekalendar; händelselistan i standardkalendern för aktuellt datum (från 7:00 till 17:00).</para>
+
+<para
+>Huvudfunktioner i &konsolekalendar;: <itemizedlist>
+<listitem
+><para
+>Visa kalenderposter från ett startdatum och -tid till ett slutdatum och -tid</para
+></listitem>
+<listitem
+><para
+>Infoga (lägga till) kalenderposter</para
+></listitem>
+<listitem
+><para
+>Ta bort (avlägsna) kalenderposter</para
+></listitem>
+<listitem
+><para
+>Modifiera (ändra) kalenderposter</para
+></listitem>
+<listitem
+><para
+>Skapa en ny kalender</para
+></listitem>
+<listitem
+><para
+>Exportera kalenderposter till andra filformat</para
+></listitem>
+<listitem
+><para
+>Importera en befintlig kalender</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>&konsolekalendar; är <emphasis
+>inte</emphasis
+> ett annat grafiskt gränssnitt till en &kde;-kalender (dvs. &korganizer;) &konsolekalendar; är bara avsett för användning där ett grafiskt användargränssnitt inte är praktiskt eller möjligt.</para>
+
+<para
+>&konsolekalendar; tillhandahåller <emphasis
+>inte</emphasis
+> ett fullständigt språk för att göra förfrågningar om användarens kalender, det är heller inte upphovsmännens avsikt att någonsin lägga till en sådan möjlighet. Enkla kommandoradsväljare tillhandahålls för att komma åt kalenderhändelser i ett datum- och tidsintervall. </para>
+
+</chapter>
+
+<chapter id="features">
+<title
+>Funktioner</title>
+<para
+>I det här kapitlet lär du dig om huvudfunktionerna i &konsolekalendar;, och hur du kan styra dem med kommandoradsväljare (kom ihåg att &konsolekalendar; inte har ett grafiskt användargränssnitt, utan bara är ett kommadoradsprogram).</para>
+
+<para
+>Du lär dig om att infoga, ta bort och ändra kalenderhändelser, och hur händelser kan exporteras till andra filformat. Att skapa och importera kalendrar täcks också i det här kapitlet. </para>
+
+<sect1 id="viewing">
+<title
+>Visa händelser</title>
+
+<para
+>I normalläge, eller genom att använda väljaren <parameter
+>--view</parameter
+>, listar &konsolekalendar; händelser i ett angivet datum- och tidsintervall.</para>
+
+<para>
+<informalexample
+><para
+>För att visa alla dagens händelser (från 7:00 till 17:00), kör helt enkelt:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>I nästa exempel, visar vi alla händelser för veckan från 18 till 22 augusti:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--view</option
+> <option
+>--date <replaceable
+>2016-08-18</replaceable
+> </option
+> <option
+>--end-date <replaceable
+>2016-08-22</replaceable
+></option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Visa nästa händelse(r) i kalendern från aktuell tid och framåt:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>För att visa alla händelser för de fem nästa dagarna, kör:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--show-next</option
+> <replaceable
+>5</replaceable>
+
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="inserting">
+<title
+>Infoga händelser</title>
+
+<para
+>&konsolekalendar; kan infoga händelser i en kalender eller kalenderresurs med kommandoradsväljaren <parameter
+>--add</parameter
+>. Händelser som infogas med lyckat resultat, visas omedelbart av &kde;:s kalenderprogram (som &korganizer;).</para>
+
+<para
+>Du får en lista över alla kalendrar och deras id genom att använda: </para>
+
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--list-calendars</option
+></userinput
+></screen>
+
+<para>
+<informalexample
+><para
+>I följande exempel infogas en händelse som börjar 2016-12-01 (1:e december, 2016) klockan 10:00 och slutar klockan 12:00 med sammanfattningen "Läkarbesök" i användarens standardkalenderresurs och med id 8:</para>
+
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-03</replaceable
+></option
+> <option
+>--time <replaceable
+>10:00</replaceable
+></option
+> \
+<option
+>--end-time <replaceable
+>12:00</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Läkarbesök"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>I det här exemplet läggs en födelsedag till i användarens standardkalenderresurs med id 8:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-06</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Min födelsedag"</replaceable
+></option
+> \
+<option
+>--description <replaceable
+>"Dags att festa"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Här infogas en veckas semester i en delad kalender med id 8:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar <replaceable
+>12</replaceable
+></option
+> <option
+>--date <replaceable
+>2017-08-01</replaceable
+></option
+> \
+<option
+>--end-date <replaceable
+>2017-08-07</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Semester"</replaceable
+></option
+> <option
+>--description <replaceable
+>"Ingen kan någonsin hitta mig!"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="deleting">
+<title
+>Ta bort poster</title>
+
+<para
+>&konsolekalendar; stöder att ta bort poster i en kalenderfil eller resurs med kommandoradsväljaren <parameter
+>--delete</parameter
+>. Kalenderposter som ska tas bort specificeras exakt med en unik identifieringssträng (<acronym
+>UID</acronym
+>) med väljaren <parameter
+>--uid</parameter
+>. Unika identifierare hittas genom att först titta på händelsen med väljarna <parameter
+>--view</parameter
+>, <acronym
+>--next</acronym
+> eller <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>Händelser som tas bort med lyckat resultat, tas omedelbart bort inne i &kde;:s kalenderprogram (till exempel &korganizer;).</para>
+
+<warning
+><para
+>När du tar bort något från kalendern kan du <emphasis
+>inte</emphasis
+> ångra det! Med andra ord, när du tar bort en post kan du inte få tillbaka den borttagna posten. Den är borta för alltid.</para
+></warning>
+
+<para>
+<informalexample
+><para
+>Här tar vi bort en kalenderpost med <acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--delete</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="changing">
+<title
+>Ändra händelser</title>
+
+<para
+>&konsolekalendar; stöder att ändra befintliga poster i en kalenderfil eller resurs med kommandoradsväljaren <parameter
+>--change</parameter
+>. Kalenderposter som ska ändras specificeras exakt med en unik identifieringssträng (<acronym
+>UID</acronym
+>) med väljaren <parameter
+>--uid</parameter
+>. Unika identifierare hittas genom att först titta på händelsen med väljarna <parameter
+>--view</parameter
+>, <acronym
+>--next</acronym
+> eller <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>Att ändra beter sig på samma sätt som att infoga: Du kan ändra startdatum och -tid, slutdatum och -tid, beskrivning, plats och sammanfattning för en händelse. För händelser som ändras med lyckat resultat, visas ändringen omedelbart av &kde;:s kalenderprogram (som &korganizer;).</para>
+
+<para
+><emphasis
+>Exempel:</emphasis
+> Här ändrar vi sammanfattningen och beskrivningen för en kalenderpost med <acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<informalexample>
+<para
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--change</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Få huvudet undersökt"</replaceable
+></option
+> <option
+>--description <replaceable
+>"Gå inte till den läkaren igen!"</replaceable
+></option
+> </userinput
+> </para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="creating">
+<title
+>Skapa en ny kalenderfil</title>
+
+<para
+>&konsolekalendar; kan användas för att skapa nya kalendrar från befintliga filer. Du kan skapa kalendern med väljaren <option
+>--create</option
+> och filnamnet som argument. Filen måste vara en giltig <acronym
+>iCal</acronym
+>- eller <acronym
+>vCal</acronym
+>-fil.</para>
+<para
+>Observera: Det går inte att använda väljaren <option
+>--dry-run</option
+> för att prova om resursen kan skapas.</para>
+
+<para
+>Observera: &konsolekalendar; kräver filen för att fungera, så ta aldrig bort filen för hand. </para>
+
+<para
+>Teknisk sidoanmärkning: &konsolekalendar; skapar en ny <acronym
+>Akonadi</acronym
+>-resurs som pekar på filen med kommandot. Det förhindrar dig inte från att skapa flera resurser som pekar på samma fil. </para>
+
+<para>
+<informalexample
+><para
+>Skapa en kalenderfil som heter <filename
+><replaceable
+>semester.ics</replaceable
+></filename
+></para>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--create</option
+> <option
+><replaceable
+>semester.ics</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para
+>Resursen kallas <quote
+>semester</quote
+> när <option
+>--list-calendars</option
+> används.</para>
+
+<para
+>Det är inte möjligt att ta bort en <acronym
+>Akonadi</acronym
+>-resurs med &konsolekalendar;, utan du måste använda &korganizer; eller <application
+>akonadiconsole</application
+>. </para>
+
+</sect1>
+
+<sect1 id="exporting">
+<title
+>Export till andra format</title>
+
+<para
+>&konsolekalendar; kan exportera en kalender till andra välkända format. Att exportera är ett särskilt sätt att visa. Normalt visas händelser med <quote
+>&konsolekalendar; textformat</quote
+>. För att ändra visningsformat använd kommandoradsväljaren <parameter
+>--export-type</parameter
+>.</para>
+
+<para
+>För att se en lista med alla exportformat som stöds, använd alternativet <parameter
+>--export-list</parameter
+>, som följer:</para>
+
+<para>
+<informalexample>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--export-list</option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="formats">
+<title
+>Exportformat</title>
+
+<para
+>Några, men inte nödvändigtvis alla, format som stöds beskrivs i det här avsnittet.</para>
+
+<sect2 id="native-format">
+<title
+>&konsolekalendar; textformat</title>
+
+<para
+>&konsolekalendar;-textformat är &konsolekalendar;s eget format och det är konstruerat för att vara bekvämt att läsa och kunna tolkas av efterföljande skript.</para>
+
+<para
+>&konsolekalendar; textformat är: <informalexample
+> <screen
+>Date:\t&lt;Händelsens datum&gt;(dddd åååå-MM-dd)
+[\t&lt;Händelsens starttid&gt;(tt:mm) - &lt;Händelsens sluttid&gt;(tt:mm)]
+Summary:
+\t&lt;Sammanfattning av händelsen | "(ingen sammanfattning tillgänglig)"&gt;
+Location:
+\t&lt;Händelsens plats | "(ingen platsinformation tillgänglig)"&gt;
+Description:
+\t&lt;Beskrivning av händelsen | "(ingen beskrivning tillgänglig)"&gt;
+UID:
+\t&lt;Händelsens UID&gt;
+--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+<para
+>Utmatning från <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Text</option
+></userinput
+>: <informalexample
+> <screen
+>Date:   Tisdag 2016-11-29
+        8:00 - 9:00
+Summary:
+        Personalmöte
+Location:
+        Konferensrummet
+Description:
+        Träffa hela personalen för att diskutera projektet.
+UID:
+        &konsolekalendar;-1924621834.134
+--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="short-format">
+<title
+>&konsolekalendar; kort textformat</title>
+
+<para
+>Kort textformat tillhandahåller en kompaktare mindre utförlig version av &konsolekalendar;s eget format.</para>
+
+<para
+>&konsolekalendar; kort textformat är: <informalexample
+> <screen
+>[--------------------------------------------------]
+{&lt;Händelsens datum&gt;(dddd åååå-MM-dd)]
+[&lt;Händelsens starttid&gt;(tt:mm) - &lt;Händelsens sluttid&gt;(tt:mm) | "\t"]
+\t&lt;Sammanfattning av händelsen | \t&gt;[, &lt;Händelsens plats&gt;]
+\t\t&lt;Beskrivning av händelsen | "\t"&gt;
+</screen>
+</informalexample>
+</para>
+
+<para
+>Utmatning från <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Short</option
+></userinput
+>: <informalexample
+> <screen
+>--------------------------------------------------
+Tisdag 2016-11-29
+08:00 - 09:00   Personalmöte, Konferensrummet
+                Träffa hela personalen för att diskutera projektet.
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="csv-format">
+<title
+>Format med värden åtskilda av kommatecken (<acronym
+>CSV</acronym
+>)</title>
+
+<para
+>Formatet med värden åtskilda av kommatecken visar händelsevärden i samma ordning som &konsolekalendar;s textformat. Den enda skillnaden är att informationen finns på samma rad med varje fält åtskilt av ett kommatecken. De skapade exportfilerna kan direkt importeras i kalkylark som &calligrasheets;, <application
+>OpenOffice.org Calc</application
+> och <application
+>&Microsoft; Excel</application
+>. Dessutom är <acronym
+>CSV</acronym
+>-formatet lätt att tolka med efterföljande skript.</para>
+
+<para
+>Formatet med värden åtskilda av kommatecken (<acronym
+>CSV</acronym
+>) är: <informalexample
+> <screen
+>"Veckodag, dag månad, år","TT:MM","Veckodag, dag månad, år","TT:MM","Sammanfattning","Plats","Beskrivning","UID"
+</screen>
+</informalexample>
+</para>
+
+<para
+>Utmatning från <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>CSV</option
+></userinput
+>: <informalexample
+> <screen
+>"Tisdag, 29 november, 2016","08:00","Tisdag, 29 november, 2016","09:00","Personalmöte","Konferensrummet","Träffa hela personalen\
+i det stora konferensrummet.","&konsolekalendar;-1924621834.134"
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="html-format">
+<title
+>&HTML;-format</title>
+
+<para
+>Exportformatet &HTML; skapar en giltig &HTML;-fil som kan publiceras på <acronym
+>WWW</acronym
+>. Exportformatet är inte lämpligt för efterföljande tolkning av ett skript, men är mycket trevligt för att publicera kalendrar så att de enkelt kan beskådas.</para>
+<!--FIXME
+exports only the template without any incidence data
+<para
+><emphasis
+>TODO:</emphasis
+> Insert screenshot here</para>
+-->
+</sect2>
+
+<sect2 id="html-month-format">
+<title
+><acronym
+>HTML</acronym
+>-månadsformat</title>
+
+<para
+>Formatet skapar en &HTML;-fil som visar alla möten under de månader som anges av tidsintervallet. Exportformatet är inte lämpligt för efterföljande tolkning av ett skript, men är mycket trevligt för att publicera kalendrar så att de enkelt kan beskådas.</para>
+<!--FIXME
+exports only the template without any incidence data
+<para
+><emphasis
+>TODO:</emphasis
+> Insert screenshot here</para>
+-->
+</sect2>
+
+</sect1>
+
+<sect1 id="importing">
+<title
+>Importera kalendrar</title>
+
+<para
+>&konsolekalendar; kan importera en iCal- eller vCal-kalenderfil till en kalender. Alla händelser från kalendern som importeras infogas, inklusive identiska händelser som redan ingår i kalendern.</para>
+
+<para>
+<informalexample
+><para
+>För att importera kalenderfilen <replaceable
+>semester.ics</replaceable
+> till kalendern med id <replaceable
+>8</replaceable
+> kör:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--import <replaceable
+>semester.ics</replaceable
+></option
+> <option
+>--calendar <replaceable
+>8</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="features-commandline-options">
+<title
+>Kommandoradsväljare</title>
+
+<para
+>&konsolekalendar; stöder följande väljare:</para>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row>
+  <entry
+>Alternativ</entry>
+  <entry
+>Beskrivning</entry>
+</row>
+</thead>
+<tbody>
+<row>
+  <entry
+><emphasis
+>Allmänna väljare:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--help, --help-all</option
+></entry>
+  <entry
+>Visar hjälp om programmets väljare.</entry>
+</row>
+<row>
+  <entry
+><option
+>--author</option
+></entry>
+  <entry
+>Visar information om programmets upphovsmän.</entry>
+</row>
+<row>
+  <entry
+><option
+>-v, --version</option
+></entry>
+  <entry
+>Visar programmets versionsinformation.</entry>
+</row>
+<row>
+  <entry
+><option
+>--license</option
+></entry>
+  <entry
+>Visar programmets licensinformation.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Väljare:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--verbose</option
+></entry>
+  <entry
+>Skriver ut hjälpsamma meddelanden under körning.</entry>
+</row>
+<row>
+  <entry
+><option
+>--dry-run</option
+></entry>
+  <entry
+>Skriv ut vad som skulle ha gjorts, men utför det inte. Ändrar inga filer: infogar, tar bort eller ändrar inga befintliga filer, eller skapar några nya filer.</entry>
+</row>
+<row>
+  <entry
+><option
+>--allow-gui</option
+></entry>
+  <entry
+>Tillåt resurser som kan behöva ett interaktivt användargränssnitt. I normal användning utnyttjas bara resurser som aldrig kräver att ett användargränssnitt används (som filbaserade kalendrar).</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Förekomsttyper (väljarna kan kombineras):</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--event</option
+></entry>
+  <entry
+>Behandla bara händelser (förval).</entry>
+</row>
+<row>
+  <entry
+><option
+>--todo</option
+></entry>
+  <entry
+>Behandla bara uppgifter (inte implementerad).</entry>
+</row>
+<row>
+  <entry
+><option
+>--journal</option
+></entry>
+  <entry
+>Behandla bara journaler (inte implementerad).</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Huvudkommandolägen:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--view</option
+></entry>
+  <entry
+>Skriv ut kalenderhändelser i angivet exportformat.</entry>
+</row>
+<row>
+  <entry
+><option
+>--add</option
+></entry>
+  <entry
+>Infoga en händelse i kalendern.</entry>
+</row>
+<row>
+  <entry
+><option
+>--change</option
+></entry>
+  <entry
+>Ändra en befintlig händelse i kalendern.</entry>
+</row>
+<row>
+  <entry
+><option
+>--delete</option
+></entry>
+  <entry
+>Ta bort en befintlig händelse i kalendern.</entry>
+</row>
+<row>
+  <entry
+><option
+>--create</option
+> <replaceable
+>&nbsp;filnamn</replaceable
+> </entry>
+  <entry
+>Skapa en ny kalender från en befintlig fil.</entry>
+</row>
+<row>
+  <entry
+><option
+>--import</option
+> <replaceable
+>&nbsp;importfil</replaceable
+></entry>
+  <entry
+>Importera kalendern i huvudkalendern.</entry>
+</row>
+<row>
+  <entry
+><option
+>--list-calendars</option
+></entry>
+  <entry
+>Lista tillgängliga kalendrar.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Väljare för kommandolägen:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--all</option
+></entry>
+  <entry
+>Visa alla kalenderposter.</entry>
+</row>
+<row>
+  <entry
+><option
+>--next</option
+></entry>
+  <entry
+>Visa nästa händelse i kalendern.</entry>
+</row>
+<row>
+  <entry
+><option
+>--show-next</option
+> <replaceable
+>&nbsp;dagar</replaceable
+></entry>
+  <entry
+>Visa nästa antal dagars händelser med början på angivet datum.</entry>
+</row>
+<row>
+  <entry
+><option
+>--uid</option
+> <replaceable
+>&nbsp;UID</replaceable
+></entry>
+  <entry
+>Visa, ta bort eller ändra händelsen med den här unika identifieringssträngen.</entry>
+</row>
+<row>
+  <entry
+><option
+>--date</option
+> <replaceable
+>&nbsp;datum</replaceable
+></entry>
+  <entry
+>Börja med dagen [ÅÅÅÅ-MM-DD]. Standardvärde är dagens datum.</entry>
+</row>
+<row>
+  <entry
+><option
+>--time</option
+> <replaceable
+>&nbsp;tid</replaceable
+></entry>
+  <entry
+>Börja med tiden [TT:MM]. Standardvärde för visning är 07:00. <para
+>För att lägga till eller ändra en flytande händelse, använd alternativen <option
+>--time float</option
+> eller <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--end-date</option
+> <replaceable
+>&nbsp;slutdatum</replaceable
+></entry>
+  <entry
+>Sluta med dagen [ÅÅÅÅ-MM-DD]. Standardvärde anges av <option
+>--date</option
+>.</entry>
+</row>
+<row>
+  <entry
+><option
+>--end-time</option
+> <replaceable
+>&nbsp;sluttid</replaceable
+></entry>
+  <entry
+>Sluta med tiden [TT:MM]. Standardvärde för visning är 17:00. <para
+>För att lägga till eller ändra en flytande händelse, använd alternativen <option
+>--time float</option
+> eller <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-start</option
+> <replaceable
+>&nbsp;epok</replaceable
+></entry>
+  <entry
+>Börja vid tiden [sekunder efter epoken].</entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-end</option
+> <replaceable
+>&nbsp;epok</replaceable
+></entry>
+  <entry
+>Sluta vid tiden [sekunder efter epoken].</entry>
+</row>
+<row>
+  <entry
+><option
+>--summary</option
+> <replaceable
+>&nbsp;sammanfattning</replaceable
+></entry>
+  <entry
+>Lägg till sammanfattning till händelse (fungerar vid tillägg och ändring).</entry>
+</row>
+<row>
+  <entry
+><option
+>--description</option
+> <replaceable
+>&nbsp;beskrivning</replaceable
+></entry>
+  <entry
+>Lägg till beskrivning till händelse (fungerar vid tillägg och ändring).</entry>
+</row>
+<row>
+  <entry
+><option
+>--location</option
+> <replaceable
+>&nbsp;plats</replaceable
+></entry>
+  <entry
+>Lägg till plats till händelse (fungerar vid tillägg och ändring).</entry>
+</row>
+<row>
+  <entry
+><option
+>--calendar</option
+> <replaceable
+>&nbsp;id</replaceable
+></entry>
+  <entry
+>Ange en kalender att använda. <para
+>Om den inte anges, används &korganizer;s standardresurs.</para
+></entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Exportalternativ:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--export-type</option
+> <replaceable
+>&nbsp;exporttyp</replaceable
+></entry>
+  <entry
+>Exportera filtypen. Standardfiltyp för export är text.</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-file</option
+> <replaceable
+>&nbsp;exportfil</replaceable
+></entry>
+  <entry
+>Exportera till fil. Normalt skrivs utdata till standardutmatningen.</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-list</option
+></entry>
+  <entry
+>Skriv ut lista med exporttyper som stöds och avsluta.</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Vanliga frågor</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Vilka inställningsfiler använder &konsolekalendar;?</para>
+</question>
+<answer>
+<para
+>Inga.</para>
+</answer>
+</qandaentry>
+
+
+<qandaentry>
+<question>
+<para
+>Vad är programnamnet för &konsolekalendar;?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar;s programnamn är <application
+>konsolekalendar</application
+>.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Vad är formatet för att ange datum?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; förkastar datum som anges på kommandoraden om de inte anges enligt standarden ISO 8601, det vill säga ÅÅÅÅ-MM-DD, där ÅÅÅÅ representerar år med fyra siffror (som 2003), MM representerar månader med två siffror (01, 02, ... 12), och DD representerar dagar med två siffror (01, 02, ... 31).</para>
+<para
+>&konsolekalendar; exporterar alltid datum enligt formatet ISO 8601.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Vad är formatet för att ange tid?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; förkastar tider som anges på kommandoraden om de inte anges enligt standarden ISO 8601, det vill säga TT:MM:SS, där TT representerar timmar med två siffror (01, 02, ... 24), MM representerar minuter med två siffror (01, 02, ... 60), och SS representerar sekunder med två siffror (01, 02, ... 60).</para>
+<para
+>&konsolekalendar; exporterar alltid tider enligt formatet ISO 8601.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Kommer &konsolekalendar; att infoga en ny händelse i kalendern som är identisk med en som redan finns?</para>
+</question>
+<answer>
+<para
+>Nej. Se nästa fråga.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Hur avgör &konsolekalendar; att en händelse är identisk till en som redan finns i kalendern?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; kontrollerar angivet startdatum och -tid, slutdatum och -tid, och sammanfattningen mot alla händelser i kalendern. En träff sker om alla tre värden passar ihop med en befintlig händelse. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Kan en händelse som inte flyter ändras till en flytande händelse?</para>
+</question>
+<answer>
+<para
+>Ja. Använd alternativet <option
+>--time float</option
+> med <option
+>--change</option
+>. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Varför skrivs händelsernas <acronym
+>UID</acronym
+>:er ut i de flesta exportformat?</para>
+</question>
+<answer>
+<para
+>Eftersom du måste ange <acronym
+>UID</acronym
+>:er för att ta bort eller ändra händelser. Om du inte vill se händelsernas <acronym
+>UID</acronym
+>:er, använd då exportformatet <emphasis
+>kort</emphasis
+> (<option
+>--export-type short</option
+>). </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Hur kan jag få en fråga tillagd bland de här vanliga frågorna?</para>
+</question>
+<answer>
+<para
+>Skicka dina frågor till <email
+>winter@kde.org</email
+>.</para>
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+
+<chapter id="credits">
+
+<title
+>Tack till och licens</title>
+
+<para
+>&konsolekalendar; program copyright 2002-2007:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Dokumentation copyright 2003:</para>
+<itemizedlist>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Stefan Asserhäll<email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

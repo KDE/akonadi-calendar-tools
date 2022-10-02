@@ -1,0 +1,1436 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+
+  <!ENTITY konsolekalendar "<application
+>KonsoleKalendar</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+<!-- The language must NOT be changed here. -->
+
+<book id="konsolekalendar" lang="&language;">
+
+<bookinfo id="konsolekalendarinfo">
+
+<title
+>El manual de &konsolekalendar;</title>
+
+<authorgroup>
+<author
+><firstname
+>Tuukka</firstname
+> <surname
+>Pasanen</surname
+> <affiliation
+><address
+><email
+>illuusio@mailcity.com</email
+></address
+></affiliation>
+</author>
+
+<author
+><firstname
+>Allen</firstname
+> <surname
+>Winter</surname
+> <affiliation
+><address
+><email
+>winterz@kde.org</email
+></address
+></affiliation>
+</author>
+
+<othercredit role="reviewer"
+><firstname
+>Malcolm</firstname
+> <surname
+>Hunter</surname
+> <affiliation
+><address
+><email
+>malcolm.hunter@gmx.co.uk</email
+></address
+></affiliation>
+<contrib
+>Revisor</contrib>
+</othercredit>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<copyright>
+<year
+>2002</year
+><year
+>2004</year
+><holder
+>Tuukka Pasanen</holder>
+</copyright>
+
+<copyright>
+<year
+>2003</year
+><year
+>2007</year
+><holder
+>Allen Winter</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Don't change format of date and version of the documentation -->
+
+<date
+>23 de novembre de 2016</date>
+<releaseinfo
+>5.1.3 (Aplicacions 16.12)</releaseinfo>
+
+<abstract>
+<para
+>&konsolekalendar; és una interfície de la línia d'ordres per a calendaris &kde;.</para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>&package;</keyword>
+<keyword
+>&kappname;</keyword>
+<keyword
+>KOrganizer</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introducció</title>
+
+<para
+>&konsolekalendar; és una interfície de línia d'ordres per a calendaris &kde;. Permet veure, inserir, eliminar o modificar els esdeveniments del calendari a través de la línia d'ordres o des d'un llenguatge per crear scripts. A més, &konsolekalendar; pot crear un nou calendari, exportar un calendari a una varietat d'altres formats, i importar des d'un altre calendari.</para>
+
+<para
+>En el seu mode bàsic, &konsolekalendar; mostra la llista d'esdeveniments en el calendari per omissió per al dia actual (de 7:00 a 17:00 hores).</para>
+
+<para
+>Característiques principals de &konsolekalendar;: <itemizedlist>
+<listitem
+><para
+>Visualitza les entrades del calendari a partir d'una data/hora d'inici a data/hora final</para
+></listitem>
+<listitem
+><para
+>Insereix (afegeix) entrades a un calendari</para
+></listitem>
+<listitem
+><para
+>Elimina (esborra) entrades a un calendari</para
+></listitem>
+<listitem
+><para
+>Modifica (canvia) entrades a un calendari</para
+></listitem>
+<listitem
+><para
+>Crea un nou calendari</para
+></listitem>
+<listitem
+><para
+>Exporta les entrades del calendari a altres formats de fitxer</para
+></listitem>
+<listitem
+><para
+>Importa un calendari existent</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>&konsolekalendar; <emphasis
+>no</emphasis
+> és una altra interfície gràfica d'usuari per a un calendari &kde; (&ead;, &korganizer;). &konsolekalendar; està destinat exclusivament per a usos en què una interfície gràfica d'usuari no és pràctica ni possible.</para>
+
+<para
+>&konsolekalendar; <emphasis
+>no</emphasis
+> proporciona un llenguatge complet per realitzar consultes del calendari de l'usuari: ni és la intenció dels autors escriure mai aquesta capacitat. Es proporcionen opcions de línia d'ordres primitives per accedir als esdeveniments del calendari dins d'un interval consecutiu de dates/hora de temps. </para>
+
+</chapter>
+
+<chapter id="features">
+<title
+>Característiques</title>
+<para
+>En aquest capítol aprendreu sobre les característiques principals de &konsolekalendar; i com controlar-lo utilitzant els paràmetres de línia d'ordres (recordeu que &konsolekalendar; no és una interfície gràfica d'usuari, sinó que només és un programa de línia d'ordres).</para>
+
+<para
+>Aprendreu sobre la inserció, eliminació i canvi d'esdeveniments de calendari, i com exportar els esdeveniments a altres formats de fitxer. La creació i la importació dels calendaris també es tractaran en aquest capítol. </para>
+
+<sect1 id="viewing">
+<title
+>Veure els esdeveniments</title>
+
+<para
+>En el seu mode per omissió, o mitjançant l'ús de l'opció <parameter
+>--view</parameter
+>, &konsolekalendar; llistarà tots els esdeveniments dins de l'interval d'una determinada data/hora.</para>
+
+<para>
+<informalexample
+><para
+>Per veure tots els esdeveniments d'avui (de 7:00 a 17:00 hores), n'hi ha prou amb executar:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>En el següent exemple, veiem tots els esdeveniments per a la setmana 18-22 d'agost:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--view</option
+> <option
+>--date <replaceable
+>2016-08-18</replaceable
+> </option
+> <option
+>--end-date <replaceable
+>2016-08-22</replaceable
+></option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Mostra el/s esdeveniment/s següent/s en el calendari des d'ara endavant:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Per veure tots els esdeveniments per als propers 5 dies executeu:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--show-next</option
+> <replaceable
+>5</replaceable>
+
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="inserting">
+<title
+>Inserir esdeveniments</title>
+
+<para
+>&konsolekalendar; pot inserir esdeveniments en un calendari o al recurs utilitzant l'argument <parameter
+>--add</parameter
+> de línia d'ordres. Els esdeveniments amb èxit seran inserits i mostrats immediatament per les aplicacions de calendari del &kde; (com &korganizer;).</para>
+
+<para
+>Obtindreu una llista de tots els calendaris i els seus ID utilitzant: </para>
+
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--list-calendars</option
+></userinput
+></screen>
+
+<para>
+<informalexample
+><para
+>En el següent exemple, un esdeveniment que comença el 2016-12-01 (1 de desembre de 2016) a les 10:00 i finalitzant a les 12:00 amb el resum «Visita al metge» que serà inserit en el recurs de calendari per omissió l'usuari amb l'ID 8:</para>
+
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-03</replaceable
+></option
+> <option
+>--time <replaceable
+>10:00</replaceable
+></option
+> \
+<option
+>--end-time <replaceable
+>12:00</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Visita al metge"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>En aquest exemple, un esdeveniment d'aniversari serà afegit en el recurs de calendari de l'usuari amb l'ID 8:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-06</replaceable
+></option
+> <option
+>--summary <replaceable
+>"El meu aniversari"</replaceable
+></option
+> \
+<option
+>--description <replaceable
+>"Temps per a la festa"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Aquí s'inserirà una setmana de vacances en un calendari amb l'ID 8:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar <replaceable
+>12</replaceable
+></option
+> <option
+>--date <replaceable
+>2017-08-01</replaceable
+></option
+> \
+<option
+>--end-date <replaceable
+>2017-08-07</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Vacances"</replaceable
+></option
+> <option
+>--description <replaceable
+>"Ningú em trobarà!"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="deleting">
+<title
+>Eliminar entrades</title>
+
+<para
+>&konsolekalendar; suporta l'eliminació d'entrades en un fitxer de calendari o recurs utilitzant l'argument <parameter
+>--delete</parameter
+> de la línia d'ordres. Les entrades de calendari a esborrar s'especifiquen exactament per la cadena de l'IDentificador únic (<acronym
+>UID</acronym
+>) utilitzant l'opció <parameter
+>--uid</parameter
+>. Els <acronym
+>UID</acronym
+> es troben en primer lloc en veure l'esdeveniment, utilitzant les opcions <parameter
+>--view</parameter
+>, <parameter
+>--next</parameter
+> o <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>Els esdeveniments esborrats amb èxit seran eliminats immediatament de les aplicacions de calendari del &kde; (&pex;, &korganizer;).</para>
+
+<warning
+><para
+>Quan s'elimina quelcom del calendari <emphasis
+>no es podrà</emphasis
+> desfer! En altres paraules, quan elimineu un contacte no podreu desfer l'acció! S'ha perdut per sempre.</para
+></warning>
+
+<para>
+<informalexample
+><para
+>Aquí s'elimina una entrada de calendari amb <acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--delete</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="changing">
+<title
+>Modificar entrades</title>
+
+<para
+>El &konsolekalendar; suporta la modificació d'entrades en un fitxer de calendari o recurs utilitzant l'argument <parameter
+>--change</parameter
+> de la línia d'ordres. Les entrades de calendari a modificar s'especifiquen exactament per la cadena de l'IDentificador únic (<acronym
+>UID</acronym
+>) utilitzant l'opció <parameter
+>--uid</parameter
+>. Els <acronym
+>UID</acronym
+> es troben en primer lloc en veure l'esdeveniment, amb l'opció <parameter
+>--view</parameter
+>, <parameter
+>--next</parameter
+> o <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>Els canvis es realitzen de la mateixa manera que les insercions: podeu canviar la data i l'hora d'inici o de final, el resum, la ubicació i descripció d'un esdeveniment. Els esdeveniments canviats amb èxit es mostraran immediatament modificats en les aplicacions de calendari del &kde; (&korganizer;).</para>
+
+<para
+><emphasis
+>Exemple:</emphasis
+> Aquí canviem el resum i la descripció d'una entrada de calendari amb <acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<informalexample>
+<para
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--change</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Fer-me examinar del cap"</replaceable
+></option
+> <option
+>--description <replaceable
+>"He d'estar boig!"</replaceable
+></option
+> </userinput
+> </para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="creating">
+<title
+>Crear un nou fitxer de calendari</title>
+
+<para
+>El &konsolekalendar; pot utilitzar-se per crear calendaris nous a partir de fitxers existents. Podeu crear el calendari utilitzant l'opció <option
+>--create</option
+> amb el nom de fitxer com a argument. El fitxer haurà de ser un fitxer <acronym
+>iCal</acronym
+> o <acronym
+>vCal</acronym
+> vàlid.</para>
+<para
+>Nota: No podeu utilitzar l'opció <option
+>--dry-run</option
+> per comprovar si es pot crear el recurs.</para>
+
+<para
+>Nota: El &konsolekalendar; necessita el fitxer per a funcionar, de manera que mai el suprimireu manualment. </para>
+
+<para
+>Nota tècnica: El &konsolekalendar; crea amb aquesta ordre un recurs nou de l'<acronym
+>Akonadi</acronym
+> que apuntarà a aquest fitxer. El qual no impedeix permetre-us crear múltiples recursos que apuntin al mateix fitxer. </para>
+
+<para>
+<informalexample
+><para
+>Crea un calendari nou a partir d'un fitxer existent anomenat <filename
+><replaceable
+>/data/share/calendars/vacances.ics</replaceable
+></filename
+>:</para>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--create</option
+> <option
+><replaceable
+>vacances.ics</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para
+>El recurs s'anomenarà <quote
+>vacances</quote
+> utilitzant <option
+>--list-calendars</option
+></para>
+
+<para
+>No és possible suprimir un recurs de l'<acronym
+>Akonadi</acronym
+> amb el &konsolekalendar;, haureu d'utilitzar el &korganizer; o <application
+>akonadiconsole</application
+>. </para>
+
+</sect1>
+
+<sect1 id="exporting">
+<title
+>Exportar a altres formats</title>
+
+<para
+>&konsolekalendar; pot exportar un calendari a altres formats coneguts. L'exportació és una forma especial de veure. Per omissió, els esdeveniments es veuen en el format <quote
+>text de &konsolekalendar;</quote
+>. Per canviar el format de visualització utilitzeu l'argument <parameter
+>--export-type</parameter
+> de la línia d'ordres.</para>
+
+<para
+>Per veure una llista de tots els formats d'exportació suportats, utilitzeu l'opció <parameter
+>--export-list</parameter
+>, com segueix:</para>
+
+<para>
+<informalexample>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--export-list</option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="formats">
+<title
+>Formats d'exportació</title>
+
+<para
+>Alguns, però no necessàriament tots, els formats suportats es descriuen en aquesta secció.</para>
+
+<sect2 id="native-format">
+<title
+>Format de text del &konsolekalendar;</title>
+
+<para
+>El format de text del &konsolekalendar; és el format natiu de &konsolekalendar; i està dissenyat per ser còmode per llegir i analitzar utilitzant scripts.</para>
+
+<para
+>El format de text del &konsolekalendar; és el següent: <informalexample
+> <screen
+>Date:\t&lt;Incidence Date&gt;(dddd yyyy-MM-dd)
+[\t&lt;Incidence Start Time&gt;(hh:mm) - &lt;Incidence End Time&gt;(hh:mm)]
+Summary:
+\t&lt;Incidence Summary | "(no hi ha disponible cap resum)"&gt;
+Location:
+\t&lt;Incidence Location | "(no hi ha disponible cap ubicació)"&gt;
+Description:
+\t&lt;Incidence Description | "(no hi ha disponible cap descripció)"&gt;
+UID:
+\t&lt;Incidence UID&gt;
+--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+<para
+>Sortida de <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Text</option
+></userinput
+>: <informalexample
+> <screen
+>Date:   Tuesday 2016-11-29
+        08:00 - 09:00
+Summary:
+        Reunió del personal
+Location:
+        Sala d'actes
+Description:
+        Reunió amb tot el personal per parlar del projecte.
+UID:
+        &konsolekalendar;-1924621834.134
+--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="short-format">
+<title
+>Format de text curt del &konsolekalendar;</title>
+
+<para
+>El format de text curt ofereix un disseny més compacte, la versió menys detallada del format natiu de &konsolekalendar;.</para>
+
+<para
+>El format de text curt del &konsolekalendar; és: <informalexample
+> <screen
+>[--------------------------------------------------]
+{&lt;Incidence Date&gt;(dddd yyyy-MM-dd)]
+[&lt;Incidence Start Time&gt;(hh:mm) - &lt;Incidence End Time&gt;(hh:mm) | "\t"]
+\t&lt;Incidence Summary | \t&gt;[, &lt;Incidence Location&gt;]
+\t\t&lt;Incidence Description | "\t"&gt;
+</screen>
+</informalexample>
+</para>
+
+<para
+>Sortida de <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Short</option
+></userinput
+>: <informalexample
+> <screen
+>--------------------------------------------------
+Dimarts 29-11-2016
+08:00 - 09:00   Reunió del personal, Sala d'actes
+                Reunió amb tot el personal per parlar del projecte.
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="csv-format">
+<title
+>Format amb els valors separats per comes (<acronym
+>CSV</acronym
+>)</title>
+
+<para
+>El format amb els valors separats per comes mostra els valors d'esdeveniments en el mateix ordre que el format de text de &konsolekalendar;. L'única diferència és que tota la informació està en la mateixa fila amb cada camp separat per una coma. Els fitxers exportats resultants es poden importar directament en els programes de full de càlcul com &calligrasheets;, <application
+>OpenOffice.org Calc</application
+>, i <application
+>&Microsoft; Excel</application
+>. A més, el format <acronym
+>CSV</acronym
+> és fàcil d'analitzar amb scripts.</para>
+
+<para
+>El format amb els valors separats per comes (<acronym
+>CSV</acronym
+>) és: <informalexample
+> <screen
+>"Dia de la setmana, Dia del mes, Any","HH:MM","Dia de la setmana, Dia del mes, Any","HH:MM","Resum","Emplaçament","Descripció","UID"
+</screen>
+</informalexample>
+</para>
+
+<para
+>Sortida de <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>CSV</option
+></userinput
+>: <informalexample
+> <screen
+>"Tuesday, November 29, 2016","08:00","Tuesday, November 29, 2016","09:00","Reunió del personal","Sala d'actes","Reunió amb tot el personal \
+per parlar del projecte.","&konsolekalendar;-1924621834.134"
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="html-format">
+<title
+>Format &HTML;</title>
+
+<para
+>El format d'exportació &HTML; crearà un fitxer &HTML; vàlid que es pot publicar a la <acronym
+>WWW</acronym
+>. Aquest format d'exportació no és adequat per a l'anàlisi amb un script, però és molt bonic per a la publicació de calendaris a la vista pública fàcil.</para>
+<!--FIXME
+exports only the template without any incidence data
+<para
+><emphasis
+>TODO:</emphasis
+> Insert screenshot here</para>
+-->
+</sect2>
+
+<sect2 id="html-month-format">
+<title
+>Format <acronym
+>HTMLmonth</acronym
+></title>
+
+<para
+>Aquest format genera un fitxer &HTML; que mostra totes les cites en els mesos especificats per a l'interval de dates. Aquest format d'exportació no és adequat per a l'anàlisi amb un script, però és molt bonic per a la publicació de calendaris a la vista pública fàcil.</para>
+<!--FIXME
+exports only the template without any incidence data
+<para
+><emphasis
+>TODO:</emphasis
+> Insert screenshot here</para>
+-->
+</sect2>
+
+</sect1>
+
+<sect1 id="importing">
+<title
+>Importar calendaris</title>
+
+<para
+>El &konsolekalendar; pot importar un fitxer de calendari iCal o vCal dins d'un calendari. S'inseriran tots els esdeveniments del calendari que s'importa, ometent els esdeveniments idèntics, que ja formen part del calendari.</para>
+
+<para>
+<informalexample
+><para
+>Per importar el fitxer de calendari <replaceable
+>vacances.ics</replaceable
+> dins del calendari amb l'ID <replaceable
+>8</replaceable
+> executeu:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--import <replaceable
+>vacation.ics</replaceable
+></option
+> <option
+>--calendar <replaceable
+>8</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="features-commandline-options">
+<title
+>Arguments de la línia d'ordres</title>
+
+<para
+>&konsolekalendar; suporta les següents opcions:</para>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row>
+  <entry
+>Opció</entry>
+  <entry
+>Descripció</entry>
+</row>
+</thead>
+<tbody>
+<row>
+  <entry
+><emphasis
+>Opcions genèriques:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--help, --help-all</option
+></entry>
+  <entry
+>Mostra ajuda quant a les opcions del programa.</entry>
+</row>
+<row>
+  <entry
+><option
+>--author</option
+></entry>
+  <entry
+>Mostra informació sobre l'autor del programa.</entry>
+</row>
+<row>
+  <entry
+><option
+>-v, --version</option
+></entry>
+  <entry
+>Mostra informació sobre la versió del programa.</entry>
+</row>
+<row>
+  <entry
+><option
+>--license</option
+></entry>
+  <entry
+>Mostra informació sobre la llicència del programa.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Opcions:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--verbose</option
+></entry>
+  <entry
+>Imprimeix missatges d'utilitat en temps d'execució.</entry>
+</row>
+<row>
+  <entry
+><option
+>--dry-run</option
+></entry>
+  <entry
+>Imprimeix què s'hauria fet, però no ho executa. No canvia cap fitxer, no insereix, elimina, ni modifica cap fitxer existent, ni en crea de nous.</entry>
+</row>
+<row>
+  <entry
+><option
+>--allow-gui</option
+></entry>
+  <entry
+>Permet els calendaris que puguin necessitar una interfície d'usuari interactiva. En operacions normals, només els recursos mai requeriran utilitzar una interfície d'usuari (com els calendaris basats en fitxers).</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Tipus d'incidència (aquestes opcions es poden combinar):</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--event</option
+></entry>
+  <entry
+>Opera només per a esdeveniments (predeterminat).</entry>
+</row>
+<row>
+  <entry
+><option
+>--todo</option
+></entry>
+  <entry
+>Operar només per a tasques pendents. (Sense implementar)</entry>
+</row>
+<row>
+  <entry
+><option
+>--journal</option
+></entry>
+  <entry
+>Operar només per a diaris. (Sense implementar)</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Modes principals d'operació:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--view</option
+></entry>
+  <entry
+>Imprimeix els esdeveniments del calendari en el format d'exportació especificat.</entry>
+</row>
+<row>
+  <entry
+><option
+>--add</option
+></entry>
+  <entry
+>Insereix un esdeveniment al calendari.</entry>
+</row>
+<row>
+  <entry
+><option
+>--change</option
+></entry>
+  <entry
+>Modifica un esdeveniment del calendari existent.</entry>
+</row>
+<row>
+  <entry
+><option
+>--delete</option
+></entry>
+  <entry
+>Elimina un esdeveniment del calendari existent.</entry>
+</row>
+<row>
+  <entry
+><option
+>--create</option
+> <replaceable
+>&nbsp;nom_de_fitxer</replaceable
+> </entry>
+  <entry
+>Crea un calendari nou a partir d'un fitxer existent.</entry>
+</row>
+<row>
+  <entry
+><option
+>--import</option
+> <replaceable
+>&nbsp;fitxer_importar</replaceable
+></entry>
+  <entry
+>Importa aquest calendari al calendari principal.</entry>
+</row>
+<row>
+  <entry
+><option
+>--list-calendars</option
+></entry>
+  <entry
+>Llista els calendaris disponibles.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Modificadors d'operació:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--all</option
+></entry>
+  <entry
+>Visualitza totes les entrades del calendari.</entry>
+</row>
+<row>
+  <entry
+><option
+>--next</option
+></entry>
+  <entry
+>Visualitza l'activitat següent en el calendari.</entry>
+</row>
+<row>
+  <entry
+><option
+>--show-next</option
+> <replaceable
+>&nbsp;dies</replaceable
+></entry>
+  <entry
+>Comença a la data especificada mostrant les activitats dels propers # dies.</entry>
+</row>
+<row>
+  <entry
+><option
+>--uid</option
+> <replaceable
+>&nbsp;UID</replaceable
+></entry>
+  <entry
+>Veure, eliminar o canviar l'esdeveniment amb aquesta cadena IDentificadora única.</entry>
+</row>
+<row>
+  <entry
+><option
+>--date</option
+> <replaceable
+>&nbsp;data</replaceable
+></entry>
+  <entry
+>Comença en aquest dia [DD-MM-AAAA]. Per omissió és avui.</entry>
+</row>
+<row>
+  <entry
+><option
+>--time</option
+> <replaceable
+>&nbsp;hora</replaceable
+></entry>
+  <entry
+>Comença a aquesta hora [HH:MM]. Per omissió són les 07:00 hores. <para
+>Per afegir o canviar un esdeveniment flotant, utilitzeu les opcions <option
+>--time float</option
+> o <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--end-date</option
+> <replaceable
+>&nbsp;data_final</replaceable
+></entry>
+  <entry
+>Finalitza en aquest dia [DD-MM-AAAA]. Per omissió és establert per <option
+>--date</option
+>.</entry>
+</row>
+<row>
+  <entry
+><option
+>--end-time</option
+> <replaceable
+>&nbsp;hora_inici</replaceable
+></entry>
+  <entry
+>Finalitza a aquesta hora [HH:MM]. Per omissió són les 17:00 hores. <para
+>Per afegir o canviar un esdeveniment flotant, utilitzeu les opcions <option
+>--time float</option
+> o <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-start</option
+> <replaceable
+>&nbsp;època</replaceable
+></entry>
+  <entry
+>Comença a aquesta hora [segons l'època especificada].</entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-end</option
+> <replaceable
+>&nbsp;època</replaceable
+></entry>
+  <entry
+>Finalitza a aquesta hora [segons l'època especificada].</entry>
+</row>
+<row>
+  <entry
+><option
+>--summary</option
+> <replaceable
+>&nbsp;resum</replaceable
+></entry>
+  <entry
+>Afegeix resum a l'esdeveniment (funciona per afegir i canviar).</entry>
+</row>
+<row>
+  <entry
+><option
+>--description</option
+> <replaceable
+>&nbsp;descripció</replaceable
+></entry>
+  <entry
+>Afegeix descripció a l'esdeveniment (funciona per afegir i canviar).</entry>
+</row>
+<row>
+  <entry
+><option
+>--location</option
+> <replaceable
+>&nbsp;ubicació</replaceable
+></entry>
+  <entry
+>Afegeix ubicació a l'esdeveniment (funciona per afegir i canviar).</entry>
+</row>
+<row>
+  <entry
+><option
+>--calendar</option
+> <replaceable
+>&nbsp;id</replaceable
+></entry>
+  <entry
+>Especifica un calendari a utilitzar. <para
+>Si no s'especifica, llavors &korganizer; utilitzarà el recurs per omissió.</para
+></entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Opcions d'exportació:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--export-type</option
+> <replaceable
+>&nbsp;tipus_exportació</replaceable
+></entry>
+  <entry
+>Tipus de fitxer d'exportació. Per omissió el tipus de fitxer és de text</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-file</option
+> <replaceable
+>&nbsp;fixer_exportar</replaceable
+></entry>
+  <entry
+>Exporta a un fitxer. Per omissió, la sortida s'escriu a la sortida estàndard.</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-list</option
+></entry>
+  <entry
+>Imprimeix la llista dels tipus d'exportació admesos i surt.</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Preguntes i respostes</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Quin tipus de fitxers de configuració utilitza &konsolekalendar;?</para>
+</question>
+<answer>
+<para
+>Cap.</para>
+</answer>
+</qandaentry>
+
+
+<qandaentry>
+<question>
+<para
+>Quins són els noms de les aplicacions de &konsolekalendar;?</para>
+</question>
+<answer>
+<para
+>El nom de l'aplicació de &konsolekalendar; és <application
+>konsolekalendar</application
+>.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Quin és el format d'especificació de la data?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; rebutjarà les dates especificades a la línia d'ordres a menys que s'especifiquin d'acord amb l'estàndard ISO 8601, com: AAAA-MM-DD. On AAAA representa un any amb quatre dígits (&pex;, 2003), MM representa un mes amb dos dígits (01, 02,...), i DD representa un dia amb dos dígits (01, 02,...).</para>
+<para
+>&konsolekalendar; sempre exporta les dates d'acord amb el format ISO 8601.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Quin és el format d'especificació de l'hora?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; rebutjarà les hores especificades en la línia d'ordres a menys que s'especifiquin d'acord amb l'estàndard ISO 8601, com: HH: MM: SS. On HH representa una hora amb dos dígits (01, 02...), MM representa els minuts amb dos dígits (01, 02...), i SS representa els segons amb dos dígits (01, 02...).</para>
+<para
+>&konsolekalendar; exporta sempre les hores d'acord amb el format ISO 8601.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>&konsolekalendar; inserirà un nou esdeveniment que és idèntic a un que ja existeix en el calendari?</para>
+</question>
+<answer>
+<para
+>No, veure la següent pregunta.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Com determina &konsolekalendar; si un esdeveniment és idèntic a un que ja existeix en el calendari?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; comprova la data i hora d'inici, la data i hora de final, i el resum especificats contra tots els esdeveniments en el calendari. La coincidència d'un esdeveniment està determinada per la coincidència dels tres valors a un esdeveniment existent. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Pot un esdeveniment no flotant canviar un esdeveniment flotant?</para>
+</question>
+<answer>
+<para
+>Sí. Utilitzeu les opcions <option
+>--time float</option
+> amb <option
+>--change</option
+>. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Per què els <acronym
+>UID</acronym
+> dels esdeveniments són impresos en la majoria dels formats d'exportació?</para>
+</question>
+<answer>
+<para
+>Atès que és necessari especificar els <acronym
+>UID</acronym
+> per suprimir o canviar els esdeveniments. Si no els voleu veure, utilitzeu el tipus d'exportació <emphasis
+>curt</emphasis
+> (<option
+>--export-type short</option
+>). </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Com puc afegir la meva pregunta a aquesta &PMF;?</para>
+</question>
+<answer>
+<para
+>Envieu les vostres preguntes a <email
+>winter@kde.org</email
+>.</para>
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+
+<chapter id="credits">
+
+<title
+>Crèdits i llicència</title>
+
+<para
+>&konsolekalendar; copyright del programa 2002-2007:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Copyright de la documentació 2003:</para>
+<itemizedlist>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Traductor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

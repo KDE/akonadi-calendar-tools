@@ -1,0 +1,344 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-24 00:44+0000\n"
+"PO-Revision-Date: 2018-01-30 14:58+0300\n"
+"Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "صفا الفليج"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "safa1996alfulaij@gmail.com"
+
+#: backuper.cpp:36
+#, kde-format
+msgid "Backup was successful. %1 incidence was saved."
+msgid_plural "Backup was successful. %1 incidences were saved."
+msgstr[0] "نجح النّسخ الاحتياطيّ. لم يُحفظ أيّ حدوث."
+msgstr[1] "نجح النّسخ الاحتياطيّ. حُفظ حدوث واحد."
+msgstr[2] "نجح النّسخ الاحتياطيّ. حُفظ حدوثان."
+msgstr[3] "نجح النّسخ الاحتياطيّ. حُفظت %1 حدوثات."
+msgstr[4] "نجح النّسخ الاحتياطيّ. حُفظ %1 حدوثًا."
+msgstr[5] "نجح النّسخ الاحتياطيّ. حُفظ %1 حدوث."
+
+#: backuper.cpp:56
+#, kde-format
+msgid "File is empty."
+msgstr "الملفّ فارغ."
+
+#: backuper.cpp:61
+#, kde-format
+msgid "A backup is already in progress."
+msgstr "ثمّة مهمّة نسخ احتياطيّ تجري بالفعل."
+
+#: backuper.cpp:64
+#, kde-format
+msgid "Backing up your calendar data..."
+msgstr "ينسخ بيانات التّقويم احتياطيًّا..."
+
+#: backuper.cpp:97
+#, kde-format
+msgid "No data to backup."
+msgstr "لا بيانات لنسخها احتياطيًّا."
+
+#: backuper.cpp:108 calendarjanitor.cpp:173
+#, kde-format
+msgid "Processing collection %1 (id=%2)..."
+msgstr "يعالج التّجميعة %1 (المعرّف=%2)..."
+
+#: backuper.cpp:138
+#, kde-format
+msgid "An error occurred"
+msgstr "حدث خطأ"
+
+#: calendarjanitor.cpp:37
+#, kde-format
+msgid ""
+"Bailing out. Fix your akonadi setup first. These kind of errors should not "
+"happen."
+msgstr ""
+"تركت المهمّة. أصلِح إعداد «أكواندي» أوّلًا. لا يجب أن يحدث هذا النّوع من الأخطاء."
+
+#: calendarjanitor.cpp:85
+#, kde-format
+msgid "Error while fetching collections"
+msgstr "خطأ أثناء جلب التّجميعات"
+
+#: calendarjanitor.cpp:99
+#, kde-format
+msgid "There are no collections to process."
+msgstr "لا تجميعات لمعالجتها."
+
+#: calendarjanitor.cpp:126
+#, kde-format
+msgid "Error while modifying incidence: %1"
+msgstr "خطأ أثناء تعديل الحدوث: %1"
+
+#: calendarjanitor.cpp:131
+#, kde-format
+msgid "Fixed item %1"
+msgstr "أصلحتُ العنصر %1"
+
+#: calendarjanitor.cpp:147
+#, kde-format
+msgid "Error while deleting incidence: %1"
+msgstr "خطأ أثناء حذف الحدوث: %1"
+
+#: calendarjanitor.cpp:151
+#, kde-format
+msgid "Deleted item %1"
+msgstr "حذفتُ العنصر %1"
+
+#: calendarjanitor.cpp:177
+#, kde-format
+msgid "Collection is read only, disabling fix mode."
+msgstr "التّجميعة للقراءة فقط، سأُعطّل وضع الإصلاح."
+
+#: calendarjanitor.cpp:179
+#, kde-format
+msgid "Collection is read only, skipping it."
+msgstr "التّجميعة للقراءة فقط، سأتخطّاها."
+
+#: calendarjanitor.cpp:187
+#, kde-format
+msgid "Collection is empty, ignoring it."
+msgstr "التّجميعة فارغة، سأتجاهلها."
+
+#: calendarjanitor.cpp:255
+#, kde-format
+msgid "Checking for incidences with empty summary and description..."
+msgstr "يبحث عن الحدوثات التي ملخّصها ووصفها فارغ..."
+
+#: calendarjanitor.cpp:270
+#, kde-format
+msgid "Checking for incidences with empty UID..."
+msgstr "يبحث عن الحدوثات التي معرّفها الفريد فارغ..."
+
+#: calendarjanitor.cpp:289
+#, kde-format
+msgid "Checking for events with invalid DTSTART..."
+msgstr "يبحث عن الأحداث التي فيها DTSTART غير صالح..."
+
+#: calendarjanitor.cpp:326
+#, kde-format
+msgid "Checking for recurring to-dos with invalid DTSTART..."
+msgstr "يبحث عن المهامّ المتكرّرة التي فيها DTSTART غير صالح..."
+
+#: calendarjanitor.cpp:362
+#, kde-format
+msgid "Checking for journals with invalid DTSTART..."
+msgstr "يبحث عن اليوميّات التي فيها DTSTART غير صالح..."
+
+#: calendarjanitor.cpp:383
+#, kde-format
+msgid "Checking for orphans..."
+msgstr "يبحث عن اليتيمة..."
+
+#: calendarjanitor.cpp:389
+#, kde-format
+msgid "The following incidences are children of nonexistent parents"
+msgstr "الحدوثات الآتية أبناء لآباء غير موجودة"
+
+#: calendarjanitor.cpp:398
+#, kde-format
+msgid "In fix mode these children will be unparented."
+msgstr "سيُزال الأبّ عن الأبناء في وضع الإصلاح."
+
+#: calendarjanitor.cpp:398
+#, kde-format
+msgid "Children were successfully unparented."
+msgstr "أُزيل الأبّ عن الأبناء بنجاح."
+
+#: calendarjanitor.cpp:403
+#, kde-format
+msgid "Checking for duplicate UIDs..."
+msgstr "يبحث عن معرّفات فريدة متكرّرة..."
+
+#: calendarjanitor.cpp:460
+#, kde-format
+msgid "Gathering statistics..."
+msgstr "يجمع الإحصائيّات..."
+
+#: calendarjanitor.cpp:498
+#, kde-format
+msgid "Events"
+msgstr "الأحداث"
+
+#: calendarjanitor.cpp:499
+#, kde-format
+msgid "Todos"
+msgstr "المهامّ"
+
+#: calendarjanitor.cpp:500
+#, kde-format
+msgid "Journals"
+msgstr "اليوميّات"
+
+#: calendarjanitor.cpp:501
+#, kde-format
+msgid "Passed events and to-dos (>365 days)"
+msgstr "الأحداث والمهامّ الفائتة (>٣٦٥ يومًا)"
+
+#: calendarjanitor.cpp:502
+#, kde-format
+msgid "Old incidences with alarms"
+msgstr "الحدوثات القديمة بمنبّهات"
+
+#: calendarjanitor.cpp:503
+#, kde-format
+msgid "Inline attachments"
+msgstr "المرفقات ضمن السّياق"
+
+#: calendarjanitor.cpp:504
+#, kde-format
+msgid "Items with empty remote id [!!]"
+msgstr "العناصر التي معرّفها البعيد فارغ [!!]"
+
+#: calendarjanitor.cpp:507
+#, kde-format
+msgid "Total size of inline attachments (bytes)"
+msgstr "إجماليّ حجم المرفقات ضمن السّياق (بالبايت)"
+
+#: calendarjanitor.cpp:509
+#, kde-format
+msgid "Total size of inline attachments (KB)"
+msgstr "إجماليّ حجم المرفقات ضمن السّياق (بالكيلو بايت)"
+
+#: calendarjanitor.cpp:521
+#, kde-format
+msgid ""
+"Checking for RECURRING-ID incidences with nonexistent master incidence..."
+msgstr "يبحث عن حدوثات RECURRING-ID التي حدوثها الرّئيس غير موجود..."
+
+#: calendarjanitor.cpp:562
+#, kde-format
+msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
+msgstr "في وضع الإصلاح سيُلغى ضبط صفة RECURRING-ID ويُعدّل المعرّف الفريد."
+
+#: calendarjanitor.cpp:562
+#, kde-format
+msgid "Recurrence cleared."
+msgstr "مُسح التّكرار."
+
+#: calendarjanitor.cpp:567
+#, kde-format
+msgid "Deleting alarms older than 365 days..."
+msgstr "يحذف المنبّهات الأقدم من ٣٦٥ يومًا..."
+
+#: calendarjanitor.cpp:585 calendarjanitor.cpp:599
+#, kde-format
+msgid "invalid"
+msgstr "غير صالح"
+
+#: calendarjanitor.cpp:602
+#, kde-format
+msgid "recurrent"
+msgstr "متكرّر"
+
+#: calendarjanitor.cpp:620
+#, kde-format
+msgid "Found buggy incidence:"
+msgstr "عُثر على حدوث معلول:"
+
+#: calendarjanitor.cpp:621
+#, kde-format
+msgid "id=%1; summary=\"%2\""
+msgstr "المعرّف=%1، الملخّص:”%2“"
+
+#: main.cpp:40
+#, kde-format
+msgid "Error while parsing %1"
+msgstr "خطأ أثناء تحليل %1"
+
+#: main.cpp:41
+#, kde-format
+msgid "Example usage: %1"
+msgstr "مثال عن الاستخدام: %1"
+
+#: main.cpp:61
+#, kde-format
+msgid "CalendarJanitor"
+msgstr "حارس التّقاويم"
+
+#: main.cpp:63
+#, kde-format
+msgid "Sérgio Martins"
+msgstr "Sérgio Martins"
+
+#: main.cpp:63
+#, kde-format
+msgid "Maintainer"
+msgstr "المصين"
+
+#: main.cpp:64
+#, kde-format
+msgid "A command line interface to report and fix errors in your calendar data"
+msgstr "واجهة سطر أوامر للإبلاغ وإصلاح المشاكل في بيانات التّقويم"
+
+#: main.cpp:69
+#, kde-format
+msgid "Comma-separated list of collection ids to scan"
+msgstr "قائمة مفصولة بفواصل لمعرّفات التّجميعات التي ستُفحص"
+
+#: main.cpp:70
+#, kde-format
+msgid "Fix broken incidences"
+msgstr "أصلِح الحدوثات المعطوبة"
+
+#: main.cpp:71
+#, kde-format
+msgid "Backup your calendar"
+msgstr "انسخ التّقويم احتياطيًّا"
+
+#: main.cpp:72
+#, kde-format
+msgid "Delete alarms older than 365 days"
+msgstr "احذف المنبّهات الأقدم من ٣٦٥ يومًا"
+
+#: main.cpp:104
+#, kde-format
+msgid "--fix is incompatible with --backup"
+msgstr "‏‎--fix ليس متوفقًا مع ‎--backup"
+
+#: main.cpp:109
+#, kde-format
+msgid "--strip-old-alarms is incompatible with --backup"
+msgstr "‏‎--strip-old-alarms ليس متوافقًا مع ‎--backup"
+
+#: main.cpp:114
+#, kde-format
+msgid "--strip-old-alarms is incompatible with --fix"
+msgstr "‏‎--strip-old-alarms ليس متوافقًا مع ‎--fix"
+
+#: main.cpp:125
+#, kde-format
+msgid "Running in fix mode."
+msgstr "يعمل في وضع الإصلاح."
+
+#: main.cpp:129
+#, kde-format
+msgid "Please specify a output file."
+msgstr "رجاءً حدّد ملفّ خرج."
+
+#: main.cpp:134
+#, kde-format
+msgid "Running in scan only mode."
+msgstr "يعمل في وضع الفحص فقط."
