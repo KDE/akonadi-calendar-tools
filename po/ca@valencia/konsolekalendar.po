@@ -448,7 +448,7 @@ msgstr "Afig una ubicació a la incidència (funciona per a afegir i canviar)"
 #: main.cpp:109
 #, kde-format
 msgid "Calendar to use when creating a new incidence"
-msgstr "Calendari que s'utilitzarà en crear una incidència nova"
+msgstr "Calendari que s'ha d'utilitzar en crear una incidència nova"
 
 #: main.cpp:112
 #, kde-format
