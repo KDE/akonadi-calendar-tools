@@ -3,31 +3,32 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006, 2008, 2009.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007, 2008, 2013, 2015.
 # pan93412 <pan93412@gmail.com>, 2018.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-11-26 00:28+0000\n"
-"PO-Revision-Date: 2018-04-05 20:24+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-01-07 04:18+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Kisaragi Hiu"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "mail@kisaragi-hiu.com"
 
 #: konsolekalendar.cpp:82
 #, kde-format
@@ -42,22 +43,22 @@ msgstr "(唯讀)"
 #: konsolekalendar.cpp:147
 #, kde-format
 msgid "Create Calendar <Dry Run>: %1"
-msgstr "建立行事曆（簡易）：%1"
+msgstr "建立行事曆 <試運行>：%1"
 
 #: konsolekalendar.cpp:153
 #, kde-format
 msgid "Create Calendar <Verbose>: %1"
-msgstr "建立行事曆（詳細）：%1"
+msgstr "建立行事曆 <詳細>：%1"
 
 #: konsolekalendar.cpp:172
 #, kde-format
 msgid "View Events <Dry Run>:"
-msgstr "檢視事件（簡易）："
+msgstr "檢視事件 <試運行>："
 
 #: konsolekalendar.cpp:194
 #, kde-format
 msgid "View Event <Verbose>:"
-msgstr "檢視事件（詳細）："
+msgstr "檢視事件 <詳細>："
 
 #: konsolekalendar.cpp:267
 #, kde-format
@@ -122,17 +123,17 @@ msgstr "  位置：%1"
 #: konsolekalendaradd.cpp:61
 #, kde-format
 msgid "Insert Event <Dry Run>:"
-msgstr "插入事件（簡易）："
+msgstr "插入事件 <試運行>："
 
 #: konsolekalendaradd.cpp:65
 #, kde-format
 msgid "Insert Event <Verbose>:"
-msgstr "插入事件（詳細）："
+msgstr "插入事件 <詳細>："
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:133
 #, kde-format
 msgid "Calendar is invalid. Please specify one with --calendar"
-msgstr "行事曆不合法。請用 --calendar 指定"
+msgstr "行事曆無效。請用 --calendar 指定"
 
 #: konsolekalendaradd.cpp:104
 #, kde-format
@@ -147,27 +148,27 @@ msgstr "失敗：%1 未插入"
 #: konsolekalendaradd.cpp:147
 #, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
-msgstr "已跳過插入活動，因為識別碼「%1」已經存在。<Verbose>"
+msgstr "已跳過插入活動，因為識別碼「%1」已經存在。<詳細>"
 
 #: konsolekalendaradd.cpp:154
 #, kde-format
 msgid "Add Event with UID \"%1\". <Verbose>"
-msgstr "加入識別碼為「%1」的活動。<Verbose>"
+msgstr "加入識別碼為「%1」的活動。<詳細>"
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Change Event <Dry Run>:"
-msgstr "變更事件（簡易）："
+msgstr "變更事件 <試運行>："
 
 #: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
 #, kde-format
 msgid "To Event <Dry Run>:"
-msgstr "到事件（簡易）："
+msgstr "到事件 <試運行>："
 
 #: konsolekalendarchange.cpp:59
 #, kde-format
 msgid "Change Event <Verbose>:"
-msgstr "變更事件（詳細）："
+msgstr "變更事件 <詳細>："
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -183,17 +184,17 @@ msgstr "失敗：%1 未變更"
 #: konsolekalendardelete.cpp:80
 #, kde-format
 msgid "  UID:   %1"
-msgstr "  UID：%1"
+msgstr "UID：%1"
 
 #: konsolekalendardelete.cpp:48
 #, kde-format
 msgid "Delete Event <Dry Run>:"
-msgstr "刪除事件（簡易）："
+msgstr "刪除事件 <試運行>："
 
 #: konsolekalendardelete.cpp:54
 #, kde-format
 msgid "Delete Event <Verbose>:"
-msgstr "刪除事件（詳細）："
+msgstr "刪除事件 <詳細>："
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -263,12 +264,12 @@ msgstr "\""
 #: main.cpp:59
 #, kde-format
 msgid "KonsoleKalendar"
-msgstr ""
+msgstr "KonsoleKalendar"
 
 #: main.cpp:61
 #, kde-format
 msgid "A command line interface to KDE calendars"
-msgstr ""
+msgstr "KDE 行事曆用的一個命令列介面"
 
 #: main.cpp:63
 #, kde-format
@@ -278,12 +279,12 @@ msgstr "(c) 2002-2009, Tuukka Pasanen 與 Allen Winter"
 #: main.cpp:65
 #, kde-format
 msgid "Laurent Montel"
-msgstr ""
+msgstr "Laurent Montel"
 
 #: main.cpp:65
 #, kde-format
 msgid "Bug fixing"
-msgstr ""
+msgstr "錯誤修正"
 
 #: main.cpp:66
 #, kde-format
@@ -321,152 +322,129 @@ msgid "Allow calendars which might need an interactive user interface"
 msgstr "允許可能需要互動式使用者介面的行事曆"
 
 #: main.cpp:76
-#, fuzzy, kde-format
-#| msgid "  Operate for Events only (Default)"
+#, kde-format
 msgid "Operate for Events only (Default)"
-msgstr "  只針對事件（預設）"
+msgstr "只針對事件（預設）"
 
 #: main.cpp:77
-#, fuzzy, kde-format
-#| msgid "  Operate for To-dos only [NOT WORKING YET]"
+#, kde-format
 msgid "Operate for To-dos only [NOT WORKING YET]"
-msgstr "  只針對待辦事項【尚未生效】"
+msgstr "只針對待辦事項【還不能用】"
 
 #: main.cpp:78
-#, fuzzy, kde-format
-#| msgid "  Operate for Journals only [NOT WORKING YET]"
+#, kde-format
 msgid "Operate for Journals only [NOT WORKING YET]"
-msgstr "  只針對日誌【尚未生效】"
+msgstr "只針對日誌【還不能用】"
 
 #: main.cpp:79
-#, fuzzy, kde-format
-#| msgid "  Print incidences in specified export format"
+#, kde-format
 msgid "Print incidences in specified export format"
-msgstr "  以特定匯出格式印出事件"
+msgstr "以指定匯出格式印出事件"
 
 #: main.cpp:80
-#, fuzzy, kde-format
-#| msgid "  Insert an incidence into the calendar"
+#, kde-format
 msgid "Insert an incidence into the calendar"
-msgstr "  將事件插入行事曆"
+msgstr "將事件插入行事曆"
 
 #: main.cpp:81
-#, fuzzy, kde-format
-#| msgid "  Modify an existing incidence"
+#, kde-format
 msgid "Modify an existing incidence"
-msgstr "  變更現有的事件"
+msgstr "變更現有的事件"
 
 #: main.cpp:82
-#, fuzzy, kde-format
-#| msgid "  Remove an existing incidence"
+#, kde-format
 msgid "Remove an existing incidence"
-msgstr "  移除現有事件"
+msgstr "移除現有事件"
 
 #: main.cpp:83
-#, fuzzy, kde-format
-#| msgid "  Create new Akonadi Resource for file"
+#, kde-format
 msgid "Create new Akonadi Resource for file"
-msgstr "  加入新的 Akonadi 資源給檔案"
+msgstr "為檔案建立新的 Akonadi 資源"
 
 #: main.cpp:85
-#, fuzzy, kde-format
-#| msgid "  Import this calendar to main calendar"
+#, kde-format
 msgid "Import this calendar to main calendar"
-msgstr "  將此行事曆匯入主行事曆"
+msgstr "將此行事曆匯入至主行事曆"
 
 #: main.cpp:86
-#, fuzzy, kde-format
-#| msgid "  List available calendars"
+#, kde-format
 msgid "List available calendars"
-msgstr "  列出可用的行事曆"
+msgstr "列出可用的行事曆"
 
 #: main.cpp:87
-#, fuzzy, kde-format
-#| msgid "  View all calendar entries, ignoring date/time options"
+#, kde-format
 msgid "View all calendar entries, ignoring date/time options"
-msgstr "  檢視所有行事曆的項目，忽略日期/時間選項"
+msgstr "檢視所有行事曆項目，忽略日期/時間選項"
 
 #: main.cpp:88
-#, fuzzy, kde-format
-#| msgid "  View next activity in calendar"
+#, kde-format
 msgid "View next activity in calendar"
-msgstr "  檢視行事曆中下一個活動"
+msgstr "檢視行事曆中下一個活動"
 
 #: main.cpp:90
-#, fuzzy, kde-format
-#| msgid "  From start date show next # days' activities"
+#, kde-format
 msgid "From start date show next # days' activities"
-msgstr "  從啟始日期開始，顯示未來幾天的活動"
+msgstr "從啟始日期開始，顯示未來幾天的活動"
 
 #: main.cpp:91
-#, fuzzy, kde-format
-#| msgid "  Incidence Unique-string identifier"
+#, kde-format
 msgid "Incidence Unique-string identifier"
-msgstr "  事件的標識"
+msgstr "事件的獨特字串識別子"
 
 #: main.cpp:92
-#, fuzzy, kde-format
-#| msgid "  Start from this day [YYYY-MM-DD]"
+#, kde-format
 msgid "Start from this day [YYYY-MM-DD]"
-msgstr "  啟始日期：【YYYY-MM-DD】"
+msgstr "啟始日期【YYYY-MM-DD】"
 
 #: main.cpp:93
-#, fuzzy, kde-format
-#| msgid "  Start from this time [HH:MM:SS]"
+#, kde-format
 msgid "Start from this time [HH:MM:SS]"
-msgstr "  啟始時間【HH:MM:SS】"
+msgstr "啟始時間【HH:MM:SS】"
 
 #: main.cpp:94
-#, fuzzy, kde-format
-#| msgid "  End at this day [YYYY-MM-DD]"
+#, kde-format
 msgid "End at this day [YYYY-MM-DD]"
-msgstr "  結束日期【YYYY-MM-DD】"
+msgstr "結束日期【YYYY-MM-DD】"
 
 #: main.cpp:95
-#, fuzzy, kde-format
-#| msgid "  End at this time [HH:MM:SS]"
+#, kde-format
 msgid "End at this time [HH:MM:SS]"
-msgstr "  結束時間【HH:MM:SS】"
+msgstr "結束時間【HH:MM:SS】"
 
 #: main.cpp:97
-#, fuzzy, kde-format
-#| msgid " Start from this time [secs since epoch]"
+#, kde-format
 msgid "Start from this time [secs since epoch]"
-msgstr "  啟始時間（自 1970 年 1 月 1 日起的秒數）"
+msgstr "啟始時間（自 1970 年 1 月 1 日起的秒數）"
 
 #: main.cpp:99
-#, fuzzy, kde-format
-#| msgid "  End at this time [secs since epoch]"
+#, kde-format
 msgid "End at this time [secs since epoch]"
-msgstr "  結束時間（自 1970 年 1 月 1 日起的秒數）  "
+msgstr "結束時間（自 1970 年 1 月 1 日起的秒數）  "
 
 #: main.cpp:101
-#, fuzzy, kde-format
-#| msgid "  Add summary to incidence (for add/change modes)"
+#, kde-format
 msgid "Add summary to incidence (for add/change modes)"
-msgstr "  將大綱加入事件"
+msgstr "將大綱加入事件（新增/變更模式用）"
 
 #: main.cpp:103
 #, kde-format
 msgid "Add description to incidence (for add/change modes)"
-msgstr "將描述加入事件"
+msgstr "將描述加入事件（新增/變更模式用）"
 
 #: main.cpp:106
-#, fuzzy, kde-format
-#| msgid "  Add location to incidence (for add/change modes)"
+#, kde-format
 msgid "Add location to incidence (for add/change modes)"
-msgstr "  將位置加入事件"
+msgstr "將位置加入事件（新增/變更模式用）"
 
 #: main.cpp:109
-#, fuzzy, kde-format
-#| msgid "  Calendar to use when creating a new incidence"
+#, kde-format
 msgid "Calendar to use when creating a new incidence"
-msgstr "  用來建立新事件的行事曆"
+msgstr "用來建立新事件的行事曆"
 
 #: main.cpp:112
 #, kde-format
 msgid "Export file type (Default: text)"
-msgstr "匯出檔案型態（預設：文字檔）"
+msgstr "匯出檔案類型（預設：文字檔）"
 
 #: main.cpp:114
 #, kde-format
@@ -474,10 +452,9 @@ msgid "Export to file (Default: stdout)"
 msgstr "匯出檔案（預設：標準輸出）"
 
 #: main.cpp:115
-#, fuzzy, kde-format
-#| msgid "  Print list of export types supported and exit"
+#, kde-format
 msgid "Print list of export types supported and exit"
-msgstr "  印出支援的匯出型態清單後離開"
+msgstr "印出支援的匯出類型清單後離開"
 
 #: main.cpp:164
 #, kde-format
@@ -527,32 +504,32 @@ msgstr "抱歉，日誌功能目前未生效"
 #: main.cpp:223
 #, kde-format
 msgid "Invalid Export Type Specified: %1"
-msgstr "指定了不合法的匯出型態：%1"
+msgstr "指定了無效的匯出類型：%1"
 
 #: main.cpp:382
 #, kde-format
 msgid "Invalid Start Date Specified: %1"
-msgstr "指定了不合法的啟始日期：%1"
+msgstr "指定了無效的啟始日期：%1"
 
 #: main.cpp:407
 #, kde-format
 msgid "Invalid Start Time Specified: %1"
-msgstr "指定了不合法的啟始時間：%1"
+msgstr "指定了無效的啟始時間：%1"
 
 #: main.cpp:432
 #, kde-format
 msgid "Invalid End Date Specified: %1"
-msgstr "指定了不合法的結束時間：%1"
+msgstr "指定了無效的結束時間：%1"
 
 #: main.cpp:452
 #, kde-format
 msgid "Invalid Date Count Specified: %1"
-msgstr "指定了不合法的日期計數：%1"
+msgstr "指定了無效的日期計數：%1"
 
 #: main.cpp:480
 #, kde-format
 msgid "Invalid End Time Specified: %1"
-msgstr "指定了不合法的結束時間：%1"
+msgstr "指定了無效的結束時間：%1"
 
 #: main.cpp:673
 #, kde-format

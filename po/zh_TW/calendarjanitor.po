@@ -3,20 +3,21 @@
 #
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2013, 2014.
 # pan93412 <pan93412@gmail.com>, 2018.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-24 00:44+0000\n"
-"PO-Revision-Date: 2018-03-30 21:07+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-01-07 02:46+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -119,52 +120,52 @@ msgstr "收藏是空的，將忽略。"
 #: calendarjanitor.cpp:255
 #, kde-format
 msgid "Checking for incidences with empty summary and description..."
-msgstr "檢查是否有摘要與描述為空白的事件..."
+msgstr "正在檢查是否有摘要與描述為空白的事件..."
 
 #: calendarjanitor.cpp:270
 #, kde-format
 msgid "Checking for incidences with empty UID..."
-msgstr "檢查是否有 UID 空白的事件..."
+msgstr "正在檢查是否有 UID 為空白的事件..."
 
 #: calendarjanitor.cpp:289
 #, kde-format
 msgid "Checking for events with invalid DTSTART..."
-msgstr "檢查是否有不合法的 DTSTART 的事件..."
+msgstr "正在檢查是否有 DTSTART 無效的事件..."
 
 #: calendarjanitor.cpp:326
 #, kde-format
 msgid "Checking for recurring to-dos with invalid DTSTART..."
-msgstr "檢查是否有不合法的 DTSTART 的重覆待辦事項..."
+msgstr "檢查是否有 DTSTART 無效的重覆待辦事項..."
 
 #: calendarjanitor.cpp:362
 #, kde-format
 msgid "Checking for journals with invalid DTSTART..."
-msgstr "檢查是否有不合法的 DTSTART 的日誌..."
+msgstr "正在檢查是否有 DTSTART 無效的日誌..."
 
 #: calendarjanitor.cpp:383
 #, kde-format
 msgid "Checking for orphans..."
-msgstr "檢查是否有孤兒項目..."
+msgstr "正在檢查是否有孤兒項目..."
 
 #: calendarjanitor.cpp:389
 #, kde-format
 msgid "The following incidences are children of nonexistent parents"
-msgstr "以下的事件沒有父事件"
+msgstr "以下事件的親事件不存在"
 
 #: calendarjanitor.cpp:398
 #, kde-format
 msgid "In fix mode these children will be unparented."
-msgstr "在修正模式中，這些子事件將移除父事件。"
+msgstr "在修正模式中，這些子事件將移除親事件。"
 
 #: calendarjanitor.cpp:398
 #, kde-format
 msgid "Children were successfully unparented."
-msgstr "移除父事件完成。"
+msgstr "移除親事件完成。"
 
 #: calendarjanitor.cpp:403
 #, kde-format
 msgid "Checking for duplicate UIDs..."
-msgstr "檢查重覆的 UID 中..."
+msgstr "正在檢查是否有重覆的 UID ..."
 
 #: calendarjanitor.cpp:460
 #, kde-format
@@ -220,7 +221,7 @@ msgstr "內含附加檔的總大小（KB）"
 #, kde-format
 msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
-msgstr "檢查是否有沒有主事件的 RECURRING-ID 事件中..."
+msgstr "正在檢查是否有無主事件的 RECURRING-ID 事件..."
 
 #: calendarjanitor.cpp:562
 #, kde-format
@@ -240,7 +241,7 @@ msgstr "刪除比 365 天前更早的事件..."
 #: calendarjanitor.cpp:585 calendarjanitor.cpp:599
 #, kde-format
 msgid "invalid"
-msgstr "不合法"
+msgstr "無效"
 
 #: calendarjanitor.cpp:602
 #, kde-format
