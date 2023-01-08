@@ -5,20 +5,21 @@
 # Vincent PINON <vincent.pinon@st.com>, 2013.
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
 #
+# Xavier BESNARD <xavier.besnard]neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: calendarjanitor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-24 00:44+0000\n"
-"PO-Revision-Date: 2018-01-05 08:33+0100\n"
-"Last-Translator: Vincent Pinon <vpinon@kde.org>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2023-01-06 19:34+0100\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -175,7 +176,7 @@ msgstr "En mode correction, ces enfants ne sont pas apparentés."
 #: calendarjanitor.cpp:398
 #, kde-format
 msgid "Children were successfully unparented."
-msgstr "Les enfants ont été désapparentés avec succès"
+msgstr "Les enfants ont été dissociés avec succès."
 
 #: calendarjanitor.cpp:403
 #, kde-format
@@ -237,15 +238,15 @@ msgstr "Taille totale des pièces jointes intégrées (Ko)"
 msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
 msgstr ""
-"Vérification en cours pour voir s'il existe des incidences ID-RECURRING "
+"Vérification en cours pour voir s'il existe des incidences « ID-RECURRING » "
 "comportant une incidence maîtresse non existante..."
 
 #: calendarjanitor.cpp:562
 #, kde-format
 msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
 msgstr ""
-"En mode correction, la propriété ID-RECURRING sera désactivée et l'UID "
-"changé."
+"En mode correction, la propriété « ID-RECURRING » sera désactivée et le "
+"paramètre « UID » changé."
 
 #: calendarjanitor.cpp:562
 #, kde-format
