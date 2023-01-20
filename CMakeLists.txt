@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 set(PIM_VERSION "5.22.40")
 project(akonadi-calendar-tools VERSION ${PIM_VERSION})
 
-set(KF5_MIN_VERSION "5.102.0")
+set(KF_MIN_VERSION "5.102.0")
 
-find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(ECMInstallIcons)
 
@@ -57,8 +57,8 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widget
 
 
 # Find KF5 package
-find_package(KF5DocTools ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF5I18n ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF5DocTools ${KF_MIN_VERSION} REQUIRED)
+find_package(KF5I18n ${KF_MIN_VERSION} REQUIRED)
 
 # Find KdepimLibs Package
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
