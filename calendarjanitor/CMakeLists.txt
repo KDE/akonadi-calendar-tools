@@ -17,7 +17,7 @@ target_sources(calendarjanitor PRIVATE
 
 target_link_libraries(calendarjanitor
     KF5::CalendarUtils
-    KF5::CalendarCore
+    KF${KF_MAJOR_VERSION}::CalendarCore
     KF5::AkonadiCalendar)
 
 install(TARGETS calendarjanitor  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
