@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "5.22.2")
+set(PIM_VERSION "5.22.3")
 project(akonadi-calendar-tools VERSION ${PIM_VERSION})
 
 set(KF5_MIN_VERSION "5.99.0")
