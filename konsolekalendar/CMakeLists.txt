@@ -35,7 +35,7 @@ ecm_qt_declare_logging_category(konsolekalendar
 
 target_link_libraries(konsolekalendar
     Qt::DBus
-    KF5::CalendarUtils
+    KPim${KF_MAJOR_VERSION}::CalendarUtils
     KF${KF_MAJOR_VERSION}::CalendarCore
     KF5::CalendarSupport
     KF5::AkonadiCalendar
