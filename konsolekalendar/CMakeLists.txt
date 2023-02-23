@@ -37,8 +37,8 @@ target_link_libraries(konsolekalendar
     Qt::DBus
     KPim${KF_MAJOR_VERSION}::CalendarUtils
     KF${KF_MAJOR_VERSION}::CalendarCore
-    KF5::CalendarSupport
-    KF5::AkonadiCalendar
+    KPim${KF_MAJOR_VERSION}::CalendarSupport
+    KPim${KF_MAJOR_VERSION}::AkonadiCalendar
     KF${KF_MAJOR_VERSION}::I18n
 )
 
