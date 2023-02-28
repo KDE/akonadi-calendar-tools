@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vit Pelcak <vit@pelcak.org>, 2013, 2017, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2013, 2017, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-24 00:44+0000\n"
-"PO-Revision-Date: 2021-09-08 15:56+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-02-24 15:58+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -42,7 +42,7 @@ msgstr "Soubor je prázdný."
 #: backuper.cpp:61
 #, kde-format
 msgid "A backup is already in progress."
-msgstr ""
+msgstr "Zálohování již probíhá."
 
 #: backuper.cpp:64
 #, kde-format
@@ -52,7 +52,7 @@ msgstr ""
 #: backuper.cpp:97
 #, kde-format
 msgid "No data to backup."
-msgstr ""
+msgstr "Není co zálohovat."
 
 #: backuper.cpp:108 calendarjanitor.cpp:173
 #, kde-format
@@ -89,7 +89,7 @@ msgstr ""
 #: calendarjanitor.cpp:131
 #, kde-format
 msgid "Fixed item %1"
-msgstr ""
+msgstr "Opravena položka %1"
 
 #: calendarjanitor.cpp:147
 #, kde-format
@@ -99,7 +99,7 @@ msgstr ""
 #: calendarjanitor.cpp:151
 #, kde-format
 msgid "Deleted item %1"
-msgstr ""
+msgstr "Smazána položka %1"
 
 #: calendarjanitor.cpp:177
 #, kde-format
@@ -245,7 +245,7 @@ msgstr "neplatný"
 #: calendarjanitor.cpp:602
 #, kde-format
 msgid "recurrent"
-msgstr ""
+msgstr "opakující se"
 
 #: calendarjanitor.cpp:620
 #, kde-format
@@ -325,7 +325,7 @@ msgstr "--strip-old-alarms není kompatibilní s --fix"
 #: main.cpp:125
 #, kde-format
 msgid "Running in fix mode."
-msgstr ""
+msgstr "Běží v opravném režimu."
 
 #: main.cpp:129
 #, kde-format
