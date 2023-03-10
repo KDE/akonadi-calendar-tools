@@ -7,13 +7,13 @@
 # obsoleteman <tulliana@gmail.com>, 2008-2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014, 2015.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-11-26 00:28+0000\n"
-"PO-Revision-Date: 2022-12-17 18:51+0300\n"
+"PO-Revision-Date: 2023-03-09 13:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413102205.000000\n"
 
@@ -324,7 +324,8 @@ msgstr "Ne yapılacağını yazdır, ancak işlemi yapma"
 #: main.cpp:75
 #, kde-format
 msgid "Allow calendars which might need an interactive user interface"
-msgstr "Etkileşimli bir kullanıcı arayüzüne ihtiyaç duyan takvimlere izin ver"
+msgstr ""
+"Etkileşimli bir kullanıcı arayüzüne gereksinim duyan takvimlere izin ver"
 
 #: main.cpp:76
 #, kde-format
