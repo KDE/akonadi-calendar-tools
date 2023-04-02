@@ -16,7 +16,6 @@ target_sources(calendarjanitor PRIVATE
     )
 
 target_link_libraries(calendarjanitor
-    KPim${KF_MAJOR_VERSION}::CalendarUtils
     KF${KF_MAJOR_VERSION}::CalendarCore
     KPim${KF_MAJOR_VERSION}::AkonadiCalendar)
 

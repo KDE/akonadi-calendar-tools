@@ -37,11 +37,6 @@ echo "################################ TEXT ##################################"
 COMMAND="$KONSOLEKALENDAR --view --time $HOUR:$MINUTE --date $YEAR-$MONTH-$DATE --export-type Text --file=$2"
 $COMMAND
 
-echo "################################ HTML ##################################"
-COMMAND="$KONSOLEKALENDAR --view --time $HOUR:$MINUTE --date $YEAR-$MONTH-$DATE --export-type HTML --file=$2"
-$COMMAND
-
-
 echo "################################ CSV ##################################"
 COMMAND="$KONSOLEKALENDAR --view --time $HOUR:$MINUTE --date $YEAR-$MONTH-$DATE --export-type CSV --file=$2"
 $COMMAND

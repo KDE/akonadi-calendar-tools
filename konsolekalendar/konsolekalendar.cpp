@@ -29,8 +29,6 @@
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
-#include <KCalUtils/HTMLExportSettings>
-#include <KCalUtils/HtmlExport>
 
 #include <QDBusInterface>
 #include <QDBusReply>
@@ -197,123 +195,46 @@ bool KonsoleKalendar::showInstance()
 
             QTextStream ts(&f);
 
-            if (m_variables->getExportType() != ExportTypeHTML && m_variables->getExportType() != ExportTypeMonthHTML) {
-                if (m_variables->getAll()) {
-                    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
-                                                 << "view all events sorted list";
+            if (m_variables->getAll()) {
+                qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
+                                             << "view all events sorted list";
 
-                    const Event::List sortedList = calendar->events(EventSortStartDate);
-                    qCDebug(KONSOLEKALENDAR_LOG) << "Found" << sortedList.count() << "events";
-                    if (!sortedList.isEmpty()) {
-                        // The code that was here before the akonadi port was really slow with 200 events
-                        // this is much faster:
-                        for (const KCalendarCore::Event::Ptr &event : sortedList) {
-                            status &= printEvent(&ts, event, event->dtStart().date());
-                        }
-                    }
-                } else if (m_variables->isUID()) {
-                    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
-                                                 << "view events by uid list";
-                    // TODO: support a list of UIDs
-                    event = calendar->event(m_variables->getUID());
-                    // If this UID represents a recurring Event,
-                    // only the first day of the Event will be printed
-                    status = printEvent(&ts, event, event->dtStart().date());
-                } else if (m_variables->isNext()) {
-                    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
-                                                 << "Show next activity in calendar";
-
-                    QDateTime datetime = m_variables->getStartDateTime();
-                    datetime = datetime.addDays(720);
-
-                    QDate dt;
-                    for (dt = m_variables->getStartDateTime().date(); dt <= datetime.date(); dt = dt.addDays(1)) {
-                        Event::List events = calendar->events(dt, timeZone, EventSortStartDate, SortDirectionAscending);
-                        qCDebug(KONSOLEKALENDAR_LOG) << "2-Found" << events.count() << "events on date" << dt;
-                        // finished here when we get the next event
-                        if (!events.isEmpty()) {
-                            qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
-                                                         << "Got the next event";
-                            printEvent(&ts, events.first(), dt);
-                            return true;
-                        }
-                    }
-                } else {
-                    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
-                                                 << "view raw events within date range list";
-
-                    QDate dt;
-                    for (dt = m_variables->getStartDateTime().date(); dt <= m_variables->getEndDateTime().date() && status != false; dt = dt.addDays(1)) {
-                        Event::List events = calendar->events(dt, timeZone, EventSortStartDate, SortDirectionAscending);
-                        qCDebug(KONSOLEKALENDAR_LOG) << "3-Found" << events.count() << "events on date: " << dt;
-                        status = printEventList(&ts, &events, dt);
+                const Event::List sortedList = calendar->events(EventSortStartDate);
+                qCDebug(KONSOLEKALENDAR_LOG) << "Found" << sortedList.count() << "events";
+                if (!sortedList.isEmpty()) {
+                    // The code that was here before the akonadi port was really slow with 200 events
+                    // this is much faster:
+                    for (const KCalendarCore::Event::Ptr &event : sortedList) {
+                        status &= printEvent(&ts, event, event->dtStart().date());
                     }
                 }
-            } else {
-                QDate firstdate;
-                QDate lastdate;
-                if (m_variables->getAll()) {
-                    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
-                                                 << "HTML view all events sorted list";
-                    // sort the events for this date by start date
-                    // in order to determine the date range.
-                    auto events = new Event::List(calendar->rawEvents(EventSortStartDate, SortDirectionAscending));
-                    firstdate = events->first()->dtStart().date();
-                    lastdate = events->last()->dtStart().date();
-                } else if (m_variables->isUID()) {
-                    // TODO
-                    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
-                                                 << "HTML view events by uid list";
-                    cout << i18n("Sorry, export to HTML by UID is not supported yet").toLocal8Bit().data() << endl;
-                    return false;
-                } else {
-                    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
-                                                 << "HTML view raw events within date range list";
-                    firstdate = m_variables->getStartDateTime().date();
-                    lastdate = m_variables->getEndDateTime().date();
-                }
+            } else if (m_variables->isUID()) {
+                qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
+                                             << "view events by uid list";
+                // TODO: support a list of UIDs
+                event = calendar->event(m_variables->getUID());
+                // If this UID represents a recurring Event,
+                // only the first day of the Event will be printed
+                status = printEvent(&ts, event, event->dtStart().date());
+            } else if (m_variables->isNext()) {
+                qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
+                                             << "Show next activity in calendar";
 
-                KCalUtils::HTMLExportSettings htmlSettings(QStringLiteral("Konsolekalendar"));
+                QDateTime datetime = m_variables->getStartDateTime();
+                datetime = datetime.addDays(720);
 
-                // TODO: get progname and url from the values set in main
-                htmlSettings.setCreditName(QStringLiteral("KonsoleKalendar"));
-                htmlSettings.setCreditURL(QStringLiteral("https://userbase.kde.org/KonsoleKalendar"));
-
-                htmlSettings.setExcludePrivate(true);
-                htmlSettings.setExcludeConfidential(true);
-
-                htmlSettings.setEventView(false);
-                htmlSettings.setMonthView(false);
-                if (m_variables->getExportType() == ExportTypeMonthHTML) {
-                    title = i18n("Events:");
-                    htmlSettings.setMonthView(true);
-                } else {
-                    if (firstdate == lastdate) {
-                        title = i18n("Events: %1", firstdate.toString(Qt::TextDate));
-                    } else {
-                        title = i18n("Events: %1 - %2", firstdate.toString(Qt::TextDate), lastdate.toString(Qt::TextDate));
+                QDate dt;
+                for (dt = m_variables->getStartDateTime().date(); dt <= datetime.date(); dt = dt.addDays(1)) {
+                    Event::List events = calendar->events(dt, timeZone, EventSortStartDate, SortDirectionAscending);
+                    qCDebug(KONSOLEKALENDAR_LOG) << "2-Found" << events.count() << "events on date" << dt;
+                    // finished here when we get the next event
+                    if (!events.isEmpty()) {
+                        qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
+                                                     << "Got the next event";
+                        printEvent(&ts, events.first(), dt);
+                        return true;
                     }
-                    htmlSettings.setEventView(true);
                 }
-                htmlSettings.setEventTitle(title);
-                htmlSettings.setEventAttendees(true);
-                // Not supporting Todos yet
-                //         title = "To-Do List for " + firstdate.toString(Qt::TextDate);
-                //         if ( firstdate != lastdate ) {
-                //           title += " - " + lastdate.toString(Qt::TextDate);
-                //         }
-                htmlSettings.setTodoListTitle(title);
-                htmlSettings.setTodoView(false);
-                //         htmlSettings.setTaskCategories( false );
-                //         htmlSettings.setTaskAttendees( false );
-                //         htmlSettings.setTaskDueDate( true );
-
-                htmlSettings.setDateStart(QDateTime(firstdate.startOfDay()));
-                htmlSettings.setDateEnd(QDateTime(lastdate.startOfDay()));
-
-                auto exp = new KCalUtils::HtmlExport(calendar.data(), &htmlSettings);
-                status = exp->save(&ts);
-                delete exp;
             }
             f.close();
         }
@@ -363,10 +284,6 @@ bool KonsoleKalendar::printEvent(QTextStream *ts, const Event::Ptr &event, QDate
             }
             status = exports.exportAsTxtShort(ts, event, dt, sameDay);
         } break;
-
-        case ExportTypeHTML:
-            // this is handled separately for now
-            break;
 
         default: // Default export-type is ExportTypeText
             qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::printEvent() |"

@@ -9,5 +9,4 @@ Dependencies:
     'pim/akonadi' : '@same'
     'pim/akonadi-calendar' : '@same'
     'pim/calendarsupport' : '@same'
-    'pim/kcalutils' : '@same'
     'pim/libkdepim' : '@same'

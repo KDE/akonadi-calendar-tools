@@ -33,10 +33,6 @@ enum ExportType {
     ExportTypeText,
     /** Export as compact text */
     ExportTypeTextShort,
-    /** Export HTML for the specified time span */
-    ExportTypeHTML,
-    /** Export HTML for the time span on month boundaries */
-    ExportTypeMonthHTML,
     /** Export XHTML (NOT AVAILABLE YET) */
     ExportTypeXHTML,
     /** Export XML (NOT AVAILABLE YET) */

@@ -454,32 +454,6 @@ room with the entire staff.","&konsolekalendar;-1924621834.134"
 
 </sect2>
 
-<sect2 id="html-format">
-<title>&HTML; Format</title>
-
-<para>The &HTML; export format will produce a valid
-&HTML; file that can be published to the <acronym>WWW</acronym>.
-This export format is not suitable for follow-on script parsing, but is
-very nice for publishing calendars for easy public viewing.</para>
-<!--FIXME
-exports only the template without any incidence data
-<para><emphasis>TODO:</emphasis> Insert screenshot here</para>
--->
-</sect2>
-
-<sect2 id="html-month-format">
-<title><acronym>HTMLmonth</acronym> Format</title>
-
-<para>This format produces an &HTML; file showing 
-all appointments in the months specified by the date range.
-This export format is not suitable for follow-on script parsing, but is
-very nice for publishing calendars for easy public viewing.</para>
-<!--FIXME
-exports only the template without any incidence data
-<para><emphasis>TODO:</emphasis> Insert screenshot here</para>
--->
-</sect2>
-
 </sect1>
 
 <sect1 id="importing">

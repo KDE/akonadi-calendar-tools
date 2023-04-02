@@ -164,9 +164,6 @@ int main(int argc, char *argv[])
         cout << i18n("%1 supports these export formats:", QString::fromLatin1(progDisplay)).toLocal8Bit().data() << endl;
         cout << i18nc("the default export format", "  %1 [Default]", QStringLiteral("Text")).toLocal8Bit().data() << endl;
         cout << i18nc("short text export", "  %1 (like %2, but more compact)", QStringLiteral("Short"), QStringLiteral("Text")).toLocal8Bit().data() << endl;
-        cout << i18nc("HTML export", "  %1", QStringLiteral("HTML")).toLocal8Bit().data() << endl;
-        cout << i18nc("HTMLmonth export", "  %1 (like %2, but in a month view)", QStringLiteral("HTMLmonth"), QStringLiteral("HTML")).toLocal8Bit().data()
-             << endl;
         cout << i18nc("comma-separated values export", "  %1 (Comma-Separated Values)", QStringLiteral("CSV")).toLocal8Bit().data() << endl;
         cout << endl;
         return 0;
@@ -204,13 +201,7 @@ int main(int argc, char *argv[])
     if (parser.isSet(QStringLiteral("export-type"))) {
         option = parser.value(QStringLiteral("export-type"));
 
-        if (option.toUpper() == QLatin1String("HTML")) {
-            qCDebug(KONSOLEKALENDAR_LOG) << "main | export-type | Export to HTML";
-            variables.setExportType(ExportTypeHTML);
-        } else if (option.toUpper() == QLatin1String("HTMLMONTH")) {
-            qCDebug(KONSOLEKALENDAR_LOG) << "main | export-type | Export to HTML by Month";
-            variables.setExportType(ExportTypeMonthHTML);
-        } else if (option.toUpper() == QLatin1String("CSV")) {
+        if (option.toUpper() == QLatin1String("CSV")) {
             qCDebug(KONSOLEKALENDAR_LOG) << "main | export-type | Export to CSV";
             variables.setExportType(ExportTypeCSV);
         } else if (option.toUpper() == QLatin1String("TEXT")) {
