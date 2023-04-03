@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-26 00:28+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2021-01-01 22:29+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -34,90 +34,70 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "igaztanaga@gmail.com"
 
-#: konsolekalendar.cpp:82
+#: konsolekalendar.cpp:80
 #, kde-format
 msgid "There are no calendars available."
 msgstr "Ez dago egutegi erabilgarririk."
 
-#: konsolekalendar.cpp:97
+#: konsolekalendar.cpp:95
 #, kde-format
 msgid "(Read only)"
 msgstr "(soilik irakurtzeko)"
 
-#: konsolekalendar.cpp:147
+#: konsolekalendar.cpp:145
 #, kde-format
 msgid "Create Calendar <Dry Run>: %1"
 msgstr "Sortu egutegia <Dry Run>: %1"
 
-#: konsolekalendar.cpp:153
+#: konsolekalendar.cpp:151
 #, kde-format
 msgid "Create Calendar <Verbose>: %1"
 msgstr "Sortu egutegia <berritsua>: %1"
 
-#: konsolekalendar.cpp:172
+#: konsolekalendar.cpp:170
 #, kde-format
 msgid "View Events <Dry Run>:"
 msgstr "Ikusi ekitaldiak <proba>:"
 
-#: konsolekalendar.cpp:194
+#: konsolekalendar.cpp:192
 #, kde-format
 msgid "View Event <Verbose>:"
 msgstr "Ikusi ekitaldia <berritsua>:"
 
-#: konsolekalendar.cpp:267
-#, kde-format
-msgid "Sorry, export to HTML by UID is not supported yet"
-msgstr "Barkatu, UIDaren arabera HTMLra esportatzea ez da oraindik onartzen"
-
-#: konsolekalendar.cpp:288
-#, kde-format
-msgid "Events:"
-msgstr "Ekitaldiak:"
-
-#: konsolekalendar.cpp:292
-#, kde-format
-msgid "Events: %1"
-msgstr "Ekitaldiak: %1"
-
-#: konsolekalendar.cpp:294
-#, kde-format
-msgid "Events: %1 - %2"
-msgstr "Ekitaldiak: %1 - %2"
-
-#: konsolekalendar.cpp:434 konsolekalendaradd.cpp:175
+#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:175
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Zer:  %1"
 
-#: konsolekalendar.cpp:436 konsolekalendaradd.cpp:177
+#: konsolekalendar.cpp:353 konsolekalendaradd.cpp:177
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Hasiera: %1"
 
-#: konsolekalendar.cpp:438 konsolekalendaradd.cpp:179
+#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:179
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Amaiera: %1"
 
-#: konsolekalendar.cpp:441 konsolekalendaradd.cpp:182
+#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:182
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  Ez dago ekitaldiarekin lotutako ordurik"
 
-#: konsolekalendar.cpp:444 konsolekalendaradd.cpp:185
+#: konsolekalendar.cpp:361 konsolekalendaradd.cpp:185
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Desk.:  %1"
 
-#: konsolekalendar.cpp:446 konsolekalendaradd.cpp:187
+#: konsolekalendar.cpp:363 konsolekalendaradd.cpp:187
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -484,63 +464,51 @@ msgstr "  %1 (%2 bezalakoa, baina trinkoagoa)"
 
 #: main.cpp:167
 #, kde-format
-msgctxt "HTML export"
-msgid "  %1"
-msgstr "  %1"
-
-#: main.cpp:168
-#, kde-format
-msgctxt "HTMLmonth export"
-msgid "  %1 (like %2, but in a month view)"
-msgstr "  %1 (%2 bezalakoa, baina hilabeteko ikuspegian)"
-
-#: main.cpp:170
-#, kde-format
 msgctxt "comma-separated values export"
 msgid "  %1 (Comma-Separated Values)"
 msgstr "  %1 (Komaz bereizitako balioak)"
 
-#: main.cpp:185
+#: main.cpp:182
 #, kde-format
 msgid "Sorry, To-dos are not working yet."
 msgstr "Barkatu, zereginak oraindik ez dabiltza."
 
-#: main.cpp:191
+#: main.cpp:188
 #, kde-format
 msgid "Sorry, Journals are not working yet."
 msgstr "Barkatu, egunerokoak oraindik ez dabiltza."
 
-#: main.cpp:223
+#: main.cpp:214
 #, kde-format
 msgid "Invalid Export Type Specified: %1"
 msgstr "Esportatzeko mota baliogabea zehaztu da: %1"
 
-#: main.cpp:382
+#: main.cpp:373
 #, kde-format
 msgid "Invalid Start Date Specified: %1"
 msgstr "Hasierako data baliogabea zehaztu da: %1"
 
-#: main.cpp:407
+#: main.cpp:398
 #, kde-format
 msgid "Invalid Start Time Specified: %1"
 msgstr "Hasierako ordu baliogabea zehaztu da: %1"
 
-#: main.cpp:432
+#: main.cpp:423
 #, kde-format
 msgid "Invalid End Date Specified: %1"
 msgstr "Amaierako data baliogabea zehaztu da: %1"
 
-#: main.cpp:452
+#: main.cpp:443
 #, kde-format
 msgid "Invalid Date Count Specified: %1"
 msgstr "Data zenbaketa baliogabea zehaztu da: %1"
 
-#: main.cpp:480
+#: main.cpp:471
 #, kde-format
 msgid "Invalid End Time Specified: %1"
 msgstr "Amaierako ordu baliogabea zehaztu da: %1"
 
-#: main.cpp:673
+#: main.cpp:664
 #, kde-format
 msgid ""
 "Only 1 operation mode (view, add, change, delete, create) permitted at any "
@@ -549,50 +517,70 @@ msgstr ""
 "Eragiketa modu bakarra (ikusi, gehitu, aldatu, ezabatu, sortu) baimentzen da "
 "une bakoitzean"
 
-#: main.cpp:684
+#: main.cpp:675
 #, kde-format
 msgid "Ending Date/Time occurs before the Starting Date/Time"
 msgstr "Amaierako data/ordua hasierako data/ordua baina lehenago da"
 
-#: main.cpp:703
+#: main.cpp:694
 #, kde-format
 msgid "Calendar %1 successfully imported"
 msgstr "%1 egutegia ongi inportatu da"
 
-#: main.cpp:706
+#: main.cpp:697
 #, kde-format
 msgid "Unable to import calendar: %1"
 msgstr "Ezin izan da egutegia inportatu: %1"
 
-#: main.cpp:717
+#: main.cpp:708
 #, kde-format
 msgid "Attempting to insert an event that already exists"
 msgstr "Lehendik dagoen ekitaldi bat sartzeko saiakera"
 
-#: main.cpp:727 main.cpp:747
+#: main.cpp:718 main.cpp:738
 #, kde-format
 msgid "Missing event UID: use --uid command line option"
 msgstr "Falta den ekitaldiaren UID: erabili « --uid » komando-lerroko aukera"
 
-#: main.cpp:735
+#: main.cpp:726
 #, kde-format
 msgid "No such event UID: change event failed"
 msgstr "Ez dago halako UIDa duen ekitaldirik: ekitaldia aldatzea huts egin du"
 
-#: main.cpp:755
+#: main.cpp:746
 #, kde-format
 msgid "No such event UID: delete event failed"
 msgstr "Ez dago halako UIDa duen ekitaldirik: ekitaldia ezabatzea huts egin du"
 
-#: main.cpp:766
+#: main.cpp:757
 #, kde-format
 msgid "Cannot open specified export file: %1"
 msgstr "Ezin da ireki zehaztutako esportatzeko fitxategia: %1"
 
-#: main.cpp:776
+#: main.cpp:767
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Ezin da Akonadi baliabidea sortu fitxategitik: %1"
+
+#~ msgid "Sorry, export to HTML by UID is not supported yet"
+#~ msgstr "Barkatu, UIDaren arabera HTMLra esportatzea ez da oraindik onartzen"
+
+#~ msgid "Events:"
+#~ msgstr "Ekitaldiak:"
+
+#~ msgid "Events: %1"
+#~ msgstr "Ekitaldiak: %1"
+
+#~ msgid "Events: %1 - %2"
+#~ msgstr "Ekitaldiak: %1 - %2"
+
+#~ msgctxt "HTML export"
+#~ msgid "  %1"
+#~ msgstr "  %1"
+
+#~ msgctxt "HTMLmonth export"
+#~ msgid "  %1 (like %2, but in a month view)"
+#~ msgstr "  %1 (%2 bezalakoa, baina hilabeteko ikuspegian)"
 
 #~ msgid "Incidence types (these options can be combined):"
 #~ msgstr "Gertaera motak (aukera hauek konbina daitezke):"

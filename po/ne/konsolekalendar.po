@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-26 00:28+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2007-09-12 16:08+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -28,94 +28,74 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "shyamkrishna_bal@yahoo.com, nabin@mpp.org.np"
 
-#: konsolekalendar.cpp:82
+#: konsolekalendar.cpp:80
 #, kde-format
 msgid "There are no calendars available."
 msgstr ""
 
-#: konsolekalendar.cpp:97
+#: konsolekalendar.cpp:95
 #, kde-format
 msgid "(Read only)"
 msgstr ""
 
-#: konsolekalendar.cpp:147
+#: konsolekalendar.cpp:145
 #, fuzzy, kde-format
 #| msgid "Create Calendar <Dry Run>: %1"
 msgid "Create Calendar <Dry Run>: %1"
 msgstr "क्यालेन्डर सिर्जना गर्नुहोस् <Dry Run>: %1"
 
-#: konsolekalendar.cpp:153
+#: konsolekalendar.cpp:151
 #, fuzzy, kde-format
 #| msgid "Create Calendar <Verbose>: %1"
 msgid "Create Calendar <Verbose>: %1"
 msgstr "क्यालेन्डर सिर्जना गर्नुहोस् <Verbose>: %1"
 
-#: konsolekalendar.cpp:172
+#: konsolekalendar.cpp:170
 #, fuzzy, kde-format
 #| msgid "View Events <Dry Run>:"
 msgid "View Events <Dry Run>:"
 msgstr "घटना हेर्नुहोस् <Dry Run>:"
 
-#: konsolekalendar.cpp:194
+#: konsolekalendar.cpp:192
 #, fuzzy, kde-format
 #| msgid "View Event <Verbose>:"
 msgid "View Event <Verbose>:"
 msgstr "घटना हेर्नुहोस् <Verbose>:"
 
-#: konsolekalendar.cpp:267
-#, kde-format
-msgid "Sorry, export to HTML by UID is not supported yet"
-msgstr "माफ गर्नुहोस्, UID द्वारा HTML मा गरिएको निर्यात अहिले सम्म समर्थन गरेको छैन"
-
-#: konsolekalendar.cpp:288
-#, kde-format
-msgid "Events:"
-msgstr "घटना:"
-
-#: konsolekalendar.cpp:292
-#, kde-format
-msgid "Events: %1"
-msgstr "घटना: %1"
-
-#: konsolekalendar.cpp:294
-#, kde-format
-msgid "Events: %1 - %2"
-msgstr "घटना: %1 - %2"
-
-#: konsolekalendar.cpp:434 konsolekalendaradd.cpp:175
+#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:175
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  के:  %1"
 
-#: konsolekalendar.cpp:436 konsolekalendaradd.cpp:177
+#: konsolekalendar.cpp:353 konsolekalendaradd.cpp:177
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  सुरु: %1"
 
-#: konsolekalendar.cpp:438 konsolekalendaradd.cpp:179
+#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:179
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  अन्त्य:   %1"
 
-#: konsolekalendar.cpp:441 konsolekalendaradd.cpp:182
+#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:182
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  यो घटनासँग कुनै समय सम्बन्धित छैन"
 
-#: konsolekalendar.cpp:444 konsolekalendaradd.cpp:185
+#: konsolekalendar.cpp:361 konsolekalendaradd.cpp:185
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  वर्णन:  %1"
 
-#: konsolekalendar.cpp:446 konsolekalendaradd.cpp:187
+#: konsolekalendar.cpp:363 konsolekalendaradd.cpp:187
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -508,66 +488,52 @@ msgstr "  %1 (%2 जस्तै, तर धेरै कम्प्याक�
 
 #: main.cpp:167
 #, fuzzy, kde-format
-#| msgid "  %1"
-msgctxt "HTML export"
-msgid "  %1"
-msgstr "  %1"
-
-#: main.cpp:168
-#, fuzzy, kde-format
-#| msgid "  %1 (like %2, but in a month view)"
-msgctxt "HTMLmonth export"
-msgid "  %1 (like %2, but in a month view)"
-msgstr "  %1 (%2 जस्तै, तर महिना दृश्यमा)"
-
-#: main.cpp:170
-#, fuzzy, kde-format
 #| msgid "  %1 (Comma-Separated Values)"
 msgctxt "comma-separated values export"
 msgid "  %1 (Comma-Separated Values)"
 msgstr "  %1 (अल्पबिरामद्वारा विभाजित मान)"
 
-#: main.cpp:185
+#: main.cpp:182
 #, kde-format
 msgid "Sorry, To-dos are not working yet."
 msgstr "माफ गर्नुहोस्, अहिलेसम्म गर्नु पर्ने कार्य गरिएको छैन ।"
 
-#: main.cpp:191
+#: main.cpp:188
 #, kde-format
 msgid "Sorry, Journals are not working yet."
 msgstr "माफ गर्नुहोस्, अहिलेसम्म जर्नलले कार्य गरेको छैन ।"
 
-#: main.cpp:223
+#: main.cpp:214
 #, kde-format
 msgid "Invalid Export Type Specified: %1"
 msgstr "अवैध निर्यात प्रकार निर्दिष्ट गरियो: %1"
 
-#: main.cpp:382
+#: main.cpp:373
 #, kde-format
 msgid "Invalid Start Date Specified: %1"
 msgstr "अवैध सुरु मिति निर्दिष्ट गरियो: %1"
 
-#: main.cpp:407
+#: main.cpp:398
 #, kde-format
 msgid "Invalid Start Time Specified: %1"
 msgstr "अवैध सुरु समय निर्दिष्ट गरियो: %1"
 
-#: main.cpp:432
+#: main.cpp:423
 #, kde-format
 msgid "Invalid End Date Specified: %1"
 msgstr "अवैध अन्त्य मिति निर्दिष्ट गरियो: %1"
 
-#: main.cpp:452
+#: main.cpp:443
 #, kde-format
 msgid "Invalid Date Count Specified: %1"
 msgstr "अवैध मिति गणना निर्दिष्ट गरियो: %1"
 
-#: main.cpp:480
+#: main.cpp:471
 #, kde-format
 msgid "Invalid End Time Specified: %1"
 msgstr "अवैध समाप्ति समय निर्दिष्ट गरियो: %1"
 
-#: main.cpp:673
+#: main.cpp:664
 #, kde-format
 msgid ""
 "Only 1 operation mode (view, add, change, delete, create) permitted at any "
@@ -576,50 +542,74 @@ msgstr ""
 "१ मात्र सञ्चालन मोड (हेर्नुहोस्, थप्नुहोस्, परिवर्तन गर्नुहोस्, मेट्नुहोस्, सिर्जना गर्नुहोस्) कुनै "
 "एउटा समयमा अनुमति दिइयो"
 
-#: main.cpp:684
+#: main.cpp:675
 #, kde-format
 msgid "Ending Date/Time occurs before the Starting Date/Time"
 msgstr "समाप्त मिति/समय सुरु मिति/समय भन्दा अघि देखा पर्दछ"
 
-#: main.cpp:703
+#: main.cpp:694
 #, kde-format
 msgid "Calendar %1 successfully imported"
 msgstr "क्यालेन्डर %1 सफलतापूर्वक आयात गरियो"
 
-#: main.cpp:706
+#: main.cpp:697
 #, kde-format
 msgid "Unable to import calendar: %1"
 msgstr "क्यालेन्डर आयात गर्न अक्षम: %1"
 
-#: main.cpp:717
+#: main.cpp:708
 #, kde-format
 msgid "Attempting to insert an event that already exists"
 msgstr "पहिले नै अवस्थित रहेको एउटा घटना घुसाउने प्रयास"
 
-#: main.cpp:727 main.cpp:747
+#: main.cpp:718 main.cpp:738
 #, kde-format
 msgid "Missing event UID: use --uid command line option"
 msgstr "घटना UID हराइरहेको छ: --uid आदेश रेखा विकल्प प्रयोग गर्नुहोस्"
 
-#: main.cpp:735
+#: main.cpp:726
 #, kde-format
 msgid "No such event UID: change event failed"
 msgstr "त्यस्तो घटना UID होइन: घटना परिवर्तन गर्न असफल भयो"
 
-#: main.cpp:755
+#: main.cpp:746
 #, kde-format
 msgid "No such event UID: delete event failed"
 msgstr "त्यस्तो घटना UID होइन: घटना मेट्न आसफल भयो"
 
-#: main.cpp:766
+#: main.cpp:757
 #, kde-format
 msgid "Cannot open specified export file: %1"
 msgstr "निर्दिष्ट गरिएको निर्यात फाइल खोल्न सकिँदैन: %1"
 
-#: main.cpp:776
+#: main.cpp:767
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr ""
+
+#~ msgid "Sorry, export to HTML by UID is not supported yet"
+#~ msgstr "माफ गर्नुहोस्, UID द्वारा HTML मा गरिएको निर्यात अहिले सम्म समर्थन गरेको छैन"
+
+#~ msgid "Events:"
+#~ msgstr "घटना:"
+
+#~ msgid "Events: %1"
+#~ msgstr "घटना: %1"
+
+#~ msgid "Events: %1 - %2"
+#~ msgstr "घटना: %1 - %2"
+
+#, fuzzy
+#~| msgid "  %1"
+#~ msgctxt "HTML export"
+#~ msgid "  %1"
+#~ msgstr "  %1"
+
+#, fuzzy
+#~| msgid "  %1 (like %2, but in a month view)"
+#~ msgctxt "HTMLmonth export"
+#~ msgid "  %1 (like %2, but in a month view)"
+#~ msgstr "  %1 (%2 जस्तै, तर महिना दृश्यमा)"
 
 #~ msgid "Incidence types (these options can be combined):"
 #~ msgstr "इन्सिडेन्स प्रकार (यी विकल्प संयोजन गर्न सकिन्छ):"
