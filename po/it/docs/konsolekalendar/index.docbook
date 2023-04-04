@@ -821,40 +821,6 @@ con tutto il gruppo di lavoro".,"&konsolekalendar;-1924621834.134"
 
 </sect2>
 
-<sect2 id="html-format">
-<title
->Formato &HTML;</title>
-
-<para
->Il formato di esportazione &HTML; produrrà un file &HTML; valido che può essere pubblicato sul <acronym
->WWW</acronym
->. Questo formato di esportazione non è adatto per l'interpretazione da parte di altri script successivi, ma è molto comodo per la pubblicazione di calendari per una facile consultazione pubblica.</para>
-<!--FIXME
-exports only the template without any incidence data
-<para
-><emphasis
->TODO:</emphasis
-> Insert screenshot here</para>
--->
-</sect2>
-
-<sect2 id="html-month-format">
-<title
->Formato <acronym
->HTMLmonth</acronym
-></title>
-
-<para
->Questo formato produce un file &HTML; con tutti gli appuntamenti del mese specificati nell'intervallo di date. Questo formato di esportazione non è adatto per l'interpretazione da parte di altri script successivi, ma è molto comodo per la pubblicazione di calendari per una facile consultazione pubblica.</para>
-<!--FIXME
-exports only the template without any incidence data
-<para
-><emphasis
->TODO:</emphasis
-> Insert screenshot here</para>
--->
-</sect2>
-
 </sect1>
 
 <sect1 id="importing">
