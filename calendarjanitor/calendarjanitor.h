@@ -35,7 +35,7 @@ private Q_SLOTS:
     void onCollectionsFetched(bool success);
     void onItemsFetched(bool success, const QString &errorMessage);
     void onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
-    void onDeleteFinished(int changeId, const QVector<Akonadi::Item::Id> &, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
+    void onDeleteFinished(int changeId, const QList<Akonadi::Item::Id> &, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorMessage);
 
     void processNextCollection();
 
