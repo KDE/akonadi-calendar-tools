@@ -35,11 +35,11 @@ ecm_qt_declare_logging_category(konsolekalendar
 
 target_link_libraries(konsolekalendar
     Qt::DBus
-    KF${KF_MAJOR_VERSION}::CalendarCore
-    KF${KF_MAJOR_VERSION}::ConfigGui
-    KPim${KF_MAJOR_VERSION}::CalendarSupport
-    KPim${KF_MAJOR_VERSION}::AkonadiCalendar
-    KF${KF_MAJOR_VERSION}::I18n
+    KF6::CalendarCore
+    KF6::ConfigGui
+    KPim6::CalendarSupport
+    KPim6::AkonadiCalendar
+    KF6::I18n
 )
 
 install(TARGETS konsolekalendar  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

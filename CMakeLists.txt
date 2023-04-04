@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 set(PIM_VERSION "5.23.40")
 project(akonadi-calendar-tools VERSION ${PIM_VERSION})
 
-set(KF_MIN_VERSION "5.105.0")
-
+set(KF_MIN_VERSION "5.240.0")
+set(QT_REQUIRED_VERSION "6.4.0")
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(ECMInstallIcons)
@@ -28,14 +28,6 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.4.0")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
-else()
-    set(KF_MAJOR_VERSION "5")
-endif()
-
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION alpha)
 
@@ -54,22 +46,22 @@ set(KCALENDARCORE_LIB_VERSION "5.23.40")
 set(KDEPIM_LIB_VERSION "${PIM_VERSION}")
 set(KDEPIM_LIB_SOVERSION "5")
 
-set(QT_REQUIRED_VERSION "5.15.2")
+set(QT_REQUIRED_VERSION "6.4.0")
 if (QT_MAJOR_VERSION STREQUAL "6")
     set(QT_REQUIRED_VERSION "6.4.0")
 endif()
-find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets)
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets)
 
 
-# Find KF5 package
-find_package(KF${KF_MAJOR_VERSION}DocTools ${KF_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}I18n ${KF_MIN_VERSION} REQUIRED)
+# Find KF6 package
+find_package(KF6DocTools ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6I18n ${KF_MIN_VERSION} REQUIRED)
 
 # Find KdepimLibs Package
-find_package(KPim${KF_MAJOR_VERSION}Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}CalendarCore ${KCALENDARCORE_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}AkonadiCalendar ${AKONADICALENDAR_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}CalendarSupport ${CALENDARSUPPORT_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
+find_package(KF6CalendarCore ${KCALENDARCORE_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6AkonadiCalendar ${AKONADICALENDAR_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6CalendarSupport ${CALENDARSUPPORT_LIB_VERSION} CONFIG REQUIRED)
 
 include_directories(${akonadi-calendar-tools_SOURCE_DIR} ${akonadi-calendar-tools_BINARY_DIR})
 
