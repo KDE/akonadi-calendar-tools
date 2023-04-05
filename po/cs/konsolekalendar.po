@@ -553,23 +553,3 @@ msgstr "Nelze otevřít určený soubor pro export: %1"
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Ze souboru nelze vytvořit zdroj Akonadi: %1"
-
-#~ msgid "Sorry, export to HTML by UID is not supported yet"
-#~ msgstr "Lituji, export do HTML podle UID ještě není podporován"
-
-#~ msgid "Events:"
-#~ msgstr "Události:"
-
-#~ msgid "Events: %1"
-#~ msgstr "Události: %1"
-
-#~ msgid "Events: %1 - %2"
-#~ msgstr "Události: %1 - %2"
-
-#~ msgctxt "HTML export"
-#~ msgid "  %1"
-#~ msgstr "  %1"
-
-#~ msgctxt "HTMLmonth export"
-#~ msgid "  %1 (like %2, but in a month view)"
-#~ msgstr "  %1 (jako %2, ale v pohledu na měsíc)"
