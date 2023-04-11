@@ -789,40 +789,6 @@ room with the entire staff.","&konsolekalendar;-1924621834.134"
 
 </sect2>
 
-<sect2 id="html-format">
-<title
->&HTML;-opmaak</title>
-
-<para
->Het &HTML;-formaat zal een geldig HTML-bestand aanmaken dat geschikt is om op het <acronym
->WWW</acronym
-> te publiceren. Dit formaat is niet geschikt voor verdere bewerkingen door andere scripts, maar is erg goed voor het publiceren van agenda's op het internet.</para>
-<!--FIXME
-exports only the template without any incidence data
-<para
-><emphasis
->TODO:</emphasis
-> Insert screenshot here</para>
--->
-</sect2>
-
-<sect2 id="html-month-format">
-<title
-><acronym
->HTMLmonth</acronym
->-formaat</title>
-
-<para
->Dit formaat maakt een &HTML;-bestand aan dat alle afspraken in de maanden uit het opgegeven datumbereik toont. Dit formaat is niet geschikt voor verdere bewerkingen door andere scripts, maar is erg goed voor het publiceren van agenda's op het internet.</para>
-<!--FIXME
-exports only the template without any incidence data
-<para
-><emphasis
->TODO:</emphasis
-> Insert screenshot here</para>
--->
-</sect2>
-
 </sect1>
 
 <sect1 id="importing">
