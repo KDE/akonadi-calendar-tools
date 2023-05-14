@@ -195,7 +195,7 @@ msgstr "اليوميّات"
 #: calendarjanitor.cpp:501
 #, kde-format
 msgid "Passed events and to-dos (>365 days)"
-msgstr "الأحداث والمهامّ الفائتة (>٣٦٥ يومًا)"
+msgstr "الأحداث والمهامّ الفائتة (>365 يومًا)"
 
 #: calendarjanitor.cpp:502
 #, kde-format
@@ -241,7 +241,7 @@ msgstr "مُسح التّكرار."
 #: calendarjanitor.cpp:567
 #, kde-format
 msgid "Deleting alarms older than 365 days..."
-msgstr "يحذف المنبّهات الأقدم من ٣٦٥ يومًا..."
+msgstr "يحذف المنبّهات الأقدم من 365 يومًا..."
 
 #: calendarjanitor.cpp:585 calendarjanitor.cpp:599
 #, kde-format
@@ -311,7 +311,7 @@ msgstr "انسخ التّقويم احتياطيًّا"
 #: main.cpp:72
 #, kde-format
 msgid "Delete alarms older than 365 days"
-msgstr "احذف المنبّهات الأقدم من ٣٦٥ يومًا"
+msgstr "احذف المنبّهات الأقدم من 365 يومًا"
 
 #: main.cpp:104
 #, kde-format
