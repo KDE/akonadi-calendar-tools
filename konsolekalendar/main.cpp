@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("add"), i18n("Insert an incidence into the calendar")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("change"), i18n("Modify an existing incidence")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("delete"), i18n("Remove an existing incidence")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("create <filename>"), i18n("Create new Akonadi Resource for file")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("create"), i18n("Create new Akonadi Resource for file"), i18n("file")));
     parser.addOption(
         QCommandLineOption(QStringList() << QStringLiteral("import"), i18n("Import this calendar to main calendar"), QStringLiteral("[import-file]")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("list-calendars"), i18n("List available calendars")));
