@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-11-26 00:28+0000\n"
-"PO-Revision-Date: 2023-06-08 02:46+0700\n"
+"PO-Revision-Date: 2023-06-08 18:16+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -317,217 +317,217 @@ msgstr "Cetak apa yang akan dilakukan, tetapi jangan dieksekusi"
 #: main.cpp:75
 #, kde-format
 msgid "Allow calendars which might need an interactive user interface"
-msgstr ""
+msgstr "Izinkan kalender yang mungkin memerlukan antarmuka pengguna interaktif"
 
 #: main.cpp:76
 #, kde-format
 msgid "Operate for Events only (Default)"
-msgstr ""
+msgstr "Beroperasi untuk Acara saja (Bawaan)"
 
 #: main.cpp:77
 #, kde-format
 msgid "Operate for To-dos only [NOT WORKING YET]"
-msgstr ""
+msgstr "Beroperasi untuk Rencana saja [MASIH BELUM BEKERJA]"
 
 #: main.cpp:78
 #, kde-format
 msgid "Operate for Journals only [NOT WORKING YET]"
-msgstr ""
+msgstr "Beroperasi untuk Jurnal saja [MASIH BELUM BEKERJA]"
 
 #: main.cpp:79
 #, kde-format
 msgid "Print incidences in specified export format"
-msgstr ""
+msgstr "Cetak insiden dalam format ekspor yang ditentukan"
 
 #: main.cpp:80
 #, kde-format
 msgid "Insert an incidence into the calendar"
-msgstr ""
+msgstr "Sisipkan insiden ke dalam kalender"
 
 #: main.cpp:81
 #, kde-format
 msgid "Modify an existing incidence"
-msgstr ""
+msgstr "Modif insiden yang ada"
 
 #: main.cpp:82
 #, kde-format
 msgid "Remove an existing incidence"
-msgstr ""
+msgstr "Singkirkan insiden yang ada"
 
 #: main.cpp:83
 #, kde-format
 msgid "Create new Akonadi Resource for file"
-msgstr ""
+msgstr "Buat Sumberdaya Akonadi untuk file"
 
 #: main.cpp:85
 #, kde-format
 msgid "Import this calendar to main calendar"
-msgstr ""
+msgstr "Impor kalender ini ke kalender utama"
 
 #: main.cpp:86
 #, kde-format
 msgid "List available calendars"
-msgstr ""
+msgstr "Daftar kalender yang tersedia"
 
 #: main.cpp:87
 #, kde-format
 msgid "View all calendar entries, ignoring date/time options"
-msgstr ""
+msgstr "Tampilan semua entri kalender, abaikan opsi tanggal/waktu"
 
 #: main.cpp:88
 #, kde-format
 msgid "View next activity in calendar"
-msgstr ""
+msgstr "Tampilan aktivitas selanjutnya di kalender"
 
 #: main.cpp:90
 #, kde-format
 msgid "From start date show next # days' activities"
-msgstr ""
+msgstr "Dari tanggal mulai, tampilkan aktivitas # hari berikutnya"
 
 #: main.cpp:91
 #, kde-format
 msgid "Incidence Unique-string identifier"
-msgstr ""
+msgstr "Pengidentifikasi string Unik insiden"
 
 #: main.cpp:92
 #, kde-format
 msgid "Start from this day [YYYY-MM-DD]"
-msgstr ""
+msgstr "Mulai dari hari ini [YYYY-MM-DD]"
 
 #: main.cpp:93
 #, kde-format
 msgid "Start from this time [HH:MM:SS]"
-msgstr ""
+msgstr "Mulai dari waktu ini [HH:MM:SS]"
 
 #: main.cpp:94
 #, kde-format
 msgid "End at this day [YYYY-MM-DD]"
-msgstr ""
+msgstr "Akhir pada hari ini [YYYY-MM-DD]"
 
 #: main.cpp:95
 #, kde-format
 msgid "End at this time [HH:MM:SS]"
-msgstr ""
+msgstr "Akhir pada waktu ini [HH:MM:SS]"
 
 #: main.cpp:97
 #, kde-format
 msgid "Start from this time [secs since epoch]"
-msgstr ""
+msgstr "Mulai dari waktu ini [detik sejak masa]"
 
 #: main.cpp:99
 #, kde-format
 msgid "End at this time [secs since epoch]"
-msgstr ""
+msgstr "Ahir pada waktu ini [detik sejak masa]"
 
 #: main.cpp:101
 #, kde-format
 msgid "Add summary to incidence (for add/change modes)"
-msgstr ""
+msgstr "Tambahkan ringkasan ke insiden (untuk mode-mode tambah/ubah)"
 
 #: main.cpp:103
 #, kde-format
 msgid "Add description to incidence (for add/change modes)"
-msgstr ""
+msgstr "Tambahkan deskripsi ke insiden (untuk mode-mode tambah/ubah)"
 
 #: main.cpp:106
 #, kde-format
 msgid "Add location to incidence (for add/change modes)"
-msgstr ""
+msgstr "Tambahkan lokasi ke insiden (untuk mode-mode tambah/ubah)"
 
 #: main.cpp:109
 #, kde-format
 msgid "Calendar to use when creating a new incidence"
-msgstr ""
+msgstr "Kalender yang mau digunakan ketika membuat sebuah insiden baru"
 
 #: main.cpp:112
 #, kde-format
 msgid "Export file type (Default: text)"
-msgstr ""
+msgstr "Ekspor tipe file (Bawaan: teks)"
 
 #: main.cpp:114
 #, kde-format
 msgid "Export to file (Default: stdout)"
-msgstr ""
+msgstr "Ekspor ke file (Bawaan: stdout)"
 
 #: main.cpp:115
 #, kde-format
 msgid "Print list of export types supported and exit"
-msgstr ""
+msgstr "Cetak daftar tipe-tipe ekspor yang didukung dan keluar"
 
 #: main.cpp:164
 #, kde-format
 msgid "%1 supports these export formats:"
-msgstr ""
+msgstr "%1 mendukung format ekspor:"
 
 #: main.cpp:165
 #, kde-format
 msgctxt "the default export format"
 msgid "  %1 [Default]"
-msgstr ""
+msgstr "  %1 [Bawaan]"
 
 #: main.cpp:166
 #, kde-format
 msgctxt "short text export"
 msgid "  %1 (like %2, but more compact)"
-msgstr ""
+msgstr "  %1 (seperti %2, tetapi lebih kompak)"
 
 #: main.cpp:167
 #, kde-format
 msgctxt "HTML export"
 msgid "  %1"
-msgstr ""
+msgstr "  %1"
 
 #: main.cpp:168
 #, kde-format
 msgctxt "HTMLmonth export"
 msgid "  %1 (like %2, but in a month view)"
-msgstr ""
+msgstr "  %1 (seperti %2, tetapi dalam tampilan bulan)"
 
 #: main.cpp:170
 #, kde-format
 msgctxt "comma-separated values export"
 msgid "  %1 (Comma-Separated Values)"
-msgstr ""
+msgstr "  %1 (Nilai Dipisahkan Koma)"
 
 #: main.cpp:185
 #, kde-format
 msgid "Sorry, To-dos are not working yet."
-msgstr ""
+msgstr "Maaf, Rencana belum bisa bekerja."
 
 #: main.cpp:191
 #, kde-format
 msgid "Sorry, Journals are not working yet."
-msgstr ""
+msgstr "Maaf, Jurnal belum bisa bekerja."
 
 #: main.cpp:223
 #, kde-format
 msgid "Invalid Export Type Specified: %1"
-msgstr ""
+msgstr "Tipe Ekspor Tertentu Tidak Valid: %1"
 
 #: main.cpp:382
 #, kde-format
 msgid "Invalid Start Date Specified: %1"
-msgstr ""
+msgstr "Tanggal Mulai Tertentu Tidak Valid: %1"
 
 #: main.cpp:407
 #, kde-format
 msgid "Invalid Start Time Specified: %1"
-msgstr ""
+msgstr "Waktu Mulai Tertentu Tidak Valid: %1"
 
 #: main.cpp:432
 #, kde-format
 msgid "Invalid End Date Specified: %1"
-msgstr ""
+msgstr "Tanggal Akhir Tertentu Tidak Valid: %1"
 
 #: main.cpp:452
 #, kde-format
 msgid "Invalid Date Count Specified: %1"
-msgstr ""
+msgstr "Hitungan Tanggal Tertentu Tidak Valid: %1"
 
 #: main.cpp:480
 #, kde-format
 msgid "Invalid End Time Specified: %1"
-msgstr ""
+msgstr "Waktu Akhir Tertentu Tidak Valid: %1"
 
 #: main.cpp:673
 #, kde-format
@@ -535,48 +535,50 @@ msgid ""
 "Only 1 operation mode (view, add, change, delete, create) permitted at any "
 "one time"
 msgstr ""
+"Hanya 1 mode operasi (tampilan, tambah, ubah, hapus, buat) yang diizinkan "
+"pada satu waktu"
 
 #: main.cpp:684
 #, kde-format
 msgid "Ending Date/Time occurs before the Starting Date/Time"
-msgstr ""
+msgstr "Tanggal/Waktu Berakhir terjadi sebelum Tanggal/Waktu Mulai"
 
 #: main.cpp:703
 #, kde-format
 msgid "Calendar %1 successfully imported"
-msgstr ""
+msgstr "Kalender %1 berhasil diimpor"
 
 #: main.cpp:706
 #, kde-format
 msgid "Unable to import calendar: %1"
-msgstr ""
+msgstr "Tidak dapat mengimpor kalender: %1"
 
 #: main.cpp:717
 #, kde-format
 msgid "Attempting to insert an event that already exists"
-msgstr ""
+msgstr "Mencoba menyisipkan acara yang sudah ada"
 
 #: main.cpp:727 main.cpp:747
 #, kde-format
 msgid "Missing event UID: use --uid command line option"
-msgstr ""
+msgstr "UID acara hilang: gunakan opsi baris perintah --uid"
 
 #: main.cpp:735
 #, kde-format
 msgid "No such event UID: change event failed"
-msgstr ""
+msgstr "Tidak adanya UID acara: gagal mengubah acara"
 
 #: main.cpp:755
 #, kde-format
 msgid "No such event UID: delete event failed"
-msgstr ""
+msgstr "Tidak adanya UID acara: Gagal menghapus acara"
 
 #: main.cpp:766
 #, kde-format
 msgid "Cannot open specified export file: %1"
-msgstr ""
+msgstr "Tidak bisa membuka file ekspor tertentu: %1"
 
 #: main.cpp:776
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
-msgstr ""
+msgstr "Tidak bisa membuat sumberdaya Akonadi dari file: %1"
