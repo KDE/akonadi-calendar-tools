@@ -55,3 +55,5 @@ void CollectionLoader::onCollectionsLoaded(KJob *job)
         Q_EMIT loaded(false);
     }
 }
+
+#include "moc_collectionloader.cpp"

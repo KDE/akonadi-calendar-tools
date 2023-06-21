@@ -140,3 +140,5 @@ void Backuper::onCollectionLoaded(KJob *job)
         }
     }
 }
+
+#include "moc_backuper.cpp"

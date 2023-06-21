@@ -659,3 +659,5 @@ void CalendarJanitor::deleteIncidence(const Akonadi::Item &item)
         m_incidenceToItem.remove(incidence);
     }
 }
+
+#include "moc_calendarjanitor.cpp"
