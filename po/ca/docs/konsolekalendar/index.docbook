@@ -793,40 +793,6 @@ per parlar del projecte.","&konsolekalendar;-1924621834.134"
 
 </sect2>
 
-<sect2 id="html-format">
-<title
->Format &HTML;</title>
-
-<para
->El format d'exportació &HTML; crearà un fitxer &HTML; vàlid que es pot publicar a la <acronym
->WWW</acronym
->. Aquest format d'exportació no és adequat per a l'anàlisi amb un script, però és molt bonic per a la publicació de calendaris a la vista pública fàcil.</para>
-<!--FIXME
-exports only the template without any incidence data
-<para
-><emphasis
->TODO:</emphasis
-> Insert screenshot here</para>
--->
-</sect2>
-
-<sect2 id="html-month-format">
-<title
->Format <acronym
->HTMLmonth</acronym
-></title>
-
-<para
->Aquest format genera un fitxer &HTML; que mostra totes les cites en els mesos especificats per a l'interval de dates. Aquest format d'exportació no és adequat per a l'anàlisi amb un script, però és molt bonic per a la publicació de calendaris a la vista pública fàcil.</para>
-<!--FIXME
-exports only the template without any incidence data
-<para
-><emphasis
->TODO:</emphasis
-> Insert screenshot here</para>
--->
-</sect2>
-
 </sect1>
 
 <sect1 id="importing">
