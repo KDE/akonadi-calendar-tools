@@ -550,25 +550,3 @@ msgstr "Не може да бъде отворен файлът за експо�
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Не може да се създаде Akonadi ресурс от файл: %1"
-
-#~ msgid "Sorry, export to HTML by UID is not supported yet"
-#~ msgstr ""
-#~ "Експортиране към формат HTML по номер на събитие (UID) все още не се "
-#~ "поддържа"
-
-#~ msgid "Events:"
-#~ msgstr "Събития:"
-
-#~ msgid "Events: %1"
-#~ msgstr "Събития: %1"
-
-#~ msgid "Events: %1 - %2"
-#~ msgstr "Събития: %1 - %2"
-
-#~ msgctxt "HTML export"
-#~ msgid "  %1"
-#~ msgstr "  %1"
-
-#~ msgctxt "HTMLmonth export"
-#~ msgid "  %1 (like %2, but in a month view)"
-#~ msgstr "  %1 (като %2, но в месечен изглед)"
