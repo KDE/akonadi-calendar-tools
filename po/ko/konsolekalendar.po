@@ -337,7 +337,7 @@ msgstr "존재하는 사건 삭제"
 #: main.cpp:83
 #, kde-format
 msgid "Create new Akonadi Resource for file"
-msgstr "파일에 해당하는 새 Akonadi 자원 만들기"
+msgstr "파일에 해당하는 새 Akonadi 리소스 만들기"
 
 #: main.cpp:85
 #, kde-format
@@ -547,7 +547,7 @@ msgstr "지정된 내보내기 파일을 열 수 없습니다: %1"
 #: main.cpp:767
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
-msgstr "파일에서 Akonadi 자원을 만들 수 없음: %1"
+msgstr "파일에서 Akonadi 리소스를 만들 수 없음: %1"
 
 #~ msgid "Sorry, export to HTML by UID is not supported yet"
 #~ msgstr "UID를 통한 HTML 내보내기는 아직 지원되지 않습니다"
