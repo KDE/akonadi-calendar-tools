@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "5.23.90")
+set(PIM_VERSION "5.24.0")
 project(akonadi-calendar-tools VERSION ${PIM_VERSION})
 
 set(KF_MIN_VERSION "5.105.0")
@@ -37,7 +37,7 @@ else()
 endif()
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION rc)
+set(KDEPIM_DEV_VERSION)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
