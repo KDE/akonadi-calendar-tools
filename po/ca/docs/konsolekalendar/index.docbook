@@ -113,7 +113,7 @@
 >Introducció</title>
 
 <para
->&konsolekalendar; és una interfície de línia d'ordres per a calendaris &kde;. Permet veure, inserir, eliminar o modificar els esdeveniments del calendari a través de la línia d'ordres o des d'un llenguatge per crear scripts. A més, &konsolekalendar; pot crear un nou calendari, exportar un calendari a una varietat d'altres formats, i importar des d'un altre calendari.</para>
+>&konsolekalendar; és una interfície de línia d'ordres per a calendaris &kde;. Permet veure, inserir, eliminar o modificar els esdeveniments del calendari a través de la línia d'ordres o des d'un llenguatge per a crear scripts. A més, &konsolekalendar; pot crear un calendari nou, exportar un calendari a una varietat d'altres formats, i importar des d'un altre calendari.</para>
 
 <para
 >En el seu mode bàsic, &konsolekalendar; mostra la llista d'esdeveniments en el calendari per omissió per al dia actual (de 7:00 a 17:00 hores).</para>
@@ -126,15 +126,15 @@
 ></listitem>
 <listitem
 ><para
->Insereix (afegeix) entrades a un calendari</para
+>Insereix (afegeix) entrades en un calendari</para
 ></listitem>
 <listitem
 ><para
->Elimina (esborra) entrades a un calendari</para
+>Elimina (esborra) entrades en un calendari</para
 ></listitem>
 <listitem
 ><para
->Modifica (canvia) entrades a un calendari</para
+>Modifica (canvia) entrades en un calendari</para
 ></listitem>
 <listitem
 ><para
@@ -159,7 +159,7 @@
 <para
 >&konsolekalendar; <emphasis
 >no</emphasis
-> proporciona un llenguatge complet per realitzar consultes del calendari de l'usuari: ni és la intenció dels autors escriure mai aquesta capacitat. Es proporcionen opcions de línia d'ordres primitives per accedir als esdeveniments del calendari dins d'un interval consecutiu de dates/hora de temps. </para>
+> proporciona un llenguatge complet per a realitzar consultes del calendari de l'usuari: ni és la intenció dels autors escriure mai aquesta capacitat. Es proporcionen opcions de línia d'ordres primitives per a accedir als esdeveniments del calendari dins d'un interval consecutiu de dates/hora de temps. </para>
 
 </chapter>
 
@@ -184,7 +184,7 @@
 <para>
 <informalexample
 ><para
->Per veure tots els esdeveniments d'avui (de 7:00 a 17:00 hores), n'hi ha prou amb executar:</para>
+>Per a veure tots els esdeveniments d'avui (de 7:00 a 17:00 hores), n'hi ha prou amb executar:</para>
 
 <para>
 <screen
@@ -232,7 +232,7 @@
 <para>
 <informalexample
 ><para
->Mostra el/s esdeveniment/s següent/s en el calendari des d'ara endavant:</para>
+>Mostra el/s esdeveniment/s següent/s en el calendari d'ara endavant:</para>
 
 <para>
 <screen
@@ -253,7 +253,7 @@
 <para>
 <informalexample
 ><para
->Per veure tots els esdeveniments per als propers 5 dies executeu:</para>
+>Per a veure tots els esdeveniments dels pròxims 5 dies executeu:</para>
 
 <para>
 <screen
@@ -545,7 +545,7 @@
 >Crear un nou fitxer de calendari</title>
 
 <para
->El &konsolekalendar; pot utilitzar-se per crear calendaris nous a partir de fitxers existents. Podeu crear el calendari utilitzant l'opció <option
+>El &konsolekalendar; pot utilitzar-se per a crear calendaris nous a partir de fitxers existents. Podeu crear el calendari utilitzant l'opció <option
 >--create</option
 > amb el nom de fitxer com a argument. El fitxer haurà de ser un fitxer <acronym
 >iCal</acronym
@@ -555,7 +555,7 @@
 <para
 >Nota: No podeu utilitzar l'opció <option
 >--dry-run</option
-> per comprovar si es pot crear el recurs.</para>
+> per a comprovar si es pot crear el recurs.</para>
 
 <para
 >Nota: El &konsolekalendar; necessita el fitxer per a funcionar, de manera que mai el suprimireu manualment. </para>
@@ -615,12 +615,12 @@
 <para
 >&konsolekalendar; pot exportar un calendari a altres formats coneguts. L'exportació és una forma especial de veure. Per omissió, els esdeveniments es veuen en el format <quote
 >text de &konsolekalendar;</quote
->. Per canviar el format de visualització utilitzeu l'argument <parameter
+>. Per a canviar el format de visualització utilitzeu l'argument <parameter
 >--export-type</parameter
 > de la línia d'ordres.</para>
 
 <para
->Per veure una llista de tots els formats d'exportació suportats, utilitzeu l'opció <parameter
+>Per a veure una llista de tots els formats d'exportació suportats, utilitzeu l'opció <parameter
 >--export-list</parameter
 >, com segueix:</para>
 
@@ -655,7 +655,7 @@
 >Format de text del &konsolekalendar;</title>
 
 <para
->El format de text del &konsolekalendar; és el format natiu de &konsolekalendar; i està dissenyat per ser còmode per llegir i analitzar utilitzant scripts.</para>
+>El format de text del &konsolekalendar; és el format natiu de &konsolekalendar; i està dissenyat per a ser còmode de llegir i analitzar utilitzant scripts.</para>
 
 <para
 >El format de text del &konsolekalendar; és el següent: <informalexample
@@ -695,7 +695,7 @@ Summary:
 Location:
         Sala d'actes
 Description:
-        Reunió amb tot el personal per parlar del projecte.
+        Reunió amb tot el personal per a parlar del projecte.
 UID:
         &konsolekalendar;-1924621834.134
 --------------------------------------------------
@@ -740,7 +740,7 @@ UID:
 >--------------------------------------------------
 Dimarts 29-11-2016
 08:00 - 09:00   Reunió del personal, Sala d'actes
-                Reunió amb tot el personal per parlar del projecte.
+                Reunió amb tot el personal per a parlar del projecte.
 </screen>
 </informalexample>
 </para>
@@ -786,7 +786,7 @@ Dimarts 29-11-2016
 >: <informalexample
 > <screen
 >"Tuesday, November 29, 2016","08:00","Tuesday, November 29, 2016","09:00","Reunió del personal","Sala d'actes","Reunió amb tot el personal \
-per parlar del projecte.","&konsolekalendar;-1924621834.134"
+a la sala gran de conferències.","&konsolekalendar;-1924621834.134"
 </screen>
 </informalexample>
 </para>
@@ -805,7 +805,7 @@ per parlar del projecte.","&konsolekalendar;-1924621834.134"
 <para>
 <informalexample
 ><para
->Per importar el fitxer de calendari <replaceable
+>Per a importar el fitxer de calendari <replaceable
 >vacances.ics</replaceable
 > dins del calendari amb l'ID <replaceable
 >8</replaceable
@@ -1048,7 +1048,7 @@ per parlar del projecte.","&konsolekalendar;-1924621834.134"
 >&nbsp;dies</replaceable
 ></entry>
   <entry
->Comença a la data especificada mostrant les activitats dels propers # dies.</entry>
+>Comença a la data especificada mostrant les activitats dels pròxims # dies.</entry>
 </row>
 <row>
   <entry
@@ -1079,7 +1079,7 @@ per parlar del projecte.","&konsolekalendar;-1924621834.134"
 ></entry>
   <entry
 >Comença a aquesta hora [HH:MM]. Per omissió són les 07:00 hores. <para
->Per afegir o canviar un esdeveniment flotant, utilitzeu les opcions <option
+>Per a afegir o canviar un esdeveniment flotant, utilitzeu les opcions <option
 >--time float</option
 > o <option
 >--end-time float</option
@@ -1107,7 +1107,7 @@ per parlar del projecte.","&konsolekalendar;-1924621834.134"
 ></entry>
   <entry
 >Finalitza a aquesta hora [HH:MM]. Per omissió són les 17:00 hores. <para
->Per afegir o canviar un esdeveniment flotant, utilitzeu les opcions <option
+>Per a afegir o canviar un esdeveniment flotant, utilitzeu les opcions <option
 >--time float</option
 > o <option
 >--end-time float</option
@@ -1142,7 +1142,7 @@ per parlar del projecte.","&konsolekalendar;-1924621834.134"
 >&nbsp;resum</replaceable
 ></entry>
   <entry
->Afegeix resum a l'esdeveniment (funciona per afegir i canviar).</entry>
+>Afegeix resum a l'esdeveniment (funciona per a afegir i canviar).</entry>
 </row>
 <row>
   <entry
@@ -1152,7 +1152,7 @@ per parlar del projecte.","&konsolekalendar;-1924621834.134"
 >&nbsp;descripció</replaceable
 ></entry>
   <entry
->Afegeix descripció a l'esdeveniment (funciona per afegir i canviar).</entry>
+>Afegeix descripció a l'esdeveniment (funciona per a afegir i canviar).</entry>
 </row>
 <row>
   <entry
@@ -1162,7 +1162,7 @@ per parlar del projecte.","&konsolekalendar;-1924621834.134"
 >&nbsp;ubicació</replaceable
 ></entry>
   <entry
->Afegeix ubicació a l'esdeveniment (funciona per afegir i canviar).</entry>
+>Afegeix ubicació a l'esdeveniment (funciona per a afegir i canviar).</entry>
 </row>
 <row>
   <entry
@@ -1320,7 +1320,7 @@ per parlar del projecte.","&konsolekalendar;-1924621834.134"
 <para
 >Atès que és necessari especificar els <acronym
 >UID</acronym
-> per suprimir o canviar els esdeveniments. Si no els voleu veure, utilitzeu el tipus d'exportació <emphasis
+> per a suprimir o canviar els esdeveniments. Si no els voleu veure, utilitzeu el tipus d'exportació <emphasis
 >curt</emphasis
 > (<option
 >--export-type short</option
@@ -1331,7 +1331,7 @@ per parlar del projecte.","&konsolekalendar;-1924621834.134"
 <qandaentry>
 <question>
 <para
->Com puc afegir la meva pregunta a aquesta &PMF;?</para>
+>Com puc afegir la meva pregunta a aquestes &PMF;?</para>
 </question>
 <answer>
 <para
