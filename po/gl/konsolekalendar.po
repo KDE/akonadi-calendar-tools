@@ -531,7 +531,7 @@ msgstr "Importouse satisfactoriamente o calendario %1"
 #: main.cpp:697
 #, kde-format
 msgid "Unable to import calendar: %1"
-msgstr "Non se pode importar o calendario: %1"
+msgstr "Non é posíbel importar o calendario: %1"
 
 #: main.cpp:708
 #, kde-format
@@ -556,12 +556,12 @@ msgstr "Non hai tal UID de evento: fallou a eliminación do evento"
 #: main.cpp:757
 #, kde-format
 msgid "Cannot open specified export file: %1"
-msgstr "Non se pode indicar o ficheiro de exportación: %1"
+msgstr "Non é posíbel indicar o ficheiro de exportación: %1"
 
 #: main.cpp:767
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
-msgstr "Non se pode crear un recurso de Akonadi a partir do ficheiro: %1"
+msgstr "Non é posíbel crear un recurso de Akonadi a partir do ficheiro: %1"
 
 #~ msgid "Sorry, export to HTML by UID is not supported yet"
 #~ msgstr "Aínda non se permite exportar a HTML por UID"
