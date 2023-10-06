@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2015.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-24 00:44+0000\n"
-"PO-Revision-Date: 2022-11-02 11:16+0300\n"
+"PO-Revision-Date: 2023-10-05 13:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -137,7 +137,7 @@ msgstr "Geçersiz DTSTART'a sahip olaylar kontrol ediliyor..."
 #: calendarjanitor.cpp:326
 #, kde-format
 msgid "Checking for recurring to-dos with invalid DTSTART..."
-msgstr "Geçersiz DTSTART'a sahip yinelenen yapılacaklar kontrol ediliyor..."
+msgstr "Geçersiz DTSTART'a sahip yinelenen yapılacaklar denetleniyor..."
 
 #: calendarjanitor.cpp:362
 #, kde-format
@@ -152,22 +152,22 @@ msgstr "Sahipsizler kontrol ediliyor..."
 #: calendarjanitor.cpp:389
 #, kde-format
 msgid "The following incidences are children of nonexistent parents"
-msgstr "Aşağıdaki olaylar var olmayan üst olayların çocuklarıdır"
+msgstr "Aşağıdaki olaylar var olmayan üst olayların alt ögeleridir"
 
 #: calendarjanitor.cpp:398
 #, kde-format
 msgid "In fix mode these children will be unparented."
-msgstr "Düzeltme kipinde bu çocuklar üstlerinden ayrılacaktır."
+msgstr "Düzeltme kipinde bu alt ögeler üstlerinden ayrılacaktır."
 
 #: calendarjanitor.cpp:398
 #, kde-format
 msgid "Children were successfully unparented."
-msgstr "Çocuklar başarılı bir şekilde ayrıldı."
+msgstr "Alt ögeler başarılı bir şekilde ayrıldı."
 
 #: calendarjanitor.cpp:403
 #, kde-format
 msgid "Checking for duplicate UIDs..."
-msgstr "Tekrarlanan UID'ler kontrol ediliyor..."
+msgstr "Yinelenen UID'ler denetleniyor..."
 
 #: calendarjanitor.cpp:460
 #, kde-format
@@ -223,7 +223,7 @@ msgstr "Satır içi eklerin toplam boyutu (KB cinsinden)"
 #, kde-format
 msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
-msgstr "Üst olayı olmayan RECURRING-ID olayları kontrol ediliyor..."
+msgstr "Üst olayı olmayan RECURRING-ID olayları denetleniyor..."
 
 #: calendarjanitor.cpp:562
 #, kde-format
@@ -234,7 +234,7 @@ msgstr ""
 #: calendarjanitor.cpp:562
 #, kde-format
 msgid "Recurrence cleared."
-msgstr "Tekrarlama temizlendi."
+msgstr "Yineleme temizlendi."
 
 #: calendarjanitor.cpp:567
 #, kde-format
@@ -249,7 +249,7 @@ msgstr "Geçersiz"
 #: calendarjanitor.cpp:602
 #, kde-format
 msgid "recurrent"
-msgstr "tekrarlama"
+msgstr "yineleme"
 
 #: calendarjanitor.cpp:620
 #, kde-format
