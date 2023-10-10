@@ -275,7 +275,7 @@ msgstr "id=%1; resum=«%2»"
 #: main.cpp:40
 #, kde-format
 msgid "Error while parsing %1"
-msgstr "S'ha produït un error en analitzar %1"
+msgstr "S'ha produït un error en l'anàlisi sintàctica de %1"
 
 #: main.cpp:41
 #, kde-format
