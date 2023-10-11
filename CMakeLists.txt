@@ -60,7 +60,7 @@ find_package(KPim6CalendarSupport ${CALENDARSUPPORT_LIB_VERSION} CONFIG REQUIRED
 
 include_directories(${akonadi-calendar-tools_SOURCE_DIR} ${akonadi-calendar-tools_BINARY_DIR})
 
-configure_file(console-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/console-version.h @ONLY)
+configure_file(console-version.h.in ${CMAKE_CURRENT_BINARY_DIR}/console-version.h @ONLY)
 
 
 ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
