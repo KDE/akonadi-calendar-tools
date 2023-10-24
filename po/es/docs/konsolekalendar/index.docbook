@@ -15,7 +15,7 @@
 <bookinfo id="konsolekalendarinfo">
 
 <title
->El manual de &konsolekalendar;</title>
+>Manual de &konsolekalendar;</title>
 
 <authorgroup>
 <author
@@ -314,7 +314,7 @@
 > en la línea de órdenes. Los eventos que se inserten correctamente se mostrarán inmediatamente en las aplicaciones de calendario de &kde; (como &korganizer;).</para>
 
 <para
->Usted obtiene una lista de calendarios y sus id., mediante: </para>
+>Puede obtener una lista de calendarios y sus id. mediante: </para>
 
 <screen
 ><prompt
@@ -573,25 +573,25 @@
 >Crear un archivo de calendario nuevo</title>
 
 <para
->&konsolekalendar; puede usarse para crear nuevos calendarios desde archivos existentes. Usted puede crear el calendario mediante la opción <option
+>&konsolekalendar; se puede usar para crear nuevos calendarios a partir de archivos existentes. Puede crear el calendario mediante la opción <option
 >--create</option
-> con el nombre de archivo como argumento. El archivo debe ser un <acronym
+> con un nombre de archivo como argumento. El archivo debe ser un <acronym
 >iCal</acronym
 > o <acronym
 >vCal</acronym
 > válido.</para>
 <para
->Nota: usted no puede usar la opción <option
+>Nota: no se puede usar la opción <option
 >--dry-run</option
-> para comprobar si el recurso puede crearse.</para>
+> para comprobar si el recurso se puede crear.</para>
 
 <para
 >Nota: &konsolekalendar; necesita el archivo para funcionar, por lo que nunca borre el archivo a mano. </para>
 
 <para
->Nota lateral técnica: &konsolekalendar; crea con esta opción un nuevo recurso <acronym
+>Nota lateral técnica: &konsolekalendar; crea con esta opción un nuevo recurso de <acronym
 >Akonadi</acronym
-> que apunta a este archivo. No evita que usted cree varios recursos apuntando al mismo archivo. </para>
+> que apunta a este archivo. No evita que se puedan crear varios recursos que apunten al mismo archivo. </para>
 
 <para>
 <informalexample
@@ -628,9 +628,9 @@
 ></para>
 
 <para
->No es posible borrar un recurso <acronym
+>No se puede borrar un recurso de <acronym
 >Akonadi</acronym
-> con &konsolekalendar;, usted tiene que usar &korganizer; o <application
+> con &konsolekalendar;. Para ello tendrá que usar &korganizer; o <application
 >akonadiconsole</application
 >. </para>
 
@@ -819,40 +819,6 @@ congresos con el equipo completo.","&konsolekalendar;-1924621834.134"
 </informalexample>
 </para>
 
-</sect2>
-
-<sect2 id="html-format">
-<title
->Formato &HTML;</title>
-
-<para
->El formato de exportación &HTML; genera un archivo &HTML; válido para que se pueda publicar en la <acronym
->WWW</acronym
->. Este formato de exportación no es adecuado para analizarlos mediante guiones, pero es muy recomendable para publicar calendarios y hacerlos visibles de forma sencilla.</para>
-<!--FIXME
-exports only the template without any incidence data
-<para
-><emphasis
->TODO:</emphasis
-> Insert screenshot here</para>
--->
-</sect2>
-
-<sect2 id="html-month-format">
-<title
->Formato <acronym
->HTML mensual</acronym
-></title>
-
-<para
->Este formato genera un archivo &HTML; que muestra todas las citas del mes especificado en el intervalo de fechas. Este formato de exportación no es adecuado para análisis mediante guiones, pero es muy recomendable para publicar calendarios y hacerlos visibles de forma sencilla.</para>
-<!--FIXME
-exports only the template without any incidence data
-<para
-><emphasis
->TODO:</emphasis
-> Insert screenshot here</para>
--->
 </sect2>
 
 </sect1>
@@ -1454,13 +1420,12 @@ exports only the template without any incidence data
 </itemizedlist>
 
 <para
->Traducido por Juan Manuel García Molina <email
+>Documentación traducida por Juan Manuel García Molina <email
 >juanma@superiodico.net</email
 > y Javier Viñal <email
 >fjvinal@gmail.com</email
-></para
-> 
-&underFDL; &underGPL; </chapter>
+>.</para
+> &underFDL; &underGPL; </chapter>
 
 &documentation.index;
 </book>
