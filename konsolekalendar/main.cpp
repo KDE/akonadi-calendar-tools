@@ -52,7 +52,7 @@ static const char progVersion[] = KDEPIM_VERSION;
 
 int main(int argc, char *argv[])
 {
-    KLocalizedString::setApplicationDomain("konsolekalendar");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("konsolekalendar"));
     QApplication app(argc, argv);
 
     KAboutData aboutData(QLatin1String(progName),

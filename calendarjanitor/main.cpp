@@ -57,7 +57,7 @@ static void silenceStderr()
 
 int main(int argv, char *argc[])
 {
-    KLocalizedString::setApplicationDomain("calendarjanitor");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("calendarjanitor"));
     KAboutData aboutData(QStringLiteral("calendarjanitor"), i18n("CalendarJanitor"), QStringLiteral(KDEPIM_VERSION));
     aboutData.setLicense(KAboutLicense::GPL_V2, KAboutLicense::OrLaterVersions);
     aboutData.addAuthor(i18n("Sérgio Martins"), i18n("Maintainer"), QStringLiteral("iamsergiogmail.com"));
