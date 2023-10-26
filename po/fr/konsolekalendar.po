@@ -12,7 +12,7 @@
 # Matthieu Robin <matthieu@macolu.org>, 2005.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2007, 2008.
 # Sebastien Renard <Sebastien.Renard@digitalfox.org>, 2009, 2013, 2015.
-# xavier <xavier.besnard@neuf.fr>, 2013.
+# SPDX-FileCopyrightText: 2013, 2023 xavier <xavier.besnard@neuf.fr>
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
 # Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
 #
@@ -21,8 +21,8 @@ msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-03 00:46+0000\n"
-"PO-Revision-Date: 2023-01-06 19:32+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"PO-Revision-Date: 2023-10-24 15:01+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,7 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -79,40 +79,40 @@ msgstr "Voir l'évènement <Bavard> :"
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
-msgstr "  Quoi :  %1"
+msgstr " Quoi : %1"
 
 #: konsolekalendar.cpp:353 konsolekalendaradd.cpp:177
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
-msgstr "  Début : %1"
+msgstr " Début : %1"
 
 #: konsolekalendar.cpp:355 konsolekalendaradd.cpp:179
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
-msgstr "  Fin :   %1"
+msgstr " Fin : %1"
 
 #: konsolekalendar.cpp:358 konsolekalendaradd.cpp:182
 #, kde-format
 msgid "  No Time Associated with Event"
-msgstr "  Aucune date associée à l'évènement"
+msgstr " Aucune date associée à l'évènement"
 
 #: konsolekalendar.cpp:361 konsolekalendaradd.cpp:185
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
-msgstr "  Desc :  %1"
+msgstr " Desc : %1"
 
 #: konsolekalendar.cpp:363 konsolekalendaradd.cpp:187
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
 msgid "  Location:  %1"
-msgstr "  Emplacement :  %1"
+msgstr " Emplacement : %1"
 
 #: konsolekalendaradd.cpp:61
 #, kde-format
@@ -182,7 +182,7 @@ msgstr "Échec : « %1 » non modifié"
 #: konsolekalendardelete.cpp:80
 #, kde-format
 msgid "  UID:   %1"
-msgstr "  UID :   %1"
+msgstr " UID : %1"
 
 #: konsolekalendardelete.cpp:48
 #, kde-format
@@ -472,19 +472,19 @@ msgstr "%1 prend en charge ces formats d'exportation :"
 #, kde-format
 msgctxt "the default export format"
 msgid "  %1 [Default]"
-msgstr "  %1 [Par défaut]"
+msgstr " %1 [Par défaut]"
 
 #: main.cpp:166
 #, kde-format
 msgctxt "short text export"
 msgid "  %1 (like %2, but more compact)"
-msgstr "  %1 (comme %2 mais plus concis)"
+msgstr " %1 (comme %2 mais plus concis)"
 
 #: main.cpp:167
 #, kde-format
 msgctxt "comma-separated values export"
 msgid "  %1 (Comma-Separated Values)"
-msgstr "  %1 (Valeurs séparées par une virgule)"
+msgstr " %1 (Valeurs séparées par une virgule)"
 
 #: main.cpp:182
 #, kde-format
