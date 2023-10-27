@@ -593,9 +593,7 @@
 </para>
 
 <para
->El recurs s'anomenarà <quote
->vacances</quote
-> utilitzant <option
+>El recurs s'anomenarà «vacances» utilitzant <option
 >--list-calendars</option
 ></para>
 
@@ -613,9 +611,7 @@
 >Exportar a altres formats</title>
 
 <para
->&konsolekalendar; pot exportar un calendari a altres formats coneguts. L'exportació és una forma especial de veure. Per omissió, els esdeveniments es veuen en el format <quote
->text de &konsolekalendar;</quote
->. Per a canviar el format de visualització utilitzeu l'argument <parameter
+>&konsolekalendar; pot exportar un calendari a altres formats coneguts. L'exportació és una forma especial de veure. Per omissió, els esdeveniments es veuen en el format «text de &konsolekalendar;». Per a canviar el format de visualització utilitzeu l'argument <parameter
 >--export-type</parameter
 > de la línia d'ordres.</para>
 
