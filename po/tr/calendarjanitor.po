@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-24 00:44+0000\n"
-"PO-Revision-Date: 2023-10-05 13:08+0300\n"
+"PO-Revision-Date: 2023-11-02 13:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -32,8 +32,8 @@ msgstr "kaanozdincer@gmail.com"
 #, kde-format
 msgid "Backup was successful. %1 incidence was saved."
 msgid_plural "Backup was successful. %1 incidences were saved."
-msgstr[0] "Yedekleme başarılı. %1 örnek kaydedildi."
-msgstr[1] "Yedekleme başarılı. %1 örnek kaydedildi."
+msgstr[0] "Yedekleme başarılı. %1 olay kaydedildi."
+msgstr[1] "Yedekleme başarılı. %1 olay kaydedildi."
 
 #: backuper.cpp:56
 #, kde-format
@@ -43,7 +43,7 @@ msgstr "Dosya boş."
 #: backuper.cpp:61
 #, kde-format
 msgid "A backup is already in progress."
-msgstr "Bir yedekleme işlemi zaten etkin."
+msgstr "Bir yedekleme işlemi halihazırda sürüyor."
 
 #: backuper.cpp:64
 #, kde-format
@@ -71,7 +71,7 @@ msgid ""
 "Bailing out. Fix your akonadi setup first. These kind of errors should not "
 "happen."
 msgstr ""
-"Kurtarılıyor. Önce akonadi kurulunuzu tamir edin. Bu tür hataların "
+"Kurtarılıyor. Öncelikle Akonadi kurulunuzu onarın. Bu tür hataların "
 "oluşmaması gerekir."
 
 #: calendarjanitor.cpp:85
@@ -87,7 +87,7 @@ msgstr "İşlenecek koleksiyon yok."
 #: calendarjanitor.cpp:126
 #, kde-format
 msgid "Error while modifying incidence: %1"
-msgstr "Sıklık değiştirilirken hata oluştu: %1"
+msgstr "Olay değiştirilirken hata oluştu: %1"
 
 #: calendarjanitor.cpp:131
 #, kde-format
@@ -97,7 +97,7 @@ msgstr "%1 ögesi düzeltildi"
 #: calendarjanitor.cpp:147
 #, kde-format
 msgid "Error while deleting incidence: %1"
-msgstr "Sıklık silinirken hata oluştu: %1"
+msgstr "Olay silinirken hata oluştu: %1"
 
 #: calendarjanitor.cpp:151
 #, kde-format
@@ -122,17 +122,17 @@ msgstr "Koleksiyon boş, yok sayılıyor."
 #: calendarjanitor.cpp:255
 #, kde-format
 msgid "Checking for incidences with empty summary and description..."
-msgstr "Özet ve tanımlama alanı boş sıklıklar kontrol ediliyor..."
+msgstr "Özet ve tanımlama alanı boş olaylar denetleniyor..."
 
 #: calendarjanitor.cpp:270
 #, kde-format
 msgid "Checking for incidences with empty UID..."
-msgstr "UID alanı boş sıklıklar kontrol ediliyor..."
+msgstr "UID alanı boş olaylar denetleniyor..."
 
 #: calendarjanitor.cpp:289
 #, kde-format
 msgid "Checking for events with invalid DTSTART..."
-msgstr "Geçersiz DTSTART'a sahip olaylar kontrol ediliyor..."
+msgstr "Geçersiz DTSTART'a sahip olaylar denetleniyor..."
 
 #: calendarjanitor.cpp:326
 #, kde-format
@@ -142,17 +142,17 @@ msgstr "Geçersiz DTSTART'a sahip yinelenen yapılacaklar denetleniyor..."
 #: calendarjanitor.cpp:362
 #, kde-format
 msgid "Checking for journals with invalid DTSTART..."
-msgstr "Geçersiz DTSTART'a sahip dergiler kontrol ediliyor..."
+msgstr "Geçersiz DTSTART'a sahip günceler denetleniyor..."
 
 #: calendarjanitor.cpp:383
 #, kde-format
 msgid "Checking for orphans..."
-msgstr "Sahipsizler kontrol ediliyor..."
+msgstr "Sahipsizler denetleniyor..."
 
 #: calendarjanitor.cpp:389
 #, kde-format
 msgid "The following incidences are children of nonexistent parents"
-msgstr "Aşağıdaki olaylar var olmayan üst olayların alt ögeleridir"
+msgstr "Aşağıdaki olaylar, var olmayan üst olayların alt ögeleridir"
 
 #: calendarjanitor.cpp:398
 #, kde-format
@@ -187,7 +187,7 @@ msgstr "Yapılacaklar"
 #: calendarjanitor.cpp:500
 #, kde-format
 msgid "Journals"
-msgstr "Günlükler"
+msgstr "Günceler"
 
 #: calendarjanitor.cpp:501
 #, kde-format
