@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-03 00:46+0000\n"
-"PO-Revision-Date: 2023-10-01 21:39+0300\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"PO-Revision-Date: 2023-11-08 09:37+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
@@ -139,58 +139,58 @@ msgstr "הוספת אירוע דולגה כיוון שהמזהה הייחודי 
 #: konsolekalendaradd.cpp:154
 #, kde-format
 msgid "Add Event with UID \"%1\". <Verbose>"
-msgstr ""
+msgstr "הוספת אירוע עם המזהה היחודי „%1”. <מפורט>"
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Change Event <Dry Run>:"
-msgstr ""
+msgstr "שינוי האירוע <מדומה>:"
 
 #: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
 #, kde-format
 msgid "To Event <Dry Run>:"
-msgstr ""
+msgstr "לאירוע <מדומה>:"
 
 #: konsolekalendarchange.cpp:59
 #, kde-format
 msgid "Change Event <Verbose>:"
-msgstr ""
+msgstr "שינוי האירוע <מפורט>:"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
 msgid "Success: \"%1\" changed"
-msgstr ""
+msgstr "הצלחה: „%1” השתנה"
 
 #: konsolekalendarchange.cpp:103
 #, kde-format
 msgid "Failure: \"%1\" not changed"
-msgstr ""
+msgstr "כשלון: „%1” לא השתנה"
 
 #: konsolekalendarchange.cpp:114 konsolekalendarchange.cpp:130
 #: konsolekalendardelete.cpp:80
 #, kde-format
 msgid "  UID:   %1"
-msgstr ""
+msgstr "  מזהה יחודי:   %1"
 
 #: konsolekalendardelete.cpp:48
 #, kde-format
 msgid "Delete Event <Dry Run>:"
-msgstr ""
+msgstr "מחיקת אירוע <מדומה>:"
 
 #: konsolekalendardelete.cpp:54
 #, kde-format
 msgid "Delete Event <Verbose>:"
-msgstr ""
+msgstr "מחיקת אירוע <מפורט>:"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
 msgid "Success: \"%1\" deleted"
-msgstr ""
+msgstr "הצלחה: „%1” נמחק"
 
 #: konsolekalendardelete.cpp:69
 #, kde-format
 msgid "Error deleting: \"%1\""
-msgstr ""
+msgstr "שגיאת מחיקה: „%1”"
 
 #: konsolekalendarexports.cpp:59
 #, kde-format
@@ -310,37 +310,37 @@ msgstr "לאפשר לוחות שנה שעשויים לדרוש ממשק משתמ
 #: main.cpp:76
 #, kde-format
 msgid "Operate for Events only (Default)"
-msgstr ""
+msgstr "תפעול לאירועים בלבד (ברירת מחדל)"
 
 #: main.cpp:77
 #, kde-format
 msgid "Operate for To-dos only [NOT WORKING YET]"
-msgstr ""
+msgstr "תפעול למטלות בלבד [לא עובד עדיין]"
 
 #: main.cpp:78
 #, kde-format
 msgid "Operate for Journals only [NOT WORKING YET]"
-msgstr ""
+msgstr "תפעול ליומנים בלבד [לא עובד עדיין]"
 
 #: main.cpp:79
-#, fuzzy, kde-format
+#, kde-format
 msgid "Print incidences in specified export format"
-msgstr "מיקום קובץ לוח השנה שלך"
+msgstr "הדפסת מאורעות בתצורת הייצוא שצוינה"
 
 #: main.cpp:80
-#, fuzzy, kde-format
+#, kde-format
 msgid "Insert an incidence into the calendar"
-msgstr "הפעילות הבאה בלוח השנה"
+msgstr "הוספת מאורע ללוח השנה"
 
 #: main.cpp:81
 #, kde-format
 msgid "Modify an existing incidence"
-msgstr ""
+msgstr "שינוי מאורע קיים"
 
 #: main.cpp:82
 #, kde-format
 msgid "Remove an existing incidence"
-msgstr ""
+msgstr "הסרת מאורע קיים"
 
 #: main.cpp:83
 #, kde-format
@@ -375,7 +375,7 @@ msgstr "מתאריך ההתחלה להציג את פעילויות # הימים 
 #: main.cpp:91
 #, kde-format
 msgid "Incidence Unique-string identifier"
-msgstr ""
+msgstr "מחרוזת מזהה ייחודית למאורע"
 
 #: main.cpp:92
 #, kde-format
@@ -410,22 +410,22 @@ msgstr "סיום בשעה הזאת [שניות מאז epoch]"
 #: main.cpp:101
 #, kde-format
 msgid "Add summary to incidence (for add/change modes)"
-msgstr ""
+msgstr "הוספת תקציר למאורע (למצבי הוספה/שינוי)"
 
 #: main.cpp:103
 #, kde-format
 msgid "Add description to incidence (for add/change modes)"
-msgstr ""
+msgstr "הוספת תיאור למאורע (למצבי הוספה/שינוי)"
 
 #: main.cpp:106
 #, kde-format
 msgid "Add location to incidence (for add/change modes)"
-msgstr ""
+msgstr "הוספת מקום למאורע (למצבי הוספה/שינוי)"
 
 #: main.cpp:109
 #, kde-format
 msgid "Calendar to use when creating a new incidence"
-msgstr ""
+msgstr "לוח שנה לשימוש ביצירת מאורע חדש"
 
 #: main.cpp:112
 #, kde-format
@@ -510,12 +510,12 @@ msgstr "שעת הסיום שצוינה שגויה: %1"
 msgid ""
 "Only 1 operation mode (view, add, change, delete, create) permitted at any "
 "one time"
-msgstr ""
+msgstr "מותר רק מצב פעולה אחד (הצגה, הוספה, שינוי, מחיקה, יצירה) בכל זמן נתון"
 
 #: main.cpp:675
 #, kde-format
 msgid "Ending Date/Time occurs before the Starting Date/Time"
-msgstr ""
+msgstr "תאריך/שעת הסיום מתרחשים לפני תאריך/שעת ההתחלה"
 
 #: main.cpp:694
 #, kde-format
