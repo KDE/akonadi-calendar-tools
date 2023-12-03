@@ -64,7 +64,7 @@ configure_file(console-version.h.in ${CMAKE_CURRENT_BINARY_DIR}/console-version.
 
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.6  KF 5.245.0)
+ecm_set_disabled_deprecation_versions(QT 6.6  KF 5.246.0)
 
 add_definitions(-DQT_NO_EMIT)
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
