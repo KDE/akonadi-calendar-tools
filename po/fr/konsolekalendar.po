@@ -12,9 +12,9 @@
 # Matthieu Robin <matthieu@macolu.org>, 2005.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2007, 2008.
 # Sebastien Renard <Sebastien.Renard@digitalfox.org>, 2009, 2013, 2015.
-# SPDX-FileCopyrightText: 2013, 2023 xavier <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2013, 2023 Xavier Besnard <xavier.besnard@kde.org>
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
-# Xavier BESNARD <xavier.besnard@kde.org>, 2023.
+# Xavier Besnard <xavier.besnard@kde.org>, 2023.
 #
 msgid ""
 msgstr ""
