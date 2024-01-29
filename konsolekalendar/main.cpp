@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("konsolekalendar"));
     QApplication app(argc, argv);
 
-    KAboutData aboutData(QLatin1String(progName),
+    KAboutData aboutData(QLatin1StringView(progName),
                          i18n("KonsoleKalendar"),
                          QStringLiteral(KDEPIM_VERSION),
                          i18n("A command line interface to KDE calendars"),
@@ -201,13 +201,13 @@ int main(int argc, char *argv[])
     if (parser.isSet(QStringLiteral("export-type"))) {
         option = parser.value(QStringLiteral("export-type"));
 
-        if (option.toUpper() == QLatin1String("CSV")) {
+        if (option.toUpper() == QLatin1StringView("CSV")) {
             qCDebug(KONSOLEKALENDAR_LOG) << "main | export-type | Export to CSV";
             variables.setExportType(ExportTypeCSV);
-        } else if (option.toUpper() == QLatin1String("TEXT")) {
+        } else if (option.toUpper() == QLatin1StringView("TEXT")) {
             qCDebug(KONSOLEKALENDAR_LOG) << "main | export-type | Export to TEXT (default)";
             variables.setExportType(ExportTypeText);
-        } else if (option.toUpper() == QLatin1String("SHORT")) {
+        } else if (option.toUpper() == QLatin1StringView("SHORT")) {
             qCDebug(KONSOLEKALENDAR_LOG) << "main | export-type | Export to TEXT-SHORT";
             variables.setExportType(ExportTypeTextShort);
         } else {
@@ -388,10 +388,10 @@ int main(int argc, char *argv[])
                                      << "Start time before conversion :"
                                      << "(" << option << ")";
 
-        if (option.toUpper() != QLatin1String("FLOAT")) {
+        if (option.toUpper() != QLatin1StringView("FLOAT")) {
             if (option.count(QLatin1Char(':')) < 2) {
                 // need to append seconds
-                option.append(QLatin1String(":00"));
+                option.append(QLatin1StringView(":00"));
             }
             starttime = QTime::fromString(option, Qt::ISODate);
             if (!starttime.isValid()) {
@@ -461,10 +461,10 @@ int main(int argc, char *argv[])
                                      << "End time before conversion:"
                                      << "(" << option << ")";
 
-        if (option.toUpper() != QLatin1String("FLOAT")) {
+        if (option.toUpper() != QLatin1StringView("FLOAT")) {
             if (option.count(QLatin1Char(':')) < 2) {
                 // need to append seconds
-                option.append(QLatin1String(":00"));
+                option.append(QLatin1StringView(":00"));
             }
             endtime = QTime::fromString(option, Qt::ISODate);
             if (!endtime.isValid()) {
@@ -687,7 +687,7 @@ int main(int argc, char *argv[])
      * and product ID for incidence PRODID property
      */
     QString prodId = QStringLiteral("-//K Desktop Environment//NONSGML %1 %2//EN");
-    CalFormat::setApplication(QLatin1String(progDisplay), prodId.arg(QLatin1String(progDisplay)).arg(QLatin1String(progVersion)));
+    CalFormat::setApplication(QLatin1StringView(progDisplay), prodId.arg(QLatin1String(progDisplay)).arg(QLatin1String(progVersion)));
 
     if (importFile) {
         if (konsolekalendar->importCalendar()) {

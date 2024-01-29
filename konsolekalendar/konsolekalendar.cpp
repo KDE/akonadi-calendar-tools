@@ -87,7 +87,7 @@ bool KonsoleKalendar::printCalendarList()
 
             if (mimeTypeSet.intersects(collectionMimeTypeSet)) {
                 QString colId = QString::number(collection.id()).leftJustified(6, QLatin1Char(' '));
-                colId += QLatin1String("- ");
+                colId += QLatin1StringView("- ");
 
                 bool readOnly = !(collection.rights() & Akonadi::Collection::CanCreateItem || collection.rights() & Akonadi::Collection::CanChangeItem
                                   || collection.rights() & Akonadi::Collection::CanDeleteItem);

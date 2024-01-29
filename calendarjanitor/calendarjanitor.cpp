@@ -582,21 +582,21 @@ static QString dateString(const KCalendarCore::Incidence::Ptr &incidence)
 {
     QDateTime start = incidence->dtStart();
     QDateTime end = incidence->dateTime(KCalendarCore::Incidence::RoleEnd);
-    QString str = QLatin1String("DTSTART=") + (start.isValid() ? start.toString() : i18n("invalid")) + QLatin1String("; ");
+    QString str = QLatin1StringView("DTSTART=") + (start.isValid() ? start.toString() : i18n("invalid")) + QLatin1String("; ");
 
     if (incidence->type() == KCalendarCore::Incidence::TypeJournal) {
         return str;
     }
 
-    str += QLatin1String("\n        ");
+    str += QLatin1StringView("\n        ");
 
     if (incidence->type() == KCalendarCore::Incidence::TypeTodo) {
-        str += QLatin1String("DTDUE=");
+        str += QLatin1StringView("DTDUE=");
     } else if (incidence->type() == KCalendarCore::Incidence::TypeEvent) {
-        str += QLatin1String("DTEND=");
+        str += QLatin1StringView("DTEND=");
     }
 
-    str += (start.isValid() ? end.toString() : i18n("invalid")) + QLatin1String("; ");
+    str += (start.isValid() ? end.toString() : i18n("invalid")) + QLatin1StringView("; ");
 
     if (incidence->recurs()) {
         str += i18n("recurrent");
@@ -617,9 +617,9 @@ void CalendarJanitor::printFound(const Akonadi::Item &item, const QString &expla
             print(QStringLiteral(":\n"));
         }
     }
-    print(QLatin1String("    * ") + i18n("Found buggy incidence:"));
-    print(QLatin1String("        ") + i18n("id=%1; summary=\"%2\"", item.id(), incidence->summary()));
-    print(QLatin1String("        ") + dateString(incidence));
+    print(QLatin1StringView("    * ") + i18n("Found buggy incidence:"));
+    print(QLatin1StringView("        ") + i18n("id=%1; summary=\"%2\"", item.id(), incidence->summary()));
+    print(QLatin1StringView("        ") + dateString(incidence));
 }
 
 void CalendarJanitor::beginTest(const QString &message)
