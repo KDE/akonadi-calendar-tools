@@ -582,7 +582,7 @@ static QString dateString(const KCalendarCore::Incidence::Ptr &incidence)
 {
     QDateTime start = incidence->dtStart();
     QDateTime end = incidence->dateTime(KCalendarCore::Incidence::RoleEnd);
-    QString str = QLatin1StringView("DTSTART=") + (start.isValid() ? start.toString() : i18n("invalid")) + QLatin1String("; ");
+    QString str = QLatin1StringView("DTSTART=") + (start.isValid() ? start.toString() : i18n("invalid")) + QLatin1StringView("; ");
 
     if (incidence->type() == KCalendarCore::Incidence::TypeJournal) {
         return str;

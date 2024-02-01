@@ -687,7 +687,7 @@ int main(int argc, char *argv[])
      * and product ID for incidence PRODID property
      */
     QString prodId = QStringLiteral("-//K Desktop Environment//NONSGML %1 %2//EN");
-    CalFormat::setApplication(QLatin1StringView(progDisplay), prodId.arg(QLatin1String(progDisplay)).arg(QLatin1String(progVersion)));
+    CalFormat::setApplication(QLatin1StringView(progDisplay), prodId.arg(QLatin1StringView(progDisplay)).arg(QLatin1StringView(progVersion)));
 
     if (importFile) {
         if (konsolekalendar->importCalendar()) {

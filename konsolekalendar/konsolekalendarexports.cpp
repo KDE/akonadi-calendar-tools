@@ -175,7 +175,7 @@ bool KonsoleKalendarExports::exportAsCSV(QTextStream *ts, const Event::Ptr &even
             << pF(event->dtEnd().time().toString(Qt::ISODate));
     } else {
         *ts << pF(date.toString(Qt::ISODate)) << delim << pF(QLatin1StringView("")) << delim << pF(date.toString(Qt::ISODate)) << delim
-            << pF(QLatin1String(""));
+            << pF(QLatin1StringView(""));
     }
 
     *ts << delim << pF(event->summary().replace(QLatin1Char('\n'), QLatin1Char(' '))) << delim
