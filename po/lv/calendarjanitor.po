@@ -1,0 +1,342 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the akonadi-calendar-tools package.
+#
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi-calendar-tools\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-24 00:44+0000\n"
+"PO-Revision-Date: 2024-02-07 20:29+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Toms Trasūns"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "toms.trasuns@posteo.net"
+
+#: backuper.cpp:36
+#, kde-format
+msgid "Backup was successful. %1 incidence was saved."
+msgid_plural "Backup was successful. %1 incidences were saved."
+msgstr[0] "Dublējumkopija ir izveidota. %1 ieraksts ir saglabāts."
+msgstr[1] "Dublējumkopija ir izveidota. %1 ieraksti ir saglabāti."
+msgstr[2] "Dublējumkopija ir izveidota. %1 ierakstu ir saglabāti."
+
+#: backuper.cpp:56
+#, kde-format
+msgid "File is empty."
+msgstr "Tukša datne."
+
+#: backuper.cpp:61
+#, kde-format
+msgid "A backup is already in progress."
+msgstr "Jau tiek veidota dublējumkopija."
+
+#: backuper.cpp:64
+#, kde-format
+msgid "Backing up your calendar data..."
+msgstr "Notiek kalendāra datu dublēšana..."
+
+#: backuper.cpp:97
+#, kde-format
+msgid "No data to backup."
+msgstr "Nav datu, ko dublēt."
+
+#: backuper.cpp:108 calendarjanitor.cpp:173
+#, kde-format
+msgid "Processing collection %1 (id=%2)..."
+msgstr "Apstrādā kolekciju %1 (id=%2)..."
+
+#: backuper.cpp:138
+#, kde-format
+msgid "An error occurred"
+msgstr "Notikusi kļūda"
+
+#: calendarjanitor.cpp:37
+#, kde-format
+msgid ""
+"Bailing out. Fix your akonadi setup first. These kind of errors should not "
+"happen."
+msgstr ""
+"Iziet. Sakārtojiet „akonadi“ iestatījumus. Šādām kļūdām nevajadzētu notikt."
+
+#: calendarjanitor.cpp:85
+#, kde-format
+msgid "Error while fetching collections"
+msgstr "Kļūda, iegūstot kolekcijas"
+
+#: calendarjanitor.cpp:99
+#, kde-format
+msgid "There are no collections to process."
+msgstr "Nav apstrādājumu kolekciju."
+
+#: calendarjanitor.cpp:126
+#, kde-format
+msgid "Error while modifying incidence: %1"
+msgstr "Kļūda, rediģējot ierakstu: %1"
+
+#: calendarjanitor.cpp:131
+#, kde-format
+msgid "Fixed item %1"
+msgstr "Salabots vienums: %1"
+
+#: calendarjanitor.cpp:147
+#, kde-format
+msgid "Error while deleting incidence: %1"
+msgstr "Kļūda, dzēšot ierakstu: %1"
+
+#: calendarjanitor.cpp:151
+#, kde-format
+msgid "Deleted item %1"
+msgstr "Dzēsts vienums: %1"
+
+#: calendarjanitor.cpp:177
+#, kde-format
+msgid "Collection is read only, disabling fix mode."
+msgstr "Kolekcija ir tikai lasāma, izslēdziet fiksēšanas režīmu."
+
+#: calendarjanitor.cpp:179
+#, kde-format
+msgid "Collection is read only, skipping it."
+msgstr "Kolekcija ir tikai lasāma, to izlaiž."
+
+#: calendarjanitor.cpp:187
+#, kde-format
+msgid "Collection is empty, ignoring it."
+msgstr "Kolekcija ir tukša, to ignorē."
+
+#: calendarjanitor.cpp:255
+#, kde-format
+msgid "Checking for incidences with empty summary and description..."
+msgstr "Pārbauda ierakstus ar tukšu kopsavilkumu un aprakstu..."
+
+#: calendarjanitor.cpp:270
+#, kde-format
+msgid "Checking for incidences with empty UID..."
+msgstr "Pārbauda ierakstus ar tukšu UID..."
+
+#: calendarjanitor.cpp:289
+#, kde-format
+msgid "Checking for events with invalid DTSTART..."
+msgstr "Pārbauda notikumus ar nederīgu DTSTART..."
+
+#: calendarjanitor.cpp:326
+#, kde-format
+msgid "Checking for recurring to-dos with invalid DTSTART..."
+msgstr "Pārbauda atkārtojošos uzdevumus ar nederīgu DTSTART..."
+
+#: calendarjanitor.cpp:362
+#, kde-format
+msgid "Checking for journals with invalid DTSTART..."
+msgstr "Pārbauda žurnālus ar nederīgu DTSTART..."
+
+#: calendarjanitor.cpp:383
+#, kde-format
+msgid "Checking for orphans..."
+msgstr "Pārbauda bāreņus..."
+
+#: calendarjanitor.cpp:389
+#, kde-format
+msgid "The following incidences are children of nonexistent parents"
+msgstr "Sekojošie ieraksti ir bērnobjekti bez vecākobjektiem"
+
+#: calendarjanitor.cpp:398
+#, kde-format
+msgid "In fix mode these children will be unparented."
+msgstr "Labošanas režīmā šiem bērnobjektiem tiks pievienoti vecākobjekti."
+
+#: calendarjanitor.cpp:398
+#, kde-format
+msgid "Children were successfully unparented."
+msgstr "Bērnobjektam ir veicīgi pievienots vecākobjekts"
+
+#: calendarjanitor.cpp:403
+#, kde-format
+msgid "Checking for duplicate UIDs..."
+msgstr "Pārbauda dublējošus UID..."
+
+#: calendarjanitor.cpp:460
+#, kde-format
+msgid "Gathering statistics..."
+msgstr "Iegūst statistiku..."
+
+#: calendarjanitor.cpp:498
+#, kde-format
+msgid "Events"
+msgstr "Notikumi"
+
+#: calendarjanitor.cpp:499
+#, kde-format
+msgid "Todos"
+msgstr "Uzdevumi"
+
+#: calendarjanitor.cpp:500
+#, kde-format
+msgid "Journals"
+msgstr "Žurnāli"
+
+#: calendarjanitor.cpp:501
+#, kde-format
+msgid "Passed events and to-dos (>365 days)"
+msgstr "Pagājuši notikumi un darāmie (>365 dienas)"
+
+#: calendarjanitor.cpp:502
+#, kde-format
+msgid "Old incidences with alarms"
+msgstr "Veci ieraksti ar trauksmēm"
+
+#: calendarjanitor.cpp:503
+#, kde-format
+msgid "Inline attachments"
+msgstr "Iegulti pielikumi"
+
+#: calendarjanitor.cpp:504
+#, kde-format
+msgid "Items with empty remote id [!!]"
+msgstr "Vienumi ar tukšiem attālinātajiem ID [!!]"
+
+#: calendarjanitor.cpp:507
+#, kde-format
+msgid "Total size of inline attachments (bytes)"
+msgstr "Kopējais iegulto pielikumu izmērs (baitos)"
+
+#: calendarjanitor.cpp:509
+#, kde-format
+msgid "Total size of inline attachments (KB)"
+msgstr "Kopējais iegulto pielikumu izmērs (KB)"
+
+#: calendarjanitor.cpp:521
+#, kde-format
+msgid ""
+"Checking for RECURRING-ID incidences with nonexistent master incidence..."
+msgstr "Pārbauda RECURRING-ID ierakstus ar neeksistējošu galveno notikumu..."
+
+#: calendarjanitor.cpp:562
+#, kde-format
+msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
+msgstr "Labošanas režīmā īpašība RECURRING-ID tiks noņemta, bet UID nomainīts."
+
+#: calendarjanitor.cpp:562
+#, kde-format
+msgid "Recurrence cleared."
+msgstr "Atkārtošanās ir notīrīta."
+
+#: calendarjanitor.cpp:567
+#, kde-format
+msgid "Deleting alarms older than 365 days..."
+msgstr "Dzēš trauksmes, kas ir senākas par 365 dienām..."
+
+#: calendarjanitor.cpp:585 calendarjanitor.cpp:599
+#, kde-format
+msgid "invalid"
+msgstr "nederīgs"
+
+#: calendarjanitor.cpp:602
+#, kde-format
+msgid "recurrent"
+msgstr "atkārtojošs"
+
+#: calendarjanitor.cpp:620
+#, kde-format
+msgid "Found buggy incidence:"
+msgstr "Atrasts kļūdains ieraksts:"
+
+#: calendarjanitor.cpp:621
+#, kde-format
+msgid "id=%1; summary=\"%2\""
+msgstr "id=%1; kopsavilkums=„%2“"
+
+#: main.cpp:40
+#, kde-format
+msgid "Error while parsing %1"
+msgstr "Kļūda, parsējot „%1“"
+
+#: main.cpp:41
+#, kde-format
+msgid "Example usage: %1"
+msgstr "Lietošanas paraugs: %1"
+
+#: main.cpp:61
+#, kde-format
+msgid "CalendarJanitor"
+msgstr "Kalendāra uzkopējs"
+
+#: main.cpp:63
+#, kde-format
+msgid "Sérgio Martins"
+msgstr "Sérgio Martins"
+
+#: main.cpp:63
+#, kde-format
+msgid "Maintainer"
+msgstr "Uzturētājs"
+
+#: main.cpp:64
+#, kde-format
+msgid "A command line interface to report and fix errors in your calendar data"
+msgstr ""
+"Komandrindas saskarne, lai ziņotu par kļūdām kalendāra ziņās un tās labotu"
+
+#: main.cpp:69
+#, kde-format
+msgid "Comma-separated list of collection ids to scan"
+msgstr "Ar komatu atdalīts skenējamo ID kolekciju saraksts"
+
+#: main.cpp:70
+#, kde-format
+msgid "Fix broken incidences"
+msgstr "Salabot salauztus ierakstus"
+
+#: main.cpp:71
+#, kde-format
+msgid "Backup your calendar"
+msgstr "Izveidot kalendāra dublējumkopiju"
+
+#: main.cpp:72
+#, kde-format
+msgid "Delete alarms older than 365 days"
+msgstr "Dzēst trauksmes, kuras ir senākas par 365 dienām"
+
+#: main.cpp:104
+#, kde-format
+msgid "--fix is incompatible with --backup"
+msgstr "„--fix“ nav saderīgs ar „--backup“"
+
+#: main.cpp:109
+#, kde-format
+msgid "--strip-old-alarms is incompatible with --backup"
+msgstr "„--strip-old-alarms“ nav saderīgs ar „--backup“"
+
+#: main.cpp:114
+#, kde-format
+msgid "--strip-old-alarms is incompatible with --fix"
+msgstr "„--strip-old-alarms“ nav saderīgs ar „--fix“"
+
+#: main.cpp:125
+#, kde-format
+msgid "Running in fix mode."
+msgstr "Darbojas labošanas režīmā."
+
+#: main.cpp:129
+#, kde-format
+msgid "Please specify a output file."
+msgstr "Precizējiet izvades datni."
+
+#: main.cpp:134
+#, kde-format
+msgid "Running in scan only mode."
+msgstr "Darbojas tikai skenēšanas režīmā."
