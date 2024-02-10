@@ -7,13 +7,13 @@
 # obsoleteman <tulliana@gmail.com>, 2008-2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014, 2015.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-03 00:46+0000\n"
-"PO-Revision-Date: 2023-11-02 13:05+0300\n"
+"PO-Revision-Date: 2024-02-09 17:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.01.95\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413102205.000000\n"
 
@@ -537,17 +537,17 @@ msgstr "Olan bir olay yeniden eklenmeye çalışıldı"
 #: main.cpp:718 main.cpp:738
 #, kde-format
 msgid "Missing event UID: use --uid command line option"
-msgstr "Olay UID'i eksik: --uid komut satırı özelliğini kullanın"
+msgstr "Olay UID’i eksik: --uid komut satırı özelliğini kullanın"
 
 #: main.cpp:726
 #, kde-format
 msgid "No such event UID: change event failed"
-msgstr "Böyle bir olay UID'i yok: Olay değiştirme başarısız"
+msgstr "Böyle bir olay UID’i yok: Olay değiştirme başarısız"
 
 #: main.cpp:746
 #, kde-format
 msgid "No such event UID: delete event failed"
-msgstr "Böyle bir olay UID'i yok: Olay silme başarısız"
+msgstr "Böyle bir olay UID’i yok: Olay silme başarısız"
 
 #: main.cpp:757
 #, kde-format
