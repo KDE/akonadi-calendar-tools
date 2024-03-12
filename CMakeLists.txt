@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 set(PIM_VERSION "6.0.40")
 project(akonadi-calendar-tools VERSION ${PIM_VERSION})
 
-set(KF_MIN_VERSION "5.248.0")
+set(KF_MIN_VERSION "6.0.0")
 set(QT_REQUIRED_VERSION "6.6.0")
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
