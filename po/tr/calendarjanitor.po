@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-24 00:44+0000\n"
-"PO-Revision-Date: 2024-02-09 17:45+0300\n"
+"PO-Revision-Date: 2024-03-13 19:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -48,7 +48,7 @@ msgstr "Bir yedekleme işlemi halihazırda sürüyor."
 #: backuper.cpp:64
 #, kde-format
 msgid "Backing up your calendar data..."
-msgstr "Takvim veriniz yedekleniyor..."
+msgstr "Takvim veriniz yedekleniyor…"
 
 #: backuper.cpp:97
 #, kde-format
@@ -58,7 +58,7 @@ msgstr "Yedeklenecek veri yok."
 #: backuper.cpp:108 calendarjanitor.cpp:173
 #, kde-format
 msgid "Processing collection %1 (id=%2)..."
-msgstr "%1 koleksiyonu işleniyor (id=%2)..."
+msgstr "%1 koleksiyonu işleniyor (id=%2)…"
 
 #: backuper.cpp:138
 #, kde-format
@@ -122,32 +122,32 @@ msgstr "Koleksiyon boş, yok sayılıyor."
 #: calendarjanitor.cpp:255
 #, kde-format
 msgid "Checking for incidences with empty summary and description..."
-msgstr "Özet ve tanımlama alanı boş olaylar denetleniyor..."
+msgstr "Özet ve tanımlama alanı boş olaylar denetleniyor…"
 
 #: calendarjanitor.cpp:270
 #, kde-format
 msgid "Checking for incidences with empty UID..."
-msgstr "UID alanı boş olaylar denetleniyor..."
+msgstr "UID alanı boş olaylar denetleniyor…"
 
 #: calendarjanitor.cpp:289
 #, kde-format
 msgid "Checking for events with invalid DTSTART..."
-msgstr "Geçersiz DTSTART’a sahip olaylar denetleniyor..."
+msgstr "Geçersiz DTSTART’a sahip olaylar denetleniyor…"
 
 #: calendarjanitor.cpp:326
 #, kde-format
 msgid "Checking for recurring to-dos with invalid DTSTART..."
-msgstr "Geçersiz DTSTART’a sahip yinelenen yapılacaklar denetleniyor..."
+msgstr "Geçersiz DTSTART’a sahip yinelenen yapılacaklar denetleniyor…"
 
 #: calendarjanitor.cpp:362
 #, kde-format
 msgid "Checking for journals with invalid DTSTART..."
-msgstr "Geçersiz DTSTART’a sahip günceler denetleniyor..."
+msgstr "Geçersiz DTSTART’a sahip günceler denetleniyor…"
 
 #: calendarjanitor.cpp:383
 #, kde-format
 msgid "Checking for orphans..."
-msgstr "Sahipsizler denetleniyor..."
+msgstr "Sahipsizler denetleniyor…"
 
 #: calendarjanitor.cpp:389
 #, kde-format
@@ -167,12 +167,12 @@ msgstr "Alt ögeler başarılı bir şekilde ayrıldı."
 #: calendarjanitor.cpp:403
 #, kde-format
 msgid "Checking for duplicate UIDs..."
-msgstr "Yinelenen UID’ler denetleniyor..."
+msgstr "Yinelenen UID’ler denetleniyor…"
 
 #: calendarjanitor.cpp:460
 #, kde-format
 msgid "Gathering statistics..."
-msgstr "İstatistikler getiriliyor..."
+msgstr "İstatistikler getiriliyor…"
 
 #: calendarjanitor.cpp:498
 #, kde-format
@@ -223,7 +223,7 @@ msgstr "Satır içi eklerin toplam boyutu (KB cinsinden)"
 #, kde-format
 msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
-msgstr "Üst olayı olmayan RECURRING-ID olayları denetleniyor..."
+msgstr "Üst olayı olmayan RECURRING-ID olayları denetleniyor…"
 
 #: calendarjanitor.cpp:562
 #, kde-format
@@ -239,7 +239,7 @@ msgstr "Yineleme temizlendi."
 #: calendarjanitor.cpp:567
 #, kde-format
 msgid "Deleting alarms older than 365 days..."
-msgstr "365 günden eski alarmlar siliniyor..."
+msgstr "365 günden eski alarmlar siliniyor…"
 
 #: calendarjanitor.cpp:585 calendarjanitor.cpp:599
 #, kde-format
@@ -259,7 +259,7 @@ msgstr "Hatalı olay bulundu:"
 #: calendarjanitor.cpp:621
 #, kde-format
 msgid "id=%1; summary=\"%2\""
-msgstr "kimlik=%1; özet=\"%2\""
+msgstr "kimlik=%1; özet=“%2”"
 
 #: main.cpp:40
 #, kde-format
