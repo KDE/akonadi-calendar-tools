@@ -1,0 +1,1421 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+
+  <!ENTITY konsolekalendar "<application
+>KonsoleKalendar</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE">
+]>
+<!-- The language must NOT be changed here. -->
+
+<book id="konsolekalendar" lang="&language;">
+
+<bookinfo id="konsolekalendarinfo">
+
+<title
+>&konsolekalendar; Priročnik</title>
+
+<authorgroup>
+<author
+><firstname
+>Tuukka</firstname
+> <surname
+>Pasanen</surname
+> <affiliation
+><address
+><email
+>illuusio@mailcity.com</email
+></address
+></affiliation>
+</author>
+
+<author
+><firstname
+>Allen</firstname
+> <surname
+>Winter</surname
+> <affiliation
+><address
+><email
+>winterz@kde.org</email
+></address
+></affiliation>
+</author>
+
+<othercredit role="reviewer"
+><firstname
+>Malcolm</firstname
+> <surname
+>Hunter</surname
+> <affiliation
+><address
+><email
+>malcolm.hunter@gmx.co.uk</email
+></address
+></affiliation>
+<contrib
+>Recenzent</contrib>
+</othercredit>
+<othercredit role="translator"
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2002</year
+><year
+>2004</year
+><holder
+>Tuukka Pasanen</holder>
+</copyright>
+
+<copyright>
+<year
+>2003</year
+><year
+>2007</year
+><holder
+>Allen Winter</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Don't change format of date and version of the documentation -->
+
+<date
+>23.11.2016</date>
+<releaseinfo
+>5.1.3 (Aplikacije 16.12)</releaseinfo>
+
+<abstract>
+<para
+>&konsolekalendar; je vmesnik ukazne vrstice za &kde; koledarje.</para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>&package;</keyword>
+<keyword
+>&kappname;</keyword>
+<keyword
+>KOrganizer</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Uvod</title>
+
+<para
+>&konsolekalendar; je vmesnik ukazne vrstice za koledarje. Omogoča pregled, vstavljanje, odstranjevanje ali spreminjanje koledarskih dogodkov prek ukazne vrstice ali skriptnega jezika. Poleg tega lahko s &konsolekalendar; ustvarite nov koledar, izvozite koledar v različne druge formate in uvozite drug koledar.</para>
+
+<para
+>V osnovnem načinu &konsolekalendar; prikaže seznam dogodkov v privzetem koledarju za trenutni dan (od 7:00 do 17:00).</para>
+
+<para
+>Glavne značilnosti &konsolekalendar;: <itemizedlist>
+<listitem
+><para
+>Ogled koledarskih vnosov od začetnega datuma/časa do končnega datuma/časa</para
+></listitem>
+<listitem
+><para
+>Vstavi (dodaj) koledarski vnos</para
+></listitem>
+<listitem
+><para
+>Odstrani (izbriši) vnos v koledarju</para
+></listitem>
+<listitem
+><para
+>Spremeni (zamenjaj) koledarski vnos</para
+></listitem>
+<listitem
+><para
+>Ustvari novega koledarja</para
+></listitem>
+<listitem
+><para
+>Izvozi koledarski vnos v druge oblike datotek</para
+></listitem>
+<listitem
+><para
+>Uvoz obstoječega koledarja</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>&konsolekalendar; <emphasis
+>ni</emphasis
+> še en grafični uporabniški vmesnik za koledar &kde; (tj. &korganizer;). &konsolekalendar; je namenjen izključno za uporabo, kjer grafični uporabniški vmesnik ni praktičen ali mogoč.</para>
+
+<para
+>&konsolekalendar; <emphasis
+>ne</emphasis
+> zagotavlja celovitega jezika za poizvedovanje po uporabnikovem koledarju: niti ni namen avtorjev, da bi kdaj napisali takšno možnost. Za dostop do koledarskih dogodkov v zaporednem območju datumov/časovnih žigov so na voljo primitivne možnosti ukazne vrstice. </para>
+
+</chapter>
+
+<chapter id="features">
+<title
+>Značilnosti</title>
+<para
+>V tem poglavju boste spoznali glavne funkcije programa &konsolekalendar; in kako jih upravljati s parametri ukazne vrstice (ne pozabite, da &konsolekalendar; ni grafični uporabniški vmesnik; je samo program za ukazno vrstico).</para>
+
+<para
+>Spoznali boste vstavljanje, brisanje in spreminjanje koledarskih dogodkov ter izvoz dogodkov v druge oblike datotek. V tem poglavju sta obravnavana tudi ustvarjanje in uvoz koledarjev. </para>
+
+<sect1 id="viewing">
+<title
+>Pregled dogodkov</title>
+
+<para
+>V privzetem načinu ali z uporabo možnosti <parameter
+>--view</parameter
+> bo &konsolekalendar; prikazal vse dogodke v območju določenega datuma/časa.</para>
+
+<para>
+<informalexample
+><para
+>Če si želite ogledati vse današnje dogodke (od 7:00 do 17:00), preprosto zaženite:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>V naslednjem primeru so prikazani vsi dogodki v tednu od 18. do 22. avgusta:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--view</option
+> <option
+>--date <replaceable
+>2016-08-18</replaceable
+> </option
+> <option
+>--end-date <replaceable
+>2016-08-22</replaceable
+></option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Prikaži naslednje dogodke v koledarju od trenutnega časa naprej:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Če si želite ogledati vse dogodke v naslednjih 5 dneh, zaženite:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--show-next</option
+> <replaceable
+>5</replaceable>
+
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="inserting">
+<title
+>Vstavljanje dogodkov</title>
+
+<para
+>&konsolekalendar; lahko vstavi dogodke v koledar ali koledarski vir z argumentom ukazne vrstice <parameter
+>--add</parameter
+>. Uspešno vstavljeni dogodki bodo takoj prikazani v &kde; koledarskih aplikacijah (kot je &korganizer;).</para>
+
+<para
+>Z uporabo dobite seznam vseh koledarjev in njihovih identifikatorjev: </para>
+
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--list-calendars</option
+></userinput
+></screen>
+
+<para>
+<informalexample
+><para
+>V naslednjem primeru bo dogodek, ki se začne 01.12.2016 ob 10:00 in konča ob 12:00 s povzetkom "Obisk zdravnika", vstavljen v uporabnikov koledarski vir z id 8:</para>
+
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-03</replaceable
+></option
+> <option
+>--time <replaceable
+>10:00</replaceable
+></option
+> \
+<option
+>--end-time <replaceable
+>12:00</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Obisk zdravnika"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>V tem primeru je rojstni dan dodan v uporabnikov koledarski vir z id 8:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-06</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Moj rojstni dan"</replaceable
+></option
+> \
+<option
+>--description <replaceable
+>"Čas za zabavo"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>Tukaj je enotedenski dopust vstavljen v koledar z id 8:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar <replaceable
+>12</replaceable
+></option
+> <option
+>--date <replaceable
+>2017-08-01</replaceable
+></option
+> \
+<option
+>--end-date <replaceable
+>2017-08-07</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Počitnice"</replaceable
+></option
+> <option
+>--description <replaceable
+>"Nihče me nikoli ne bo našel!"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="deleting">
+<title
+>Odstranjevanje vnosov</title>
+
+<para
+>&konsolekalendar; podpira odstranjevanje vnosov v datoteki ali viru koledarja z uporabo argumenta <parameter
+>--delete</parameter
+> ukazne vrstice. Vnosi koledarja, ki jih je treba odstraniti, so točno določeni s svojim unikatnim identifikatorjem niza (<acronym
+>UID</acronym
+>) z uporabo možnosti <parameter
+>--uid</parameter
+>. <acronym
+>UID</acronym
+> se poišče tako, da se najprej pogleda dogodek z uporabo možnosti <parameter
+>--view</parameter
+>, <parameter
+>--next</parameter
+> ali <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>Uspešno izbrisani dogodki bodo takoj odstranjeni iz aplikacij &kde; koledarja (na primer &korganizer;).</para>
+
+<warning
+><para
+>Ko nekaj izbrišete iz koledarja, tega <emphasis
+>ne morete </emphasis
+>povrniti! Z drugimi besedami, ko izbrišete vnos, izbrisa ne morete razveljaviti. Za vedno je izgine.</para
+></warning>
+
+<para>
+<informalexample
+><para
+>Tukaj izbrišemo koledarski vnos z <acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--delete</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="changing">
+<title
+>Spreminjanje vnosov</title>
+
+<para
+>&konsolekalendar; podpira spreminjanje obstoječih vnosov v datoteki ali viru koledarja z uporabo argumenta ukazne vrstice <parameter
+>--change</parameter
+>. Vnosi koledarja, ki jih je treba spremeniti, so točno določeni s svojim unikatnim identifikatorjem niza<acronym
+>UID</acronym
+>) z uporabo možnosti <parameter
+>--uid</parameter
+>. <acronym
+>UID</acronym
+> se poiščejo tako, da se najprej pregleda dogodek z uporabo možnosti <parameter
+>--view</parameter
+>, <parameter
+>--next</parameter
+> ali <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>Spreminjanje poteka enako kot vstavljanje: spremenite lahko datum in čas začetka dogodka, datum in čas konca, povzetek, lokacijo in opis. Uspešno spremenjeni dogodki se takoj prikažejo spremenjeni v &kde; aplikacijah koledarja (&korganizer;).</para>
+
+<para
+><emphasis
+>Primer:</emphasis
+> Tukaj spremenimo povzetek in opis koledarskega vnosa z <acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<informalexample>
+<para
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--change</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Preglejte mi glavo"</replaceable
+></option
+> <option
+>--description <replaceable
+>"ne hodi več k temu zdravniku!"</replaceable
+></option
+> </userinput
+> </para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="creating">
+<title
+>Ustvarjanje nove datoteke koledarja</title>
+
+<para
+>&konsolekalendar; lahko uporabite za ustvarjanje novih koledarjev iz obstoječih datotek. Koledar lahko ustvarite z možnostjo <option
+>--create</option
+> z imenom datoteke kot argumentom. Datoteka mora biti veljavna datoteka <acronym
+>iCal</acronym
+> ali <acronym
+>vCal</acronym
+>.</para>
+<para
+>Opomba: Da preverite, ali je vir mogoče ustvariti Ne morete uporabiti možnosti -<option
+>--dry-run</option
+>.</para>
+
+<para
+>Opomba: &konsolekalendar; zahteva, da datoteka deluje, zato datoteke nikoli ne izbrišite ročno. </para>
+
+<para
+>Tehnična opomba: &konsolekalendar; s tem ukazom ustvari nov vir <acronym
+>Akonadi</acronym
+>, ki kaže na to datoteko. Ne preprečuje ustvarjanja več virov, ki kažejo na isto datoteko. </para>
+
+<para>
+<informalexample
+><para
+>Ustvarite nov koledar iz obstoječe datoteke z imenom <filename
+><replaceable
+>počitnice.ics</replaceable
+></filename
+>:</para>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>Konsolekalendar</command
+> -<option
+>--create</option
+> <option
+><replaceable
+>počitnice.ics</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para
+>Vir bo poimenovan <quote
+>počitnice</quote
+> z uporabo -<option
+>--list-calendars</option
+></para>
+
+<para
+>Vira <acronym
+>Akonadi</acronym
+> ni mogoče izbrisati s &konsolekalendar;, uporabiti morate &korganizer; ali <application
+>akonadiconsole</application
+>. </para>
+
+</sect1>
+
+<sect1 id="exporting">
+<title
+>Izvoz v druge formate</title>
+
+<para
+>&konsolekalendar; lahko izvozi koledar v druge dobro znane formate. Izvoz je posebna oblika gledanja. Dogodki so privzeto prikazani v <quote
+>obliki &konsolekalendar; besedilo</quote
+>. Če želite spremeniti obliko ogleda, uporabite argument ukazne vrstice <parameter
+>--export-type</parameter
+>.</para>
+
+<para
+>Če si želite ogledati seznam vseh podprtih oblik izvoza, uporabite možnost <parameter
+>--export-list</parameter
+>, kot v:</para>
+
+<para>
+<informalexample>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--export-list</option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="formats">
+<title
+>Izvozne oblike</title>
+
+<para
+>Nekatere, vendar ne nujno vse, podprte oblike zapisa so opisane v tem razdelku.</para>
+
+<sect2 id="native-format">
+<title
+>&konsolekalendar; Oblika besedila</title>
+
+<para
+>&konsolekalendar; Oblika besedila je izvorna oblika &konsolekalendar; in je zasnovana tako, da je udobna za branje in razčlenjena z nadaljnjimi skripti.</para>
+
+<para
+>Oblika besedila &konsolekalendar; je: <informalexample
+> <screen
+>Datum:\t&lt;Incidenčni datum&gt;(dddd yyyy-MM-dd)
+[\t&lt;Incidenčni začetni čas&gt;(hh:mm) - &lt;Incidenčni končni čas&gt;(hh:mm)]
+Povzetek:
+\t&lt;Incidenčni povzetek | "(povzetek ni na voljo)"&gt;
+Lokacija:
+\t&lt;Incidenčna lokacija | "(lokacija ni na voljo)"&gt;
+Opis:
+\t&lt;Incidenčni opis | "(opis ni na voljo)"&gt;
+UID:
+\t&lt;incidenčni UID&gt;
+</screen>
+</informalexample>
+</para>
+
+<para
+>Izhod <userinput
+> <command
+>konsolekalendar</command
+> --next <option
+>--export-type</option
+> <option
+></option
+> <option
+>Besedilo</option
+></userinput
+>: <informalexample
+> <screen
+>Datum:   Torek 2016-11-29
+        08:00 - 09:00
+Povzetek:
+        Sestanek osebja
+Lokacija:
+        Konferenčna soba
+Opis:
+        Sestani se s celotnim osebjem, da se pogovorimo o projektu.
+UID:
+        &konsolekalendar;-1924621834.134
+--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="short-format">
+<title
+>&konsolekalendar; Oblika kratkega besedila</title>
+
+<para
+>Oblika kratkega besedila zagotavlja bolj kompaktno, manj besedno različico izvorne oblike &konsolekalendar;.</para>
+
+<para
+>&konsolekalendar; oblika kratkega besedila je: <informalexample
+> <screen
+>[--------------------------------------------------]
+{&lt;Incidenčni datum&gt;(dddd yyyy-MM-dd)]
+[&lt;Incidenčni začetni čas&gt;(hh:mm) - &lt;Incidenčni končni čas&gt;(hh:mm) | "\t"]
+\t&lt;Incidenčni povzetek | \t&gt;[, &lt;Incidenčna lokacija&gt;]
+\t\t&lt;Incidenčni opis | "\t"&gt;
+</screen>
+</informalexample>
+</para>
+
+<para
+>Izpis <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Short</option
+></userinput
+>: <informalexample
+> <screen
+>--------------------------------------------------
+Torek 2016-11-29
+08:00 - 09:00   Sestanek z osebjem, Konferenčna soba
+                Sestani se s celotnim osebjem, da se pogovorimo o projektu.
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="csv-format">
+<title
+>Oblika zapisa vrednosti, ločenih z vejico (<acronym
+>CSV)</acronym
+></title>
+
+<para
+>Oblika: Vrednosti, ločene z vejico, prikaže vrednosti dogodka v enakem vrstnem redu kot &konsolekalendar; Besedilna oblika. Edina razlika je, da so vse informacije v isti vrstici, pri čemer je vsako polje ločeno z vejico. Nastale izvožene datoteke lahko uvozite neposredno v programe za preglednice, kot so &calligrasheets;, <application
+>OpenOffice.org Calc</application
+> in <application
+>&Microsoft; Excel</application
+>. Tudi format <acronym
+>CSV</acronym
+> je enostavno razčleniti z nadaljnjimi skripti.</para>
+
+<para
+>Oblika vrednosti, ločenih z vejico (<acronym
+>CSV</acronym
+>), je: <informalexample
+> <screen
+>"Dan v tednu, dan v mesecu, leto", "HH:MM", "Dan v tednu, dan v mesecu, leto", "HH:MM", "Povzetek", "Lokacija", "Opis", "UID"
+</screen>
+</informalexample>
+</para>
+
+<para
+>Izpis <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>CSV</option
+></userinput
+>: <informalexample
+> <screen
+>"Torek, 29. november 2016", "08:00", "Torek, November 29, 2016", "09:00", "Sestanek osebja", "Konferenčna soba", "Sestanek v veliki konferenčni \
+soba s celotnim osebjem.","&konsolekalendar;-1924621834.134"
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+</sect1>
+
+<sect1 id="importing">
+<title
+>Uvažanje koledarjev</title>
+
+<para
+>&konsolekalendar; v koledar lahko uvozi koledarsko datoteko iCal ali vCal. Vstavljeni bodo vsi dogodki iz koledarja, iz katerega se uvažajo, pri čemer bodo preskočeni enaki dogodki, ki so že del koledarja.</para>
+
+<para>
+<informalexample
+><para
+>Če želite uvoziti <replaceable
+>počitnice.ics</replaceable
+> v koledarju.ics v koledar z zagonom id-ja <replaceable
+> 8</replaceable
+>:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--import <replaceable
+>počitnice.ics</replaceable
+></option
+> <option
+>--calendar <replaceable
+>8</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="features-commandline-options">
+<title
+>Argumenti ukazne vrstice</title>
+
+<para
+>&konsolekalendar; podpira naslednje možnosti:</para>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row>
+  <entry
+>Možnost</entry>
+  <entry
+>Opis</entry>
+</row>
+</thead>
+<tbody>
+<row>
+  <entry
+><emphasis
+>Splošne možnosti:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--help, --help-all</option
+></entry>
+  <entry
+>Prikaže pomoč o možnostih programa.</entry>
+</row>
+<row>
+  <entry
+><option
+>--author</option
+></entry>
+  <entry
+>Prikaže informacije o avtorju programa.</entry>
+</row>
+<row>
+  <entry
+><option
+>-v, --version</option
+></entry>
+  <entry
+>Prikaže informacije o različici programa.</entry>
+</row>
+<row>
+  <entry
+><option
+>--license</option
+></entry>
+  <entry
+>Prikaže informacije o licenci programa.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Možnosti:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--verbose</option
+></entry>
+  <entry
+>Natisni koristna sporočila v času izvajanja.</entry>
+</row>
+<row>
+  <entry
+><option
+>--dry-run</option
+></entry>
+  <entry
+>Natisni, kar bi bilo treba storiti, vendar ne izvedit. Ne spreminjajte nobenih datotek; ne vstavljajte, odstranjujte, spreminjajte obstoječih datotek in ne ustvarjajte novih datotek.</entry>
+</row>
+<row>
+  <entry
+><option
+>--allow-gui</option
+></entry>
+  <entry
+>Dovolite vire, ki morda potrebujejo interaktivni uporabniški vmesnik. Pri običajnem delovanju se uporabljajo samo viri, ki nikoli ne bodo potrebovali uporabniškega vmesnika (na primer datotečni koledarji).</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Vrste pojavov (te možnosti je mogoče kombinirati):</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--event</option
+></entry>
+  <entry
+>Deluj samo za dogodke (privzeto).</entry>
+</row>
+<row>
+  <entry
+><option
+>--todo</option
+></entry>
+  <entry
+>Delujte samo za Todo-je. (Ni izvedeno)</entry>
+</row>
+<row>
+  <entry
+><option
+>--journal</option
+></entry>
+  <entry
+>Deluj samo za dnevnike. (Ni izvedeno)</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Glavni načini delovanja:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--view</option
+></entry>
+  <entry
+>Natisni koledarske dogodke v izbranem formatu za izvoz.</entry>
+</row>
+<row>
+  <entry
+><option
+>--add</option
+></entry>
+  <entry
+>V koledar vstavite dogodek.</entry>
+</row>
+<row>
+  <entry
+><option
+>--change</option
+></entry>
+  <entry
+>Spremeni obstoječ dogodek v koledarju.</entry>
+</row>
+<row>
+  <entry
+><option
+>--delete</option
+></entry>
+  <entry
+>Odstrani obstoječi koledarski dogodek.</entry>
+</row>
+<row>
+  <entry
+><option
+>--create</option
+> <replaceable
+>&nbsp;filename</replaceable
+> </entry>
+  <entry
+>Ustvarite nov koledar iz obstoječe datoteke.</entry>
+</row>
+<row>
+  <entry
+><option
+>--import</option
+> <replaceable
+>&nbsp;import-file</replaceable
+></entry>
+  <entry
+>Uvozi ta koledar v glavni koledar.</entry>
+</row>
+<row>
+  <entry
+><option
+>--list-calendars</option
+></entry>
+  <entry
+>Seznam razpoložljivih koledarjev.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Modifikatorji delovanja:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--all</option
+></entry>
+  <entry
+>Pogled vseh vnosov v koledarju.</entry>
+</row>
+<row>
+  <entry
+><option
+>--next</option
+></entry>
+  <entry
+>Pogled naslednje dejavnosti v koledarju.</entry>
+</row>
+<row>
+  <entry
+><option
+>--show-next</option
+> <replaceable
+>&nbsp;days</replaceable
+></entry>
+  <entry
+>Od določenega datuma naprej prikaži dejavnosti za naslednjih # dni.</entry>
+</row>
+<row>
+  <entry
+><option
+>--uid</option
+> <replaceable
+>&nbsp;UID</replaceable
+></entry>
+  <entry
+>Pogled, brisanje ali spreminjanje dogodka s tem enoličnim nizom identifikatorja.</entry>
+</row>
+<row>
+  <entry
+><option
+>--date</option
+> <replaceable
+>&nbsp;date</replaceable
+></entry>
+  <entry
+>Začni na ta dan [YYYY-MM-DD]. Privzeti datum je Danes</entry>
+</row>
+<row>
+  <entry
+><option
+>--time</option
+> <replaceable
+>&nbsp;time</replaceable
+></entry>
+  <entry
+>Začetek ob tej uri [HH:MM]. Privzeta ura za ogled je 07:00. <para
+>Če želite dodati ali spremeniti plavajoči dogodek, uporabite možnosti <option
+>--time float</option
+> ali <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--end-date</option
+> <replaceable
+>&nbsp;end-date</replaceable
+></entry>
+  <entry
+>Konec na ta dan [YYYY-MM-DD]. Privzeto je nastavljeno z <option
+>--date</option
+>.</entry>
+</row>
+<row>
+  <entry
+><option
+>--end-time</option
+> <replaceable
+>&nbsp;end-time</replaceable
+></entry>
+  <entry
+>Konec ob tej uri [HH:MM]. Privzeta končna ura za ogled je 17:00. <para
+>Če želite dodati ali spremeniti plavajoči dogodek, uporabite možnosti <option
+>--time float</option
+> ali <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-start</option
+> <replaceable
+>&nbsp;epoch-time</replaceable
+></entry>
+  <entry
+>Začetek ob tem času [sekunde od epohe].</entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-end</option
+> <replaceable
+>&nbsp;epoch-time</replaceable
+></entry>
+  <entry
+>Končaj ob tem času [sekunde od epohe].</entry>
+</row>
+<row>
+  <entry
+><option
+>--summary</option
+> <replaceable
+>&nbsp;summary</replaceable
+></entry>
+  <entry
+>Dodaj povzetek dogodku (deluje z dodajanjem in spreminjanjem).</entry>
+</row>
+<row>
+  <entry
+><option
+>--description</option
+> <replaceable
+>&nbsp;description</replaceable
+></entry>
+  <entry
+>Dodaj opis dogodku (deluje z dodajanjem in spreminjanjem).</entry>
+</row>
+<row>
+  <entry
+><option
+>--location</option
+> <replaceable
+>&nbsp;location</replaceable
+></entry>
+  <entry
+>Dodaj lokacijo dogodku (deluje z dodajanjem in spreminjanjem).</entry>
+</row>
+<row>
+  <entry
+><option
+>--calendar</option
+> <replaceable
+>&nbsp;id</replaceable
+></entry>
+  <entry
+>Določite koledar, ki ga želite uporabiti. <para
+>Če ni navedeno, se uporabi privzeti vir &korganizer;.</para
+></entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Možnosti izvoza:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--export-type</option
+> <replaceable
+>&nbsp;export-type</replaceable
+></entry>
+  <entry
+>Vrsta izvozne datoteke. Privzeta vrsta izvozne datoteke je Besedilo</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-file</option
+> <replaceable
+>&nbsp;export-file</replaceable
+></entry>
+  <entry
+>Izvozi v datoteko. Privzeto je izhod zapisan na standardni izhod.</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-list</option
+></entry>
+  <entry
+>Natisnite seznam podprtih vrst izvoza in zaključite.</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Vprašanja in odgovori</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Katere konfiguracijske datoteke uporablja &konsolekalendar;?</para>
+</question>
+<answer>
+<para
+>Nobene.</para>
+</answer>
+</qandaentry>
+
+
+<qandaentry>
+<question>
+<para
+>Kakšna so imena aplikacij za &konsolekalendar;?</para>
+</question>
+<answer>
+<para
+>Ime aplikacije &konsolekalendar; je <application
+>konsolekalendar</application
+>.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Kakšen je format specifikacije datuma?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; zavrne datume, ki so navedeni v ukazni vrstici, razen če so navedeni v skladu s standardi ISO 8601, in sicer: YYYY-MM-DD. Pri čemer je YYYY štirimestno leto (na primer 2003), MM dvomestni mesec (01,02,...12) in DD dvomestni dan (01,02,...31).</para>
+<para
+>&konsolekalendar; vedno izvozi datume v skladu z obliko ISO 8601.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Kakšen je format časovne specifikacije?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; zavrne čase, ki so navedeni v ukazni vrstici, razen če so navedeni v skladu s standardi ISO 8601, in sicer: HH:MM:SS. Pri čemer HH predstavlja dvomestno uro (01,02,...,24), MM predstavlja dvomestno minuto (01,02,...,60) in SS predstavlja dvomestno sekundo (01,02,...,60).</para>
+<para
+>&konsolekalendar; vedno izvaža čase v skladu z obliko ISO 8601.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Ali bo &konsolekalendar; vstavil nov dogodek, ki je enak dogodku, ki že obstaja v koledarju?</para>
+</question>
+<answer>
+<para
+>Ne. Glej naslednje vprašanje.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Kako &konsolekalendar; ugotovi, ali je dogodek enak dogodku, ki že obstaja v koledarju?</para>
+</question>
+<answer>
+<para
+>&konsolekalendar; preveri navedeni začetni datum in čas, končni datum in čas ter povzetek glede na vse dogodke v koledarju. Dogodek se ujema, če se vse tri vrednosti ujemajo z obstoječim dogodkom. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Ali je mogoče dogodek, ki ni spremenljiv, spremeniti v spremenljiv dogodek?</para>
+</question>
+<answer>
+<para
+>Da. Uporabite <option
+>--time float</option
+> možnost z <option
+>--change</option
+>. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Zakaj so <acronym
+>UID-i</acronym
+> dogodkov natisnjeni v večini izvoznih formatov?</para>
+</question>
+<answer>
+<para
+>Ker morate za brisanje ali spreminjanje dogodkov določiti <acronym
+>UID</acronym
+>. Če ne želite prikazati <acronym
+>UID</acronym
+> dogodkov, uporabite vrsto izvoza <emphasis
+>short</emphasis
+> (<option
+>--export-type short</option
+>). </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>Kako lahko svoje vprašanje dodam v ta <acronym
+>FAQ</acronym
+>?</para>
+</question>
+<answer>
+<para
+>Vprašanja pošljite na <email
+>winter@kde.org</email
+>.</para>
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+
+<chapter id="credits">
+
+<title
+>Zasluge in licenca</title>
+
+<para
+>&konsolekalendar; Program copyright 2002-2007:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Avtorske pravice za dokumentacijo iz leta 2003:</para>
+<itemizedlist>
+<listitem
+><para
+>Allen Winter <email
+>winter@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Tuukka Pasanen <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>Prevod: Matjaž Jeran<email
+>matjaz.jeran@amis.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
