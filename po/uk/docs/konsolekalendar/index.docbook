@@ -807,40 +807,6 @@ UID:
 
 </sect2>
 
-<sect2 id="html-format">
-<title
->Формат &HTML;</title>
-
-<para
->За формату експорту &HTML; буде створено коректний файл &HTML;, придатний для опублікування у <acronym
->WWW</acronym
->. Цей формат експорту не придатний для наступної обробки скриптами, але дуже зручний для оприлюднення календарів для публічного перегляду.</para>
-<!--FIXME
-exports only the template without any incidence data
-<para
-><emphasis
->TODO:</emphasis
-> Insert screenshot here</para>
--->
-</sect2>
-
-<sect2 id="html-month-format">
-<title
->Формат <acronym
->HTMLmonth</acronym
-></title>
-
-<para
->За використання цього формату буде створено файл &HTML; з переліком усіх зустрічей протягом місяців, вказаних у діапазоні дат. Цей формат експорту не придатний для наступної обробки скриптами, але дуже зручний для оприлюднення календарів для публічного перегляду.</para>
-<!--FIXME
-exports only the template without any incidence data
-<para
-><emphasis
->TODO:</emphasis
-> Insert screenshot here</para>
--->
-</sect2>
-
 </sect1>
 
 <sect1 id="importing">
@@ -1441,8 +1407,7 @@ exports only the template without any incidence data
 >Переклад українською: Юрій Чорноіван <email
 >yurchor@ukr.net</email
 ></para
-> 
-&underFDL; &underGPL; </chapter>
+> &underFDL; &underGPL; </chapter>
 
 &documentation.index;
 </book>
