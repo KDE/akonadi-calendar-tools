@@ -53,7 +53,7 @@ msgstr "Una còpia de seguretat ja es troba en curs."
 #: backuper.cpp:64
 #, kde-format
 msgid "Backing up your calendar data..."
-msgstr "S'està creant la còpia de seguretat de les dades de calendari..."
+msgstr "S'està creant la còpia de seguretat de les dades de calendari…"
 
 #: backuper.cpp:97
 #, kde-format
@@ -63,7 +63,7 @@ msgstr "Sense dades sobre les quals s'ha de fer una còpia de seguretat."
 #: backuper.cpp:108 calendarjanitor.cpp:173
 #, kde-format
 msgid "Processing collection %1 (id=%2)..."
-msgstr "S'està processant la col·lecció %1 (id=%2)..."
+msgstr "S'està processant la col·lecció %1 (id=%2)…"
 
 #: backuper.cpp:138
 #, kde-format
@@ -127,35 +127,34 @@ msgstr "La col·lecció està buida, s'ignora."
 #: calendarjanitor.cpp:255
 #, kde-format
 msgid "Checking for incidences with empty summary and description..."
-msgstr ""
-"S'estan comprovant les incidències amb el resum i la descripció buits..."
+msgstr "S'estan comprovant les incidències amb el resum i la descripció buits…"
 
 #: calendarjanitor.cpp:270
 #, kde-format
 msgid "Checking for incidences with empty UID..."
-msgstr "S'estan comprovant les incidències amb l'UID buit..."
+msgstr "S'estan comprovant les incidències amb l'UID buit…"
 
 #: calendarjanitor.cpp:289
 #, kde-format
 msgid "Checking for events with invalid DTSTART..."
-msgstr "S'està comprovant per als esdeveniments amb una DTSTART no vàlida..."
+msgstr "S'està comprovant per als esdeveniments amb una DTSTART no vàlida…"
 
 #: calendarjanitor.cpp:326
 #, kde-format
 msgid "Checking for recurring to-dos with invalid DTSTART..."
 msgstr ""
 "S'està comprovant per a les tasques pendents repetitives amb una DTSTART no "
-"vàlida..."
+"vàlida…"
 
 #: calendarjanitor.cpp:362
 #, kde-format
 msgid "Checking for journals with invalid DTSTART..."
-msgstr "S'està comprovant per als diaris amb una DTSTART no vàlida..."
+msgstr "S'està comprovant per als diaris amb una DTSTART no vàlida…"
 
 #: calendarjanitor.cpp:383
 #, kde-format
 msgid "Checking for orphans..."
-msgstr "S'estan comprovant els orfes..."
+msgstr "S'estan comprovant els orfes…"
 
 #: calendarjanitor.cpp:389
 #, kde-format
@@ -175,12 +174,12 @@ msgstr "Als fills se'ls ha sostret el pare amb èxit."
 #: calendarjanitor.cpp:403
 #, kde-format
 msgid "Checking for duplicate UIDs..."
-msgstr "S'està comprovant per als UID duplicats..."
+msgstr "S'està comprovant per als UID duplicats…"
 
 #: calendarjanitor.cpp:460
 #, kde-format
 msgid "Gathering statistics..."
-msgstr "S'estan arreplegant les estadístiques..."
+msgstr "S'estan arreplegant les estadístiques…"
 
 #: calendarjanitor.cpp:498
 #, kde-format
@@ -233,7 +232,7 @@ msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
 msgstr ""
 "S'estan comprovant les incidències RECURRING-ID amb una incidència màster "
-"inexistent..."
+"inexistent…"
 
 #: calendarjanitor.cpp:562
 #, kde-format
@@ -250,7 +249,7 @@ msgstr "La recurrència s'ha netejat."
 #: calendarjanitor.cpp:567
 #, kde-format
 msgid "Deleting alarms older than 365 days..."
-msgstr "S'estan suprimint les alarmes més antigues de 365 dies..."
+msgstr "S'estan suprimint les alarmes més antigues de 365 dies…"
 
 #: calendarjanitor.cpp:585 calendarjanitor.cpp:599
 #, kde-format
@@ -322,7 +321,7 @@ msgstr "Còpia de seguretat del calendari"
 #: main.cpp:72
 #, kde-format
 msgid "Delete alarms older than 365 days"
-msgstr "Supressió de les alarmes més antigues de 365 dies"
+msgstr "Suprimiu les alarmes més antigues de 365 dies"
 
 #: main.cpp:104
 #, kde-format
