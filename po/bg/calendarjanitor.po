@@ -1,22 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar-tools package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-24 00:44+0000\n"
-"PO-Revision-Date: 2022-01-13 17:49+0100\n"
-"Last-Translator: mkkDr2010 <mkondarev@yahoo.de>\n"
+"PO-Revision-Date: 2024-05-13 22:08+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -48,7 +47,7 @@ msgstr "Създаване на резервно копие вече е в хо�
 #: backuper.cpp:64
 #, kde-format
 msgid "Backing up your calendar data..."
-msgstr "Създаване на резервно копие на вашите календарни дати..."
+msgstr "Създаване на резервно копие на вашите календарни дати…"
 
 #: backuper.cpp:97
 #, kde-format
@@ -58,7 +57,7 @@ msgstr "Няма данни за създаване на резервни коп
 #: backuper.cpp:108 calendarjanitor.cpp:173
 #, kde-format
 msgid "Processing collection %1 (id=%2)..."
-msgstr "Обработване на колекция %1 (id=%2)..."
+msgstr "Обработване на колекция %1 (id=%2)…"
 
 #: backuper.cpp:138
 #, kde-format
@@ -122,32 +121,32 @@ msgstr "Колекцията е само за четене, игнорира с�
 #: calendarjanitor.cpp:255
 #, kde-format
 msgid "Checking for incidences with empty summary and description..."
-msgstr "Проверка за събития с празно описание и обобщение..."
+msgstr "Проверка за събития с празно описание и обобщение…"
 
 #: calendarjanitor.cpp:270
 #, kde-format
 msgid "Checking for incidences with empty UID..."
-msgstr "Проверка за събития с празен UID..."
+msgstr "Проверка за събития с празен UID…"
 
 #: calendarjanitor.cpp:289
 #, kde-format
 msgid "Checking for events with invalid DTSTART..."
-msgstr "Проверка за събития с невалиден DTSTART..."
+msgstr "Проверка за събития с невалиден DTSTART…"
 
 #: calendarjanitor.cpp:326
 #, kde-format
 msgid "Checking for recurring to-dos with invalid DTSTART..."
-msgstr "Проверка за повтарящи се задачи с невалиден DTSTART..."
+msgstr "Проверка за повтарящи се задачи с невалиден DTSTART…"
 
 #: calendarjanitor.cpp:362
 #, kde-format
 msgid "Checking for journals with invalid DTSTART..."
-msgstr "Проверка за журнали с невалиден DTSTART..."
+msgstr "Проверка за журнали с невалиден DTSTART…"
 
 #: calendarjanitor.cpp:383
 #, kde-format
 msgid "Checking for orphans..."
-msgstr "Проверка за осиротели елементи..."
+msgstr "Проверка за осиротели елементи…"
 
 #: calendarjanitor.cpp:389
 #, kde-format
@@ -167,12 +166,12 @@ msgstr "Дъщерните елементи успешно са отделени
 #: calendarjanitor.cpp:403
 #, kde-format
 msgid "Checking for duplicate UIDs..."
-msgstr "Проверка за дублиращи се UIDs..."
+msgstr "Проверка за дублиращи се UIDs…"
 
 #: calendarjanitor.cpp:460
 #, kde-format
 msgid "Gathering statistics..."
-msgstr "Събиране на статистически данни..."
+msgstr "Събиране на статистически данни…"
 
 #: calendarjanitor.cpp:498
 #, kde-format
@@ -223,7 +222,7 @@ msgstr "Общ размер на междуредово прикачване (К
 #, kde-format
 msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
-msgstr "Проверка за RECURRING-ID събития с несъществуващо главно събитие..."
+msgstr "Проверка за RECURRING-ID събития с несъществуващо главно събитие…"
 
 #: calendarjanitor.cpp:562
 #, kde-format
@@ -240,7 +239,7 @@ msgstr "Повторенията са изчистени."
 #: calendarjanitor.cpp:567
 #, kde-format
 msgid "Deleting alarms older than 365 days..."
-msgstr "Изтриване на аларми по-стари от 365 дни..."
+msgstr "Изтриване на аларми по-стари от 365 дни…"
 
 #: calendarjanitor.cpp:585 calendarjanitor.cpp:599
 #, kde-format
