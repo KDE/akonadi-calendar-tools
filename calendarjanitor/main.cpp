@@ -60,7 +60,7 @@ int main(int argv, char *argc[])
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("calendarjanitor"));
     KAboutData aboutData(QStringLiteral("calendarjanitor"), i18n("CalendarJanitor"), QStringLiteral(KDEPIM_VERSION));
     aboutData.setLicense(KAboutLicense::GPL_V2, KAboutLicense::OrLaterVersions);
-    aboutData.addAuthor(i18n("Sérgio Martins"), i18n("Maintainer"), QStringLiteral("iamsergiogmail.com"));
+    aboutData.addAuthor(i18nc("@info:credit", "Sérgio Martins"), i18n("Maintainer"), QStringLiteral("iamsergiogmail.com"));
     aboutData.setShortDescription(i18n("A command line interface to report and fix errors in your calendar data"));
 
     QCoreApplication app(argv, argc);

@@ -62,9 +62,9 @@ int main(int argc, char *argv[])
                          KAboutLicense::GPL,
                          i18n("(c) 2002-2009, Tuukka Pasanen and Allen Winter"));
 
-    aboutData.addAuthor(i18n("Laurent Montel"), i18n("Bug fixing"), QStringLiteral("montel@kde.org"));
-    aboutData.addAuthor(i18n("Allen Winter"), i18n("Maintainer"), QStringLiteral("winter@kde.org"));
-    aboutData.addAuthor(i18n("Tuukka Pasanen"), i18n("Author"), QStringLiteral("illuusio@mailcity.com"));
+    aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Bug fixing"), QStringLiteral("montel@kde.org"));
+    aboutData.addAuthor(i18nc("@info:credit", "Allen Winter"), i18n("Maintainer"), QStringLiteral("winter@kde.org"));
+    aboutData.addAuthor(i18nc("@info:credit", "Tuukka Pasanen"), i18n("Author"), QStringLiteral("illuusio@mailcity.com"));
 
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
