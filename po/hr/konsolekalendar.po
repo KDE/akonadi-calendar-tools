@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2024-05-16 00:38+0000\n"
 "PO-Revision-Date: 2004-04-20 13:26+CEST\n"
 "Last-Translator: auto\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -260,6 +260,7 @@ msgstr ""
 
 #: main.cpp:65
 #, kde-format
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr ""
 
@@ -270,6 +271,7 @@ msgstr ""
 
 #: main.cpp:66
 #, kde-format
+msgctxt "@info:credit"
 msgid "Allen Winter"
 msgstr ""
 
@@ -280,6 +282,7 @@ msgstr ""
 
 #: main.cpp:67
 #, kde-format
+msgctxt "@info:credit"
 msgid "Tuukka Pasanen"
 msgstr ""
 

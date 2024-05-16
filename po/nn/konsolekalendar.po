@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2024-05-16 00:38+0000\n"
 "PO-Revision-Date: 2023-03-04 15:47+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -260,7 +260,9 @@ msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
 msgstr "© 2002–2009 Tuukka Pasanen and Allen Winter"
 
 #: main.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
@@ -270,7 +272,9 @@ msgid "Bug fixing"
 msgstr "Feilrettingar"
 
 #: main.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allen Winter"
+msgctxt "@info:credit"
 msgid "Allen Winter"
 msgstr "Allen Winter"
 
@@ -280,7 +284,9 @@ msgid "Maintainer"
 msgstr "Vedlikehaldar"
 
 #: main.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tuukka Pasanen"
+msgctxt "@info:credit"
 msgid "Tuukka Pasanen"
 msgstr "Tuukka Pasanen"
 

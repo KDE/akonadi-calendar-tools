@@ -1,6 +1,6 @@
 # Slovenian translation of konsolekalendar
 # Copyright (C) 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
-# $Id: konsolekalendar.po 1648654 2023-04-03 01:32:31Z scripty $
+# $Id: konsolekalendar.po 1680149 2024-05-16 01:10:54Z scripty $
 # $Source$
 #
 # Gregor Rakar <gregor.rakar@kiss.si>, 2002, 2003, 2004, 2005.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2024-05-16 00:38+0000\n"
 "PO-Revision-Date: 2020-02-15 08:39+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -266,7 +266,9 @@ msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
 msgstr "(c) 2002-2009, Tuukka Pasanen in Allen Winter"
 
 #: main.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
@@ -276,7 +278,9 @@ msgid "Bug fixing"
 msgstr "Odpravljanje napak"
 
 #: main.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allen Winter"
+msgctxt "@info:credit"
 msgid "Allen Winter"
 msgstr "Allen Winter"
 
@@ -286,7 +290,9 @@ msgid "Maintainer"
 msgstr "Vzdrževalec"
 
 #: main.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tuukka Pasanen"
+msgctxt "@info:credit"
 msgid "Tuukka Pasanen"
 msgstr "Tuukka Pasanen"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2024-05-16 00:38+0000\n"
 "PO-Revision-Date: 2009-06-05 04:18+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -257,6 +257,7 @@ msgstr ""
 
 #: main.cpp:65
 #, kde-format
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr ""
 
@@ -266,7 +267,9 @@ msgid "Bug fixing"
 msgstr ""
 
 #: main.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allen Winter"
+msgctxt "@info:credit"
 msgid "Allen Winter"
 msgstr "Allen Winter"
 
@@ -276,7 +279,9 @@ msgid "Maintainer"
 msgstr "Mirëmbajtës"
 
 #: main.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tuukka Pasanen"
+msgctxt "@info:credit"
 msgid "Tuukka Pasanen"
 msgstr "Tuukka Pasanen"
 

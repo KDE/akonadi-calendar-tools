@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-24 00:44+0000\n"
+"POT-Creation-Date: 2024-05-16 00:38+0000\n"
 "PO-Revision-Date: 2021-07-06 22:17+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -274,7 +274,9 @@ msgid "CalendarJanitor"
 msgstr "कैलेंडरजेनिटर"
 
 #: main.cpp:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sérgio Martins"
+msgctxt "@info:credit"
 msgid "Sérgio Martins"
 msgstr "सर्जियो मार्टिन्स"
 
