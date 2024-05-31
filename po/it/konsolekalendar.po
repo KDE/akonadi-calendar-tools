@@ -5,14 +5,14 @@
 # Nicola Ruggero <nixprog.adsl@tiscali.it>, 2004, 2005.
 # Giovanni Venturi <jumpyj@tiscali.it>, 2006.
 # Nicola Ruggero <nicola@nxnt.org>, 2006, 2008, 2009, 2010.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2016, 2018.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2016, 2018, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:38+0000\n"
-"PO-Revision-Date: 2018-12-22 01:22+0100\n"
+"PO-Revision-Date: 2024-05-21 15:53+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -261,8 +261,7 @@ msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
 msgstr "(c) 2002-2009, Tuukka Pasanen e Allen Winter"
 
 #: main.cpp:65
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -273,8 +272,7 @@ msgid "Bug fixing"
 msgstr "Correzione di errori"
 
 #: main.cpp:66
-#, fuzzy, kde-format
-#| msgid "Allen Winter"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Allen Winter"
 msgstr "Allen Winter"
@@ -285,8 +283,7 @@ msgid "Maintainer"
 msgstr "Responsabile"
 
 #: main.cpp:67
-#, fuzzy, kde-format
-#| msgid "Tuukka Pasanen"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Tuukka Pasanen"
 msgstr "Tuukka Pasanen"
