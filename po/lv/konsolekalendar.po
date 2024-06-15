@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:38+0000\n"
-"PO-Revision-Date: 2024-02-07 20:25+0200\n"
+"PO-Revision-Date: 2024-05-28 09:52+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -257,8 +257,7 @@ msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
 msgstr "(c) 2002–2009, Tuukka Pasanen un Allen Winter"
 
 #: main.cpp:65
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -269,8 +268,7 @@ msgid "Bug fixing"
 msgstr "Kļūdu labojumi"
 
 #: main.cpp:66
-#, fuzzy, kde-format
-#| msgid "Allen Winter"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Allen Winter"
 msgstr "Allen Winter"
@@ -281,8 +279,7 @@ msgid "Maintainer"
 msgstr "Uzturētājs"
 
 #: main.cpp:67
-#, fuzzy, kde-format
-#| msgid "Tuukka Pasanen"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Tuukka Pasanen"
 msgstr "Tuukka Pasanen"
