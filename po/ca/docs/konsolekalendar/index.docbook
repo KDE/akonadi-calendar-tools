@@ -130,7 +130,7 @@
 ></listitem>
 <listitem
 ><para
->Elimina (esborra) entrades en un calendari</para
+>Elimina (suprimeix) entrades en un calendari</para
 ></listitem>
 <listitem
 ><para
@@ -439,19 +439,19 @@
 >.</para>
 
 <para
->Els esdeveniments esborrats amb èxit seran eliminats immediatament de les aplicacions de calendari del &kde; (&pex;, &korganizer;).</para>
+>Els esdeveniments suprimits amb èxit seran eliminats immediatament de les aplicacions de calendari del &kde; (&pex;, &korganizer;).</para>
 
 <warning
 ><para
->Quan s'elimina quelcom del calendari <emphasis
+>Quan se suprimeix alguna cosa del calendari <emphasis
 >no es podrà</emphasis
-> desfer! En altres paraules, quan elimineu un contacte no podreu desfer l'acció! S'ha perdut per sempre.</para
+> desfer! En altres paraules, quan suprimiu un contacte no podreu desfer l'acció! S'ha perdut per sempre.</para
 ></warning>
 
 <para>
 <informalexample
 ><para
->Aquí s'elimina una entrada de calendari amb <acronym
+>Aquí se suprimeix una entrada de calendari amb <acronym
 >UID</acronym
 > <replaceable
 >&konsolekalendar;-1887551750.196</replaceable
@@ -1054,7 +1054,7 @@ a la sala gran de conferències.","&konsolekalendar;-1924621834.134"
 >&nbsp;UID</replaceable
 ></entry>
   <entry
->Veure, eliminar o canviar l'esdeveniment amb aquesta cadena IDentificadora única.</entry>
+>Veure, suprimir o canviar l'esdeveniment amb aquesta cadena IDentificadora única.</entry>
 </row>
 <row>
   <entry
