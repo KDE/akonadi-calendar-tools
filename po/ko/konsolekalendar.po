@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:38+0000\n"
-"PO-Revision-Date: 2020-04-05 13:02+0200\n"
+"PO-Revision-Date: 2024-08-19 21:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -255,8 +255,7 @@ msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
 msgstr "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
 
 #: main.cpp:65
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -267,8 +266,7 @@ msgid "Bug fixing"
 msgstr "버그 수정"
 
 #: main.cpp:66
-#, fuzzy, kde-format
-#| msgid "Allen Winter"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Allen Winter"
 msgstr "Allen Winter"
@@ -279,8 +277,7 @@ msgid "Maintainer"
 msgstr "관리자"
 
 #: main.cpp:67
-#, fuzzy, kde-format
-#| msgid "Tuukka Pasanen"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Tuukka Pasanen"
 msgstr "Tuukka Pasanen"
