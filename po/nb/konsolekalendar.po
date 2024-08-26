@@ -275,7 +275,6 @@ msgstr ""
 
 #: main.cpp:66
 #, fuzzy, kde-format
-#| msgid "Allen Winter"
 msgctxt "@info:credit"
 msgid "Allen Winter"
 msgstr "Allen Winter"
@@ -287,7 +286,6 @@ msgstr "Vedlikeholder"
 
 #: main.cpp:67
 #, fuzzy, kde-format
-#| msgid "Tuukka Pasanen"
 msgctxt "@info:credit"
 msgid "Tuukka Pasanen"
 msgstr "Tuukka Pasanen"

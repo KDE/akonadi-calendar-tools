@@ -277,7 +277,6 @@ msgstr ""
 
 #: main.cpp:63
 #, fuzzy, kde-format
-#| msgid "Sérgio Martins"
 msgctxt "@info:credit"
 msgid "Sérgio Martins"
 msgstr "Sérgio Martins"
