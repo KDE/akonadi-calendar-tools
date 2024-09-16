@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -258,8 +258,7 @@ msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
 msgstr "(c) 2002-2009, Tuukka Pasanen και Allen Winter"
 
 #: main.cpp:65
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -270,8 +269,7 @@ msgid "Bug fixing"
 msgstr "Διόρθωση σφαλμάτων"
 
 #: main.cpp:66
-#, fuzzy, kde-format
-#| msgid "Allen Winter"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Allen Winter"
 msgstr "Allen Winter"
@@ -282,8 +280,7 @@ msgid "Maintainer"
 msgstr "Συντηρητής"
 
 #: main.cpp:67
-#, fuzzy, kde-format
-#| msgid "Tuukka Pasanen"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Tuukka Pasanen"
 msgstr "Tuukka Pasanen"

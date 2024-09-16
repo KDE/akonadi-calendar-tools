@@ -284,8 +284,7 @@ msgid "CalendarJanitor"
 msgstr "CalendarJanitor"
 
 #: main.cpp:63
-#, fuzzy, kde-format
-#| msgid "Sérgio Martins"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Sérgio Martins"
 msgstr "Sérgio Martins"
