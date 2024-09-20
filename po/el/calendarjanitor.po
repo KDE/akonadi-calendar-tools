@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:38+0000\n"
-"PO-Revision-Date: 2024-09-18 15:06+0300\n"
+"PO-Revision-Date: 2024-09-19 13:29+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -33,10 +33,10 @@ msgstr "sstavra@gmail.com"
 msgid "Backup was successful. %1 incidence was saved."
 msgid_plural "Backup was successful. %1 incidences were saved."
 msgstr[0] ""
-"Η δημιουργία εφεδρικού αντιγράφου ήταν επιτυχής. %1 περιστατικό αποθηκεύθηκε."
+"Η δημιουργία εφεδρικού αντιγράφου ήταν επιτυχής. %1 περιστατικό αποθηκεύτηκε."
 msgstr[1] ""
 "Η δημιουργία εφεδρικού αντιγράφου ήταν επιτυχής. %1 περιστατικά "
-"αποθηκεύθηκαν."
+"αποθηκεύτηκαν."
 
 #: backuper.cpp:56
 #, kde-format
@@ -197,7 +197,7 @@ msgstr "Χρονικά"
 #: calendarjanitor.cpp:501
 #, kde-format
 msgid "Passed events and to-dos (>365 days)"
-msgstr "Περασμένα γεγονότα και εργασίες (>365 ημέρς)"
+msgstr "Περασμένα γεγονότα και εργασίες (>365 ημέρες)"
 
 #: calendarjanitor.cpp:502
 #, kde-format
