@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:38+0000\n"
-"PO-Revision-Date: 2024-05-17 20:58+0200\n"
+"PO-Revision-Date: 2024-09-22 00:15+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -235,12 +235,13 @@ msgstr ""
 #, kde-format
 msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
 msgstr ""
-"No modo de arranxo a propiedade hase retirar RECURRING-ID e cambiar UID."
+"No modo de arranxo retirarase a definición da propiedade RECURRING-ID e "
+"cambiarase o UID."
 
 #: calendarjanitor.cpp:562
 #, kde-format
 msgid "Recurrence cleared."
-msgstr "Limpouse a incidencia."
+msgstr "Desactivouse a repetición."
 
 #: calendarjanitor.cpp:567
 #, kde-format
@@ -291,7 +292,7 @@ msgstr "Sérgio Martins"
 #: main.cpp:63
 #, kde-format
 msgid "Maintainer"
-msgstr "Mantedor"
+msgstr "Mantemento."
 
 #: main.cpp:64
 #, kde-format
