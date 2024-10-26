@@ -26,7 +26,12 @@ public:
         CheckCount // For iteration purposes. Keep at end.
     };
 
-    enum Action { ActionNone, ActionScan, ActionScanAndFix, ActionBackup };
+    enum Action {
+        ActionNone,
+        ActionScan,
+        ActionScanAndFix,
+        ActionBackup
+    };
 
     Options();
 
