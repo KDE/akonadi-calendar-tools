@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:38+0000\n"
-"PO-Revision-Date: 2024-05-16 11:19+0200\n"
+"PO-Revision-Date: 2024-11-09 20:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -117,23 +117,23 @@ msgstr "Календарът е невалиден. Моля, посочете �
 #: konsolekalendaradd.cpp:104
 #, kde-format
 msgid "Success: \"%1\" inserted"
-msgstr "Успех: събитието \"%1\" е вмъкнато"
+msgstr "Успех: събитието „%1“ е вмъкнато"
 
 #: konsolekalendaradd.cpp:106
 #, kde-format
 msgid "Failure: \"%1\" not inserted"
-msgstr "Грешка: събитието \"%1\" не е вмъкнато"
+msgstr "Грешка: събитието „%1“ не е вмъкнато"
 
 #: konsolekalendaradd.cpp:147
 #, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
 msgstr ""
-"Вмъкване на събитие е пропуснато, защото UID \"%1\" вече е известно.<Verbose>"
+"Вмъкване на събитие е пропуснато, защото UID „%1“ вече е известно.<Verbose>"
 
 #: konsolekalendaradd.cpp:154
 #, kde-format
 msgid "Add Event with UID \"%1\". <Verbose>"
-msgstr "Добавяне на събитие с UID \"%1\". <Verbose>"
+msgstr "Добавяне на събитие с UID „%1“. <Verbose>"
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
@@ -153,12 +153,12 @@ msgstr "Промяна на събитие  <Verbose>:"
 #: konsolekalendarchange.cpp:101
 #, kde-format
 msgid "Success: \"%1\" changed"
-msgstr "Успех: събитието \"%1\" е променено"
+msgstr "Успех: събитието „%1“ е променено"
 
 #: konsolekalendarchange.cpp:103
 #, kde-format
 msgid "Failure: \"%1\" not changed"
-msgstr "Грешка: събитието \"%1\" не е променено"
+msgstr "Грешка: събитието „%1“ не е променено"
 
 #: konsolekalendarchange.cpp:114 konsolekalendarchange.cpp:130
 #: konsolekalendardelete.cpp:80
@@ -179,7 +179,7 @@ msgstr "Изтриване на събитие <Verbose>:"
 #: konsolekalendardelete.cpp:67
 #, kde-format
 msgid "Success: \"%1\" deleted"
-msgstr "Успех: събитието \"%1\" е изтрито"
+msgstr "Успех: събитието „%1“ е изтрито"
 
 #: konsolekalendardelete.cpp:69
 #, kde-format
