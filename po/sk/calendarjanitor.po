@@ -1,19 +1,19 @@
 # translation of calendarjanitor.po to Slovak
-# Roman Paholik <wizzardsk@gmail.com>, 2013, 2015, 2022.
+# SPDX-FileCopyrightText: 2013, 2015, 2022, 2024 Roman Paholik <wizzardsk@gmail.com>
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: calendarjanitor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:38+0000\n"
-"PO-Revision-Date: 2022-04-07 17:45+0200\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"PO-Revision-Date: 2024-11-10 19:38+0100\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -275,8 +275,7 @@ msgid "CalendarJanitor"
 msgstr "CalendarJanitor"
 
 #: main.cpp:63
-#, fuzzy, kde-format
-#| msgid "Sérgio Martins"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Sérgio Martins"
 msgstr "Sérgio Martins"
