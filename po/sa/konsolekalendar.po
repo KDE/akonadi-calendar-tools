@@ -1,0 +1,554 @@
+# Sanskrit translations for akonadi-calendar-tools package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the akonadi-calendar-tools package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi-calendar-tools\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-05-16 00:38+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "भवतः नामानि"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "भवतः ईमेलपत्राणि"
+
+#: konsolekalendar.cpp:80
+#, kde-format
+msgid "There are no calendars available."
+msgstr "तत्र पञ्चाङ्गानि न उपलभ्यन्ते ।"
+
+#: konsolekalendar.cpp:95
+#, kde-format
+msgid "(Read only)"
+msgstr "(पठितमात्रम्) २."
+
+#: konsolekalendar.cpp:145
+#, kde-format
+msgid "Create Calendar <Dry Run>: %1"
+msgstr "पञ्चाङ्गं रचयन्तु <शुष्कचालनम्>: %1"
+
+#: konsolekalendar.cpp:151
+#, kde-format
+msgid "Create Calendar <Verbose>: %1"
+msgstr "पञ्चाङ्गं <Verbose> रचयन्तु: %1"
+
+#: konsolekalendar.cpp:170
+#, kde-format
+msgid "View Events <Dry Run>:"
+msgstr "घटनाः पश्यन्तु <Dry Run>:"
+
+#: konsolekalendar.cpp:192
+#, kde-format
+msgid "View Event <Verbose>:"
+msgstr "इवेण्ट् <Verbose> पश्यन्तु:"
+
+#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:175
+#: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
+#: konsolekalendardelete.cpp:82
+#, kde-format
+msgid "  What:  %1"
+msgstr "  किम् : %1"
+
+#: konsolekalendar.cpp:353 konsolekalendaradd.cpp:177
+#: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
+#: konsolekalendardelete.cpp:85
+#, kde-format
+msgid "  Begin: %1"
+msgstr "  आरभत: %1"
+
+#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:179
+#: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
+#: konsolekalendardelete.cpp:87
+#, kde-format
+msgid "  End:   %1"
+msgstr "  समाप्तिः %1"
+
+#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:182
+#, kde-format
+msgid "  No Time Associated with Event"
+msgstr "  घटनासम्बद्धः समयः नास्ति"
+
+#: konsolekalendar.cpp:361 konsolekalendaradd.cpp:185
+#: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
+#: konsolekalendardelete.cpp:89
+#, kde-format
+msgid "  Desc:  %1"
+msgstr "  Desc: %1"
+
+#: konsolekalendar.cpp:363 konsolekalendaradd.cpp:187
+#: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
+#: konsolekalendardelete.cpp:91
+#, kde-format
+msgid "  Location:  %1"
+msgstr "  स्थानम् : %1"
+
+#: konsolekalendaradd.cpp:61
+#, kde-format
+msgid "Insert Event <Dry Run>:"
+msgstr "इवेण्ट् <शुष्क चालन> सम्मिलितं कुर्वन्तु:"
+
+#: konsolekalendaradd.cpp:65
+#, kde-format
+msgid "Insert Event <Verbose>:"
+msgstr "इवेण्ट् <Verbose> सम्मिलितं कुर्वन्तु:"
+
+#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:133
+#, kde-format
+msgid "Calendar is invalid. Please specify one with --calendar"
+msgstr "पञ्चाङ्गम् अमान्यम् अस्ति। कृपया --calendar इत्यनेन सह एकं निर्दिशन्तु"
+
+#: konsolekalendaradd.cpp:104
+#, kde-format
+msgid "Success: \"%1\" inserted"
+msgstr "सफलता: \"%1\" सम्मिलितम्"
+
+#: konsolekalendaradd.cpp:106
+#, kde-format
+msgid "Failure: \"%1\" not inserted"
+msgstr "असफलता: \"%1\" न सम्मिलितम्"
+
+#: konsolekalendaradd.cpp:147
+#, kde-format
+msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+msgstr "Insert Event त्यक्तम्, यतः UID \"%1\" पूर्वमेव ज्ञातम् अस्ति । <वार्बोज>"
+
+#: konsolekalendaradd.cpp:154
+#, kde-format
+msgid "Add Event with UID \"%1\". <Verbose>"
+msgstr "UID \"%1\" इत्यनेन सह इवेण्ट् योजयन्तु । <वार्बोज>"
+
+#: konsolekalendarchange.cpp:50
+#, kde-format
+msgid "Change Event <Dry Run>:"
+msgstr "इवेण्ट् <Dry Run> परिवर्तनं कुर्वन्तु:"
+
+#: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
+#, kde-format
+msgid "To Event <Dry Run>:"
+msgstr "<Dry Run> इत्यस्य इवेण्ट् कृते:"
+
+#: konsolekalendarchange.cpp:59
+#, kde-format
+msgid "Change Event <Verbose>:"
+msgstr "इवेण्ट् <Verbose> परिवर्तनं कुर्वन्तु:"
+
+#: konsolekalendarchange.cpp:101
+#, kde-format
+msgid "Success: \"%1\" changed"
+msgstr "सफलता: \"%1\" परिवर्तनं जातम्"
+
+#: konsolekalendarchange.cpp:103
+#, kde-format
+msgid "Failure: \"%1\" not changed"
+msgstr "असफलता: \"%1\" परिवर्तनं न जातम्"
+
+#: konsolekalendarchange.cpp:114 konsolekalendarchange.cpp:130
+#: konsolekalendardelete.cpp:80
+#, kde-format
+msgid "  UID:   %1"
+msgstr "  UID: %1"
+
+#: konsolekalendardelete.cpp:48
+#, kde-format
+msgid "Delete Event <Dry Run>:"
+msgstr "इवेण्ट् <शुष्क चालन> विलोपयन्तु:"
+
+#: konsolekalendardelete.cpp:54
+#, kde-format
+msgid "Delete Event <Verbose>:"
+msgstr "इवेण्ट् <Verbose> विलोपयन्तु:"
+
+#: konsolekalendardelete.cpp:67
+#, kde-format
+msgid "Success: \"%1\" deleted"
+msgstr "सफलता: \"%1\" विलोपितम्"
+
+#: konsolekalendardelete.cpp:69
+#, kde-format
+msgid "Error deleting: \"%1\""
+msgstr "विलोपने त्रुटिः: \"%1\" ।"
+
+#: konsolekalendarexports.cpp:59
+#, kde-format
+msgid "Date:"
+msgstr "दिनाङ्कः:"
+
+#: konsolekalendarexports.cpp:68
+#, kde-format
+msgid "Summary:"
+msgstr "संक्षेपः:"
+
+#: konsolekalendarexports.cpp:72
+#, kde-format
+msgid "(no summary available)"
+msgstr "(सारांशः उपलब्धः नास्ति)"
+
+#: konsolekalendarexports.cpp:76
+#, kde-format
+msgid "Location:"
+msgstr "स्थानीय:"
+
+#: konsolekalendarexports.cpp:80
+#, kde-format
+msgid "(no location available)"
+msgstr "(स्थानं उपलब्धं नास्ति)"
+
+#: konsolekalendarexports.cpp:84
+#, kde-format
+msgid "Description:"
+msgstr "वर्णनम्‌:"
+
+#: konsolekalendarexports.cpp:88
+#, kde-format
+msgid "(no description available)"
+msgstr "(विवरणं उपलब्धं नास्ति)"
+
+#: konsolekalendarexports.cpp:92
+#, kde-format
+msgid "UID:"
+msgstr "यूआईडी : १."
+
+#: konsolekalendarexports.cpp:120
+#, kde-format
+msgid "[all day]\t"
+msgstr "[सर्वदिनम्] ।\t"
+
+#: konsolekalendarexports.cpp:171
+#, kde-format
+msgid ","
+msgstr ", ९."
+
+#: konsolekalendarexports.cpp:172
+#, kde-format
+msgid "\""
+msgstr "\" \" ."
+
+#: main.cpp:59
+#, kde-format
+msgid "KonsoleKalendar"
+msgstr "ConsoleCalendar इति"
+
+#: main.cpp:61
+#, kde-format
+msgid "A command line interface to KDE calendars"
+msgstr "KDE पञ्चाङ्गानां कृते आदेशपङ्क्ति-अन्तरफलकं"
+
+#: main.cpp:63
+#, kde-format
+msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
+msgstr "(ग) २००२-२००९, तुउक्का पसानेन् तथा एलेन् विन्टर"
+
+#: main.cpp:65
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "लॉरेण्ट् मोंटेल्"
+
+#: main.cpp:65
+#, kde-format
+msgid "Bug fixing"
+msgstr "दोषनिवारणम्"
+
+#: main.cpp:66
+#, kde-format
+msgctxt "@info:credit"
+msgid "Allen Winter"
+msgstr "सर्वं शिशिरं"
+
+#: main.cpp:66
+#, kde-format
+msgid "Maintainer"
+msgstr "परिपालकः"
+
+#: main.cpp:67
+#, kde-format
+msgctxt "@info:credit"
+msgid "Tuukka Pasanen"
+msgstr "तुउक्का पसानेन्"
+
+#: main.cpp:67
+#, kde-format
+msgid "Author"
+msgstr "लेखकः"
+
+#: main.cpp:73
+#, kde-format
+msgid "Print helpful runtime messages"
+msgstr "सहायकं रनटाइम् सन्देशान् मुद्रयन्तु"
+
+#: main.cpp:74
+#, kde-format
+msgid "Print what would have been done, but do not execute"
+msgstr "यत् कृतं स्यात् तत् मुद्रयन्तु, परन्तु निष्पादयन्तु"
+
+#: main.cpp:75
+#, kde-format
+msgid "Allow calendars which might need an interactive user interface"
+msgstr ""
+"पञ्चाङ्गानां अनुमतिं ददातु येषां कृते अन्तरक्रियाशीलस्य उपयोक्तृ-अन्तरफलकस्य आवश्यकता भवितुम् "
+"अर्हति"
+
+#: main.cpp:76
+#, kde-format
+msgid "Operate for Events only (Default)"
+msgstr "केवलं घटनानां कृते कार्यं कुर्वन्तु (पूर्वनिर्धारितम्)"
+
+#: main.cpp:77
+#, kde-format
+msgid "Operate for To-dos only [NOT WORKING YET]"
+msgstr "केवलं To-dos कृते संचालितं कुर्वन्तु [NOT WORKING YET]."
+
+#: main.cpp:78
+#, kde-format
+msgid "Operate for Journals only [NOT WORKING YET]"
+msgstr "केवलं पत्रिकाणां कृते कार्यं कुर्वन्तु [NOT WORKING YET]."
+
+#: main.cpp:79
+#, kde-format
+msgid "Print incidences in specified export format"
+msgstr "निर्दिष्टनिर्यातस्वरूपे घटनाः मुद्रयन्तु"
+
+#: main.cpp:80
+#, kde-format
+msgid "Insert an incidence into the calendar"
+msgstr "पञ्चाङ्गे एकं घटनां सम्मिलितं कुर्वन्तु"
+
+#: main.cpp:81
+#, kde-format
+msgid "Modify an existing incidence"
+msgstr "विद्यमानं घटनां परिवर्तयन्तु"
+
+#: main.cpp:82
+#, kde-format
+msgid "Remove an existing incidence"
+msgstr "विद्यमानं घटनां निष्कासयन्तु"
+
+#: main.cpp:83
+#, kde-format
+msgid "Create new Akonadi Resource for file"
+msgstr "सञ्चिकायाः कृते नूतनं Akonadi Resource रचयन्तु"
+
+#: main.cpp:85
+#, kde-format
+msgid "Import this calendar to main calendar"
+msgstr "एतत् पञ्चाङ्गं मुख्यपञ्चाङ्गे आयातयन्तु"
+
+#: main.cpp:86
+#, kde-format
+msgid "List available calendars"
+msgstr "उपलब्धपञ्चाङ्गानां सूचीं कुर्वन्तु"
+
+#: main.cpp:87
+#, kde-format
+msgid "View all calendar entries, ignoring date/time options"
+msgstr "तिथि/समयविकल्पान् अवहेलयन् सर्वाणि पञ्चाङ्गप्रविष्टयः पश्यन्तु"
+
+#: main.cpp:88
+#, kde-format
+msgid "View next activity in calendar"
+msgstr "पञ्चाङ्गे अग्रिमक्रियाकलापं पश्यन्तु"
+
+#: main.cpp:90
+#, kde-format
+msgid "From start date show next # days' activities"
+msgstr "आरम्भतिथितः आगामि # दिवसानां क्रियाकलापाः दर्शयन्तु"
+
+#: main.cpp:91
+#, kde-format
+msgid "Incidence Unique-string identifier"
+msgstr "घटना अद्वितीय-स्ट्रिंग-परिचयः"
+
+#: main.cpp:92
+#, kde-format
+msgid "Start from this day [YYYY-MM-DD]"
+msgstr "अस्मात् दिवसात् आरभ्य [YYYY-MM-DD] ।"
+
+#: main.cpp:93
+#, kde-format
+msgid "Start from this time [HH:MM:SS]"
+msgstr "अस्मात् समयात् आरभ्य [HH:MM:SS] ।"
+
+#: main.cpp:94
+#, kde-format
+msgid "End at this day [YYYY-MM-DD]"
+msgstr "अस्मिन् दिने [YYYY-MM-DD] समाप्तः।"
+
+#: main.cpp:95
+#, kde-format
+msgid "End at this time [HH:MM:SS]"
+msgstr "अस्मिन् समये समाप्तं [HH:MM:SS] ।"
+
+#: main.cpp:97
+#, kde-format
+msgid "Start from this time [secs since epoch]"
+msgstr "अस्मात् समयात् आरभत [secs since epoch]."
+
+#: main.cpp:99
+#, kde-format
+msgid "End at this time [secs since epoch]"
+msgstr "अस्मिन् समये समाप्तं [युगात् परं सेकण्ड्] ।"
+
+#: main.cpp:101
+#, kde-format
+msgid "Add summary to incidence (for add/change modes)"
+msgstr "घटनायां सारांशं योजयन्तु (जोड/परिवर्तनविधानानां कृते)"
+
+#: main.cpp:103
+#, kde-format
+msgid "Add description to incidence (for add/change modes)"
+msgstr "घटनायां वर्णनं योजयन्तु (जोड/परिवर्तनविधानानां कृते)"
+
+#: main.cpp:106
+#, kde-format
+msgid "Add location to incidence (for add/change modes)"
+msgstr "घटनायां स्थानं योजयतु (जोड/परिवर्तनविधानानां कृते)"
+
+#: main.cpp:109
+#, kde-format
+msgid "Calendar to use when creating a new incidence"
+msgstr "नूतनं घटनां निर्माय उपयोक्तुं पञ्चाङ्गम्"
+
+#: main.cpp:112
+#, kde-format
+msgid "Export file type (Default: text)"
+msgstr "सञ्चिकाप्रकारं निर्यातयन्तु (पूर्वनिर्धारितम्: पाठम्)"
+
+#: main.cpp:114
+#, kde-format
+msgid "Export to file (Default: stdout)"
+msgstr "सञ्चिकायां निर्यातं कुर्वन्तु (पूर्वनिर्धारितम्: stdout)"
+
+#: main.cpp:115
+#, kde-format
+msgid "Print list of export types supported and exit"
+msgstr "समर्थितानां निर्यातप्रकारानाम् सूचीं मुद्रयित्वा निर्गच्छतु"
+
+#: main.cpp:164
+#, kde-format
+msgid "%1 supports these export formats:"
+msgstr "%1 एतानि निर्यातस्वरूपाणि समर्थयति:"
+
+#: main.cpp:165
+#, kde-format
+msgctxt "the default export format"
+msgid "  %1 [Default]"
+msgstr "  %1 [पूर्वनिर्धारितम्] ।"
+
+#: main.cpp:166
+#, kde-format
+msgctxt "short text export"
+msgid "  %1 (like %2, but more compact)"
+msgstr "  %1 (%2 इव, परन्तु अधिकं संकुचितम्)"
+
+#: main.cpp:167
+#, kde-format
+msgctxt "comma-separated values export"
+msgid "  %1 (Comma-Separated Values)"
+msgstr "  %1 (अल्पविरामेन पृथक्कृतानि मूल्यानि)"
+
+#: main.cpp:182
+#, kde-format
+msgid "Sorry, To-dos are not working yet."
+msgstr "क्षम्यतां, To-dos अद्यापि कार्यं न कुर्वन्ति।"
+
+#: main.cpp:188
+#, kde-format
+msgid "Sorry, Journals are not working yet."
+msgstr "क्षम्यतां, जर्नल्स् अद्यापि कार्यं न कुर्वन्ति।"
+
+#: main.cpp:214
+#, kde-format
+msgid "Invalid Export Type Specified: %1"
+msgstr "अमान्यनिर्यातप्रकारः निर्दिष्टः: %1"
+
+#: main.cpp:373
+#, kde-format
+msgid "Invalid Start Date Specified: %1"
+msgstr "अमान्यप्रारम्भतिथिः निर्दिष्टा: %1"
+
+#: main.cpp:398
+#, kde-format
+msgid "Invalid Start Time Specified: %1"
+msgstr "अमान्यः आरम्भसमयः निर्दिष्टः: %1"
+
+#: main.cpp:423
+#, kde-format
+msgid "Invalid End Date Specified: %1"
+msgstr "अमान्यसमाप्तितिथिः निर्दिष्टा: %1"
+
+#: main.cpp:443
+#, kde-format
+msgid "Invalid Date Count Specified: %1"
+msgstr "अमान्यतिथिगणना निर्दिष्टा: %1"
+
+#: main.cpp:471
+#, kde-format
+msgid "Invalid End Time Specified: %1"
+msgstr "अमान्यः समाप्तसमयः निर्दिष्टः: %1"
+
+#: main.cpp:664
+#, kde-format
+msgid ""
+"Only 1 operation mode (view, add, change, delete, create) permitted at any "
+"one time"
+msgstr ""
+"कस्मिन् अपि समये केवलं १ ऑपरेशन मोड् (दृश्यं, योजयितुं, परिवर्तनं, विलोपनं, निर्माणं) अनुमतम्"
+
+#: main.cpp:675
+#, kde-format
+msgid "Ending Date/Time occurs before the Starting Date/Time"
+msgstr "समाप्तिदिनाङ्कः/समयः आरम्भदिनाङ्कात्/समयात् पूर्वं भवति"
+
+#: main.cpp:694
+#, kde-format
+msgid "Calendar %1 successfully imported"
+msgstr "पञ्चाङ्गं %1 सफलतया आयातम्"
+
+#: main.cpp:697
+#, kde-format
+msgid "Unable to import calendar: %1"
+msgstr "पञ्चाङ्गम् आयातयितुं असमर्थः: %1"
+
+#: main.cpp:708
+#, kde-format
+msgid "Attempting to insert an event that already exists"
+msgstr "पूर्वमेव विद्यमानं घटनां सम्मिलितुं प्रयत्नः"
+
+#: main.cpp:718 main.cpp:738
+#, kde-format
+msgid "Missing event UID: use --uid command line option"
+msgstr "अनुपलब्धघटना UID: --uid आदेशपङ्क्तिविकल्पस्य उपयोगं कुर्वन्तु"
+
+#: main.cpp:726
+#, kde-format
+msgid "No such event UID: change event failed"
+msgstr "एतादृशः कोऽपि घटना UID: परिवर्तनघटना विफलः नास्ति"
+
+#: main.cpp:746
+#, kde-format
+msgid "No such event UID: delete event failed"
+msgstr "एतादृशः कोऽपि इवेण्ट् UID: delete इवेण्ट् विफलः नास्ति"
+
+#: main.cpp:757
+#, kde-format
+msgid "Cannot open specified export file: %1"
+msgstr "निर्दिष्टं निर्यातसञ्चिकां उद्घाटयितुं न शक्यते: %1"
+
+#: main.cpp:767
+#, kde-format
+msgid "Cannot create Akonadi resource from file: %1"
+msgstr "सञ्चिकातः Akonadi संसाधनं निर्मातुं न शक्यते: %1"
