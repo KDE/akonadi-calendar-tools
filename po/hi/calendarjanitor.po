@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:38+0000\n"
-"PO-Revision-Date: 2021-07-06 22:17+0530\n"
+"PO-Revision-Date: 2024-12-15 15:52+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
 "Language: hi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Lokalize 21.04.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -95,7 +95,7 @@ msgstr "%1को सुधारा"
 #: calendarjanitor.cpp:147
 #, kde-format
 msgid "Error while deleting incidence: %1"
-msgstr "घटना को मिटाते समय त्रुटि: %1 "
+msgstr "घटना को मिटाते समय त्रुटि: %1"
 
 #: calendarjanitor.cpp:151
 #, kde-format
