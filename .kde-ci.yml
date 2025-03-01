@@ -9,3 +9,6 @@ Dependencies:
     'pim/akonadi' : '@same'
     'pim/akonadi-calendar' : '@same'
     'pim/calendarsupport' : '@same'
+
+Options:
+ require-passing-tests-on: ['@all']
