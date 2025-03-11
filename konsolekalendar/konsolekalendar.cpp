@@ -106,10 +106,7 @@ bool KonsoleKalendar::createAkonadiResource(const QString &icalFileUri)
 {
     Akonadi::AgentType type = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
     auto job = new Akonadi::AgentInstanceCreateJob(type);
-    QEventLoop loop;
-    QObject::connect(job, &Akonadi::CollectionFetchJob::result, &loop, &QEventLoop::quit);
-    job->start();
-    loop.exec();
+    job->exec();
     if (job->error() != 0) {
         return false;
     }
