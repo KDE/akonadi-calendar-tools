@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:38+0000\n"
+"POT-Creation-Date: 2025-03-12 00:42+0000\n"
 "PO-Revision-Date: 2024-05-16 09:24+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -45,60 +45,60 @@ msgstr "Er zijn nog geen agenda's beschikbaar."
 msgid "(Read only)"
 msgstr "(Alleen-lezen)"
 
-#: konsolekalendar.cpp:145
+#: konsolekalendar.cpp:142
 #, kde-format
 msgid "Create Calendar <Dry Run>: %1"
 msgstr "Kalender aanmaken <droog oefenen>: %1"
 
-#: konsolekalendar.cpp:151
+#: konsolekalendar.cpp:148
 #, kde-format
 msgid "Create Calendar <Verbose>: %1"
 msgstr "Kalender aanmaken <spraakzaam>: %1"
 
-#: konsolekalendar.cpp:170
+#: konsolekalendar.cpp:167
 #, kde-format
 msgid "View Events <Dry Run>:"
 msgstr "Evenementen tonen <droog oefenen>:"
 
-#: konsolekalendar.cpp:192
+#: konsolekalendar.cpp:189
 #, kde-format
 msgid "View Event <Verbose>:"
 msgstr "Evenement tonen <spraakzaam>:"
 
-#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:175
+#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:175
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Wat:  %1"
 
-#: konsolekalendar.cpp:353 konsolekalendaradd.cpp:177
+#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:177
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Begin: %1"
 
-#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:179
+#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:179
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Einde:   %1"
 
-#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:182
+#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:182
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  Geen tijd geassocieerd met dit evenement"
 
-#: konsolekalendar.cpp:361 konsolekalendaradd.cpp:185
+#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:185
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Beschr.:  %1"
 
-#: konsolekalendar.cpp:363 konsolekalendaradd.cpp:187
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:187
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format

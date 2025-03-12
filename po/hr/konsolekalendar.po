@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:38+0000\n"
+"POT-Creation-Date: 2025-03-12 00:42+0000\n"
 "PO-Revision-Date: 2004-04-20 13:26+CEST\n"
 "Last-Translator: auto\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -42,60 +42,60 @@ msgstr ""
 msgid "(Read only)"
 msgstr ""
 
-#: konsolekalendar.cpp:145
+#: konsolekalendar.cpp:142
 #, fuzzy, kde-format
 msgid "Create Calendar <Dry Run>: %1"
 msgstr "Promijeni događaj <na suvo>:"
 
-#: konsolekalendar.cpp:151
+#: konsolekalendar.cpp:148
 #, fuzzy, kde-format
 msgid "Create Calendar <Verbose>: %1"
 msgstr "Umetni događaj <detaljno>:"
 
-#: konsolekalendar.cpp:170
+#: konsolekalendar.cpp:167
 #, fuzzy, kde-format
 msgid "View Events <Dry Run>:"
 msgstr "Prikaz događaja <na suvo>:"
 
-#: konsolekalendar.cpp:192
+#: konsolekalendar.cpp:189
 #, fuzzy, kde-format
 msgid "View Event <Verbose>:"
 msgstr "Umetni događaj <detaljno>:"
 
-#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:175
+#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:175
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, fuzzy, kde-format
 msgid "  What:  %1"
 msgstr "Što:"
 
-#: konsolekalendar.cpp:353 konsolekalendaradd.cpp:177
+#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:177
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, fuzzy, kde-format
 msgid "  Begin: %1"
 msgstr "Kreni"
 
-#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:179
+#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:179
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, fuzzy, kde-format
 msgid "  End:   %1"
 msgstr "Kraj:"
 
-#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:182
+#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:182
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "Nema vremena povezanog s događajem"
 
-#: konsolekalendar.cpp:361 konsolekalendaradd.cpp:185
+#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:185
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, fuzzy, kde-format
 msgid "  Desc:  %1"
 msgstr "Opis:"
 
-#: konsolekalendar.cpp:363 konsolekalendaradd.cpp:187
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:187
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
