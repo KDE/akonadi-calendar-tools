@@ -49,8 +49,12 @@ find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets)
 
 
 # Find KF6 package
-find_package(KF6DocTools ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6I18n ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6DocTools ${KF_MIN_VERSION})
+set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
+    "Tools to generate documentation"
+    TYPE OPTIONAL
+)
 
 # Find KdepimLibs Package
 find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
@@ -84,8 +88,13 @@ ecm_qt_install_logging_categories(
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
         )
 
-add_subdirectory(doc)
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
+
 ki18n_install(po)
-kdoctools_install(po)
+if(KF6DocTools_FOUND)
+    kdoctools_install(po)
+    add_subdirectory(doc)
+endif()
+
+
 ecm_feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
