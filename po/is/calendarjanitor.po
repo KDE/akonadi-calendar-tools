@@ -1,0 +1,343 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the akonadi-calendar-tools package.
+#
+# SPDX-FileCopyrightText: 2025 Gummi <gudmundure@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi-calendar-tools\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-05-16 00:38+0000\n"
+"PO-Revision-Date: 2025-04-06 14:15+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Guðmundur Erlingsson"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "gudmundure@gmail.com"
+
+#: backuper.cpp:36
+#, kde-format
+msgid "Backup was successful. %1 incidence was saved."
+msgid_plural "Backup was successful. %1 incidences were saved."
+msgstr[0] "Öryggisafritun tókst. %1 uppákoma var vistuð."
+msgstr[1] "Öryggisafritun tókst. %1 uppákomur voru vistaðar."
+
+#: backuper.cpp:56
+#, kde-format
+msgid "File is empty."
+msgstr "Skráin er tóm."
+
+#: backuper.cpp:61
+#, kde-format
+msgid "A backup is already in progress."
+msgstr "Öryggisafritun þegar í gangi."
+
+#: backuper.cpp:64
+#, kde-format
+msgid "Backing up your calendar data..."
+msgstr "Tek afrit af dagbókargögnunum þínum..."
+
+#: backuper.cpp:97
+#, kde-format
+msgid "No data to backup."
+msgstr "Engin gögn til að taka afrit af."
+
+#: backuper.cpp:108 calendarjanitor.cpp:173
+#, kde-format
+msgid "Processing collection %1 (id=%2)..."
+msgstr "Vinn úr safni %1 (id=%2)..."
+
+#: backuper.cpp:138
+#, kde-format
+msgid "An error occurred"
+msgstr "Villa kom upp"
+
+#: calendarjanitor.cpp:37
+#, kde-format
+msgid ""
+"Bailing out. Fix your akonadi setup first. These kind of errors should not "
+"happen."
+msgstr ""
+"Hætti við aðgerð. Lagfærðu fyrst uppsetningu þína á akonadi. Villur af þessu "
+"tagi eiga ekki að koma upp."
+
+#: calendarjanitor.cpp:85
+#, kde-format
+msgid "Error while fetching collections"
+msgstr "Villa við að sækja söfn"
+
+#: calendarjanitor.cpp:99
+#, kde-format
+msgid "There are no collections to process."
+msgstr "Það eru engin söfn til að vinna úr."
+
+#: calendarjanitor.cpp:126
+#, kde-format
+msgid "Error while modifying incidence: %1"
+msgstr "Villa þegar uppákomu var breytt: %1"
+
+#: calendarjanitor.cpp:131
+#, kde-format
+msgid "Fixed item %1"
+msgstr "Lagfærði atriði %1"
+
+#: calendarjanitor.cpp:147
+#, kde-format
+msgid "Error while deleting incidence: %1"
+msgstr "Villa þegar uppákomu var eytt: %1"
+
+#: calendarjanitor.cpp:151
+#, kde-format
+msgid "Deleted item %1"
+msgstr "Eyddi atriði %1"
+
+#: calendarjanitor.cpp:177
+#, kde-format
+msgid "Collection is read only, disabling fix mode."
+msgstr "Safn er skrifvarið, afvirkja lagfæringarsnið."
+
+#: calendarjanitor.cpp:179
+#, kde-format
+msgid "Collection is read only, skipping it."
+msgstr "Safn er skrifvarið, sleppi því."
+
+#: calendarjanitor.cpp:187
+#, kde-format
+msgid "Collection is empty, ignoring it."
+msgstr "Safn er tómt, hunsa það."
+
+#: calendarjanitor.cpp:255
+#, kde-format
+msgid "Checking for incidences with empty summary and description..."
+msgstr "Leita eftir uppákomum með auðri samantekt og lýsingu..."
+
+#: calendarjanitor.cpp:270
+#, kde-format
+msgid "Checking for incidences with empty UID..."
+msgstr "Leita eftir uppákomum með auðu UID..."
+
+#: calendarjanitor.cpp:289
+#, kde-format
+msgid "Checking for events with invalid DTSTART..."
+msgstr "Leita eftir uppákomum með ógildu DTSTART..."
+
+#: calendarjanitor.cpp:326
+#, kde-format
+msgid "Checking for recurring to-dos with invalid DTSTART..."
+msgstr "Leita eftir endurteknum verkefnum með ógilt DTSTART..."
+
+#: calendarjanitor.cpp:362
+#, kde-format
+msgid "Checking for journals with invalid DTSTART..."
+msgstr "Leita eftir dagbókum með ógilt DTSTART..."
+
+#: calendarjanitor.cpp:383
+#, kde-format
+msgid "Checking for orphans..."
+msgstr "Leita eftir munaðarleysingjum..."
+
+#: calendarjanitor.cpp:389
+#, kde-format
+msgid "The following incidences are children of nonexistent parents"
+msgstr "Eftirfarandi uppákomur eru afkomendur foreldra sem eru ekki til"
+
+#: calendarjanitor.cpp:398
+#, kde-format
+msgid "In fix mode these children will be unparented."
+msgstr "Í lagfæringarsniði verða þessir afkomendur gerðir foreldralausir."
+
+#: calendarjanitor.cpp:398
+#, kde-format
+msgid "Children were successfully unparented."
+msgstr "Afkomendur voru gerðir foreldralausir."
+
+#: calendarjanitor.cpp:403
+#, kde-format
+msgid "Checking for duplicate UIDs..."
+msgstr "Leita eftir tvíteknum notandakennum..."
+
+#: calendarjanitor.cpp:460
+#, kde-format
+msgid "Gathering statistics..."
+msgstr "Safna saman talnagögnum..."
+
+#: calendarjanitor.cpp:498
+#, kde-format
+msgid "Events"
+msgstr "Viðburðir"
+
+#: calendarjanitor.cpp:499
+#, kde-format
+msgid "Todos"
+msgstr "Verkefnalistar"
+
+#: calendarjanitor.cpp:500
+#, kde-format
+msgid "Journals"
+msgstr "Dagbækur"
+
+#: calendarjanitor.cpp:501
+#, kde-format
+msgid "Passed events and to-dos (>365 days)"
+msgstr "Liðnir viðburðir og verkefnalistar (>365 dagar)"
+
+#: calendarjanitor.cpp:502
+#, kde-format
+msgid "Old incidences with alarms"
+msgstr "Gamlar uppákomur með vekjara"
+
+#: calendarjanitor.cpp:503
+#, kde-format
+msgid "Inline attachments"
+msgstr "Innfelld viðhengi"
+
+#: calendarjanitor.cpp:504
+#, kde-format
+msgid "Items with empty remote id [!!]"
+msgstr "Atriði með auðu fjarauðkenni [!!]"
+
+#: calendarjanitor.cpp:507
+#, kde-format
+msgid "Total size of inline attachments (bytes)"
+msgstr "Heildarstærð innfelldra viðhengja (bæti)"
+
+#: calendarjanitor.cpp:509
+#, kde-format
+msgid "Total size of inline attachments (KB)"
+msgstr "Heildarstærð innfelldra viðhengja (KB)"
+
+#: calendarjanitor.cpp:521
+#, kde-format
+msgid ""
+"Checking for RECURRING-ID incidences with nonexistent master incidence..."
+msgstr "Leita eftir RECURRING-ID uppákomum með yfiruppákomu sem ekki er til..."
+
+#: calendarjanitor.cpp:562
+#, kde-format
+msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
+msgstr ""
+"Í lagfæringarsniði verður eiginleikinn RECURRING-ID afvirkjaður og UID "
+"breytt."
+
+#: calendarjanitor.cpp:562
+#, kde-format
+msgid "Recurrence cleared."
+msgstr "Endurtekningu eytt."
+
+#: calendarjanitor.cpp:567
+#, kde-format
+msgid "Deleting alarms older than 365 days..."
+msgstr "Eyði vekjurum eldri en 365 dagar..."
+
+#: calendarjanitor.cpp:585 calendarjanitor.cpp:599
+#, kde-format
+msgid "invalid"
+msgstr "ógilt"
+
+#: calendarjanitor.cpp:602
+#, kde-format
+msgid "recurrent"
+msgstr "endurtekið"
+
+#: calendarjanitor.cpp:620
+#, kde-format
+msgid "Found buggy incidence:"
+msgstr "Fann gallaða uppákomu:"
+
+#: calendarjanitor.cpp:621
+#, kde-format
+msgid "id=%1; summary=\"%2\""
+msgstr "id=%1; samantekt=\"%2\""
+
+#: main.cpp:40
+#, kde-format
+msgid "Error while parsing %1"
+msgstr "Villa við þáttun á %1"
+
+#: main.cpp:41
+#, kde-format
+msgid "Example usage: %1"
+msgstr "Dæmi um notkun: %1"
+
+#: main.cpp:61
+#, kde-format
+msgid "CalendarJanitor"
+msgstr "CalendarJanitor"
+
+#: main.cpp:63
+#, kde-format
+msgctxt "@info:credit"
+msgid "Sérgio Martins"
+msgstr "Sérgio Martins"
+
+#: main.cpp:63
+#, kde-format
+msgid "Maintainer"
+msgstr "Umsjónaraðili"
+
+#: main.cpp:64
+#, kde-format
+msgid "A command line interface to report and fix errors in your calendar data"
+msgstr "Skipanalínuiðmót til að tilkynna og laga villur í dagatalsgögnum þínum"
+
+#: main.cpp:69
+#, kde-format
+msgid "Comma-separated list of collection ids to scan"
+msgstr "Listi yfir safnauðkenni sem á að skanna, aðskilin með kommum"
+
+#: main.cpp:70
+#, kde-format
+msgid "Fix broken incidences"
+msgstr "Lagfæra gallaðar uppákomur"
+
+#: main.cpp:71
+#, kde-format
+msgid "Backup your calendar"
+msgstr "Taka afrit af dagatalinu þínu"
+
+#: main.cpp:72
+#, kde-format
+msgid "Delete alarms older than 365 days"
+msgstr "Eyða vekjurum eldri en 365 dagar"
+
+#: main.cpp:104
+#, kde-format
+msgid "--fix is incompatible with --backup"
+msgstr "--fix er ekki samhæft við --backup"
+
+#: main.cpp:109
+#, kde-format
+msgid "--strip-old-alarms is incompatible with --backup"
+msgstr "--strip-old-alarms er ekki samhæft við --backup"
+
+#: main.cpp:114
+#, kde-format
+msgid "--strip-old-alarms is incompatible with --fix"
+msgstr "--strip-old-alarms er ekki samhæft við --fix"
+
+#: main.cpp:125
+#, kde-format
+msgid "Running in fix mode."
+msgstr "Keyri lagfæringarsnið."
+
+#: main.cpp:129
+#, kde-format
+msgid "Please specify a output file."
+msgstr "Tilgreindu úttaksskrá."
+
+#: main.cpp:134
+#, kde-format
+msgid "Running in scan only mode."
+msgstr "Keyri í skönnunarsniði eingöngu."
