@@ -306,7 +306,7 @@ msgstr "მომხმარებლის ინტერფეისის �
 #: main.cpp:76
 #, kde-format
 msgid "Operate for Events only (Default)"
-msgstr "მხოლოდ მოვლენებისთვის ოპერირება (ნაგულისხმები)"
+msgstr "მხოლოდ მოვლენებისთვის ოპერირება (ნაგულისხმევი)"
 
 #: main.cpp:77
 #, kde-format
@@ -427,12 +427,12 @@ msgstr "ახალი გავლენის შექმნისას გ
 #: main.cpp:112
 #, kde-format
 msgid "Export file type (Default: text)"
-msgstr "გასატანი ფაილის ტიპი (ნაგულისხმები: ტექტური)"
+msgstr "გასატანი ფაილის ტიპი (ნაგულისხმევი: ტექტური)"
 
 #: main.cpp:114
 #, kde-format
 msgid "Export to file (Default: stdout)"
-msgstr "ფაილში გატანა (ნაგულისხმები: stdout)"
+msgstr "ფაილში გატანა (ნაგულისხმევი: stdout)"
 
 #: main.cpp:115
 #, kde-format
@@ -448,7 +448,7 @@ msgstr "%1-ს გატანის ამ ფორმატების მ�
 #, kde-format
 msgctxt "the default export format"
 msgid "  %1 [Default]"
-msgstr "  %1 [ნაგულისხმები]"
+msgstr "  %1 [ნაგულისხმევი]"
 
 #: main.cpp:166
 #, kde-format
