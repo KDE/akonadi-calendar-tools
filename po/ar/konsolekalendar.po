@@ -278,7 +278,7 @@ msgstr "ألين وينتر"
 #: main.cpp:66
 #, kde-format
 msgid "Maintainer"
-msgstr "المصين"
+msgstr "الصائن"
 
 #: main.cpp:67
 #, kde-format
