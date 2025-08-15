@@ -130,7 +130,7 @@ msgstr "فشل: لم يُدرج ”%1“"
 #: konsolekalendaradd.cpp:147
 #, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
-msgstr "تُخطي إدارج حدث، لأن UID \"%1\" معروف بالفعل. <مفصل>"
+msgstr "تُخطي إدارج حدث، لأن UID \"%1\" معروف فعلًا. <مفصل>"
 
 #: konsolekalendaradd.cpp:154
 #, kde-format
@@ -530,7 +530,7 @@ msgstr "تعذّر استيراد التّقويم: %1"
 #: main.cpp:708
 #, kde-format
 msgid "Attempting to insert an event that already exists"
-msgstr "محاولة إدراج حدث موجود بالفعل"
+msgstr "محاولة إدراج حدث موجود فعلًا"
 
 #: main.cpp:718 main.cpp:738
 #, kde-format
