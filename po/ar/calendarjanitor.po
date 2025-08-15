@@ -48,7 +48,7 @@ msgstr "الملفّ فارغ."
 #: backuper.cpp:61
 #, kde-format
 msgid "A backup is already in progress."
-msgstr "ثمّة مهمّة نسخ احتياطيّ تجري بالفعل."
+msgstr "ثمّة مهمّة نسخ احتياطيّ تجري فعلًا."
 
 #: backuper.cpp:64
 #, kde-format
