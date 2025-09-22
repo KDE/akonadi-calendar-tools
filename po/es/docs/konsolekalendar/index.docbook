@@ -1283,7 +1283,7 @@ congresos con el equipo completo.","&konsolekalendar;-1924621834.134"
 </question>
 <answer>
 <para
->&konsolekalendar; rechazará las fechas especificadas en la línea de órdenes, salvo que se especifiquen según los estándares ISO 8601, formalmente: AAAA-MM-DD. Donde AAAA representa un año con 4 dígitos (como 2003), MM representa un mes con dos dígitos (01, 02,..., 12) y DD representa un día con dos dígitos (01, 02,..., 31).</para>
+>&konsolekalendar; rechazará las fechas especificadas en la línea de órdenes, salvo que se especifiquen según los estándares ISO 8601, formalmente: AAAA-MM-DD. Donde AAAA representa un año con 4 dígitos (como 2003), MM representa un mes con dos dígitos (01, 02,…, 12) y DD representa un día con dos dígitos (01, 02,…, 31).</para>
 <para
 >&konsolekalendar; siempre exporta las fechas según el formato ISO 8601.</para>
 </answer>
@@ -1296,7 +1296,7 @@ congresos con el equipo completo.","&konsolekalendar;-1924621834.134"
 </question>
 <answer>
 <para
->&konsolekalendar; rechazará las horas especificadas en la línea de órdenes, salvo que se indiquen según los estándares ISO 8601, formalmente: HH:MM:SS. Donde HH representa una hora con dos dígitos (01, 02, ..., 24), MM representa un minuto con dos dígitos (01, 02,..., 60) y SS representa un segundo con dos dígitos (01, 02,..., 60).</para>
+>&konsolekalendar; rechazará las horas especificadas en la línea de órdenes, salvo que se indiquen según los estándares ISO 8601, formalmente: HH:MM:SS. Donde HH representa una hora con dos dígitos (01, 02, …, 24), MM representa un minuto con dos dígitos (01, 02,…, 60) y SS representa un segundo con dos dígitos (01, 02,…, 60).</para>
 <para
 >&konsolekalendar; siempre exporta las horas según el formato ISO 8601.</para>
 </answer>
