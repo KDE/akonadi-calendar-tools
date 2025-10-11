@@ -1,12 +1,12 @@
 # SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
-# Thomas Diehl <thd@kde.org>, 2002.
-# Stephan Johach <lucardus@onlinehome.de>, 2003.
-# Stefan Winter <swinter@kde.org>, 2003, 2004, 2005.
-# Frank Schütte <F.Schuette@t-online.de>, 2004.
-# Stephan Johach <hunsum@gmx.de>, 2005, 2006.
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2007.
-# Burkhard Lück <lueck@hube-lueck.de>, 2008, 2009, 2013, 2014, 2015, 2017, 2019.
-# Frederik Schwarzer <schwarzer@kde.org>, 2011, 2016.
+# SPDX-FileCopyrightText: 2002 Thomas Diehl <thd@kde.org>
+# SPDX-FileCopyrightText: 2003 Stephan Johach <lucardus@onlinehome.de>
+# SPDX-FileCopyrightText: 2003, 2004, 2005 Stefan Winter <swinter@kde.org>
+# SPDX-FileCopyrightText: 2004 Frank Schütte <F.Schuette@t-online.de>
+# SPDX-FileCopyrightText: 2005, 2006 Stephan Johach <hunsum@gmx.de>
+# SPDX-FileCopyrightText: 2007 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2008, 2009, 2013, 2014, 2015, 2017, 2019 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2011, 2016 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 msgid ""
 msgstr ""
