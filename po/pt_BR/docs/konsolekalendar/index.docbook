@@ -5,8 +5,6 @@
   <!ENTITY konsolekalendar "<application
 >KonsoleKalendar</application
 >">
-  <!ENTITY kappname "KonsoleKalendar">
-  <!ENTITY package "kdepim">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % Brazilian-Portuguese "INCLUDE">
 ]>
@@ -74,6 +72,20 @@
 ><contrib
 >Tradução</contrib
 ></othercredit
+> <othercredit role="translator"
+><firstname
+>Antonio Henrique</firstname
+><surname
+>L Rodrigues</surname
+><affiliation
+><address
+><email
+>ahlr_2000@yahoo.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
 > 
 </authorgroup>
 
@@ -101,9 +113,9 @@
 <!-- Don't change format of date and version of the documentation -->
 
 <date
->15/04/2004</date>
+>23/11/2016</date>
 <releaseinfo
->1.1.1</releaseinfo>
+>5.1.3 (Applications 16.12)</releaseinfo>
 
 <abstract>
 <para
@@ -129,7 +141,7 @@
 >Introdução</title>
 
 <para
->O &konsolekalendar; é uma interface para a linha de comando dos calendários do &kde;. Ele permite ver, inserir, remover ou modificar os eventos do calendário, através da linha de comando ou de uma linguagem de programação. Além disso, o &konsolekalendar; poderá criar um novo calendário do &kde;, exportar um calendário do &kde; para uma variedade de outros formatos e importar outro calendário do &kde;.</para>
+>O &konsolekalendar; é uma interface para a linha de comando dos calendários. Ele permite ver, inserir, remover ou modificar os eventos do calendário, através da linha de comando ou de uma linguagem de programação. Além disso, o &konsolekalendar; poderá criar um novo calendário, exportar um calendário para uma variedade de outros formatos e importar outro calendário.</para>
 
 <para
 >No seu modo básico, o &konsolekalendar; mostra a lista de eventos no seu calendário padrão para o dia atual (das 7:00 às 17:00).</para>
@@ -162,7 +174,7 @@
 ></listitem>
 <listitem
 ><para
->Importar um calendário existente do &kde;</para
+>Importar um calendário existente</para
 ></listitem>
 </itemizedlist
 ></para>
@@ -186,7 +198,7 @@
 >Neste capítulo você irá aprender um pouco mais sobre os recursos principais do &konsolekalendar; e como poderá controlá-los com os parâmetros da linha de comando (lembre-se que o &konsolekalendar; não é nenhuma interface gráfica; é um programa apenas para a linha de comando).</para>
 
 <para
->Você irá aprender a inserir, remover e modificar os eventos do calendário e a exportá-los para outros formatos de arquivos. A criação e a importação dos calendários do &kde; também será tratada neste capítulo. </para>
+>Você irá aprender a inserir, remover e modificar os eventos do calendário e a exportá-los para outros formatos de arquivos. A criação e a importação dos calendários também será tratada neste capítulo. </para>
 
 <sect1 id="viewing">
 <title
@@ -232,11 +244,11 @@
 >--view</option
 > <option
 >--date <replaceable
->2003-08-18</replaceable
+>2016-08-18</replaceable
 > </option
 > <option
 >--end-date <replaceable
->2003-08-22</replaceable
+>2016-08-22</replaceable
 ></option>
 </userinput
 >
@@ -297,14 +309,28 @@
 >Inserindo Eventos</title>
 
 <para
->O &konsolekalendar; poderá inserir eventos num calendário do &kde; ou recursos de calendário com o argumento da linha de comando <parameter
+>O &konsolekalendar; poderá inserir eventos num calendário ou recursos de calendário com o argumento da linha de comando <parameter
 >--add</parameter
 >. Os eventos que forem inseridos com sucesso serão apresentados imediatamente nos aplicativos de calendário do &kde; (como o &korganizer;).</para>
+
+<para
+>Você tem uma lista de todos os calendários usados e seus id's: </para>
+
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--list-calendars</option
+></userinput
+></screen>
 
 <para>
 <informalexample
 ><para
->No exemplo a seguir será introduzido um evento que começa a 04/06/2003 (4 de Junho de 2003) às 10:00 e a termina às 12:00 com o resumo "Ida ao Médico" no recurso de calendário padrão do usuário:</para>
+>No exemplo a seguir será introduzido um evento que começará dia 04/06/2003 (4 de Junho de 2003) às 10:00 e a terminará às 12:00 com o resumo "Ida ao Médico" no recurso de calendário padrão do usuário com o id 8:</para>
 
 
 <para>
@@ -317,8 +343,10 @@
 > <option
 >--add</option
 > <option
+>--calendar 8</option
+> <option
 >--date <replaceable
->2003-06-04</replaceable
+>2016-12-03</replaceable
 ></option
 > <option
 >--time <replaceable
@@ -330,8 +358,8 @@
 >12:00</replaceable
 ></option
 > <option
->--summary <replaceable
->"Ida ao Médico"</replaceable
+>--resumo <replaceable
+>"Ida ao médico"</replaceable
 ></option
 ></userinput
 ></screen>
@@ -342,7 +370,7 @@
 <para>
 <informalexample
 ><para
->Neste exemplo, um evento de aniversário é adicionado ao calendário padrão do usuário:</para>
+>Neste exemplo, um evento de aniversário é adicionado ao calendário padrão do usuário com o id 8:</para>
 
 <para>
 <screen
@@ -354,17 +382,19 @@
 > <option
 >--add</option
 > <option
+>--calendar 8</option
+> <option
 >--date <replaceable
->2003-06-06</replaceable
+>2016-12-06</replaceable
 ></option
 > <option
 >--summary <replaceable
->"O Meu Aniversário"</replaceable
+>"Meu aniversário"</replaceable
 ></option
 > \
 <option
 >--description <replaceable
->"Grande Festa"</replaceable
+>"Hora da Festa"</replaceable
 ></option
 ></userinput
 ></screen>
@@ -375,9 +405,7 @@
 <para>
 <informalexample
 ><para
->Aqui férias de uma semana são inseridas no calendário compartilhado <replaceable
->férias</replaceable
->:</para>
+>Aqui férias de uma semana são inseridas no calendário com id 8: </para>
 
 <para>
 <screen
@@ -389,25 +417,25 @@
 > <option
 >--add</option
 > <option
->--file <replaceable
->férias.ics</replaceable
+>--calendar <replaceable
+>12</replaceable
 ></option
 > <option
 >--date <replaceable
->2003-08-01</replaceable
+>2017-08-01</replaceable
 ></option
 > \
 <option
 >--end-date <replaceable
->2003-08-07</replaceable
+>2017-08-07</replaceable
 ></option
 > <option
->--summary <replaceable
+>--resumo <replaceable
 >"Férias"</replaceable
 ></option
 > <option
->--description <replaceable
->"Ninguém me vai encontrar!"</replaceable
+>--descrição <replaceable
+>"Ninguém nunca vai me encontrar!"</replaceable
 ></option
 ></userinput
 ></screen>
@@ -422,16 +450,20 @@
 >Removendo Entradas</title>
 
 <para
->O &konsolekalendar; suporta a remoção de itens de um arquivo ou recurso de calendário com o argumento da linha de comando <parameter
+>&konsolekalendar; suporta a remoção ou entrada em um arquivo de calendário ou recurso usando a opção <parameter
 >--delete</parameter
->. Os itens do calendário a serem removidos são identificados pelo seu identificador único em texto (<acronym
+> como argumento na linha de comando. Entradas de calendário podem se removidas especificando-se sua String de Identificação Única (<acronym
 >UID</acronym
->) com a opção <parameter
+>) usando a opçao. <parameter
 >--uid</parameter
->. Os <acronym
+> <acronym
 >UIDs</acronym
-> são obtidos através de uma primeira visualização do eventos com a opção <parameter
+> são encontrados vendo o evento, usando a opção <parameter
 >--view</parameter
+>, <parameter
+>--next</parameter
+> ou a opção <parameter
+>--show-next</parameter
 >.</para>
 
 <para
@@ -537,21 +569,34 @@
 >Criando um Novo Arquivo de Calendário</title>
 
 <para
->O &konsolekalendar; pode ser usado para criar um novo arquivo de calendário do &kde;. Uma vez que você não poderá inserir um item num calendário que não exista, você precisa criar primeiro o arquivo com os argumentos de linha de comando <parameter
->--create</parameter
-> e <parameter
->--file</parameter
+>&konsolekalendar; pode criar novos calendários a partir de arquivos. Você pode criar o calendário usando a opção<option
+>--create</option
+> com o nome do arquivo como argumento. Os arquivos válidos são <acronym
+>iCal</acronym
+> ou <acronym
+>vCal</acronym
 >.</para>
+<para
+>Nota: Você não pode usar a opção <option
+>--dry-run</option
+> para teste, o  recurso poderá ser criado.</para>
+
+<para
+>Nota: &konsolekalendar; precisa de arquivos para funcionar, então nunca apague arquivos manualmente. </para>
+
+<para
+>Nota técnica: &konsolekalendar; esse comando cria um novo recurso <acronym
+>Akonadi</acronym
+> apontado para este arquivo. Isto não impede que você crie vários recursos apontados para o mesmo aquivo. </para>
 
 <para>
 <informalexample
 ><para
->Criar um arquivo de calendário chamado <filename
+>Criar um novo de calendário com um nome existente <filename
 ><replaceable
->/data/share/calendars/férias.ics</replaceable
+>vacation.ics</replaceable
 ></filename
->:</para>
-
+>: </para>
 <para>
 <screen
 ><prompt
@@ -560,16 +605,30 @@
 > <command
 >konsolekalendar</command
 > <option
->--create</option
+>--criar</option
 > <option
->--file <replaceable
->/data/share/calendars/férias.ics</replaceable
+><replaceable
+>vacation.ics</replaceable
 ></option
 ></userinput
 ></screen>
 </para>
 </informalexample>
 </para>
+
+<para
+>O recurso será nomeado <quote
+>férias</quote
+> usando a opção<option
+>--list-calendars</option
+></para>
+
+<para
+>Não pe possível apagr um recurso <acronym
+>Akonadi</acronym
+> com &konsolekalendar;, você deve usar &korganizer; ou <application
+>akonadiconsole</application
+>. </para>
 
 </sect1>
 
@@ -578,7 +637,7 @@
 >Exportando para Outros Formatos</title>
 
 <para
->O &konsolekalendar; poderá exportar um calendário do &kde; para outros formatos conhecidos. A exportação é uma forma especial de visualização. Por padrão, os eventos são visualizados no formato de <quote
+>O &konsolekalendar; poderá exportar um calendário para outros formatos conhecidos. A exportação é uma forma especial de visualização. Por padrão, os eventos são visualizados no formato de <quote
 >texto do &konsolekalendar;</quote
 >. Para alterar o formato de visualização, use o argumento da linha de comando <parameter
 >--export-type</parameter
@@ -641,7 +700,17 @@ UID:
 </para>
 
 <para
->Por exemplo: <informalexample
+>Saída do <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Text</option
+></userinput
+>: <informalexample
 > <screen
 >Data:   Terça-feira 2003-11-01
         08:00 - 09:00
@@ -680,10 +749,20 @@ UID:
 </para>
 
 <para
->Por exemplo: <informalexample
+>Saída do <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Short</option
+></userinput
+>: <informalexample
 > <screen
 >--------------------------------------------------
-Terça-feira 2003-11-01
+Terça-feira 2016-11-29
 08:00 - 09:00   Reunião com o Pessoal, Sala de conferência
                 Reunião com todo o pessoal para discutir o projeto.
 </screen>
@@ -699,66 +778,42 @@ Terça-feira 2003-11-01
 >)</title>
 
 <para
->O Formato de Valores Separados por Vírgulas ('Comma-Separated Value' ou <acronym
->CSV</acronym
->) mostra os valores dos eventos na mesma ordem que o formato de Texto do &konsolekalendar;. A única diferença é que toda a informação fica na mesma linha, com cada campo separado por uma vírgula. Os arquivos exportados poderão ser importados diretamente nos programas de planilha como o &kspread;, o <application
+>O Formato de Valores Separados por Vírgulas mostra os eventos no formato de texto, na mesma ordem do &konsolekalendar;. A única diferença é que toda a informação fica na mesma linha, com cada campo separado por uma vírgula. Os arquivos exportados poderão ser importados diretamente nos programas de planilha como o &calligrasheets;, <application
 >Calc do OpenOffice.org</application
 > e o <application
 >&Microsoft; Excel</application
 >. Do mesmo modo, o formato <acronym
 >CSV</acronym
-> é fácil de processar por outros programas.</para>
+> é fácil de processar com outros programas.</para>
 
 <para
 >O Formato de Valores Separados por Vírgulas (<acronym
 >CSV</acronym
 >) é: <informalexample
 > <screen
->AAAA-MM-DD,HH:MM,AAAA-MM-DD,HH:MM,Sumário,Local,Descrição,UID
+>"Dia da semana, Dia do mês, Ano","HH:MM","Dia da semana, Dia do mês, Ano","HH:MM","Resumo","Localização","Descrição","UID"
 </screen>
 </informalexample>
 </para>
 
 <para
->Por exemplo: <informalexample
+>Saída do<userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>CSV</option
+></userinput
+>: <informalexample
 > <screen
->2003-11-01,08:00,2003-11-01,09:00,Reunião de Pessoal,Sala de Conferências,Encontro na sala grande de conferências \
-com o pessoal todo.,&konsolekalendar;-1128954167.1013
+>"Terça-feiraQ, Novembro 29, 2016","08:00","Terça-feira, Novembro 29, 2016","09:00","Reuniãode de pessoal","Sala de reunião","Meet in the big conference \
+room with the entire staff.","&konsolekalendar;-1924621834.134"
 </screen>
 </informalexample>
 </para>
-
-</sect2>
-
-<sect2 id="html-format">
-<title
->Formato &HTML;</title>
-
-<para
->O formato de exportação em &HTML; irá produzir um arquivo &HTML; válido que poderá ser publicado na <acronym
->WWW</acronym
->. Este formato de exportação não é adequado para o processamento por programas posteriores, mas é muito bom para publicar calendários para uma visualização mais simples.</para>
-
-<para
-><emphasis
->TODO:</emphasis
-> Inserir captura de tela aqui</para>
-
-</sect2>
-
-<sect2 id="html-month-format">
-<title
->Formato <acronym
->HTMLmonth</acronym
-></title>
-
-<para
->Este formato produz um arquivo &HTML; que mostra todos os compromissos nos meses indicados pelo intervalo de datas. Este formato de exportação não é adequado para o processamento por programas posteriores, mas é muito bom para publicar calendários para uma visualização mais simples.</para>
-
-<para
-><emphasis
->TODO:</emphasis
-> Inserir captura de tela aqui</para>
 
 </sect2>
 
@@ -774,15 +829,11 @@ com o pessoal todo.,&konsolekalendar;-1128954167.1013
 <para>
 <informalexample
 ><para
->Para importar o arquivo de calendário <filename
-><replaceable
->outro.ics</replaceable
-></filename
-> para o calendário <filename
-><replaceable
->atual.ics</replaceable
-></filename
-> execute:</para>
+>Para importar o arquivo de calendário <replaceable
+>vacation.ics</replaceable
+> como um calendário de id <replaceable
+>8</replaceable
+> rode:</para>
 
 <para>
 <screen
@@ -792,12 +843,12 @@ com o pessoal todo.,&konsolekalendar;-1128954167.1013
 > <command
 >konsolekalendar</command
 > <option
->--import <replaceable
->outro.ics</replaceable
+>--importar <replaceable
+>vacation.ics</replaceable
 ></option
 > <option
->--file <replaceable
->atual.ics</replaceable
+>--calendar <replaceable
+>8</replaceable
 ></option
 ></userinput
 ></screen>
@@ -827,6 +878,12 @@ com o pessoal todo.,&konsolekalendar;-1128954167.1013
 </row>
 </thead>
 <tbody>
+<row>
+  <entry
+><emphasis
+>Opções gerais:</emphasis
+></entry>
+</row>
 <row>
   <entry
 ><option
@@ -861,6 +918,12 @@ com o pessoal todo.,&konsolekalendar;-1128954167.1013
 </row>
 <row>
   <entry
+><emphasis
+>Opções:</emphasis
+></entry>
+</row>
+<row>
+  <entry
 ><option
 >--verbose</option
 ></entry>
@@ -885,15 +948,33 @@ com o pessoal todo.,&konsolekalendar;-1128954167.1013
 </row>
 <row>
   <entry
+><emphasis
+>Tipo de incidente (esta opção pode ser combinada):</emphasis
+></entry>
+</row>
+<row>
+  <entry
 ><option
->--file</option
-> <replaceable
->&nbsp;arquivo-do-calendário</replaceable
+>--event</option
 ></entry>
   <entry
->Indica um arquivo de calendário a utilizar. <para
->Se não for indicado nada, então será usado o seu recurso do &korganizer; padrão.</para
+>Operar apenas para eventos (Padrão)</entry>
+</row>
+<row>
+  <entry
+><option
+>--todo</option
 ></entry>
+  <entry
+>Operar apenas pora tarefas. (Não implementado)</entry>
+</row>
+<row>
+  <entry
+><option
+>--journal</option
+></entry>
+  <entry
+>Operar apenas para diários. (Não implementado)</entry>
 </row>
 <row>
   <entry
@@ -937,9 +1018,11 @@ com o pessoal todo.,&konsolekalendar;-1128954167.1013
   <entry
 ><option
 >--create</option
-></entry>
+> <replaceable
+>&nbsp;filename</replaceable
+> </entry>
   <entry
->Cria um novo arquivo de calendário, se não existir nenhum.</entry>
+>Criar um novo calendário a partir de um arquivo existente.</entry>
 </row>
 <row>
   <entry
@@ -950,6 +1033,14 @@ com o pessoal todo.,&konsolekalendar;-1128954167.1013
 ></entry>
   <entry
 >Importa este calendário para o calendário principal.</entry>
+</row>
+<row>
+  <entry
+><option
+>--list-calendars</option
+></entry>
+  <entry
+>Lista calendários existentes.</entry>
 </row>
 <row>
   <entry
@@ -1099,6 +1190,18 @@ com o pessoal todo.,&konsolekalendar;-1128954167.1013
 </row>
 <row>
   <entry
+><option
+>--calendar</option
+> <replaceable
+>&nbsp;id</replaceable
+></entry>
+  <entry
+>Especifique um calendário para uso. <para
+>Se não for indicado nada, então será usado o seu recurso do &korganizer; padrão.</para
+></entry>
+</row>
+<row>
+  <entry
 ><emphasis
 >Opções de exportação:</emphasis
 ></entry>
@@ -1140,7 +1243,8 @@ com o pessoal todo.,&konsolekalendar;-1128954167.1013
 <chapter id="faq">
 <title
 >Perguntas e respostas</title>
-&reporting.bugs; &updating.documentation; <qandaset id="faqlist">
+
+<qandaset id="faqlist">
 <qandaentry>
 <question>
 <para
@@ -1313,52 +1417,7 @@ com o pessoal todo.,&konsolekalendar;-1128954167.1013
 >Tradução de Marcus Gama <email
 >marcus.gama@gmail.com</email
 ></para
-> 
-&underFDL; &underGPL; </chapter>
-
-<appendix id="installation">
-<title
->Instalação</title>
-
-<sect1 id="obtaining-application">
-<title
->Como obter o &konsolekalendar;</title>
-&install.intro.documentation; <para
->O &konsolekalendar; está incluído no &kde;4 e não está disponível separadamente. </para>
-
-</sect1>
-
-<sect1 id="requirements">
-<title
->Requisitos</title>
-
-<para
->O &konsolekalendar; precisa que estejam instaladas as bibliotecas-padrão do &kde; (o pacote <filename
->kdelibs</filename
-> e o <filename
->kdepimlibs</filename
->). Para compilar a partir do código, você precisa também dos pacotes de desenvolvimento do &Qt;, <filename
->kdelibs</filename
-> e <filename
->kdepimlibs</filename
->.</para>
-
-<para
->Você pode encontrar uma lista de modificações no arquivo <filename
->ChangeLog</filename
->.</para>
-</sect1>
-
-<sect1 id="configuration">
-<title
->Configuração</title>
-
-<para
->Não é necessária nenhuma configuração especial para preparar o &konsolekalendar; para ser executado no ambiente de trabalho do &kde;.</para>
-
-</sect1>
-
-</appendix>
+> &underFDL; &underGPL; </chapter>
 
 &documentation.index;
 </book>
