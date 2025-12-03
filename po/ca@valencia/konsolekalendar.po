@@ -189,7 +189,7 @@ msgstr "Amb èxit: s'ha suprimit «%1»"
 #: konsolekalendardelete.cpp:69
 #, kde-format
 msgid "Error deleting: \"%1\""
-msgstr "S'ha produït un error en suprimir: «%1»"
+msgstr "S'ha produït un error mentre se suprimia: «%1»"
 
 #: konsolekalendarexports.cpp:59
 #, kde-format
@@ -554,7 +554,8 @@ msgstr "No hi és un UID d'esdeveniment: ha fallat el canvi d'esdeveniment"
 #: main.cpp:746
 #, kde-format
 msgid "No such event UID: delete event failed"
-msgstr "No hi ha l'UID de l'esdeveniment: ha fallat en suprimir l'esdeveniment"
+msgstr ""
+"No hi ha l'UID de l'esdeveniment: ha fallat mentre se suprimia l'esdeveniment"
 
 #: main.cpp:757
 #, kde-format
