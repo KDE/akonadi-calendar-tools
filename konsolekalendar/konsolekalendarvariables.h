@@ -5,7 +5,7 @@
  * SPDX-FileCopyrightText: 2002-2004 Tuukka Pasanen <illuusio@mailcity.com>   *
  * SPDX-FileCopyrightText: 2003-2005 Allen Winter <winter@kde.org>            *
  *                                                                            *
- * SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0 *
+ * SPDX-License-Identifier: GPL-2.0-or-later WITH LicenseRef-Qt-Commercial-exception-1.0 *
  *                                                                            *
  *****************************************************************************/
 
