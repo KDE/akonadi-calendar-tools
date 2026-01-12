@@ -82,7 +82,7 @@ msgstr ""
 #: calendarjanitor.cpp:85
 #, kde-format
 msgid "Error while fetching collections"
-msgstr "S'ha produït un error en recuperar les col·leccions"
+msgstr "S'ha produït un error mentre es recuperaven les col·leccions"
 
 #: calendarjanitor.cpp:99
 #, kde-format
@@ -92,7 +92,7 @@ msgstr "No hi ha cap col·lecció que s'haja de processar."
 #: calendarjanitor.cpp:126
 #, kde-format
 msgid "Error while modifying incidence: %1"
-msgstr "S'ha produït un error en modificar la incidència: %1"
+msgstr "S'ha produït un error mentre es modificava la incidència: %1"
 
 #: calendarjanitor.cpp:131
 #, kde-format
@@ -102,7 +102,7 @@ msgstr "S'ha corregit l'element %1"
 #: calendarjanitor.cpp:147
 #, kde-format
 msgid "Error while deleting incidence: %1"
-msgstr "S'ha produït un error en suprimir la incidència: %1"
+msgstr "S'ha produït un error mentre se suprimia la incidència: %1"
 
 #: calendarjanitor.cpp:151
 #, kde-format
@@ -274,7 +274,7 @@ msgstr "id=%1; resum=«%2»"
 #: main.cpp:40
 #, kde-format
 msgid "Error while parsing %1"
-msgstr "S'ha produït un error en l'anàlisi sintàctica de %1"
+msgstr "S'ha produït un error durant l'anàlisi %1"
 
 #: main.cpp:41
 #, kde-format
