@@ -38,28 +38,24 @@ msgid "(Read only)"
 msgstr ""
 
 #: konsolekalendar.cpp:142
-#, fuzzy, kde-format
-#| msgid "Create Calendar &lt;Dry Run&gt;: %1"
+#, kde-format
 msgid "Create Calendar <Dry Run>: %1"
-msgstr "Cruthaigh Féilire &lt;Rith Trialach&gt;: %1"
+msgstr ""
 
 #: konsolekalendar.cpp:148
-#, fuzzy, kde-format
-#| msgid "Create Calendar &lt;Verbose&gt;: %1"
+#, kde-format
 msgid "Create Calendar <Verbose>: %1"
-msgstr "Cruthaigh Féilire &lt;Foclach&gt;: %1"
+msgstr ""
 
 #: konsolekalendar.cpp:167
-#, fuzzy, kde-format
-#| msgid "View Events &lt;Dry Run&gt;:"
+#, kde-format
 msgid "View Events <Dry Run>:"
-msgstr "Amharc Imeachtaí &lt;Rith Trialach&gt;:"
+msgstr ""
 
 #: konsolekalendar.cpp:189
-#, fuzzy, kde-format
-#| msgid "Insert Event <Verbose>:"
+#, kde-format
 msgid "View Event <Verbose>:"
-msgstr "Ionsáigh Imeacht <Foclach>:"
+msgstr ""
 
 #: konsolekalendar.cpp:348 konsolekalendaradd.cpp:175
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
@@ -137,22 +133,19 @@ msgid "Add Event with UID \"%1\". <Verbose>"
 msgstr ""
 
 #: konsolekalendarchange.cpp:50
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Change Event <Dry Run>:"
-msgstr "Ionsáigh Imeacht <Rith Trialach>:"
+msgstr ""
 
 #: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "To Event <Dry Run>:"
-msgstr "Ionsáigh Imeacht <Rith Trialach>:"
+msgstr ""
 
 #: konsolekalendarchange.cpp:59
-#, fuzzy, kde-format
-#| msgid "Insert Event <Verbose>:"
+#, kde-format
 msgid "Change Event <Verbose>:"
-msgstr "Ionsáigh Imeacht <Foclach>:"
+msgstr ""
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -171,16 +164,14 @@ msgid "  UID:   %1"
 msgstr "  Aitheantas Úsáideora:   %1"
 
 #: konsolekalendardelete.cpp:48
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event <Dry Run>:"
-msgstr "Ionsáigh Imeacht <Rith Trialach>:"
+msgstr ""
 
 #: konsolekalendardelete.cpp:54
-#, fuzzy, kde-format
-#| msgid "Insert Event <Verbose>:"
+#, kde-format
 msgid "Delete Event <Verbose>:"
-msgstr "Ionsáigh Imeacht <Foclach>:"
+msgstr ""
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -274,11 +265,10 @@ msgid "Bug fixing"
 msgstr ""
 
 #: main.cpp:66
-#, fuzzy, kde-format
-#| msgid "Allen Winter"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Allen Winter"
-msgstr "Allen Winter"
+msgstr ""
 
 #: main.cpp:66
 #, kde-format
@@ -286,11 +276,10 @@ msgid "Maintainer"
 msgstr "Cothaitheoir"
 
 #: main.cpp:67
-#, fuzzy, kde-format
-#| msgid "Tuukka Pasanen"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Tuukka Pasanen"
-msgstr "Tuukka Pasanen"
+msgstr ""
 
 #: main.cpp:67
 #, kde-format
@@ -328,10 +317,9 @@ msgid "Operate for Journals only [NOT WORKING YET]"
 msgstr ""
 
 #: main.cpp:79
-#, fuzzy, kde-format
-#| msgid "Cannot open specified export file: %1"
+#, kde-format
 msgid "Print incidences in specified export format"
-msgstr "Ní féidir an comhad sonraithe easpórtála a oscailt: %1"
+msgstr ""
 
 #: main.cpp:80
 #, kde-format
@@ -354,10 +342,9 @@ msgid "Create new Akonadi Resource for file"
 msgstr ""
 
 #: main.cpp:85
-#, fuzzy, kde-format
-#| msgid "  Import this calendar to main calendar"
+#, kde-format
 msgid "Import this calendar to main calendar"
-msgstr "  Iompórtáil an féilire seo isteach sa phríomhfhéilire"
+msgstr ""
 
 #: main.cpp:86
 #, kde-format
@@ -370,10 +357,9 @@ msgid "View all calendar entries, ignoring date/time options"
 msgstr ""
 
 #: main.cpp:88
-#, fuzzy, kde-format
-#| msgid "  View next activity in calendar"
+#, kde-format
 msgid "View next activity in calendar"
-msgstr "  Amharc ar an chéad imeacht eile san fhéilire"
+msgstr ""
 
 #: main.cpp:90
 #, kde-format
@@ -386,40 +372,34 @@ msgid "Incidence Unique-string identifier"
 msgstr ""
 
 #: main.cpp:92
-#, fuzzy, kde-format
-#| msgid "  Start from this day [YYYY-MM-DD]"
+#, kde-format
 msgid "Start from this day [YYYY-MM-DD]"
-msgstr "  Tosaigh ón lá seo [BBBB-MM-LL]"
+msgstr ""
 
 #: main.cpp:93
-#, fuzzy, kde-format
-#| msgid "  Start from this time [HH:MM:SS]"
+#, kde-format
 msgid "Start from this time [HH:MM:SS]"
-msgstr "  Tosaigh ag an am seo [UU:NN:SS]"
+msgstr ""
 
 #: main.cpp:94
-#, fuzzy, kde-format
-#| msgid "  Start from this day [YYYY-MM-DD]"
+#, kde-format
 msgid "End at this day [YYYY-MM-DD]"
-msgstr "  Tosaigh ón lá seo [BBBB-MM-LL]"
+msgstr ""
 
 #: main.cpp:95
-#, fuzzy, kde-format
-#| msgid "  Start from this time [HH:MM:SS]"
+#, kde-format
 msgid "End at this time [HH:MM:SS]"
-msgstr "  Tosaigh ag an am seo [UU:NN:SS]"
+msgstr ""
 
 #: main.cpp:97
-#, fuzzy, kde-format
-#| msgid " Start from this time [secs since epoch]"
+#, kde-format
 msgid "Start from this time [secs since epoch]"
-msgstr " Tosaigh ag an am seo [soicindí ón dáta tagartha Unix]"
+msgstr ""
 
 #: main.cpp:99
-#, fuzzy, kde-format
-#| msgid "  End at this time [secs since epoch]"
+#, kde-format
 msgid "End at this time [secs since epoch]"
-msgstr " Deireadh ag an am seo [soicindí ón dáta tagartha Unix]"
+msgstr ""
 
 #: main.cpp:101
 #, kde-format
@@ -570,120 +550,3 @@ msgstr "Ní féidir an comhad sonraithe easpórtála a oscailt: %1"
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr ""
-
-#~ msgid "Sorry, export to HTML by UID is not supported yet"
-#~ msgstr ""
-#~ "Tá brón orm, ní thacaítear le heaspórtáil de réir aitheantas an úsáideora "
-#~ "fós"
-
-#~ msgid "Events:"
-#~ msgstr "Imeachtaí:"
-
-#~ msgid "Events: %1"
-#~ msgstr "Imeachtaí: %1"
-
-#~ msgid "Events: %1 - %2"
-#~ msgstr "Imeachtaí: %1 - %2"
-
-#~ msgctxt "HTML export"
-#~ msgid "  %1"
-#~ msgstr "  %1"
-
-#~ msgctxt "HTMLmonth export"
-#~ msgid "  %1 (like %2, but in a month view)"
-#~ msgstr "  %1 (cosúil le %2, ach níos dlúite)"
-
-#~ msgid "Major operation modes:"
-#~ msgstr "Príomhmhóid oibre:"
-
-#~ msgid "Operation modifiers:"
-#~ msgstr "Bunathraitheoirí oibre:"
-
-#~ msgid "Export options:"
-#~ msgstr "Roghanna Easpórtála:"
-
-#, fuzzy
-#~| msgid ""
-#~| "Examples:\n"
-#~| "  konsolekalendar --view\n"
-#~| "  konsolekalendar --add --date 2003-06-04 --time 10:00 --end-time 12:00 "
-#~| "\\\n"
-#~| "                  --summary \"Doctor Visit\" --description \"Get My Head "
-#~| "Examined\"\n"
-#~| "  konsolekalendar --delete --uid KOrganizer-1740326.803"
-#~ msgid ""
-#~ "Examples:\n"
-#~ "  konsolekalendar --view\n"
-#~ "  konsolekalendar --list-calendars\n"
-#~ "  konsolekalendar --add --calendar 42 --date 2016-12-04 --time 10:00 --"
-#~ "end-time 12:00 \\\n"
-#~ "                  --summary \"Doctor Visit\" --description \"Get My Head "
-#~ "Examined\"\n"
-#~ "  konsolekalendar --delete --uid KOrganizer-1740326.803"
-#~ msgstr ""
-#~ "Samplaí:\n"
-#~ "  konsolekalendar --view\n"
-#~ "  konsolekalendar --add --date 2003-06-04 --time 10:00 --end-time 12:00 "
-#~ "\\\n"
-#~ "                  --summary \"Coinne le dochtúir\" --description \"I "
-#~ "dtosach na haicíde is fusa í a leigheas\"\n"
-#~ "  konsolekalendar --delete --uid KOrganizer-1740326.803"
-
-#, fuzzy
-#~| msgid ""
-#~| "For more information visit the program home page at:\n"
-#~| "  http://pim.kde.org/components/konsolekalendar.php"
-#~ msgid ""
-#~ "For more information visit the program home page at:\n"
-#~ "  https://userbase.kde.org/KonsoleKalendar"
-#~ msgstr ""
-#~ "Chun tuilleadh eolais a fháil, féach ar an leathanach baile:\n"
-#~ "  http://pim.kde.org/components/konsolekalendar.php"
-
-#~ msgid "  Create new calendar file if one does not exist"
-#~ msgstr "  Cruthaigh comhad nua féilire mura bhfuil ceann ann cheana"
-
-#~ msgid "View Event &lt;Verbose&gt;:"
-#~ msgstr "Amharc Imeacht &lt;Foclach&gt;:"
-
-#~ msgid "Insert Event &lt;Dry Run&gt;:"
-#~ msgstr "Ionsáigh Imeacht &lt;Rith Trialach&gt;:"
-
-#~ msgid "Insert Event &lt;Verbose&gt;:"
-#~ msgstr "Ionsáigh Imeacht &lt;Foclach&gt;:"
-
-#~ msgid "Change Event &lt;Dry Run&gt;:"
-#~ msgstr "Athraigh Imeacht &lt;Rith Trialach&gt;:"
-
-#~ msgid "To Event &lt;Dry Run&gt;:"
-#~ msgstr "Amharc Imeachtaí &lt;Rith Trialach&gt;:"
-
-#~ msgid "Change Event &lt;Verbose&gt;:"
-#~ msgstr "Athraigh Imeacht &lt;Foclach&gt;:"
-
-#~ msgid "Delete Event &lt;Dry Run&gt;:"
-#~ msgstr "Scrios Imeacht &lt;Rith Trialach&gt;:"
-
-#~ msgid "Delete Event &lt;Verbose&gt;:"
-#~ msgstr "Scrios Imeacht &lt;Foclach&gt;:"
-
-#~ msgid "Calendar %1 already exists"
-#~ msgstr "Tá féilire %1 ann cheana"
-
-#~ msgid "Unable to create calendar: %1"
-#~ msgstr "Ní féidir féilire a chruthú: %1"
-
-#~ msgid "Calendar file not found %1"
-#~ msgstr "Comhad féilire gan aimsiú %1"
-
-#~ msgid "Try --create to create new calendar file"
-#~ msgstr "Bain triail as --create chun comhad nua féilire a chruthú"
-
-#~ msgid "Active Calendar"
-#~ msgstr "Féilire Bheo"
-
-#~ msgid "Default Calendar"
-#~ msgstr "Féilire Réamhshocraithe"
-
-#~ msgid "Primary Author"
-#~ msgstr "Príomhúdar"
