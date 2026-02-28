@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2013, 2017, 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2024-05-29 11:29+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-02-11 17:01+0100\n"
+"Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
+"Language-Team: \n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,8 +32,9 @@ msgstr "vit@pelcak.org"
 #, kde-format
 msgid "Backup was successful. %1 incidence was saved."
 msgid_plural "Backup was successful. %1 incidences were saved."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Zálohování bylo úspěšné. Byla uložena %1 položka."
+msgstr[1] "Zálohování bylo úspěšné. Byly uloženy %1 položky."
+msgstr[2] "Zálohování bylo úspěšné. Bylo uloženo %1 položek."
 
 #: backuper.cpp:56
 #, kde-format
@@ -47,7 +49,7 @@ msgstr "Zálohování již probíhá."
 #: backuper.cpp:64
 #, kde-format
 msgid "Backing up your calendar data..."
-msgstr ""
+msgstr "Zálohování dat kalendáře..."
 
 #: backuper.cpp:97
 #, kde-format
@@ -57,7 +59,7 @@ msgstr "Není co zálohovat."
 #: backuper.cpp:108 calendarjanitor.cpp:173
 #, kde-format
 msgid "Processing collection %1 (id=%2)..."
-msgstr ""
+msgstr "Zpracování sbírky %1 (id=%2)..."
 
 #: backuper.cpp:138
 #, kde-format
@@ -70,21 +72,23 @@ msgid ""
 "Bailing out. Fix your akonadi setup first. These kind of errors should not "
 "happen."
 msgstr ""
+"Záchrana. Nejprve opravte nastavení akonadi. K takovýmto chybám by nemělo "
+"docházet."
 
 #: calendarjanitor.cpp:85
 #, kde-format
 msgid "Error while fetching collections"
-msgstr ""
+msgstr "Chyba při načítání sbírek"
 
 #: calendarjanitor.cpp:99
 #, kde-format
 msgid "There are no collections to process."
-msgstr ""
+msgstr "Nejsou žádné sbírky ke zpracování."
 
 #: calendarjanitor.cpp:126
 #, kde-format
 msgid "Error while modifying incidence: %1"
-msgstr ""
+msgstr "Chyba při úpravě položky: %1"
 
 #: calendarjanitor.cpp:131
 #, kde-format
@@ -94,7 +98,7 @@ msgstr "Opravena položka %1"
 #: calendarjanitor.cpp:147
 #, kde-format
 msgid "Error while deleting incidence: %1"
-msgstr ""
+msgstr "Chyba při smazání položky: %1"
 
 #: calendarjanitor.cpp:151
 #, kde-format
@@ -104,72 +108,72 @@ msgstr "Smazána položka %1"
 #: calendarjanitor.cpp:177
 #, kde-format
 msgid "Collection is read only, disabling fix mode."
-msgstr ""
+msgstr "Sbírka je pouze pro čtení, režim oprav je deaktivován."
 
 #: calendarjanitor.cpp:179
 #, kde-format
 msgid "Collection is read only, skipping it."
-msgstr ""
+msgstr "Sbírka je pouze pro čtení, přeskočí se."
 
 #: calendarjanitor.cpp:187
 #, kde-format
 msgid "Collection is empty, ignoring it."
-msgstr ""
+msgstr "Sbírka je prázdná, ignoruje se."
 
 #: calendarjanitor.cpp:255
 #, kde-format
 msgid "Checking for incidences with empty summary and description..."
-msgstr ""
+msgstr "Kontrola výskytu položek s prázdným shrnutím a popisem..."
 
 #: calendarjanitor.cpp:270
 #, kde-format
 msgid "Checking for incidences with empty UID..."
-msgstr ""
+msgstr "Kontrola výskytu prázdných UID..."
 
 #: calendarjanitor.cpp:289
 #, kde-format
 msgid "Checking for events with invalid DTSTART..."
-msgstr ""
+msgstr "Kontrola událostí s neplatným DTSTART..."
 
 #: calendarjanitor.cpp:326
 #, kde-format
 msgid "Checking for recurring to-dos with invalid DTSTART..."
-msgstr ""
+msgstr "Kontrola opakujících se úkolů s neplatným DTSTART..."
 
 #: calendarjanitor.cpp:362
 #, kde-format
 msgid "Checking for journals with invalid DTSTART..."
-msgstr ""
+msgstr "Kontrola deníků s neplatným DTSTART..."
 
 #: calendarjanitor.cpp:383
 #, kde-format
 msgid "Checking for orphans..."
-msgstr ""
+msgstr "Kontrola osiřelých položek..."
 
 #: calendarjanitor.cpp:389
 #, kde-format
 msgid "The following incidences are children of nonexistent parents"
-msgstr ""
+msgstr "Následující případy jsou potomky neexistujících rodičů"
 
 #: calendarjanitor.cpp:398
 #, kde-format
 msgid "In fix mode these children will be unparented."
-msgstr ""
+msgstr "V opravném režimu budou tito potomci bez rodičů."
 
 #: calendarjanitor.cpp:398
 #, kde-format
 msgid "Children were successfully unparented."
-msgstr ""
+msgstr "Potomci byli úspěšně odloučeni od rodičů."
 
 #: calendarjanitor.cpp:403
 #, kde-format
 msgid "Checking for duplicate UIDs..."
-msgstr ""
+msgstr "Kontrola duplicitních UID..."
 
 #: calendarjanitor.cpp:460
 #, kde-format
 msgid "Gathering statistics..."
-msgstr ""
+msgstr "Shromažďování statistik..."
 
 #: calendarjanitor.cpp:498
 #, kde-format
@@ -189,53 +193,53 @@ msgstr "Deníky"
 #: calendarjanitor.cpp:501
 #, kde-format
 msgid "Passed events and to-dos (>365 days)"
-msgstr ""
+msgstr "Uplynulé události a úkoly (>365 dní)"
 
 #: calendarjanitor.cpp:502
 #, kde-format
 msgid "Old incidences with alarms"
-msgstr ""
+msgstr "Staré položky s alarmy"
 
 #: calendarjanitor.cpp:503
 #, kde-format
 msgid "Inline attachments"
-msgstr ""
+msgstr "Vložené přílohy"
 
 #: calendarjanitor.cpp:504
 #, kde-format
 msgid "Items with empty remote id [!!]"
-msgstr ""
+msgstr "Položky s prázdným vzdáleným ID [!!]"
 
 #: calendarjanitor.cpp:507
 #, kde-format
 msgid "Total size of inline attachments (bytes)"
-msgstr ""
+msgstr "Celková velikost vložených příloh (bajty)"
 
 #: calendarjanitor.cpp:509
 #, kde-format
 msgid "Total size of inline attachments (KB)"
-msgstr ""
+msgstr "Celková velikost vložených příloh (KB)"
 
 #: calendarjanitor.cpp:521
 #, kde-format
 msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
-msgstr ""
+msgstr "Kontrola výskytu RECURRING-ID s neexistující hlavní položkou..."
 
 #: calendarjanitor.cpp:562
 #, kde-format
 msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
-msgstr ""
+msgstr "V opravném režimu bude vlastnost RECURRING-ID zrušena a UID změněno."
 
 #: calendarjanitor.cpp:562
 #, kde-format
 msgid "Recurrence cleared."
-msgstr ""
+msgstr "Opakování vyčištěno."
 
 #: calendarjanitor.cpp:567
 #, kde-format
 msgid "Deleting alarms older than 365 days..."
-msgstr ""
+msgstr "Mazání alarmů starších než 365 dní..."
 
 #: calendarjanitor.cpp:585 calendarjanitor.cpp:599
 #, kde-format
@@ -250,12 +254,12 @@ msgstr "opakující se"
 #: calendarjanitor.cpp:620
 #, kde-format
 msgid "Found buggy incidence:"
-msgstr ""
+msgstr "Nalezena chybná položka:"
 
 #: calendarjanitor.cpp:621
 #, kde-format
 msgid "id=%1; summary=\"%2\""
-msgstr ""
+msgstr "id=%1; summary=\"%2\""
 
 #: main.cpp:40
 #, kde-format
@@ -265,12 +269,12 @@ msgstr "Chyba při rozboru %1"
 #: main.cpp:41
 #, kde-format
 msgid "Example usage: %1"
-msgstr ""
+msgstr "Příklad použití: %1"
 
 #: main.cpp:61
 #, kde-format
 msgid "CalendarJanitor"
-msgstr ""
+msgstr "CalendarJanitor"
 
 #: main.cpp:63
 #, kde-format
@@ -287,26 +291,27 @@ msgstr "Správce"
 #, kde-format
 msgid "A command line interface to report and fix errors in your calendar data"
 msgstr ""
+"Rozhraní příkazového řádku pro hlášení a opravu chyb v datech kalendáře"
 
 #: main.cpp:69
 #, kde-format
 msgid "Comma-separated list of collection ids to scan"
-msgstr ""
+msgstr "Seznam identifikátorů sbírek k prohledání, oddělených čárkami"
 
 #: main.cpp:70
 #, kde-format
 msgid "Fix broken incidences"
-msgstr ""
+msgstr "Opravit nefunkční položky"
 
 #: main.cpp:71
 #, kde-format
 msgid "Backup your calendar"
-msgstr ""
+msgstr "Zálohujte svůj kalendář"
 
 #: main.cpp:72
 #, kde-format
 msgid "Delete alarms older than 365 days"
-msgstr ""
+msgstr "Odstranit alarmy starší než 365 dní"
 
 #: main.cpp:104
 #, kde-format
@@ -331,9 +336,9 @@ msgstr "Běží v opravném režimu."
 #: main.cpp:129
 #, kde-format
 msgid "Please specify a output file."
-msgstr ""
+msgstr "Zadejte výstupní soubor."
 
 #: main.cpp:134
 #, kde-format
 msgid "Running in scan only mode."
-msgstr ""
+msgstr "Běh v režimu \"pouze skenování\"."
