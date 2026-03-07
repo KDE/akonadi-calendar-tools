@@ -87,7 +87,7 @@ bool KonsoleKalendarAdd::addEvent()
             changer->setShowDialogsOnError(false);
             Akonadi::Collection collection = m_variables->collectionId() != -1
                 ? Akonadi::Collection(m_variables->collectionId())
-                : Akonadi::Collection(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
+                : Akonadi::Collection(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
 
             if (!collection.isValid()) {
                 cout << i18n("Calendar is invalid. Please specify one with --calendar").toLocal8Bit().data() << "\n";
@@ -126,8 +126,9 @@ bool KonsoleKalendarAdd::addImportedCalendar()
     if (!m_variables->allowGui()) {
         Akonadi::IncidenceChanger *changer = calendar->incidenceChanger();
         changer->setShowDialogsOnError(false);
-        Akonadi::Collection collection = m_variables->collectionId() != -1 ? Akonadi::Collection(m_variables->collectionId())
-                                                                           : Akonadi::Collection(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
+        Akonadi::Collection collection = m_variables->collectionId() != -1
+            ? Akonadi::Collection(m_variables->collectionId())
+            : Akonadi::Collection(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
 
         if (!collection.isValid()) {
             cout << i18n("Calendar is invalid. Please specify one with --calendar").toLocal8Bit().data() << "\n";
