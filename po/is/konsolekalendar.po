@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-03-08 00:46+0000\n"
 "PO-Revision-Date: 2025-12-02 10:39+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -69,40 +69,40 @@ msgstr "Skoða viðburði <Dry Run>:"
 msgid "View Event <Verbose>:"
 msgstr "Skoða viðburð <Verbose>:"
 
-#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:175
+#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Hvað:  %1"
 
-#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:177
+#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Upphaf: %1"
 
-#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:179
+#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Endir:  %1"
 
-#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:182
+#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  Enginn tími skráður á viðburð"
 
-#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:185
+#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Lýsing:  %1"
 
-#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:187
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -119,7 +119,7 @@ msgstr "Setja inn viðburð <Dry Run>:"
 msgid "Insert Event <Verbose>:"
 msgstr "Setja inn viðburð <Verbose>:"
 
-#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:133
+#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
 msgid "Calendar is invalid. Please specify one with --calendar"
 msgstr "Dagatalið er ógilt. Tilgreindu eitt slíkt með --calendar"
@@ -134,12 +134,12 @@ msgstr "Tókst: \"%1\" sett inn"
 msgid "Failure: \"%1\" not inserted"
 msgstr "Villa: \"%1\" ekki sett inn"
 
-#: konsolekalendaradd.cpp:147
+#: konsolekalendaradd.cpp:148
 #, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
 msgstr "Hætt við að setja inn viðburð, auðkennið \"%1\" er nú þekkt. <Verbose>"
 
-#: konsolekalendaradd.cpp:154
+#: konsolekalendaradd.cpp:155
 #, kde-format
 msgid "Add Event with UID \"%1\". <Verbose>"
 msgstr "Bæta við viðburði með auðkennið \"%1\". <Verbose>"

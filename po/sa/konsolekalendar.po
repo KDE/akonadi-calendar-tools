@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-03-08 00:46+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -59,40 +59,40 @@ msgstr "घटनाः पश्यन्तु <Dry Run>:"
 msgid "View Event <Verbose>:"
 msgstr "इवेण्ट् <Verbose> पश्यन्तु:"
 
-#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:175
+#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  किम् : %1"
 
-#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:177
+#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  आरभत: %1"
 
-#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:179
+#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  समाप्तिः %1"
 
-#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:182
+#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  घटनासम्बद्धः समयः नास्ति"
 
-#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:185
+#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Desc: %1"
 
-#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:187
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "इवेण्ट् <शुष्क चालन> सम्मिल�
 msgid "Insert Event <Verbose>:"
 msgstr "इवेण्ट् <Verbose> सम्मिलितं कुर्वन्तु:"
 
-#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:133
+#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
 msgid "Calendar is invalid. Please specify one with --calendar"
 msgstr "पञ्चाङ्गम् अमान्यम् अस्ति। कृपया --calendar इत्यनेन सह एकं निर्दिशन्तु"
@@ -124,12 +124,12 @@ msgstr "सफलता: \"%1\" सम्मिलितम्"
 msgid "Failure: \"%1\" not inserted"
 msgstr "असफलता: \"%1\" न सम्मिलितम्"
 
-#: konsolekalendaradd.cpp:147
+#: konsolekalendaradd.cpp:148
 #, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
 msgstr "Insert Event त्यक्तम्, यतः UID \"%1\" पूर्वमेव ज्ञातम् अस्ति । <वार्बोज>"
 
-#: konsolekalendaradd.cpp:154
+#: konsolekalendaradd.cpp:155
 #, kde-format
 msgid "Add Event with UID \"%1\". <Verbose>"
 msgstr "UID \"%1\" इत्यनेन सह इवेण्ट् योजयन्तु । <वार्बोज>"

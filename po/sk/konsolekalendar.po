@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-03-08 00:46+0000\n"
 "PO-Revision-Date: 2019-07-12 18:16+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -59,40 +59,40 @@ msgstr "Zobraziť udalosti <Dry Run>:"
 msgid "View Event <Verbose>:"
 msgstr "Zobraziť udalosť <Verbose>:"
 
-#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:175
+#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Čo:  %1"
 
-#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:177
+#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Začiatok: %1"
 
-#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:179
+#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Koniec:  %1"
 
-#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:182
+#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  Pre udalosť nie je zadaný čas"
 
-#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:185
+#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Popis: %1"
 
-#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:187
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "Vložiť udalosť <Dry Run>:"
 msgid "Insert Event <Verbose>:"
 msgstr "Vložiť udalosť <Verbose>:"
 
-#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:133
+#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
 msgid "Calendar is invalid. Please specify one with --calendar"
 msgstr "Kalendár je neplatný. Prosím určite jeden pomocou --calendar"
@@ -124,13 +124,13 @@ msgstr "Úspech: \"%1\" vložená"
 msgid "Failure: \"%1\" not inserted"
 msgstr "Zlyhanie: \"%1\" nevložená"
 
-#: konsolekalendaradd.cpp:147
+#: konsolekalendaradd.cpp:148
 #, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
 msgstr ""
 "Vloženie udalosti preskočené, pretože UID \"%1\" je už známe. <Verbose>"
 
-#: konsolekalendaradd.cpp:154
+#: konsolekalendaradd.cpp:155
 #, kde-format
 msgid "Add Event with UID \"%1\". <Verbose>"
 msgstr "Pridať udalosť s UID \"%1\". <Verbose>"
