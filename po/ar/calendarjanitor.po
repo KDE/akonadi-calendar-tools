@@ -161,12 +161,12 @@ msgstr "الحدوثات الآتية أبناء لآباء غير موجودة"
 #: calendarjanitor.cpp:398
 #, kde-format
 msgid "In fix mode these children will be unparented."
-msgstr "سيُزال الأبّ عن الأبناء في وضع الإصلاح."
+msgstr "سيُزال الأب عن الأبناء في وضع الإصلاح."
 
 #: calendarjanitor.cpp:398
 #, kde-format
 msgid "Children were successfully unparented."
-msgstr "أُزيل الأبّ عن الأبناء بنجاح."
+msgstr "أُزيل الأب عن الأبناء بنجاح."
 
 #: calendarjanitor.cpp:403
 #, kde-format
