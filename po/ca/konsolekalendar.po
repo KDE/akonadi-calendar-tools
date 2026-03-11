@@ -565,23 +565,3 @@ msgstr "No es pot obrir el fitxer d'exportació especificat: %1"
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "No s'ha pogut crear un recurs l'Akonadi des del fitxer: %1"
-
-#~ msgid "Sorry, export to HTML by UID is not supported yet"
-#~ msgstr "L'exportació a HTML pels UID encara no funciona"
-
-#~ msgid "Events:"
-#~ msgstr "Esdeveniments:"
-
-#~ msgid "Events: %1"
-#~ msgstr "Esdeveniments: %1"
-
-#~ msgid "Events: %1 - %2"
-#~ msgstr "Esdeveniments: %1 - %2"
-
-#~ msgctxt "HTML export"
-#~ msgid "  %1"
-#~ msgstr "  %1"
-
-#~ msgctxt "HTMLmonth export"
-#~ msgid "  %1 (like %2, but in a month view)"
-#~ msgstr "  %1 (com el %2, però amb vista mensual)"
