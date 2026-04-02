@@ -30,7 +30,7 @@ include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
 set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION rc)
+set(KDEPIM_DEV_VERSION)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
