@@ -5,4 +5,4 @@ Here are some nice example scripts how to use konsolekalendar.
    You need lynx and the Date::Calc to use this script
    (you can install Date::Calc using 'perl -MCPAN -e 'install Date::Calc')
 
- * testkalendar.sh is crappy test script.. 
+ * testkalendar.sh is crappy test script..

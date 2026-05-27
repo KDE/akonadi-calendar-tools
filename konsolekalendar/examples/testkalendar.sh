@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ##########################################################################################
 #
 #  ***************************************************************************
@@ -30,7 +30,7 @@ while [  $DATE -lt 29 ];  do
 
 
 COMMAND="$KONSOLEKALENDAR $1 --time $HOUR:$MINUTE --description $3 --summary $3 --date $YEAR-$MONTH-$DATE --create --file=$2"
-echo using command $COMMAND
+echo using command "$COMMAND"
 $COMMAND
 
 echo "################################ TEXT ##################################"
@@ -45,8 +45,8 @@ echo "################################ ORG ##################################"
 COMMAND="$KONSOLEKALENDAR --view --time $HOUR:$MINUTE --date $YEAR-$MONTH-$DATE --export-type Text-organizer --file=$2"
 $COMMAND
 
-let DATE=$DATE+1
-let MINUTE=$MINUTE+1
+DATE=$((DATE + 1))
+MINUTE=$((MINUTE + 1))
 
 done
 }
@@ -56,14 +56,11 @@ KONSOLEKALENDAR=../konsolekalendar
 ADDING="--add"
 REMOVE="--delete"
 CHANGE="--change"
-VIEW="--view"
 
-COMMAND="";
+COMMAND=""
 
 FILE="./testcaledar.ics"
 
 do_test $ADDING $FILE "ADD"
 do_test $CHANGE $FILE "CHANGE"
 do_test $REMOVE $FILE "REMOVE"
-
-

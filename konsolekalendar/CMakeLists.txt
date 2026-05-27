@@ -1,28 +1,34 @@
-
-add_subdirectory(pics) 
+add_subdirectory(pics)
 
 add_executable(konsolekalendar)
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(konsolekalendar PROPERTIES UNITY_BUILD ON)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(
+        konsolekalendar
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
-target_sources(konsolekalendar PRIVATE
-    konsolekalendarepoch.cpp
-    konsolekalendardelete.cpp
-    konsolekalendarchange.cpp
-    konsolekalendarvariables.cpp
-    konsolekalendaradd.cpp
-    konsolekalendarexports.cpp
-    konsolekalendar.cpp
-    konsolekalendarepoch.h
-    konsolekalendardelete.h
-    konsolekalendarchange.h
-    konsolekalendarvariables.h
-    konsolekalendaradd.h
-    konsolekalendarexports.h
-    konsolekalendar.h
-
-    main.cpp )
+target_sources(
+    konsolekalendar
+    PRIVATE
+        konsolekalendarepoch.cpp
+        konsolekalendardelete.cpp
+        konsolekalendarchange.cpp
+        konsolekalendarvariables.cpp
+        konsolekalendaradd.cpp
+        konsolekalendarexports.cpp
+        konsolekalendar.cpp
+        konsolekalendarepoch.h
+        konsolekalendardelete.h
+        konsolekalendarchange.h
+        konsolekalendarvariables.h
+        konsolekalendaradd.h
+        konsolekalendarexports.h
+        konsolekalendar.h
+        main.cpp
+)
 
 ecm_qt_declare_logging_category(konsolekalendar
     HEADER konsolekalendar_debug.h
@@ -31,9 +37,10 @@ ecm_qt_declare_logging_category(konsolekalendar
     DESCRIPTION "console (konsolekalendar)"
     OLD_CATEGORY_NAMES log_konsolekalendar
     EXPORT AKONADICALENDARTOOLS
-    )
+)
 
-target_link_libraries(konsolekalendar
+target_link_libraries(
+    konsolekalendar
     Qt::DBus
     KF6::CalendarCore
     KF6::ConfigGui
@@ -42,10 +49,12 @@ target_link_libraries(konsolekalendar
     KF6::I18n
 )
 
-install(TARGETS konsolekalendar  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-
+install(
+    TARGETS
+        konsolekalendar
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+)
 
 ########### install files ###############
 
-install( PROGRAMS konsolekalendar.desktop  DESTINATION ${KDE_INSTALL_APPDIR})
-
+install(PROGRAMS konsolekalendar.desktop DESTINATION ${KDE_INSTALL_APPDIR})

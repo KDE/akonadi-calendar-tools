@@ -21,7 +21,7 @@ public:
     Akonadi::Collection::List collections() const;
 
 Q_SIGNALS:
-    void loaded(bool succcess);
+    void loaded(bool success);
 
 private Q_SLOTS:
     void onCollectionsLoaded(KJob *);

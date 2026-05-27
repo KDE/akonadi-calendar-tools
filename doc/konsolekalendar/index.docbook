@@ -265,7 +265,7 @@ using the <parameter>--view</parameter>, <parameter>--next</parameter>
 or <parameter>--show-next</parameter> options.</para>
 
 <para>
-Changing behaves in the same way as inserting: you can change an event's start date 
+Changing behaves in the same way as inserting: you can change an event's start date
 and time, end date and time, summary, location, and description.  Events
 successfully changed will be immediately shown modified within &kde; calendar
 applications (&korganizer;).</para>
