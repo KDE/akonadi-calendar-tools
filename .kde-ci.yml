@@ -11,4 +11,8 @@ Dependencies:
     'pim/calendarsupport' : '@same'
 
 Options:
- require-passing-tests-on: ['@all']
+  require-passing-tests-on: ['@all']
+  cppcheck-arguments:
+    - --enable=warning,performance,portability,style
+    - --suppress-xml=cppcheck-suppressions.xml
+  require-cppcheck-clean: true
