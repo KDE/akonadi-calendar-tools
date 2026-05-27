@@ -99,7 +99,7 @@ private:
     /**
      * Creates an akonadi resource of type ical.
      */
-    bool createAkonadiResource(const QString &icalFileUri);
+    static bool createAkonadiResource(const QString &icalFileUri);
 
     /**
      * Prints event list in many formats

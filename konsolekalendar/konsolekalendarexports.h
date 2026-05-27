@@ -46,7 +46,7 @@ public:
      * @param event pointer to the Event to export.
      * @param date is the QDate to be exported for.
      */
-    bool exportAsTxt(QTextStream *ts, const KCalendarCore::Event::Ptr &event, const QDate &date);
+    static bool exportAsTxt(QTextStream *ts, const KCalendarCore::Event::Ptr &event, const QDate &date);
 
     /**
      * Export the Event in Short Text Mode.
@@ -56,7 +56,7 @@ public:
      * @param sameday flags that this Event is on the same date as the
      * previously exported Event.
      */
-    bool exportAsTxtShort(QTextStream *ts, const KCalendarCore::Event::Ptr &event, const QDate &date, bool sameday);
+    static bool exportAsTxtShort(QTextStream *ts, const KCalendarCore::Event::Ptr &event, const QDate &date, bool sameday);
 
     /**
      * Export the Event in Comma-Separated Values (CSV) Mode.
@@ -64,7 +64,7 @@ public:
      * @param event pointer to the Event to export.
      * @param date is the QDate to be exported for.
      */
-    bool exportAsCSV(QTextStream *ts, const KCalendarCore::Event::Ptr &event, const QDate &date);
+    static bool exportAsCSV(QTextStream *ts, const KCalendarCore::Event::Ptr &event, const QDate &date);
 
 private:
     //@cond PRIVATE
@@ -79,5 +79,5 @@ private:
      * @param field is the field value to be processed.
      * @param dquote is a QString containing the double quote character.
      */
-    QString processField(const QString &field, const QString &dquote);
+    static QString processField(const QString &field, const QString &dquote);
 };
