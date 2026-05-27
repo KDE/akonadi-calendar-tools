@@ -52,7 +52,7 @@ my ($year, $month, $d) = Today();
 my ($mmonth) = Month_to_Text($month);
 
 #location of TCM monthly calendar web page
-my ($TCM) = "http://www.turnerclassicmovies.com/Schedule/Print/0,,$month-$year|0|,00.html";
+my ($TCM) = "https://www.tcm.com/Schedule/Print/0,,$month-$year|0|,00.html";
 print "Processing $TCM ...\n";
 
 if (open(GET, "lynx -dump -nolist -connect_timeout=3 '$TCM'|")) {
