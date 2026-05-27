@@ -41,8 +41,8 @@ void CollectionLoader::onCollectionsLoaded(KJob *job)
         Q_ASSERT(cfj);
         const QStringList mimetypes = KCalendarCore::Incidence::mimeTypes();
         QSet<QString> mimeTypeSet = QSet<QString>(mimetypes.begin(), mimetypes.end());
-        const auto collections = cfj->collections();
-        for (const Akonadi::Collection &collection : collections) {
+        const auto loadedCollections = cfj->collections();
+        for (const Akonadi::Collection &collection : loadedCollections) {
             const QStringList contentMimeTypesLst = collection.contentMimeTypes();
             QSet<QString> collectionMimeTypeSet = QSet<QString>(contentMimeTypesLst.begin(), contentMimeTypesLst.end());
             if (mimeTypeSet.intersects(collectionMimeTypeSet)) {

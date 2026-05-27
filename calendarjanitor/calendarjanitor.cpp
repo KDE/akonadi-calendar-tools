@@ -294,15 +294,15 @@ void CalendarJanitor::sanityCheck3()
             continue;
         }
 
-        QDateTime start = event->dtStart();
-        QDateTime end = event->dtEnd();
+        QDateTime startDt = event->dtStart();
+        QDateTime endDt = event->dtEnd();
 
         bool modify = false;
-        if (!start.isValid() && end.isValid()) {
+        if (!startDt.isValid() && endDt.isValid()) {
             modify = true;
             printFound(item);
-            event->setDtStart(end);
-        } else if (!start.isValid() && !end.isValid()) {
+            event->setDtStart(endDt);
+        } else if (!startDt.isValid() && !endDt.isValid()) {
             modify = true;
             printFound(item);
             event->setDtStart(QDateTime::currentDateTime());
@@ -330,16 +330,16 @@ void CalendarJanitor::sanityCheck4()
             continue;
         }
 
-        QDateTime start = todo->dtStart();
-        QDateTime due = todo->dtDue();
+        QDateTime startDt = todo->dtStart();
+        QDateTime dueDt = todo->dtDue();
         bool modify = false;
-        if (todo->recurs() && !start.isValid() && due.isValid()) {
+        if (todo->recurs() && !startDt.isValid() && dueDt.isValid()) {
             modify = true;
             printFound(item);
-            todo->setDtStart(due);
+            todo->setDtStart(dueDt);
         }
 
-        if (todo->recurs() && !start.isValid() && !due.isValid()) {
+        if (todo->recurs() && !startDt.isValid() && !dueDt.isValid()) {
             modify = true;
             printFound(item);
             todo->setDtStart(QDateTime::currentDateTime());
@@ -526,23 +526,23 @@ void CalendarJanitor::sanityCheck9()
                 bool modified = false;
 
                 QDateTime recId = incidence->recurrenceId();
-                QDateTime start = incidence->dtStart();
-                QDateTime end = incidence->dateTime(KCalendarCore::Incidence::RoleEnd);
+                QDateTime startDt = incidence->dtStart();
+                QDateTime endDt = incidence->dateTime(KCalendarCore::Incidence::RoleEnd);
 
                 KCalendarCore::Event::Ptr event = incidence.dynamicCast<KCalendarCore::Event>();
                 KCalendarCore::Todo::Ptr todo = incidence.dynamicCast<KCalendarCore::Todo>();
 
-                if (event && start.isValid() && end.isValid()) {
+                if (event && startDt.isValid() && endDt.isValid()) {
                     modified = true;
-                    const int duration = start.daysTo(end.toTimeZone(start.timeZone()));
+                    const int duration = startDt.daysTo(endDt.toTimeZone(startDt.timeZone()));
                     incidence->setDtStart(recId);
                     event->setDtEnd(recId.addDays(duration));
-                } else if (todo && start.isValid()) {
+                } else if (todo && startDt.isValid()) {
                     modified = true;
                     incidence->setDtStart(recId);
 
-                    if (end.isValid()) {
-                        const int duration = start.daysTo(end.toTimeZone(start.timeZone()));
+                    if (endDt.isValid()) {
+                        const int duration = startDt.daysTo(endDt.toTimeZone(startDt.timeZone()));
                         todo->setDtDue(recId.addDays(duration));
                     }
                 }
