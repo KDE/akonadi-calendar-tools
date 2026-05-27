@@ -140,7 +140,7 @@ public:
      * Get UID, the unique tag for VCard entry.
      * @return UID number.
      */
-    QString getUID() const;
+    QString &getUID();
 
     /**
      * Is there UID set?
@@ -192,7 +192,7 @@ public:
      * Returns fullpath to calendar file.
      * @return calendar file.
      */
-    QString getCalendarFile() const;
+    QString &getCalendarFile();
 
     /**
      * Set file to import active calendar.
@@ -204,7 +204,7 @@ public:
      * Return import filename.
      * @return File that should be imported.
      */
-    QString getImportFile() const;
+    QString &getImportFile();
 
     /**
      * Add description.
@@ -216,7 +216,7 @@ public:
      * Return description.
      * @return description of event.
      */
-    QString getDescription() const;
+    QString &getDescription();
 
     /**
      * Is there an event description?
@@ -234,7 +234,7 @@ public:
      * Return location information.
      * @return location where event is occurring.
      */
-    QString getLocation() const;
+    QString &getLocation();
 
     /**
      * Is there event location information available?
@@ -252,7 +252,7 @@ public:
      * Get summary.
      * @return summary.
      */
-    QString getSummary() const;
+    QString &getSummary();
 
     /**
      * Is there an event summary?
@@ -307,7 +307,7 @@ public:
     /**
      * To what file we'll output.
      */
-    QString getExportFile() const;
+    QString &getExportFile();
 
     /**
      * Has an Export File been set?

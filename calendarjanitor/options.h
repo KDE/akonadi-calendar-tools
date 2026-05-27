@@ -42,7 +42,7 @@ public:
      * List of collections for backup or fix modes.
      * If empty, all collections will be considered.
      */
-    QList<Akonadi::Collection::Id> collections() const;
+    QList<Akonadi::Collection::Id> &collections();
     void setCollections(const QList<Akonadi::Collection::Id> &);
     bool testCollection(Akonadi::Collection::Id) const;
 

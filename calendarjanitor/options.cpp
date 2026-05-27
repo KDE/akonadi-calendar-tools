@@ -18,7 +18,7 @@ Options::Action Options::action() const
     return m_action;
 }
 
-QList<Akonadi::Collection::Id> Options::collections() const
+QList<Akonadi::Collection::Id> &Options::collections()
 {
     return m_collectionIds;
 }
