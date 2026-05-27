@@ -51,6 +51,8 @@ repos:
    rev: v0.11.0.1
    hooks:
    - id: shellcheck
+#20260527:winter:KDE CI fails (works locally however):
+# Unable to set permissions for output file 'konsolekalendar/examples/tcm2kcal.pl' to 0666
 # - repo: https://github.com/perltidy/perltidy
 #   rev: "20260204.03"
 #   hooks:
