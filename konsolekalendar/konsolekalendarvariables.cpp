@@ -41,6 +41,7 @@ KonsoleKalendarVariables::KonsoleKalendarVariables()
     m_bUseJournals = false;
     m_exportType = ExportTypeText;
     m_bIsExportFile = false;
+    m_bAll = false;
     m_bDescription = false;
     m_description.clear();
     m_bLocation = false;
@@ -48,6 +49,8 @@ KonsoleKalendarVariables::KonsoleKalendarVariables()
     m_bSummary = false;
     m_summary = QStringLiteral("Default summary"); // i18n?
     m_bFloating = true;
+    m_bDaysCount = false;
+    m_daysCount = 0;
     m_bAllowGui = false;
     m_collectionId = -1;
 }
