@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Sérgio Martins <iamsergio@gmail.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
 add_executable(calendarjanitor)
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
