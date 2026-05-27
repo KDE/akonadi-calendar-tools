@@ -47,19 +47,19 @@ bool KonsoleKalendarChange::changeEvent()
     Event::Ptr event = m_variables->getCalendar()->event(m_variables->getUID());
     if (event) {
         if (m_variables->isDryRun()) {
-            cout << i18n("Change Event <Dry Run>:").toLocal8Bit().data() << endl;
+            cout << i18n("Dry Run: Change Event:").toLocal8Bit().data() << endl;
             printSpecs(event);
 
-            cout << i18n("To Event <Dry Run>:").toLocal8Bit().data() << endl;
+            cout << i18n("Dry Run: To Event:").toLocal8Bit().data() << endl;
             printSpecs();
         } else {
             qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendarchange.cpp:changeEvent() :" << m_variables->getUID().toLocal8Bit().data();
 
             if (m_variables->isVerbose()) {
-                cout << i18n("Change Event <Verbose>:").toLocal8Bit().data() << endl;
+                cout << i18n("Change Event:").toLocal8Bit().data() << endl;
                 printSpecs(event);
 
-                cout << i18n("To Event <Dry Run>:").toLocal8Bit().data() << endl;
+                cout << i18n("To Event:").toLocal8Bit().data() << endl;
                 printSpecs();
             }
 

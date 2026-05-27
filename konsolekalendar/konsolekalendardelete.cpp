@@ -45,13 +45,13 @@ bool KonsoleKalendarDelete::deleteEvent()
     Event::Ptr event = m_variables->getCalendar()->event(m_variables->getUID());
     if (event) {
         if (m_variables->isDryRun()) {
-            cout << i18n("Delete Event <Dry Run>:").data() << endl;
+            cout << i18n("Dry Run: Delete Event:").data() << endl;
             printSpecs(event);
         } else {
             qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendardelete.cpp:deleteEvent() :" << m_variables->getUID();
 
             if (m_variables->isVerbose()) {
-                cout << i18n("Delete Event <Verbose>:").data() << endl;
+                cout << i18n("Delete Event:").data() << endl;
                 printSpecs(event);
             }
 

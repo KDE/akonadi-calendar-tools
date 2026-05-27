@@ -58,11 +58,11 @@ bool KonsoleKalendarAdd::addEvent()
     qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendaradd.cpp::addEvent()";
 
     if (m_variables->isDryRun()) {
-        cout << i18n("Insert Event <Dry Run>:").toLocal8Bit().data() << endl;
+        cout << i18n("Dry Run: Insert Event:").toLocal8Bit().data() << endl;
         printSpecs();
     } else {
         if (m_variables->isVerbose()) {
-            cout << i18n("Insert Event <Verbose>:").toLocal8Bit().data() << endl;
+            cout << i18n("Insert Event:").toLocal8Bit().data() << endl;
             printSpecs();
         }
 
@@ -145,14 +145,14 @@ bool KonsoleKalendarAdd::addImportedCalendar()
     for (const auto &event : rawEvents) {
         if (calendar->incidence(event->uid()) != nullptr) {
             if (m_variables->isVerbose()) {
-                cout << i18n("Insert Event skipped, because UID \"%1\" is already known. <Verbose>", event->uid()).toLocal8Bit().data() << endl;
+                cout << i18n("Insert Event skipped, because UID \"%1\" is already known.", event->uid()).toLocal8Bit().data() << endl;
             } else {
                 qCInfo(KONSOLEKALENDAR_LOG) << "Event with UID " << event->uid() << "is already in calendar, skipping import of this Event.";
             }
             continue;
         }
         if (m_variables->isVerbose()) {
-            cout << i18n("Add Event with UID \"%1\". <Verbose>", event->uid()).toLocal8Bit().data() << endl;
+            cout << i18n("Add Event with UID \"%1\".", event->uid()).toLocal8Bit().data() << endl;
         }
         if (m_variables->isDryRun()) {
             continue;

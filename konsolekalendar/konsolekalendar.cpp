@@ -92,7 +92,7 @@ bool KonsoleKalendar::printCalendarList()
                 bool readOnly = !(collection.rights() & Akonadi::Collection::CanCreateItem || collection.rights() & Akonadi::Collection::CanChangeItem
                                   || collection.rights() & Akonadi::Collection::CanDeleteItem);
 
-                QString readOnlyString = readOnly ? i18n("(Read only)") + QLatin1Char(' ') : QString();
+                QString readOnlyString = readOnly ? i18nc("calendar is read-only", "(Read only)") + QLatin1Char(' ') : QString();
 
                 cout << colId.toLocal8Bit().data() << readOnlyString.toLocal8Bit().constData() << collection.displayName().toLocal8Bit().data() << endl;
             }
@@ -139,13 +139,13 @@ bool KonsoleKalendar::createCalendar()
     const QString filename = m_variables->getCalendarFile();
 
     if (m_variables->isDryRun()) {
-        cout << i18n("Create Calendar <Dry Run>: %1", filename).toLocal8Bit().data() << endl;
+        cout << i18n("Dry Run: Create Calendar: %1", filename).toLocal8Bit().data() << endl;
     } else {
         qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::createCalendar() |"
                                      << "Creating calendar file: " << filename.toLocal8Bit().data();
 
         if (m_variables->isVerbose()) {
-            cout << i18n("Create Calendar <Verbose>: %1", filename).toLocal8Bit().data() << endl;
+            cout << i18n("Create Calendar: %1", filename).toLocal8Bit().data() << endl;
         }
 
         status = createAkonadiResource(QStringLiteral("file://%1").arg(filename));
@@ -163,7 +163,7 @@ bool KonsoleKalendar::showInstance()
     Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
 
     if (m_variables->isDryRun()) {
-        cout << qPrintable(i18n("View Events <Dry Run>:")) << endl;
+        cout << qPrintable(i18n("Dry Run: View Events:")) << endl;
         printSpecs();
     } else {
         qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
@@ -185,7 +185,7 @@ bool KonsoleKalendar::showInstance()
                                          << "opened successful";
 
             if (m_variables->isVerbose()) {
-                cout << i18n("View Event <Verbose>:").toLocal8Bit().data() << endl;
+                cout << i18n("View Event:").toLocal8Bit().data() << endl;
                 printSpecs();
             }
 
