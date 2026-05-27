@@ -158,7 +158,6 @@ bool KonsoleKalendar::showInstance()
 {
     bool status = true;
     QFile f;
-    QString title;
     Event::Ptr event;
     const auto timeZone = m_variables->getCalendar()->timeZone();
     Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();

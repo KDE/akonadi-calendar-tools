@@ -298,7 +298,6 @@ void CalendarJanitor::sanityCheck3()
         QDateTime end = event->dtEnd();
 
         bool modify = false;
-        QString message;
         if (!start.isValid() && end.isValid()) {
             modify = true;
             printFound(item);
