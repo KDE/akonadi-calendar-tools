@@ -50,7 +50,7 @@ uint KonsoleKalendarEpoch::QDateTime2epoch(const QDateTime &dt)
 // Pass -DTEST to the compile command to create the test program, e.g:
 // cc -DTEST -I/usr/local/KDE/include  konsolekalendarepoch.cpp
 //           -L/usr/local/KDE/lib -lqt-mt -pthread
-main()
+void main()
 {
     uint epoch;
     QDateTime dt;
