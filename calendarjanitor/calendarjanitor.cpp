@@ -431,11 +431,11 @@ void CalendarJanitor::sanityCheck7()
             printFound(item);
             if (m_fixingEnabled) {
                 KCalendarCore::Incidence::Ptr existingIncidence = existingIncidences.at(i);
-                Akonadi::Item item = m_incidenceToItem.value(existingIncidence);
-                Q_ASSERT(item.isValid());
-                if (item.isValid()) {
+                Akonadi::Item existingItem = m_incidenceToItem.value(existingIncidence);
+                Q_ASSERT(existingItem.isValid());
+                if (existingItem.isValid()) {
                     existingIncidence->recreate();
-                    m_changer->modifyIncidence(item);
+                    m_changer->modifyIncidence(existingItem);
                     m_pendingModifications++;
                     m_incidenceMap.remove(incidence->instanceIdentifier(), existingIncidence);
                 }
@@ -535,7 +535,7 @@ void CalendarJanitor::sanityCheck9()
 
                 if (event && start.isValid() && end.isValid()) {
                     modified = true;
-                    const int duration = start.daysTo(end.toTimeSpec(start.timeSpec()));
+                    const int duration = start.daysTo(end.toTimeZone(start.timeZone()));
                     incidence->setDtStart(recId);
                     event->setDtEnd(recId.addDays(duration));
                 } else if (todo && start.isValid()) {
@@ -543,7 +543,7 @@ void CalendarJanitor::sanityCheck9()
                     incidence->setDtStart(recId);
 
                     if (end.isValid()) {
-                        const int duration = start.daysTo(end.toTimeSpec(start.timeSpec()));
+                        const int duration = start.daysTo(end.toTimeZone(start.timeZone()));
                         todo->setDtDue(recId.addDays(duration));
                     }
                 }

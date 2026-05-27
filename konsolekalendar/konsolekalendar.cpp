@@ -178,7 +178,7 @@ bool KonsoleKalendar::showInstance()
                                              << "unable to open export file" << m_variables->getExportFile();
             }
         } else {
-            f.open(stdout, QIODevice::WriteOnly);
+            std::ignore = f.open(stdout, QIODevice::WriteOnly);
         }
 
         if (status) {
@@ -201,8 +201,8 @@ bool KonsoleKalendar::showInstance()
                 if (!sortedList.isEmpty()) {
                     // The code that was here before the akonadi port was really slow with 200 events
                     // this is much faster:
-                    for (const KCalendarCore::Event::Ptr &event : sortedList) {
-                        status &= printEvent(&ts, event, event->dtStart().date());
+                    for (const KCalendarCore::Event::Ptr &ev : sortedList) {
+                        status &= printEvent(&ts, ev, ev->dtStart().date());
                     }
                 }
             } else if (m_variables->isUID()) {
