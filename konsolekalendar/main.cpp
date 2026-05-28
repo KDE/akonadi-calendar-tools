@@ -766,6 +766,8 @@ int main(int argc, char *argv[])
         if (!konsolekalendar->createCalendar()) {
             cout << i18n("Cannot create Akonadi resource from file: %1", variables.getCalendarFile()).toLocal8Bit().data() << endl;
             return 1;
+        } else {
+            cout << i18n("Calendar %1 successfully created", variables.getCalendarFile()).toLocal8Bit().data() << endl;
         }
     }
 

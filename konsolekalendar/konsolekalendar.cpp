@@ -104,28 +104,31 @@ bool KonsoleKalendar::printCalendarList()
 
 bool KonsoleKalendar::createAkonadiResource(const QString &icalFileUri)
 {
+    const QString fileName = QFileInfo(icalFileUri).baseName();
     Akonadi::AgentType type = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
     auto job = new Akonadi::AgentInstanceCreateJob(type);
     job->exec();
     if (job->error() != 0) {
+        cout << i18n("Unable to create calendar %1: %2", fileName, job->errorString()).toLocal8Bit().data();
+        cout << i18n("Make sure the akonadiserver is running properly.").toLocal8Bit().data();
         return false;
     }
     auto inst = job->instance();
-    inst.setName(QFileInfo(icalFileUri).baseName());
+    inst.setName(fileName);
     QDBusInterface iface(QStringLiteral("org.freedesktop.Akonadi.Resource.") + inst.identifier(), QStringLiteral("/Settings"));
-    QDBusReply<void> reply = iface.call(QStringLiteral("setDisplayName"), QFileInfo(icalFileUri).baseName());
+    QDBusReply<void> reply = iface.call(QStringLiteral("setDisplayName"), fileName);
     if (!reply.isValid()) {
-        qCWarning(KONSOLEKALENDAR_LOG) << "Could not set setting 'name': " << reply.error().message();
+        cout << i18n("Unable to create calendar %1: DBus setDisplayName failed: %2", fileName, reply.error().message()).toLocal8Bit().data();
         return false;
     }
     reply = iface.call(QStringLiteral("setPath"), icalFileUri);
     if (!reply.isValid()) {
-        qCWarning(KONSOLEKALENDAR_LOG) << "Could not set setting 'path': " << reply.error().message();
+        cout << i18n("Unable to create calendar %1: DBus setPath call failed: %2", fileName, reply.error().message()).toLocal8Bit().data();
         return false;
     }
     reply = iface.call(QStringLiteral("save"));
     if (!reply.isValid()) {
-        qCWarning(KONSOLEKALENDAR_LOG) << "Could not save settings: " << reply.error().message();
+        cout << i18n("Unable to create calendar %1: %2", fileName, reply.error().message()).toLocal8Bit().data();
         return false;
     }
     inst.reconfigure();
