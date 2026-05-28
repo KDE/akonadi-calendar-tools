@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-28 00:44+0000\n"
 "PO-Revision-Date: 2011-08-14 14:21-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -39,67 +39,67 @@ msgstr ""
 
 #: konsolekalendar.cpp:95
 #, kde-format
+msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr ""
 
 #: konsolekalendar.cpp:142
 #, fuzzy, kde-format
 #| msgid "Create Calendar &lt;Dry Run&gt;: %1"
-msgid "Create Calendar <Dry Run>: %1"
+msgid "Dry Run: Create Calendar: %1"
 msgstr "カレンダーを作成 &lt;ドライラン&gt;: %1"
 
 #: konsolekalendar.cpp:148
 #, fuzzy, kde-format
-#| msgid "Create Calendar &lt;Verbose&gt;: %1"
-msgid "Create Calendar <Verbose>: %1"
-msgstr "カレンダーを作成 &lt;冗長モード&gt;: %1"
+#| msgid "Create Calendar &lt;Dry Run&gt;: %1"
+msgid "Create Calendar: %1"
+msgstr "カレンダーを作成 &lt;ドライラン&gt;: %1"
 
-#: konsolekalendar.cpp:167
-#, fuzzy, kde-format
-#| msgid "View Events &lt;Dry Run&gt;:"
-msgid "View Events <Dry Run>:"
-msgstr "イベントを表示 &lt;ドライラン&gt;:"
+#: konsolekalendar.cpp:166
+#, kde-format
+msgid "Dry Run: View Events:"
+msgstr ""
 
-#: konsolekalendar.cpp:189
+#: konsolekalendar.cpp:188
 #, fuzzy, kde-format
 #| msgid "View Event &lt;Verbose&gt;:"
-msgid "View Event <Verbose>:"
+msgid "View Event:"
 msgstr "イベントを表示 &lt;冗長モード&gt;:"
 
-#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  内容:  %1"
 
-#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  開始: %1"
 
-#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  終了:   %1"
 
-#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  イベントに関連付けられた時間はありません"
 
-#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  説明:  %1"
 
-#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -107,16 +107,15 @@ msgid "  Location:  %1"
 msgstr "  場所:  %1"
 
 #: konsolekalendaradd.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Event &lt;Dry Run&gt;:"
-msgid "Insert Event <Dry Run>:"
-msgstr "イベントを挿入 &lt;ドライラン&gt;:"
+#, kde-format
+msgid "Dry Run: Insert Event:"
+msgstr ""
 
 #: konsolekalendaradd.cpp:65
 #, fuzzy, kde-format
-#| msgid "Insert Event &lt;Verbose&gt;:"
-msgid "Insert Event <Verbose>:"
-msgstr "イベントを挿入 &lt;冗長モード&gt;:"
+#| msgid "Insert Event &lt;Dry Run&gt;:"
+msgid "Insert Event:"
+msgstr "イベントを挿入 &lt;ドライラン&gt;:"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -135,31 +134,35 @@ msgstr "失敗: “%1” を挿入できません"
 
 #: konsolekalendaradd.cpp:148
 #, kde-format
-msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+msgid "Insert Event skipped, because UID \"%1\" is already known."
 msgstr ""
 
 #: konsolekalendaradd.cpp:155
 #, kde-format
-msgid "Add Event with UID \"%1\". <Verbose>"
+msgid "Add Event with UID \"%1\"."
 msgstr ""
 
 #: konsolekalendarchange.cpp:50
-#, fuzzy, kde-format
-#| msgid "Change Event &lt;Dry Run&gt;:"
-msgid "Change Event <Dry Run>:"
-msgstr "イベントを変更 &lt;ドライラン&gt;:"
+#, kde-format
+msgid "Dry Run: Change Event:"
+msgstr ""
 
-#: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "To Event &lt;Dry Run&gt;:"
-msgid "To Event <Dry Run>:"
-msgstr "イベントへ &lt;ドライラン&gt;:"
+#: konsolekalendarchange.cpp:53
+#, kde-format
+msgid "Dry Run: To Event:"
+msgstr ""
 
 #: konsolekalendarchange.cpp:59
 #, fuzzy, kde-format
-#| msgid "Change Event &lt;Verbose&gt;:"
-msgid "Change Event <Verbose>:"
-msgstr "イベントを変更 &lt;冗長モード&gt;:"
+#| msgid "Change Event &lt;Dry Run&gt;:"
+msgid "Change Event:"
+msgstr "イベントを変更 &lt;ドライラン&gt;:"
+
+#: konsolekalendarchange.cpp:62
+#, fuzzy, kde-format
+#| msgid "To Event &lt;Dry Run&gt;:"
+msgid "To Event:"
+msgstr "イベントへ &lt;ドライラン&gt;:"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -178,16 +181,15 @@ msgid "  UID:   %1"
 msgstr "  UID:   %1"
 
 #: konsolekalendardelete.cpp:48
-#, fuzzy, kde-format
-#| msgid "Delete Event &lt;Dry Run&gt;:"
-msgid "Delete Event <Dry Run>:"
-msgstr "イベントを削除 &lt;ドライラン&gt;:"
+#, kde-format
+msgid "Dry Run: Delete Event:"
+msgstr ""
 
 #: konsolekalendardelete.cpp:54
 #, fuzzy, kde-format
-#| msgid "Delete Event &lt;Verbose&gt;:"
-msgid "Delete Event <Verbose>:"
-msgstr "イベントを削除 &lt;冗長モード&gt;:"
+#| msgid "Delete Event &lt;Dry Run&gt;:"
+msgid "Delete Event:"
+msgstr "イベントを削除 &lt;ドライラン&gt;:"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -592,3 +594,28 @@ msgstr "指定されたエクスポートファイル ‘%1’ を開けませ�
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Create Calendar &lt;Verbose&gt;: %1"
+#~ msgid "Create Calendar <Verbose>: %1"
+#~ msgstr "カレンダーを作成 &lt;冗長モード&gt;: %1"
+
+#, fuzzy
+#~| msgid "View Events &lt;Dry Run&gt;:"
+#~ msgid "View Events <Dry Run>:"
+#~ msgstr "イベントを表示 &lt;ドライラン&gt;:"
+
+#, fuzzy
+#~| msgid "Insert Event &lt;Verbose&gt;:"
+#~ msgid "Insert Event <Verbose>:"
+#~ msgstr "イベントを挿入 &lt;冗長モード&gt;:"
+
+#, fuzzy
+#~| msgid "Change Event &lt;Verbose&gt;:"
+#~ msgid "Change Event <Verbose>:"
+#~ msgstr "イベントを変更 &lt;冗長モード&gt;:"
+
+#, fuzzy
+#~| msgid "Delete Event &lt;Verbose&gt;:"
+#~ msgid "Delete Event <Verbose>:"
+#~ msgstr "イベントを削除 &lt;冗長モード&gt;:"

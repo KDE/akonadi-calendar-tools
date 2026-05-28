@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim/konsolekalendar.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-28 00:44+0000\n"
 "PO-Revision-Date: 2004-09-20 15:44+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: Breton <LL@li.org>\n"
@@ -31,63 +31,67 @@ msgstr ""
 
 #: konsolekalendar.cpp:95
 #, kde-format
+msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr ""
 
 #: konsolekalendar.cpp:142
-#, kde-format
-msgid "Create Calendar <Dry Run>: %1"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Unable to create calendar: %1"
+msgid "Dry Run: Create Calendar: %1"
+msgstr "N'hellan ket krouiñ un deiziadur : %1"
 
 #: konsolekalendar.cpp:148
+#, fuzzy, kde-format
+#| msgid "Unable to create calendar: %1"
+msgid "Create Calendar: %1"
+msgstr "N'hellan ket krouiñ un deiziadur : %1"
+
+#: konsolekalendar.cpp:166
 #, kde-format
-msgid "Create Calendar <Verbose>: %1"
+msgid "Dry Run: View Events:"
 msgstr ""
 
-#: konsolekalendar.cpp:167
-#, kde-format
-msgid "View Events <Dry Run>:"
-msgstr ""
+#: konsolekalendar.cpp:188
+#, fuzzy, kde-format
+#| msgid "Events:"
+msgid "View Event:"
+msgstr "Degouezhoù :"
 
-#: konsolekalendar.cpp:189
-#, kde-format
-msgid "View Event <Verbose>:"
-msgstr ""
-
-#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Petra :  %1"
 
-#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Deroù : %1"
 
-#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Dibenn :  %1"
 
-#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr ""
 
-#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Deskr : %1"
 
-#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -96,13 +100,14 @@ msgstr "  Lec'hiadur :  %1"
 
 #: konsolekalendaradd.cpp:61
 #, kde-format
-msgid "Insert Event <Dry Run>:"
+msgid "Dry Run: Insert Event:"
 msgstr ""
 
 #: konsolekalendaradd.cpp:65
-#, kde-format
-msgid "Insert Event <Verbose>:"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Events:"
+msgid "Insert Event:"
+msgstr "Degouezhoù :"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -121,28 +126,35 @@ msgstr ""
 
 #: konsolekalendaradd.cpp:148
 #, kde-format
-msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+msgid "Insert Event skipped, because UID \"%1\" is already known."
 msgstr ""
 
 #: konsolekalendaradd.cpp:155
 #, kde-format
-msgid "Add Event with UID \"%1\". <Verbose>"
+msgid "Add Event with UID \"%1\"."
 msgstr ""
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
-msgid "Change Event <Dry Run>:"
+msgid "Dry Run: Change Event:"
 msgstr ""
 
-#: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
+#: konsolekalendarchange.cpp:53
 #, kde-format
-msgid "To Event <Dry Run>:"
+msgid "Dry Run: To Event:"
 msgstr ""
 
 #: konsolekalendarchange.cpp:59
-#, kde-format
-msgid "Change Event <Verbose>:"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Events:"
+msgid "Change Event:"
+msgstr "Degouezhoù :"
+
+#: konsolekalendarchange.cpp:62
+#, fuzzy, kde-format
+#| msgid "Events:"
+msgid "To Event:"
+msgstr "Degouezhoù :"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -162,13 +174,14 @@ msgstr "  UID :   %1"
 
 #: konsolekalendardelete.cpp:48
 #, kde-format
-msgid "Delete Event <Dry Run>:"
+msgid "Dry Run: Delete Event:"
 msgstr ""
 
 #: konsolekalendardelete.cpp:54
-#, kde-format
-msgid "Delete Event <Verbose>:"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Events:"
+msgid "Delete Event:"
+msgstr "Degouezhoù :"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -550,9 +563,6 @@ msgstr ""
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr ""
 
-#~ msgid "Events:"
-#~ msgstr "Degouezhoù :"
-
 #~ msgid "Events: %1"
 #~ msgstr "Degouezhoù : %1"
 
@@ -576,9 +586,6 @@ msgstr ""
 
 #~ msgid "Calendar %1 already exists"
 #~ msgstr "Bez' ez eus an deiziadur %1 endeo"
-
-#~ msgid "Unable to create calendar: %1"
-#~ msgstr "N'hellan ket krouiñ un deiziadur : %1"
 
 #~ msgid "Calendar file not found %1"
 #~ msgstr "N'eo ket bet kavet restr an deiziadur %1"

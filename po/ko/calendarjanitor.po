@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-05-28 00:44+0000\n"
 "PO-Revision-Date: 2024-08-19 21:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -132,129 +132,131 @@ msgstr "UID가 비어 있는 항목 검사 중..."
 msgid "Checking for events with invalid DTSTART..."
 msgstr "잘못된 DTSTART가 있는 항목 검사 중..."
 
-#: calendarjanitor.cpp:326
+#: calendarjanitor.cpp:325
 #, kde-format
 msgid "Checking for recurring to-dos with invalid DTSTART..."
 msgstr "잘못된 DTSTART가 있는 반복되는 할 일 검사 중..."
 
-#: calendarjanitor.cpp:362
+#: calendarjanitor.cpp:361
 #, kde-format
 msgid "Checking for journals with invalid DTSTART..."
 msgstr "잘못된 DTSTART가 있는 저널 검사 중..."
 
-#: calendarjanitor.cpp:383
+#: calendarjanitor.cpp:382
 #, kde-format
 msgid "Checking for orphans..."
 msgstr "부모가 없는 항목 검사 중..."
 
-#: calendarjanitor.cpp:389
+#: calendarjanitor.cpp:388
 #, kde-format
 msgid "The following incidences are children of nonexistent parents"
 msgstr "다음 항목은 없는 부모 항목의 자식 항목입니다"
 
-#: calendarjanitor.cpp:398
+#: calendarjanitor.cpp:397
 #, kde-format
 msgid "In fix mode these children will be unparented."
 msgstr "교정 모드에서는 다음 항목의 부모 항목을 삭제합니다."
 
-#: calendarjanitor.cpp:398
+#: calendarjanitor.cpp:397
 #, kde-format
 msgid "Children were successfully unparented."
 msgstr "자식 항목의 부모 항목을 삭제했습니다."
 
-#: calendarjanitor.cpp:403
+#: calendarjanitor.cpp:402
 #, kde-format
 msgid "Checking for duplicate UIDs..."
 msgstr "중복된 UID 검사 중..."
 
-#: calendarjanitor.cpp:460
+#: calendarjanitor.cpp:459
 #, kde-format
 msgid "Gathering statistics..."
 msgstr "통계 수집 중..."
 
-#: calendarjanitor.cpp:498
+#: calendarjanitor.cpp:497
 #, kde-format
 msgid "Events"
 msgstr "행사"
 
-#: calendarjanitor.cpp:499
+#: calendarjanitor.cpp:498
 #, kde-format
 msgid "Todos"
 msgstr "할 일"
 
-#: calendarjanitor.cpp:500
+#: calendarjanitor.cpp:499
 #, kde-format
 msgid "Journals"
 msgstr "저널"
 
-#: calendarjanitor.cpp:501
+#: calendarjanitor.cpp:500
 #, kde-format
 msgid "Passed events and to-dos (>365 days)"
 msgstr "지나간 행사와 할 일(365일 초과)"
 
-#: calendarjanitor.cpp:502
+#: calendarjanitor.cpp:501
 #, kde-format
 msgid "Old incidences with alarms"
 msgstr "알람이 설정된 오래된 항목"
 
-#: calendarjanitor.cpp:503
+#: calendarjanitor.cpp:502
 #, kde-format
 msgid "Inline attachments"
 msgstr "인라인 첨부"
 
-#: calendarjanitor.cpp:504
+#: calendarjanitor.cpp:503
 #, kde-format
 msgid "Items with empty remote id [!!]"
 msgstr "원격 ID가 비어 있는 항목 [!!]"
 
-#: calendarjanitor.cpp:507
+#: calendarjanitor.cpp:506
 #, kde-format
 msgid "Total size of inline attachments (bytes)"
 msgstr "인라인 첨부 총 크기(바이트)"
 
-#: calendarjanitor.cpp:509
+#: calendarjanitor.cpp:508
 #, kde-format
 msgid "Total size of inline attachments (KB)"
 msgstr "인라인 첨부 총 크기(KB)"
 
-#: calendarjanitor.cpp:521
+#: calendarjanitor.cpp:520
 #, kde-format
 msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
 msgstr "마스터 반복이 없는 RECURRING-ID가 있는 반복 찾는 중..."
 
-#: calendarjanitor.cpp:562
+#: calendarjanitor.cpp:561
 #, kde-format
 msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
 msgstr ""
 "교정 모드에서는 RECURRING-ID 속성을 초기화하며 UID는 변경하지 않습니다."
 
-#: calendarjanitor.cpp:562
+#: calendarjanitor.cpp:561
 #, kde-format
 msgid "Recurrence cleared."
 msgstr "반복을 지웠습니다."
 
-#: calendarjanitor.cpp:567
+#: calendarjanitor.cpp:566
 #, kde-format
 msgid "Deleting alarms older than 365 days..."
 msgstr "365일보다 오래 된 알람 삭제 중..."
 
-#: calendarjanitor.cpp:585 calendarjanitor.cpp:599
-#, kde-format
+#: calendarjanitor.cpp:584 calendarjanitor.cpp:598
+#, fuzzy, kde-format
+#| msgid "invalid"
+msgctxt "invalid datetime"
 msgid "invalid"
 msgstr "잘못됨"
 
-#: calendarjanitor.cpp:602
+#: calendarjanitor.cpp:601
 #, kde-format
 msgid "recurrent"
 msgstr "반복됨"
 
-#: calendarjanitor.cpp:620
+#: calendarjanitor.cpp:619
 #, kde-format
 msgid "Found buggy incidence:"
 msgstr "버그가 있는 항목 찾음:"
 
-#: calendarjanitor.cpp:621
+#: calendarjanitor.cpp:620
 #, kde-format
 msgid "id=%1; summary=\"%2\""
 msgstr "id=%1; 요약=\"%2\""

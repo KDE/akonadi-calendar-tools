@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-05-28 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 15:52+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -132,128 +132,130 @@ msgstr "खाली यूआईडी के साथ के घटनाओ�
 msgid "Checking for events with invalid DTSTART..."
 msgstr "अमान्य DTSTART युक्त घटनाओं के लिए जांच..."
 
-#: calendarjanitor.cpp:326
+#: calendarjanitor.cpp:325
 #, kde-format
 msgid "Checking for recurring to-dos with invalid DTSTART..."
 msgstr "अमान्य DTSTART वाले आवर्ती कार्य सूचियों के लिए जाँच..."
 
-#: calendarjanitor.cpp:362
+#: calendarjanitor.cpp:361
 #, kde-format
 msgid "Checking for journals with invalid DTSTART..."
 msgstr "अमान्य DTSTART युक्त दैनिकीयों के लिए जांच..."
 
-#: calendarjanitor.cpp:383
+#: calendarjanitor.cpp:382
 #, kde-format
 msgid "Checking for orphans..."
 msgstr "अनाथों के लिए जाँच..."
 
-#: calendarjanitor.cpp:389
+#: calendarjanitor.cpp:388
 #, kde-format
 msgid "The following incidences are children of nonexistent parents"
 msgstr "निम्नांकित उप घटनाएँ मुख्य घटना रहित हैं।"
 
-#: calendarjanitor.cpp:398
+#: calendarjanitor.cpp:397
 #, kde-format
 msgid "In fix mode these children will be unparented."
 msgstr "सुधारण मोड में इन उप घटनाओं को अलग किया जाएगा"
 
-#: calendarjanitor.cpp:398
+#: calendarjanitor.cpp:397
 #, kde-format
 msgid "Children were successfully unparented."
 msgstr "उप घटनाओं को सफलतापूर्वक अलग किया."
 
-#: calendarjanitor.cpp:403
+#: calendarjanitor.cpp:402
 #, kde-format
 msgid "Checking for duplicate UIDs..."
 msgstr "दोहरे यूआईडीयों के लिए जाँच..."
 
-#: calendarjanitor.cpp:460
+#: calendarjanitor.cpp:459
 #, kde-format
 msgid "Gathering statistics..."
 msgstr "आँकड़ों को इकट्ठा करना"
 
-#: calendarjanitor.cpp:498
+#: calendarjanitor.cpp:497
 #, kde-format
 msgid "Events"
 msgstr "कार्यक्रम"
 
-#: calendarjanitor.cpp:499
+#: calendarjanitor.cpp:498
 #, kde-format
 msgid "Todos"
 msgstr "कार्य-सूची"
 
-#: calendarjanitor.cpp:500
+#: calendarjanitor.cpp:499
 #, kde-format
 msgid "Journals"
 msgstr "दैनिकी"
 
-#: calendarjanitor.cpp:501
+#: calendarjanitor.cpp:500
 #, kde-format
 msgid "Passed events and to-dos (>365 days)"
 msgstr "व्यतीत हुई घटनाएँ और कार्य सूची (>३६५ दिन)"
 
-#: calendarjanitor.cpp:502
+#: calendarjanitor.cpp:501
 #, kde-format
 msgid "Old incidences with alarms"
 msgstr "अलार्म के साथ पुरानी घटनाएं"
 
-#: calendarjanitor.cpp:503
+#: calendarjanitor.cpp:502
 #, kde-format
 msgid "Inline attachments"
 msgstr "इनलाइन एटेचमेंट्स"
 
-#: calendarjanitor.cpp:504
+#: calendarjanitor.cpp:503
 #, kde-format
 msgid "Items with empty remote id [!!]"
 msgstr "खाली रिमोट आईडी वाली वस्तुएं  [!!]"
 
-#: calendarjanitor.cpp:507
+#: calendarjanitor.cpp:506
 #, kde-format
 msgid "Total size of inline attachments (bytes)"
 msgstr "इनलाइन एटेचमेंट्स का कुल साइज़ (बाईट्स)"
 
-#: calendarjanitor.cpp:509
+#: calendarjanitor.cpp:508
 #, kde-format
 msgid "Total size of inline attachments (KB)"
 msgstr "इनलाइन एटेचमेंट्स का कुल साइज़"
 
-#: calendarjanitor.cpp:521
+#: calendarjanitor.cpp:520
 #, kde-format
 msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
 msgstr "अस्तित्व विहीन मुख्य घटना के साथ RECURRING-ID घटनाओं के लिए जांच..."
 
-#: calendarjanitor.cpp:562
+#: calendarjanitor.cpp:561
 #, kde-format
 msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
 msgstr "सुधारण मोड में RECURRING-ID गुण अप्रचलित होगी और UID बदल जाएगी।"
 
-#: calendarjanitor.cpp:562
+#: calendarjanitor.cpp:561
 #, kde-format
 msgid "Recurrence cleared."
 msgstr "पुनरावृत्ति को निकाल दिया।"
 
-#: calendarjanitor.cpp:567
+#: calendarjanitor.cpp:566
 #, kde-format
 msgid "Deleting alarms older than 365 days..."
 msgstr "३६५ दिनों से अधिक पुराने अलार्मों को मिटाएं..."
 
-#: calendarjanitor.cpp:585 calendarjanitor.cpp:599
-#, kde-format
+#: calendarjanitor.cpp:584 calendarjanitor.cpp:598
+#, fuzzy, kde-format
+#| msgid "invalid"
+msgctxt "invalid datetime"
 msgid "invalid"
 msgstr "अमान्य"
 
-#: calendarjanitor.cpp:602
+#: calendarjanitor.cpp:601
 #, kde-format
 msgid "recurrent"
 msgstr "आवर्तक"
 
-#: calendarjanitor.cpp:620
+#: calendarjanitor.cpp:619
 #, kde-format
 msgid "Found buggy incidence:"
 msgstr "खराब घटना मिली:"
 
-#: calendarjanitor.cpp:621
+#: calendarjanitor.cpp:620
 #, kde-format
 msgid "id=%1; summary=\"%2\""
 msgstr "आईडी=%1;सारांश=\"%2\""

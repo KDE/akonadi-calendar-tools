@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-05-28 00:44+0000\n"
 "PO-Revision-Date: 2021-03-04 00:28+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -131,129 +131,131 @@ msgstr "Boş UİD-li hadisələr axtarılır..."
 msgid "Checking for events with invalid DTSTART..."
 msgstr "Səhv DTSTART tədbirləri axtarılır..."
 
-#: calendarjanitor.cpp:326
+#: calendarjanitor.cpp:325
 #, kde-format
 msgid "Checking for recurring to-dos with invalid DTSTART..."
 msgstr "Səhv DTSTART ilə təkrarlanan tapşırıqlar axtarılır..."
 
-#: calendarjanitor.cpp:362
+#: calendarjanitor.cpp:361
 #, kde-format
 msgid "Checking for journals with invalid DTSTART..."
 msgstr "Səhv DTSTART ilə jurnallar axtarılır..."
 
-#: calendarjanitor.cpp:383
+#: calendarjanitor.cpp:382
 #, kde-format
 msgid "Checking for orphans..."
 msgstr "Sahibsiz yazılar axtarılır..."
 
-#: calendarjanitor.cpp:389
+#: calendarjanitor.cpp:388
 #, kde-format
 msgid "The following incidences are children of nonexistent parents"
 msgstr "Aşağıdakılar sahibi olmayan yazılardır"
 
-#: calendarjanitor.cpp:398
+#: calendarjanitor.cpp:397
 #, kde-format
 msgid "In fix mode these children will be unparented."
 msgstr "Düzəltmə rejimində belələri sahibsiz olacaqdır."
 
-#: calendarjanitor.cpp:398
+#: calendarjanitor.cpp:397
 #, kde-format
 msgid "Children were successfully unparented."
 msgstr "Sahibsiz yazılar mövcud olmayan sahibindən ayrıldı."
 
-#: calendarjanitor.cpp:403
+#: calendarjanitor.cpp:402
 #, kde-format
 msgid "Checking for duplicate UIDs..."
 msgstr "UİD-lərin dublikatını axtarılır..."
 
-#: calendarjanitor.cpp:460
+#: calendarjanitor.cpp:459
 #, kde-format
 msgid "Gathering statistics..."
 msgstr "Statistika toplanır..."
 
-#: calendarjanitor.cpp:498
+#: calendarjanitor.cpp:497
 #, kde-format
 msgid "Events"
 msgstr "Tədbirlər"
 
-#: calendarjanitor.cpp:499
+#: calendarjanitor.cpp:498
 #, kde-format
 msgid "Todos"
 msgstr "Tapşırıqlar"
 
-#: calendarjanitor.cpp:500
+#: calendarjanitor.cpp:499
 #, kde-format
 msgid "Journals"
 msgstr "Jurnallar"
 
-#: calendarjanitor.cpp:501
+#: calendarjanitor.cpp:500
 #, kde-format
 msgid "Passed events and to-dos (>365 days)"
 msgstr "Keçmiş tədbirlər və tapşırıqlar (>365 gün)"
 
-#: calendarjanitor.cpp:502
+#: calendarjanitor.cpp:501
 #, kde-format
 msgid "Old incidences with alarms"
 msgstr "Xatırlatma ilə köhnə hadisələr"
 
-#: calendarjanitor.cpp:503
+#: calendarjanitor.cpp:502
 #, kde-format
 msgid "Inline attachments"
 msgstr "Daxili əlavələr"
 
-#: calendarjanitor.cpp:504
+#: calendarjanitor.cpp:503
 #, kde-format
 msgid "Items with empty remote id [!!]"
 msgstr "Boş şəbəkə id-si ilə element [!!]"
 
-#: calendarjanitor.cpp:507
+#: calendarjanitor.cpp:506
 #, kde-format
 msgid "Total size of inline attachments (bytes)"
 msgstr "Daxili qoşmaların ümumi ölçüsü (bit)"
 
-#: calendarjanitor.cpp:509
+#: calendarjanitor.cpp:508
 #, kde-format
 msgid "Total size of inline attachments (KB)"
 msgstr "Daxili qoşmaların ümumi ölçüsü (KB)"
 
-#: calendarjanitor.cpp:521
+#: calendarjanitor.cpp:520
 #, kde-format
 msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
 msgstr "Təkrarlanan hadisələrin çatışmayan əsas hadisələrlə axtarışı"
 
-#: calendarjanitor.cpp:562
+#: calendarjanitor.cpp:561
 #, kde-format
 msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
 msgstr ""
 "Düzəliş rejimində əsas hadisəyə keçid silinəcək, UİD isə dəyişdiriləcəkdir."
 
-#: calendarjanitor.cpp:562
+#: calendarjanitor.cpp:561
 #, kde-format
 msgid "Recurrence cleared."
 msgstr "Təkrarlar təmizləndi."
 
-#: calendarjanitor.cpp:567
+#: calendarjanitor.cpp:566
 #, kde-format
 msgid "Deleting alarms older than 365 days..."
 msgstr "365 gündən köhnə xatırlatmalar silinir..."
 
-#: calendarjanitor.cpp:585 calendarjanitor.cpp:599
-#, kde-format
+#: calendarjanitor.cpp:584 calendarjanitor.cpp:598
+#, fuzzy, kde-format
+#| msgid "invalid"
+msgctxt "invalid datetime"
 msgid "invalid"
 msgstr "Yararsız"
 
-#: calendarjanitor.cpp:602
+#: calendarjanitor.cpp:601
 #, kde-format
 msgid "recurrent"
 msgstr "təkrarlanan"
 
-#: calendarjanitor.cpp:620
+#: calendarjanitor.cpp:619
 #, kde-format
 msgid "Found buggy incidence:"
 msgstr "Xətalı qeyd tapıldı:"
 
-#: calendarjanitor.cpp:621
+#: calendarjanitor.cpp:620
 #, kde-format
 msgid "id=%1; summary=\"%2\""
 msgstr "id=%1; adı=\"%2\""

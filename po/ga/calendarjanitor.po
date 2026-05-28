@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-05-28 00:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
@@ -132,128 +132,129 @@ msgstr ""
 msgid "Checking for events with invalid DTSTART..."
 msgstr ""
 
-#: calendarjanitor.cpp:326
+#: calendarjanitor.cpp:325
 #, kde-format
 msgid "Checking for recurring to-dos with invalid DTSTART..."
 msgstr ""
 
-#: calendarjanitor.cpp:362
+#: calendarjanitor.cpp:361
 #, kde-format
 msgid "Checking for journals with invalid DTSTART..."
 msgstr ""
 
-#: calendarjanitor.cpp:383
+#: calendarjanitor.cpp:382
 #, kde-format
 msgid "Checking for orphans..."
 msgstr ""
 
-#: calendarjanitor.cpp:389
+#: calendarjanitor.cpp:388
 #, kde-format
 msgid "The following incidences are children of nonexistent parents"
 msgstr ""
 
-#: calendarjanitor.cpp:398
+#: calendarjanitor.cpp:397
 #, kde-format
 msgid "In fix mode these children will be unparented."
 msgstr ""
 
-#: calendarjanitor.cpp:398
+#: calendarjanitor.cpp:397
 #, kde-format
 msgid "Children were successfully unparented."
 msgstr ""
 
-#: calendarjanitor.cpp:403
+#: calendarjanitor.cpp:402
 #, kde-format
 msgid "Checking for duplicate UIDs..."
 msgstr ""
 
-#: calendarjanitor.cpp:460
+#: calendarjanitor.cpp:459
 #, kde-format
 msgid "Gathering statistics..."
 msgstr ""
 
-#: calendarjanitor.cpp:498
+#: calendarjanitor.cpp:497
 #, kde-format
 msgid "Events"
 msgstr ""
 
-#: calendarjanitor.cpp:499
+#: calendarjanitor.cpp:498
 #, kde-format
 msgid "Todos"
 msgstr ""
 
-#: calendarjanitor.cpp:500
+#: calendarjanitor.cpp:499
 #, kde-format
 msgid "Journals"
 msgstr ""
 
-#: calendarjanitor.cpp:501
+#: calendarjanitor.cpp:500
 #, kde-format
 msgid "Passed events and to-dos (>365 days)"
 msgstr ""
 
-#: calendarjanitor.cpp:502
+#: calendarjanitor.cpp:501
 #, kde-format
 msgid "Old incidences with alarms"
 msgstr ""
 
-#: calendarjanitor.cpp:503
+#: calendarjanitor.cpp:502
 #, kde-format
 msgid "Inline attachments"
 msgstr ""
 
-#: calendarjanitor.cpp:504
+#: calendarjanitor.cpp:503
 #, kde-format
 msgid "Items with empty remote id [!!]"
 msgstr ""
 
-#: calendarjanitor.cpp:507
+#: calendarjanitor.cpp:506
 #, kde-format
 msgid "Total size of inline attachments (bytes)"
 msgstr ""
 
-#: calendarjanitor.cpp:509
+#: calendarjanitor.cpp:508
 #, kde-format
 msgid "Total size of inline attachments (KB)"
 msgstr ""
 
-#: calendarjanitor.cpp:521
+#: calendarjanitor.cpp:520
 #, kde-format
 msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
 msgstr ""
 
-#: calendarjanitor.cpp:562
+#: calendarjanitor.cpp:561
 #, kde-format
 msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
 msgstr ""
 
-#: calendarjanitor.cpp:562
+#: calendarjanitor.cpp:561
 #, kde-format
 msgid "Recurrence cleared."
 msgstr ""
 
-#: calendarjanitor.cpp:567
+#: calendarjanitor.cpp:566
 #, kde-format
 msgid "Deleting alarms older than 365 days..."
 msgstr ""
 
-#: calendarjanitor.cpp:585 calendarjanitor.cpp:599
+#: calendarjanitor.cpp:584 calendarjanitor.cpp:598
 #, kde-format
+msgctxt "invalid datetime"
 msgid "invalid"
 msgstr ""
 
-#: calendarjanitor.cpp:602
+#: calendarjanitor.cpp:601
 #, kde-format
 msgid "recurrent"
 msgstr ""
 
-#: calendarjanitor.cpp:620
+#: calendarjanitor.cpp:619
 #, kde-format
 msgid "Found buggy incidence:"
 msgstr ""
 
-#: calendarjanitor.cpp:621
+#: calendarjanitor.cpp:620
 #, kde-format
 msgid "id=%1; summary=\"%2\""
 msgstr ""

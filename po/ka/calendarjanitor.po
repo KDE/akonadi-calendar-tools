@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-05-28 00:44+0000\n"
 "PO-Revision-Date: 2024-05-16 08:08+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -134,130 +134,132 @@ msgstr "ცარიელი UID-ის მქონე გავლენე�
 msgid "Checking for events with invalid DTSTART..."
 msgstr "არასწორი DTSTART-ის მქონე მოვლენების შემოწმება..."
 
-#: calendarjanitor.cpp:326
+#: calendarjanitor.cpp:325
 #, kde-format
 msgid "Checking for recurring to-dos with invalid DTSTART..."
 msgstr "არასწორი DTSTART-ის მქონე განმეორებადი გეგმების შემოწმება..."
 
-#: calendarjanitor.cpp:362
+#: calendarjanitor.cpp:361
 #, kde-format
 msgid "Checking for journals with invalid DTSTART..."
 msgstr "არასწორი DTSTART-ს მქონე ჟურნალების შემოწმება..."
 
-#: calendarjanitor.cpp:383
+#: calendarjanitor.cpp:382
 #, kde-format
 msgid "Checking for orphans..."
 msgstr "მიტოვებულების შემოწმება..."
 
-#: calendarjanitor.cpp:389
+#: calendarjanitor.cpp:388
 #, kde-format
 msgid "The following incidences are children of nonexistent parents"
 msgstr "ეს გავლენები არარსებული მშობლების შვილები არან"
 
-#: calendarjanitor.cpp:398
+#: calendarjanitor.cpp:397
 #, kde-format
 msgid "In fix mode these children will be unparented."
 msgstr "გასწორების რეჟიმში ეს შვილები მშობლის გარეშე დარჩებიან."
 
-#: calendarjanitor.cpp:398
+#: calendarjanitor.cpp:397
 #, kde-format
 msgid "Children were successfully unparented."
 msgstr "შვილების მშობლებიდან მოცილება წარმატებულია."
 
-#: calendarjanitor.cpp:403
+#: calendarjanitor.cpp:402
 #, kde-format
 msgid "Checking for duplicate UIDs..."
 msgstr "UID- ების დუბლიკატის შემოწმება..."
 
-#: calendarjanitor.cpp:460
+#: calendarjanitor.cpp:459
 #, kde-format
 msgid "Gathering statistics..."
 msgstr "სტატისტიკის შეგროვება..."
 
-#: calendarjanitor.cpp:498
+#: calendarjanitor.cpp:497
 #, kde-format
 msgid "Events"
 msgstr "მოვლენები"
 
-#: calendarjanitor.cpp:499
+#: calendarjanitor.cpp:498
 #, kde-format
 msgid "Todos"
 msgstr "გეგმები"
 
-#: calendarjanitor.cpp:500
+#: calendarjanitor.cpp:499
 #, kde-format
 msgid "Journals"
 msgstr "ჟურნალები"
 
-#: calendarjanitor.cpp:501
+#: calendarjanitor.cpp:500
 #, kde-format
 msgid "Passed events and to-dos (>365 days)"
 msgstr "წარსულის გეგმები და მოვლენები (>365 დღე)"
 
-#: calendarjanitor.cpp:502
+#: calendarjanitor.cpp:501
 #, kde-format
 msgid "Old incidences with alarms"
 msgstr "ძველი გავლენები, განგაშით"
 
-#: calendarjanitor.cpp:503
+#: calendarjanitor.cpp:502
 #, kde-format
 msgid "Inline attachments"
 msgstr "ხაზში ჩასმული მიბმული ფაილები"
 
-#: calendarjanitor.cpp:504
+#: calendarjanitor.cpp:503
 #, kde-format
 msgid "Items with empty remote id [!!]"
 msgstr "ცარიელი დაშორებული id-ის მქონე ელემენტები [!!]"
 
-#: calendarjanitor.cpp:507
+#: calendarjanitor.cpp:506
 #, kde-format
 msgid "Total size of inline attachments (bytes)"
 msgstr "ხაზში ჩასმული მიმაგრებული ფაილის ჯამური ზომა (ბაიტებში)"
 
-#: calendarjanitor.cpp:509
+#: calendarjanitor.cpp:508
 #, kde-format
 msgid "Total size of inline attachments (KB)"
 msgstr "ხაზში ჩასმული მიმაგრებული ფაილის ჯამური ზომა (კბ)"
 
-#: calendarjanitor.cpp:521
+#: calendarjanitor.cpp:520
 #, kde-format
 msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
 msgstr ""
 "RECURRING-ID-ის მქონე გავლენების არარსებულ მთავარ გავლენებზე შემოწმება..."
 
-#: calendarjanitor.cpp:562
+#: calendarjanitor.cpp:561
 #, kde-format
 msgid "In fix mode the RECURRING-ID property will be unset and UID changed."
 msgstr ""
 "გასწორების რეჟიმში RECURRING-ID თვისება გასუფთავდება და UID-ი შეიცვლება."
 
-#: calendarjanitor.cpp:562
+#: calendarjanitor.cpp:561
 #, kde-format
 msgid "Recurrence cleared."
 msgstr "განმეორებადობა გასუფთავებულია."
 
-#: calendarjanitor.cpp:567
+#: calendarjanitor.cpp:566
 #, kde-format
 msgid "Deleting alarms older than 365 days..."
 msgstr "365 დღეზე ძველი განგაშების წაშლა..."
 
-#: calendarjanitor.cpp:585 calendarjanitor.cpp:599
-#, kde-format
+#: calendarjanitor.cpp:584 calendarjanitor.cpp:598
+#, fuzzy, kde-format
+#| msgid "invalid"
+msgctxt "invalid datetime"
 msgid "invalid"
 msgstr "მცდარი"
 
-#: calendarjanitor.cpp:602
+#: calendarjanitor.cpp:601
 #, kde-format
 msgid "recurrent"
 msgstr "განმეორებადი"
 
-#: calendarjanitor.cpp:620
+#: calendarjanitor.cpp:619
 #, kde-format
 msgid "Found buggy incidence:"
 msgstr "ნაპოვნია შეცდომების შემცველი გავლენა:"
 
-#: calendarjanitor.cpp:621
+#: calendarjanitor.cpp:620
 #, kde-format
 msgid "id=%1; summary=\"%2\""
 msgstr "id=%1; ჯამში=\"%2\""

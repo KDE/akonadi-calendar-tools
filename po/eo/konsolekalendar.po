@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-28 00:44+0000\n"
 "PO-Revision-Date: 2024-05-17 06:24+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -35,64 +35,69 @@ msgid "There are no calendars available."
 msgstr "Ne estas disponeblaj kalendaroj."
 
 #: konsolekalendar.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(Read only)"
+msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Nurlegebla)"
 
 #: konsolekalendar.cpp:142
-#, kde-format
-msgid "Create Calendar <Dry Run>: %1"
+#, fuzzy, kde-format
+#| msgid "Create Calendar <Dry Run>: %1"
+msgid "Dry Run: Create Calendar: %1"
 msgstr "Krei Kalendaron <Dry Run>: %1"
 
 #: konsolekalendar.cpp:148
-#, kde-format
-msgid "Create Calendar <Verbose>: %1"
-msgstr "Krei Kalendaron <Vorteme>: %1"
+#, fuzzy, kde-format
+#| msgid "Create Calendar <Dry Run>: %1"
+msgid "Create Calendar: %1"
+msgstr "Krei Kalendaron <Dry Run>: %1"
 
-#: konsolekalendar.cpp:167
+#: konsolekalendar.cpp:166
 #, kde-format
-msgid "View Events <Dry Run>:"
-msgstr "Rigardi Eventojn <Dry Run>:"
+msgid "Dry Run: View Events:"
+msgstr ""
 
-#: konsolekalendar.cpp:189
-#, kde-format
-msgid "View Event <Verbose>:"
+#: konsolekalendar.cpp:188
+#, fuzzy, kde-format
+#| msgid "View Event <Verbose>:"
+msgid "View Event:"
 msgstr "Rigardi Eventon <Vorteme>:"
 
-#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Kio:  %1"
 
-#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Komenco: %1"
 
-#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Fino:   %1"
 
-#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "Neniu Tempo Rilata kun Evento"
 
-#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Prisk:  %1"
 
-#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -101,13 +106,14 @@ msgstr "  Loko:  %1"
 
 #: konsolekalendaradd.cpp:61
 #, kde-format
-msgid "Insert Event <Dry Run>:"
-msgstr "Enmeti Eventon <Dry Run>:"
+msgid "Dry Run: Insert Event:"
+msgstr ""
 
 #: konsolekalendaradd.cpp:65
-#, kde-format
-msgid "Insert Event <Verbose>:"
-msgstr "Enmeti Eventon <Vorteme>:"
+#, fuzzy, kde-format
+#| msgid "Insert Event <Dry Run>:"
+msgid "Insert Event:"
+msgstr "Enmeti Eventon <Dry Run>:"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -125,29 +131,38 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "Fiasko: \"%1\" ne enigita"
 
 #: konsolekalendaradd.cpp:148
-#, kde-format
-msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, fuzzy, kde-format
+#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+msgid "Insert Event skipped, because UID \"%1\" is already known."
 msgstr "Preterlasis Enmeti Eventon, ĉar UID \"%1\" jam estas konata. <vorteca>"
 
 #: konsolekalendaradd.cpp:155
-#, kde-format
-msgid "Add Event with UID \"%1\". <Verbose>"
+#, fuzzy, kde-format
+#| msgid "Add Event with UID \"%1\". <Verbose>"
+msgid "Add Event with UID \"%1\"."
 msgstr "Aldonu Eventon kun UID \"%1\". <vorteca>"
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
-msgid "Change Event <Dry Run>:"
-msgstr "Ŝanĝi Eventon <Seka Kuro>:"
+msgid "Dry Run: Change Event:"
+msgstr ""
 
-#: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
+#: konsolekalendarchange.cpp:53
 #, kde-format
-msgid "To Event <Dry Run>:"
-msgstr "Al Evento <Seka Kuro>:"
+msgid "Dry Run: To Event:"
+msgstr ""
 
 #: konsolekalendarchange.cpp:59
-#, kde-format
-msgid "Change Event <Verbose>:"
-msgstr "Ŝanĝi Eventon <Devorta>:"
+#, fuzzy, kde-format
+#| msgid "Change Event <Dry Run>:"
+msgid "Change Event:"
+msgstr "Ŝanĝi Eventon <Seka Kuro>:"
+
+#: konsolekalendarchange.cpp:62
+#, fuzzy, kde-format
+#| msgid "To Event <Dry Run>:"
+msgid "To Event:"
+msgstr "Al Evento <Seka Kuro>:"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -167,13 +182,14 @@ msgstr "  UID:   %1"
 
 #: konsolekalendardelete.cpp:48
 #, kde-format
-msgid "Delete Event <Dry Run>:"
-msgstr "Forigi Eventon <Dry Run>:"
+msgid "Dry Run: Delete Event:"
+msgstr ""
 
 #: konsolekalendardelete.cpp:54
-#, kde-format
-msgid "Delete Event <Verbose>:"
-msgstr "Forigi Eventon <Devorta>:"
+#, fuzzy, kde-format
+#| msgid "Delete Event <Dry Run>:"
+msgid "Delete Event:"
+msgstr "Forigi Eventon <Dry Run>:"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -553,3 +569,18 @@ msgstr "Ne povas malfermi specifitan eksportdosieron: %1"
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Ne povas krei Akonadi-rimedon el dosiero: %1"
+
+#~ msgid "Create Calendar <Verbose>: %1"
+#~ msgstr "Krei Kalendaron <Vorteme>: %1"
+
+#~ msgid "View Events <Dry Run>:"
+#~ msgstr "Rigardi Eventojn <Dry Run>:"
+
+#~ msgid "Insert Event <Verbose>:"
+#~ msgstr "Enmeti Eventon <Vorteme>:"
+
+#~ msgid "Change Event <Verbose>:"
+#~ msgstr "Ŝanĝi Eventon <Devorta>:"
+
+#~ msgid "Delete Event <Verbose>:"
+#~ msgstr "Forigi Eventon <Devorta>:"

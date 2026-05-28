@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mimos\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-28 00:44+0000\n"
 "PO-Revision-Date: 2005-11-18 13:20+0800\n"
 "Last-Translator: MIMOS <opensource@mimos.my>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -32,67 +32,67 @@ msgstr ""
 
 #: konsolekalendar.cpp:95
 #, kde-format
+msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr ""
 
 #: konsolekalendar.cpp:142
 #, fuzzy, kde-format
 #| msgid "Create Calendar <Dry Run>: %1"
-msgid "Create Calendar <Dry Run>: %1"
+msgid "Dry Run: Create Calendar: %1"
 msgstr "Cipta Kalendar <Dry Run>: %1"
 
 #: konsolekalendar.cpp:148
 #, fuzzy, kde-format
-#| msgid "Create Calendar <Verbose>: %1"
-msgid "Create Calendar <Verbose>: %1"
-msgstr "Cipta Kalendar <Verbose>: %1"
+#| msgid "Create Calendar <Dry Run>: %1"
+msgid "Create Calendar: %1"
+msgstr "Cipta Kalendar <Dry Run>: %1"
 
-#: konsolekalendar.cpp:167
-#, fuzzy, kde-format
-#| msgid "View Events <Dry Run>:"
-msgid "View Events <Dry Run>:"
-msgstr "Paparkan Kejadian <Dry Run>:"
+#: konsolekalendar.cpp:166
+#, kde-format
+msgid "Dry Run: View Events:"
+msgstr ""
 
-#: konsolekalendar.cpp:189
+#: konsolekalendar.cpp:188
 #, fuzzy, kde-format
 #| msgid "Insert Event <Verbose>:"
-msgid "View Event <Verbose>:"
+msgid "View Event:"
 msgstr "Selitkan Kejadian <Verbose>:"
 
-#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "Apa:  %1"
 
-#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "Mula: %1"
 
-#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "Tamat:   %1"
 
-#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "Tiada Waktu Berkaitan dengan Kejadian"
 
-#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Huraian:  %1"
 
-#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -101,13 +101,14 @@ msgstr "Lokasi:  %1"
 
 #: konsolekalendaradd.cpp:61
 #, kde-format
-msgid "Insert Event <Dry Run>:"
-msgstr "Selitkan Kejadian <Dry Run>:"
+msgid "Dry Run: Insert Event:"
+msgstr ""
 
 #: konsolekalendaradd.cpp:65
-#, kde-format
-msgid "Insert Event <Verbose>:"
-msgstr "Selitkan Kejadian <Verbose>:"
+#, fuzzy, kde-format
+#| msgid "Insert Event <Dry Run>:"
+msgid "Insert Event:"
+msgstr "Selitkan Kejadian <Dry Run>:"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -126,31 +127,35 @@ msgstr "Gagal: \"%1\" tidak diselitkan"
 
 #: konsolekalendaradd.cpp:148
 #, kde-format
-msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+msgid "Insert Event skipped, because UID \"%1\" is already known."
 msgstr ""
 
 #: konsolekalendaradd.cpp:155
 #, kde-format
-msgid "Add Event with UID \"%1\". <Verbose>"
+msgid "Add Event with UID \"%1\"."
 msgstr ""
 
 #: konsolekalendarchange.cpp:50
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
-msgid "Change Event <Dry Run>:"
-msgstr "Selitkan Kejadian <Dry Run>:"
+#, kde-format
+msgid "Dry Run: Change Event:"
+msgstr ""
 
-#: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
-msgid "To Event <Dry Run>:"
-msgstr "Selitkan Kejadian <Dry Run>:"
+#: konsolekalendarchange.cpp:53
+#, kde-format
+msgid "Dry Run: To Event:"
+msgstr ""
 
 #: konsolekalendarchange.cpp:59
 #, fuzzy, kde-format
-#| msgid "Insert Event <Verbose>:"
-msgid "Change Event <Verbose>:"
-msgstr "Selitkan Kejadian <Verbose>:"
+#| msgid "Insert Event <Dry Run>:"
+msgid "Change Event:"
+msgstr "Selitkan Kejadian <Dry Run>:"
+
+#: konsolekalendarchange.cpp:62
+#, fuzzy, kde-format
+#| msgid "Events:"
+msgid "To Event:"
+msgstr "Kejadian:"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -169,16 +174,15 @@ msgid "  UID:   %1"
 msgstr "  UID:   %1"
 
 #: konsolekalendardelete.cpp:48
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
-msgid "Delete Event <Dry Run>:"
-msgstr "Selitkan Kejadian <Dry Run>:"
+#, kde-format
+msgid "Dry Run: Delete Event:"
+msgstr ""
 
 #: konsolekalendardelete.cpp:54
 #, fuzzy, kde-format
-#| msgid "Insert Event <Verbose>:"
-msgid "Delete Event <Verbose>:"
-msgstr "Selitkan Kejadian <Verbose>:"
+#| msgid "Insert Event <Dry Run>:"
+msgid "Delete Event:"
+msgstr "Selitkan Kejadian <Dry Run>:"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -580,11 +584,36 @@ msgstr "Tidak dapat membuka fail ekspot yang dinyatakan: %1"
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr ""
 
+#, fuzzy
+#~| msgid "Create Calendar <Verbose>: %1"
+#~ msgid "Create Calendar <Verbose>: %1"
+#~ msgstr "Cipta Kalendar <Verbose>: %1"
+
+#, fuzzy
+#~| msgid "View Events <Dry Run>:"
+#~ msgid "View Events <Dry Run>:"
+#~ msgstr "Paparkan Kejadian <Dry Run>:"
+
+#~ msgid "Insert Event <Verbose>:"
+#~ msgstr "Selitkan Kejadian <Verbose>:"
+
+#, fuzzy
+#~| msgid "Insert Event <Dry Run>:"
+#~ msgid "To Event <Dry Run>:"
+#~ msgstr "Selitkan Kejadian <Dry Run>:"
+
+#, fuzzy
+#~| msgid "Insert Event <Verbose>:"
+#~ msgid "Change Event <Verbose>:"
+#~ msgstr "Selitkan Kejadian <Verbose>:"
+
+#, fuzzy
+#~| msgid "Insert Event <Verbose>:"
+#~ msgid "Delete Event <Verbose>:"
+#~ msgstr "Selitkan Kejadian <Verbose>:"
+
 #~ msgid "Sorry, export to HTML by UID is not supported yet"
 #~ msgstr "Maaf, eksport ke HTML dengan UID belum lagi disokong"
-
-#~ msgid "Events:"
-#~ msgstr "Kejadian:"
 
 #~ msgid "Events: %1"
 #~ msgstr "Kejadian: %1"

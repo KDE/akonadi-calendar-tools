@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-28 00:44+0000\n"
 "PO-Revision-Date: 2010-02-02 14:22+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -37,67 +37,67 @@ msgstr ""
 
 #: konsolekalendar.cpp:95
 #, kde-format
+msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr ""
 
 #: konsolekalendar.cpp:142
 #, fuzzy, kde-format
 #| msgid "Create Calendar &lt;Dry Run&gt;: %1"
-msgid "Create Calendar <Dry Run>: %1"
+msgid "Dry Run: Create Calendar: %1"
 msgstr "បង្កើត​ប្រតិទិន &lt;ដំណើរការ​សាកល្បង&gt; ៖ %1"
 
 #: konsolekalendar.cpp:148
 #, fuzzy, kde-format
-#| msgid "Create Calendar &lt;Verbose&gt;: %1"
-msgid "Create Calendar <Verbose>: %1"
-msgstr "បង្កើត​ប្រតិទិន &lt;បរិយាយ&gt; ៖ %1"
+#| msgid "Create Calendar &lt;Dry Run&gt;: %1"
+msgid "Create Calendar: %1"
+msgstr "បង្កើត​ប្រតិទិន &lt;ដំណើរការ​សាកល្បង&gt; ៖ %1"
 
-#: konsolekalendar.cpp:167
-#, fuzzy, kde-format
-#| msgid "View Events &lt;Dry Run&gt;:"
-msgid "View Events <Dry Run>:"
-msgstr "មើល​ព្រឹត្តិការណ៍ &lt;ដំណើរការ​សាកល្បង&gt; ៖"
+#: konsolekalendar.cpp:166
+#, kde-format
+msgid "Dry Run: View Events:"
+msgstr ""
 
-#: konsolekalendar.cpp:189
+#: konsolekalendar.cpp:188
 #, fuzzy, kde-format
 #| msgid "View Event &lt;Verbose&gt;:"
-msgid "View Event <Verbose>:"
+msgid "View Event:"
 msgstr "មើល​ព្រឹត្តិការណ៍ &lt;បរិយាយ&gt; ៖"
 
-#: konsolekalendar.cpp:348 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  អ្វី ៖  %1"
 
-#: konsolekalendar.cpp:350 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  ចាប់​ផ្ដើម ៖ %1"
 
-#: konsolekalendar.cpp:352 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  បញ្ចប់ ៖   %1"
 
-#: konsolekalendar.cpp:355 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  គ្មាន​ពេលវេលា​ដែលបាន​ភ្ជាប់​ជាមួយ​ព្រឹត្តិការណ៍​ទេ"
 
-#: konsolekalendar.cpp:358 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  ចុះ ៖  %1"
 
-#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -105,16 +105,15 @@ msgid "  Location:  %1"
 msgstr "  ទីតាំង ៖  %1"
 
 #: konsolekalendaradd.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Event &lt;Dry Run&gt;:"
-msgid "Insert Event <Dry Run>:"
-msgstr "បញ្ចូល​ព្រឹត្តិការណ៍ &lt;ដំណើរការ​សាកល្បង&gt; ៖"
+#, kde-format
+msgid "Dry Run: Insert Event:"
+msgstr ""
 
 #: konsolekalendaradd.cpp:65
 #, fuzzy, kde-format
-#| msgid "Insert Event &lt;Verbose&gt;:"
-msgid "Insert Event <Verbose>:"
-msgstr "បញ្ចូល​ព្រឹត្តិការណ៍ &lt;បរិយាយ&gt; ៖"
+#| msgid "Insert Event &lt;Dry Run&gt;:"
+msgid "Insert Event:"
+msgstr "បញ្ចូល​ព្រឹត្តិការណ៍ &lt;ដំណើរការ​សាកល្បង&gt; ៖"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -133,31 +132,35 @@ msgstr "បរាជ័យ​ ៖ មិនបាន​បញ្ចូល \"%1\
 
 #: konsolekalendaradd.cpp:148
 #, kde-format
-msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+msgid "Insert Event skipped, because UID \"%1\" is already known."
 msgstr ""
 
 #: konsolekalendaradd.cpp:155
 #, kde-format
-msgid "Add Event with UID \"%1\". <Verbose>"
+msgid "Add Event with UID \"%1\"."
 msgstr ""
 
 #: konsolekalendarchange.cpp:50
-#, fuzzy, kde-format
-#| msgid "Change Event &lt;Dry Run&gt;:"
-msgid "Change Event <Dry Run>:"
-msgstr "ផ្លាស់ប្ដូរ​ព្រឹត្តិការណ៍ &lt;ដំណើរការ​សាកល្បង&gt; ៖"
+#, kde-format
+msgid "Dry Run: Change Event:"
+msgstr ""
 
-#: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "To Event &lt;Dry Run&gt;:"
-msgid "To Event <Dry Run>:"
-msgstr "ទៅ​ព្រឹត្តិការណ៍ &lt;ដំណើរការ​សាកល្បង&gt; ៖"
+#: konsolekalendarchange.cpp:53
+#, kde-format
+msgid "Dry Run: To Event:"
+msgstr ""
 
 #: konsolekalendarchange.cpp:59
 #, fuzzy, kde-format
-#| msgid "Change Event &lt;Verbose&gt;:"
-msgid "Change Event <Verbose>:"
-msgstr "ផ្លាស់ប្ដូរ​ព្រឹត្តិការណ៍ &lt;បរិយាយ&gt; ៖"
+#| msgid "Change Event &lt;Dry Run&gt;:"
+msgid "Change Event:"
+msgstr "ផ្លាស់ប្ដូរ​ព្រឹត្តិការណ៍ &lt;ដំណើរការ​សាកល្បង&gt; ៖"
+
+#: konsolekalendarchange.cpp:62
+#, fuzzy, kde-format
+#| msgid "Events:"
+msgid "To Event:"
+msgstr "ព្រឹត្តការណ៍​ ៖"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -176,16 +179,15 @@ msgid "  UID:   %1"
 msgstr "  UID ៖   %1"
 
 #: konsolekalendardelete.cpp:48
-#, fuzzy, kde-format
-#| msgid "Delete Event &lt;Dry Run&gt;:"
-msgid "Delete Event <Dry Run>:"
-msgstr "លុបព្រឹត្តិការណ៍ &lt;ដំណើរការ​សាកល្បង&gt; ៖"
+#, kde-format
+msgid "Dry Run: Delete Event:"
+msgstr ""
 
 #: konsolekalendardelete.cpp:54
 #, fuzzy, kde-format
-#| msgid "Delete Event &lt;Verbose&gt;:"
-msgid "Delete Event <Verbose>:"
-msgstr "លុប​ព្រឹត្តិការណ៍ &lt;បរិយាយ&gt; ៖"
+#| msgid "Delete Event &lt;Dry Run&gt;:"
+msgid "Delete Event:"
+msgstr "លុបព្រឹត្តិការណ៍ &lt;ដំណើរការ​សាកល្បង&gt; ៖"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -590,11 +592,38 @@ msgstr "មិន​អាច​បើក​ឯកសារ​នាំចេញ
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr ""
 
+#, fuzzy
+#~| msgid "Create Calendar &lt;Verbose&gt;: %1"
+#~ msgid "Create Calendar <Verbose>: %1"
+#~ msgstr "បង្កើត​ប្រតិទិន &lt;បរិយាយ&gt; ៖ %1"
+
+#, fuzzy
+#~| msgid "View Events &lt;Dry Run&gt;:"
+#~ msgid "View Events <Dry Run>:"
+#~ msgstr "មើល​ព្រឹត្តិការណ៍ &lt;ដំណើរការ​សាកល្បង&gt; ៖"
+
+#, fuzzy
+#~| msgid "Insert Event &lt;Verbose&gt;:"
+#~ msgid "Insert Event <Verbose>:"
+#~ msgstr "បញ្ចូល​ព្រឹត្តិការណ៍ &lt;បរិយាយ&gt; ៖"
+
+#, fuzzy
+#~| msgid "To Event &lt;Dry Run&gt;:"
+#~ msgid "To Event <Dry Run>:"
+#~ msgstr "ទៅ​ព្រឹត្តិការណ៍ &lt;ដំណើរការ​សាកល្បង&gt; ៖"
+
+#, fuzzy
+#~| msgid "Change Event &lt;Verbose&gt;:"
+#~ msgid "Change Event <Verbose>:"
+#~ msgstr "ផ្លាស់ប្ដូរ​ព្រឹត្តិការណ៍ &lt;បរិយាយ&gt; ៖"
+
+#, fuzzy
+#~| msgid "Delete Event &lt;Verbose&gt;:"
+#~ msgid "Delete Event <Verbose>:"
+#~ msgstr "លុប​ព្រឹត្តិការណ៍ &lt;បរិយាយ&gt; ៖"
+
 #~ msgid "Sorry, export to HTML by UID is not supported yet"
 #~ msgstr "សូម​អភ័យទោស នាំចេញ​ទៅជា HTML ដោយ​លេខ​សម្គាល់​អ្នកប្រើ គឺ​មិនទាន់​គាំទ្រ​នៅឡើយទេ"
-
-#~ msgid "Events:"
-#~ msgstr "ព្រឹត្តការណ៍​ ៖"
 
 #~ msgid "Events: %1"
 #~ msgstr "ព្រឹត្តការណ៍​ ៖ %1"
