@@ -230,11 +230,21 @@ bool KonsoleKalendar::showInstance()
                     if (!events.isEmpty()) {
                         qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
                                                      << "Got the next event";
-                        printEvent(&ts, events.first(), dt);
-                        return true;
+                        status = printEvent(&ts, events.first(), dt);
+                        f.close();
+                        return status;
                     }
                 }
+            } else {
+                qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendar.cpp::showInstance() |"
+                                             << "Show specified dates in calendar";
+                QDate dt;
+                for (dt = m_variables->getStartDateTime().date(); dt <= m_variables->getEndDateTime().date(); dt = dt.addDays(1)) {
+                    Event::List events = calendar->events(dt, timeZone, EventSortStartDate, SortDirectionAscending);
+                    status &= printEventList(&ts, &events, dt);
+                }
             }
+
             f.close();
         }
     }
