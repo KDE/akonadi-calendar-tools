@@ -7,13 +7,13 @@
 # obsoleteman <tulliana@gmail.com>, 2008-2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014, 2015.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
-"PO-Revision-Date: 2026-05-02 19:55+0300\n"
+"POT-Creation-Date: 2026-05-29 00:44+0000\n"
+"PO-Revision-Date: 2026-05-28 15:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413102205.000000\n"
 
@@ -41,85 +41,101 @@ msgid "There are no calendars available."
 msgstr "Kullanılabilir takvim yok."
 
 #: konsolekalendar.cpp:95
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Saltokunur)"
 
-#: konsolekalendar.cpp:142
+#: konsolekalendar.cpp:112 konsolekalendar.cpp:131
 #, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
-msgid "Dry Run: Create Calendar: %1"
-msgstr "Takvim Oluştur <Dry Run>: %1"
+#| msgid "Unable to import calendar: %1"
+msgid "Unable to create calendar %1: %2"
+msgstr "Takvim %1 alınamıyor"
 
-#: konsolekalendar.cpp:148
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
-msgid "Create Calendar: %1"
-msgstr "Takvim Oluştur <Dry Run>: %1"
-
-#: konsolekalendar.cpp:166
+#: konsolekalendar.cpp:113
 #, kde-format
-msgid "Dry Run: View Events:"
+msgid "Make sure the akonadiserver is running properly."
 msgstr ""
 
-#: konsolekalendar.cpp:188
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
-msgid "View Event:"
-msgstr "Olayı Göster <Verbose>:"
+#: konsolekalendar.cpp:121
+#, kde-format
+msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
+msgstr ""
 
-#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:126
+#, kde-format
+msgid "Unable to create calendar %1: DBus setPath call failed: %2"
+msgstr ""
+
+#: konsolekalendar.cpp:145
+#, kde-format
+msgid "Dry Run: Create Calendar: %1"
+msgstr "Prova: Takvim Oluştur: %1"
+
+#: konsolekalendar.cpp:151
+#, kde-format
+msgid "Create Calendar: %1"
+msgstr "Takvim Oluştur: %1"
+
+#: konsolekalendar.cpp:169
+#, kde-format
+msgid "Dry Run: View Events:"
+msgstr "Prova: Etkinlikleri Görüntüle:"
+
+#: konsolekalendar.cpp:191
+#, kde-format
+msgid "View Event:"
+msgstr "Etkinlikleri Görüntüle:"
+
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
-msgstr "  Ne:  %1"
+msgstr "  Ne: %1"
 
-#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:362 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Başlangıç: %1"
 
-#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:364 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
-msgstr "  Bitiş:   %1"
+msgstr "  Bitiş: %1"
 
-#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:367 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  Olaya Hiçbir Tarih İliştirilmemiş"
 
-#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:370 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
-msgstr "  Açıklama:  %1"
+msgstr "  Açıklama: %1"
 
-#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:372 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
 msgid "  Location:  %1"
-msgstr "  Yer:  %1"
+msgstr "  Yer: %1"
 
 #: konsolekalendaradd.cpp:61
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Prova: Etkinlik Gir:"
 
 #: konsolekalendaradd.cpp:65
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "Olay Ekle <Ayrıntı Verme>:"
+msgstr "Etkinlik Gir:"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -137,38 +153,34 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "Başarısız: “%1” eklenemedi"
 
 #: konsolekalendaradd.cpp:148
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr "Etkinlik Ekle atlatıldı çünkü UID “%1” zaten biliniyor. <Verbose>"
+msgstr "Etkinlik Ekle atlatıldı çünkü UID “%1” zaten biliniyor."
 
 #: konsolekalendaradd.cpp:155
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "“%1” UID’li bir etkinlik ekleyin. <Ayrıntılı>"
+msgstr "“%1” UID’li bir etkinlik ekleyin."
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "Prova: Etkinliği Değiştir:"
 
 #: konsolekalendarchange.cpp:53
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Prova: Şu Etkinliğe:"
 
 #: konsolekalendarchange.cpp:59
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "Olayı Değiştir <Ayrıntı Verme>:"
+msgstr "Etkinliği Değiştir:"
 
 #: konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "Events:"
+#, kde-format
 msgid "To Event:"
-msgstr "Olaylar:"
+msgstr "Şu Etkinliğe:"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -184,18 +196,17 @@ msgstr "Başarısız: “%1” değiştirilemedi"
 #: konsolekalendardelete.cpp:80
 #, kde-format
 msgid "  UID:   %1"
-msgstr "  UID:   %1"
+msgstr "  UID: %1"
 
 #: konsolekalendardelete.cpp:48
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Prova: Etkinliği Sil:"
 
 #: konsolekalendardelete.cpp:54
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "Olayı Sil <Ayrıntı Verme>:"
+msgstr "Etkinliği Sil:"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -577,6 +588,12 @@ msgstr "Belirtilen aktarma dosyası açılamadı: %1"
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Dosyadan Akonadi kaynağı oluşturulamadı: %1"
+
+#: main.cpp:770
+#, fuzzy, kde-format
+#| msgid "Calendar %1 successfully imported"
+msgid "Calendar %1 successfully created"
+msgstr "Takvim %1 başarıyla alındı."
 
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "Takvim Oluştur <Verbose>: %1"

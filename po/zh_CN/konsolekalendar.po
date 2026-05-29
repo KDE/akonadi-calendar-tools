@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
+"POT-Creation-Date: 2026-05-29 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -42,63 +42,84 @@ msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(只读)"
 
-#: konsolekalendar.cpp:142
+#: konsolekalendar.cpp:112 konsolekalendar.cpp:131
+#, fuzzy, kde-format
+#| msgid "Unable to import calendar: %1"
+msgid "Unable to create calendar %1: %2"
+msgstr "无法导入日历：%1"
+
+#: konsolekalendar.cpp:113
+#, kde-format
+msgid "Make sure the akonadiserver is running properly."
+msgstr ""
+
+#: konsolekalendar.cpp:121
+#, kde-format
+msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
+msgstr ""
+
+#: konsolekalendar.cpp:126
+#, kde-format
+msgid "Unable to create calendar %1: DBus setPath call failed: %2"
+msgstr ""
+
+#: konsolekalendar.cpp:145
 #, fuzzy, kde-format
 #| msgid "Create Calendar <Dry Run>: %1"
 msgid "Dry Run: Create Calendar: %1"
 msgstr "创建日历<模拟运行>：%1"
 
-#: konsolekalendar.cpp:148
+#: konsolekalendar.cpp:151
 #, fuzzy, kde-format
 #| msgid "Create Calendar <Dry Run>: %1"
 msgid "Create Calendar: %1"
 msgstr "创建日历<模拟运行>：%1"
 
-#: konsolekalendar.cpp:166
+#: konsolekalendar.cpp:169
 #, kde-format
 msgid "Dry Run: View Events:"
 msgstr ""
 
-#: konsolekalendar.cpp:188
+#: konsolekalendar.cpp:191
 #, fuzzy, kde-format
 #| msgid "View Event <Verbose>:"
 msgid "View Event:"
 msgstr "查看事件 <详细输出>："
 
-#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  内容：%1"
 
-#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:362 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  开始：%1"
 
-#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:364 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  结束：%1"
 
-#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:367 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  没有与此事件关联的时间"
 
-#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:370 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  描述：%1"
 
-#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:372 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -569,6 +590,12 @@ msgstr "无法打开指定的导出文件：%1"
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "无法从文件创建 Akonadi 资源： %1"
+
+#: main.cpp:770
+#, fuzzy, kde-format
+#| msgid "Calendar %1 successfully imported"
+msgid "Calendar %1 successfully created"
+msgstr "成功导入了日历 %1"
 
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "创建日历<详细输出>：%1"

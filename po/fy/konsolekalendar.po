@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
+"POT-Creation-Date: 2026-05-29 00:44+0000\n"
 "PO-Revision-Date: 2007-04-21 12:05+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -42,63 +42,86 @@ msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr ""
 
-#: konsolekalendar.cpp:142
+#: konsolekalendar.cpp:112 konsolekalendar.cpp:131
+#, fuzzy, kde-format
+#| msgid "Unable to create calendar: %1"
+msgid "Unable to create calendar %1: %2"
+msgstr "Aginda kin net oanmakke wurde: %1"
+
+#: konsolekalendar.cpp:113
+#, kde-format
+msgid "Make sure the akonadiserver is running properly."
+msgstr ""
+
+#: konsolekalendar.cpp:121
+#, fuzzy, kde-format
+#| msgid "Unable to create calendar: %1"
+msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
+msgstr "Aginda kin net oanmakke wurde: %1"
+
+#: konsolekalendar.cpp:126
+#, fuzzy, kde-format
+#| msgid "Unable to create calendar: %1"
+msgid "Unable to create calendar %1: DBus setPath call failed: %2"
+msgstr "Aginda kin net oanmakke wurde: %1"
+
+#: konsolekalendar.cpp:145
 #, fuzzy, kde-format
 #| msgid "Create Calendar <Dry Run>: %1"
 msgid "Dry Run: Create Calendar: %1"
 msgstr "Aginda oanmeitsje <stil>: %1"
 
-#: konsolekalendar.cpp:148
+#: konsolekalendar.cpp:151
 #, fuzzy, kde-format
 #| msgid "Create Calendar <Dry Run>: %1"
 msgid "Create Calendar: %1"
 msgstr "Aginda oanmeitsje <stil>: %1"
 
-#: konsolekalendar.cpp:166
+#: konsolekalendar.cpp:169
 #, kde-format
 msgid "Dry Run: View Events:"
 msgstr ""
 
-#: konsolekalendar.cpp:188
+#: konsolekalendar.cpp:191
 #, fuzzy, kde-format
 #| msgid "Insert Event <Verbose>:"
 msgid "View Event:"
 msgstr "Foarfal ynfoegje <wiidweidich>:"
 
-#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Wat:  %1"
 
-#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:362 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Begjin: %1"
 
-#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:364 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Ein:   %1"
 
-#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:367 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  Gjin tiid assosearre mei dit foarfal"
 
-#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:370 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Beskr.:  %1"
 
-#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:372 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -600,6 +623,11 @@ msgstr "De opjûne eksporttriem kin net iepene wurde: %1"
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr ""
 
+#: main.cpp:770
+#, kde-format
+msgid "Calendar %1 successfully created"
+msgstr "Aginda %1 mei súkses oanmakke"
+
 #, fuzzy
 #~| msgid "Create Calendar <Verbose>: %1"
 #~ msgid "Create Calendar <Verbose>: %1"
@@ -752,12 +780,6 @@ msgstr ""
 
 #~ msgid "Calendar %1 already exists"
 #~ msgstr "Aginda %1 bestiet al"
-
-#~ msgid "Calendar %1 successfully created"
-#~ msgstr "Aginda %1 mei súkses oanmakke"
-
-#~ msgid "Unable to create calendar: %1"
-#~ msgstr "Aginda kin net oanmakke wurde: %1"
 
 #~ msgid "Calendar file not found %1"
 #~ msgstr "Agendatriem is net fûn %1"

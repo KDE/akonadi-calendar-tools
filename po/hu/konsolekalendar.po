@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
+"POT-Creation-Date: 2026-05-29 00:44+0000\n"
 "PO-Revision-Date: 2024-05-16 11:12+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -40,63 +40,86 @@ msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Csak olvasható)"
 
-#: konsolekalendar.cpp:142
+#: konsolekalendar.cpp:112 konsolekalendar.cpp:131
+#, fuzzy, kde-format
+#| msgid "Unable to create calendar: %1"
+msgid "Unable to create calendar %1: %2"
+msgstr "Nem sikerült létrehozni ezt a naptárt: %1"
+
+#: konsolekalendar.cpp:113
+#, kde-format
+msgid "Make sure the akonadiserver is running properly."
+msgstr ""
+
+#: konsolekalendar.cpp:121
+#, fuzzy, kde-format
+#| msgid "Unable to create calendar: %1"
+msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
+msgstr "Nem sikerült létrehozni ezt a naptárt: %1"
+
+#: konsolekalendar.cpp:126
+#, fuzzy, kde-format
+#| msgid "Unable to create calendar: %1"
+msgid "Unable to create calendar %1: DBus setPath call failed: %2"
+msgstr "Nem sikerült létrehozni ezt a naptárt: %1"
+
+#: konsolekalendar.cpp:145
 #, fuzzy, kde-format
 #| msgid "Create Calendar <Dry Run>: %1"
 msgid "Dry Run: Create Calendar: %1"
 msgstr "Új naptár <üzenetek nélkül>: %1"
 
-#: konsolekalendar.cpp:148
+#: konsolekalendar.cpp:151
 #, fuzzy, kde-format
 #| msgid "Create Calendar <Dry Run>: %1"
 msgid "Create Calendar: %1"
 msgstr "Új naptár <üzenetek nélkül>: %1"
 
-#: konsolekalendar.cpp:166
+#: konsolekalendar.cpp:169
 #, kde-format
 msgid "Dry Run: View Events:"
 msgstr ""
 
-#: konsolekalendar.cpp:188
+#: konsolekalendar.cpp:191
 #, fuzzy, kde-format
 #| msgid "View Event <Verbose>:"
 msgid "View Event:"
 msgstr "Esemény megtekintése <részletesen>:"
 
-#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Tárgy:  %1"
 
-#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:362 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Kezdés: %1"
 
-#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:364 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Befejezés:   %1"
 
-#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:367 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  Nincs időpont kötve ehhez az eseményhez"
 
-#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:370 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Leírás:  %1"
 
-#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:372 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -574,6 +597,11 @@ msgstr "A megadott exportálási fájlt nem sikerült megnyitni: %1"
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Nem lehet létrehozni Akonadi-erőforrást a fájlból: %1"
 
+#: main.cpp:770
+#, kde-format
+msgid "Calendar %1 successfully created"
+msgstr "A(z) %1 naptár sikeresen létrehozva"
+
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "Új naptár <üzenetekkel>: %1"
 
@@ -672,12 +700,6 @@ msgstr "Nem lehet létrehozni Akonadi-erőforrást a fájlból: %1"
 
 #~ msgid "Calendar %1 already exists"
 #~ msgstr "A(z) %1 naptár már létezik"
-
-#~ msgid "Calendar %1 successfully created"
-#~ msgstr "A(z) %1 naptár sikeresen létrehozva"
-
-#~ msgid "Unable to create calendar: %1"
-#~ msgstr "Nem sikerült létrehozni ezt a naptárt: %1"
 
 #~ msgid "Calendar file not found %1"
 #~ msgstr "A(z) %1 naptárfájl nem található"

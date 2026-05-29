@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
+"POT-Creation-Date: 2026-05-29 00:44+0000\n"
 "PO-Revision-Date: 2013-09-16 04:33+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -40,63 +40,86 @@ msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Тек оқу үшін)"
 
-#: konsolekalendar.cpp:142
+#: konsolekalendar.cpp:112 konsolekalendar.cpp:131
+#, fuzzy, kde-format
+#| msgid "Unable to create calendar: %1"
+msgid "Unable to create calendar %1: %2"
+msgstr "%1 күнтізбесі құрылған жоқ"
+
+#: konsolekalendar.cpp:113
+#, kde-format
+msgid "Make sure the akonadiserver is running properly."
+msgstr ""
+
+#: konsolekalendar.cpp:121
+#, fuzzy, kde-format
+#| msgid "Unable to create calendar: %1"
+msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
+msgstr "%1 күнтізбесі құрылған жоқ"
+
+#: konsolekalendar.cpp:126
+#, fuzzy, kde-format
+#| msgid "Unable to create calendar: %1"
+msgid "Unable to create calendar %1: DBus setPath call failed: %2"
+msgstr "%1 күнтізбесі құрылған жоқ"
+
+#: konsolekalendar.cpp:145
 #, fuzzy, kde-format
 #| msgid "Create Calendar &lt;Dry Run&gt;: %1"
 msgid "Dry Run: Create Calendar: %1"
 msgstr "&lt;Dry Run&gt;күнтізбесін құру: %1"
 
-#: konsolekalendar.cpp:148
+#: konsolekalendar.cpp:151
 #, fuzzy, kde-format
 #| msgid "Create Calendar &lt;Dry Run&gt;: %1"
 msgid "Create Calendar: %1"
 msgstr "&lt;Dry Run&gt;күнтізбесін құру: %1"
 
-#: konsolekalendar.cpp:166
+#: konsolekalendar.cpp:169
 #, kde-format
 msgid "Dry Run: View Events:"
 msgstr ""
 
-#: konsolekalendar.cpp:188
+#: konsolekalendar.cpp:191
 #, fuzzy, kde-format
 #| msgid "View Event &lt;Verbose&gt;:"
 msgid "View Event:"
 msgstr "&lt;Verbose&gt; оқиғасын қарау:"
 
-#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Не:  %1"
 
-#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:362 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Басталуы: %1"
 
-#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:364 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Аяқталуы:   %1"
 
-#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:367 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  Уақыты көрсетілмейтін оқиға"
 
-#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:370 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Сипаттамасы:  %1"
 
-#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:372 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -592,6 +615,11 @@ msgstr "Келтірілген %1 экспорт файлы ашылмады"
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr ""
 
+#: main.cpp:770
+#, kde-format
+msgid "Calendar %1 successfully created"
+msgstr "%1 күнтізбесі сәтті құрылды"
+
 #, fuzzy
 #~| msgid "Create Calendar &lt;Verbose&gt;: %1"
 #~ msgid "Create Calendar <Verbose>: %1"
@@ -702,12 +730,6 @@ msgstr ""
 
 #~ msgid "Calendar %1 already exists"
 #~ msgstr "%1 күнтізбесі бар ғой"
-
-#~ msgid "Calendar %1 successfully created"
-#~ msgstr "%1 күнтізбесі сәтті құрылды"
-
-#~ msgid "Unable to create calendar: %1"
-#~ msgstr "%1 күнтізбесі құрылған жоқ"
 
 #~ msgid "Calendar file not found %1"
 #~ msgstr "%1 күнтізбесі табылмады"

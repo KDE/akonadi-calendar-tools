@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
+"POT-Creation-Date: 2026-05-29 00:44+0000\n"
 "PO-Revision-Date: 2004-04-20 13:26+CEST\n"
 "Last-Translator: auto\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -43,60 +43,80 @@ msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr ""
 
-#: konsolekalendar.cpp:142
+#: konsolekalendar.cpp:112 konsolekalendar.cpp:131
+#, fuzzy, kde-format
+msgid "Unable to create calendar %1: %2"
+msgstr "Ne mogu napraviti kalendar: "
+
+#: konsolekalendar.cpp:113
+#, kde-format
+msgid "Make sure the akonadiserver is running properly."
+msgstr ""
+
+#: konsolekalendar.cpp:121
+#, fuzzy, kde-format
+msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
+msgstr "Ne mogu napraviti kalendar: "
+
+#: konsolekalendar.cpp:126
+#, fuzzy, kde-format
+msgid "Unable to create calendar %1: DBus setPath call failed: %2"
+msgstr "Ne mogu napraviti kalendar: "
+
+#: konsolekalendar.cpp:145
 #, fuzzy, kde-format
 msgid "Dry Run: Create Calendar: %1"
 msgstr "Promijeni događaj <na suvo>:"
 
-#: konsolekalendar.cpp:148
+#: konsolekalendar.cpp:151
 #, fuzzy, kde-format
 msgid "Create Calendar: %1"
 msgstr "Promijeni događaj <na suvo>:"
 
-#: konsolekalendar.cpp:166
+#: konsolekalendar.cpp:169
 #, kde-format
 msgid "Dry Run: View Events:"
 msgstr ""
 
-#: konsolekalendar.cpp:188
+#: konsolekalendar.cpp:191
 #, fuzzy, kde-format
 msgid "View Event:"
 msgstr "Umetni događaj <detaljno>:"
 
-#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, fuzzy, kde-format
 msgid "  What:  %1"
 msgstr "Što:"
 
-#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:362 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, fuzzy, kde-format
 msgid "  Begin: %1"
 msgstr "Kreni"
 
-#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:364 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, fuzzy, kde-format
 msgid "  End:   %1"
 msgstr "Kraj:"
 
-#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:367 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "Nema vremena povezanog s događajem"
 
-#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:370 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, fuzzy, kde-format
 msgid "  Desc:  %1"
 msgstr "Opis:"
 
-#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:372 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -571,6 +591,11 @@ msgstr "Ne mogu otvoriti naznačeni izvozni datoteka: "
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr ""
 
+#: main.cpp:770
+#, fuzzy, kde-format
+msgid "Calendar %1 successfully created"
+msgstr "uspješno kreiran"
+
 #, fuzzy
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "Umetni događaj <detaljno>:"
@@ -636,14 +661,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Calendar %1 already exists"
 #~ msgstr "već postoji"
-
-#, fuzzy
-#~ msgid "Calendar %1 successfully created"
-#~ msgstr "uspješno kreiran"
-
-#, fuzzy
-#~ msgid "Unable to create calendar: %1"
-#~ msgstr "Ne mogu napraviti kalendar: "
 
 #, fuzzy
 #~ msgid "Calendar file not found %1"

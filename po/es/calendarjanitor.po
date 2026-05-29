@@ -1,15 +1,15 @@
 # Spanish translations for calendarjanitor.po package.
-# Copyright (C) 2013-2025 This file is copyright:
+# Copyright (C) 2013-2026 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar-tools package.
 #
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017 Javier Viñal <fjvinal@gmail.com>
-# SPDX-FileCopyrightText: 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2013-2017 Javier Viñal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2024-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: calendarjanitor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-28 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 13:38+0100\n"
+"PO-Revision-Date: 2026-05-28 15:10+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -245,11 +245,10 @@ msgid "Deleting alarms older than 365 days..."
 msgstr "Borrando alarmas más viejas que 365 días…"
 
 #: calendarjanitor.cpp:584 calendarjanitor.cpp:598
-#, fuzzy, kde-format
-#| msgid "invalid"
+#, kde-format
 msgctxt "invalid datetime"
 msgid "invalid"
-msgstr "no válido"
+msgstr "no válida"
 
 #: calendarjanitor.cpp:601
 #, kde-format

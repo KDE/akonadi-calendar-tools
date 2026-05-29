@@ -1,6 +1,6 @@
 # Slovenian translation of konsolekalendar
 # Copyright (C) 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
-# $Id: konsolekalendar.po 1737851 2026-05-28 01:28:00Z scripty $
+# $Id: konsolekalendar.po 1737903 2026-05-29 01:28:21Z scripty $
 # $Source$
 #
 # Gregor Rakar <gregor.rakar@kiss.si>, 2002, 2003, 2004, 2005.
@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
-"PO-Revision-Date: 2024-05-16 09:38+0200\n"
+"POT-Creation-Date: 2026-05-29 00:44+0000\n"
+"PO-Revision-Date: 2026-05-28 06:44+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -45,69 +45,86 @@ msgid "There are no calendars available."
 msgstr "Na voljo ni nobenega koledarja."
 
 #: konsolekalendar.cpp:95
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Samo za branje)"
 
-#: konsolekalendar.cpp:142
+#: konsolekalendar.cpp:112 konsolekalendar.cpp:131
 #, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
-msgid "Dry Run: Create Calendar: %1"
-msgstr "Ustvari koledar <preizkusno>: %1"
+#| msgid "Unable to import calendar: %1"
+msgid "Unable to create calendar %1: %2"
+msgstr "Ni bilo mogoče uvoziti koledarja: %1"
 
-#: konsolekalendar.cpp:148
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
-msgid "Create Calendar: %1"
-msgstr "Ustvari koledar <preizkusno>: %1"
-
-#: konsolekalendar.cpp:166
+#: konsolekalendar.cpp:113
 #, kde-format
-msgid "Dry Run: View Events:"
+msgid "Make sure the akonadiserver is running properly."
 msgstr ""
 
-#: konsolekalendar.cpp:188
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
-msgid "View Event:"
-msgstr "Ogled dogodka <podrobno>:"
+#: konsolekalendar.cpp:121
+#, kde-format
+msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
+msgstr ""
 
-#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:126
+#, kde-format
+msgid "Unable to create calendar %1: DBus setPath call failed: %2"
+msgstr ""
+
+#: konsolekalendar.cpp:145
+#, kde-format
+msgid "Dry Run: Create Calendar: %1"
+msgstr "Poskusni zagon: Ustvari koledar: %1"
+
+#: konsolekalendar.cpp:151
+#, kde-format
+msgid "Create Calendar: %1"
+msgstr "Ustvari koledar: %1"
+
+#: konsolekalendar.cpp:169
+#, kde-format
+msgid "Dry Run: View Events:"
+msgstr "Poskusni zagon: Ogled dogodkov:"
+
+#: konsolekalendar.cpp:191
+#, kde-format
+msgid "View Event:"
+msgstr "Ogled dogodka:"
+
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Kaj:     %1"
 
-#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:362 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Začetek: %1"
 
-#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:364 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Konec:   %1"
 
-#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:367 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  Z dogodkom ni povezan noben čas"
 
-#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:370 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Opis:   %1"
 
-#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:372 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -117,13 +134,12 @@ msgstr "  Kraj: %1"
 #: konsolekalendaradd.cpp:61
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Poskusni zagon: Vstavi dogodek:"
 
 #: konsolekalendaradd.cpp:65
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "Vstavi dogodek <preizkusno>:"
+msgstr "Vstavi dogodek:"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -141,38 +157,34 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "Neuspeh: \"%1\" ni bil vstavljen"
 
 #: konsolekalendaradd.cpp:148
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr "Vstavitev dogodka preskočena, ker je UID \"%1\" že poznan. <Verbose>"
+msgstr "Vstavitev dogodka preskočena, ker je UID \"%1\" že poznan."
 
 #: konsolekalendaradd.cpp:155
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "Dodaj dogodek z UID \"%1\". <Verbose>"
+msgstr "Dodaj dogodek z UID \"%1\"."
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "Poskusni zagon: Sprememba dogodka:"
 
 #: konsolekalendarchange.cpp:53
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Poskusni zagon: Na dogodek:"
 
 #: konsolekalendarchange.cpp:59
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "Spremeni dogodek <preizkusno>:"
+msgstr "Spremeni dogodek:"
 
 #: konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "Events:"
+#, kde-format
 msgid "To Event:"
-msgstr "Dogodki:"
+msgstr "Na dogodek:"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -193,13 +205,12 @@ msgstr "  UID:    %1"
 #: konsolekalendardelete.cpp:48
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Poskusni zagon: Izbriši dogodek:"
 
 #: konsolekalendardelete.cpp:54
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "Izbriši dogodek <preizkusno>:"
+msgstr "Izbriši dogodek:"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -580,6 +591,12 @@ msgstr "Ni bilo mogoče odpreti navedene izvozne datoteke: %1"
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Ni mogoče ustvariti vira Akonadi iz datoteke: %1"
+
+#: main.cpp:770
+#, fuzzy, kde-format
+#| msgid "Calendar %1 successfully imported"
+msgid "Calendar %1 successfully created"
+msgstr "Koledar %1 je bil uspešno uvožen"
 
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "Ustvari koledar <podrobno>: %1"

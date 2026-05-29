@@ -1,25 +1,25 @@
 # Translation of konsolekalendar.po to Catalan (Valencian)
-# Copyright (C) 2003-2024 This_file_is_part_of_KDE
+# Copyright (C) 2003-2026 This_file_is_part_of_KDE
 #
 # SPDX-FileCopyrightText: 2003, 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2022 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2004 Ivan Lloro Boada <antispam@wanadoo.es>
 # SPDX-FileCopyrightText: 2004 Sebastià Pla i Sanz <sps@sastia.com>
 # SPDX-FileCopyrightText: 2005 Albert Astals Cid <aacid@kde.org>
-# SPDX-FileCopyrightText: 2006, 2007, 2008, 2009, 2010, 2014, 2015, 2016, 2017, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2006, 2007, 2008, 2009, 2010, 2014, 2015, 2016, 2017, 2022, 2023, 2024, 2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2009 Manuel Tortosa Moreno <manutortosa@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
-"PO-Revision-Date: 2024-05-16 12:23+0200\n"
+"POT-Creation-Date: 2026-05-29 00:44+0000\n"
+"PO-Revision-Date: 2026-05-28 09:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -39,69 +39,86 @@ msgid "There are no calendars available."
 msgstr "No hi ha calendaris disponibles."
 
 #: konsolekalendar.cpp:95
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Només de lectura)"
 
-#: konsolekalendar.cpp:142
+#: konsolekalendar.cpp:112 konsolekalendar.cpp:131
 #, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
-msgid "Dry Run: Create Calendar: %1"
-msgstr "Crea un calendari <prova>: %1"
+#| msgid "Unable to import calendar: %1"
+msgid "Unable to create calendar %1: %2"
+msgstr "No s'ha pogut importar el calendari: %1"
 
-#: konsolekalendar.cpp:148
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
-msgid "Create Calendar: %1"
-msgstr "Crea un calendari <prova>: %1"
-
-#: konsolekalendar.cpp:166
+#: konsolekalendar.cpp:113
 #, kde-format
-msgid "Dry Run: View Events:"
+msgid "Make sure the akonadiserver is running properly."
 msgstr ""
 
-#: konsolekalendar.cpp:188
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
-msgid "View Event:"
-msgstr "Visualitza l'esdeveniment <informatiu>:"
+#: konsolekalendar.cpp:121
+#, kde-format
+msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
+msgstr ""
 
-#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:126
+#, kde-format
+msgid "Unable to create calendar %1: DBus setPath call failed: %2"
+msgstr ""
+
+#: konsolekalendar.cpp:145
+#, kde-format
+msgid "Dry Run: Create Calendar: %1"
+msgstr "Prova: Crea un calendari: %1"
+
+#: konsolekalendar.cpp:151
+#, kde-format
+msgid "Create Calendar: %1"
+msgstr "Crea un calendari: %1"
+
+#: konsolekalendar.cpp:169
+#, kde-format
+msgid "Dry Run: View Events:"
+msgstr "Prova: Visualitza esdeveniments:"
+
+#: konsolekalendar.cpp:191
+#, kde-format
+msgid "View Event:"
+msgstr "Visualitza un esdeveniment:"
+
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "   Què:  %1"
 
-#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:362 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Inici: %1"
 
-#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:364 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Fi:   %1"
 
-#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:367 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  L'esdeveniment no té horari associat"
 
-#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:370 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Desc.:  %1"
 
-#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:372 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -111,13 +128,12 @@ msgstr "  Ubicació:  %1"
 #: konsolekalendaradd.cpp:61
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Prova: Inserix un esdeveniment:"
 
 #: konsolekalendaradd.cpp:65
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "Inserix un esdeveniment <prova>:"
+msgstr "Inserix un esdeveniment:"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -135,40 +151,35 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "No s'ha pogut: no s'ha inserit «%1»"
 
 #: konsolekalendaradd.cpp:148
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
 msgstr ""
-"S'ha omés la inserció de l'esdeveniment, perquè l'UID «%1» ja és conegut. "
-"<informatiu>"
+"S'ha omés la inserció de l'esdeveniment, perquè l'UID «%1» ja és conegut."
 
 #: konsolekalendaradd.cpp:155
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "S'ha afegit l'esdeveniment amb l'UID «%1». <informatiu>"
+msgstr "S'ha afegit l'esdeveniment amb l'UID «%1»."
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "Prova: Canvia un esdeveniment:"
 
 #: konsolekalendarchange.cpp:53
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Prova: A l'esdeveniment:"
 
 #: konsolekalendarchange.cpp:59
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "Canvia un esdeveniment <prova>:"
+msgstr "Canvia un esdeveniment:"
 
 #: konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "To Event <Dry Run>:"
+#, kde-format
 msgid "To Event:"
-msgstr "A l'esdeveniment <prova>:"
+msgstr "A l'esdeveniment:"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -189,13 +200,12 @@ msgstr "  UID:   %1"
 #: konsolekalendardelete.cpp:48
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Prova: Suprimix un esdeveniment:"
 
 #: konsolekalendardelete.cpp:54
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "Suprimix l'esdeveniment <prova>:"
+msgstr "Suprimix un esdeveniment:"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -583,17 +593,8 @@ msgstr "No es pot obrir el fitxer d'exportació especificat: %1"
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "No s'ha pogut crear un recurs Akonadi des del fitxer: %1"
 
-#~ msgid "Create Calendar <Verbose>: %1"
-#~ msgstr "Crea un calendari <informatiu>: %1"
-
-#~ msgid "View Events <Dry Run>:"
-#~ msgstr "Visualitza els esdeveniments <prova>:"
-
-#~ msgid "Insert Event <Verbose>:"
-#~ msgstr "Inserix un esdeveniment <informatiu>:"
-
-#~ msgid "Change Event <Verbose>:"
-#~ msgstr "Canvia un esdeveniment <informatiu>:"
-
-#~ msgid "Delete Event <Verbose>:"
-#~ msgstr "Suprimix l'esdeveniment <informatiu>:"
+#: main.cpp:770
+#, fuzzy, kde-format
+#| msgid "Calendar %1 successfully imported"
+msgid "Calendar %1 successfully created"
+msgstr "El calendari %1 s'ha importat amb èxit"

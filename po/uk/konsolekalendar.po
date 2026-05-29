@@ -5,15 +5,15 @@
 #
 # Andriy Rysin <rysin@kde.org>, 2003.
 # Ivan Petrouchtchak <ivanpetrouchtchak@yahoo.com>, 2004, 2005, 2006, 2007.
-# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2013, 2014, 2015, 2016, 2018, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2013, 2014, 2015, 2016, 2018, 2024, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
-"PO-Revision-Date: 2024-05-16 09:05+0300\n"
+"POT-Creation-Date: 2026-05-29 00:44+0000\n"
+"PO-Revision-Date: 2026-05-28 21:13+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,69 +38,88 @@ msgid "There are no calendars available."
 msgstr "Немає доступних календарів."
 
 #: konsolekalendar.cpp:95
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
-msgstr "(Лише читання)"
+msgstr "(лише читання)"
 
-#: konsolekalendar.cpp:142
+#: konsolekalendar.cpp:112 konsolekalendar.cpp:131
 #, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
-msgid "Dry Run: Create Calendar: %1"
-msgstr "Створити календар <Dry Run>: %1"
+#| msgid "Unable to create calendar: %1"
+msgid "Unable to create calendar %1: %2"
+msgstr "Неможливо створити календар: %1"
 
-#: konsolekalendar.cpp:148
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
-msgid "Create Calendar: %1"
-msgstr "Створити календар <Dry Run>: %1"
-
-#: konsolekalendar.cpp:166
+#: konsolekalendar.cpp:113
 #, kde-format
-msgid "Dry Run: View Events:"
+msgid "Make sure the akonadiserver is running properly."
 msgstr ""
 
-#: konsolekalendar.cpp:188
+#: konsolekalendar.cpp:121
 #, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
-msgid "View Event:"
-msgstr "Переглянути подію <Verbose>:"
+#| msgid "Unable to create calendar: %1"
+msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
+msgstr "Неможливо створити календар: %1"
 
-#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:126
+#, fuzzy, kde-format
+#| msgid "Unable to create calendar: %1"
+msgid "Unable to create calendar %1: DBus setPath call failed: %2"
+msgstr "Неможливо створити календар: %1"
+
+#: konsolekalendar.cpp:145
+#, kde-format
+msgid "Dry Run: Create Calendar: %1"
+msgstr "Створити календар: %1"
+
+#: konsolekalendar.cpp:151
+#, kde-format
+msgid "Create Calendar: %1"
+msgstr "Створити календар: %1"
+
+#: konsolekalendar.cpp:169
+#, kde-format
+msgid "Dry Run: View Events:"
+msgstr "Тестовий запуск: перегляд подій:"
+
+#: konsolekalendar.cpp:191
+#, kde-format
+msgid "View Event:"
+msgstr "Переглянути подію:"
+
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Що:  %1"
 
-#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:362 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Початок: %1"
 
-#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:364 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Кінець:   %1"
 
-#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:367 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  Не вказано час події"
 
-#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:370 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Опис:  %1"
 
-#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:372 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -110,13 +129,12 @@ msgstr "  Місце проведення:  %1"
 #: konsolekalendaradd.cpp:61
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Тестовий запуск: вставлення події:"
 
 #: konsolekalendaradd.cpp:65
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "Вставити подію <Dry Run>:"
+msgstr "Вставити подію:"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -136,39 +154,34 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "Невдача: «%1» не вставлено"
 
 #: konsolekalendaradd.cpp:148
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr ""
-"Вставлення запису події пропущено, оскільки UID «%1» вже є відомим. <Verbose>"
+msgstr "Вставлення запису події пропущено, оскільки UID «%1» вже є відомим."
 
 #: konsolekalendaradd.cpp:155
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "Додати запис події із UID «%1». <Verbose>"
+msgstr "Додати запис події із UID «%1»."
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "Тестовий запуск: зміна події:"
 
 #: konsolekalendarchange.cpp:53
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Тестовий запуск: до події:"
 
 #: konsolekalendarchange.cpp:59
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "Змінити подію <Dry Run>:"
+msgstr "Змінити подію:"
 
 #: konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "Events:"
+#, kde-format
 msgid "To Event:"
-msgstr "Події:"
+msgstr "До події:"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -189,13 +202,12 @@ msgstr "  UID:   %1"
 #: konsolekalendardelete.cpp:48
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Тестовий запуск: вилучення події:"
 
 #: konsolekalendardelete.cpp:54
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "Вилучити подію <Dry Run>:"
+msgstr "Вилучити подію:"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -580,6 +592,11 @@ msgstr "Неможливо відкрити вказаний файл для е�
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Не вдалося створити ресурс Akonadi з файла: %1"
 
+#: main.cpp:770
+#, kde-format
+msgid "Calendar %1 successfully created"
+msgstr "Календар %1 успішно створено"
+
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "Створити календар <Verbose>: %1"
 
@@ -671,12 +688,6 @@ msgstr "Не вдалося створити ресурс Akonadi з файла:
 
 #~ msgid "Calendar %1 already exists"
 #~ msgstr "Календар %1 вже існує"
-
-#~ msgid "Calendar %1 successfully created"
-#~ msgstr "Календар %1 успішно створено"
-
-#~ msgid "Unable to create calendar: %1"
-#~ msgstr "Неможливо створити календар: %1"
 
 #~ msgid "Calendar file not found %1"
 #~ msgstr "Файл календаря не знайдено %1"

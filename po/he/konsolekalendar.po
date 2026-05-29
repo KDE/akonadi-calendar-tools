@@ -10,13 +10,13 @@
 # license as the program which it accompanies.
 # Diego Iastrubni <elcuco@kde.org>, 2005.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024-2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
-"PO-Revision-Date: 2025-09-17 10:38+0300\n"
+"POT-Creation-Date: 2026-05-29 00:44+0000\n"
+"PO-Revision-Date: 2026-05-28 08:40+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,69 +43,86 @@ msgid "There are no calendars available."
 msgstr "אין לוחות שנה זמינים."
 
 #: konsolekalendar.cpp:95
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
-msgstr "(קריאה בלבד)"
+msgstr "(לקריאה בלבד)"
 
-#: konsolekalendar.cpp:142
+#: konsolekalendar.cpp:112 konsolekalendar.cpp:131
 #, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
-msgid "Dry Run: Create Calendar: %1"
-msgstr "יצירת לוח שנה <מדומה>: %1"
+#| msgid "Unable to import calendar: %1"
+msgid "Unable to create calendar %1: %2"
+msgstr "לא ניתן לייבא לוח שנה: %1"
 
-#: konsolekalendar.cpp:148
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
-msgid "Create Calendar: %1"
-msgstr "יצירת לוח שנה <מדומה>: %1"
-
-#: konsolekalendar.cpp:166
+#: konsolekalendar.cpp:113
 #, kde-format
-msgid "Dry Run: View Events:"
+msgid "Make sure the akonadiserver is running properly."
 msgstr ""
 
-#: konsolekalendar.cpp:188
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
-msgid "View Event:"
-msgstr "הצגת אירוע <מפורט>:"
+#: konsolekalendar.cpp:121
+#, kde-format
+msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
+msgstr ""
 
-#: konsolekalendar.cpp:347 konsolekalendaradd.cpp:176
+#: konsolekalendar.cpp:126
+#, kde-format
+msgid "Unable to create calendar %1: DBus setPath call failed: %2"
+msgstr ""
+
+#: konsolekalendar.cpp:145
+#, kde-format
+msgid "Dry Run: Create Calendar: %1"
+msgstr "הרצה מדומה: יצירת לוח שנה: %1"
+
+#: konsolekalendar.cpp:151
+#, kde-format
+msgid "Create Calendar: %1"
+msgstr "יצירת לוח שנה: %1"
+
+#: konsolekalendar.cpp:169
+#, kde-format
+msgid "Dry Run: View Events:"
+msgstr "הרצה מדמה: הצגת אירועים:"
+
+#: konsolekalendar.cpp:191
+#, kde-format
+msgid "View Event:"
+msgstr "הצגת אירוע:"
+
+#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
 #: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  What:  %1"
 msgstr " מה: %1"
 
-#: konsolekalendar.cpp:349 konsolekalendaradd.cpp:178
+#: konsolekalendar.cpp:362 konsolekalendaradd.cpp:178
 #: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
 #: konsolekalendardelete.cpp:85
 #, kde-format
 msgid "  Begin: %1"
 msgstr " התחלה: %1"
 
-#: konsolekalendar.cpp:351 konsolekalendaradd.cpp:180
+#: konsolekalendar.cpp:364 konsolekalendaradd.cpp:180
 #: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
 #: konsolekalendardelete.cpp:87
 #, kde-format
 msgid "  End:   %1"
 msgstr " סיום: %1"
 
-#: konsolekalendar.cpp:354 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:367 konsolekalendaradd.cpp:183
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr " לאירוע לא משויכת שעה"
 
-#: konsolekalendar.cpp:357 konsolekalendaradd.cpp:186
+#: konsolekalendar.cpp:370 konsolekalendaradd.cpp:186
 #: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
 #: konsolekalendardelete.cpp:89
 #, kde-format
 msgid "  Desc:  %1"
 msgstr " תיאור: %1"
 
-#: konsolekalendar.cpp:359 konsolekalendaradd.cpp:188
+#: konsolekalendar.cpp:372 konsolekalendaradd.cpp:188
 #: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
 #: konsolekalendardelete.cpp:91
 #, kde-format
@@ -115,13 +132,12 @@ msgstr " מקום: %1"
 #: konsolekalendaradd.cpp:61
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "הרצה מדומה: הוספת אירוע:"
 
 #: konsolekalendaradd.cpp:65
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "הוספת אירוע <מדומה>:"
+msgstr "הוספת אירוע:"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -139,38 +155,34 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "כשלון: „%1” לא נוסף"
 
 #: konsolekalendaradd.cpp:148
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr "הוספת אירוע דולגה כיוון שהמזהה הייחודי „%1” כבר ידוע. <מפורט>"
+msgstr "הוספת אירוע דולגה כיוון שהמזהה הייחודי „%1” כבר ידוע."
 
 #: konsolekalendaradd.cpp:155
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "הוספת אירוע עם המזהה היחודי „%1”. <מפורט>"
+msgstr "הוספת אירוע עם המזהה היחודי „%1”."
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "הרצה מדומה: שינוי אירוע:"
 
 #: konsolekalendarchange.cpp:53
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "הרצה מדומה: לאירוע:"
 
 #: konsolekalendarchange.cpp:59
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "שינוי האירוע <מדומה>:"
+msgstr "שינוי האירוע:"
 
 #: konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "To Event <Dry Run>:"
+#, kde-format
 msgid "To Event:"
-msgstr "לאירוע <מדומה>:"
+msgstr "לאירוע:"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -191,13 +203,12 @@ msgstr "  מזהה יחודי:   %1"
 #: konsolekalendardelete.cpp:48
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "הרצה מדומה: מחיקת אירוע:"
 
 #: konsolekalendardelete.cpp:54
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "מחיקת אירוע <מדומה>:"
+msgstr "מחיקת אירוע:"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -576,6 +587,12 @@ msgstr "לא ניתן לפתוח את קובץ הייצוא שצוין: %1"
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "לא ניתן ליצור משאב Akonadi מקובץ: %1"
+
+#: main.cpp:770
+#, fuzzy, kde-format
+#| msgid "Calendar %1 successfully imported"
+msgid "Calendar %1 successfully created"
+msgstr "לוח השנה %1 ייובא בהצלחה"
 
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "יצירת לוח שנה <מפורט>: %1"
