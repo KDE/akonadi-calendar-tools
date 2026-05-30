@@ -15,7 +15,6 @@
  * @author Allen Winter
  */
 #include "konsolekalendarexports.h"
-#include "konsolekalendar_debug.h"
 
 #include <KCalendarCore/Event>
 

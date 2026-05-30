@@ -19,7 +19,6 @@
 #include <cstdlib>
 #include <iostream>
 
-#include "konsolekalendar_debug.h"
 #include <KLocalizedString>
 #include <QEventLoop>
 
@@ -37,8 +36,6 @@ bool KonsoleKalendarDelete::deleteEvent()
 {
     bool status = false;
 
-    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendardelete.cpp::deleteEvent()";
-
     /*
      * Retrieve event on the basis of the unique string ID
      */
@@ -48,8 +45,6 @@ bool KonsoleKalendarDelete::deleteEvent()
             cout << i18n("Dry Run: Delete Event:").data() << endl;
             printSpecs(event);
         } else {
-            qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendardelete.cpp:deleteEvent() :" << m_variables->getUID();
-
             if (m_variables->isVerbose()) {
                 cout << i18n("Delete Event:").data() << endl;
                 printSpecs(event);
@@ -60,7 +55,6 @@ bool KonsoleKalendarDelete::deleteEvent()
             QObject::connect(calendar.data(), &Akonadi::CalendarBase::deleteFinished, &loop, &QEventLoop::quit);
             calendar->deleteEvent(event);
             loop.exec();
-            qCDebug(KONSOLEKALENDAR_LOG) << "Finished deleting";
             status = calendar->incidence(event->uid()) == nullptr;
 
             if (status) {
@@ -71,7 +65,6 @@ bool KonsoleKalendarDelete::deleteEvent()
         }
     }
 
-    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendardelete.cpp::deleteEvent() | Done";
     return status;
 }
 

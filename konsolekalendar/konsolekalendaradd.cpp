@@ -55,8 +55,6 @@ bool KonsoleKalendarAdd::addEvent()
 {
     bool status = true;
 
-    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendaradd.cpp::addEvent()";
-
     if (m_variables->isDryRun()) {
         cout << i18n("Dry Run: Insert Event:").toLocal8Bit().data() << endl;
         printSpecs();
@@ -98,7 +96,6 @@ bool KonsoleKalendarAdd::addEvent()
         }
         calendar->addEvent(event);
         loop.exec();
-        qCDebug(KONSOLEKALENDAR_LOG) << "Creation took " << t.elapsed() << "ms.";
         status = calendar->incidence(event->uid()) != nullptr;
         if (status) {
             cout << i18n("Success: \"%1\" inserted", m_variables->getSummary()).toLocal8Bit().data() << endl;
@@ -108,7 +105,6 @@ bool KonsoleKalendarAdd::addEvent()
         }
     }
 
-    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendaradd.cpp::addEvent() | Done";
     return status;
 }
 
@@ -117,8 +113,6 @@ bool KonsoleKalendarAdd::addImportedCalendar()
     MemoryCalendar::Ptr cal(new MemoryCalendar(QTimeZone::utc()));
     FileStorage instore(cal, m_variables->getImportFile());
     if (!instore.load()) {
-        qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendaradd.cpp::importCalendar() |"
-                                     << "Can't import file:" << m_variables->getImportFile();
         return false;
     }
     Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
@@ -160,14 +154,10 @@ bool KonsoleKalendarAdd::addImportedCalendar()
         t.start();
         calendar->addEvent(event);
         loop.exec();
-        qCDebug(KONSOLEKALENDAR_LOG) << "Creation of event took " << t.elapsed() << "ms."
-                                     << "status: " << (calendar->incidence(event->uid()) != nullptr);
         if (calendar->incidence(event->uid()) == nullptr) {
             return false;
         }
     }
-    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendaradd.cpp::importCalendar() |"
-                                 << "Successfully imported file:" << m_variables->getImportFile();
     return true;
 }
 

@@ -16,7 +16,6 @@
  */
 #include "konsolekalendarchange.h"
 
-#include "konsolekalendar_debug.h"
 #include <KLocalizedString>
 
 #include <QElapsedTimer>
@@ -39,8 +38,6 @@ bool KonsoleKalendarChange::changeEvent()
 {
     bool status = false;
 
-    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendarchange.cpp::changeEvent()";
-
     /*
      * Retrieve event on the basis of the unique string ID
      */
@@ -53,8 +50,6 @@ bool KonsoleKalendarChange::changeEvent()
             cout << i18n("Dry Run: To Event:").toLocal8Bit().data() << endl;
             printSpecs();
         } else {
-            qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendarchange.cpp:changeEvent() :" << m_variables->getUID().toLocal8Bit().data();
-
             if (m_variables->isVerbose()) {
                 cout << i18n("Change Event:").toLocal8Bit().data() << endl;
                 printSpecs(event);
@@ -105,7 +100,6 @@ bool KonsoleKalendarChange::changeEvent()
         }
     }
 
-    qCDebug(KONSOLEKALENDAR_LOG) << "konsolekalendarchange.cpp::changeEvent() | Done";
     return status;
 }
 
