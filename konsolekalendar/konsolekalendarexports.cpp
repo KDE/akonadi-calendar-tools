@@ -15,13 +15,14 @@
  * @author Allen Winter
  */
 #include "konsolekalendarexports.h"
-
 #include "konsolekalendar_debug.h"
 
 #include <KCalendarCore/Event>
 
 #include <KLocalizedString>
+
 #include <QLocale>
+#include <QTextDocumentFragment>
 
 #include <cstdlib>
 #include <iostream>
@@ -36,6 +37,11 @@ KonsoleKalendarExports::KonsoleKalendarExports(KonsoleKalendarVariables *vars)
 }
 
 KonsoleKalendarExports::~KonsoleKalendarExports() = default;
+
+static QString cleanHtml(const QString &html)
+{
+    return QTextDocumentFragment::fromHtml(html).toPlainText();
+}
 
 bool KonsoleKalendarExports::exportAsTxt(QTextStream *ts, const Event::Ptr &event, const QDate &date)
 {
@@ -83,7 +89,7 @@ bool KonsoleKalendarExports::exportAsTxt(QTextStream *ts, const Event::Ptr &even
     // Print Event Description
     *ts << i18n("Description:") << '\n';
     if (!event->description().isEmpty()) {
-        *ts << "\t" << event->description() << '\n';
+        *ts << "\t" << cleanHtml(event->description()) << '\n';
     } else {
         *ts << "\t" << i18n("(no description available)") << '\n';
     }
@@ -135,7 +141,7 @@ bool KonsoleKalendarExports::exportAsTxtShort(QTextStream *ts, const Event::Ptr 
 
     // Print Event Description
     if (!event->description().isEmpty()) {
-        *ts << "\t\t\t" << event->description().replace(QLatin1Char('\n'), QLatin1Char(' ')) << '\n';
+        *ts << "\t\t\t" << cleanHtml(event->description()).replace(QLatin1Char('\n'), QLatin1Char(' ')) << '\n';
     }
 
     // By user request, no longer print UIDs if export-type==short
@@ -179,8 +185,8 @@ bool KonsoleKalendarExports::exportAsCSV(QTextStream *ts, const Event::Ptr &even
     }
 
     *ts << delim << pF(event->summary().replace(QLatin1Char('\n'), QLatin1Char(' '))) << delim
-        << pF(event->location().replace(QLatin1Char('\n'), QLatin1Char(' '))) << delim << pF(event->description().replace(QLatin1Char('\n'), QLatin1Char(' ')))
-        << delim << pF(event->uid()) << '\n';
+        << pF(event->location().replace(QLatin1Char('\n'), QLatin1Char(' '))) << delim
+        << pF(cleanHtml(event->description()).replace(QLatin1Char('\n'), QLatin1Char(' '))) << delim << pF(event->uid()) << '\n';
 
     return true;
 }
