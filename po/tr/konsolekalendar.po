@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-29 02:42+0000\n"
-"PO-Revision-Date: 2026-05-28 15:04+0300\n"
+"PO-Revision-Date: 2026-05-29 13:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -525,12 +525,12 @@ msgstr "Bitiş tarihi/saati başlangıç tarihi/saatinden önce"
 #: main.cpp:694
 #, kde-format
 msgid "Calendar %1 successfully imported"
-msgstr "Takvim %1 başarıyla alındı."
+msgstr "%1 takvimi başarıyla alındı."
 
 #: main.cpp:697
 #, kde-format
 msgid "Unable to import calendar: %1"
-msgstr "Takvim %1 alınamıyor"
+msgstr "Takvim içe aktarılamıyor: %1"
 
 #: main.cpp:708
 #, kde-format

@@ -21,14 +21,14 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国, DuckSoft, Guo Yunhe, Lie_Ex, 朱鸷勇"
+msgstr "KDE 中国, DuckSoft, Guo Yunhe, Lie_Ex, Tyson Tan, 朱鸷勇"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "kde-china@kde.org, realducksoft@gmail.com, i@guoyunhe.me, lieex@kde.org, "
-"zhuzhiyong@kde.org"
+"tds00@qq.com, zhuzhiyong@kde.org"
 
 #: konsolekalendar.cpp:80
 #, kde-format
