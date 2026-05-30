@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-29 00:44+0000\n"
-"PO-Revision-Date: 2026-05-28 04:16+0200\n"
+"PO-Revision-Date: 2026-05-29 06:07+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -40,25 +40,25 @@ msgid "(Read only)"
 msgstr "(მხოლოდ-კითხვადი)"
 
 #: konsolekalendar.cpp:112 konsolekalendar.cpp:131
-#, fuzzy, kde-format
-#| msgid "Unable to import calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "კალენდარის შემოტანის შეცდომა: %1"
+msgstr "კალენდრის %1 შექმნა შეუძლებელია: %2"
 
 #: konsolekalendar.cpp:113
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "დარწმუნდით, რომ akonadiserver გამართულად მუშაობს."
 
 #: konsolekalendar.cpp:121
 #, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr ""
+msgstr "კალენდრის %1 შექმნა შეუძლებელია: DBus setDisplayName ჩავარდა: %2"
 
 #: konsolekalendar.cpp:126
 #, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
 msgstr ""
+"კალენდრის %1 შექმნა ეუძლებელია: DBus-ის setPath-ის გამოძახება ჩავარდა: %2"
 
 #: konsolekalendar.cpp:145
 #, kde-format
@@ -584,10 +584,9 @@ msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Akonadi-ის რესურსის ფაილიდან შექმნის შეცდომა: %1"
 
 #: main.cpp:770
-#, fuzzy, kde-format
-#| msgid "Calendar %1 successfully imported"
+#, kde-format
 msgid "Calendar %1 successfully created"
-msgstr "კალენდარი %1 წარმატებით იქნა შემოტანილი"
+msgstr "კალენდარი %1 წარმატებით შეიქმნა"
 
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "კალენდარის შექმნა <მეტი შეტყობინება>: %1"

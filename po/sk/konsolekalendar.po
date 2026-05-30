@@ -35,55 +35,50 @@ msgid "There are no calendars available."
 msgstr "Nie sú dostupné žiadne kalendáre."
 
 #: konsolekalendar.cpp:95
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Len na čítanie)"
 
 #: konsolekalendar.cpp:112 konsolekalendar.cpp:131
-#, fuzzy, kde-format
-#| msgid "Unable to import calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "Nepodarilo sa importovať kalendár: %1"
+msgstr "Nepodarilo sa vytvoriť kalendár %1: %2"
 
 #: konsolekalendar.cpp:113
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "Uistite sa, že akonadiserver beží správne."
 
 #: konsolekalendar.cpp:121
 #, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr ""
+msgstr "Nepodarilo sa vytvoriť kalendár %1: DBus setDisplayName zlyhalo: %2"
 
 #: konsolekalendar.cpp:126
 #, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
-msgstr ""
+msgstr "Nepodarilo sa vytvoriť kalendár %1: volanie DBus setPath zlyhalo: %2"
 
 #: konsolekalendar.cpp:145
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "Vytvoriť kalendár <Dry Run>: %1"
+msgstr "Skúšobný beh: Vytvoriť kalendár: %1"
 
 #: konsolekalendar.cpp:151
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Create Calendar: %1"
-msgstr "Vytvoriť kalendár <Dry Run>: %1"
+msgstr "Vytvoriť kalendár: %1"
 
 #: konsolekalendar.cpp:169
 #, kde-format
 msgid "Dry Run: View Events:"
-msgstr ""
+msgstr "Skúšobný beh: Zobraziť udalosti:"
 
 #: konsolekalendar.cpp:191
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
+#, kde-format
 msgid "View Event:"
-msgstr "Zobraziť udalosť <Verbose>:"
+msgstr "Zobraziť udalosť:"
 
 #: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
@@ -128,13 +123,12 @@ msgstr "  Umiestnenie: %1"
 #: konsolekalendaradd.cpp:61
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Skúšobný beh: Vložiť udalosť:"
 
 #: konsolekalendaradd.cpp:65
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "Vložiť udalosť <Dry Run>:"
+msgstr "Vložiť udalosť:"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -152,39 +146,34 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "Zlyhanie: \"%1\" nevložená"
 
 #: konsolekalendaradd.cpp:148
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr ""
-"Vloženie udalosti preskočené, pretože UID \"%1\" je už známe. <Verbose>"
+msgstr "Vloženie udalosti preskočené, pretože UID \"%1\" je už známe."
 
 #: konsolekalendaradd.cpp:155
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "Pridať udalosť s UID \"%1\". <Verbose>"
+msgstr "Pridať udalosť s UID \"%1\"."
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "Skúšobný beh: Zmeniť udalosť:"
 
 #: konsolekalendarchange.cpp:53
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Skúšobný beh: Na udalosť:"
 
 #: konsolekalendarchange.cpp:59
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "Zmeniť udalosť <Dry Run>:"
+msgstr "Zmeniť udalosť:"
 
 #: konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "Events:"
+#, kde-format
 msgid "To Event:"
-msgstr "Udalosti:"
+msgstr "Na udalosť:"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -205,13 +194,12 @@ msgstr "  UID:   %1"
 #: konsolekalendardelete.cpp:48
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Skúšobný beh: Odstrániť udalosť:"
 
 #: konsolekalendardelete.cpp:54
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "Odstrániť udalosť <Dry Run>:"
+msgstr "Odstrániť udalosť:"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -595,10 +583,9 @@ msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Nemôžem vytvoriť zdroj Akonadi zo súboru: %1"
 
 #: main.cpp:770
-#, fuzzy, kde-format
-#| msgid "Calendar %1 successfully imported"
+#, kde-format
 msgid "Calendar %1 successfully created"
-msgstr "Kalendár %1 úspešne naimportovaný"
+msgstr "Kalendár %1 úspešne vytvorený"
 
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "Vytvoriť kalendár <Verbose>: %1"

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-29 00:44+0000\n"
-"PO-Revision-Date: 2026-05-28 09:29+0200\n"
+"PO-Revision-Date: 2026-05-29 10:08+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -45,25 +45,26 @@ msgid "(Read only)"
 msgstr "(Només de lectura)"
 
 #: konsolekalendar.cpp:112 konsolekalendar.cpp:131
-#, fuzzy, kde-format
-#| msgid "Unable to import calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "No s'ha pogut importar el calendari: %1"
+msgstr "No s'ha pogut crear el calendari %1: %2"
 
 #: konsolekalendar.cpp:113
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "Assegureu-vos que akonadiserver s'estiga executant correctament."
 
 #: konsolekalendar.cpp:121
 #, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
 msgstr ""
+"No s'ha pogut crear el calendari %1: ha fallat setDisplayName de D-Bus: %2"
 
 #: konsolekalendar.cpp:126
 #, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
 msgstr ""
+"No s'ha pogut crear el calendari %1: ha fallat la crida setPath de D-Bus: %2"
 
 #: konsolekalendar.cpp:145
 #, kde-format
@@ -594,7 +595,6 @@ msgid "Cannot create Akonadi resource from file: %1"
 msgstr "No s'ha pogut crear un recurs Akonadi des del fitxer: %1"
 
 #: main.cpp:770
-#, fuzzy, kde-format
-#| msgid "Calendar %1 successfully imported"
+#, kde-format
 msgid "Calendar %1 successfully created"
-msgstr "El calendari %1 s'ha importat amb èxit"
+msgstr "El calendari %1 s'ha creat correctament"

@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007.
 # Yasen Pramatarov <yasen@lindeas.com>, 2013.
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2024-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-29 00:44+0000\n"
-"PO-Revision-Date: 2025-10-24 22:17+0200\n"
+"PO-Revision-Date: 2026-05-29 15:57+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -35,55 +35,53 @@ msgid "There are no calendars available."
 msgstr "Няма налични календари."
 
 #: konsolekalendar.cpp:95
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Само за четене)"
 
 #: konsolekalendar.cpp:112 konsolekalendar.cpp:131
-#, fuzzy, kde-format
-#| msgid "Unable to import calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "Грешка при импортиране на календар: %1"
+msgstr "Неуспешно създаване на календар %1: %2"
 
 #: konsolekalendar.cpp:113
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "Уверете се, че akonadiserver работи правилно."
 
 #: konsolekalendar.cpp:121
 #, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
 msgstr ""
+"Неуспешно създаване на календар %1: грешка при извикване на DBus "
+"setDisplayName: %2"
 
 #: konsolekalendar.cpp:126
 #, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
 msgstr ""
+"Неуспешно създаване на календар %1: грешка при извикване на DBus setPath: %2"
 
 #: konsolekalendar.cpp:145
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "Създаване на календар <Dry Run>: %1"
+msgstr "Симулация: Създаване на календар: %1"
 
 #: konsolekalendar.cpp:151
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Create Calendar: %1"
-msgstr "Създаване на календар <Dry Run>: %1"
+msgstr "Създаване на календар: %1"
 
 #: konsolekalendar.cpp:169
 #, kde-format
 msgid "Dry Run: View Events:"
-msgstr ""
+msgstr "Симулация: Преглед на събития:"
 
 #: konsolekalendar.cpp:191
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
+#, kde-format
 msgid "View Event:"
-msgstr "Преглед на събитие<Verbose>:"
+msgstr "Преглед на събитие:"
 
 #: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
@@ -128,13 +126,12 @@ msgstr "  Местоположение: %1"
 #: konsolekalendaradd.cpp:61
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Симулация: Вмъкване на събитие:"
 
 #: konsolekalendaradd.cpp:65
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "Вмъкване на събитие (без отчет):"
+msgstr "Вмъкване на събитие:"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -152,39 +149,35 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "Грешка: събитието „%1“ не е вмъкнато"
 
 #: konsolekalendaradd.cpp:148
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
 msgstr ""
-"Вмъкване на събитие е пропуснато, защото UID „%1“ вече е известно.<Verbose>"
+"Вмъкването на събитието е прескочено, тъй като UID \"%1\" вече съществува."
 
 #: konsolekalendaradd.cpp:155
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "Добавяне на събитие с UID „%1“. <Verbose>"
+msgstr "Добавяне на събитие с UID \"%1\"."
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "Симулация: Промяна на събитие:"
 
 #: konsolekalendarchange.cpp:53
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Симулация: Към събитие:"
 
 #: konsolekalendarchange.cpp:59
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "Промяна на събитие  <Dry Run>:"
+msgstr "Промяна на събитие:"
 
 #: konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "To Event <Dry Run>:"
+#, kde-format
 msgid "To Event:"
-msgstr "Към събитие  <Dry Run>:"
+msgstr "Към събитие:"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -205,13 +198,12 @@ msgstr "  UID:   %1"
 #: konsolekalendardelete.cpp:48
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Симулация: Изтриване на събитие:"
 
 #: konsolekalendardelete.cpp:54
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "Изтриване на събитие  <Dry Run>:"
+msgstr "Изтриване на събитие:"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -592,10 +584,9 @@ msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Не може да се създаде Akonadi ресурс от файл: %1"
 
 #: main.cpp:770
-#, fuzzy, kde-format
-#| msgid "Calendar %1 successfully imported"
+#, kde-format
 msgid "Calendar %1 successfully created"
-msgstr "Календарът %1 е импортиран успешно"
+msgstr "Календарът %1 е създаден успешно"
 
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "Създаване на календар <Verbose>: %1"

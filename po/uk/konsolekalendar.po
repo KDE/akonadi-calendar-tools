@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-29 00:44+0000\n"
-"PO-Revision-Date: 2026-05-28 21:13+0300\n"
+"PO-Revision-Date: 2026-05-29 19:17+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -44,27 +44,24 @@ msgid "(Read only)"
 msgstr "(лише читання)"
 
 #: konsolekalendar.cpp:112 konsolekalendar.cpp:131
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "Неможливо створити календар: %1"
+msgstr "Не вдалося створити календар %1: %2"
 
 #: konsolekalendar.cpp:113
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "Переконайтеся, що akonadiserver запущено належним чином."
 
 #: konsolekalendar.cpp:121
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr "Неможливо створити календар: %1"
+msgstr "Не вдалося створити календар %1: помилка DBus setDisplayName: %2"
 
 #: konsolekalendar.cpp:126
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
-msgstr "Неможливо створити календар: %1"
+msgstr "Не вдалося створити календар %1: помилка виклику DBus setPath: %2"
 
 #: konsolekalendar.cpp:145
 #, kde-format

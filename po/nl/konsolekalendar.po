@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-29 00:44+0000\n"
-"PO-Revision-Date: 2026-05-28 10:32+0200\n"
+"PO-Revision-Date: 2026-05-29 14:46+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -47,27 +47,27 @@ msgid "(Read only)"
 msgstr "(Alleen-lezen)"
 
 #: konsolekalendar.cpp:112 konsolekalendar.cpp:131
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "Agenda kan niet worden aangemaakt: %1"
+msgstr "Agenda %1 kan niet worden aangemaakt: %2"
 
 #: konsolekalendar.cpp:113
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "Zorg ervoor dat de akonadiserver correct werkt."
 
 #: konsolekalendar.cpp:121
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr "Agenda kan niet worden aangemaakt: %1"
+msgstr ""
+"Agenda %1 kan niet worden aangemaakt: DBus setDisplayName is mislukt: %2"
 
 #: konsolekalendar.cpp:126
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
-msgstr "Agenda kan niet worden aangemaakt: %1"
+msgstr ""
+"Agenda %1 kan niet worden aangemaakt: aanroepen van DBus setPath is mislukt: "
+"%2"
 
 #: konsolekalendar.cpp:145
 #, kde-format

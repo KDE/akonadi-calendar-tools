@@ -601,18 +601,3 @@ msgstr "Kan ikkje laga Akonadi-ressurs frå fil: %1"
 #| msgid "Calendar %1 successfully imported"
 msgid "Calendar %1 successfully created"
 msgstr "Kalenderen %1 vart importert"
-
-#~ msgid "Create Calendar <Verbose>: %1"
-#~ msgstr "Lag kalender <Utvida>: %1"
-
-#~ msgid "View Events <Dry Run>:"
-#~ msgstr "Vis hendingar <Prøvekøyr>:"
-
-#~ msgid "Insert Event <Verbose>:"
-#~ msgstr "Set inn hending <Utvida>:"
-
-#~ msgid "Change Event <Verbose>:"
-#~ msgstr "Endra hending <Utvida>:"
-
-#~ msgid "Delete Event <Verbose>:"
-#~ msgstr "Slett hending <Utvida>:"

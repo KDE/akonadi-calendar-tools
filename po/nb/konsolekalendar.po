@@ -602,18 +602,3 @@ msgstr ""
 #| msgid "Calendar %1 successfully imported"
 msgid "Calendar %1 successfully created"
 msgstr "Kalenderen %1 ble importert"
-
-#~ msgid "Create Calendar <Verbose>: %1"
-#~ msgstr "Lag kalender <Pratsom>: %1"
-
-#~ msgid "View Events <Dry Run>:"
-#~ msgstr "Vis hendelser <Prøvekjør>:"
-
-#~ msgid "Insert Event <Verbose>:"
-#~ msgstr "Sett inn hendelse <Pratsom>:"
-
-#~ msgid "Change Event <Verbose>:"
-#~ msgstr "Endre hendelse <Pratsom>:"
-
-#~ msgid "Delete Event <Verbose>:"
-#~ msgstr "Slett hendelse <Pratsom>:"

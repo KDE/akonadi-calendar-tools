@@ -21,14 +21,14 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国, DuckSoft, Guo Yunhe, Lie_Ex, 朱鸷勇"
+msgstr "KDE 中国, DuckSoft, Guo Yunhe, Lie_Ex, Tyson Tan, 朱鸷勇"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "kde-china@kde.org, realducksoft@gmail.com, i@guoyunhe.me, lieex@kde.org, "
-"zhuzhiyong@kde.org"
+"tds00@qq.com, zhuzhiyong@kde.org"
 
 #: konsolekalendar.cpp:80
 #, kde-format
@@ -36,17 +36,15 @@ msgid "There are no calendars available."
 msgstr "没有可用的日历。"
 
 #: konsolekalendar.cpp:95
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(只读)"
 
 #: konsolekalendar.cpp:112 konsolekalendar.cpp:131
-#, fuzzy, kde-format
-#| msgid "Unable to import calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "无法导入日历：%1"
+msgstr ""
 
 #: konsolekalendar.cpp:113
 #, kde-format
@@ -64,27 +62,24 @@ msgid "Unable to create calendar %1: DBus setPath call failed: %2"
 msgstr ""
 
 #: konsolekalendar.cpp:145
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "创建日历<模拟运行>：%1"
+msgstr "模拟运行：创建日历：%1"
 
 #: konsolekalendar.cpp:151
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Create Calendar: %1"
-msgstr "创建日历<模拟运行>：%1"
+msgstr "创建日历：%1"
 
 #: konsolekalendar.cpp:169
 #, kde-format
 msgid "Dry Run: View Events:"
-msgstr ""
+msgstr "模拟运行：查看事件："
 
 #: konsolekalendar.cpp:191
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
+#, kde-format
 msgid "View Event:"
-msgstr "查看事件 <详细输出>："
+msgstr "查看事件："
 
 #: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
@@ -129,13 +124,12 @@ msgstr "  位置：%1"
 #: konsolekalendaradd.cpp:61
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "模拟运行：插入事件："
 
 #: konsolekalendaradd.cpp:65
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "插入事件<模拟运行>："
+msgstr "插入事件："
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
 #, kde-format
@@ -153,38 +147,34 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "失败：未插入“%1”"
 
 #: konsolekalendaradd.cpp:148
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr "跳过插入事件，因为 UID “%1”已知。<详细输出>"
+msgstr "插入事件已跳过，因为 UID“%1”已知。"
 
 #: konsolekalendaradd.cpp:155
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "添加 UID 为“%1”的事件。<详细输出>"
+msgstr "添加 UID 为“%1”的事件。"
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "模拟运行：更改事件："
 
 #: konsolekalendarchange.cpp:53
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "模拟运行：前往事件："
 
 #: konsolekalendarchange.cpp:59
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "修改事件<模拟运行>："
+msgstr "更改事件："
 
 #: konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "To Event <Dry Run>:"
+#, kde-format
 msgid "To Event:"
-msgstr "转到事件<模拟运行>："
+msgstr "前往事件："
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -205,13 +195,12 @@ msgstr "  UID：%1"
 #: konsolekalendardelete.cpp:48
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "模拟运行：删除事件："
 
 #: konsolekalendardelete.cpp:54
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "删除事件<模拟运行>："
+msgstr "删除事件："
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
@@ -592,22 +581,6 @@ msgid "Cannot create Akonadi resource from file: %1"
 msgstr "无法从文件创建 Akonadi 资源： %1"
 
 #: main.cpp:770
-#, fuzzy, kde-format
-#| msgid "Calendar %1 successfully imported"
+#, kde-format
 msgid "Calendar %1 successfully created"
-msgstr "成功导入了日历 %1"
-
-#~ msgid "Create Calendar <Verbose>: %1"
-#~ msgstr "创建日历<详细输出>：%1"
-
-#~ msgid "View Events <Dry Run>:"
-#~ msgstr "查看事件<模拟运行>："
-
-#~ msgid "Insert Event <Verbose>:"
-#~ msgstr "插入事件<详细输出>："
-
-#~ msgid "Change Event <Verbose>:"
-#~ msgstr "修改事件<详细输出>："
-
-#~ msgid "Delete Event <Verbose>:"
-#~ msgstr "删除事件<详细输出>："
+msgstr ""
