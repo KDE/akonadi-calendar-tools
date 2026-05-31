@@ -12,7 +12,7 @@
 # Matthieu Robin <matthieu@macolu.org>, 2005.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2007, 2008.
 # Sebastien Renard <Sebastien.Renard@digitalfox.org>, 2009, 2013, 2015.
-# SPDX-FileCopyrightText: 2013, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2013, 2023-2024, 2026 Xavier Besnard <xavier.besnard@kde.org>
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 #
@@ -20,19 +20,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-29 00:44+0000\n"
-"PO-Revision-Date: 2024-05-17 09:01+0200\n"
+"POT-Creation-Date: 2026-05-31 00:44+0000\n"
+"PO-Revision-Date: 2026-05-29 14:12+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 26.04.1\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -44,531 +44,521 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@macolu.org, renard@kde.org"
 
-#: konsolekalendar.cpp:80
+#: konsolekalendar.cpp:78
 #, kde-format
 msgid "There are no calendars available."
 msgstr "Il n'y a aucun agenda disponible."
 
-#: konsolekalendar.cpp:95
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#: konsolekalendar.cpp:93
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Lecture seule)"
 
-#: konsolekalendar.cpp:112 konsolekalendar.cpp:131
+#: konsolekalendar.cpp:110 konsolekalendar.cpp:129
 #, fuzzy, kde-format
 #| msgid "Unable to create calendar: %1"
 msgid "Unable to create calendar %1: %2"
 msgstr "Impossible de créer l'agenda : %1"
 
-#: konsolekalendar.cpp:113
+#: konsolekalendar.cpp:111
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
 msgstr ""
 
-#: konsolekalendar.cpp:121
+#: konsolekalendar.cpp:119
 #, fuzzy, kde-format
 #| msgid "Unable to create calendar: %1"
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
 msgstr "Impossible de créer l'agenda : %1"
 
-#: konsolekalendar.cpp:126
+#: konsolekalendar.cpp:124
 #, fuzzy, kde-format
 #| msgid "Unable to create calendar: %1"
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
 msgstr "Impossible de créer l'agenda : %1"
 
-#: konsolekalendar.cpp:145
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#: konsolekalendar.cpp:143
+#, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "Créer l'agenda <Essai> : %1"
+msgstr "Tentative à blanc :Créer l'agenda : %1"
 
-#: konsolekalendar.cpp:151
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#: konsolekalendar.cpp:146
+#, kde-format
 msgid "Create Calendar: %1"
-msgstr "Créer l'agenda <Essai> : %1"
+msgstr "Créer l'agenda : %1"
 
-#: konsolekalendar.cpp:169
+#: konsolekalendar.cpp:164
 #, kde-format
 msgid "Dry Run: View Events:"
-msgstr ""
+msgstr "Tentative à blanc : affichage des évènements :"
 
-#: konsolekalendar.cpp:191
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
+#: konsolekalendar.cpp:178
+#, kde-format
 msgid "View Event:"
-msgstr "Voir l'évènement <Bavard> :"
+msgstr "Affichage des évènements :"
 
-#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
-#: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
-#: konsolekalendardelete.cpp:82
+#: konsolekalendar.cpp:314 konsolekalendaradd.cpp:166
+#: konsolekalendarchange.cpp:110 konsolekalendarchange.cpp:126
+#: konsolekalendardelete.cpp:75
 #, kde-format
 msgid "  What:  %1"
 msgstr " Quoi : %1"
 
-#: konsolekalendar.cpp:362 konsolekalendaradd.cpp:178
-#: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
-#: konsolekalendardelete.cpp:85
+#: konsolekalendar.cpp:316 konsolekalendaradd.cpp:168
+#: konsolekalendarchange.cpp:113 konsolekalendarchange.cpp:128
+#: konsolekalendardelete.cpp:78
 #, kde-format
 msgid "  Begin: %1"
 msgstr " Début : %1"
 
-#: konsolekalendar.cpp:364 konsolekalendaradd.cpp:180
-#: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
-#: konsolekalendardelete.cpp:87
+#: konsolekalendar.cpp:318 konsolekalendaradd.cpp:170
+#: konsolekalendarchange.cpp:115 konsolekalendarchange.cpp:130
+#: konsolekalendardelete.cpp:80
 #, kde-format
 msgid "  End:   %1"
 msgstr " Fin : %1"
 
-#: konsolekalendar.cpp:367 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:321 konsolekalendaradd.cpp:173
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr " Aucune date associée à l'évènement"
 
-#: konsolekalendar.cpp:370 konsolekalendaradd.cpp:186
-#: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
-#: konsolekalendardelete.cpp:89
+#: konsolekalendar.cpp:324 konsolekalendaradd.cpp:176
+#: konsolekalendarchange.cpp:117 konsolekalendarchange.cpp:132
+#: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  Desc:  %1"
 msgstr " Descripteur : %1"
 
-#: konsolekalendar.cpp:372 konsolekalendaradd.cpp:188
-#: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
-#: konsolekalendardelete.cpp:91
+#: konsolekalendar.cpp:326 konsolekalendaradd.cpp:178
+#: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
+#: konsolekalendardelete.cpp:84
 #, kde-format
 msgid "  Location:  %1"
 msgstr " Emplacement : %1"
 
-#: konsolekalendaradd.cpp:61
+#: konsolekalendaradd.cpp:59
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Tentative à blanc : insérer l'évènement :"
 
-#: konsolekalendaradd.cpp:65
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#: konsolekalendaradd.cpp:63
+#, kde-format
 msgid "Insert Event:"
-msgstr "Insérer l'évènement <Essai> :"
+msgstr "Insérer l'évènement :"
 
-#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
+#: konsolekalendaradd.cpp:91 konsolekalendaradd.cpp:128
 #, kde-format
 msgid "Calendar is invalid. Please specify one with --calendar"
 msgstr ""
 "L'agenda est non valable. Veuillez en spécifier un avec l'option « --"
 "calendar »"
 
-#: konsolekalendaradd.cpp:104
+#: konsolekalendaradd.cpp:101
 #, kde-format
 msgid "Success: \"%1\" inserted"
 msgstr "Succès : « %1 » inséré"
 
-#: konsolekalendaradd.cpp:106
+#: konsolekalendaradd.cpp:103
 #, kde-format
 msgid "Failure: \"%1\" not inserted"
 msgstr "Échec : « %1 » non inséré"
 
-#: konsolekalendaradd.cpp:148
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#: konsolekalendaradd.cpp:142
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
 msgstr ""
-"Insertion de l'évènement sautée, car l'identifiant « %1 » est déjà connu. "
-"<Verbose>"
+"L'insertion de l'évènement a été annulée. En effet, l'identifiant « %1 » est "
+"déjà connu."
 
-#: konsolekalendaradd.cpp:155
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#: konsolekalendaradd.cpp:149
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "Ajouter l'évènement avec l'identifiant « %1 ». <Verbose>"
+msgstr "Ajouter l'évènement avec l'identifiant UID « %1 »."
+
+#: konsolekalendarchange.cpp:47
+#, kde-format
+msgid "Dry Run: Change Event:"
+msgstr "Tentative à blanc : modifier l'évènement :"
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
-msgid "Dry Run: Change Event:"
-msgstr ""
-
-#: konsolekalendarchange.cpp:53
-#, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Tentative à blanc : vers l'évènement :"
 
-#: konsolekalendarchange.cpp:59
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#: konsolekalendarchange.cpp:54
+#, kde-format
 msgid "Change Event:"
-msgstr "Modifier l'évènement <Essai> :"
+msgstr "Modifier l'évènement :"
 
-#: konsolekalendarchange.cpp:62
-#, fuzzy, kde-format
-#| msgid "Events:"
+#: konsolekalendarchange.cpp:57
+#, kde-format
 msgid "To Event:"
-msgstr "Évènements :"
+msgstr "Vers l'évènement :"
 
-#: konsolekalendarchange.cpp:101
+#: konsolekalendarchange.cpp:96
 #, kde-format
 msgid "Success: \"%1\" changed"
 msgstr "Succès : « %1 » modifié"
 
-#: konsolekalendarchange.cpp:103
+#: konsolekalendarchange.cpp:98
 #, kde-format
 msgid "Failure: \"%1\" not changed"
 msgstr "Échec : « %1 » non modifié"
 
-#: konsolekalendarchange.cpp:114 konsolekalendarchange.cpp:130
-#: konsolekalendardelete.cpp:80
+#: konsolekalendarchange.cpp:108 konsolekalendarchange.cpp:124
+#: konsolekalendardelete.cpp:73
 #, kde-format
 msgid "  UID:   %1"
 msgstr " UID : %1"
 
-#: konsolekalendardelete.cpp:48
+#: konsolekalendardelete.cpp:45
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Tentative à blanc : supprimer l'évènement :"
 
-#: konsolekalendardelete.cpp:54
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#: konsolekalendardelete.cpp:49
+#, kde-format
 msgid "Delete Event:"
-msgstr "Supprimer l'évènement <Essai> :"
+msgstr "Supprimer l'évènement :"
 
-#: konsolekalendardelete.cpp:67
+#: konsolekalendardelete.cpp:61
 #, kde-format
 msgid "Success: \"%1\" deleted"
 msgstr "Succès : « %1 » effacé"
 
-#: konsolekalendardelete.cpp:69
+#: konsolekalendardelete.cpp:63
 #, kde-format
 msgid "Error deleting: \"%1\""
 msgstr "Erreur durant la suppression : « %1 »"
 
-#: konsolekalendarexports.cpp:59
+#: konsolekalendarexports.cpp:64
 #, kde-format
 msgid "Date:"
 msgstr "Date :"
 
-#: konsolekalendarexports.cpp:68
+#: konsolekalendarexports.cpp:73
 #, kde-format
 msgid "Summary:"
 msgstr "Résumé :"
 
-#: konsolekalendarexports.cpp:72
+#: konsolekalendarexports.cpp:77
 #, kde-format
 msgid "(no summary available)"
 msgstr "(aucun résumé disponible)"
 
-#: konsolekalendarexports.cpp:76
+#: konsolekalendarexports.cpp:81
 #, kde-format
 msgid "Location:"
 msgstr "Emplacement :"
 
-#: konsolekalendarexports.cpp:80
+#: konsolekalendarexports.cpp:85
 #, kde-format
 msgid "(no location available)"
 msgstr "(aucun lieu précisé)"
 
-#: konsolekalendarexports.cpp:84
+#: konsolekalendarexports.cpp:89
 #, kde-format
 msgid "Description:"
 msgstr "Description :"
 
-#: konsolekalendarexports.cpp:88
+#: konsolekalendarexports.cpp:93
 #, kde-format
 msgid "(no description available)"
 msgstr "(aucune description disponible)"
 
-#: konsolekalendarexports.cpp:92
+#: konsolekalendarexports.cpp:97
 #, kde-format
 msgid "UID:"
 msgstr "UID :"
 
-#: konsolekalendarexports.cpp:120
+#: konsolekalendarexports.cpp:125
 #, kde-format
 msgid "[all day]\t"
 msgstr "[tous les jours]\t"
 
-#: konsolekalendarexports.cpp:171
+#: konsolekalendarexports.cpp:176
 #, kde-format
 msgid ","
 msgstr ", "
 
-#: konsolekalendarexports.cpp:172
+#: konsolekalendarexports.cpp:177
 #, kde-format
 msgid "\""
 msgstr "\""
 
-#: main.cpp:59
+#: main.cpp:57
 #, kde-format
 msgid "KonsoleKalendar"
 msgstr "KonsoleKalendar"
 
-#: main.cpp:61
+#: main.cpp:59
 #, kde-format
 msgid "A command line interface to KDE calendars"
 msgstr "Une interface en ligne de commandes pour les calendriers KDE"
 
-#: main.cpp:63
+#: main.cpp:61
 #, kde-format
 msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
 msgstr "(c) 2002-2009, Tuukka Pasanen et Allen Winter"
 
-#: main.cpp:65
+#: main.cpp:63
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:65
+#: main.cpp:63
 #, kde-format
 msgid "Bug fixing"
 msgstr "Correction de bogues"
 
-#: main.cpp:66
+#: main.cpp:64
 #, kde-format
 msgctxt "@info:credit"
 msgid "Allen Winter"
 msgstr "Allen Winter"
 
-#: main.cpp:66
+#: main.cpp:64
 #, kde-format
 msgid "Maintainer"
 msgstr "Mainteneur"
 
-#: main.cpp:67
+#: main.cpp:65
 #, kde-format
 msgctxt "@info:credit"
 msgid "Tuukka Pasanen"
 msgstr "Tuukka Pasanen"
 
-#: main.cpp:67
+#: main.cpp:65
 #, kde-format
 msgid "Author"
 msgstr "Auteur"
 
-#: main.cpp:73
+#: main.cpp:71
 #, kde-format
 msgid "Print helpful runtime messages"
 msgstr "Afficher des messages utiles durant l'exécution"
 
-#: main.cpp:74
+#: main.cpp:72
 #, kde-format
 msgid "Print what would have been done, but do not execute"
 msgstr "Afficher ce qui aurait été fait mais sans l'exécuter."
 
-#: main.cpp:75
+#: main.cpp:73
 #, kde-format
 msgid "Allow calendars which might need an interactive user interface"
 msgstr ""
 "Autoriser des calendriers pouvant nécessiter une interface utilisateur "
 "interactive"
 
-#: main.cpp:76
+#: main.cpp:74
 #, kde-format
 msgid "Operate for Events only (Default)"
 msgstr "N'opérer que pour des évènements (Par défaut)"
 
-#: main.cpp:77
+#: main.cpp:75
 #, kde-format
 msgid "Operate for To-dos only [NOT WORKING YET]"
 msgstr "N'opérer que pour les tâches [NE FONCTIONNE PAS ENCORE]"
 
-#: main.cpp:78
+#: main.cpp:76
 #, kde-format
 msgid "Operate for Journals only [NOT WORKING YET]"
 msgstr "N'opérer que pour les journaux [NE FONCTIONNE PAS ENCORE]"
 
-#: main.cpp:79
+#: main.cpp:77
 #, kde-format
 msgid "Print incidences in specified export format"
 msgstr "Afficher les évènements dans le format indiqué d'exportation"
 
-#: main.cpp:80
+#: main.cpp:78
 #, kde-format
 msgid "Insert an incidence into the calendar"
 msgstr "Insérer un évènement dans l'agenda"
 
-#: main.cpp:81
+#: main.cpp:79
 #, kde-format
 msgid "Modify an existing incidence"
 msgstr "Modifier un évènement existant"
 
-#: main.cpp:82
+#: main.cpp:80
 #, kde-format
 msgid "Remove an existing incidence"
 msgstr "Supprimer un évènement existant"
 
-#: main.cpp:83
+#: main.cpp:81
 #, kde-format
 msgid "Create new Akonadi Resource for file"
 msgstr "Créer une nouvelle ressource Akonadi pour le fichier"
 
-#: main.cpp:85
+#: main.cpp:83
 #, kde-format
 msgid "Import this calendar to main calendar"
 msgstr "Importer cet agenda dans l'agenda principal"
 
-#: main.cpp:86
+#: main.cpp:84
 #, kde-format
 msgid "List available calendars"
 msgstr "Lister les agendas disponibles"
 
-#: main.cpp:87
+#: main.cpp:85
 #, kde-format
 msgid "View all calendar entries, ignoring date/time options"
 msgstr ""
 "Afficher tous les entrées de l'agenda en ignorant les options de date / heure"
 
-#: main.cpp:88
+#: main.cpp:86
 #, kde-format
 msgid "View next activity in calendar"
 msgstr "Afficher l'activité suivante dans l'agenda"
 
-#: main.cpp:90
+#: main.cpp:88
 #, kde-format
 msgid "From start date show next # days' activities"
 msgstr ""
 "À partir de la date de début, afficher les activités des # jours suivants"
 
-#: main.cpp:91
+#: main.cpp:89
 #, kde-format
 msgid "Incidence Unique-string identifier"
 msgstr "Identifiant unique de l'évènement"
 
-#: main.cpp:92
+#: main.cpp:90
 #, kde-format
 msgid "Start from this day [YYYY-MM-DD]"
 msgstr "Depuis ce jour [AAAA-MM-JJ]"
 
-#: main.cpp:93
+#: main.cpp:91
 #, kde-format
 msgid "Start from this time [HH:MM:SS]"
 msgstr "Depuis cette heure [HH:MM:SS]"
 
-#: main.cpp:94
+#: main.cpp:92
 #, kde-format
 msgid "End at this day [YYYY-MM-DD]"
 msgstr "Jusqu'à ce jour [AAAA-MM-JJ]"
 
-#: main.cpp:95
+#: main.cpp:93
 #, kde-format
 msgid "End at this time [HH:MM:SS]"
 msgstr " Jusqu'à cette heure [HH:MM:SS]"
 
-#: main.cpp:97
+#: main.cpp:95
 #, kde-format
 msgid "Start from this time [secs since epoch]"
 msgstr "Démarrer à partir de cette heures [Secondes depuis le 01 janvier 1970]"
 
-#: main.cpp:99
+#: main.cpp:97
 #, kde-format
 msgid "End at this time [secs since epoch]"
 msgstr "Terminer à cette heure [Secondes depuis le 01 Janvier 1970]"
 
-#: main.cpp:101
+#: main.cpp:99
 #, kde-format
 msgid "Add summary to incidence (for add/change modes)"
 msgstr ""
 "Ajouter un résumé à l'évènement (pour les modes d'ajout ou de modification)"
 
-#: main.cpp:103
+#: main.cpp:101
 #, kde-format
 msgid "Add description to incidence (for add/change modes)"
 msgstr ""
 "Ajouter une description à l'évènement (pour les modes d'ajout ou de "
 "modification)"
 
-#: main.cpp:106
+#: main.cpp:104
 #, kde-format
 msgid "Add location to incidence (for add/change modes)"
 msgstr ""
 "Ajouter un emplacement à l'évènement (pour les modes d'ajout ou de "
 "modification)"
 
-#: main.cpp:109
+#: main.cpp:107
 #, kde-format
 msgid "Calendar to use when creating a new incidence"
 msgstr "Agenda à utiliser lors de la création d'un nouvel évènement"
 
-#: main.cpp:112
+#: main.cpp:110
 #, kde-format
 msgid "Export file type (Default: text)"
 msgstr "Type du fichier pour l'exportation (Par défaut : texte)"
 
-#: main.cpp:114
+#: main.cpp:112
 #, kde-format
 msgid "Export to file (Default: stdout)"
 msgstr "Exporter dans un fichier (Par défaut : sortie standard)"
 
-#: main.cpp:115
+#: main.cpp:113
 #, kde-format
 msgid "Print list of export types supported and exit"
 msgstr "Afficher une liste des types d'exportation pris en charge et quitter"
 
-#: main.cpp:164
+#: main.cpp:162
 #, kde-format
 msgid "%1 supports these export formats:"
 msgstr "%1 prend en charge ces formats d'exportation :"
 
-#: main.cpp:165
+#: main.cpp:163
 #, kde-format
 msgctxt "the default export format"
 msgid "  %1 [Default]"
 msgstr " %1 [Par défaut]"
 
-#: main.cpp:166
+#: main.cpp:164
 #, kde-format
 msgctxt "short text export"
 msgid "  %1 (like %2, but more compact)"
 msgstr " %1 (comme %2 mais plus concis)"
 
-#: main.cpp:167
+#: main.cpp:165
 #, kde-format
 msgctxt "comma-separated values export"
 msgid "  %1 (Comma-Separated Values)"
 msgstr " %1 (Valeurs séparées par une virgule)"
 
-#: main.cpp:182
+#: main.cpp:178
 #, kde-format
 msgid "Sorry, To-dos are not working yet."
 msgstr "Désolé, les tâches ne fonctionnent pas encore."
 
-#: main.cpp:188
+#: main.cpp:183
 #, kde-format
 msgid "Sorry, Journals are not working yet."
 msgstr "Désolé, les journaux ne fonctionnent pas encore."
 
-#: main.cpp:214
+#: main.cpp:205
 #, kde-format
 msgid "Invalid Export Type Specified: %1"
 msgstr "Le type d'exportation spécifié est non valable : %1"
 
-#: main.cpp:373
+#: main.cpp:315
 #, kde-format
 msgid "Invalid Start Date Specified: %1"
 msgstr "La date de début spécifiée est non valable : %1"
 
-#: main.cpp:398
+#: main.cpp:332
 #, kde-format
 msgid "Invalid Start Time Specified: %1"
 msgstr "L'heure de début spécifiée est non valable : %1"
 
-#: main.cpp:423
+#: main.cpp:347
 #, kde-format
 msgid "Invalid End Date Specified: %1"
 msgstr "La date de fin spécifiée est non valable : %1"
 
-#: main.cpp:443
+#: main.cpp:360
 #, kde-format
 msgid "Invalid Date Count Specified: %1"
 msgstr "Le comptage des dates spécifiée est non valable : %1"
 
-#: main.cpp:471
+#: main.cpp:380
 #, kde-format
 msgid "Invalid End Time Specified: %1"
 msgstr "L'heure de fin spécifiée est non valable : %1"
 
-#: main.cpp:664
+#: main.cpp:522
 #, kde-format
 msgid ""
 "Only 1 operation mode (view, add, change, delete, create) permitted at any "
@@ -577,61 +567,60 @@ msgstr ""
 "Il est interdit d'utiliser plusieurs modes d'opération (affichage, ajout, "
 "modification, suppression, création) simultanément."
 
-#: main.cpp:675
+#: main.cpp:533
 #, kde-format
 msgid "Ending Date/Time occurs before the Starting Date/Time"
 msgstr ""
 "La date ou l'heure de fin est antérieure à la date ou à l'heure de début"
 
-#: main.cpp:694
+#: main.cpp:552
 #, kde-format
 msgid "Calendar %1 successfully imported"
 msgstr "Agenda %1 importé avec succès."
 
-#: main.cpp:697
+#: main.cpp:555
 #, kde-format
 msgid "Unable to import calendar: %1"
 msgstr "Impossible d'importer un agenda : %1"
 
-#: main.cpp:708
+#: main.cpp:564
 #, kde-format
 msgid "Attempting to insert an event that already exists"
 msgstr "Tentative d'insertion d'un évènement déjà existant"
 
-#: main.cpp:718 main.cpp:738
+#: main.cpp:572 main.cpp:588
 #, kde-format
 msgid "Missing event UID: use --uid command line option"
 msgstr ""
 "UID de l'évènement manquant : utilisez l'argument « --uid » de la ligne de "
 "commandes."
 
-#: main.cpp:726
+#: main.cpp:580
 #, kde-format
 msgid "No such event UID: change event failed"
 msgstr ""
 "Aucun évènement ne correspond à cet UID : échec de la modification de "
 "l'évènement"
 
-#: main.cpp:746
+#: main.cpp:596
 #, kde-format
 msgid "No such event UID: delete event failed"
 msgstr ""
 "Aucun évènement ne correspond à cet UID : échec de la suppression de "
 "l'évènement"
 
-#: main.cpp:757
+#: main.cpp:603
 #, kde-format
 msgid "Cannot open specified export file: %1"
 msgstr "Impossible d'ouvrir le fichier d'exportation spécifié : %1"
 
-#: main.cpp:767
+#: main.cpp:610
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Impossible de créer la ressource Akonadi à partir du fichier : %1"
 
-#: main.cpp:770
-#, fuzzy, kde-format
-#| msgid "Calendar %1 successfully created"
+#: main.cpp:613
+#, kde-format
 msgid "Calendar %1 successfully created"
 msgstr "L'agenda %1 a été créé avec succès."
 

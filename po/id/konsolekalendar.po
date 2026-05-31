@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-29 00:44+0000\n"
+"POT-Creation-Date: 2026-05-31 00:44+0000\n"
 "PO-Revision-Date: 2024-09-27 07:58+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -27,517 +27,517 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wantoyek@gmail.com"
 
-#: konsolekalendar.cpp:80
+#: konsolekalendar.cpp:78
 #, kde-format
 msgid "There are no calendars available."
 msgstr "Di sini tidak ada kalender yang tersedia"
 
-#: konsolekalendar.cpp:95
+#: konsolekalendar.cpp:93
 #, fuzzy, kde-format
 #| msgid "(Read only)"
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Hanya baca)"
 
-#: konsolekalendar.cpp:112 konsolekalendar.cpp:131
+#: konsolekalendar.cpp:110 konsolekalendar.cpp:129
 #, fuzzy, kde-format
 #| msgid "Unable to import calendar: %1"
 msgid "Unable to create calendar %1: %2"
 msgstr "Tidak dapat mengimpor kalender: %1"
 
-#: konsolekalendar.cpp:113
+#: konsolekalendar.cpp:111
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
 msgstr ""
 
-#: konsolekalendar.cpp:121
+#: konsolekalendar.cpp:119
 #, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
 msgstr ""
 
-#: konsolekalendar.cpp:126
+#: konsolekalendar.cpp:124
 #, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
 msgstr ""
 
-#: konsolekalendar.cpp:145
+#: konsolekalendar.cpp:143
 #, fuzzy, kde-format
 #| msgid "Create Calendar <Dry Run>: %1"
 msgid "Dry Run: Create Calendar: %1"
 msgstr "Buat Kalender <Dry Run>: %1"
 
-#: konsolekalendar.cpp:151
+#: konsolekalendar.cpp:146
 #, fuzzy, kde-format
 #| msgid "Create Calendar <Dry Run>: %1"
 msgid "Create Calendar: %1"
 msgstr "Buat Kalender <Dry Run>: %1"
 
-#: konsolekalendar.cpp:169
+#: konsolekalendar.cpp:164
 #, kde-format
 msgid "Dry Run: View Events:"
 msgstr ""
 
-#: konsolekalendar.cpp:191
+#: konsolekalendar.cpp:178
 #, fuzzy, kde-format
 #| msgid "View Event <Verbose>:"
 msgid "View Event:"
 msgstr "Lihat Acara <Verbose>:"
 
-#: konsolekalendar.cpp:360 konsolekalendaradd.cpp:176
-#: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
-#: konsolekalendardelete.cpp:82
+#: konsolekalendar.cpp:314 konsolekalendaradd.cpp:166
+#: konsolekalendarchange.cpp:110 konsolekalendarchange.cpp:126
+#: konsolekalendardelete.cpp:75
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Apa:  %1"
 
-#: konsolekalendar.cpp:362 konsolekalendaradd.cpp:178
-#: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
-#: konsolekalendardelete.cpp:85
+#: konsolekalendar.cpp:316 konsolekalendaradd.cpp:168
+#: konsolekalendarchange.cpp:113 konsolekalendarchange.cpp:128
+#: konsolekalendardelete.cpp:78
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Awal: %1"
 
-#: konsolekalendar.cpp:364 konsolekalendaradd.cpp:180
-#: konsolekalendarchange.cpp:121 konsolekalendarchange.cpp:136
-#: konsolekalendardelete.cpp:87
+#: konsolekalendar.cpp:318 konsolekalendaradd.cpp:170
+#: konsolekalendarchange.cpp:115 konsolekalendarchange.cpp:130
+#: konsolekalendardelete.cpp:80
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Akhir:   %1"
 
-#: konsolekalendar.cpp:367 konsolekalendaradd.cpp:183
+#: konsolekalendar.cpp:321 konsolekalendaradd.cpp:173
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  Tidak ada Waktu Berhubungan dengan Acara"
 
-#: konsolekalendar.cpp:370 konsolekalendaradd.cpp:186
-#: konsolekalendarchange.cpp:123 konsolekalendarchange.cpp:138
-#: konsolekalendardelete.cpp:89
+#: konsolekalendar.cpp:324 konsolekalendaradd.cpp:176
+#: konsolekalendarchange.cpp:117 konsolekalendarchange.cpp:132
+#: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Urut Turun:  %1"
 
-#: konsolekalendar.cpp:372 konsolekalendaradd.cpp:188
-#: konsolekalendarchange.cpp:125 konsolekalendarchange.cpp:140
-#: konsolekalendardelete.cpp:91
+#: konsolekalendar.cpp:326 konsolekalendaradd.cpp:178
+#: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
+#: konsolekalendardelete.cpp:84
 #, kde-format
 msgid "  Location:  %1"
 msgstr "  Lokasi:  %1"
 
-#: konsolekalendaradd.cpp:61
+#: konsolekalendaradd.cpp:59
 #, kde-format
 msgid "Dry Run: Insert Event:"
 msgstr ""
 
-#: konsolekalendaradd.cpp:65
+#: konsolekalendaradd.cpp:63
 #, fuzzy, kde-format
 #| msgid "Insert Event <Dry Run>:"
 msgid "Insert Event:"
 msgstr "Sisipkan Acara <Dry Run>:"
 
-#: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:134
+#: konsolekalendaradd.cpp:91 konsolekalendaradd.cpp:128
 #, kde-format
 msgid "Calendar is invalid. Please specify one with --calendar"
 msgstr "Kalender tidak valid. Silakan tentukan satu dengan --calendar"
 
-#: konsolekalendaradd.cpp:104
+#: konsolekalendaradd.cpp:101
 #, kde-format
 msgid "Success: \"%1\" inserted"
 msgstr "Berhasil: \"%1\" disisipkan"
 
-#: konsolekalendaradd.cpp:106
+#: konsolekalendaradd.cpp:103
 #, kde-format
 msgid "Failure: \"%1\" not inserted"
 msgstr "Kegagalan: \"%1\" tidak disisipkan"
 
-#: konsolekalendaradd.cpp:148
+#: konsolekalendaradd.cpp:142
 #, fuzzy, kde-format
 #| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
 msgid "Insert Event skipped, because UID \"%1\" is already known."
 msgstr ""
 "Sisip Acara terlewati, karena UID \"%1\" sudah tidak dikenal. <Verbose>"
 
-#: konsolekalendaradd.cpp:155
+#: konsolekalendaradd.cpp:149
 #, fuzzy, kde-format
 #| msgid "Add Event with UID \"%1\". <Verbose>"
 msgid "Add Event with UID \"%1\"."
 msgstr "Tambahkan Acara dengan UID \"%1\". <Verbose>"
 
-#: konsolekalendarchange.cpp:50
+#: konsolekalendarchange.cpp:47
 #, kde-format
 msgid "Dry Run: Change Event:"
 msgstr ""
 
-#: konsolekalendarchange.cpp:53
+#: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: To Event:"
 msgstr ""
 
-#: konsolekalendarchange.cpp:59
+#: konsolekalendarchange.cpp:54
 #, fuzzy, kde-format
 #| msgid "Change Event <Dry Run>:"
 msgid "Change Event:"
 msgstr "Ubah Acara <Dry Run>:"
 
-#: konsolekalendarchange.cpp:62
+#: konsolekalendarchange.cpp:57
 #, fuzzy, kde-format
 #| msgid "To Event <Dry Run>:"
 msgid "To Event:"
 msgstr "Untuk Acara <Dry Run>:"
 
-#: konsolekalendarchange.cpp:101
+#: konsolekalendarchange.cpp:96
 #, kde-format
 msgid "Success: \"%1\" changed"
 msgstr "Berhasil: \"%1\" diubah"
 
-#: konsolekalendarchange.cpp:103
+#: konsolekalendarchange.cpp:98
 #, kde-format
 msgid "Failure: \"%1\" not changed"
 msgstr "Kegagalan: \"%1\" tidak diubah"
 
-#: konsolekalendarchange.cpp:114 konsolekalendarchange.cpp:130
-#: konsolekalendardelete.cpp:80
+#: konsolekalendarchange.cpp:108 konsolekalendarchange.cpp:124
+#: konsolekalendardelete.cpp:73
 #, kde-format
 msgid "  UID:   %1"
 msgstr "  UID:   %1"
 
-#: konsolekalendardelete.cpp:48
+#: konsolekalendardelete.cpp:45
 #, kde-format
 msgid "Dry Run: Delete Event:"
 msgstr ""
 
-#: konsolekalendardelete.cpp:54
+#: konsolekalendardelete.cpp:49
 #, fuzzy, kde-format
 #| msgid "Delete Event <Dry Run>:"
 msgid "Delete Event:"
 msgstr "Hapus Acara <Dry Run>:"
 
-#: konsolekalendardelete.cpp:67
+#: konsolekalendardelete.cpp:61
 #, kde-format
 msgid "Success: \"%1\" deleted"
 msgstr "Berhasil: \"%1\" dihapus"
 
-#: konsolekalendardelete.cpp:69
+#: konsolekalendardelete.cpp:63
 #, kde-format
 msgid "Error deleting: \"%1\""
 msgstr "Galat penghapusan: \"%1\""
 
-#: konsolekalendarexports.cpp:59
+#: konsolekalendarexports.cpp:64
 #, kde-format
 msgid "Date:"
 msgstr "Tanggal:"
 
-#: konsolekalendarexports.cpp:68
+#: konsolekalendarexports.cpp:73
 #, kde-format
 msgid "Summary:"
 msgstr "Ringkasan:"
 
-#: konsolekalendarexports.cpp:72
+#: konsolekalendarexports.cpp:77
 #, kde-format
 msgid "(no summary available)"
 msgstr "(tidak ada ringkasan yang tersedia)"
 
-#: konsolekalendarexports.cpp:76
+#: konsolekalendarexports.cpp:81
 #, kde-format
 msgid "Location:"
 msgstr "Lokasi:"
 
-#: konsolekalendarexports.cpp:80
+#: konsolekalendarexports.cpp:85
 #, kde-format
 msgid "(no location available)"
 msgstr "(tidak ada lokasi yang tersedia)"
 
-#: konsolekalendarexports.cpp:84
+#: konsolekalendarexports.cpp:89
 #, kde-format
 msgid "Description:"
 msgstr "Deskripsi:"
 
-#: konsolekalendarexports.cpp:88
+#: konsolekalendarexports.cpp:93
 #, kde-format
 msgid "(no description available)"
 msgstr "(tidak ada deskripsi yang tersedia)"
 
-#: konsolekalendarexports.cpp:92
+#: konsolekalendarexports.cpp:97
 #, kde-format
 msgid "UID:"
 msgstr "UID:"
 
-#: konsolekalendarexports.cpp:120
+#: konsolekalendarexports.cpp:125
 #, kde-format
 msgid "[all day]\t"
 msgstr "[semua hari]\t"
 
-#: konsolekalendarexports.cpp:171
+#: konsolekalendarexports.cpp:176
 #, kde-format
 msgid ","
 msgstr ","
 
-#: konsolekalendarexports.cpp:172
+#: konsolekalendarexports.cpp:177
 #, kde-format
 msgid "\""
 msgstr "\""
 
-#: main.cpp:59
+#: main.cpp:57
 #, kde-format
 msgid "KonsoleKalendar"
 msgstr "KonsoleKalendar"
 
-#: main.cpp:61
+#: main.cpp:59
 #, kde-format
 msgid "A command line interface to KDE calendars"
 msgstr "Sebuah antarmuka baris perintah untuk kalender KDE"
 
-#: main.cpp:63
+#: main.cpp:61
 #, kde-format
 msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
 msgstr "(c) 2002-2009, Tuukka Pasanen dan Allen Winter"
 
-#: main.cpp:65
+#: main.cpp:63
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:65
+#: main.cpp:63
 #, kde-format
 msgid "Bug fixing"
 msgstr "Perbaikan bug"
 
-#: main.cpp:66
+#: main.cpp:64
 #, kde-format
 msgctxt "@info:credit"
 msgid "Allen Winter"
 msgstr "Allen Winter"
 
-#: main.cpp:66
+#: main.cpp:64
 #, kde-format
 msgid "Maintainer"
 msgstr "Pemelihara"
 
-#: main.cpp:67
+#: main.cpp:65
 #, kde-format
 msgctxt "@info:credit"
 msgid "Tuukka Pasanen"
 msgstr "Tuukka Pasanen"
 
-#: main.cpp:67
+#: main.cpp:65
 #, kde-format
 msgid "Author"
 msgstr "Penulis"
 
-#: main.cpp:73
+#: main.cpp:71
 #, kde-format
 msgid "Print helpful runtime messages"
 msgstr "Cetak pesan runtime yang bermanfaat"
 
-#: main.cpp:74
+#: main.cpp:72
 #, kde-format
 msgid "Print what would have been done, but do not execute"
 msgstr "Cetak apa yang akan dilakukan, tetapi jangan dieksekusi"
 
-#: main.cpp:75
+#: main.cpp:73
 #, kde-format
 msgid "Allow calendars which might need an interactive user interface"
 msgstr "Izinkan kalender yang mungkin memerlukan antarmuka pengguna interaktif"
 
-#: main.cpp:76
+#: main.cpp:74
 #, kde-format
 msgid "Operate for Events only (Default)"
 msgstr "Beroperasi untuk Acara saja (Bawaan)"
 
-#: main.cpp:77
+#: main.cpp:75
 #, kde-format
 msgid "Operate for To-dos only [NOT WORKING YET]"
 msgstr "Beroperasi untuk Rencana saja [MASIH BELUM BEKERJA]"
 
-#: main.cpp:78
+#: main.cpp:76
 #, kde-format
 msgid "Operate for Journals only [NOT WORKING YET]"
 msgstr "Beroperasi untuk Jurnal saja [MASIH BELUM BEKERJA]"
 
-#: main.cpp:79
+#: main.cpp:77
 #, kde-format
 msgid "Print incidences in specified export format"
 msgstr "Cetak insiden dalam format ekspor yang ditentukan"
 
-#: main.cpp:80
+#: main.cpp:78
 #, kde-format
 msgid "Insert an incidence into the calendar"
 msgstr "Sisipkan insiden ke dalam kalender"
 
-#: main.cpp:81
+#: main.cpp:79
 #, kde-format
 msgid "Modify an existing incidence"
 msgstr "Modif insiden yang ada"
 
-#: main.cpp:82
+#: main.cpp:80
 #, kde-format
 msgid "Remove an existing incidence"
 msgstr "Singkirkan insiden yang ada"
 
-#: main.cpp:83
+#: main.cpp:81
 #, kde-format
 msgid "Create new Akonadi Resource for file"
 msgstr "Buat Sumberdaya Akonadi untuk file"
 
-#: main.cpp:85
+#: main.cpp:83
 #, kde-format
 msgid "Import this calendar to main calendar"
 msgstr "Impor kalender ini ke kalender utama"
 
-#: main.cpp:86
+#: main.cpp:84
 #, kde-format
 msgid "List available calendars"
 msgstr "Daftar kalender yang tersedia"
 
-#: main.cpp:87
+#: main.cpp:85
 #, kde-format
 msgid "View all calendar entries, ignoring date/time options"
 msgstr "Tampilan semua entri kalender, abaikan opsi tanggal/waktu"
 
-#: main.cpp:88
+#: main.cpp:86
 #, kde-format
 msgid "View next activity in calendar"
 msgstr "Tampilan aktivitas selanjutnya di kalender"
 
-#: main.cpp:90
+#: main.cpp:88
 #, kde-format
 msgid "From start date show next # days' activities"
 msgstr "Dari tanggal mulai, tampilkan aktivitas # hari berikutnya"
 
-#: main.cpp:91
+#: main.cpp:89
 #, kde-format
 msgid "Incidence Unique-string identifier"
 msgstr "Pengidentifikasi string Unik insiden"
 
-#: main.cpp:92
+#: main.cpp:90
 #, kde-format
 msgid "Start from this day [YYYY-MM-DD]"
 msgstr "Mulai dari hari ini [YYYY-MM-DD]"
 
-#: main.cpp:93
+#: main.cpp:91
 #, kde-format
 msgid "Start from this time [HH:MM:SS]"
 msgstr "Mulai dari waktu ini [HH:MM:SS]"
 
-#: main.cpp:94
+#: main.cpp:92
 #, kde-format
 msgid "End at this day [YYYY-MM-DD]"
 msgstr "Akhir pada hari ini [YYYY-MM-DD]"
 
-#: main.cpp:95
+#: main.cpp:93
 #, kde-format
 msgid "End at this time [HH:MM:SS]"
 msgstr "Akhir pada waktu ini [HH:MM:SS]"
 
-#: main.cpp:97
+#: main.cpp:95
 #, kde-format
 msgid "Start from this time [secs since epoch]"
 msgstr "Mulai dari waktu ini [detik sejak masa]"
 
-#: main.cpp:99
+#: main.cpp:97
 #, kde-format
 msgid "End at this time [secs since epoch]"
 msgstr "Ahir pada waktu ini [detik sejak masa]"
 
-#: main.cpp:101
+#: main.cpp:99
 #, kde-format
 msgid "Add summary to incidence (for add/change modes)"
 msgstr "Tambahkan ringkasan ke insiden (untuk mode-mode tambah/ubah)"
 
-#: main.cpp:103
+#: main.cpp:101
 #, kde-format
 msgid "Add description to incidence (for add/change modes)"
 msgstr "Tambahkan deskripsi ke insiden (untuk mode-mode tambah/ubah)"
 
-#: main.cpp:106
+#: main.cpp:104
 #, kde-format
 msgid "Add location to incidence (for add/change modes)"
 msgstr "Tambahkan lokasi ke insiden (untuk mode-mode tambah/ubah)"
 
-#: main.cpp:109
+#: main.cpp:107
 #, kde-format
 msgid "Calendar to use when creating a new incidence"
 msgstr "Kalender yang mau digunakan ketika membuat sebuah insiden baru"
 
-#: main.cpp:112
+#: main.cpp:110
 #, kde-format
 msgid "Export file type (Default: text)"
 msgstr "Ekspor tipe file (Bawaan: teks)"
 
-#: main.cpp:114
+#: main.cpp:112
 #, kde-format
 msgid "Export to file (Default: stdout)"
 msgstr "Ekspor ke file (Bawaan: stdout)"
 
-#: main.cpp:115
+#: main.cpp:113
 #, kde-format
 msgid "Print list of export types supported and exit"
 msgstr "Cetak daftar tipe-tipe ekspor yang didukung dan keluar"
 
-#: main.cpp:164
+#: main.cpp:162
 #, kde-format
 msgid "%1 supports these export formats:"
 msgstr "%1 mendukung format ekspor:"
 
-#: main.cpp:165
+#: main.cpp:163
 #, kde-format
 msgctxt "the default export format"
 msgid "  %1 [Default]"
 msgstr "  %1 [Bawaan]"
 
-#: main.cpp:166
+#: main.cpp:164
 #, kde-format
 msgctxt "short text export"
 msgid "  %1 (like %2, but more compact)"
 msgstr "  %1 (seperti %2, tetapi lebih kompak)"
 
-#: main.cpp:167
+#: main.cpp:165
 #, kde-format
 msgctxt "comma-separated values export"
 msgid "  %1 (Comma-Separated Values)"
 msgstr "  %1 (Nilai Dipisahkan Koma)"
 
-#: main.cpp:182
+#: main.cpp:178
 #, kde-format
 msgid "Sorry, To-dos are not working yet."
 msgstr "Maaf, Rencana belum bisa bekerja."
 
-#: main.cpp:188
+#: main.cpp:183
 #, kde-format
 msgid "Sorry, Journals are not working yet."
 msgstr "Maaf, Jurnal belum bisa bekerja."
 
-#: main.cpp:214
+#: main.cpp:205
 #, kde-format
 msgid "Invalid Export Type Specified: %1"
 msgstr "Tipe Ekspor Tertentu Tidak Valid: %1"
 
-#: main.cpp:373
+#: main.cpp:315
 #, kde-format
 msgid "Invalid Start Date Specified: %1"
 msgstr "Tanggal Mulai Tertentu Tidak Valid: %1"
 
-#: main.cpp:398
+#: main.cpp:332
 #, kde-format
 msgid "Invalid Start Time Specified: %1"
 msgstr "Waktu Mulai Tertentu Tidak Valid: %1"
 
-#: main.cpp:423
+#: main.cpp:347
 #, kde-format
 msgid "Invalid End Date Specified: %1"
 msgstr "Tanggal Akhir Tertentu Tidak Valid: %1"
 
-#: main.cpp:443
+#: main.cpp:360
 #, kde-format
 msgid "Invalid Date Count Specified: %1"
 msgstr "Hitungan Tanggal Tertentu Tidak Valid: %1"
 
-#: main.cpp:471
+#: main.cpp:380
 #, kde-format
 msgid "Invalid End Time Specified: %1"
 msgstr "Waktu Akhir Tertentu Tidak Valid: %1"
 
-#: main.cpp:664
+#: main.cpp:522
 #, kde-format
 msgid ""
 "Only 1 operation mode (view, add, change, delete, create) permitted at any "
@@ -546,52 +546,52 @@ msgstr ""
 "Hanya 1 mode operasi (tampilan, tambah, ubah, hapus, buat) yang diizinkan "
 "pada satu waktu"
 
-#: main.cpp:675
+#: main.cpp:533
 #, kde-format
 msgid "Ending Date/Time occurs before the Starting Date/Time"
 msgstr "Tanggal/Waktu Berakhir terjadi sebelum Tanggal/Waktu Mulai"
 
-#: main.cpp:694
+#: main.cpp:552
 #, kde-format
 msgid "Calendar %1 successfully imported"
 msgstr "Kalender %1 berhasil diimpor"
 
-#: main.cpp:697
+#: main.cpp:555
 #, kde-format
 msgid "Unable to import calendar: %1"
 msgstr "Tidak dapat mengimpor kalender: %1"
 
-#: main.cpp:708
+#: main.cpp:564
 #, kde-format
 msgid "Attempting to insert an event that already exists"
 msgstr "Mencoba menyisipkan acara yang sudah ada"
 
-#: main.cpp:718 main.cpp:738
+#: main.cpp:572 main.cpp:588
 #, kde-format
 msgid "Missing event UID: use --uid command line option"
 msgstr "UID acara hilang: gunakan opsi baris perintah --uid"
 
-#: main.cpp:726
+#: main.cpp:580
 #, kde-format
 msgid "No such event UID: change event failed"
 msgstr "Tidak adanya UID acara: gagal mengubah acara"
 
-#: main.cpp:746
+#: main.cpp:596
 #, kde-format
 msgid "No such event UID: delete event failed"
 msgstr "Tidak adanya UID acara: Gagal menghapus acara"
 
-#: main.cpp:757
+#: main.cpp:603
 #, kde-format
 msgid "Cannot open specified export file: %1"
 msgstr "Tidak bisa membuka file ekspor tertentu: %1"
 
-#: main.cpp:767
+#: main.cpp:610
 #, kde-format
 msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Tidak bisa membuat sumberdaya Akonadi dari file: %1"
 
-#: main.cpp:770
+#: main.cpp:613
 #, fuzzy, kde-format
 #| msgid "Calendar %1 successfully imported"
 msgid "Calendar %1 successfully created"
