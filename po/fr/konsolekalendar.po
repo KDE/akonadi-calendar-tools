@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-31 00:44+0000\n"
-"PO-Revision-Date: 2026-05-29 14:12+0200\n"
+"PO-Revision-Date: 2026-05-30 08:03+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -56,27 +56,28 @@ msgid "(Read only)"
 msgstr "(Lecture seule)"
 
 #: konsolekalendar.cpp:110 konsolekalendar.cpp:129
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "Impossible de créer l'agenda : %1"
+msgstr "Impossible de créer l'agenda %1 : %2"
 
 #: konsolekalendar.cpp:111
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "Assurez-vous que le serveur « akonadiserver » fonctionne correctement."
 
 #: konsolekalendar.cpp:119
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr "Impossible de créer l'agenda : %1"
+msgstr ""
+"Impossible de créer l'agenda %1 : échec de la commande « setDisplayName » de "
+"D-Bus : %2"
 
 #: konsolekalendar.cpp:124
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
-msgstr "Impossible de créer l'agenda : %1"
+msgstr ""
+"Impossible de créer l'agenda %1 : échec de l'appel à « setPath » de D-Bus : "
+"%2"
 
 #: konsolekalendar.cpp:143
 #, kde-format
