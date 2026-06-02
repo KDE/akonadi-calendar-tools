@@ -8,41 +8,42 @@ msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-31 00:44+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-05-28 16:53-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #: konsolekalendar.cpp:78
 #, kde-format
 msgid "There are no calendars available."
-msgstr ""
+msgstr "ئىشلەتكىلى بولىدىغان يىلنامە يوق."
 
 #: konsolekalendar.cpp:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(Read only)"
 msgctxt "calendar is read-only"
 msgid "(Read only)"
-msgstr ""
+msgstr "(ئوقۇشقىلا)"
 
 #: konsolekalendar.cpp:110 konsolekalendar.cpp:129
-#, fuzzy, kde-format
-#| msgid "Create Calendar &lt;Dry Run&gt;: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "Create Calendar &lt;Dry Run&gt;: %1"
+msgstr ""
 
 #: konsolekalendar.cpp:111
 #, kde-format
@@ -61,15 +62,15 @@ msgstr ""
 
 #: konsolekalendar.cpp:143
 #, fuzzy, kde-format
-#| msgid "Create Calendar &lt;Dry Run&gt;: %1"
+#| msgid "Create Calendar <Dry Run>: %1"
 msgid "Dry Run: Create Calendar: %1"
-msgstr "Create Calendar &lt;Dry Run&gt;: %1"
+msgstr "يىلنامە قۇر <سىناق ئىجرا قىل>: %1"
 
 #: konsolekalendar.cpp:146
 #, fuzzy, kde-format
-#| msgid "Create Calendar &lt;Dry Run&gt;: %1"
+#| msgid "Create Calendar <Dry Run>: %1"
 msgid "Create Calendar: %1"
-msgstr "Create Calendar &lt;Dry Run&gt;: %1"
+msgstr "يىلنامە قۇر <سىناق ئىجرا قىل>: %1"
 
 #: konsolekalendar.cpp:164
 #, kde-format
@@ -78,30 +79,30 @@ msgstr ""
 
 #: konsolekalendar.cpp:178
 #, fuzzy, kde-format
-#| msgid "Events:"
+#| msgid "View Event <Verbose>:"
 msgid "View Event:"
-msgstr "ھادىسە:"
+msgstr "پائالىيەتنى كۆرسەت <تەپسىلىي>:"
 
 #: konsolekalendar.cpp:314 konsolekalendaradd.cpp:166
 #: konsolekalendarchange.cpp:110 konsolekalendarchange.cpp:126
 #: konsolekalendardelete.cpp:75
 #, kde-format
 msgid "  What:  %1"
-msgstr ""
+msgstr "  نېمە: %1"
 
 #: konsolekalendar.cpp:316 konsolekalendaradd.cpp:168
 #: konsolekalendarchange.cpp:113 konsolekalendarchange.cpp:128
 #: konsolekalendardelete.cpp:78
 #, kde-format
 msgid "  Begin: %1"
-msgstr ""
+msgstr "  باشلىنىش: %1"
 
 #: konsolekalendar.cpp:318 konsolekalendaradd.cpp:170
 #: konsolekalendarchange.cpp:115 konsolekalendarchange.cpp:130
 #: konsolekalendardelete.cpp:80
 #, kde-format
 msgid "  End:   %1"
-msgstr ""
+msgstr "  ئاخىرلىشىش: %1"
 
 #: konsolekalendar.cpp:321 konsolekalendaradd.cpp:173
 #, kde-format
@@ -225,7 +226,7 @@ msgstr "چېسلا:"
 #: konsolekalendarexports.cpp:73
 #, kde-format
 msgid "Summary:"
-msgstr "ئۈزۈندى:"
+msgstr "ئۈزۈندە:"
 
 #: konsolekalendarexports.cpp:77
 #, kde-format
@@ -270,12 +271,12 @@ msgstr "،"
 #: konsolekalendarexports.cpp:177
 #, kde-format
 msgid "\""
-msgstr "\""
+msgstr ""
 
 #: main.cpp:57
 #, kde-format
 msgid "KonsoleKalendar"
-msgstr ""
+msgstr "KonsoleKalendar"
 
 #: main.cpp:59
 #, kde-format
@@ -291,7 +292,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
-msgstr ""
+msgstr "Laurent Montel"
 
 #: main.cpp:63
 #, kde-format
@@ -299,8 +300,7 @@ msgid "Bug fixing"
 msgstr ""
 
 #: main.cpp:64
-#, fuzzy, kde-format
-#| msgid "Allen Winter"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Allen Winter"
 msgstr "Allen Winter"
@@ -308,7 +308,7 @@ msgstr "Allen Winter"
 #: main.cpp:64
 #, kde-format
 msgid "Maintainer"
-msgstr "مەسئۇل كىشى"
+msgstr "ئاسرىغۇچى"
 
 #: main.cpp:65
 #, kde-format
@@ -319,7 +319,7 @@ msgstr ""
 #: main.cpp:65
 #, kde-format
 msgid "Author"
-msgstr "ئاپتور"
+msgstr "يازغۇچى"
 
 #: main.cpp:71
 #, kde-format
@@ -591,10 +591,11 @@ msgstr ""
 msgid "Calendar %1 successfully created"
 msgstr ""
 
-#, fuzzy
-#~| msgid "Create Calendar &lt;Dry Run&gt;: %1"
 #~ msgid "Create Calendar <Verbose>: %1"
-#~ msgstr "Create Calendar &lt;Dry Run&gt;: %1"
+#~ msgstr "يىلنامە قۇر <تەپسىلىي>: %1"
+
+#~ msgid "View Events <Dry Run>:"
+#~ msgstr "پائالىيەتنى كۆرسەت <سىناق ئىجرا قىل>:"
 
 #~ msgctxt "HTML export"
 #~ msgid "  %1"
