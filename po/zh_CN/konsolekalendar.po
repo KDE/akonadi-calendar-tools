@@ -44,22 +44,22 @@ msgstr "(只读)"
 #: konsolekalendar.cpp:110 konsolekalendar.cpp:129
 #, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr ""
+msgstr "无法创建日历 %1：%2"
 
 #: konsolekalendar.cpp:111
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "请确保 akonadiserver 正常运行。"
 
 #: konsolekalendar.cpp:119
 #, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr ""
+msgstr "无法创建日历 %1：DBus setDisplayName 失败：%2"
 
 #: konsolekalendar.cpp:124
 #, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
-msgstr ""
+msgstr "无法创建日历 %1：DBus setPath 调用失败：%2"
 
 #: konsolekalendar.cpp:143
 #, kde-format
@@ -583,4 +583,4 @@ msgstr "无法从文件创建 Akonadi 资源： %1"
 #: main.cpp:613
 #, kde-format
 msgid "Calendar %1 successfully created"
-msgstr ""
+msgstr "日历 %1 成功创建"
