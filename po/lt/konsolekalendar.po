@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-31 00:44+0000\n"
-"PO-Revision-Date: 2024-05-23 23:55+0300\n"
+"PO-Revision-Date: 2026-06-04 22:57+0300\n"
 "Last-Translator: Remigijus Jarmalavičius\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,55 +34,52 @@ msgid "There are no calendars available."
 msgstr "Nėra prieinamų kalendorių."
 
 #: konsolekalendar.cpp:93
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Tik skaitymui)"
 
 #: konsolekalendar.cpp:110 konsolekalendar.cpp:129
-#, fuzzy, kde-format
-#| msgid "Unable to import calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "Nepavyko importuoti kalendoriaus: %1"
+msgstr "Nepavyko sukurti kalendoriaus %1: %2"
 
 #: konsolekalendar.cpp:111
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "Įsitikinkite, kad akonadiserver veikia tinkamai."
 
 #: konsolekalendar.cpp:119
 #, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
 msgstr ""
+"Nepavyko sukurti kalendoriaus %1: DBus setDisplayName patyrė nesėkmę: %2"
 
 #: konsolekalendar.cpp:124
 #, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
 msgstr ""
+"Nepavyko sukurti kalendoriaus %1: DBus setPath iškvieta patyrė nesėkmę: %2"
 
 #: konsolekalendar.cpp:143
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "Sukurti kalendorių <Dry Run>: %1"
+msgstr "Bandomasis paleidimas: Sukurti kalendorių: %1"
 
 #: konsolekalendar.cpp:146
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Create Calendar: %1"
-msgstr "Sukurti kalendorių <Dry Run>: %1"
+msgstr "Sukurti kalendorių: %1"
 
 #: konsolekalendar.cpp:164
 #, kde-format
 msgid "Dry Run: View Events:"
-msgstr ""
+msgstr "Bandomasis paleidimas: Rodyti įvykius:"
 
 #: konsolekalendar.cpp:178
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
+#, kde-format
 msgid "View Event:"
-msgstr "Rodyti įvykį <Verbose>:"
+msgstr "Rodyti įvykį:"
 
 #: konsolekalendar.cpp:314 konsolekalendaradd.cpp:166
 #: konsolekalendarchange.cpp:110 konsolekalendarchange.cpp:126
@@ -127,13 +124,12 @@ msgstr "  Vieta:  %1"
 #: konsolekalendaradd.cpp:59
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Bandomasis paleidimas: Įterpti įvykį:"
 
 #: konsolekalendaradd.cpp:63
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "Įterpti įvykį <Dry Run>:"
+msgstr "Įterpti įvykį:"
 
 #: konsolekalendaradd.cpp:91 konsolekalendaradd.cpp:128
 #, kde-format
@@ -151,38 +147,34 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "Nesėkmė: „%1“ neįterptas"
 
 #: konsolekalendaradd.cpp:142
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr "Įvykio įterpimas praleistas, nes UID „%1“ jau yra žinomas. <Verbose>"
+msgstr "Įvykio įterpimas praleistas, nes UID „%1“ jau yra žinomas."
 
 #: konsolekalendaradd.cpp:149
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "Pridėti įvykį su UID „%1“. <Verbose>"
+msgstr "Pridėti įvykį su UID „%1“."
 
 #: konsolekalendarchange.cpp:47
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "Bandomasis paleidimas: Keisti įvykį:"
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Bandomasis paleidimas: Iki įvykio:"
 
 #: konsolekalendarchange.cpp:54
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "Keisti įvykį <Dry Run>:"
+msgstr "Keisti įvykį:"
 
 #: konsolekalendarchange.cpp:57
-#, fuzzy, kde-format
-#| msgid "Events:"
+#, kde-format
 msgid "To Event:"
-msgstr "Įvykiai:"
+msgstr "Iki įvykio:"
 
 #: konsolekalendarchange.cpp:96
 #, kde-format
@@ -203,13 +195,12 @@ msgstr "  UID:   %1"
 #: konsolekalendardelete.cpp:45
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Bandomasis paleidimas: Ištrinti įvykį:"
 
 #: konsolekalendardelete.cpp:49
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "Ištrinti įvykį <Dry Run>:"
+msgstr "Ištrinti įvykį:"
 
 #: konsolekalendardelete.cpp:61
 #, kde-format
@@ -593,10 +584,9 @@ msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Nepavyksta sukurti Akonadi ištekliaus iš failo: %1"
 
 #: main.cpp:613
-#, fuzzy, kde-format
-#| msgid "Calendar %1 successfully imported"
+#, kde-format
 msgid "Calendar %1 successfully created"
-msgstr "Kalendorius %1 sėkmingai importuotas"
+msgstr "Kalendorius %1 sėkmingai sukurtas"
 
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "Sukurti kalendorių <Verbose>: %1"
