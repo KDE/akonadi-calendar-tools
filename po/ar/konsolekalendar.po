@@ -5,13 +5,13 @@
 # Munzir Taha <munzir@kacst.edu.sa>, 2004.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
-# SPDX-FileCopyrightText: 2022, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-31 00:44+0000\n"
-"PO-Revision-Date: 2025-01-07 18:25+0400\n"
+"PO-Revision-Date: 2026-06-05 13:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -38,54 +38,50 @@ msgid "There are no calendars available."
 msgstr "لا تقاويم متوفّرة."
 
 #: konsolekalendar.cpp:93
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(للقراءة فقط)"
 
 #: konsolekalendar.cpp:110 konsolekalendar.cpp:129
-#, fuzzy, kde-format
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "عاجز إلى إ_نشئ رزنامة 1"
+msgstr "تعذّر إنشاء التقويم %1: %2"
 
 #: konsolekalendar.cpp:111
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "تأكد من أن خادم أكونادي يعمل بشكل صحيح."
 
 #: konsolekalendar.cpp:119
-#, fuzzy, kde-format
+#, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr "عاجز إلى إ_نشئ رزنامة 1"
+msgstr "تعذّر إنشاء التقويم %1: فشل DBus في setDisplayName: %2"
 
 #: konsolekalendar.cpp:124
-#, fuzzy, kde-format
+#, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
-msgstr "عاجز إلى إ_نشئ رزنامة 1"
+msgstr "تعذّر إنشاء التقويم %1: فشلت استدعاء DBus setPath: %2"
 
 #: konsolekalendar.cpp:143
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "أنشئ تقويم <التشغيل الجاف>: %1"
+msgstr "تشغيل تجريبي: أنشئ تقويم: %1"
 
 #: konsolekalendar.cpp:146
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Create Calendar: %1"
-msgstr "أنشئ تقويم <التشغيل الجاف>: %1"
+msgstr "أنشئ تقويم: %1"
 
 #: konsolekalendar.cpp:164
 #, kde-format
 msgid "Dry Run: View Events:"
-msgstr ""
+msgstr "تشغيل تجريبي: عرض الأحداث:"
 
 #: konsolekalendar.cpp:178
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
+#, kde-format
 msgid "View Event:"
-msgstr "اعرض الحدث <مفصل>:"
+msgstr "اعرض الحدث:"
 
 #: konsolekalendar.cpp:314 konsolekalendaradd.cpp:166
 #: konsolekalendarchange.cpp:110 konsolekalendarchange.cpp:126
@@ -130,13 +126,12 @@ msgstr "  المكان:  %1"
 #: konsolekalendaradd.cpp:59
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "تشغيل تجريبي: إدراج حدث"
 
 #: konsolekalendaradd.cpp:63
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "أدرج حدث <التشغيل الجاف>:"
+msgstr "أدرج حدث:"
 
 #: konsolekalendaradd.cpp:91 konsolekalendaradd.cpp:128
 #, kde-format
@@ -154,38 +149,34 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "فشل: لم يُدرج ”%1“"
 
 #: konsolekalendaradd.cpp:142
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr "تُخطي إدارج حدث، لأن UID \"%1\" معروف فعلًا. <مفصل>"
+msgstr "تُخطي إدراج حدث، لأن UID \"%1\" معروف فعلًا."
 
 #: konsolekalendaradd.cpp:149
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "أضف حدث بالمعرف الفريد \"%1\". <مفصل>"
+msgstr "أضف حدث بالمعرف الفريد \"%1\"."
 
 #: konsolekalendarchange.cpp:47
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "تشغيل تجريبي: تغيير الحدث"
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "تشغيل تجريبي: إلى الحدث"
 
 #: konsolekalendarchange.cpp:54
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "غيّر حدث <التشغيل الجاف>:"
+msgstr "غيّر حدث:"
 
 #: konsolekalendarchange.cpp:57
-#, fuzzy, kde-format
-#| msgid "Events:"
+#, kde-format
 msgid "To Event:"
-msgstr "الأحداث:"
+msgstr "إلى الحدث:"
 
 #: konsolekalendarchange.cpp:96
 #, kde-format
@@ -206,13 +197,12 @@ msgstr "  المعرّف الفريد:   %1"
 #: konsolekalendardelete.cpp:45
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "تشغيل تجريبي: حذف حدث"
 
 #: konsolekalendardelete.cpp:49
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "احذف حدث <التشغيل الجاف>:"
+msgstr "احذف حدث:"
 
 #: konsolekalendardelete.cpp:61
 #, kde-format
@@ -594,9 +584,9 @@ msgid "Cannot create Akonadi resource from file: %1"
 msgstr "لا يمكن إنشاء مورد أكونادي من الملف: %1"
 
 #: main.cpp:613
-#, fuzzy, kde-format
+#, kde-format
 msgid "Calendar %1 successfully created"
-msgstr "التقويم"
+msgstr "أُنشئ التقويم %1 بنجاح"
 
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "أنشئ تقويم <مفصل>: %1"
