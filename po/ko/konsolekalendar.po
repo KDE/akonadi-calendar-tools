@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2024, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-29 02:42+0000\n"
-"PO-Revision-Date: 2024-08-19 21:43+0200\n"
+"PO-Revision-Date: 2026-06-06 11:48+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,7 +30,7 @@ msgstr "kde@peremen.name"
 #: konsolekalendar.cpp:80
 #, kde-format
 msgid "There are no calendars available."
-msgstr "사용 가능한 달력이 없습니다."
+msgstr "사용 가능한 캘린더가 없습니다."
 
 #: konsolekalendar.cpp:95
 #, kde-format
@@ -40,22 +40,22 @@ msgstr "(읽기 전용)"
 #: konsolekalendar.cpp:142
 #, kde-format
 msgid "Create Calendar <Dry Run>: %1"
-msgstr "달력 생성 <예비 실행>: %1"
+msgstr "캘린더 생성 <예비 실행>: %1"
 
 #: konsolekalendar.cpp:148
 #, kde-format
 msgid "Create Calendar <Verbose>: %1"
-msgstr "달력 생성 <자세히>: %1"
+msgstr "캘린더 생성 <자세히>: %1"
 
 #: konsolekalendar.cpp:167
 #, kde-format
 msgid "View Events <Dry Run>:"
-msgstr "일정 보기 <예비 실행>:"
+msgstr "이벤트 보기 <예비 실행>:"
 
 #: konsolekalendar.cpp:189
 #, kde-format
 msgid "View Event <Verbose>:"
-msgstr "일정 보기 <자세히>:"
+msgstr "이벤트 보기 <자세히>:"
 
 #: konsolekalendar.cpp:358 konsolekalendaradd.cpp:175
 #: konsolekalendarchange.cpp:116 konsolekalendarchange.cpp:132
@@ -100,17 +100,17 @@ msgstr "  위치: %1"
 #: konsolekalendaradd.cpp:61
 #, kde-format
 msgid "Insert Event <Dry Run>:"
-msgstr "일정 삽입 <예비 실행>:"
+msgstr "이벤트 삽입 <예비 실행>:"
 
 #: konsolekalendaradd.cpp:65
 #, kde-format
 msgid "Insert Event <Verbose>:"
-msgstr "일정 삽입 <자세히>:"
+msgstr "이벤트 삽입 <자세히>:"
 
 #: konsolekalendaradd.cpp:93 konsolekalendaradd.cpp:133
 #, kde-format
 msgid "Calendar is invalid. Please specify one with --calendar"
-msgstr "달력이 잘못되었습니다. --calendar 옵션으로 하나를 지정하십시오"
+msgstr "캘린더가 잘못되었습니다. --calendar 옵션으로 하나를 지정하십시오"
 
 #: konsolekalendaradd.cpp:104
 #, kde-format
@@ -126,27 +126,27 @@ msgstr "실패: \"%1\" 삽입되지 않음"
 #, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
 msgstr ""
-"UID \"%1\"이(가) 이미 알려져 있으므로 이벤트 삽입을 건너뜁니다. <Verbose>"
+"UID \"%1\"이(가) 이미 알려져 있으므로 이벤트 삽입을 건너뜁니다. <자세히>"
 
 #: konsolekalendaradd.cpp:154
 #, kde-format
 msgid "Add Event with UID \"%1\". <Verbose>"
-msgstr "UID가 \"%1\"인 이벤트를 추가합니다.<Verbose>"
+msgstr "UID가 \"%1\"인 이벤트를 추가합니다. <자세히>"
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Change Event <Dry Run>:"
-msgstr "일정 변경 <예비 실행>:"
+msgstr "이벤트 변경 <예비 실행>:"
 
 #: konsolekalendarchange.cpp:53 konsolekalendarchange.cpp:62
 #, kde-format
 msgid "To Event <Dry Run>:"
-msgstr "일정으로 <예비 실행>:"
+msgstr "대상 이벤트 <예비 실행>:"
 
 #: konsolekalendarchange.cpp:59
 #, kde-format
 msgid "Change Event <Verbose>:"
-msgstr "일정 변경 <자세히>:"
+msgstr "이벤트 변경 <자세히>:"
 
 #: konsolekalendarchange.cpp:101
 #, kde-format
@@ -167,12 +167,12 @@ msgstr "  UID: %1"
 #: konsolekalendardelete.cpp:48
 #, kde-format
 msgid "Delete Event <Dry Run>:"
-msgstr "일정 삭제 <예비 실행>:"
+msgstr "이벤트 삭제 <예비 실행>:"
 
 #: konsolekalendardelete.cpp:54
 #, kde-format
 msgid "Delete Event <Verbose>:"
-msgstr "일정 삭제 <자세히>:"
+msgstr "이벤트 삭제 <자세히>:"
 
 #: konsolekalendardelete.cpp:67
 #, kde-format
