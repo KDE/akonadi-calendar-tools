@@ -3,13 +3,13 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006, 2008, 2009.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007, 2008, 2013, 2015.
 # pan93412 <pan93412@gmail.com>, 2018.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023-2024, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-31 00:44+0000\n"
-"PO-Revision-Date: 2024-05-18 16:43+0900\n"
+"PO-Revision-Date: 2026-06-07 16:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 26.07.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -36,55 +36,50 @@ msgid "There are no calendars available."
 msgstr "沒有可用的行事曆。"
 
 #: konsolekalendar.cpp:93
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(唯讀)"
 
 #: konsolekalendar.cpp:110 konsolekalendar.cpp:129
-#, fuzzy, kde-format
-#| msgid "Unable to import calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "無法匯出行事曆：%1"
+msgstr "無法建立行事曆 %1：%2"
 
 #: konsolekalendar.cpp:111
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "請確認 akonadiserver 正確執行中。"
 
 #: konsolekalendar.cpp:119
 #, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr ""
+msgstr "無法建立行事曆 %1：DBus setDisplayName 失敗：%2"
 
 #: konsolekalendar.cpp:124
 #, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
-msgstr ""
+msgstr "無法建立行事曆 %1：DBus setPath 呼叫失敗：%2"
 
 #: konsolekalendar.cpp:143
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "建立行事曆 <試運行>：%1"
+msgstr "試運行：建立行事曆：%1"
 
 #: konsolekalendar.cpp:146
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Create Calendar: %1"
-msgstr "建立行事曆 <試運行>：%1"
+msgstr "建立行事曆：%1"
 
 #: konsolekalendar.cpp:164
 #, kde-format
 msgid "Dry Run: View Events:"
-msgstr ""
+msgstr "試運行：檢視事件："
 
 #: konsolekalendar.cpp:178
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
+#, kde-format
 msgid "View Event:"
-msgstr "檢視事件 <詳細>："
+msgstr "檢視事件："
 
 #: konsolekalendar.cpp:314 konsolekalendaradd.cpp:166
 #: konsolekalendarchange.cpp:110 konsolekalendarchange.cpp:126
@@ -129,13 +124,12 @@ msgstr "  位置：%1"
 #: konsolekalendaradd.cpp:59
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "試運行：插入事件："
 
 #: konsolekalendaradd.cpp:63
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "插入事件 <試運行>："
+msgstr "插入事件："
 
 #: konsolekalendaradd.cpp:91 konsolekalendaradd.cpp:128
 #, kde-format
@@ -153,38 +147,34 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "失敗：%1 未插入"
 
 #: konsolekalendaradd.cpp:142
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr "已跳過插入活動，因為識別碼「%1」已經存在。<詳細>"
+msgstr "已跳過插入事件，因為 UID 「%1」已經存在。"
 
 #: konsolekalendaradd.cpp:149
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "加入識別碼為「%1」的活動。<詳細>"
+msgstr "加入 UID 為「%1」的事件。"
 
 #: konsolekalendarchange.cpp:47
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "試運行：變更事件："
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "試運行：到事件："
 
 #: konsolekalendarchange.cpp:54
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "變更事件 <試運行>："
+msgstr "變更事件："
 
 #: konsolekalendarchange.cpp:57
-#, fuzzy, kde-format
-#| msgid "Events:"
+#, kde-format
 msgid "To Event:"
-msgstr "事件："
+msgstr "到事件："
 
 #: konsolekalendarchange.cpp:96
 #, kde-format
@@ -205,13 +195,12 @@ msgstr "UID：%1"
 #: konsolekalendardelete.cpp:45
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "試運行：刪除事件："
 
 #: konsolekalendardelete.cpp:49
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "刪除事件 <試運行>："
+msgstr "刪除事件："
 
 #: konsolekalendardelete.cpp:61
 #, kde-format
@@ -592,10 +581,9 @@ msgid "Cannot create Akonadi resource from file: %1"
 msgstr "無法從檔案建立 Akonadi 資源：%1"
 
 #: main.cpp:613
-#, fuzzy, kde-format
-#| msgid "Calendar %1 successfully imported"
+#, kde-format
 msgid "Calendar %1 successfully created"
-msgstr "已成功匯入行事曆 %1"
+msgstr "已成功建立行事曆 %1"
 
 #~ msgid "Create Calendar <Verbose>: %1"
 #~ msgstr "建立行事曆 <詳細>：%1"

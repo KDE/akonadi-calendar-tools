@@ -60,7 +60,7 @@
 </othercredit>
 <othercredit role="translator"
 ><firstname
->Deutsches KDE-Übersetzungsteam</firstname
+>Deutsches KDE-Übersetzerteam</firstname
 ><surname
 ></surname
 ><contrib
@@ -807,6 +807,40 @@ im großen Konferenzraum.,&konsolekalendar;-1924621834.134
 
 </sect2>
 
+<sect2 id="html-format">
+<title
+>&HTML;-Format</title>
+
+<para
+>Der &HTML;-Export erzeugt eine gültige &HTML; -Datei zur Veröffentlichung im <acronym
+>WWW</acronym
+>. Das Format ist nicht geeignet zur Verarbeitung durch Skripte aber zur einfachen Veröffentlichung.</para>
+<!--FIXME
+exports only the template without any incidence data
+<para
+><emphasis
+>TODO:</emphasis
+> Insert screenshot here</para>
+-->
+</sect2>
+
+<sect2 id="html-month-format">
+<title
+><acronym
+> HTMLmonth</acronym
+>-Format</title>
+
+<para
+>Dieses Format produziert eine &HTML;-Datei, die alle Termine im angegebenen Zeitraum enthält. Das Format ist nicht geeignet zur Verarbeitung durch Skripte aber zur einfachen Veröffentlichung.</para>
+<!--FIXME
+exports only the template without any incidence data
+<para
+><emphasis
+>TODO:</emphasis
+> Insert screenshot here</para>
+-->
+</sect2>
+
 </sect1>
 
 <sect1 id="importing">
@@ -1416,7 +1450,7 @@ im großen Konferenzraum.,&konsolekalendar;-1924621834.134
 </itemizedlist>
 
 <para
->Übersetzung Deutsches KDE-Übersetzungsteam<email
+>Übersetzung Deutsches KDE-Übersetzerteam<email
 >kde-i18n-de@kde.org</email
 ></para
 > &underFDL; &underGPL; </chapter>
