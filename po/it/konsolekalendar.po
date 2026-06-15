@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-29 02:42+0000\n"
-"PO-Revision-Date: 2024-05-21 15:53+0200\n"
+"PO-Revision-Date: 2026-05-30 23:05+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -525,7 +525,7 @@ msgstr "L'orario/data di fine è precedente all'orario/data di inizio"
 #: main.cpp:694
 #, kde-format
 msgid "Calendar %1 successfully imported"
-msgstr "Calendario %1 importato con successo"
+msgstr "Calendario %1 importato correttamente"
 
 #: main.cpp:697
 #, kde-format
