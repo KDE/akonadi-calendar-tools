@@ -11,21 +11,21 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2010, 2011, 2015.
 # Julia Dronova <juliette.tux@gmail.com>, 2012.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020.
+# SPDX-FileCopyrightText: 2019-2020, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 # SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-31 00:44+0000\n"
-"PO-Revision-Date: 2024-11-12 15:06+0300\n"
-"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
-"Language-Team: Basealt Translation Team\n"
+"PO-Revision-Date: 2026-06-24 23:56+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 26.04.2\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -37,14 +37,14 @@ msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 "Андрей Черепанов,Леонид Кантер,Григорий Мохин,Николай Шафоростов,Олеся "
-"Герасименко"
+"Герасименко,Александр Яворский"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "skull@kde.ru,leon@asplinux.ru,mok@kde.ru,shafff@ukr.net,translation-"
-"team@basealt.ru"
+"team@basealt.ru,kekcuha@gmail.com"
 
 #: konsolekalendar.cpp:78
 #, kde-format
@@ -52,57 +52,51 @@ msgid "There are no calendars available."
 msgstr "Календари не найдены."
 
 #: konsolekalendar.cpp:93
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Только для чтения)"
 
 #: konsolekalendar.cpp:110 konsolekalendar.cpp:129
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "Невозможно создать календарь: %1"
+msgstr "Невозможно создать календарь %1: %2"
 
 #: konsolekalendar.cpp:111
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "Убедитесь, что сервер Akonadi работает правильно."
 
 #: konsolekalendar.cpp:119
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr "Невозможно создать календарь: %1"
+msgstr "Невозможно создать календарь %1: ошибка DBus setDisplayName: %2"
 
 #: konsolekalendar.cpp:124
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
-msgstr "Невозможно создать календарь: %1"
+msgstr ""
+"Невозможно создать календарь %1: вызов DBus setPath завершился неудачей: %2"
 
 #: konsolekalendar.cpp:143
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "Создать календарь <имитация>: %1"
+msgstr "Пробный запуск: Создать календарь: %1"
 
 #: konsolekalendar.cpp:146
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Create Calendar: %1"
-msgstr "Создать календарь <имитация>: %1"
+msgstr "Создать календарь: %1"
 
 #: konsolekalendar.cpp:164
 #, kde-format
 msgid "Dry Run: View Events:"
-msgstr ""
+msgstr "Пробный запуск: просмотр событий"
 
 #: konsolekalendar.cpp:178
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
+#, kde-format
 msgid "View Event:"
-msgstr "Просмотр календаря <подробный вывод>:"
+msgstr "Просмотр события:"
 
 #: konsolekalendar.cpp:314 konsolekalendaradd.cpp:166
 #: konsolekalendarchange.cpp:110 konsolekalendarchange.cpp:126
@@ -147,13 +141,12 @@ msgstr "  Место проведения: %1"
 #: konsolekalendaradd.cpp:59
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Пробный запуск: добавление события"
 
 #: konsolekalendaradd.cpp:63
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "Добавление события <имитация>:"
+msgstr "Добавление события:"
 
 #: konsolekalendaradd.cpp:91 konsolekalendaradd.cpp:128
 #, kde-format
@@ -173,38 +166,35 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "Ошибка: «%1» не вставлено"
 
 #: konsolekalendaradd.cpp:142
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr "Событие не добавлено, т.к. UID «%1» уже используется.<подробный вывод>"
+msgstr "Событие не добавлено, т.к. UID «%1» уже используется."
 
 #: konsolekalendaradd.cpp:149
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "Добавить событие с UID «%1».<подробный вывод>"
+msgstr "Добавить событие с UID «%1»."
 
 #: konsolekalendarchange.cpp:47
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "Пробный запуск: изменение события:"
 
 #: konsolekalendarchange.cpp:50
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Пробный запуск: к событию:"
 
 #: konsolekalendarchange.cpp:54
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "Изменение события <имитация>:"
+msgstr "Изменение события:"
 
 #: konsolekalendarchange.cpp:57
 #, fuzzy, kde-format
 #| msgid "Events:"
 msgid "To Event:"
-msgstr "События:"
+msgstr "Конец события:"
 
 #: konsolekalendarchange.cpp:96
 #, kde-format
@@ -225,13 +215,12 @@ msgstr "  UID:   %1"
 #: konsolekalendardelete.cpp:45
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Пробный запуск удаления события:"
 
 #: konsolekalendardelete.cpp:49
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "Удаление события <имитация>:"
+msgstr "Удаление события:"
 
 #: konsolekalendardelete.cpp:61
 #, kde-format
