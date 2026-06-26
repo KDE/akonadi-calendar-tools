@@ -48,8 +48,10 @@ static void silenceStderr()
         // krazy:cond=syscalls since UNIX-only code
         // Disable stderr so we can actually read what's going on
         int const fd = ::open("/dev/null", O_WRONLY);
-        ::dup2(fd, 2);
-        ::close(fd);
+        if (fd >= 0) {
+            ::dup2(fd, 2);
+            ::close(fd);
+        }
         // krazy:endcond=syscalls
     }
 #endif
