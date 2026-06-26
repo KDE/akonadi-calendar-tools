@@ -429,7 +429,7 @@ void CalendarJanitor::sanityCheck7()
         for (int i = 1; i < existingIncidences.count(); ++i) {
             printFound(item);
             if (m_fixingEnabled) {
-                KCalendarCore::Incidence::Ptr existingIncidence = existingIncidences.at(i);
+                const KCalendarCore::Incidence::Ptr &existingIncidence = existingIncidences.at(i);
                 Akonadi::Item existingItem = m_incidenceToItem.value(existingIncidence);
                 Q_ASSERT(existingItem.isValid());
                 if (existingItem.isValid()) {
