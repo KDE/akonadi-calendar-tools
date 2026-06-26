@@ -30,8 +30,6 @@ KonsoleKalendarDelete::KonsoleKalendarDelete(KonsoleKalendarVariables *vars)
     m_variables = vars;
 }
 
-KonsoleKalendarDelete::~KonsoleKalendarDelete() = default;
-
 bool KonsoleKalendarDelete::deleteEvent()
 {
     bool status = false;

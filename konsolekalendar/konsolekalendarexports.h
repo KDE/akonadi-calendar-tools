@@ -38,7 +38,7 @@ public:
     /**
      * Destructor
      */
-    ~KonsoleKalendarExports();
+    ~KonsoleKalendarExports() = default;
 
     /**
      * Export the Event in Text Mode.

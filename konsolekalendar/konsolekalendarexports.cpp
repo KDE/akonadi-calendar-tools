@@ -35,8 +35,6 @@ KonsoleKalendarExports::KonsoleKalendarExports(KonsoleKalendarVariables *vars)
     m_firstEntry = true;
 }
 
-KonsoleKalendarExports::~KonsoleKalendarExports() = default;
-
 static QString cleanHtml(const QString &html)
 {
     return QTextDocumentFragment::fromHtml(html).toPlainText();

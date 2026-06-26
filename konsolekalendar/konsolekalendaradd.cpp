@@ -45,8 +45,6 @@ KonsoleKalendarAdd::KonsoleKalendarAdd(KonsoleKalendarVariables *vars)
     m_variables = vars;
 }
 
-KonsoleKalendarAdd::~KonsoleKalendarAdd() = default;
-
 /**
  * Adds event to Calendar
  */

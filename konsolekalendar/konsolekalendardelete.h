@@ -40,7 +40,7 @@ public:
     /**
      * Destructor
      */
-    ~KonsoleKalendarDelete();
+    ~KonsoleKalendarDelete() = default;
 
     /**
      * Delete the Event.

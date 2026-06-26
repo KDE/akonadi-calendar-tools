@@ -34,7 +34,7 @@ public:
     /**
      * Destructor
      */
-    ~KonsoleKalendarEpoch();
+    ~KonsoleKalendarEpoch() = default;
 
     /**
      * Converts epoch time to QDateTime format.

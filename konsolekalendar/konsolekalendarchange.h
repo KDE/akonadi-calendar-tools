@@ -38,7 +38,7 @@ public:
     /**
      * Destructor
      */
-    ~KonsoleKalendarChange();
+    ~KonsoleKalendarChange() = default;
 
     /**
      * Modify the Event.

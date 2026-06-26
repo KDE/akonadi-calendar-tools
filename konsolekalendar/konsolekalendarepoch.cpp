@@ -23,8 +23,6 @@ using namespace std;
 
 KonsoleKalendarEpoch::KonsoleKalendarEpoch() = default;
 
-KonsoleKalendarEpoch::~KonsoleKalendarEpoch() = default;
-
 // By "epoch" we mean the number of seconds since 00:00:00 UTC on January 1 1970
 
 // Function to convert an epoch value into a QDateTime

@@ -32,8 +32,6 @@ KonsoleKalendarChange::KonsoleKalendarChange(KonsoleKalendarVariables *vars)
     m_variables = vars;
 }
 
-KonsoleKalendarChange::~KonsoleKalendarChange() = default;
-
 bool KonsoleKalendarChange::changeEvent()
 {
     bool status = false;
