@@ -37,7 +37,7 @@ bool KonsoleKalendarDelete::deleteEvent()
     /*
      * Retrieve event on the basis of the unique string ID
      */
-    Event::Ptr event = m_variables->getCalendar()->event(m_variables->getUID());
+    Event::Ptr const event = m_variables->getCalendar()->event(m_variables->getUID());
     if (event) {
         if (m_variables->isDryRun()) {
             cout << i18n("Dry Run: Delete Event:").data() << '\n';
@@ -49,7 +49,7 @@ bool KonsoleKalendarDelete::deleteEvent()
             }
 
             QEventLoop loop;
-            Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
+            Akonadi::CalendarBase::Ptr const calendar = m_variables->getCalendar();
             QObject::connect(calendar.data(), &Akonadi::CalendarBase::deleteFinished, &loop, &QEventLoop::quit);
             calendar->deleteEvent(event);
             loop.exec();

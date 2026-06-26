@@ -189,7 +189,7 @@ void CalendarJanitor::processNextCollection()
     } else {
         m_incidenceMap.clear();
         for (const Akonadi::Item &item : std::as_const(m_itemsToProcess)) {
-            KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+            KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
             Q_ASSERT(incidence);
             m_incidenceMap.insert(incidence->instanceIdentifier(), incidence);
             m_incidenceToItem.insert(incidence, item);
@@ -211,7 +211,7 @@ void CalendarJanitor::runNextTest()
         return;
     }
 
-    int currentType = static_cast<int>(m_currentSanityCheck);
+    int const currentType = static_cast<int>(m_currentSanityCheck);
     m_currentSanityCheck = static_cast<Options::SanityCheck>(currentType + 1);
 
     switch (m_currentSanityCheck) {
@@ -255,7 +255,7 @@ void CalendarJanitor::sanityCheck1()
     beginTest(i18n("Checking for incidences with empty summary and description..."));
 
     for (const Akonadi::Item &item : std::as_const(m_itemsToProcess)) {
-        KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
         if (incidence->summary().isEmpty() && incidence->description().isEmpty() && incidence->attachments().isEmpty()) {
             printFound(item);
             deleteIncidence(item);
@@ -270,7 +270,7 @@ void CalendarJanitor::sanityCheck2()
     beginTest(i18n("Checking for incidences with empty UID..."));
 
     for (const Akonadi::Item &item : std::as_const(m_itemsToProcess)) {
-        KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
         if (incidence->uid().isEmpty()) {
             printFound(item);
             if (m_fixingEnabled) {
@@ -288,14 +288,14 @@ void CalendarJanitor::sanityCheck3()
 {
     beginTest(i18n("Checking for events with invalid DTSTART..."));
     for (const Akonadi::Item &item : std::as_const(m_itemsToProcess)) {
-        KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
-        KCalendarCore::Event::Ptr event = incidence.dynamicCast<KCalendarCore::Event>();
+        KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
+        KCalendarCore::Event::Ptr const event = incidence.dynamicCast<KCalendarCore::Event>();
         if (!event) {
             continue;
         }
 
-        QDateTime startDt = event->dtStart();
-        QDateTime endDt = event->dtEnd();
+        QDateTime const startDt = event->dtStart();
+        QDateTime const endDt = event->dtEnd();
 
         bool modify = false;
         if (!startDt.isValid() && endDt.isValid()) {
@@ -324,14 +324,14 @@ void CalendarJanitor::sanityCheck4()
 {
     beginTest(i18n("Checking for recurring to-dos with invalid DTSTART..."));
     for (const Akonadi::Item &item : std::as_const(m_itemsToProcess)) {
-        KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
-        KCalendarCore::Todo::Ptr todo = incidence.dynamicCast<KCalendarCore::Todo>();
+        KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
+        KCalendarCore::Todo::Ptr const todo = incidence.dynamicCast<KCalendarCore::Todo>();
         if (!todo) {
             continue;
         }
 
-        QDateTime startDt = todo->dtStart();
-        QDateTime dueDt = todo->dtDue();
+        QDateTime const startDt = todo->dtStart();
+        QDateTime const dueDt = todo->dtDue();
         bool modify = false;
         if (todo->recurs() && !startDt.isValid() && dueDt.isValid()) {
             modify = true;
@@ -360,7 +360,7 @@ void CalendarJanitor::sanityCheck5()
 {
     beginTest(i18n("Checking for journals with invalid DTSTART..."));
     for (const Akonadi::Item &item : std::as_const(m_itemsToProcess)) {
-        KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
         if (incidence->type() != KCalendarCore::Incidence::TypeJournal) {
             continue;
         }
@@ -382,7 +382,7 @@ void CalendarJanitor::sanityCheck6()
     beginTest(i18n("Checking for orphans...")); // Incidences without a parent
 
     for (const Akonadi::Item &item : std::as_const(m_itemsToProcess)) {
-        KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
         const QString parentUid = incidence->relatedTo();
         if (!parentUid.isEmpty() && !m_calendar->incidence(parentUid)) {
             printFound(item, i18n("The following incidences are children of nonexistent parents"));
@@ -402,7 +402,7 @@ void CalendarJanitor::sanityCheck7()
     beginTest(i18n("Checking for duplicate UIDs..."));
 
     for (const Akonadi::Item &item : std::as_const(m_itemsToProcess)) {
-        KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
         const QList<KCalendarCore::Incidence::Ptr> existingIncidences = m_incidenceMap.values(incidence->instanceIdentifier());
 
         if (existingIncidences.count() == 1) {
@@ -419,7 +419,7 @@ void CalendarJanitor::sanityCheck7()
     }
 
     for (const Akonadi::Item &item : std::as_const(m_itemsToProcess)) {
-        KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
         const QList<KCalendarCore::Incidence::Ptr> existingIncidences = m_incidenceMap.values(incidence->instanceIdentifier());
 
         if (existingIncidences.count() == 1) {
@@ -430,7 +430,7 @@ void CalendarJanitor::sanityCheck7()
             printFound(item);
             if (m_fixingEnabled) {
                 const KCalendarCore::Incidence::Ptr &existingIncidence = existingIncidences.at(i);
-                Akonadi::Item existingItem = m_incidenceToItem.value(existingIncidence);
+                Akonadi::Item const existingItem = m_incidenceToItem.value(existingIncidence);
                 Q_ASSERT(existingItem.isValid());
                 if (existingItem.isValid()) {
                     existingIncidence->recreate();
@@ -467,7 +467,7 @@ void CalendarJanitor::sanityCheck8()
     QHash<KCalendarCore::Incidence::IncidenceType, int> m_counts;
 
     for (const Akonadi::Item &item : std::as_const(m_itemsToProcess)) {
-        KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
         if (!incidence->attachments().isEmpty()) {
             const auto attachments = incidence->attachments();
             for (const KCalendarCore::Attachment &attachment : attachments) {
@@ -519,18 +519,18 @@ void CalendarJanitor::sanityCheck9()
 {
     beginTest(i18n("Checking for RECURRING-ID incidences with nonexistent master incidence..."));
     for (const Akonadi::Item &item : std::as_const(m_itemsToProcess)) {
-        KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
         if (incidence->recurs() && incidence->hasRecurrenceId() && !m_calendar->incidence(incidence->uid())) {
             printFound(item);
             if (m_fixingEnabled) {
                 bool modified = false;
 
-                QDateTime recId = incidence->recurrenceId();
-                QDateTime startDt = incidence->dtStart();
-                QDateTime endDt = incidence->dateTime(KCalendarCore::Incidence::RoleEnd);
+                QDateTime const recId = incidence->recurrenceId();
+                QDateTime const startDt = incidence->dtStart();
+                QDateTime const endDt = incidence->dateTime(KCalendarCore::Incidence::RoleEnd);
 
-                KCalendarCore::Event::Ptr event = incidence.dynamicCast<KCalendarCore::Event>();
-                KCalendarCore::Todo::Ptr todo = incidence.dynamicCast<KCalendarCore::Todo>();
+                KCalendarCore::Event::Ptr const event = incidence.dynamicCast<KCalendarCore::Event>();
+                KCalendarCore::Todo::Ptr const todo = incidence.dynamicCast<KCalendarCore::Todo>();
 
                 if (event && startDt.isValid() && endDt.isValid()) {
                     modified = true;
@@ -566,7 +566,7 @@ void CalendarJanitor::stripOldAlarms()
     beginTest(i18n("Deleting alarms older than 365 days..."));
 
     for (const Akonadi::Item &item : std::as_const(m_itemsToProcess)) {
-        KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
         if (!incidence->alarms().isEmpty() && incidenceIsOld(incidence)) {
             incidence->clearAlarms();
             m_pendingModifications++;
@@ -579,8 +579,8 @@ void CalendarJanitor::stripOldAlarms()
 
 static QString dateString(const KCalendarCore::Incidence::Ptr &incidence)
 {
-    QDateTime start = incidence->dtStart();
-    QDateTime end = incidence->dateTime(KCalendarCore::Incidence::RoleEnd);
+    QDateTime const start = incidence->dtStart();
+    QDateTime const end = incidence->dateTime(KCalendarCore::Incidence::RoleEnd);
     QString str = QLatin1StringView("DTSTART=") + (start.isValid() ? start.toString() : i18nc("invalid datetime", "invalid")) + QLatin1StringView("; ");
 
     if (incidence->type() == KCalendarCore::Incidence::TypeJournal) {
@@ -606,7 +606,7 @@ static QString dateString(const KCalendarCore::Incidence::Ptr &incidence)
 
 void CalendarJanitor::printFound(const Akonadi::Item &item, const QString &explanation)
 {
-    KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+    KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
     m_numDamaged++;
     if (m_numDamaged == 1) {
         print(QStringLiteral(" [!!]"));
@@ -653,7 +653,7 @@ void CalendarJanitor::deleteIncidence(const Akonadi::Item &item)
     if (m_fixingEnabled && !collectionIsReadOnly(m_currentCollection)) {
         m_pendingDeletions++;
         m_changer->deleteIncidence(item);
-        KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+        KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
         m_incidenceMap.remove(incidence->instanceIdentifier(), incidence);
         m_incidenceToItem.remove(incidence);
     }

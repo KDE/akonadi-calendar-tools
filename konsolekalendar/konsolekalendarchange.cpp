@@ -39,7 +39,7 @@ bool KonsoleKalendarChange::changeEvent()
     /*
      * Retrieve event on the basis of the unique string ID
      */
-    Event::Ptr event = m_variables->getCalendar()->event(m_variables->getUID());
+    Event::Ptr const event = m_variables->getCalendar()->event(m_variables->getUID());
     if (event) {
         if (m_variables->isDryRun()) {
             cout << i18n("Dry Run: Change Event:").toLocal8Bit().data() << '\n';
@@ -57,7 +57,7 @@ bool KonsoleKalendarChange::changeEvent()
             }
 
             event->startUpdates();
-            Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
+            Akonadi::CalendarBase::Ptr const calendar = m_variables->getCalendar();
             const auto timeZone = calendar->timeZone();
             if (m_variables->isStartDateTime()) {
                 event->setDtStart(m_variables->getStartDateTime().toTimeZone(timeZone));

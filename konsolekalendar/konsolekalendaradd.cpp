@@ -62,7 +62,7 @@ bool KonsoleKalendarAdd::addEvent()
             printSpecs();
         }
 
-        Event::Ptr event = Event::Ptr(new Event());
+        Event::Ptr const event = Event::Ptr(new Event());
 
         const auto timeZone = m_variables->getCalendar()->timeZone();
         event->setDtStart(m_variables->getStartDateTime().toTimeZone(timeZone));
@@ -72,7 +72,7 @@ bool KonsoleKalendarAdd::addEvent()
         event->setDescription(m_variables->getDescription());
         event->setLocation(m_variables->getLocation());
 
-        Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
+        Akonadi::CalendarBase::Ptr const calendar = m_variables->getCalendar();
         QEventLoop loop;
         QObject::connect(calendar.data(), &Akonadi::CalendarBase::createFinished, &loop, &QEventLoop::quit);
         QElapsedTimer t;
@@ -81,7 +81,7 @@ bool KonsoleKalendarAdd::addEvent()
         if (!m_variables->allowGui()) {
             Akonadi::IncidenceChanger *changer = calendar->incidenceChanger();
             changer->setShowDialogsOnError(false);
-            Akonadi::Collection collection = m_variables->collectionId() != -1
+            Akonadi::Collection const collection = m_variables->collectionId() != -1
                 ? Akonadi::Collection(m_variables->collectionId())
                 : Akonadi::Collection(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
 
@@ -108,17 +108,17 @@ bool KonsoleKalendarAdd::addEvent()
 
 bool KonsoleKalendarAdd::addImportedCalendar()
 {
-    MemoryCalendar::Ptr cal(new MemoryCalendar(QTimeZone::utc()));
+    MemoryCalendar::Ptr const cal(new MemoryCalendar(QTimeZone::utc()));
     FileStorage instore(cal, m_variables->getImportFile());
     if (!instore.load()) {
         return false;
     }
-    Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
+    Akonadi::CalendarBase::Ptr const calendar = m_variables->getCalendar();
 
     if (!m_variables->allowGui()) {
         Akonadi::IncidenceChanger *changer = calendar->incidenceChanger();
         changer->setShowDialogsOnError(false);
-        Akonadi::Collection collection = m_variables->collectionId() != -1
+        Akonadi::Collection const collection = m_variables->collectionId() != -1
             ? Akonadi::Collection(m_variables->collectionId())
             : Akonadi::Collection(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
 

@@ -56,7 +56,7 @@ bool KonsoleKalendarExports::exportAsTxt(QTextStream *ts, const Event::Ptr &even
     // \t<Incidence UID>
     // --------------------------------------------------
 
-    QLocale locale;
+    QLocale const locale;
 
     // Print Event Date (in user's preferred format)
     *ts << i18n("Date:") << "\t" << locale.toString(date) << '\n';
@@ -109,7 +109,7 @@ bool KonsoleKalendarExports::exportAsTxtShort(QTextStream *ts, const Event::Ptr 
     // [<Incidence Start Time>(hh:mm) - <Incidence End Time>(hh:mm) | "\t"]
     // \t<Incidence Summary | \t>[, <Incidence Location>]
     // \t\t<Incidence Description | "\t">
-    QLocale locale;
+    QLocale const locale;
 
     if (!sameday) {
         // If a new date, then Print the Event Date (in user's preferred format)
@@ -155,7 +155,7 @@ QString KonsoleKalendarExports::processField(const QString &field, const QString
     //   1. Replaces double quotes by a pair of consecutive double quotes
     //   2. Surrounds field with double quotes
 
-    QString double_dquote = dquote + dquote;
+    QString const double_dquote = dquote + dquote;
     QString retField = field;
     retField = dquote + retField.replace(dquote, double_dquote) + dquote;
     return retField;
@@ -171,8 +171,8 @@ bool KonsoleKalendarExports::exportAsCSV(QTextStream *ts, const Event::Ptr &even
     //
     // startdate,starttime,enddate,endtime,summary,location,description,UID
 
-    QString delim = i18n(","); // character to use as CSV field delimiter
-    QString dquote = i18n("\""); // character to use to quote CSV fields
+    QString const delim = i18n(","); // character to use as CSV field delimiter
+    QString const dquote = i18n("\""); // character to use to quote CSV fields
     if (!event->allDay()) {
         *ts << pF(date.toString(Qt::ISODate)) << delim << pF(event->dtStart().time().toString(Qt::ISODate)) << delim << pF(date.toString(Qt::ISODate)) << delim
             << pF(event->dtEnd().time().toString(Qt::ISODate));

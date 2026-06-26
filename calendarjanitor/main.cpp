@@ -47,7 +47,7 @@ static void silenceStderr()
     if (qgetenv("KDE_CALENDARJANITOR_DEBUG") != "1") {
         // krazy:cond=syscalls since UNIX-only code
         // Disable stderr so we can actually read what's going on
-        int fd = ::open("/dev/null", O_WRONLY);
+        int const fd = ::open("/dev/null", O_WRONLY);
         ::dup2(fd, 2);
         ::close(fd);
         // krazy:endcond=syscalls
@@ -63,13 +63,13 @@ int main(int argv, char *argc[])
     aboutData.addAuthor(i18nc("@info:credit", "Sérgio Martins"), i18n("Maintainer"), QStringLiteral("iamsergiogmail.com"));
     aboutData.setShortDescription(i18n("A command line interface to report and fix errors in your calendar data"));
 
-    QCoreApplication app(argv, argc);
+    QCoreApplication const app(argv, argc);
 
     QCommandLineParser parser;
-    QCommandLineOption colsOpt(QStringLiteral("collections"), i18n("Comma-separated list of collection ids to scan"), QStringLiteral("ids"));
-    QCommandLineOption fixOpt(QStringLiteral("fix"), i18n("Fix broken incidences"));
-    QCommandLineOption backupOpt(QStringLiteral("backup"), i18n("Backup your calendar"), QStringLiteral("output.ics"));
-    QCommandLineOption stripOldAlarmsOpt(QStringLiteral("strip-old-alarms"), i18n("Delete alarms older than 365 days"));
+    QCommandLineOption const colsOpt(QStringLiteral("collections"), i18n("Comma-separated list of collection ids to scan"), QStringLiteral("ids"));
+    QCommandLineOption const fixOpt(QStringLiteral("fix"), i18n("Fix broken incidences"));
+    QCommandLineOption const backupOpt(QStringLiteral("backup"), i18n("Backup your calendar"), QStringLiteral("output.ics"));
+    QCommandLineOption const stripOldAlarmsOpt(QStringLiteral("strip-old-alarms"), i18n("Delete alarms older than 365 days"));
     parser.addOptions({colsOpt, fixOpt, backupOpt, stripOldAlarmsOpt});
     aboutData.setupCommandLine(&parser);
 
@@ -78,12 +78,12 @@ int main(int argv, char *argc[])
 
     Options janitorOptions;
     if (parser.isSet(colsOpt)) {
-        QString option = parser.value(colsOpt);
+        QString const option = parser.value(colsOpt);
         const QStringList collections = option.split(QLatin1Char(','));
         QList<Akonadi::Collection::Id> ids;
         for (const QString &collection : collections) {
             bool ok = false;
-            int num = collection.toInt(&ok);
+            int const num = collection.toInt(&ok);
             if (ok) {
                 ids << num;
             } else {

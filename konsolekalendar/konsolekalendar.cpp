@@ -87,10 +87,10 @@ bool KonsoleKalendar::printCalendarList()
                 QString colId = QString::number(collection.id()).leftJustified(6, QLatin1Char(' '));
                 colId += QLatin1StringView("- ");
 
-                bool readOnly = !(collection.rights() & Akonadi::Collection::CanCreateItem || collection.rights() & Akonadi::Collection::CanChangeItem
-                                  || collection.rights() & Akonadi::Collection::CanDeleteItem);
+                bool const readOnly = !(collection.rights() & Akonadi::Collection::CanCreateItem || collection.rights() & Akonadi::Collection::CanChangeItem
+                                        || collection.rights() & Akonadi::Collection::CanDeleteItem);
 
-                QString readOnlyString = readOnly ? i18nc("calendar is read-only", "(Read only)") + QLatin1Char(' ') : QString();
+                QString const readOnlyString = readOnly ? i18nc("calendar is read-only", "(Read only)") + QLatin1Char(' ') : QString();
 
                 cout << colId.toLocal8Bit().data() << readOnlyString.toLocal8Bit().constData() << collection.displayName().toLocal8Bit().data() << '\n';
             }
@@ -103,7 +103,7 @@ bool KonsoleKalendar::printCalendarList()
 bool KonsoleKalendar::createAkonadiResource(const QString &icalFileUri)
 {
     const QString fileName = QFileInfo(icalFileUri).baseName();
-    Akonadi::AgentType type = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
+    Akonadi::AgentType const type = Akonadi::AgentManager::self()->type(QStringLiteral("akonadi_ical_resource"));
     auto job = new Akonadi::AgentInstanceCreateJob(type);
     job->exec();
     if (job->error() != 0) {
@@ -158,7 +158,7 @@ bool KonsoleKalendar::showInstance()
     QFile f;
     Event::Ptr event;
     const auto timeZone = m_variables->getCalendar()->timeZone();
-    Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
+    Akonadi::CalendarBase::Ptr const calendar = m_variables->getCalendar();
 
     if (m_variables->isDryRun()) {
         cout << qPrintable(i18n("Dry Run: View Events:")) << '\n';
@@ -245,7 +245,7 @@ bool KonsoleKalendar::printEventList(QTextStream *ts, Event::List *eventList, QD
 bool KonsoleKalendar::printEvent(QTextStream *ts, const Event::Ptr &event, QDate dt)
 {
     bool status = false;
-    KonsoleKalendarExports exports;
+    KonsoleKalendarExports const exports;
 
     if (event) {
         switch (m_variables->getExportType()) {
@@ -298,7 +298,7 @@ bool KonsoleKalendar::isEvent(const QDateTime &startdate, const QDateTime &endda
     bool found = false;
 
     const auto timeZone = m_variables->getCalendar()->timeZone();
-    Event::List eventList(m_variables->getCalendar()->rawEventsForDate(startdate.date(), timeZone, EventSortStartDate, SortDirectionAscending));
+    Event::List const eventList(m_variables->getCalendar()->rawEventsForDate(startdate.date(), timeZone, EventSortStartDate, SortDirectionAscending));
     for (it = eventList.constBegin(); it != eventList.constEnd(); ++it) {
         event = *it;
         if (event->dtEnd().toTimeZone(timeZone) == enddate && event->summary() == summary) {

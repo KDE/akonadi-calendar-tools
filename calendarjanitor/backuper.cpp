@@ -78,7 +78,7 @@ void Backuper::onCollectionsFetched(KJob *job)
 {
     if (job->error() == 0) {
         const QStringList mimetypes = KCalendarCore::Incidence::mimeTypes();
-        QSet<QString> mimeTypeSet = QSet<QString>(mimetypes.begin(), mimetypes.end());
+        QSet<QString> const mimeTypeSet = QSet<QString>(mimetypes.begin(), mimetypes.end());
         auto cfj = qobject_cast<Akonadi::CollectionFetchJob *>(job);
         const auto collections = cfj->collections();
         for (const Akonadi::Collection &collection : collections) {
@@ -86,7 +86,7 @@ void Backuper::onCollectionsFetched(KJob *job)
                 continue;
             }
             const QStringList contentMimeTypesLst = collection.contentMimeTypes();
-            QSet<QString> collectionMimeTypeSet = QSet<QString>(contentMimeTypesLst.begin(), contentMimeTypesLst.end());
+            QSet<QString> const collectionMimeTypeSet = QSet<QString>(contentMimeTypesLst.begin(), contentMimeTypesLst.end());
             if (!mimeTypeSet.intersects(collectionMimeTypeSet)) {
                 m_collections << collection;
                 loadCollection(collection);
@@ -121,21 +121,21 @@ void Backuper::onCollectionLoaded(KJob *job)
         emitFinished(false, job->errorString());
     } else {
         auto ifj = qobject_cast<Akonadi::ItemFetchJob *>(job);
-        Akonadi::Collection::Id id = ifj->property("collectionId").toInt();
+        Akonadi::Collection::Id const id = ifj->property("collectionId").toInt();
         Q_ASSERT(id != -1);
         const Akonadi::Item::List items = ifj->items();
         m_pendingCollections.removeAll(id);
 
         for (const Akonadi::Item &item : items) {
-            KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+            KCalendarCore::Incidence::Ptr const incidence = Akonadi::CalendarUtils::incidence(item);
             Q_ASSERT(incidence);
             m_calendar->addIncidence(incidence);
         }
 
         if (m_pendingCollections.isEmpty()) { // We're done
             KCalendarCore::FileStorage storage(m_calendar, m_filename);
-            bool success = storage.save();
-            QString message = success ? QString() : i18n("An error occurred");
+            bool const success = storage.save();
+            QString const message = success ? QString() : i18n("An error occurred");
             emitFinished(success, message);
         }
     }

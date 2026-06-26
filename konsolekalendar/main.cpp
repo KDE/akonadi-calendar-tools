@@ -51,7 +51,7 @@ static const char progVersion[] = KDEPIM_VERSION;
 int main(int argc, char *argv[])
 {
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("konsolekalendar"));
-    QApplication app(argc, argv);
+    QApplication const app(argc, argv);
 
     KAboutData aboutData(QLatin1StringView(progName),
                          i18n("KonsoleKalendar"),
@@ -138,7 +138,7 @@ int main(int argc, char *argv[])
     QString option;
 
     KonsoleKalendarVariables variables;
-    KonsoleKalendarEpoch epochs;
+    KonsoleKalendarEpoch const epochs;
 
     variables.setFloating(false); // by default, new events do NOT float
 
@@ -276,7 +276,7 @@ int main(int argc, char *argv[])
     if (parser.isSet(QStringLiteral("calendar"))) {
         option = parser.value(QStringLiteral("calendar"));
         bool ok = false;
-        int colId = option.toInt(&ok);
+        int const colId = option.toInt(&ok);
         if (ok) {
             variables.setCollectionId(colId);
         }
@@ -424,7 +424,7 @@ int main(int argc, char *argv[])
     }
 
     QEventLoop loop;
-    Akonadi::FetchJobCalendar::Ptr calendar = Akonadi::FetchJobCalendar::Ptr(new Akonadi::FetchJobCalendar());
+    Akonadi::FetchJobCalendar::Ptr const calendar = Akonadi::FetchJobCalendar::Ptr(new Akonadi::FetchJobCalendar());
     QObject::connect(calendar.data(), &Akonadi::FetchJobCalendar::loadFinished, &loop, &QEventLoop::quit);
     QElapsedTimer t;
     t.start();
@@ -544,7 +544,7 @@ int main(int argc, char *argv[])
      * Set our application name for use in unique IDs and error messages,
      * and product ID for incidence PRODID property
      */
-    QString prodId = QStringLiteral("-//K Desktop Environment//NONSGML %1 %2//EN");
+    QString const prodId = QStringLiteral("-//K Desktop Environment//NONSGML %1 %2//EN");
     CalFormat::setApplication(QLatin1StringView(progDisplay), prodId.arg(QLatin1StringView(progDisplay)).arg(QLatin1StringView(progVersion)));
 
     if (importFile) {
