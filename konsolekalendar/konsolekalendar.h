@@ -106,9 +106,9 @@ private:
      *
      * @param ts is the #QTextStream to be printed
      * @param eventList which event we should print
-     * @param dt is the date to use when printing the event for recurring events
+     * @param date is the date to use when printing the event for recurring events
      */
-    bool printEventList(QTextStream *ts, KCalendarCore::Event::List *eventList, QDate dt);
+    bool printEventList(QTextStream *ts, KCalendarCore::Event::List *eventList, QDate date);
 
     /**
      * Prints a single event in many formats
