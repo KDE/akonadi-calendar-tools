@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-31 00:44+0000\n"
-"PO-Revision-Date: 2026-06-24 23:56+0200\n"
+"PO-Revision-Date: 2026-06-25 14:29+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -191,10 +191,9 @@ msgid "Change Event:"
 msgstr "Изменение события:"
 
 #: konsolekalendarchange.cpp:57
-#, fuzzy, kde-format
-#| msgid "Events:"
+#, kde-format
 msgid "To Event:"
-msgstr "Конец события:"
+msgstr "На событие:"
 
 #: konsolekalendarchange.cpp:96
 #, kde-format
