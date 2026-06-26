@@ -42,17 +42,17 @@ bool KonsoleKalendarChange::changeEvent()
     Event::Ptr event = m_variables->getCalendar()->event(m_variables->getUID());
     if (event) {
         if (m_variables->isDryRun()) {
-            cout << i18n("Dry Run: Change Event:").toLocal8Bit().data() << endl;
+            cout << i18n("Dry Run: Change Event:").toLocal8Bit().data() << '\n';
             printSpecs(event);
 
-            cout << i18n("Dry Run: To Event:").toLocal8Bit().data() << endl;
+            cout << i18n("Dry Run: To Event:").toLocal8Bit().data() << '\n';
             printSpecs();
         } else {
             if (m_variables->isVerbose()) {
-                cout << i18n("Change Event:").toLocal8Bit().data() << endl;
+                cout << i18n("Change Event:").toLocal8Bit().data() << '\n';
                 printSpecs(event);
 
-                cout << i18n("To Event:").toLocal8Bit().data() << endl;
+                cout << i18n("To Event:").toLocal8Bit().data() << '\n';
                 printSpecs();
             }
 
@@ -91,9 +91,9 @@ bool KonsoleKalendarChange::changeEvent()
             status = *event == *calendar->incidence(event->uid());
 
             if (status) {
-                cout << i18n("Success: \"%1\" changed", event->summary()).toLocal8Bit().data() << endl;
+                cout << i18n("Success: \"%1\" changed", event->summary()).toLocal8Bit().data() << '\n';
             } else {
-                cout << i18n("Failure: \"%1\" not changed", event->summary()).toLocal8Bit().data() << endl;
+                cout << i18n("Failure: \"%1\" not changed", event->summary()).toLocal8Bit().data() << '\n';
             }
         }
     }
@@ -103,31 +103,31 @@ bool KonsoleKalendarChange::changeEvent()
 
 void KonsoleKalendarChange::printSpecs(const KCalendarCore::Event::Ptr &event)
 {
-    cout << i18n("  UID:   %1", event->uid()).toLocal8Bit().data() << endl;
+    cout << i18n("  UID:   %1", event->uid()).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  What:  %1", event->summary()).toLocal8Bit().data() << endl;
+    cout << i18n("  What:  %1", event->summary()).toLocal8Bit().data() << '\n';
 
     const auto timeZone = m_variables->getCalendar()->timeZone();
-    cout << i18n("  Begin: %1", event->dtStart().toTimeZone(timeZone).toString(Qt::TextDate)).toLocal8Bit().data() << endl;
+    cout << i18n("  Begin: %1", event->dtStart().toTimeZone(timeZone).toString(Qt::TextDate)).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  End:   %1", event->dtEnd().toTimeZone(timeZone).toString(Qt::TextDate)).toLocal8Bit().data() << endl;
+    cout << i18n("  End:   %1", event->dtEnd().toTimeZone(timeZone).toString(Qt::TextDate)).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  Desc:  %1", event->description()).toLocal8Bit().data() << endl;
+    cout << i18n("  Desc:  %1", event->description()).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  Location:  %1", event->location()).toLocal8Bit().data() << endl;
+    cout << i18n("  Location:  %1", event->location()).toLocal8Bit().data() << '\n';
 }
 
 void KonsoleKalendarChange::printSpecs()
 {
-    cout << i18n("  UID:   %1", m_variables->getUID()).toLocal8Bit().data() << endl;
+    cout << i18n("  UID:   %1", m_variables->getUID()).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  What:  %1", m_variables->getSummary()).toLocal8Bit().data() << endl;
+    cout << i18n("  What:  %1", m_variables->getSummary()).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  Begin: %1", m_variables->getStartDateTime().toString(Qt::TextDate)).toLocal8Bit().data() << endl;
+    cout << i18n("  Begin: %1", m_variables->getStartDateTime().toString(Qt::TextDate)).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  End:   %1", m_variables->getEndDateTime().toString(Qt::TextDate)).toLocal8Bit().data() << endl;
+    cout << i18n("  End:   %1", m_variables->getEndDateTime().toString(Qt::TextDate)).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  Desc:  %1", m_variables->getDescription()).toLocal8Bit().data() << endl;
+    cout << i18n("  Desc:  %1", m_variables->getDescription()).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  Location:  %1", m_variables->getLocation()).toLocal8Bit().data() << endl;
+    cout << i18n("  Location:  %1", m_variables->getLocation()).toLocal8Bit().data() << '\n';
 }

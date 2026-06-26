@@ -158,12 +158,12 @@ int main(int argc, char *argv[])
      * Switch on export list
      */
     if (parser.isSet(QStringLiteral("export-list"))) {
-        cout << endl;
-        cout << i18n("%1 supports these export formats:", QString::fromLatin1(progDisplay)).toLocal8Bit().data() << endl;
-        cout << i18nc("the default export format", "  %1 [Default]", QStringLiteral("Text")).toLocal8Bit().data() << endl;
-        cout << i18nc("short text export", "  %1 (like %2, but more compact)", QStringLiteral("Short"), QStringLiteral("Text")).toLocal8Bit().data() << endl;
-        cout << i18nc("comma-separated values export", "  %1 (Comma-Separated Values)", QStringLiteral("CSV")).toLocal8Bit().data() << endl;
-        cout << endl;
+        cout << '\n';
+        cout << i18n("%1 supports these export formats:", QString::fromLatin1(progDisplay)).toLocal8Bit().data() << '\n';
+        cout << i18nc("the default export format", "  %1 [Default]", QStringLiteral("Text")).toLocal8Bit().data() << '\n';
+        cout << i18nc("short text export", "  %1 (like %2, but more compact)", QStringLiteral("Short"), QStringLiteral("Text")).toLocal8Bit().data() << '\n';
+        cout << i18nc("comma-separated values export", "  %1 (Comma-Separated Values)", QStringLiteral("CSV")).toLocal8Bit().data() << '\n';
+        cout << '\n';
         return 0;
     }
 
@@ -175,12 +175,12 @@ int main(int argc, char *argv[])
     }
     if (parser.isSet(QStringLiteral("todo"))) {
         variables.setUseTodos(true);
-        cout << i18n("Sorry, To-dos are not working yet.").toLocal8Bit().data() << endl;
+        cout << i18n("Sorry, To-dos are not working yet.").toLocal8Bit().data() << '\n';
         return 1;
     }
     if (parser.isSet(QStringLiteral("journal"))) {
         variables.setUseJournals(true);
-        cout << i18n("Sorry, Journals are not working yet.").toLocal8Bit().data() << endl;
+        cout << i18n("Sorry, Journals are not working yet.").toLocal8Bit().data() << '\n';
         return 1;
     }
     // Use Events if no incidence type is specified on the command line
@@ -202,7 +202,7 @@ int main(int argc, char *argv[])
         } else if (option.toUpper() == QLatin1StringView("SHORT")) {
             variables.setExportType(ExportTypeTextShort);
         } else {
-            cout << i18n("Invalid Export Type Specified: %1", option).toLocal8Bit().data() << endl;
+            cout << i18n("Invalid Export Type Specified: %1", option).toLocal8Bit().data() << '\n';
             return 1;
         }
     }
@@ -312,7 +312,7 @@ int main(int argc, char *argv[])
         option = parser.value(QStringLiteral("date"));
         startdate = QDate::fromString(option, Qt::ISODate);
         if (!startdate.isValid()) {
-            cout << i18n("Invalid Start Date Specified: %1", option).toLocal8Bit().data() << endl;
+            cout << i18n("Invalid Start Date Specified: %1", option).toLocal8Bit().data() << '\n';
             return 1;
         }
     }
@@ -329,7 +329,7 @@ int main(int argc, char *argv[])
             }
             starttime = QTime::fromString(option, Qt::ISODate);
             if (!starttime.isValid()) {
-                cout << i18n("Invalid Start Time Specified: %1", option).toLocal8Bit().data() << endl;
+                cout << i18n("Invalid Start Time Specified: %1", option).toLocal8Bit().data() << '\n';
                 return 1;
             }
         } else {
@@ -344,7 +344,7 @@ int main(int argc, char *argv[])
         option = parser.value(QStringLiteral("end-date"));
         enddate = QDate::fromString(option, Qt::ISODate);
         if (!enddate.isValid()) {
-            cout << i18n("Invalid End Date Specified: %1", option).toLocal8Bit().data() << endl;
+            cout << i18n("Invalid End Date Specified: %1", option).toLocal8Bit().data() << '\n';
             return 1;
         }
     }
@@ -357,7 +357,7 @@ int main(int argc, char *argv[])
         option = parser.value(QStringLiteral("show-next"));
         variables.setDaysCount(option.toInt(&ok, 10));
         if (!ok) {
-            cout << i18n("Invalid Date Count Specified: %1", option).toLocal8Bit().data() << endl;
+            cout << i18n("Invalid Date Count Specified: %1", option).toLocal8Bit().data() << '\n';
             return 1;
         }
 
@@ -377,7 +377,7 @@ int main(int argc, char *argv[])
             }
             endtime = QTime::fromString(option, Qt::ISODate);
             if (!endtime.isValid()) {
-                cout << i18n("Invalid End Time Specified: %1", option).toLocal8Bit().data() << endl;
+                cout << i18n("Invalid End Time Specified: %1", option).toLocal8Bit().data() << '\n';
                 return 1;
             }
         } else {
@@ -524,13 +524,13 @@ int main(int argc, char *argv[])
                     "permitted at any one time")
                     .toLocal8Bit()
                     .data()
-             << endl;
+             << '\n';
         return 1;
     }
 
     // Cannot have a ending before starting
     if (startdatetime > enddatetime) {
-        cout << i18n("Ending Date/Time occurs before the Starting Date/Time").toLocal8Bit().data() << endl;
+        cout << i18n("Ending Date/Time occurs before the Starting Date/Time").toLocal8Bit().data() << '\n';
         return 1;
     }
 
@@ -549,10 +549,10 @@ int main(int argc, char *argv[])
 
     if (importFile) {
         if (konsolekalendar->importCalendar()) {
-            cout << i18n("Calendar %1 successfully imported", variables.getImportFile()).toLocal8Bit().data() << endl;
+            cout << i18n("Calendar %1 successfully imported", variables.getImportFile()).toLocal8Bit().data() << '\n';
             return 0;
         } else {
-            cout << i18n("Unable to import calendar: %1", variables.getImportFile()).toLocal8Bit().data() << endl;
+            cout << i18n("Unable to import calendar: %1", variables.getImportFile()).toLocal8Bit().data() << '\n';
             return 1;
         }
     }
@@ -561,7 +561,7 @@ int main(int argc, char *argv[])
         if (!konsolekalendar->isEvent(startdatetime, enddatetime, variables.getSummary())) {
             konsolekalendar->addEvent();
         } else {
-            cout << i18n("Attempting to insert an event that already exists").toLocal8Bit().data() << endl;
+            cout << i18n("Attempting to insert an event that already exists").toLocal8Bit().data() << '\n';
             return 1;
         }
     }
@@ -573,11 +573,11 @@ int main(int argc, char *argv[])
                         "use --uid command line option")
                         .toLocal8Bit()
                         .data()
-                 << endl;
+                 << '\n';
             return 1;
         }
         if (!konsolekalendar->changeEvent()) {
-            cout << i18n("No such event UID: change event failed").toLocal8Bit().data() << endl;
+            cout << i18n("No such event UID: change event failed").toLocal8Bit().data() << '\n';
             return 1;
         }
     }
@@ -589,28 +589,28 @@ int main(int argc, char *argv[])
                         "use --uid command line option")
                         .toLocal8Bit()
                         .data()
-                 << endl;
+                 << '\n';
             return 1;
         }
         if (!konsolekalendar->deleteEvent()) {
-            cout << i18n("No such event UID: delete event failed").toLocal8Bit().data() << endl;
+            cout << i18n("No such event UID: delete event failed").toLocal8Bit().data() << '\n';
             return 1;
         }
     }
 
     if (view) {
         if (!konsolekalendar->showInstance()) {
-            cout << i18n("Cannot open specified export file: %1", variables.getExportFile()).toLocal8Bit().data() << endl;
+            cout << i18n("Cannot open specified export file: %1", variables.getExportFile()).toLocal8Bit().data() << '\n';
             return 1;
         }
     }
 
     if (create) {
         if (!konsolekalendar->createCalendar()) {
-            cout << i18n("Cannot create Akonadi resource from file: %1", variables.getCalendarFile()).toLocal8Bit().data() << endl;
+            cout << i18n("Cannot create Akonadi resource from file: %1", variables.getCalendarFile()).toLocal8Bit().data() << '\n';
             return 1;
         } else {
-            cout << i18n("Calendar %1 successfully created", variables.getCalendarFile()).toLocal8Bit().data() << endl;
+            cout << i18n("Calendar %1 successfully created", variables.getCalendarFile()).toLocal8Bit().data() << '\n';
         }
     }
 

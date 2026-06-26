@@ -54,11 +54,11 @@ bool KonsoleKalendarAdd::addEvent()
     bool status = true;
 
     if (m_variables->isDryRun()) {
-        cout << i18n("Dry Run: Insert Event:").toLocal8Bit().data() << endl;
+        cout << i18n("Dry Run: Insert Event:").toLocal8Bit().data() << '\n';
         printSpecs();
     } else {
         if (m_variables->isVerbose()) {
-            cout << i18n("Insert Event:").toLocal8Bit().data() << endl;
+            cout << i18n("Insert Event:").toLocal8Bit().data() << '\n';
             printSpecs();
         }
 
@@ -96,9 +96,9 @@ bool KonsoleKalendarAdd::addEvent()
         loop.exec();
         status = calendar->incidence(event->uid()) != nullptr;
         if (status) {
-            cout << i18n("Success: \"%1\" inserted", m_variables->getSummary()).toLocal8Bit().data() << endl;
+            cout << i18n("Success: \"%1\" inserted", m_variables->getSummary()).toLocal8Bit().data() << '\n';
         } else {
-            cout << i18n("Failure: \"%1\" not inserted", m_variables->getSummary()).toLocal8Bit().data() << endl;
+            cout << i18n("Failure: \"%1\" not inserted", m_variables->getSummary()).toLocal8Bit().data() << '\n';
             status = false;
         }
     }
@@ -137,14 +137,14 @@ bool KonsoleKalendarAdd::addImportedCalendar()
     for (const auto &event : rawEvents) {
         if (calendar->incidence(event->uid()) != nullptr) {
             if (m_variables->isVerbose()) {
-                cout << i18n("Insert Event skipped, because UID \"%1\" is already known.", event->uid()).toLocal8Bit().data() << endl;
+                cout << i18n("Insert Event skipped, because UID \"%1\" is already known.", event->uid()).toLocal8Bit().data() << '\n';
             } else {
                 qCInfo(KONSOLEKALENDAR_LOG) << "Event with UID " << event->uid() << "is already in calendar, skipping import of this Event.";
             }
             continue;
         }
         if (m_variables->isVerbose()) {
-            cout << i18n("Add Event with UID \"%1\".", event->uid()).toLocal8Bit().data() << endl;
+            cout << i18n("Add Event with UID \"%1\".", event->uid()).toLocal8Bit().data() << '\n';
         }
         if (m_variables->isDryRun()) {
             continue;
@@ -161,17 +161,17 @@ bool KonsoleKalendarAdd::addImportedCalendar()
 
 void KonsoleKalendarAdd::printSpecs()
 {
-    cout << i18n("  What:  %1", m_variables->getSummary()).toLocal8Bit().data() << endl;
+    cout << i18n("  What:  %1", m_variables->getSummary()).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  Begin: %1", m_variables->getStartDateTime().toString(Qt::TextDate)).toLocal8Bit().data() << endl;
+    cout << i18n("  Begin: %1", m_variables->getStartDateTime().toString(Qt::TextDate)).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  End:   %1", m_variables->getEndDateTime().toString(Qt::TextDate)).toLocal8Bit().data() << endl;
+    cout << i18n("  End:   %1", m_variables->getEndDateTime().toString(Qt::TextDate)).toLocal8Bit().data() << '\n';
 
     if (m_variables->getFloating() == true) {
-        cout << i18n("  No Time Associated with Event").toLocal8Bit().data() << endl;
+        cout << i18n("  No Time Associated with Event").toLocal8Bit().data() << '\n';
     }
 
-    cout << i18n("  Desc:  %1", m_variables->getDescription()).toLocal8Bit().data() << endl;
+    cout << i18n("  Desc:  %1", m_variables->getDescription()).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  Location:  %1", m_variables->getLocation()).toLocal8Bit().data() << endl;
+    cout << i18n("  Location:  %1", m_variables->getLocation()).toLocal8Bit().data() << '\n';
 }

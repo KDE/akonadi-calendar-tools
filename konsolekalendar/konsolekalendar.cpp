@@ -75,9 +75,9 @@ bool KonsoleKalendar::printCalendarList()
     const Akonadi::Collection::List collections = job->collections();
 
     if (collections.isEmpty()) {
-        cout << i18n("There are no calendars available.").toLocal8Bit().data() << endl;
+        cout << i18n("There are no calendars available.").toLocal8Bit().data() << '\n';
     } else {
-        cout << "--------------------------" << endl;
+        cout << "--------------------------" << '\n';
         auto mimeTypeSet = QSet<QString>(mimeTypes.begin(), mimeTypes.end()); // set changes by run method intersect
         for (const Akonadi::Collection &collection : collections) {
             const QStringList contentMimeTypes = collection.contentMimeTypes();
@@ -92,7 +92,7 @@ bool KonsoleKalendar::printCalendarList()
 
                 QString readOnlyString = readOnly ? i18nc("calendar is read-only", "(Read only)") + QLatin1Char(' ') : QString();
 
-                cout << colId.toLocal8Bit().data() << readOnlyString.toLocal8Bit().constData() << collection.displayName().toLocal8Bit().data() << endl;
+                cout << colId.toLocal8Bit().data() << readOnlyString.toLocal8Bit().constData() << collection.displayName().toLocal8Bit().data() << '\n';
             }
         }
     }
@@ -140,10 +140,10 @@ bool KonsoleKalendar::createCalendar()
     const QString filename = m_variables->getCalendarFile();
 
     if (m_variables->isDryRun()) {
-        cout << i18n("Dry Run: Create Calendar: %1", filename).toLocal8Bit().data() << endl;
+        cout << i18n("Dry Run: Create Calendar: %1", filename).toLocal8Bit().data() << '\n';
     } else {
         if (m_variables->isVerbose()) {
-            cout << i18n("Create Calendar: %1", filename).toLocal8Bit().data() << endl;
+            cout << i18n("Create Calendar: %1", filename).toLocal8Bit().data() << '\n';
         }
 
         status = createAkonadiResource(QStringLiteral("file://%1").arg(filename));
@@ -161,7 +161,7 @@ bool KonsoleKalendar::showInstance()
     Akonadi::CalendarBase::Ptr calendar = m_variables->getCalendar();
 
     if (m_variables->isDryRun()) {
-        cout << qPrintable(i18n("Dry Run: View Events:")) << endl;
+        cout << qPrintable(i18n("Dry Run: View Events:")) << '\n';
         printSpecs();
     } else {
         if (m_variables->isExportFile()) {
@@ -175,7 +175,7 @@ bool KonsoleKalendar::showInstance()
 
         if (status) {
             if (m_variables->isVerbose()) {
-                cout << i18n("View Event:").toLocal8Bit().data() << endl;
+                cout << i18n("View Event:").toLocal8Bit().data() << '\n';
                 printSpecs();
             }
 
@@ -311,17 +311,17 @@ bool KonsoleKalendar::isEvent(const QDateTime &startdate, const QDateTime &endda
 
 void KonsoleKalendar::printSpecs()
 {
-    cout << i18n("  What:  %1", m_variables->getSummary()).toLocal8Bit().data() << endl;
+    cout << i18n("  What:  %1", m_variables->getSummary()).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  Begin: %1", m_variables->getStartDateTime().toString(Qt::TextDate)).toLocal8Bit().data() << endl;
+    cout << i18n("  Begin: %1", m_variables->getStartDateTime().toString(Qt::TextDate)).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  End:   %1", m_variables->getEndDateTime().toString(Qt::TextDate)).toLocal8Bit().data() << endl;
+    cout << i18n("  End:   %1", m_variables->getEndDateTime().toString(Qt::TextDate)).toLocal8Bit().data() << '\n';
 
     if (m_variables->getFloating() == true) {
-        cout << i18n("  No Time Associated with Event").toLocal8Bit().data() << endl;
+        cout << i18n("  No Time Associated with Event").toLocal8Bit().data() << '\n';
     }
 
-    cout << i18n("  Desc:  %1", m_variables->getDescription()).toLocal8Bit().data() << endl;
+    cout << i18n("  Desc:  %1", m_variables->getDescription()).toLocal8Bit().data() << '\n';
 
-    cout << i18n("  Location:  %1", m_variables->getLocation()).toLocal8Bit().data() << endl;
+    cout << i18n("  Location:  %1", m_variables->getLocation()).toLocal8Bit().data() << '\n';
 }
