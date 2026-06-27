@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
+"POT-Creation-Date: 2026-06-27 00:44+0000\n"
 "PO-Revision-Date: 2026-06-06 11:45+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -270,73 +270,73 @@ msgstr "%1을(를) 처리하는 중 오류 발생"
 msgid "Example usage: %1"
 msgstr "사용 예제: %1"
 
-#: main.cpp:61
+#: main.cpp:63
 #, kde-format
 msgid "CalendarJanitor"
 msgstr "CalendarJanitor"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgctxt "@info:credit"
 msgid "Sérgio Martins"
 msgstr "Sérgio Martins"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Maintainer"
 msgstr "관리자"
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "A command line interface to report and fix errors in your calendar data"
 msgstr "달력 데이터의 오류를 찾아서 수정하는 명령행 도구"
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Comma-separated list of collection ids to scan"
 msgstr "쉼표로 구분된 검색할 모음집 ID"
 
-#: main.cpp:70
+#: main.cpp:72
 #, kde-format
 msgid "Fix broken incidences"
 msgstr "망가진 항목 교정"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid "Backup your calendar"
 msgstr "내 달력 백업"
 
-#: main.cpp:72
+#: main.cpp:74
 #, kde-format
 msgid "Delete alarms older than 365 days"
 msgstr "365일보다 오래 된 알람 삭제"
 
-#: main.cpp:104
+#: main.cpp:106
 #, kde-format
 msgid "--fix is incompatible with --backup"
 msgstr "--fix와 --backup 옵션을 같이 사용할 수 없음"
 
-#: main.cpp:109
+#: main.cpp:111
 #, kde-format
 msgid "--strip-old-alarms is incompatible with --backup"
 msgstr "--strip-old-alarms와 --backup 옵션을 같이 사용할 수 없음"
 
-#: main.cpp:114
+#: main.cpp:116
 #, kde-format
 msgid "--strip-old-alarms is incompatible with --fix"
 msgstr "--strip-old-alarms와 --fix 옵션을 같이 사용할 수 없음"
 
-#: main.cpp:125
+#: main.cpp:127
 #, kde-format
 msgid "Running in fix mode."
 msgstr "교정 모드로 실행합니다."
 
-#: main.cpp:129
+#: main.cpp:131
 #, kde-format
 msgid "Please specify a output file."
 msgstr "출력 파일을 지정하십시오."
 
-#: main.cpp:134
+#: main.cpp:136
 #, kde-format
 msgid "Running in scan only mode."
 msgstr "검사 전용 모드로 실행합니다."

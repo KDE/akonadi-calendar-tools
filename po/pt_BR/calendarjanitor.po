@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calendarjanitor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
+"POT-Creation-Date: 2026-06-27 00:44+0000\n"
 "PO-Revision-Date: 2026-05-28 06:27-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -277,75 +277,75 @@ msgstr "Erro ao analisar %1"
 msgid "Example usage: %1"
 msgstr "Exemplo de uso: %1"
 
-#: main.cpp:61
+#: main.cpp:63
 #, kde-format
 msgid "CalendarJanitor"
 msgstr "CalendarJanitor"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgctxt "@info:credit"
 msgid "Sérgio Martins"
 msgstr "Sérgio Martins"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantenedor"
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "A command line interface to report and fix errors in your calendar data"
 msgstr ""
 "Uma interface de linha de comando para comunicar e corrigir erros nos dados "
 "dos seus calendários"
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Comma-separated list of collection ids to scan"
 msgstr "Lista separada por vírgulas dos ids de coleção a procurar"
 
-#: main.cpp:70
+#: main.cpp:72
 #, kde-format
 msgid "Fix broken incidences"
 msgstr "Corrigir incidências com problemas"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid "Backup your calendar"
 msgstr "Fazer backup do seu calendário"
 
-#: main.cpp:72
+#: main.cpp:74
 #, kde-format
 msgid "Delete alarms older than 365 days"
 msgstr "Excluir alarmes com mais de 365 dias"
 
-#: main.cpp:104
+#: main.cpp:106
 #, kde-format
 msgid "--fix is incompatible with --backup"
 msgstr "--fix é incompatível com --backup"
 
-#: main.cpp:109
+#: main.cpp:111
 #, kde-format
 msgid "--strip-old-alarms is incompatible with --backup"
 msgstr "--strip-old-alarms é incompatível com --backup"
 
-#: main.cpp:114
+#: main.cpp:116
 #, kde-format
 msgid "--strip-old-alarms is incompatible with --fix"
 msgstr "--strip-old-alarms é incompatível com --fix"
 
-#: main.cpp:125
+#: main.cpp:127
 #, kde-format
 msgid "Running in fix mode."
 msgstr "Executando o modo de correção."
 
-#: main.cpp:129
+#: main.cpp:131
 #, kde-format
 msgid "Please specify a output file."
 msgstr "Indique um arquivo de saída."
 
-#: main.cpp:134
+#: main.cpp:136
 #, kde-format
 msgid "Running in scan only mode."
 msgstr "Executando no modo apenas analisar."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calendarjanitor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
+"POT-Creation-Date: 2026-06-27 00:44+0000\n"
 "PO-Revision-Date: 2026-05-28 21:10+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -281,75 +281,75 @@ msgstr "Помилка під час обробки %1"
 msgid "Example usage: %1"
 msgstr "Приклад використання: %1"
 
-#: main.cpp:61
+#: main.cpp:63
 #, kde-format
 msgid "CalendarJanitor"
 msgstr "Нагладач за календарями"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgctxt "@info:credit"
 msgid "Sérgio Martins"
 msgstr "Sérgio Martins"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Maintainer"
 msgstr "Супровідник"
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "A command line interface to report and fix errors in your calendar data"
 msgstr ""
 "Інтерфейс командного рядка для діагностики і виправлення помилок у даних "
 "ваших календарів"
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Comma-separated list of collection ids to scan"
 msgstr "Список відокремлених комами ідентифікаторів збірок, які слід сканувати"
 
-#: main.cpp:70
+#: main.cpp:72
 #, kde-format
 msgid "Fix broken incidences"
 msgstr "Виправити помилкові записи"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid "Backup your calendar"
 msgstr "Створити резервну копію вашого календаря"
 
-#: main.cpp:72
+#: main.cpp:74
 #, kde-format
 msgid "Delete alarms older than 365 days"
 msgstr "Вилучити нагадування, старіші за 365 днів"
 
-#: main.cpp:104
+#: main.cpp:106
 #, kde-format
 msgid "--fix is incompatible with --backup"
 msgstr "--fix не можна використовувати разом з --backup"
 
-#: main.cpp:109
+#: main.cpp:111
 #, kde-format
 msgid "--strip-old-alarms is incompatible with --backup"
 msgstr "--strip-old-alarms не можна використовувати разом з --backup"
 
-#: main.cpp:114
+#: main.cpp:116
 #, kde-format
 msgid "--strip-old-alarms is incompatible with --fix"
 msgstr "--strip-old-alarms не можна використовувати разом з --fix"
 
-#: main.cpp:125
+#: main.cpp:127
 #, kde-format
 msgid "Running in fix mode."
 msgstr "Працюємо у режимі виправлення."
 
-#: main.cpp:129
+#: main.cpp:131
 #, kde-format
 msgid "Please specify a output file."
 msgstr "Будь ласка, вкажіть файл для виведення даних."
 
-#: main.cpp:134
+#: main.cpp:136
 #, kde-format
 msgid "Running in scan only mode."
 msgstr "Працюємо у режимі лише сканування."

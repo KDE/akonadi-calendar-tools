@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
+"POT-Creation-Date: 2026-06-27 00:44+0000\n"
 "PO-Revision-Date: 2024-09-19 13:29+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -281,75 +281,75 @@ msgstr "Σφάλμα κατά την ανάλυση %1"
 msgid "Example usage: %1"
 msgstr "Παράδειγμα χρήσης: %1"
 
-#: main.cpp:61
+#: main.cpp:63
 #, kde-format
 msgid "CalendarJanitor"
 msgstr "CalendarJanitor"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgctxt "@info:credit"
 msgid "Sérgio Martins"
 msgstr "Sérgio Martins"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Maintainer"
 msgstr "Συντηρητής"
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "A command line interface to report and fix errors in your calendar data"
 msgstr ""
 "Μια διεπαφή γραμμής εντολών για αναφορά και διόρθωση σφαλμάτων στα δεδομένα "
 "των ημερολογίων σας"
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Comma-separated list of collection ids to scan"
 msgstr "Διαχωρισμένη με κόμμα λίστα αναγνωριστικών συλλογών για σάρωση"
 
-#: main.cpp:70
+#: main.cpp:72
 #, kde-format
 msgid "Fix broken incidences"
 msgstr "Διόρθωση ελαττωματικών περιστατικών"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid "Backup your calendar"
 msgstr "Δημιουργία εφεδρικού αντιγράφου του ημερολογίου σας"
 
-#: main.cpp:72
+#: main.cpp:74
 #, kde-format
 msgid "Delete alarms older than 365 days"
 msgstr "Διαγραφή συναγερμών παλαιότερων από 365 ημέρες"
 
-#: main.cpp:104
+#: main.cpp:106
 #, kde-format
 msgid "--fix is incompatible with --backup"
 msgstr "Το --fix δεν είναι συμβατό με το --backup"
 
-#: main.cpp:109
+#: main.cpp:111
 #, kde-format
 msgid "--strip-old-alarms is incompatible with --backup"
 msgstr "Το --strip-old-alarms δεν είναι συμβατό με το --backup"
 
-#: main.cpp:114
+#: main.cpp:116
 #, kde-format
 msgid "--strip-old-alarms is incompatible with --fix"
 msgstr "Το --strip-old-alarms δεν είναι συμβατό με το --fix"
 
-#: main.cpp:125
+#: main.cpp:127
 #, kde-format
 msgid "Running in fix mode."
 msgstr "Εκτέλεση σε λειτουργία διόρθωσης."
 
-#: main.cpp:129
+#: main.cpp:131
 #, kde-format
 msgid "Please specify a output file."
 msgstr "Καθορίστε ένα αρχείο αποτελέσματος."
 
-#: main.cpp:134
+#: main.cpp:136
 #, kde-format
 msgid "Running in scan only mode."
 msgstr "Εκτέλεση σε λειτουργία σάρωσης μόνο."

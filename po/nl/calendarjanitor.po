@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:44+0000\n"
+"POT-Creation-Date: 2026-06-27 00:44+0000\n"
 "PO-Revision-Date: 2026-05-28 10:24+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -276,75 +276,75 @@ msgstr "Fout bij het ontleden %1"
 msgid "Example usage: %1"
 msgstr "Voorbeeld van gebruik: %1"
 
-#: main.cpp:61
+#: main.cpp:63
 #, kde-format
 msgid "CalendarJanitor"
 msgstr "CalendarJanitor"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgctxt "@info:credit"
 msgid "Sérgio Martins"
 msgstr "Sérgio Martins"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Maintainer"
 msgstr "Onderhouder"
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "A command line interface to report and fix errors in your calendar data"
 msgstr ""
 "Een commandoregel-interface om fouten in uw agendagegevens te rapporten en "
 "te repareren"
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Comma-separated list of collection ids to scan"
 msgstr "Komma-gescheiden lijst met id's van te scannen verzamelingen"
 
-#: main.cpp:70
+#: main.cpp:72
 #, kde-format
 msgid "Fix broken incidences"
 msgstr "Gebroken gebeurtenissen repareren"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid "Backup your calendar"
 msgstr "Maak een reservekopie van uw agenda"
 
-#: main.cpp:72
+#: main.cpp:74
 #, kde-format
 msgid "Delete alarms older than 365 days"
 msgstr "Herinneringen ouder dan 365 dagen verwijderen"
 
-#: main.cpp:104
+#: main.cpp:106
 #, kde-format
 msgid "--fix is incompatible with --backup"
 msgstr "--fix is niet compatibel met --backup"
 
-#: main.cpp:109
+#: main.cpp:111
 #, kde-format
 msgid "--strip-old-alarms is incompatible with --backup"
 msgstr "--strip-old-alarms is incompatibel met --backup"
 
-#: main.cpp:114
+#: main.cpp:116
 #, kde-format
 msgid "--strip-old-alarms is incompatible with --fix"
 msgstr "--strip-old-alarms is incompatibel met --fix"
 
-#: main.cpp:125
+#: main.cpp:127
 #, kde-format
 msgid "Running in fix mode."
 msgstr "Actief in mode reparatie (fix)."
 
-#: main.cpp:129
+#: main.cpp:131
 #, kde-format
 msgid "Please specify a output file."
 msgstr "Geef een uitvoerbestand op."
 
-#: main.cpp:134
+#: main.cpp:136
 #, kde-format
 msgid "Running in scan only mode."
 msgstr "Actief in mode alleen scannen."

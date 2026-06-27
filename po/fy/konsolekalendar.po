@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-31 00:44+0000\n"
+"POT-Creation-Date: 2026-06-27 00:44+0000\n"
 "PO-Revision-Date: 2007-04-21 12:05+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -88,192 +88,192 @@ msgstr ""
 msgid "View Event:"
 msgstr "Foarfal ynfoegje <wiidweidich>:"
 
-#: konsolekalendar.cpp:314 konsolekalendaradd.cpp:166
-#: konsolekalendarchange.cpp:110 konsolekalendarchange.cpp:126
-#: konsolekalendardelete.cpp:75
+#: konsolekalendar.cpp:314 konsolekalendaradd.cpp:164
+#: konsolekalendarchange.cpp:108 konsolekalendarchange.cpp:124
+#: konsolekalendardelete.cpp:73
 #, kde-format
 msgid "  What:  %1"
 msgstr "  Wat:  %1"
 
-#: konsolekalendar.cpp:316 konsolekalendaradd.cpp:168
-#: konsolekalendarchange.cpp:113 konsolekalendarchange.cpp:128
-#: konsolekalendardelete.cpp:78
+#: konsolekalendar.cpp:316 konsolekalendaradd.cpp:166
+#: konsolekalendarchange.cpp:111 konsolekalendarchange.cpp:126
+#: konsolekalendardelete.cpp:76
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  Begjin: %1"
 
-#: konsolekalendar.cpp:318 konsolekalendaradd.cpp:170
-#: konsolekalendarchange.cpp:115 konsolekalendarchange.cpp:130
-#: konsolekalendardelete.cpp:80
+#: konsolekalendar.cpp:318 konsolekalendaradd.cpp:168
+#: konsolekalendarchange.cpp:113 konsolekalendarchange.cpp:128
+#: konsolekalendardelete.cpp:78
 #, kde-format
 msgid "  End:   %1"
 msgstr "  Ein:   %1"
 
-#: konsolekalendar.cpp:321 konsolekalendaradd.cpp:173
+#: konsolekalendar.cpp:321 konsolekalendaradd.cpp:171
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  Gjin tiid assosearre mei dit foarfal"
 
-#: konsolekalendar.cpp:324 konsolekalendaradd.cpp:176
-#: konsolekalendarchange.cpp:117 konsolekalendarchange.cpp:132
-#: konsolekalendardelete.cpp:82
+#: konsolekalendar.cpp:324 konsolekalendaradd.cpp:174
+#: konsolekalendarchange.cpp:115 konsolekalendarchange.cpp:130
+#: konsolekalendardelete.cpp:80
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  Beskr.:  %1"
 
-#: konsolekalendar.cpp:326 konsolekalendaradd.cpp:178
-#: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
-#: konsolekalendardelete.cpp:84
+#: konsolekalendar.cpp:326 konsolekalendaradd.cpp:176
+#: konsolekalendarchange.cpp:117 konsolekalendarchange.cpp:132
+#: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  Location:  %1"
 msgstr "  Lokaasje:  %1"
 
-#: konsolekalendaradd.cpp:59
+#: konsolekalendaradd.cpp:57
 #, kde-format
 msgid "Dry Run: Insert Event:"
 msgstr ""
 
-#: konsolekalendaradd.cpp:63
+#: konsolekalendaradd.cpp:61
 #, fuzzy, kde-format
 #| msgid "Insert Event <Dry Run>:"
 msgid "Insert Event:"
 msgstr "Foarfal ynfoegje <stil>:"
 
-#: konsolekalendaradd.cpp:91 konsolekalendaradd.cpp:128
+#: konsolekalendaradd.cpp:89 konsolekalendaradd.cpp:126
 #, kde-format
 msgid "Calendar is invalid. Please specify one with --calendar"
 msgstr ""
 
-#: konsolekalendaradd.cpp:101
+#: konsolekalendaradd.cpp:99
 #, kde-format
 msgid "Success: \"%1\" inserted"
 msgstr "Súksesfol: \"%1\" ynfoege"
 
-#: konsolekalendaradd.cpp:103
+#: konsolekalendaradd.cpp:101
 #, kde-format
 msgid "Failure: \"%1\" not inserted"
 msgstr "Fout: \"%1\" net ynfoege"
 
-#: konsolekalendaradd.cpp:142
+#: konsolekalendaradd.cpp:140
 #, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
 msgstr ""
 
-#: konsolekalendaradd.cpp:149
+#: konsolekalendaradd.cpp:147
 #, kde-format
 msgid "Add Event with UID \"%1\"."
 msgstr ""
 
-#: konsolekalendarchange.cpp:47
+#: konsolekalendarchange.cpp:45
 #, kde-format
 msgid "Dry Run: Change Event:"
 msgstr ""
 
-#: konsolekalendarchange.cpp:50
+#: konsolekalendarchange.cpp:48
 #, kde-format
 msgid "Dry Run: To Event:"
 msgstr ""
 
-#: konsolekalendarchange.cpp:54
+#: konsolekalendarchange.cpp:52
 #, fuzzy, kde-format
 #| msgid "Insert Event <Dry Run>:"
 msgid "Change Event:"
 msgstr "Foarfal ynfoegje <stil>:"
 
-#: konsolekalendarchange.cpp:57
+#: konsolekalendarchange.cpp:55
 #, fuzzy, kde-format
 #| msgid "Events:"
 msgid "To Event:"
 msgstr "Ôfspraken:"
 
-#: konsolekalendarchange.cpp:96
+#: konsolekalendarchange.cpp:94
 #, kde-format
 msgid "Success: \"%1\" changed"
 msgstr "Súksesfol: \"%1\" feroare"
 
-#: konsolekalendarchange.cpp:98
+#: konsolekalendarchange.cpp:96
 #, kde-format
 msgid "Failure: \"%1\" not changed"
 msgstr "Fout: \"%1\" net feroare"
 
-#: konsolekalendarchange.cpp:108 konsolekalendarchange.cpp:124
-#: konsolekalendardelete.cpp:73
+#: konsolekalendarchange.cpp:106 konsolekalendarchange.cpp:122
+#: konsolekalendardelete.cpp:71
 #, kde-format
 msgid "  UID:   %1"
 msgstr " Brûkers-id:   %1"
 
-#: konsolekalendardelete.cpp:45
+#: konsolekalendardelete.cpp:43
 #, kde-format
 msgid "Dry Run: Delete Event:"
 msgstr ""
 
-#: konsolekalendardelete.cpp:49
+#: konsolekalendardelete.cpp:47
 #, fuzzy, kde-format
 #| msgid "Insert Event <Dry Run>:"
 msgid "Delete Event:"
 msgstr "Foarfal ynfoegje <stil>:"
 
-#: konsolekalendardelete.cpp:61
+#: konsolekalendardelete.cpp:59
 #, kde-format
 msgid "Success: \"%1\" deleted"
 msgstr "Súksesfol: \"%1\" wiske"
 
-#: konsolekalendardelete.cpp:63
+#: konsolekalendardelete.cpp:61
 #, kde-format
 msgid "Error deleting: \"%1\""
 msgstr ""
 
-#: konsolekalendarexports.cpp:64
+#: konsolekalendarexports.cpp:62
 #, kde-format
 msgid "Date:"
 msgstr "Datum:"
 
-#: konsolekalendarexports.cpp:73
+#: konsolekalendarexports.cpp:71
 #, kde-format
 msgid "Summary:"
 msgstr "Gearfetting:"
 
-#: konsolekalendarexports.cpp:77
+#: konsolekalendarexports.cpp:75
 #, kde-format
 msgid "(no summary available)"
 msgstr "(gjin gearfetting beskikber)"
 
-#: konsolekalendarexports.cpp:81
+#: konsolekalendarexports.cpp:79
 #, kde-format
 msgid "Location:"
 msgstr "Lokaasje:"
 
-#: konsolekalendarexports.cpp:85
+#: konsolekalendarexports.cpp:83
 #, kde-format
 msgid "(no location available)"
 msgstr "(gjin lokaasje beskikber)"
 
-#: konsolekalendarexports.cpp:89
+#: konsolekalendarexports.cpp:87
 #, kde-format
 msgid "Description:"
 msgstr "Beskriuwing:"
 
-#: konsolekalendarexports.cpp:93
+#: konsolekalendarexports.cpp:91
 #, kde-format
 msgid "(no description available)"
 msgstr "(gjin beskriuwing beskikber)"
 
-#: konsolekalendarexports.cpp:97
+#: konsolekalendarexports.cpp:95
 #, kde-format
 msgid "UID:"
 msgstr "Brûkers-id:"
 
-#: konsolekalendarexports.cpp:125
+#: konsolekalendarexports.cpp:123
 #, kde-format
 msgid "[all day]\t"
 msgstr "[hiele dei]\t"
 
-#: konsolekalendarexports.cpp:176
+#: konsolekalendarexports.cpp:174
 #, kde-format
 msgid ","
 msgstr ","
 
-#: konsolekalendarexports.cpp:177
+#: konsolekalendarexports.cpp:175
 #, kde-format
 msgid "\""
 msgstr "\""

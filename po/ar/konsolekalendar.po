@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-31 00:44+0000\n"
+"POT-Creation-Date: 2026-06-27 00:44+0000\n"
 "PO-Revision-Date: 2026-06-05 13:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -83,188 +83,188 @@ msgstr "تشغيل تجريبي: عرض الأحداث:"
 msgid "View Event:"
 msgstr "اعرض الحدث:"
 
-#: konsolekalendar.cpp:314 konsolekalendaradd.cpp:166
-#: konsolekalendarchange.cpp:110 konsolekalendarchange.cpp:126
-#: konsolekalendardelete.cpp:75
+#: konsolekalendar.cpp:314 konsolekalendaradd.cpp:164
+#: konsolekalendarchange.cpp:108 konsolekalendarchange.cpp:124
+#: konsolekalendardelete.cpp:73
 #, kde-format
 msgid "  What:  %1"
 msgstr "  ماذا:  %1"
 
-#: konsolekalendar.cpp:316 konsolekalendaradd.cpp:168
-#: konsolekalendarchange.cpp:113 konsolekalendarchange.cpp:128
-#: konsolekalendardelete.cpp:78
+#: konsolekalendar.cpp:316 konsolekalendaradd.cpp:166
+#: konsolekalendarchange.cpp:111 konsolekalendarchange.cpp:126
+#: konsolekalendardelete.cpp:76
 #, kde-format
 msgid "  Begin: %1"
 msgstr "  البداية: %1"
 
-#: konsolekalendar.cpp:318 konsolekalendaradd.cpp:170
-#: konsolekalendarchange.cpp:115 konsolekalendarchange.cpp:130
-#: konsolekalendardelete.cpp:80
+#: konsolekalendar.cpp:318 konsolekalendaradd.cpp:168
+#: konsolekalendarchange.cpp:113 konsolekalendarchange.cpp:128
+#: konsolekalendardelete.cpp:78
 #, kde-format
 msgid "  End:   %1"
 msgstr "  النّهاية:   %1"
 
-#: konsolekalendar.cpp:321 konsolekalendaradd.cpp:173
+#: konsolekalendar.cpp:321 konsolekalendaradd.cpp:171
 #, kde-format
 msgid "  No Time Associated with Event"
 msgstr "  لا وقت مرتبط بالحدث"
 
-#: konsolekalendar.cpp:324 konsolekalendaradd.cpp:176
-#: konsolekalendarchange.cpp:117 konsolekalendarchange.cpp:132
-#: konsolekalendardelete.cpp:82
+#: konsolekalendar.cpp:324 konsolekalendaradd.cpp:174
+#: konsolekalendarchange.cpp:115 konsolekalendarchange.cpp:130
+#: konsolekalendardelete.cpp:80
 #, kde-format
 msgid "  Desc:  %1"
 msgstr "  الوصف: %1"
 
-#: konsolekalendar.cpp:326 konsolekalendaradd.cpp:178
-#: konsolekalendarchange.cpp:119 konsolekalendarchange.cpp:134
-#: konsolekalendardelete.cpp:84
+#: konsolekalendar.cpp:326 konsolekalendaradd.cpp:176
+#: konsolekalendarchange.cpp:117 konsolekalendarchange.cpp:132
+#: konsolekalendardelete.cpp:82
 #, kde-format
 msgid "  Location:  %1"
 msgstr "  المكان:  %1"
 
-#: konsolekalendaradd.cpp:59
+#: konsolekalendaradd.cpp:57
 #, kde-format
 msgid "Dry Run: Insert Event:"
 msgstr "تشغيل تجريبي: إدراج حدث"
 
-#: konsolekalendaradd.cpp:63
+#: konsolekalendaradd.cpp:61
 #, kde-format
 msgid "Insert Event:"
 msgstr "أدرج حدث:"
 
-#: konsolekalendaradd.cpp:91 konsolekalendaradd.cpp:128
+#: konsolekalendaradd.cpp:89 konsolekalendaradd.cpp:126
 #, kde-format
 msgid "Calendar is invalid. Please specify one with --calendar"
 msgstr "التّقويم غير صالح. رجاءً غيره بِ‍ ‎--calendar"
 
-#: konsolekalendaradd.cpp:101
+#: konsolekalendaradd.cpp:99
 #, kde-format
 msgid "Success: \"%1\" inserted"
 msgstr "نجح: أُدرج ”%1“"
 
-#: konsolekalendaradd.cpp:103
+#: konsolekalendaradd.cpp:101
 #, kde-format
 msgid "Failure: \"%1\" not inserted"
 msgstr "فشل: لم يُدرج ”%1“"
 
-#: konsolekalendaradd.cpp:142
+#: konsolekalendaradd.cpp:140
 #, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
 msgstr "تُخطي إدراج حدث، لأن UID \"%1\" معروف فعلًا."
 
-#: konsolekalendaradd.cpp:149
+#: konsolekalendaradd.cpp:147
 #, kde-format
 msgid "Add Event with UID \"%1\"."
 msgstr "أضف حدث بالمعرف الفريد \"%1\"."
 
-#: konsolekalendarchange.cpp:47
+#: konsolekalendarchange.cpp:45
 #, kde-format
 msgid "Dry Run: Change Event:"
 msgstr "تشغيل تجريبي: تغيير الحدث"
 
-#: konsolekalendarchange.cpp:50
+#: konsolekalendarchange.cpp:48
 #, kde-format
 msgid "Dry Run: To Event:"
 msgstr "تشغيل تجريبي: إلى الحدث"
 
-#: konsolekalendarchange.cpp:54
+#: konsolekalendarchange.cpp:52
 #, kde-format
 msgid "Change Event:"
 msgstr "غيّر حدث:"
 
-#: konsolekalendarchange.cpp:57
+#: konsolekalendarchange.cpp:55
 #, kde-format
 msgid "To Event:"
 msgstr "إلى الحدث:"
 
-#: konsolekalendarchange.cpp:96
+#: konsolekalendarchange.cpp:94
 #, kde-format
 msgid "Success: \"%1\" changed"
 msgstr "نجح: عُدّل ”%1“"
 
-#: konsolekalendarchange.cpp:98
+#: konsolekalendarchange.cpp:96
 #, kde-format
 msgid "Failure: \"%1\" not changed"
 msgstr "فشل: لم يُعدّل ”%1“"
 
-#: konsolekalendarchange.cpp:108 konsolekalendarchange.cpp:124
-#: konsolekalendardelete.cpp:73
+#: konsolekalendarchange.cpp:106 konsolekalendarchange.cpp:122
+#: konsolekalendardelete.cpp:71
 #, kde-format
 msgid "  UID:   %1"
 msgstr "  المعرّف الفريد:   %1"
 
-#: konsolekalendardelete.cpp:45
+#: konsolekalendardelete.cpp:43
 #, kde-format
 msgid "Dry Run: Delete Event:"
 msgstr "تشغيل تجريبي: حذف حدث"
 
-#: konsolekalendardelete.cpp:49
+#: konsolekalendardelete.cpp:47
 #, kde-format
 msgid "Delete Event:"
 msgstr "احذف حدث:"
 
-#: konsolekalendardelete.cpp:61
+#: konsolekalendardelete.cpp:59
 #, kde-format
 msgid "Success: \"%1\" deleted"
 msgstr "نجح: حُذف ”%1“"
 
-#: konsolekalendardelete.cpp:63
+#: konsolekalendardelete.cpp:61
 #, kde-format
 msgid "Error deleting: \"%1\""
 msgstr "فشل في حذف: ”%1“"
 
-#: konsolekalendarexports.cpp:64
+#: konsolekalendarexports.cpp:62
 #, kde-format
 msgid "Date:"
 msgstr "التّاريخ:"
 
-#: konsolekalendarexports.cpp:73
+#: konsolekalendarexports.cpp:71
 #, kde-format
 msgid "Summary:"
 msgstr "الملخّص:"
 
-#: konsolekalendarexports.cpp:77
+#: konsolekalendarexports.cpp:75
 #, kde-format
 msgid "(no summary available)"
 msgstr "(لا ملخّص متوفّر)"
 
-#: konsolekalendarexports.cpp:81
+#: konsolekalendarexports.cpp:79
 #, kde-format
 msgid "Location:"
 msgstr "المكان:"
 
-#: konsolekalendarexports.cpp:85
+#: konsolekalendarexports.cpp:83
 #, kde-format
 msgid "(no location available)"
 msgstr "(لا مكان متوفّر)"
 
-#: konsolekalendarexports.cpp:89
+#: konsolekalendarexports.cpp:87
 #, kde-format
 msgid "Description:"
 msgstr "الوصف:"
 
-#: konsolekalendarexports.cpp:93
+#: konsolekalendarexports.cpp:91
 #, kde-format
 msgid "(no description available)"
 msgstr "(لا وصف متوفّر)"
 
-#: konsolekalendarexports.cpp:97
+#: konsolekalendarexports.cpp:95
 #, kde-format
 msgid "UID:"
 msgstr "المعرّف الفريد:"
 
-#: konsolekalendarexports.cpp:125
+#: konsolekalendarexports.cpp:123
 #, kde-format
 msgid "[all day]\t"
 msgstr "[طول اليوم]\t"
 
-#: konsolekalendarexports.cpp:176
+#: konsolekalendarexports.cpp:174
 #, kde-format
 msgid ","
 msgstr "،"
 
-#: konsolekalendarexports.cpp:177
+#: konsolekalendarexports.cpp:175
 #, kde-format
 msgid "\""
 msgstr "\""
