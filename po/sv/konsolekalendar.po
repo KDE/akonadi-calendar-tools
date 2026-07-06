@@ -3,21 +3,21 @@
 # Copyright (C).
 #
 # Mattias Newzella <newzella@linux.nu>, 2003.
-# SPDX-FileCopyrightText: 2004, 2005, 2006, 2007, 2008, 2009, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2004-2009, 2024, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 # Stefan Asserhall <stefan.asserhall@gmail.com>, 2005, 2013, 2014, 2015, 2016, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-27 00:44+0000\n"
-"PO-Revision-Date: 2024-06-16 17:46+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"PO-Revision-Date: 2026-07-05 17:13+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 26.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -36,57 +36,50 @@ msgid "There are no calendars available."
 msgstr "Inga kalendrar är tillgängliga."
 
 #: konsolekalendar.cpp:93
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Skrivskyddad)"
 
 #: konsolekalendar.cpp:110 konsolekalendar.cpp:129
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "Kunde inte skapa kalender: %1"
+msgstr "Kan inte skapa kalender %1: %2"
 
 #: konsolekalendar.cpp:111
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "Säkerställ att akonadiserver kör på ett riktigt sätt."
 
 #: konsolekalendar.cpp:119
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr "Kunde inte skapa kalender: %1"
+msgstr "Kan inte skapa kalender %1: DBus setDisplayName misslyckades: %2"
 
 #: konsolekalendar.cpp:124
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
-msgstr "Kunde inte skapa kalender: %1"
+msgstr "Kunde inte skapa kalender %1: DBus setPath anrop misslyckades: %2"
 
 #: konsolekalendar.cpp:143
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "Skapa kalender <testomgång>: %1"
+msgstr "Torrkörning: Skapa kalender: %1"
 
 #: konsolekalendar.cpp:146
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Create Calendar: %1"
-msgstr "Skapa kalender <testomgång>: %1"
+msgstr "Skapa kalender: %1"
 
 #: konsolekalendar.cpp:164
 #, kde-format
 msgid "Dry Run: View Events:"
-msgstr ""
+msgstr "Torrkörning: Visa händelser:"
 
 #: konsolekalendar.cpp:178
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
+#, kde-format
 msgid "View Event:"
-msgstr "Visa händelse <informativt läge>:"
+msgstr "Visa händelse:"
 
 #: konsolekalendar.cpp:314 konsolekalendaradd.cpp:164
 #: konsolekalendarchange.cpp:108 konsolekalendarchange.cpp:124
@@ -131,13 +124,12 @@ msgstr "  Plats:   %1"
 #: konsolekalendaradd.cpp:57
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Torrkörning: Infoga händelse:"
 
 #: konsolekalendaradd.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "Infoga händelse <testomgång>:"
+msgstr "Infoga händelse:"
 
 #: konsolekalendaradd.cpp:89 konsolekalendaradd.cpp:126
 #, kde-format
@@ -155,40 +147,34 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "Misslyckades: \"%1\" inte infogad"
 
 #: konsolekalendaradd.cpp:140
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr ""
-"Infogad händelse hoppades över, eftersom UID \"%1\" redan är känd. "
-"<informativt läge>"
+msgstr "Infogad händelse hoppades över, eftersom UID \"%1\" redan är känd."
 
 #: konsolekalendaradd.cpp:147
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "Lägg till händelse med UID \"%1\". <informativt läge>"
+msgstr "Lägg till händelse med UID \"%1\"."
 
 #: konsolekalendarchange.cpp:45
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "Torrkörning: Ändra händelse:"
 
 #: konsolekalendarchange.cpp:48
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Torrkörning: Till händelse:"
 
 #: konsolekalendarchange.cpp:52
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "Ändra händelse <testomgång>:"
+msgstr "Ändra händelse:"
 
 #: konsolekalendarchange.cpp:55
-#, fuzzy, kde-format
-#| msgid "Events:"
+#, kde-format
 msgid "To Event:"
-msgstr "Händelser:"
+msgstr "Till händelser:"
 
 #: konsolekalendarchange.cpp:94
 #, kde-format
@@ -209,13 +195,12 @@ msgstr "  UID:   %1"
 #: konsolekalendardelete.cpp:43
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Torrkörning: Ta bort händelse:"
 
 #: konsolekalendardelete.cpp:47
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "Ta bort händelse <testomgång>:"
+msgstr "Ta bort händelse:"
 
 #: konsolekalendardelete.cpp:59
 #, kde-format
