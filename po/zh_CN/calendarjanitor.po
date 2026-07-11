@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/akonadi-calendar-tools/calendarjanitor."
+"X-Crowdin-File: /kf6-stable/messages/akonadi-calendar-tools/calendarjanitor."
 "pot\n"
-"X-Crowdin-File-ID: 45603\n"
+"X-Crowdin-File-ID: 52026\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
