@@ -602,7 +602,8 @@ msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Ei voi luoda Akonadi-resurssia tiedostosta: %1"
 
 #: main.cpp:613
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Calendar %1 successfully created"
 msgid "Calendar %1 successfully created"
 msgstr "Kalenteri %1 luotu onnistuneesti"
 
