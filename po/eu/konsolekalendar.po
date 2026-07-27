@@ -1,96 +1,92 @@
 # Translation for konsolekalendar.po to Euskara/Basque (eu).
 # Copyright (C) 2003, 2005 Free Software Foundation, Inc.
-# Copyright (C) 2005-2024 This file is copyright:
+# Copyright (C) 2005-2026 This file is copyright:
 # This file is distributed under the same license as the akonadi-calendar-tools package.
-# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2003.
 # Ion Gaztañaga <ion_g_m@hotmail.com>, 2005.
 # Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2024, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-calendar-tools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-27 00:44+0000\n"
-"PO-Revision-Date: 2024-06-29 13:34+0200\n"
+"PO-Revision-Date: 2026-07-26 12:45+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Ion Gaztañaga"
+msgstr "Iñigo Salvador Azurmendi,Ion Gaztañaga"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "igaztanaga@gmail.com"
+msgstr "xalba@ni.eus,igaztanaga@gmail.com"
 
 #: konsolekalendar.cpp:78
 #, kde-format
 msgid "There are no calendars available."
-msgstr "Ez dago egutegi erabilgarririk."
+msgstr "Ez dago egutegirik erabilgarri."
 
 #: konsolekalendar.cpp:93
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
-msgstr "(soilik irakurtzeko)"
+msgstr "(Irakurtzeko soilik)"
 
 #: konsolekalendar.cpp:110 konsolekalendar.cpp:129
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "Ezin izan da egutegia sortu: %1 "
+msgstr "Ezin izan da %1 egutegia sortu: %2"
 
 #: konsolekalendar.cpp:111
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "Egiaztatu akonadiserver behar bezala dabilela."
 
 #: konsolekalendar.cpp:119
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr "Ezin izan da egutegia sortu: %1 "
+msgstr ""
+"Ezin izan da %1 egutegia sortu: D-Bus bidezko setDisplayName deiak huts egin "
+"du: %2"
 
 #: konsolekalendar.cpp:124
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
-msgstr "Ezin izan da egutegia sortu: %1 "
+msgstr ""
+"Ezin izan da %1 egutegia sortu: D-Bus bidezko setPath deiak huts egin du: %2"
 
 #: konsolekalendar.cpp:143
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "Sortu egutegia <Dry Run>: %1"
+msgstr "Simulazioa: Egutegia sortu: %1"
 
 #: konsolekalendar.cpp:146
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Create Calendar: %1"
-msgstr "Sortu egutegia <Dry Run>: %1"
+msgstr "Egutegia sortu: %1"
 
 #: konsolekalendar.cpp:164
 #, kde-format
 msgid "Dry Run: View Events:"
-msgstr ""
+msgstr "Simulazioa: Gertaerak ikusi:"
 
 #: konsolekalendar.cpp:178
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
+#, kde-format
 msgid "View Event:"
-msgstr "Ikusi ekitaldia <berritsua>:"
+msgstr "Gertaera ikusi:"
 
 #: konsolekalendar.cpp:314 konsolekalendaradd.cpp:164
 #: konsolekalendarchange.cpp:108 konsolekalendarchange.cpp:124
@@ -111,12 +107,12 @@ msgstr "  Hasiera: %1"
 #: konsolekalendardelete.cpp:78
 #, kde-format
 msgid "  End:   %1"
-msgstr "  Amaiera: %1"
+msgstr "  Bukaera: %1"
 
 #: konsolekalendar.cpp:321 konsolekalendaradd.cpp:171
 #, kde-format
 msgid "  No Time Associated with Event"
-msgstr "  Ez dago ekitaldiarekin lotutako ordurik"
+msgstr "  Ez dago gertaerarekin lotutako ordurik"
 
 #: konsolekalendar.cpp:324 konsolekalendaradd.cpp:174
 #: konsolekalendarchange.cpp:115 konsolekalendarchange.cpp:130
@@ -135,13 +131,12 @@ msgstr "  Kokalekua:  %1"
 #: konsolekalendaradd.cpp:57
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Simulazioa: Gertaera txertatu:"
 
 #: konsolekalendaradd.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "Sartu ekitaldia <proba>:"
+msgstr "Gertaera txertatu:"
 
 #: konsolekalendaradd.cpp:89 konsolekalendaradd.cpp:126
 #, kde-format
@@ -152,7 +147,7 @@ msgstr ""
 #: konsolekalendaradd.cpp:99
 #, kde-format
 msgid "Success: \"%1\" inserted"
-msgstr "Arrakasta: «%1» sartu da"
+msgstr "Ondo: \"%1\" txertatu da"
 
 #: konsolekalendaradd.cpp:101
 #, kde-format
@@ -160,44 +155,39 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "Hutsegitea: «%1» ez da sartu"
 
 #: konsolekalendaradd.cpp:140
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr ""
-"Ekitaldia sartzea alboratu egin da, «%1» UID jada ezaguna delako. <berritsua>"
+msgstr "Gertaera txertatzea baztertu da, \"%1\" UID jada ezaguna delako."
 
 #: konsolekalendaradd.cpp:147
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "Gehitu «%1» UIDko ekitaldia. <Verbose>"
+msgstr "Gehitu \"%1\" UIDa duen gertaera."
 
 #: konsolekalendarchange.cpp:45
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "Simulazioa: Gertaera aldatu:"
 
 #: konsolekalendarchange.cpp:48
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Simulazioa: Gertaerara:"
 
 #: konsolekalendarchange.cpp:52
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "Aldatu ekitaldia <proba>:"
+msgstr "Gertaera aldatu:"
 
 #: konsolekalendarchange.cpp:55
-#, fuzzy, kde-format
-#| msgid "Events:"
+#, kde-format
 msgid "To Event:"
-msgstr "Ekitaldiak:"
+msgstr "Gertaerara:"
 
 #: konsolekalendarchange.cpp:94
 #, kde-format
 msgid "Success: \"%1\" changed"
-msgstr "Arrakasta «%1» aldatu da"
+msgstr "Ondo: \"%1\" aldatu da"
 
 #: konsolekalendarchange.cpp:96
 #, kde-format
@@ -213,18 +203,17 @@ msgstr "  UID:   %1"
 #: konsolekalendardelete.cpp:43
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Simulazioa: Gertaera ezabatu:"
 
 #: konsolekalendardelete.cpp:47
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "Ezabatu ekitaldia <proba>:"
+msgstr "Gertaera ezabatu:"
 
 #: konsolekalendardelete.cpp:59
 #, kde-format
 msgid "Success: \"%1\" deleted"
-msgstr "Arrakasta: «%1» ezabatu da"
+msgstr "Ondo: \"%1\" ezabatu da"
 
 #: konsolekalendardelete.cpp:61
 #, kde-format
@@ -354,7 +343,7 @@ msgstr ""
 #: main.cpp:74
 #, kde-format
 msgid "Operate for Events only (Default)"
-msgstr "Ekitaldietarako bakarrik erabili (lehenetsia)"
+msgstr "Gertaeretarako bakarrik erabili (lehenetsia)"
 
 #: main.cpp:75
 #, kde-format
@@ -577,22 +566,22 @@ msgstr "Ezin izan da egutegia inportatu: %1"
 #: main.cpp:564
 #, kde-format
 msgid "Attempting to insert an event that already exists"
-msgstr "Lehendik dagoen ekitaldi bat sartzeko saiakera"
+msgstr "Lehendik dagoen gertaera bat sartzeko saiakera"
 
 #: main.cpp:572 main.cpp:588
 #, kde-format
 msgid "Missing event UID: use --uid command line option"
-msgstr "Falta den ekitaldiaren UID: erabili « --uid » komando-lerroko aukera"
+msgstr "Falta den gertaeraren UID: erabili --uid komando-lerroko aukera"
 
 #: main.cpp:580
 #, kde-format
 msgid "No such event UID: change event failed"
-msgstr "Ez dago halako UIDa duen ekitaldirik: ekitaldia aldatzea huts egin du"
+msgstr "Ez dago halako UIDa duen gertaerarik: gertaera ezin izan da aldatu"
 
 #: main.cpp:596
 #, kde-format
 msgid "No such event UID: delete event failed"
-msgstr "Ez dago halako UIDa duen ekitaldirik: ekitaldia ezabatzea huts egin du"
+msgstr "Ez dago halako UIDa duen gertaerarik: ekitaldia ezin izan da ezabatu"
 
 #: main.cpp:603
 #, kde-format
