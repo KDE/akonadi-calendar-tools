@@ -584,7 +584,7 @@ msgstr "Es wurde versucht, einen bereits existierenden Termin einzufügen"
 #: main.cpp:572 main.cpp:588
 #, kde-format
 msgid "Missing event UID: use --uid command line option"
-msgstr "Fehlende Terminkennung: benutzen Sie die --uid Befehlszeilenoption"
+msgstr "Fehlende Terminkennung: verwenden Sie die --uid Befehlszeilenoption"
 
 #: main.cpp:580
 #, kde-format

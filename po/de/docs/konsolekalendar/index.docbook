@@ -555,7 +555,7 @@
 >Einen neuen Kalender erzeugen</title>
 
 <para
->Mit &konsolekalendar; können Sie neue Kalender aus vorhandenen Dateien erstellen. Benutzen Sie dazu die Option <option
+>Mit &konsolekalendar; können Sie neue Kalender aus vorhandenen Dateien erstellen. Verwenden Sie dazu die Option <option
 >--create</option
 > mit dem Dateinamen als Argument. Die Datei muss eine gültige <acronym
 >iCal</acronym
@@ -565,7 +565,7 @@
 <para
 >Hinweis: Sie können die Option <option
 >--dry-run</option
-> nicht als Test benutzen, ob die Ressource erstellt werden kann.</para>
+> nicht als Test verwenden, ob die Ressource erstellt werden kann.</para>
 
 <para
 >Hinweis: &konsolekalendar; benötigt diese Datei, um korrekt zu funktionieren, daher sollten Sie diese Datei niemals manuell löschen. </para>
@@ -768,7 +768,7 @@ Tuesday 2016-11-29
 >-Format)</title>
 
 <para
->Die Informationen des Termins werden in der gleichen Reihenfolge wie im &konsolekalendar;-Textformat angezeigt. Der einzige Unterschied ist, alle Informationen befinden sich in einer Zeile in einer durch Kommas getrennten Liste. Dieses Format kann z.B. von Tabellenkalkulationsprogrammen wie &calligrasheets;, <application
+>Die Informationen des Termins werden in der gleichen Reihenfolge wie im &konsolekalendar;-Textformat angezeigt. Der einzige Unterschied ist, alle Informationen befinden sich in einer Zeile in einer durch Kommas getrennten Liste. Dieses Format kann z. B. von Tabellenkalkulationsprogrammen wie &calligrasheets;, <application
 >OpenOffice.org</application
 > und <application
 >&Microsoft; Excel</application
@@ -934,7 +934,7 @@ im großen Konferenzraum.,&konsolekalendar;-1924621834.134
 >--allow-gui</option
 ></entry>
   <entry
->Ressourcen zulassen, die möglicherweise ein Benutzerschnittstelle erfordern. Bei den meistem Funktionen werden nur Ressourcen (wie Datei-basierte Kalender) benutzt, die keine Benutzerschnittstelle erfordern.</entry>
+>Ressourcen zulassen, die möglicherweise ein Benutzerschnittstelle erfordern. Bei den meistem Funktionen werden nur Ressourcen (wie Datei-basierte Kalender) verwendet, die keine Benutzerschnittstelle erfordern.</entry>
 </row>
 <row>
   <entry
@@ -1279,7 +1279,7 @@ im großen Konferenzraum.,&konsolekalendar;-1924621834.134
 </question>
 <answer>
 <para
->&konsolekalendar; erfordert die Eingabe von Datumsangaben nach dem ISO-8601-Standard, also: JJJJ-MM-DD. Dabei bedeutet JJJJ die Jahresangabe mit vier Ziffern (z.B. 2003), MM die Monatsangabe mit zwei Ziffern (01,02,...,12) und DD die Tagesangabe mit zwei Ziffern (01,02,...,31).</para>
+>&konsolekalendar; erfordert die Eingabe von Datumsangaben nach dem ISO-8601-Standard, also: JJJJ-MM-DD. Dabei bedeutet JJJJ die Jahresangabe mit vier Ziffern (z. B. 2003), MM die Monatsangabe mit zwei Ziffern (01,02,...,12) und DD die Tagesangabe mit zwei Ziffern (01,02,...,31).</para>
 <para
 >&konsolekalendar; exportiert Datumsangaben immer nach dem ISO-8601-Format.</para>
 </answer>
@@ -1327,7 +1327,7 @@ im großen Konferenzraum.,&konsolekalendar;-1924621834.134
 </question>
 <answer>
 <para
->Ja. Benutzen Sie die Option <option
+>Ja. Verwenden Sie die Option <option
 >--time float</option
 > mit <option
 >--change</option
