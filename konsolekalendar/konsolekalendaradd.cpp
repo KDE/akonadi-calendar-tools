@@ -26,6 +26,9 @@
 #include <KCalendarCore/FileStorage>
 
 #include <Akonadi/Collection>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/EntityTreeModel>
 #include <Akonadi/IncidenceChanger>
 
 #include <QElapsedTimer>
@@ -39,6 +42,30 @@
 
 using namespace KCalendarCore;
 using namespace std;
+
+// The default event calendar is persisted by stable remote path. konsolekalendar has no
+// EntityTreeModel to resolve it against, so it fetches the collection tree synchronously (fine for a
+// command line tool) and matches the path. Falls back to a legacy numeric id if no path is stored.
+static Akonadi::Collection resolveDefaultEventCalendar()
+{
+    const QString path = CalendarSupport::KCalPrefs::instance()->defaultEventCalendarPath();
+    if (path.isEmpty()) {
+        return Akonadi::Collection(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
+    }
+
+    auto *job = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
+    job->fetchScope().setAncestorRetrieval(Akonadi::CollectionFetchScope::All);
+    if (!job->exec()) {
+        return Akonadi::Collection();
+    }
+    const Akonadi::Collection::List collections = job->collections();
+    for (const Akonadi::Collection &collection : collections) {
+        if (Akonadi::EntityTreeModel::stableKeyForCollection(collection) == path) {
+            return collection;
+        }
+    }
+    return Akonadi::Collection();
+}
 
 KonsoleKalendarAdd::KonsoleKalendarAdd(KonsoleKalendarVariables *vars)
 {
@@ -81,9 +108,8 @@ bool KonsoleKalendarAdd::addEvent()
         if (!m_variables->allowGui()) {
             Akonadi::IncidenceChanger *changer = calendar->incidenceChanger();
             changer->setShowDialogsOnError(false);
-            Akonadi::Collection const collection = m_variables->collectionId() != -1
-                ? Akonadi::Collection(m_variables->collectionId())
-                : Akonadi::Collection(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
+            Akonadi::Collection const collection =
+                m_variables->collectionId() != -1 ? Akonadi::Collection(m_variables->collectionId()) : resolveDefaultEventCalendar();
 
             if (!collection.isValid()) {
                 cout << i18n("Calendar is invalid. Please specify one with --calendar").toLocal8Bit().data() << "\n";
@@ -118,9 +144,8 @@ bool KonsoleKalendarAdd::addImportedCalendar()
     if (!m_variables->allowGui()) {
         Akonadi::IncidenceChanger *changer = calendar->incidenceChanger();
         changer->setShowDialogsOnError(false);
-        Akonadi::Collection const collection = m_variables->collectionId() != -1
-            ? Akonadi::Collection(m_variables->collectionId())
-            : Akonadi::Collection(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
+        Akonadi::Collection const collection =
+            m_variables->collectionId() != -1 ? Akonadi::Collection(m_variables->collectionId()) : resolveDefaultEventCalendar();
 
         if (!collection.isValid()) {
             cout << i18n("Calendar is invalid. Please specify one with --calendar").toLocal8Bit().data() << "\n";
