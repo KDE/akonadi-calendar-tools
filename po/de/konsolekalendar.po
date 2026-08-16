@@ -8,20 +8,21 @@
 # SPDX-FileCopyrightText: 2011, 2016 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2026 Ewald Müller <EMuede@netscape.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-27 00:44+0000\n"
-"PO-Revision-Date: 2024-08-20 19:28+0200\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2026-08-13 12:46+0200\n"
+"Last-Translator: Ewald Müller <EMuede@netscape.net>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -39,57 +40,54 @@ msgid "There are no calendars available."
 msgstr "Es sind keine Kalender verfügbar."
 
 #: konsolekalendar.cpp:93
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Nur lesen)"
 
 #: konsolekalendar.cpp:110 konsolekalendar.cpp:129
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "Fehler beim Erstellen des Kalenders: %1"
+msgstr "Kalender %1 kann nicht erstellt werden: %2"
 
 #: konsolekalendar.cpp:111
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "Stellen Sie sicher, dass der „akonadiserver“ einwandfrei läuft."
 
 #: konsolekalendar.cpp:119
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr "Fehler beim Erstellen des Kalenders: %1"
+msgstr ""
+"Kalender %1 kann nicht erstellt werden: D-Bus-Aufruf „setDisplayName“ "
+"fehlgeschlagen: %2"
 
 #: konsolekalendar.cpp:124
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
-msgstr "Fehler beim Erstellen des Kalenders: %1"
+msgstr ""
+"Kalender %1 kann nicht erstellt werden: D-Bus-Aufruf „setPath“ "
+"fehlgeschlagen: %2"
 
 #: konsolekalendar.cpp:143
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "Kalender erzeugen <Testlauf>: %1"
+msgstr "Kalender erstellen (Testlauf): %1"
 
 #: konsolekalendar.cpp:146
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Create Calendar: %1"
-msgstr "Kalender erzeugen <Testlauf>: %1"
+msgstr "Kalender erstellen: %1"
 
 #: konsolekalendar.cpp:164
 #, kde-format
 msgid "Dry Run: View Events:"
-msgstr ""
+msgstr "Termine anzeigen (Testlauf):"
 
 #: konsolekalendar.cpp:178
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
+#, kde-format
 msgid "View Event:"
-msgstr "Termin anzeigen <ausführlich>:"
+msgstr "Termin anzeigen:"
 
 #: konsolekalendar.cpp:314 konsolekalendaradd.cpp:164
 #: konsolekalendarchange.cpp:108 konsolekalendarchange.cpp:124
@@ -134,13 +132,12 @@ msgstr "  Ort:  %1"
 #: konsolekalendaradd.cpp:57
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Termin einfügen (Testlauf):"
 
 #: konsolekalendaradd.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "Termin einfügen <Testlauf>:"
+msgstr "Termin einfügen:"
 
 #: konsolekalendaradd.cpp:89 konsolekalendaradd.cpp:126
 #, kde-format
@@ -160,40 +157,36 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "Fehlgeschlagen: „%1“ nicht eingefügt"
 
 #: konsolekalendaradd.cpp:140
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
 msgstr ""
 "Einfügen des Termins wird übersprungen, weil die UID „%1“ bereits vorhanden "
-"ist. <Verbose>"
+"ist."
 
 #: konsolekalendaradd.cpp:147
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "Termin mit der UID „%1“ hinzugefügt. <Verbose>"
+msgstr "Termin mit der UID „%1“ hinzufügen."
 
 #: konsolekalendarchange.cpp:45
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "Termin ändern (Testlauf):"
 
 #: konsolekalendarchange.cpp:48
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Zum Termin (Testlauf):"
 
 #: konsolekalendarchange.cpp:52
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "Termin ändern <Testlauf>:"
+msgstr "Termin ändern:"
 
 #: konsolekalendarchange.cpp:55
-#, fuzzy, kde-format
-#| msgid "Events:"
+#, kde-format
 msgid "To Event:"
-msgstr "Termine:"
+msgstr "Zum Termin:"
 
 #: konsolekalendarchange.cpp:94
 #, kde-format
@@ -214,13 +207,12 @@ msgstr "  Benutzerkennung:   %1"
 #: konsolekalendardelete.cpp:43
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Termin löschen (Testlauf):"
 
 #: konsolekalendardelete.cpp:47
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "Termin löschen <Testlauf>:"
+msgstr "Termin löschen:"
 
 #: konsolekalendardelete.cpp:59
 #, kde-format
@@ -607,8 +599,7 @@ msgid "Cannot create Akonadi resource from file: %1"
 msgstr "Akonadi-Ressource kann nicht aus der Datei %1 erstellt werden"
 
 #: main.cpp:613
-#, fuzzy, kde-format
-#| msgid "Calendar %1 successfully created"
+#, kde-format
 msgid "Calendar %1 successfully created"
 msgstr "Kalender %1 erfolgreich erstellt"
 
