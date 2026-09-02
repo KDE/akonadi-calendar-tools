@@ -5,8 +5,6 @@
   <!ENTITY konsolekalendar "<application
 >KonsoleKalendar</application
 >">
-  <!ENTITY kappname "KonsoleKalendar">
-  <!ENTITY package "kdepim">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % Russian "INCLUDE">
 ]>
@@ -17,7 +15,7 @@
 <bookinfo id="konsolekalendarinfo">
 
 <title
->Руководство &konsolekalendar;</title>
+>Руководство пользователя &konsolekalendar;</title>
 
 <authorgroup>
 <author
@@ -88,7 +86,21 @@
 > <contrib
 ></contrib
 ></othercredit
->  
+><othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+><affiliation
+><address
+><email
+>goa@altlinux.org</email
+></address
+></affiliation
+><contrib
+></contrib
+></othercredit
+> 
 </authorgroup>
 
 <copyright>
@@ -115,13 +127,13 @@
 <!-- Don't change format of date and version of the documentation -->
 
 <date
->15 апреля 2004 г.</date>
+>23 ноября 2016 г.</date>
 <releaseinfo
->1.1.1</releaseinfo>
+>5.1.3 (Приложения KDE 16.12)</releaseinfo>
 
 <abstract>
 <para
->&konsolekalendar; - это интерфейс командной строки для работы с календарями &kde;</para>
+>&konsolekalendar; — интерфейс командной строки для работы с календарями &kde;</para>
 </abstract>
 
 
@@ -143,7 +155,7 @@
 >Введение</title>
 
 <para
->&konsolekalendar; &mdash; это интерфейс командной строки для работы с календарями &kde;. Он позволяет просматривать, создавать, удалять и изменять записи в календаре из командной строки или с помощью языка сценариев. Также &konsolekalendar; может экспортировать календарь &kde; в различные форматы и импортировать его.</para>
+>&konsolekalendar; — интерфейс командной строки для работы с календарями. С его помощью можно просматривать, вставлять, удалять и изменять записи в календаре из командной строки или с помощью языка сценариев. Также &konsolekalendar; позволяет создавать новые календари, выполнять экспорт календарей в различные форматы и импортировать другие календари.</para>
 
 <para
 >В режиме работы по умолчанию &konsolekalendar; выводит список событий текущего дня (с 7:00 до 17:00)</para>
@@ -176,13 +188,13 @@
 ></listitem>
 <listitem
 ><para
->Импорт существующего календаря &kde;</para
+>Импорт существующего календаря</para
 ></listitem>
 </itemizedlist
 ></para>
 
 <para
->&konsolekalendar; это <emphasis
+>&konsolekalendar; — <emphasis
 >не</emphasis
 > очередной графический интерфейс для календаря &kde; (как, например, &korganizer;). &konsolekalendar; предназначен для тех случаев, когда графический интерфейс недоступен или нежелателен.</para>
 
@@ -195,10 +207,10 @@
 <title
 >Дополнительные возможности</title>
 <para
->В этой главе вы узнаете о полезных функциях &konsolekalendar;, об опциях командной строки (помните, что &konsolekalendar; &mdash; это не графический интерфейс, а программа командной строки).</para>
+>В этой главе рассказывается о полезных функциях &konsolekalendar; и их настройке с помощью опций командной строки (помните, что &konsolekalendar; — не графический интерфейс, а программа командной строки).</para>
 
 <para
->Вы также узнаете о добавлении, удалении и редактировании событий в календаре,  а также о преобразовании их в другие форматы. Создание и импорт календарей &kde; также описан в этом разделе. </para>
+>Приводятся сведения о добавлении, удалении и редактировании событий в календаре, а также об их преобразовании в другие форматы. Кроме того, в этом разделе рассказывается о создании и импорте календарей. </para>
 
 <sect1 id="viewing">
 <title
@@ -212,7 +224,7 @@
 <para>
 <informalexample
 ><para
->Для просмотра событий текущего дня (с 7:00 до 17:00), просто выполните:</para>
+>Для просмотра событий текущего дня (с 7:00 до 17:00) просто выполните:</para>
 
 <para>
 <screen
@@ -231,7 +243,7 @@
 <para>
 <informalexample
 ><para
->В следующем примере мы увидим, все записи, для недели с 18 по 22 августа:</para>
+>В следующем примере выполняется просмотр всех записей для недели с 18 по 22 августа:</para>
 
 <para>
 <screen
@@ -244,11 +256,11 @@
 >--view</option
 > <option
 >--date <replaceable
->2003-08-18</replaceable
+>2016-08-18</replaceable
 > </option
 > <option
 >--end-date <replaceable
->2003-08-22</replaceable
+>2016-08-22</replaceable
 ></option>
 </userinput
 >
@@ -309,14 +321,28 @@
 >Добавление событий</title>
 
 <para
->&konsolekalendar; может вносить новые события в календарь &kde; или ресурс календаря с помощью опции командной строки <parameter
+>&konsolekalendar; может вносить новые события в календарь или ресурс календаря с помощью опции командной строки <parameter
 >--add</parameter
 >. Успешно добавленные события немедленно появляются в приложениях календаря &kde; (&korganizer;).</para>
+
+<para
+>Вывод списка всех календарей с их идентификаторами: </para>
+
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--list-calendars</option
+></userinput
+></screen>
 
 <para>
 <informalexample
 ><para
->В следующем примере событие, начинающееся 2003-06-04 (4 июня 2003) в 10 часов и заканчивающееся в 12, с названием "Посещение врача" вставляется в календарь пользователя по умолчанию:</para>
+>В следующем примере событие, начинающееся 2016-12-01 (1 декабря 2016 г.) в 10 часов и заканчивающееся в 12, с кратким описанием "Посещение врача" добавляется в календарь пользователя с идентификатором «8»:</para>
 
 
 <para>
@@ -329,8 +355,10 @@
 > <option
 >--add</option
 > <option
+>--calendar 8</option
+> <option
 >--date <replaceable
->2003-06-04</replaceable
+>2016-12-03</replaceable
 ></option
 > <option
 >--time <replaceable
@@ -343,7 +371,7 @@
 ></option
 > <option
 >--summary <replaceable
->"Посещение врача" </replaceable
+>"Посещение врача"</replaceable
 ></option
 ></userinput
 ></screen>
@@ -354,7 +382,7 @@
 <para>
 <informalexample
 ><para
->В этом примере мы добавим день рождения в ресурс календаря пользователя по умолчанию:</para>
+>В этом примере в ресурс календаря пользователя с идентификатором «8» добавляется день рождения:</para>
 
 <para>
 <screen
@@ -366,8 +394,10 @@
 > <option
 >--add</option
 > <option
+>--calendar 8</option
+> <option
 >--date <replaceable
->2003-06-06</replaceable
+>2016-12-06</replaceable
 ></option
 > <option
 >--summary <replaceable
@@ -376,7 +406,7 @@
 > \
 <option
 >--description <replaceable
->"Время праздника" </replaceable
+>"Празднование"</replaceable
 ></option
 ></userinput
 ></screen>
@@ -387,9 +417,7 @@
 <para>
 <informalexample
 ><para
->В этом примере в календарь пользователя вносится <replaceable
->выходной</replaceable
->:</para>
+>В этом примере в календарь с идентификатором «8» вносится недельный отпуск:</para>
 
 <para>
 <screen
@@ -401,25 +429,25 @@
 > <option
 >--add</option
 > <option
->--file <replaceable
->vacation.ics</replaceable
+>--calendar <replaceable
+>12</replaceable
 ></option
 > <option
 >--date <replaceable
->2003-08-01</replaceable
+>2017-08-01</replaceable
 ></option
 > \
 <option
 >--end-date <replaceable
->2003-08-07</replaceable
+>2017-08-07</replaceable
 ></option
 > <option
 >--summary <replaceable
->"Выходной"</replaceable
+>"Отпуск"</replaceable
 ></option
 > <option
 >--description <replaceable
->"Ни кто меня не нейдёт!" </replaceable
+>"Никто меня не найдёт!"</replaceable
 ></option
 ></userinput
 ></screen>
@@ -442,8 +470,12 @@
 >--uid</parameter
 >. <acronym
 >UID</acronym
-> может быть найден при просмотре события с помощью опции <parameter
+> может быть найден при просмотре события с помощью опций <parameter
 >--view</parameter
+>, <parameter
+>--next</parameter
+> и <parameter
+>--show-next</parameter
 >.</para>
 
 <para
@@ -451,15 +483,15 @@
 
 <warning
 ><para
->После того как вы удаляете что-либо из календаря, вы <emphasis
->не сможете</emphasis
-> вернуть это! Другими словами, когда вы удаляете запись, вы не сможете восстановить её. Она удаляется навсегда.</para
+>После удаления чего-либо из календаря будет <emphasis
+>невозможно</emphasis
+> вернуть это! Другими словами, удалённую запись нельзя восстановить. Она удаляется навсегда.</para
 ></warning>
 
 <para>
 <informalexample
 ><para
->Здесь мы удаляем элемент календаря с <acronym
+>В этом примере выполняется удаление элемента календаря с <acronym
 >UID</acronym
 > <replaceable
 >&konsolekalendar;-1887551750.196</replaceable
@@ -499,17 +531,21 @@
 >--uid</parameter
 >. <acronym
 >UID</acronym
-> может быть найден при просмотре события с помощью опции <parameter
+> может быть найден при просмотре события с помощью опций <parameter
 >--view</parameter
+>, <parameter
+>--next</parameter
+> и <parameter
+>--show-next</parameter
 >.</para>
 
 <para
->Замена ведёт себя так же как и вставка: вы можете изменить дату и время начала события, дату и время окончания, название и описание. Изменённые события немедленно становятся доступными в приложениях календаря &kde; (&korganizer;).</para>
+>Изменение работает аналогично добавлению: можно изменить дату и время начала события, дату и время окончания, название и описание. Изменённые события немедленно становятся доступными в приложениях календаря &kde; (&korganizer;).</para>
 
 <para
 ><emphasis
->Пример:</emphasis
-> Здесь мы изменяем название и описание элемента календаря с <acronym
+>Пример</emphasis
+> — изменение названия и описания элемента календаря с <acronym
 >UID</acronym
 >  <replaceable
 >&konsolekalendar;-1887551750.196</replaceable
@@ -531,7 +567,7 @@
 ></option
 > <option
 >--summary <replaceable
->"Проверить мою голову"</replaceable
+>"Проверить голову"</replaceable
 > </option
 > <option
 >--description <replaceable
@@ -549,21 +585,34 @@
 >Создание нового файла календаря</title>
 
 <para
->&konsolekalendar; может использоваться для создания нового файла календаря &kde;. Поскольку вы не можете добавлять элементы в несуществующий календарь, вы сначала должны создать его с помощью опций командной строки <parameter
-> --create</parameter
-> и <parameter
->--file</parameter
+>&konsolekalendar; позволяет создавать новые календари из существующих файлов. Для создания календаря можно воспользоваться опцией <option
+>--create</option
+> с именем файла в качестве аргумента. Указанный файл должен представлять собой корректный файл формата <acronym
+>iCal</acronym
+> или <acronym
+>vCal</acronym
 >.</para>
+<para
+>Примечание: опцию <option
+>--dry-run</option
+> нельзя использовать для проверки возможности создания ресурса.</para>
+
+<para
+>Примечание: этот файл необходим для работы &konsolekalendar;, поэтому никогда не удаляйте его вручную. </para>
+
+<para
+>Примечание технического характера: с помощью этой команды &konsolekalendar; создаёт новый ресурс <acronym
+>Akonadi</acronym
+>, который указывает на данный файл. Это не ограничивает пользователя — можно создать и другие ресурсы, указывающие на тот же самый файл. </para>
 
 <para>
 <informalexample
 ><para
->Создать файл календаря с именем <filename
+>Создать новый календарь из существующего файла с именем <filename
 ><replaceable
->/data/share/calendars/vacation.ics</replaceable
+>vacation.ics</replaceable
 ></filename
 >:</para>
-
 <para>
 <screen
 ><prompt
@@ -574,14 +623,28 @@
 > <option
 >--create</option
 > <option
->--file <replaceable
->/data/share/calendars/vacation.ics</replaceable
+><replaceable
+>vacation.ics</replaceable
 ></option
 ></userinput
 ></screen>
 </para>
 </informalexample>
 </para>
+
+<para
+>Ресурс будет называться <quote
+>vacation</quote
+> при использовании <option
+>--list-calendars</option
+></para>
+
+<para
+>С помощью &konsolekalendar; невозможно удалить ресурс <acronym
+>Akonadi</acronym
+>. Для этого следует использовать &korganizer; или <application
+>akonadiconsole</application
+>. </para>
 
 </sect1>
 
@@ -590,9 +653,9 @@
 >Экспорт в другие форматы</title>
 
 <para
->&konsolekalendar; может экспортировать календарь &kde; в широко распространённые форматы. Экспорт является специальной формой просмотра. По умолчанию, события показываются в формате <quote
+>&konsolekalendar; позволяет экспортировать календарь в широко распространённые форматы. Экспорт является специальной формой просмотра. По умолчанию, события показываются в формате <quote
 >текста &konsolekalendar;</quote
->. Для изменения формата просмотра используйте опцию командной строки<parameter
+>. Для изменения формата просмотра используйте опцию командной строки <parameter
 >--export-type</parameter
 >.</para>
 
@@ -637,13 +700,13 @@
 <para
 >Текстовый формат &konsolekalendar; это: <informalexample
 > <screen
->Date:\t&lt;Дата&gt;(dddd yyyy-MM-dd)
+>Дата:\t&lt;Дата&gt;(dddd yyyy-MM-dd)
 [\t&lt;Время начала&gt;(hh:mm) - &lt;Время окончания&gt;(hh:mm)]
-Summary:
-\t&lt;Название | "(без названия)"&gt;
-Location:
-\t&lt;Место  | "(нет места)"&gt;
-Description:
+Краткое описание:
+\t&lt;Краткое описание | "(нет краткого описания)"&gt;
+Место проведения:
+\t&lt;Место проведения  | "(место проведения не указано)"&gt;
+Описание:
 \t&lt;Описание| "(нет описания)"&gt;
 UID:
 \t&lt;UID&gt;
@@ -653,18 +716,28 @@ UID:
 </para>
 
 <para
->Например: <informalexample
+>Вывод команды <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Text</option
+></userinput
+>: <informalexample
 > <screen
->Date:   Tuesday 2003-11-01
+>Дата:   Вторник 2016-11-29
         08:00 - 09:00
-Summary:
+Краткое описание:
         Общая встреча
-Location:
-        Конференц зал
-Description:
+Место проведения:
+        Конференц-зал
+Описание:
         Встреча со всеми участниками проекта для его обсуждения.
 UID:
-        &konsolekalendar;-1128954167.1013
+        &konsolekalendar;-1924621834.134
 -------------------------------------------------- 
 </screen>
 </informalexample>
@@ -685,18 +758,28 @@ UID:
 >[--------------------------------------------------]
 {&lt;Дата&gt;(dddd yyyy-MM-dd)]
 [&lt;Время начала&gt;(hh:mm) - &lt;Время окончания&gt;(hh:mm) | "\t"]
-\t&lt;Краткое описание | \t&gt;[, &lt;Место&gt;]
+\t&lt;Краткое описание | \t&gt;[, &lt;Место проведения&gt;]
 \t\t&lt;Описание | "\t"&gt;
 </screen>
 </informalexample>
 </para>
 
 <para
->Например: <informalexample
+>Вывод команды <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Short</option
+></userinput
+>: <informalexample
 > <screen
 >--------------------------------------------------
-Tuesday 2003-11-01
-08:00 - 09:00   Общая встреча, Конференц зал
+Вторник 2016-11-29
+08:00 - 09:00   Общая встреча, Конференц-зал
                 Встреча со всеми участниками проекта для его обсуждения.
 </screen>
 </informalexample>
@@ -711,7 +794,7 @@ Tuesday 2003-11-01
 >)</title>
 
 <para
->Формат значений, разделённых запятыми, показывает значения событий в том же порядке, что формат текста &konsolekalendar;. Единственное отличие состоит в том, что вся информация помещается в одну строку в виде полей, которые разделены запятыми.  Экспортированные файлы могут быть импортированы непосредственно в программы электронных таблиц типа &kspread;, <application
+>Формат значений, разделённых запятыми, показывает значения событий в том же порядке, что и формат текста &konsolekalendar;. Единственное отличие состоит в том, что вся информация помещается в одну строку в виде полей, которые разделены запятыми.  Экспортированные файлы могут быть импортированы непосредственно в программы электронных таблиц типа &calligrasheets;, <application
 >OpenOffice.org Calc</application
 > и <application
 >&Microsoft; Excel</application
@@ -722,59 +805,31 @@ Tuesday 2003-11-01
 <para
 >Формат значений, разделённых запятыми (<acronym
 >CSV</acronym
->) это: <informalexample
+>): <informalexample
 > <screen
->YYYY-MM-DD,HH:MM,YYYY-MM-DD,HH:MM,Summary,Location,Description,UID
+>"День недели, День месяца, Год","HH:MM","День недели, День месяца, Год","HH:MM","Краткое описание","Место проведения","Описание","UID"
 </screen>
 </informalexample>
 </para>
 
 <para
->Например: <informalexample
+>Вывод команды <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>CSV</option
+></userinput
+>: <informalexample
 > <screen
->2003-11-01,08:00,2003-11-01,09:00,Общая встреча,Встреча со всеми \
-участниками проекта &konsolekalendar; в конференц зале.,-1128954167.1013
+>"Вторник, 29 ноября, 2016","08:00","Вторник, 29 ноября, 2016","09:00","Общая встреча","Конференц-зал","Встреча со всеми \
+в конференц-зале.","&konsolekalendar;-1924621834.134"
 </screen>
 </informalexample>
 </para>
-
-</sect2>
-
-<sect2 id="html-format">
-<title
->Формат &HTML;</title>
-
-<para
->Формат экспорта <acronym
->HTML</acronym
-> создаёт корректный файл <acronym
->HTML</acronym
->, который может быть опубликован в <acronym
->WWW</acronym
->. Этот формат экспорта не подходит для последующего синтаксического анализа в сценариях, но очень удобен для публикации календарей и лёгкого их просмотра.</para>
-
-<para
-><emphasis
->TODO:</emphasis
-> Вставить сюда снимок экрана</para>
-
-</sect2>
-
-<sect2 id="html-month-format">
-<title
->Формат <acronym
->HTMLmonth</acronym
-></title>
-
-<para
->Этот формат создаёт файл <acronym
->HTML</acronym
->, в котором содержатся все собрания по месяцам в заданном диапазоне дат. Этот формат экспорта не подходит для последующего синтаксического анализа в сценариях, но очень удобен для публикации календарей и лёгкого их просмотра.</para>
-
-<para
-><emphasis
->TODO:</emphasis
-> Вставить сюда снимок экрана</para>
 
 </sect2>
 
@@ -785,19 +840,15 @@ Tuesday 2003-11-01
 >Импорт календарей</title>
 
 <para
->&konsolekalendar; может импортировать в календарь &kde; файлы форматов iCal и vCal. Все события импортируемого календаря будут вставлены, включая идентичные события. В следующей версии &konsolekalendar; идентичные события вставляться не будут.</para>
+>&konsolekalendar; позволяет импортировать в календарь файлы форматов iCal и vCal. Будут добавлены все события из импортируемого календаря, за исключением идентичных (то есть таких событий, которые уже есть в календаре).</para>
 
 <para>
 <informalexample
 ><para
->Для импорта файла календаря<filename
-><replaceable
->another.ics</replaceable
-></filename
-> в календарь<filename
-><replaceable
->current.ics</replaceable
-></filename
+>Для импорта файла календаря <replaceable
+>vacation.ics</replaceable
+> в календарь с идентификатором <replaceable
+>8</replaceable
 > выполните:</para>
 
 <para>
@@ -809,11 +860,11 @@ Tuesday 2003-11-01
 >konsolekalendar</command
 > <option
 >--import <replaceable
->another.ics</replaceable
+>vacation.ics</replaceable
 ></option
 > <option
->--file <replaceable
->current.ics</replaceable
+>--calendar <replaceable
+>8</replaceable
 ></option
 ></userinput
 ></screen>
@@ -845,11 +896,17 @@ Tuesday 2003-11-01
 <tbody>
 <row>
   <entry
+><emphasis
+>Универсальные опции:</emphasis
+></entry>
+</row>
+<row>
+  <entry
 ><option
 >--help, --help-all</option
 ></entry>
   <entry
->Показать справку о опциях программы.</entry>
+>Показать справку об опциях программы.</entry>
 </row>
 <row>
   <entry
@@ -877,6 +934,12 @@ Tuesday 2003-11-01
 </row>
 <row>
   <entry
+><emphasis
+>Опции:</emphasis
+></entry>
+</row>
+<row>
+  <entry
 ><option
 >--verbose</option
 ></entry>
@@ -889,7 +952,7 @@ Tuesday 2003-11-01
 >--dry-run</option
 ></entry>
   <entry
->Показывает, что могло бы быть сделано, не изменяя записи, не добавляя и не удаляя их из календаря. Не изменяются и не создаются новые файлы.</entry>
+>Показать, что могло бы быть сделано, но фактически не выполнять никаких действий (то есть не выполнять вставку, удаление или изменение существующих файлов, а также не создавать новые файлы).</entry>
 </row>
 <row>
   <entry
@@ -897,19 +960,37 @@ Tuesday 2003-11-01
 >--allow-gui</option
 ></entry>
   <entry
->Разрешить использование ресурсов, использующих интерактивный интерфейс пользователя. Обычно используются только ресурсы, которые никогда не требуют участия пользователя (например, календари, хранящиеся в файлах).</entry>
+>Разрешить использование ресурсов, для работы которых требуется интерактивный интерфейс пользователя. Обычно используются только ресурсы, которые никогда не требуют участия пользователя (например, календари, хранящиеся в файлах).</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>Типы записей (эти опции можно сочетать):</emphasis
+></entry>
 </row>
 <row>
   <entry
 ><option
->--file</option
-> <replaceable
->&nbsp;calendar-file</replaceable
+>--event</option
 ></entry>
   <entry
->Указывает файл календаря, который будет использоваться. <para
->Если не указан, будет использоваться ваш ресурс &korganizer;  по умолчанию.</para
+>Работать только с событиями (по умолчанию).</entry>
+</row>
+<row>
+  <entry
+><option
+>--todo</option
 ></entry>
+  <entry
+>Работать только с задачами (не реализовано).</entry>
+</row>
+<row>
+  <entry
+><option
+>--journal</option
+></entry>
+  <entry
+>Работать только с дневниками (не реализовано).</entry>
 </row>
 <row>
   <entry
@@ -953,19 +1034,29 @@ Tuesday 2003-11-01
   <entry
 ><option
 >--create</option
-></entry>
+> <replaceable
+>&nbsp;имя_файла</replaceable
+> </entry>
   <entry
->Создать новый файл календаря, если он не существует.</entry>
+>Создать новый календарь из существующего файла.</entry>
 </row>
 <row>
   <entry
 ><option
 >--import</option
 > <replaceable
->&nbsp;import-file</replaceable
+>&nbsp;импортируемый_файл</replaceable
 ></entry>
   <entry
 >Импорт указанного календаря в основной календарь.</entry>
+</row>
+<row>
+  <entry
+><option
+>--list-calendars</option
+></entry>
+  <entry
+>Список доступных календарей.</entry>
 </row>
 <row>
   <entry
@@ -994,7 +1085,7 @@ Tuesday 2003-11-01
 ><option
 >--show-next</option
 > <replaceable
->&nbsp;days</replaceable
+>&nbsp;число_дней</replaceable
 ></entry>
   <entry
 >Показать следующее количество дней начиная с указанного.</entry>
@@ -1014,21 +1105,21 @@ Tuesday 2003-11-01
 ><option
 >--date</option
 > <replaceable
->&nbsp;date</replaceable
+>&nbsp;дата</replaceable
 ></entry>
   <entry
->Начать с указанного дня (ГГГГ-ММ-ДД). По умолчанию - сегодня.</entry>
+>Начать с указанного дня (ГГГГ-ММ-ДД). По умолчанию — сегодня.</entry>
 </row>
 <row>
   <entry
 ><option
 >--time</option
 > <replaceable
->&nbsp;time</replaceable
+>&nbsp;время</replaceable
 ></entry>
   <entry
 >Начать с этого времени (ЧЧ:ММ). По умолчанию 7:00.  <para
->Для создания или изменения неточного события, используйте опции <option
+>Для создания или изменения неточного события используйте опции <option
 >--time float</option
 > или <option
 >--end-time float</option
@@ -1040,7 +1131,7 @@ Tuesday 2003-11-01
 ><option
 >--end-date</option
 > <replaceable
->&nbsp;end-date</replaceable
+>&nbsp;дата_окончания</replaceable
 ></entry>
   <entry
 >Закончить указанной датой (ГГГГ-ММ-ДД). По умолчанию устанавливается <replaceable
@@ -1052,11 +1143,11 @@ Tuesday 2003-11-01
 ><option
 >--end-time</option
 > <replaceable
->&nbsp;end-time</replaceable
+>&nbsp;время_окончания</replaceable
 ></entry>
   <entry
->Закончить указанным временем(ЧЧ:ММ). По умолчанию - 17:00  <para
->Для создания или изменения неточного события, используйте опции <option
+>Закончить указанным временем (ЧЧ:ММ). По умолчанию — 17:00. <para
+>Для создания или изменения неточного события используйте опции <option
 >--time float</option
 > или <option
 >--end-time float</option
@@ -1068,7 +1159,7 @@ Tuesday 2003-11-01
 ><option
 >--epoch-start</option
 > <replaceable
->&nbsp;epoch-time</replaceable
+>&nbsp;время_эпохи</replaceable
 ></entry>
   <entry
 >Начать с указанного времени [секунды с начала эпохи].</entry>
@@ -1078,7 +1169,7 @@ Tuesday 2003-11-01
 ><option
 >--epoch-end</option
 > <replaceable
->&nbsp;epoch-time</replaceable
+>&nbsp;время_эпохи</replaceable
 ></entry>
   <entry
 >Закончить на указанном времени [секунды с начала эпохи].</entry>
@@ -1088,7 +1179,7 @@ Tuesday 2003-11-01
 ><option
 >--summary</option
 > <replaceable
->&nbsp;summary</replaceable
+>&nbsp;краткое_описание</replaceable
 ></entry>
   <entry
 >Добавить название к событию (работает с add и change). </entry>
@@ -1098,7 +1189,7 @@ Tuesday 2003-11-01
 ><option
 >--description</option
 > <replaceable
->&nbsp;description</replaceable
+>&nbsp;описание</replaceable
 ></entry>
   <entry
 >Добавить описание к событию (работает с add и change).</entry>
@@ -1115,6 +1206,18 @@ Tuesday 2003-11-01
 </row>
 <row>
   <entry
+><option
+>--calendar</option
+> <replaceable
+>&nbsp;идентификатор</replaceable
+></entry>
+  <entry
+>Указать календарь, который будет использоваться. <para
+>Если не указан, будет использоваться ресурс &korganizer; по умолчанию.</para
+></entry>
+</row>
+<row>
+  <entry
 ><emphasis
 >Опции экспорта:</emphasis
 ></entry>
@@ -1124,7 +1227,7 @@ Tuesday 2003-11-01
 ><option
 >--export-type</option
 > <replaceable
->&nbsp;export-type</replaceable
+>&nbsp;тип_экспорта</replaceable
 ></entry>
   <entry
 >Тип файла для экспорта. По умолчанию тип "Текст".</entry>
@@ -1134,7 +1237,7 @@ Tuesday 2003-11-01
 ><option
 >--export-file</option
 > <replaceable
->&nbsp;export-file</replaceable
+>&nbsp;экспортируемый_файл</replaceable
 ></entry>
   <entry
 >Экспорт в файл. По умолчанию осуществляется на стандартный вывод.</entry>
@@ -1156,15 +1259,16 @@ Tuesday 2003-11-01
 <chapter id="faq">
 <title
 >Вопросы и ответы</title>
-&reporting.bugs; &updating.documentation; <qandaset id="faqlist">
+
+<qandaset id="faqlist">
 <qandaentry>
 <question>
 <para
->Какие файлы настроек использует &konsolekalendar;?</para>
+>Какие файлы конфигурации использует &konsolekalendar;?</para>
 </question>
 <answer>
 <para
->Никаких.</para>
+>Никакие.</para>
 </answer>
 </qandaentry>
 
@@ -1176,8 +1280,8 @@ Tuesday 2003-11-01
 </question>
 <answer>
 <para
->Название приложения &konsolekalendar; - это <application
-> konsolekalendar</application
+>Название приложения &konsolekalendar; — <application
+>konsolekalendar</application
 >.</para>
 </answer>
 </qandaentry>
@@ -1189,7 +1293,7 @@ Tuesday 2003-11-01
 </question>
 <answer>
 <para
->&konsolekalendar; отклоняет даты, указанные в командной строке, если они даны не в соответствии со стандартом ISO 8601 (а именно ГГГГ-ММ-ДД). ГГГГ &mdash; четырёхразрядный год (типа 2003), ММ &mdash; двухразрядный месяц (01,02,..,12), и ДД &mdash; двухразрядный день (01,02,...,31).</para>
+>&konsolekalendar; отклоняет даты, указанные в командной строке, если они указаны не в соответствии со стандартом ISO 8601 (а именно ГГГГ-ММ-ДД). ГГГГ — четырёхразрядный год (типа 2003), ММ — двухразрядный месяц (01,02,..,12), а ДД — двухразрядный день (01,02,...,31).</para>
 <para
 >&konsolekalendar; всегда экспортирует даты в соответствии с форматом ISO 8601.</para>
 </answer>
@@ -1202,7 +1306,7 @@ Tuesday 2003-11-01
 </question>
 <answer>
 <para
->&konsolekalendar; отклоняет время, указанное в командной строке, если оно дано не в соответствии со стандартом ISO 8601 (а именно ЧЧ:ММ:СС). ЧЧ &mdash; двухразрядный час (01,02,...,24), ММ &mdash; двухразрядные минуты (01,02,..,60), и СС &mdash; двухразрядные секунды (01,02,...,60).</para>
+>&konsolekalendar; отклоняет время, указанное в командной строке, если оно указано не в соответствии со стандартом ISO 8601 (а именно ЧЧ:ММ:СС). ЧЧ — двухразрядный час (01,02,...,24), ММ — двухразрядная минута (01,02,..,60), а СС — двухразрядная секунда (01,02,...,60).</para>
 <para
 >&konsolekalendar; всегда экспортирует время в соответствии с форматом ISO 8601.</para>
 </answer>
@@ -1254,11 +1358,11 @@ Tuesday 2003-11-01
 </question>
 <answer>
 <para
->Поскольку для удаления и изменения событий вы должны указать их <acronym
+>Поскольку для удаления и изменения событий необходимо указать их <acronym
 >UID</acronym
->. Если вы не хотите видеть <acronym
+>. Если отображать <acronym
 >UID</acronym
-> события, используйте <emphasis
+> события не следует, используйте <emphasis
 >краткий</emphasis
 > формат экспорта (<option
 >--export-type short</option
@@ -1329,52 +1433,7 @@ Tuesday 2003-11-01
 >Перевод на русский язык: Олег Баталов<email
 >olegbatalov@mail.ru</email
 ></para
-> 
-&underFDL; &underGPL; </chapter>
-
-<appendix id="installation">
-<title
->Установка</title>
-
-<sect1 id="obtaining-application">
-<title
->Как получить &konsolekalendar;</title>
-&install.intro.documentation; <para
->&konsolekalendar; поставляется с &kde;4 и недоступен отдельно. </para>
-
-</sect1>
-
-<sect1 id="requirements">
-<title
->Системные требования</title>
-
-<para
->Для &konsolekalendar;  необходимы установленные стандартные библиотеки &kde; (пакеты <filename
->kdelibs</filename
-> и <filename
->kdepimlibs</filename
->). Для компиляции из исходных текстов необходимы пакеты для разработчиков &Qt; и <filename
->kdelibs</filename
-> и <filename
->kdepimlibs</filename
->.</para>
-
-<para
->Вы можете найти список изменений в файле <filename
->ChangeLog</filename
->.</para>
-</sect1>
-
-<sect1 id="configuration">
-<title
->Настройка</title>
-
-<para
->Никакой настройки &konsolekalendar; не требуется.</para>
-
-</sect1>
-
-</appendix>
+> &underFDL; &underGPL; </chapter>
 
 &documentation.index;
 </book>
