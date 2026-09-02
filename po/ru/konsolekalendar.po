@@ -12,20 +12,20 @@
 # Julia Dronova <juliette.tux@gmail.com>, 2012.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2019-2020, 2026 Alexander Yavorsky <kekcuha@gmail.com>
-# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2024, 2026 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: konsolekalendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 00:45+0000\n"
-"PO-Revision-Date: 2026-06-25 14:29+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2026-09-01 12:56+0300\n"
+"Last-Translator: Olesya Gerasimenko <goa@altlinux.org>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -536,7 +536,7 @@ msgstr "Указана неверная дата начала: %1"
 #: main.cpp:332
 #, kde-format
 msgid "Invalid Start Time Specified: %1"
-msgstr "Указана неверное время начала: %1"
+msgstr "Указано неверное время начала: %1"
 
 #: main.cpp:347
 #, kde-format
@@ -551,7 +551,7 @@ msgstr "Указано неверное количество дней: %1"
 #: main.cpp:380
 #, kde-format
 msgid "Invalid End Time Specified: %1"
-msgstr "Указана неверное время окончания: %1"
+msgstr "Указано неверное время окончания: %1"
 
 #: main.cpp:522
 #, kde-format
