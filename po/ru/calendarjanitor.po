@@ -55,7 +55,7 @@ msgstr "Уже идёт создание резервной копии."
 #: backuper.cpp:64
 #, kde-format
 msgid "Backing up your calendar data..."
-msgstr "Резервное копирование данных из вашего календаря..."
+msgstr "Резервное копирование данных из вашего календаря…"
 
 #: backuper.cpp:97
 #, kde-format
@@ -65,7 +65,7 @@ msgstr "Нет данных для резервного копирования."
 #: backuper.cpp:108 calendarjanitor.cpp:173
 #, kde-format
 msgid "Processing collection %1 (id=%2)..."
-msgstr "Обработка коллекции %1 (идентификатор %2)..."
+msgstr "Обработка коллекции %1 (идентификатор %2)…"
 
 #: backuper.cpp:138
 #, kde-format
@@ -129,32 +129,32 @@ msgstr "Коллекция пуста, поэтому она будет проп
 #: calendarjanitor.cpp:255
 #, kde-format
 msgid "Checking for incidences with empty summary and description..."
-msgstr "Поиск записей с пустым названием и описанием..."
+msgstr "Поиск записей с пустым названием и описанием…"
 
 #: calendarjanitor.cpp:270
 #, kde-format
 msgid "Checking for incidences with empty UID..."
-msgstr "Поиск записей с пустым UID..."
+msgstr "Поиск записей с пустым UID…"
 
 #: calendarjanitor.cpp:289
 #, kde-format
 msgid "Checking for events with invalid DTSTART..."
-msgstr "Поиск событий с недопустимым DTSTART..."
+msgstr "Поиск событий с недопустимым DTSTART…"
 
 #: calendarjanitor.cpp:325
 #, kde-format
 msgid "Checking for recurring to-dos with invalid DTSTART..."
-msgstr "Поиск повторяющихся задач с недопустимым DTSTART..."
+msgstr "Поиск повторяющихся задач с недопустимым DTSTART…"
 
 #: calendarjanitor.cpp:361
 #, kde-format
 msgid "Checking for journals with invalid DTSTART..."
-msgstr "Поиск записей дневника с недопустимым DTSTART..."
+msgstr "Поиск записей дневника с недопустимым DTSTART…"
 
 #: calendarjanitor.cpp:382
 #, kde-format
 msgid "Checking for orphans..."
-msgstr "Поиск записей с несуществующими родителями..."
+msgstr "Поиск записей с несуществующими родителями…"
 
 #: calendarjanitor.cpp:388
 #, kde-format
@@ -176,12 +176,12 @@ msgstr "Дочерние записи успешно отвязаны от не�
 #: calendarjanitor.cpp:402
 #, kde-format
 msgid "Checking for duplicate UIDs..."
-msgstr "Поиск записей с одинаковыми UID..."
+msgstr "Поиск записей с одинаковыми UID…"
 
 #: calendarjanitor.cpp:459
 #, kde-format
 msgid "Gathering statistics..."
-msgstr "Сбор статистики..."
+msgstr "Сбор статистики…"
 
 # count of them --aspotashev
 #: calendarjanitor.cpp:497
@@ -235,7 +235,7 @@ msgstr "Полный объём встроенных вложений (КБ)"
 #, kde-format
 msgid ""
 "Checking for RECURRING-ID incidences with nonexistent master incidence..."
-msgstr "Поиск повторяющихся записей с несуществующей главной записью..."
+msgstr "Поиск повторяющихся записей с несуществующей главной записью…"
 
 #: calendarjanitor.cpp:561
 #, kde-format
@@ -252,7 +252,7 @@ msgstr "Повторение очищено."
 #: calendarjanitor.cpp:566
 #, kde-format
 msgid "Deleting alarms older than 365 days..."
-msgstr "Удаление напоминаний старше 365 дней..."
+msgstr "Удаление напоминаний старше 365 дней…"
 
 #: calendarjanitor.cpp:584 calendarjanitor.cpp:598
 #, kde-format

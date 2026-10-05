@@ -81,7 +81,7 @@ msgstr ""
 #: konsolekalendar.cpp:143
 #, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "Пробный запуск: Создать календарь: %1"
+msgstr "Пробный запуск: создание календаря: %1"
 
 #: konsolekalendar.cpp:146
 #, kde-format
@@ -214,7 +214,7 @@ msgstr "  UID:   %1"
 #: konsolekalendardelete.cpp:43
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr "Пробный запуск удаления события:"
+msgstr "Пробный запуск: удаление события:"
 
 #: konsolekalendardelete.cpp:47
 #, kde-format
@@ -299,7 +299,7 @@ msgstr "Интерфейс командной строки для работы �
 #: main.cpp:61
 #, kde-format
 msgid "(c) 2002-2009, Tuukka Pasanen and Allen Winter"
-msgstr "© Tuukka Pasanen и Allen Winter, 2002-2009"
+msgstr "© Tuukka Pasanen и Allen Winter, 2002–2009"
 
 #: main.cpp:63
 #, kde-format
@@ -342,7 +342,7 @@ msgstr "Выводить полезную отладочную информац�
 #: main.cpp:72
 #, kde-format
 msgid "Print what would have been done, but do not execute"
-msgstr "Показать что нужно было сделать, но не было сделано"
+msgstr "Показать, что было бы сделано, но не выполнять"
 
 #: main.cpp:73
 #, kde-format
@@ -424,12 +424,12 @@ msgstr "Уникальный идентификатор записи."
 #: main.cpp:90
 #, kde-format
 msgid "Start from this day [YYYY-MM-DD]"
-msgstr "C указанного дня [YYYY-MM-DD]."
+msgstr "С указанного дня [YYYY-MM-DD]."
 
 #: main.cpp:91
 #, kde-format
 msgid "Start from this time [HH:MM:SS]"
-msgstr "C указанного времени [HH:MM:SS]."
+msgstr "С указанного времени [HH:MM:SS]."
 
 #: main.cpp:92
 #, kde-format
@@ -444,18 +444,19 @@ msgstr "До указанного времени [HH:MM:SS]."
 #: main.cpp:95
 #, kde-format
 msgid "Start from this time [secs since epoch]"
-msgstr "Начинать с указанного времени [секунд с начала компьютерной эры]."
+msgstr "Начинать с указанного времени [секунд с начала эпохи Unix]."
 
 #: main.cpp:97
 #, kde-format
 msgid "End at this time [secs since epoch]"
-msgstr "До указанного времени [секунд с начала компьютерной эры]."
+msgstr "До указанного времени [секунд с начала эпохи Unix]."
 
 #: main.cpp:99
 #, kde-format
 msgid "Add summary to incidence (for add/change modes)"
 msgstr ""
-"Добавить резюме к записи (работает с командами добавления и изменения)."
+"Добавить краткое описание к записи (работает с командами добавления и "
+"изменения)."
 
 #: main.cpp:101
 #, kde-format
@@ -478,12 +479,12 @@ msgstr "Календарь, который будет использоватьс
 #: main.cpp:110
 #, kde-format
 msgid "Export file type (Default: text)"
-msgstr "Тип файлов экспорта (по умолчанию - текст)."
+msgstr "Тип файлов экспорта (по умолчанию — текст)."
 
 #: main.cpp:112
 #, kde-format
 msgid "Export to file (Default: stdout)"
-msgstr "Экспорт в файл (по умолчанию - поток stdout)."
+msgstr "Экспорт в файл (по умолчанию — поток stdout)."
 
 #: main.cpp:113
 #, kde-format
@@ -565,7 +566,7 @@ msgstr ""
 #: main.cpp:533
 #, kde-format
 msgid "Ending Date/Time occurs before the Starting Date/Time"
-msgstr "Дата/время окончания начинается раньше даты/времени начала."
+msgstr "Дата и время окончания предшествуют дате и времени начала."
 
 #: main.cpp:552
 #, kde-format
@@ -585,7 +586,7 @@ msgstr "Попытка вставки события, которое уже ес
 #: main.cpp:572 main.cpp:588
 #, kde-format
 msgid "Missing event UID: use --uid command line option"
-msgstr "Не указан идентификатор UID: укажите его в опции --uid"
+msgstr "Не указан идентификатор UID: укажите его в параметре --uid"
 
 #: main.cpp:580
 #, kde-format
