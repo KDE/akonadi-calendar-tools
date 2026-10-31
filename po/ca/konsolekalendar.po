@@ -597,38 +597,3 @@ msgstr "No s'ha pogut crear un recurs l'Akonadi des del fitxer: %1"
 #, kde-format
 msgid "Calendar %1 successfully created"
 msgstr "El calendari %1 s'ha creat correctament"
-
-#~ msgid "Create Calendar <Verbose>: %1"
-#~ msgstr "Crea un calendari <informatiu>: %1"
-
-#~ msgid "View Events <Dry Run>:"
-#~ msgstr "Visualitza els esdeveniments <prova>:"
-
-#~ msgid "Insert Event <Verbose>:"
-#~ msgstr "Insereix un esdeveniment <informatiu>:"
-
-#~ msgid "To Event <Dry Run>:"
-#~ msgstr "A l'esdeveniment <prova>:"
-
-#~ msgid "Change Event <Verbose>:"
-#~ msgstr "Canvia un esdeveniment <informatiu>:"
-
-#~ msgid "Delete Event <Verbose>:"
-#~ msgstr "Suprimeix l'esdeveniment <informatiu>:"
-
-#~ msgid "Sorry, export to HTML by UID is not supported yet"
-#~ msgstr "L'exportació a HTML pels UID encara no funciona"
-
-#~ msgid "Events: %1"
-#~ msgstr "Esdeveniments: %1"
-
-#~ msgid "Events: %1 - %2"
-#~ msgstr "Esdeveniments: %1 - %2"
-
-#~ msgctxt "HTML export"
-#~ msgid "  %1"
-#~ msgstr "  %1"
-
-#~ msgctxt "HTMLmonth export"
-#~ msgid "  %1 (like %2, but in a month view)"
-#~ msgstr "  %1 (com el %2, però amb vista mensual)"
