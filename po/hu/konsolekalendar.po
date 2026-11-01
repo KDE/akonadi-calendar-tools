@@ -2,13 +2,13 @@
 # Tamas Szanto <taszanto@gmail.com>, 2002.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2014, 2020.
 # Balázs Úr <urbalazs@gmail.com>, 2013.
-# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024, 2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-27 00:44+0000\n"
-"PO-Revision-Date: 2024-05-16 11:12+0200\n"
+"PO-Revision-Date: 2026-10-31 22:35+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,57 +34,53 @@ msgid "There are no calendars available."
 msgstr "Nincsenek elérhető naptárak."
 
 #: konsolekalendar.cpp:93
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Csak olvasható)"
 
 #: konsolekalendar.cpp:110 konsolekalendar.cpp:129
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: %2"
-msgstr "Nem sikerült létrehozni ezt a naptárt: %1"
+msgstr "A(z) %1 naptár létrehozása nem sikerült: %2"
 
 #: konsolekalendar.cpp:111
 #, kde-format
 msgid "Make sure the akonadiserver is running properly."
-msgstr ""
+msgstr "Győződjön meg arról, hogy az akonadiserver megfelelően működik."
 
 #: konsolekalendar.cpp:119
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setDisplayName failed: %2"
-msgstr "Nem sikerült létrehozni ezt a naptárt: %1"
+msgstr ""
+"A(z) %1 naptár létrehozása nem sikerült: a DBus setDisplayName parancs "
+"hibaüzenete: %2"
 
 #: konsolekalendar.cpp:124
-#, fuzzy, kde-format
-#| msgid "Unable to create calendar: %1"
+#, kde-format
 msgid "Unable to create calendar %1: DBus setPath call failed: %2"
-msgstr "Nem sikerült létrehozni ezt a naptárt: %1"
+msgstr ""
+"A(z) %1 naptár létrehozása nem sikerült: a DBus setPath hívás hibaüzenete: %2"
 
 #: konsolekalendar.cpp:143
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Dry Run: Create Calendar: %1"
-msgstr "Új naptár <üzenetek nélkül>: %1"
+msgstr "Próbafutás: Naptár létrehozása: %1"
 
 #: konsolekalendar.cpp:146
-#, fuzzy, kde-format
-#| msgid "Create Calendar <Dry Run>: %1"
+#, kde-format
 msgid "Create Calendar: %1"
-msgstr "Új naptár <üzenetek nélkül>: %1"
+msgstr "Naptár létrehozása: %1"
 
 #: konsolekalendar.cpp:164
 #, kde-format
 msgid "Dry Run: View Events:"
-msgstr ""
+msgstr "Próbafutás: Események megtekintése:"
 
 #: konsolekalendar.cpp:178
-#, fuzzy, kde-format
-#| msgid "View Event <Verbose>:"
+#, kde-format
 msgid "View Event:"
-msgstr "Esemény megtekintése <részletesen>:"
+msgstr "Esemény megtekintése:"
 
 #: konsolekalendar.cpp:314 konsolekalendaradd.cpp:164
 #: konsolekalendarchange.cpp:108 konsolekalendarchange.cpp:124
@@ -129,13 +125,12 @@ msgstr "  Hely:  %1"
 #: konsolekalendaradd.cpp:57
 #, kde-format
 msgid "Dry Run: Insert Event:"
-msgstr ""
+msgstr "Próbafutás: Esemény beszúrása:"
 
 #: konsolekalendaradd.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Event <Dry Run>:"
+#, kde-format
 msgid "Insert Event:"
-msgstr "Esemény beszúrása <tömören>:"
+msgstr "Esemény beszúrása:"
 
 #: konsolekalendaradd.cpp:89 konsolekalendaradd.cpp:126
 #, kde-format
@@ -153,38 +148,34 @@ msgid "Failure: \"%1\" not inserted"
 msgstr "Hiba: „%1” nem lett beszúrva"
 
 #: konsolekalendaradd.cpp:140
-#, fuzzy, kde-format
-#| msgid "Insert Event skipped, because UID \"%1\" is already known. <Verbose>"
+#, kde-format
 msgid "Insert Event skipped, because UID \"%1\" is already known."
-msgstr "Esemény beszúrása kihagyva, mivel a(z) „%1” UID már ismert. <Verbose>"
+msgstr "Esemény beszúrása kihagyva, mivel a(z) „%1” UID már ismert."
 
 #: konsolekalendaradd.cpp:147
-#, fuzzy, kde-format
-#| msgid "Add Event with UID \"%1\". <Verbose>"
+#, kde-format
 msgid "Add Event with UID \"%1\"."
-msgstr "Esemény hozzáadása a(z) „%1” UID-dal. <Verbose>"
+msgstr "Esemény hozzáadása a(z) „%1” UID-dal."
 
 #: konsolekalendarchange.cpp:45
 #, kde-format
 msgid "Dry Run: Change Event:"
-msgstr ""
+msgstr "Próbafutás: Esemény módosítása:"
 
 #: konsolekalendarchange.cpp:48
 #, kde-format
 msgid "Dry Run: To Event:"
-msgstr ""
+msgstr "Próbafutás: Eseményre:"
 
 #: konsolekalendarchange.cpp:52
-#, fuzzy, kde-format
-#| msgid "Change Event <Dry Run>:"
+#, kde-format
 msgid "Change Event:"
-msgstr "Esemény módosítása <tömören>:"
+msgstr "Esemény módosítása:"
 
 #: konsolekalendarchange.cpp:55
-#, fuzzy, kde-format
-#| msgid "Events:"
+#, kde-format
 msgid "To Event:"
-msgstr "Események:"
+msgstr "Eseményre:"
 
 #: konsolekalendarchange.cpp:94
 #, kde-format
@@ -205,13 +196,12 @@ msgstr "  Azonosító:   %1"
 #: konsolekalendardelete.cpp:43
 #, kde-format
 msgid "Dry Run: Delete Event:"
-msgstr ""
+msgstr "Próbafutás: Esemény törlése:"
 
 #: konsolekalendardelete.cpp:47
-#, fuzzy, kde-format
-#| msgid "Delete Event <Dry Run>:"
+#, kde-format
 msgid "Delete Event:"
-msgstr "Esemény törlése <üzenetek nélkül>:"
+msgstr "Esemény törlése:"
 
 #: konsolekalendardelete.cpp:59
 #, kde-format
