@@ -250,8 +250,7 @@ msgid "Deleting alarms older than 365 days..."
 msgstr "Estanse a eliminar as alarmas anteriores a 365 días…"
 
 #: calendarjanitor.cpp:584 calendarjanitor.cpp:598
-#, fuzzy, kde-format
-#| msgid "invalid"
+#, kde-format
 msgctxt "invalid datetime"
 msgid "invalid"
 msgstr "incorrecto"

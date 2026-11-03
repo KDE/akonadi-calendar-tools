@@ -38,8 +38,7 @@ msgid "There are no calendars available."
 msgstr "Non hai calendarios dispoñíbeis."
 
 #: konsolekalendar.cpp:93
-#, fuzzy, kde-format
-#| msgid "(Read only)"
+#, kde-format
 msgctxt "calendar is read-only"
 msgid "(Read only)"
 msgstr "(Só lectura)"
