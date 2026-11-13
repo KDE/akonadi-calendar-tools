@@ -1,0 +1,1394 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+
+  <!ENTITY konsolekalendar "<application
+>KonsoleKalendar</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Arabic "INCLUDE">
+]>
+<!-- The language must NOT be changed here. -->
+
+<book id="konsolekalendar" lang="&language;">
+
+<bookinfo id="konsolekalendarinfo">
+
+<title
+>دليل &konsolekalendar;</title>
+
+<authorgroup>
+<author
+><firstname
+>Tuukka</firstname
+> <surname
+>Pasanen</surname
+> <affiliation
+><address
+><email
+>illuusio@mailcity.com</email
+></address
+></affiliation>
+</author>
+
+<author
+><firstname
+>Allen</firstname
+> <surname
+>Winter</surname
+> <affiliation
+><address
+><email
+>winterz@kde.org</email
+></address
+></affiliation>
+</author>
+
+<othercredit role="reviewer"
+><firstname
+>Malcolm</firstname
+> <surname
+>Hunter</surname
+> <affiliation
+><address
+><email
+>malcolm.hunter@gmx.co.uk</email
+></address
+></affiliation>
+<contrib
+>مُراجِع</contrib>
+</othercredit>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2002</year
+><year
+>2004</year
+><holder
+>توكا باسانين</holder>
+</copyright>
+
+<copyright>
+<year
+>2003</year
+><year
+>2007</year
+><holder
+>ألين وينتر</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Don't change format of date and version of the documentation -->
+
+<date
+>2016-11-23</date>
+<releaseinfo
+>5.1.3 (التطبيقات 16.12)</releaseinfo>
+
+<abstract>
+<para
+>&konsolekalendar; هي واجهة سطر أوامر لتقاويم &kde;.</para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>&package;</keyword>
+<keyword
+>&kappname;</keyword>
+<keyword
+>منظّمك</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>مقدمة</title>
+
+<para
+>&konsolekalendar; هي واجهة سطر أوامر للتقاويم. تتيح لك عرض أحداث التقويم أو إدراجها أو إزالتها أو تعديلها عبر سطر الأوامر أو من لغة برمجة نصية. بالإضافة إلى ذلك، يمكن لـ &konsolekalendar; إنشاء تقويم جديد، وتصدير تقويم إلى مجموعة متنوعة من الصيغ الأخرى، واستيراد تقويم آخر.</para>
+
+<para
+>في وضعها الأساسي، تعرض &konsolekalendar; قائمة الأحداث في تقويمك المبدئي لليوم الحالي (من 7:00 إلى 17:00).</para>
+
+<para
+>الميزات الرئيسة لـ &konsolekalendar;: <itemizedlist>
+<listitem
+><para
+>عرض مدخلات التقويم من تاريخ/وقت بدء إلى تاريخ/وقت نهاية</para
+></listitem>
+<listitem
+><para
+>إدراج (إضافة) مدخلات تقويم</para
+></listitem>
+<listitem
+><para
+>إزالة (حذف) مدخلات تقويم</para
+></listitem>
+<listitem
+><para
+>تعديل (تغيير) مدخلات تقويم</para
+></listitem>
+<listitem
+><para
+>إنشاء تقويم جديد</para
+></listitem>
+<listitem
+><para
+>تصدير مدخلات التقويم إلى صيغ ملفات أخرى</para
+></listitem>
+<listitem
+><para
+>استيراد تقويم موجود</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>&konsolekalendar; <emphasis
+>ليست</emphasis
+> واجهة مستخدم رسومية أخرى لتقويم &kde; (أي &korganizer;). &konsolekalendar; مخصصة فقط للاستخدامات حيث لا تكون واجهة المستخدم الرسومية عملية أو ممكنة.</para>
+
+<para
+>&konsolekalendar; <emphasis
+>لا</emphasis
+> توفر لغة كاملة الميزات لعمل استعلامات عن تقويم المستخدم: كما ليس من نية المؤلفين كتابة مثل هذه الإمكانية أبدًا. تُوفر خيارات سطر أوامر بدائية للوصول إلى أحداث التقويم ضمن نطاق متتالٍ من التواريخ/الأختام الزمنية. </para>
+
+</chapter>
+
+<chapter id="features">
+<title
+>الميزات</title>
+<para
+>في هذا الفصل ستتعرف على الميزات الرئيسة لـ &konsolekalendar; وكيفية التحكم بها باستخدام وسائط سطر الأوامر (تذكر أن &konsolekalendar; ليست واجهة مستخدم رسومية؛ إنها برنامج سطر أوامر فقط).</para>
+
+<para
+>ستتعرف على إدراج أحداث التقويم وحذفها وتغييرها، وكيفية تصدير الأحداث إلى صيغ ملفات أخرى. سيتم أيضًا تغطية إنشاء التقاويم واستيرادها في هذا الفصل. </para>
+
+<sect1 id="viewing">
+<title
+>عرض الأحداث</title>
+
+<para
+>في وضعها المبدئي، أو باستخدام الخيار <parameter
+>--view</parameter
+>، ستدرج &konsolekalendar; جميع الأحداث ضمن نطاق تاريخ/وقت محدد.</para>
+
+<para>
+<informalexample
+><para
+>لعرض جميع أحداث اليوم (من 7:00 إلى 17:00)، شغّل ببساطة:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>في هذا المثال التالي، نعرض جميع أحداث أسبوع 18-22 أغسطس:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--view</option
+> <option
+>--date <replaceable
+>2016-08-18</replaceable
+> </option
+> <option
+>--end-date <replaceable
+>2016-08-22</replaceable
+></option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>اعرض الحدث (الأحداث) التالي على التقويم من الوقت الحالي فصاعدًا:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option>
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>لعرض جميع الأحداث للأيام الخمسة التالية شغّل:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--show-next</option
+> <replaceable
+>5</replaceable>
+
+</userinput
+>
+</screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="inserting">
+<title
+>إدراج الأحداث</title>
+
+<para
+>يمكن لـ &konsolekalendar; إدراج أحداث في تقويم أو مورد تقويم باستخدام وسيط سطر الأوامر <parameter
+>--add</parameter
+>. الأحداث المُدرَجة بنجاح ستُعرض فورًا بواسطة تطبيقات تقويم &kde; (مثل &korganizer;).</para>
+
+<para
+>تحصل على قائمة بجميع التقاويم ومعرفاتها باستخدام: </para>
+
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--list-calendars</option
+></userinput
+></screen>
+
+<para>
+<informalexample
+><para
+>في المثال التالي، سيُدرج حدث يبدأ في 2016-12-01 (1 ديسمبر 2016) الساعة 10:00 وينتهي الساعة 12:00 مع ملخص "زيارة طبيب" في مورد تقويم المستخدم ذي المعرف 8:</para>
+
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-03</replaceable
+></option
+> <option
+>--time <replaceable
+>10:00</replaceable
+></option
+> \
+<option
+>--end-time <replaceable
+>12:00</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Doctor Visit"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>في هذا المثال، يُضاف حدث عيد ميلاد إلى مورد تقويم المستخدم ذي المعرف 8:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar 8</option
+> <option
+>--date <replaceable
+>2016-12-06</replaceable
+></option
+> <option
+>--summary <replaceable
+>"My Birthday"</replaceable
+></option
+> \
+<option
+>--description <replaceable
+>"Party Time"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para>
+<informalexample
+><para
+>هنا تُدرج عطلة أسبوع واحد في تقويم ذي المعرف 8:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--add</option
+> <option
+>--calendar <replaceable
+>12</replaceable
+></option
+> <option
+>--date <replaceable
+>2017-08-01</replaceable
+></option
+> \
+<option
+>--end-date <replaceable
+>2017-08-07</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Vacation"</replaceable
+></option
+> <option
+>--description <replaceable
+>"Nobody will ever find me!"</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="deleting">
+<title
+>إزالة المدخلات</title>
+
+<para
+>يدعم &konsolekalendar; إزالة المدخلات في ملف تقويم أو مورد باستخدام وسيط سطر الأوامر <parameter
+>--delete</parameter
+>. تُحدد مدخلات التقويم المراد إزالتها بدقة بواسطة معرّف السلسلة الفريد (<acronym
+>UID</acronym
+>) باستخدام الخيار <parameter
+>--uid</parameter
+>. تُوجد <acronym
+>UIDs</acronym
+> بعرض الحدث أولًا باستخدام الخيارات <parameter
+>--view</parameter
+> أو <parameter
+>--next</parameter
+> أو <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>ستُزال الأحداث المحذوفة بنجاح فورًا من تطبيقات تقويم كيدي (منظمك مثلًا).</para>
+
+<warning
+><para
+>عند حذف شيء من التقويم <emphasis
+>لا يمكن</emphasis
+> التراجع عنه! بعبارة أخرى، عند حذف مدخل لا يمكن عكس الحذف. سيختفي إلى الأبد.</para
+></warning>
+
+<para>
+<informalexample
+><para
+>هنا نحذف مدخل تقويم بمعرّف <acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--delete</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="changing">
+<title
+>تعديل المدخلات</title>
+
+<para
+>يدعم &konsolekalendar; تعديل المدخلات الموجودة في ملف تقويم أو مورد باستخدام وسيط سطر الأوامر <parameter
+>--change</parameter
+>. تُحدد مدخلات التقويم المراد تعديلها بدقة بواسطة معرّف السلسلة الفريد (<acronym
+>UID</acronym
+>) باستخدام الخيار <parameter
+>--uid</parameter
+>. تُوجد <acronym
+>UIDs</acronym
+> بعرض الحدث أولًا باستخدام الخيارات <parameter
+>--view</parameter
+> أو <parameter
+>--next</parameter
+> أو <parameter
+>--show-next</parameter
+>.</para>
+
+<para
+>يتصرف التعديل بنفس طريقة الإدراج: يمكنك تغيير تاريخ ووقت بدء الحدث، وتاريخ ووقت انتهائه، وملخصه، وموقعه، ووصفه. ستُظهر الأحداث المعدلة بنجاح فورًا معدلة في تطبيقات تقويم كيدي (منظمك).</para>
+
+<para
+><emphasis
+>مثال:</emphasis
+> هنا نغير الملخص والوصف لمدخل تقويم بمعرّف <acronym
+>UID</acronym
+> <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+>:</para>
+
+<para>
+<informalexample>
+<para
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--change</option
+> <option
+>--uid <replaceable
+>&konsolekalendar;-1887551750.196</replaceable
+></option
+> <option
+>--summary <replaceable
+>"Get my head examined"</replaceable
+></option
+> <option
+>--description <replaceable
+>"don't go to that doctor anymore!"</replaceable
+></option
+> </userinput
+> </para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="creating">
+<title
+>إنشاء ملف تقويم جديد</title>
+
+<para
+>يمكن استخدام &konsolekalendar; لإنشاء تقاويم جديدة من ملفات موجودة. يمكنك إنشاء التقويم باستخدام الخيار <option
+>--create</option
+> مع اسم الملف كوسيط. يجب أن يكون الملف ملف <acronym
+>iCal</acronym
+> أو <acronym
+>vCal</acronym
+> صالحًا.</para>
+<para
+>ملاحظة: لا يمكنك استخدام الخيار <option
+>--dry-run</option
+> لاختبار إمكانية إنشاء المورد.</para>
+
+<para
+>ملاحظة: يحتاج &konsolekalendar; إلى الملف للعمل، لذا لا تحذف الملف يدويًا أبدًا. </para>
+
+<para
+>ملاحظة فنية جانبية: ينشئ &konsolekalendar; بهذا الأمر مورد <acronym
+>أكونادي</acronym
+> جديدًا يشير إلى هذا الملف. لا يمنعك من إنشاء موارد متعددة تشير إلى الملف نفسه. </para>
+
+<para>
+<informalexample
+><para
+>أنشئ تقويمًا جديدًا من ملف موجود باسم <filename
+><replaceable
+>vacation.ics</replaceable
+></filename
+>:</para>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--create</option
+> <option
+><replaceable
+>vacation.ics</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+<para
+>سيُسمى المورد <quote
+>عطلة</quote
+> باستخدام <option
+>--list-calendars</option
+></para>
+
+<para
+>لا يمكن حذف مورد <acronym
+>أكونادي</acronym
+> باستخدام &konsolekalendar;، يجب استخدام منظمك أو <application
+>akonadiconsole</application
+>. </para>
+
+</sect1>
+
+<sect1 id="exporting">
+<title
+>التصدير إلى صيغ أخرى</title>
+
+<para
+>يمكن لـ &konsolekalendar; تصدير تقويم إلى صيغ أخرى معروفة. التصدير هو شكل خاص من العرض. افتراضيًا، تُعرض الأحداث بصيغة <quote
+>نص &konsolekalendar;</quote
+>. لتغيير صيغة العرض استخدم وسيط سطر الأوامر <parameter
+>--export-type</parameter
+>.</para>
+
+<para
+>لعرض قائمة بجميع صيغ التصدير المدعومة، استخدم الخيار <parameter
+>--export-list</parameter
+>، كما يلي:</para>
+
+<para>
+<informalexample>
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--export-list</option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+<sect1 id="formats">
+<title
+>صيغ التصدير</title>
+
+<para
+>بعض الصيغ المدعومة، وليس بالضرورة جميعها، موصوفة في هذا القسم.</para>
+
+<sect2 id="native-format">
+<title
+>صيغة نص &konsolekalendar;</title>
+
+<para
+>صيغة نص &konsolekalendar; هي الصيغة الأصلية لـ &konsolekalendar;، وهي مصممة لتكون سهلة القراءة وقابلة للتحليل بواسطة النصوص البرمجية اللاحقة.</para>
+
+<para
+>صيغة نص &konsolekalendar; هي: <informalexample
+> <screen
+>التاريخ:\t&lt;تاريخ الحدث&gt;(dddd yyyy-MM-dd)
+</screen>
+</informalexample>
+</para>
+
+<para
+>خرج <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>نص</option
+></userinput
+>: <informalexample
+> <screen
+>التاريخ:   الثلاثاء 2016-11-29
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="short-format">
+<title
+>صيغة النص المختصر لـ &konsolekalendar;</title>
+
+<para
+>توفر صيغة النص المختصر نسخة أكثر إحكامًا وأقل إسهابًا من الصيغة الأصلية لـ &konsolekalendar;.</para>
+
+<para
+>صيغة النص المختصر لـ &konsolekalendar; هي: <informalexample
+> <screen
+>[--------------------------------------------------]
+</screen>
+</informalexample>
+</para>
+
+<para
+>خرج <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>Short</option
+></userinput
+>: <informalexample
+> <screen
+>--------------------------------------------------
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+<sect2 id="csv-format">
+<title
+>صيغة القيم المفصولة بفاصلة (<acronym
+>CSV</acronym
+>)</title>
+
+<para
+>تعرض صيغة القيم المفصولة بفاصلة قيم الأحداث بنفس ترتيب صيغة نص &konsolekalendar;. الفرق الوحيد هو أن جميع المعلومات موجودة في نفس الصف مع فصل كل حقل بفاصلة. يمكن استيراد الملفات المصدرة الناتجة مباشرة إلى برامج جداول البيانات مثل &calligrasheets; و<application
+>OpenOffice.org Calc</application
+> و<application
+>&Microsoft; Excel</application
+>. كما أن صيغة <acronym
+>CSV</acronym
+> سهلة التحليل بواسطة النصوص البرمجية اللاحقة.</para>
+
+<para
+>صيغة القيم المفصولة بفاصلة (<acronym
+>CSV</acronym
+>) هي: <informalexample
+> <screen
+>"يوم الأسبوع، الشهر اليوم، السنة","HH:MM","يوم الأسبوع، الشهر اليوم، السنة","HH:MM","الملخص","الموقع","الوصف","المعرف الفريد"
+</screen>
+</informalexample>
+</para>
+
+<para
+>خرج <userinput
+> <command
+>konsolekalendar</command
+> <option
+>--next</option
+> <option
+>--export-type</option
+> <option
+>CSV</option
+></userinput
+>: <informalexample
+> <screen
+>"الثلاثاء، نوفمبر 29، 2016","08:00","الثلاثاء، نوفمبر 29، 2016","09:00","اجتماع الموظفين","غرفة الاجتماعات",
+</screen>
+</informalexample>
+</para>
+
+</sect2>
+
+</sect1>
+
+<sect1 id="importing">
+<title
+>استيراد التقاويم</title>
+
+<para
+>يمكن لـ &konsolekalendar; استيراد ملف تقويم بصيغة iCal أو vCal إلى التقويم. سيتم إدراج جميع الأحداث من التقويم الذي يتم الاستيراد منه، مع تخطي الأحداث المتطابقة الموجودة بالفعل في التقويم.</para>
+
+<para>
+<informalexample
+><para
+>لاستيراد ملف التقويم <replaceable
+>vacation.ics</replaceable
+> إلى تقويم بالمعرف <replaceable
+>8</replaceable
+>، شغّل:</para>
+
+<para>
+<screen
+><prompt
+>%</prompt
+><userinput
+> <command
+>konsolekalendar</command
+> <option
+>--import <replaceable
+>vacation.ics</replaceable
+></option
+> <option
+>--calendar <replaceable
+>8</replaceable
+></option
+></userinput
+></screen>
+</para>
+</informalexample>
+</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="features-commandline-options">
+<title
+>معاملات سطر الأوامر</title>
+
+<para
+>يدعم &konsolekalendar; الخيارات التالية:</para>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row>
+  <entry
+>الخيار</entry>
+  <entry
+>الوصف</entry>
+</row>
+</thead>
+<tbody>
+<row>
+  <entry
+><emphasis
+>خيارات عامة:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--help, --help-all</option
+></entry>
+  <entry
+>يعرض المساعدة حول خيارات البرنامج.</entry>
+</row>
+<row>
+  <entry
+><option
+>--author</option
+></entry>
+  <entry
+>يعرض معلومات مؤلف البرنامج.</entry>
+</row>
+<row>
+  <entry
+><option
+>-v, --version</option
+></entry>
+  <entry
+>يعرض معلومات إصدار البرنامج.</entry>
+</row>
+<row>
+  <entry
+><option
+>--license</option
+></entry>
+  <entry
+>يعرض معلومات ترخيص البرنامج.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>الخيارات:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--verbose</option
+></entry>
+  <entry
+>اطبع رسائل مفيدة تخصّ زمن التّشغيل.</entry>
+</row>
+<row>
+  <entry
+><option
+>--dry-run</option
+></entry>
+  <entry
+>اطبع ما كان سيُفعل، لكن لا تنفذ. لا تغير أي ملفات؛ لا تُدرج، أو تزل، أو تعدل أي ملفات موجودة، ولا تنشئ أي ملفات جديدة.</entry>
+</row>
+<row>
+  <entry
+><option
+>--allow-gui</option
+></entry>
+  <entry
+>اسمح للموارد التي قد تحتاج واجهة مستخدم تفاعلية. في التشغيل العادي، تُستخدم فقط الموارد التي لن تتطلب واجهة مستخدم (مثل التقاويم المبنية على الملفات).</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>أنواع الوقوعات (يمكن دمج هذه الخيارات):</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--event</option
+></entry>
+  <entry
+>اعمل على الأحداث فقط (المبدئيّ).</entry>
+</row>
+<row>
+  <entry
+><option
+>--todo</option
+></entry>
+  <entry
+>اعمل للمهام فقط. (غير مطبق)</entry>
+</row>
+<row>
+  <entry
+><option
+>--journal</option
+></entry>
+  <entry
+>اعمل لليوميات فقط. (غير مطبق)</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>أنماط التشغيل الرئيسة:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--view</option
+></entry>
+  <entry
+>اطبع أحداث التقويم بصيغة التصدير المحددة.</entry>
+</row>
+<row>
+  <entry
+><option
+>--add</option
+></entry>
+  <entry
+>أدرج حدثًا في التقويم.</entry>
+</row>
+<row>
+  <entry
+><option
+>--change</option
+></entry>
+  <entry
+>عدّل حدث تقويم موجودًا.</entry>
+</row>
+<row>
+  <entry
+><option
+>--delete</option
+></entry>
+  <entry
+>أزل حدث تقويم موجودًا.</entry>
+</row>
+<row>
+  <entry
+><option
+>--create</option
+> <replaceable
+>&nbsp;اسم الملف</replaceable
+> </entry>
+  <entry
+>أنشئ تقويمًا جديدًا من ملف موجود.</entry>
+</row>
+<row>
+  <entry
+><option
+>--import</option
+> <replaceable
+>&nbsp;ملف الاستيراد</replaceable
+></entry>
+  <entry
+>استورد هذا التقويم إلى التقويم الرئيس.</entry>
+</row>
+<row>
+  <entry
+><option
+>--list-calendars</option
+></entry>
+  <entry
+>قائمة التقويمات المتاحة.</entry>
+</row>
+<row>
+  <entry
+><emphasis
+>مغيرات العملية:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--all</option
+></entry>
+  <entry
+>اعرض كل مدخلات التقويم.</entry>
+</row>
+<row>
+  <entry
+><option
+>--next</option
+></entry>
+  <entry
+>اعرض النشاط التالي في التقويم.</entry>
+</row>
+<row>
+  <entry
+><option
+>--show-next</option
+> <replaceable
+>&nbsp;أيام</replaceable
+></entry>
+  <entry
+>بدءًا من التاريخ المحدد، اعرض أنشطة الأيام التالية.</entry>
+</row>
+<row>
+  <entry
+><option
+>--uid</option
+> <replaceable
+>&nbsp;المعرّف الفريد</replaceable
+></entry>
+  <entry
+>اعرض، أو ازل، أو غير الحدث ذا المعرف الفريد النصي هذا.</entry>
+</row>
+<row>
+  <entry
+><option
+>--date</option
+> <replaceable
+>&nbsp;التاريخ</replaceable
+></entry>
+  <entry
+>ابدأ في هذا اليوم [YYYY-MM-DD]. التاريخ المبدئي هو اليوم</entry>
+</row>
+<row>
+  <entry
+><option
+>--time</option
+> <replaceable
+>&nbsp;الوقت</replaceable
+></entry>
+  <entry
+>ابدأ في هذا الوقت [HH:MM]. الوقت المبدئي للعرض هو 07:00. <para
+>لإضافة أو تغيير حدث عائم، استخدم خياري <option
+>--time float</option
+> أو <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--end-date</option
+> <replaceable
+>&nbsp;تاريخ النهاية</replaceable
+></entry>
+  <entry
+>انتهِ في هذا اليوم [YYYY-MM-DD]. المبدئي يُضبط بواسطة <option
+>--date</option
+>.</entry>
+</row>
+<row>
+  <entry
+><option
+>--end-time</option
+> <replaceable
+>&nbsp;وقت النهاية</replaceable
+></entry>
+  <entry
+>انتهِ في هذا الوقت [HH:MM]. وقت النهاية المبدئي للعرض هو 17:00. <para
+>لإضافة أو تغيير حدث عائم، استخدم خياري <option
+>--time float</option
+> أو <option
+>--end-time float</option
+>.</para
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-start</option
+> <replaceable
+>&nbsp;وقت الحقبة</replaceable
+></entry>
+  <entry
+>ابدأ في هذا الوقت [ثوانٍ منذ الحقبة].</entry>
+</row>
+<row>
+  <entry
+><option
+>--epoch-end</option
+> <replaceable
+>&nbsp;epoch-time</replaceable
+></entry>
+  <entry
+>انتهِ في هذا الوقت [ثوانٍ منذ الحقبة].</entry>
+</row>
+<row>
+  <entry
+><option
+>--summary</option
+> <replaceable
+>&nbsp;ملخص</replaceable
+></entry>
+  <entry
+>أضف ملخصًا إلى الحدث (يعمل مع الإضافة والتغيير).</entry>
+</row>
+<row>
+  <entry
+><option
+>--description</option
+> <replaceable
+>&nbsp;وصف</replaceable
+></entry>
+  <entry
+>أضف وصفًا إلى الحدث (يعمل مع الإضافة والتغيير).</entry>
+</row>
+<row>
+  <entry
+><option
+>--location</option
+> <replaceable
+>&nbsp;موقع</replaceable
+></entry>
+  <entry
+>أضف موقعًا إلى الحدث (يعمل مع الإضافة والتغيير).</entry>
+</row>
+<row>
+  <entry
+><option
+>--calendar</option
+> <replaceable
+>&nbsp;معرّف</replaceable
+></entry>
+  <entry
+>حدد تقويمًا لاستخدامه. <para
+>إذا لم يُحدد، فسيُستخدم مورد &korganizer; المبدئي الخاص بك.</para
+></entry>
+</row>
+<row>
+  <entry
+><emphasis
+>خيارات التّصدير:</emphasis
+></entry>
+</row>
+<row>
+  <entry
+><option
+>--export-type</option
+> <replaceable
+>&nbsp;نوع-التصدير</replaceable
+></entry>
+  <entry
+>نوع ملف التصدير. النوع المبدئي لملف التصدير هو نص</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-file</option
+> <replaceable
+>&nbsp;ملف-تصدير</replaceable
+></entry>
+  <entry
+>صدّر إلى ملف. مبدئيًا، يُكتب المخرَج إلى المخرج القياسي.</entry>
+</row>
+<row>
+  <entry
+><option
+>--export-list</option
+></entry>
+  <entry
+>اطبع قائمة أنواع التصدير المدعومة ثم اخرج.</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>أسئلة وأجوبة</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>ما ملفات الضبط التي يستخدمها &konsolekalendar;؟</para>
+</question>
+<answer>
+<para
+>لا يوجد.</para>
+</answer>
+</qandaentry>
+
+
+<qandaentry>
+<question>
+<para
+>ما أسماء التطبيقات لـ &konsolekalendar;؟</para>
+</question>
+<answer>
+<para
+>اسم تطبيق &konsolekalendar; هو <application
+>konsolekalendar</application
+>.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>ما تنسيق تحديد التاريخ؟</para>
+</question>
+<answer>
+<para
+>سيرفض &konsolekalendar; التواريخ المحددة في سطر الأوامر ما لم تُحدد وفقًا لمعايير ISO 8601، وهي: YYYY-MM-DD. حيث YYYY تمثل سنة بأربعة أرقام (مثل 2003)، وMM تمثل شهرًا برقمين (01,02,..,12)، وDD تمثل يومًا برقمين (01,02,...,31).</para>
+<para
+>يصدّر &konsolekalendar; التواريخ دائمًا وفقًا لتنسيق ISO 8601.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>ما تنسيق تحديد الوقت؟</para>
+</question>
+<answer>
+<para
+>سيرفض &konsolekalendar; الأوقات المحددة في سطر الأوامر ما لم تُحدد وفقًا لمعايير ISO 8601، وهي: HH:MM:SS. حيث HH تمثل ساعة برقمين (01,02,...,24)، وMM تمثل دقيقة برقمين (01,02,..,60)، وSS تمثل ثانية برقمين (01,02,...,60).</para>
+<para
+>يصدّر &konsolekalendar; الأوقات دائمًا وفقًا لتنسيق ISO 8601.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>هل سيدرج &konsolekalendar; حدثًا جديدًا مطابقًا لحدث موجود مسبقًا في التقويم؟</para>
+</question>
+<answer>
+<para
+>لا. انظر السؤال التالي.</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>كيف يحدد &konsolekalendar; ما إذا كان الحدث مطابقًا لحدث موجود مسبقًا في التقويم؟</para>
+</question>
+<answer>
+<para
+>يتحقق &konsolekalendar; من تاريخ ووقت البدء المحددين، وتاريخ ووقت الانتهاء المحددين، والملخص مقابل جميع الأحداث في التقويم. يُحدد تطابق الحدث إذا تطابقت القيم الثلاث مع حدث موجود. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>هل يمكن تغيير حدث غير عائم إلى حدث عائم؟</para>
+</question>
+<answer>
+<para
+>نعم. استخدم خيار <option
+>--time float</option
+> مع خيار <option
+>--change</option
+>. </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>لماذا تُطبع <acronym
+>معرفات</acronym
+> الأحداث الفريدة في معظم صيغ التصدير؟</para>
+</question>
+<answer>
+<para
+>لأنك تحتاج إلى تحديد <acronym
+>معرفات</acronym
+> الأحداث الفريدة لحذف الأحداث أو تغييرها. إذا كنت لا تريد رؤية <acronym
+>معرفات</acronym
+> الأحداث الفريدة، فاستخدم نوع التصدير <emphasis
+>القصير</emphasis
+> (<option
+>--export-type short</option
+>). </para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para
+>كيف يمكن إضافة سؤالي إلى <acronym
+>الأسئلة الشائعة</acronym
+> هذه؟</para>
+</question>
+<answer>
+<para
+>أرسل أسئلتك إلى <email
+>winter@kde.org</email
+>.</para>
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+
+<chapter id="credits">
+
+<title
+>الحقوق والترخيص</title>
+
+<para
+>حقوق نشر برنامج &konsolekalendar; 2002-2007:</para>
+
+<itemizedlist>
+<listitem
+><para
+>توكا باسانن <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+<listitem
+><para
+>ألن وينتر <email
+>winter@kde.org</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>حقوق نشر الوثائق 2003:</para>
+<itemizedlist>
+<listitem
+><para
+>ألن وينتر <email
+>winter@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>توكا باسانن <email
+>illuusio@mailcity.com</email
+></para
+></listitem>
+</itemizedlist>
+
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
