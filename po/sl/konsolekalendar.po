@@ -1,6 +1,6 @@
 # Slovenian translation of konsolekalendar
 # Copyright (C) 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
-# $Id: konsolekalendar.po 1744309 2026-08-21 01:29:22Z scripty $
+# $Id$
 # $Source$
 #
 # Gregor Rakar <gregor.rakar@kiss.si>, 2002, 2003, 2004, 2005.
