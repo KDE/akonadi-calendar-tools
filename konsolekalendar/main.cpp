@@ -195,11 +195,11 @@ int main(int argc, char *argv[])
     if (parser.isSet(QStringLiteral("export-type"))) {
         option = parser.value(QStringLiteral("export-type"));
 
-        if (option.toUpper() == QLatin1StringView("CSV")) {
+        if (option.compare(QLatin1StringView("CSV"), Qt::CaseInsensitive) == 0) {
             variables.setExportType(ExportTypeCSV);
-        } else if (option.toUpper() == QLatin1StringView("TEXT")) {
+        } else if (option.compare(QLatin1StringView("TEXT"), Qt::CaseInsensitive) == 0) {
             variables.setExportType(ExportTypeText);
-        } else if (option.toUpper() == QLatin1StringView("SHORT")) {
+        } else if (option.compare(QLatin1StringView("SHORT"), Qt::CaseInsensitive) == 0) {
             variables.setExportType(ExportTypeTextShort);
         } else {
             cout << i18n("Invalid Export Type Specified: %1", option).toLocal8Bit().data() << '\n';
@@ -322,7 +322,7 @@ int main(int argc, char *argv[])
      */
     if (parser.isSet(QStringLiteral("time"))) {
         option = parser.value(QStringLiteral("time"));
-        if (option.toUpper() != QLatin1StringView("FLOAT")) {
+        if (option.compare(QLatin1StringView("FLOAT"), Qt::CaseInsensitive) != 0) {
             if (option.count(QLatin1Char(':')) < 2) {
                 // need to append seconds
                 option.append(QLatin1StringView(":00"));
@@ -370,7 +370,7 @@ int main(int argc, char *argv[])
      */
     if (parser.isSet(QStringLiteral("end-time"))) {
         option = parser.value(QStringLiteral("end-time"));
-        if (option.toUpper() != QLatin1StringView("FLOAT")) {
+        if (option.compare(QLatin1StringView("FLOAT"), Qt::CaseInsensitive) != 0) {
             if (option.count(QLatin1Char(':')) < 2) {
                 // need to append seconds
                 option.append(QLatin1StringView(":00"));
